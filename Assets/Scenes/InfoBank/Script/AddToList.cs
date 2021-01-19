@@ -47,9 +47,8 @@ public class AddToList : MonoBehaviour
         Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
         for(int i = 0; i < list.Count; i++){
             Transform newItem = Instantiate(listItemPrefab, go);
-            GameObject firstChild = newItem.Find("text").gameObject;
-            Debug.Log(firstChild.GetComponent<TextMeshProUGUI>().text);
-            firstChild.GetComponent<TextMeshProUGUI>().text = list[i].title;
+            newItem.GetComponent<DetailPageManager>().setText(list[i].title);
+            newItem.GetComponent<DetailPageManager>().setDescription(list[i].description);
         }
     }
 
