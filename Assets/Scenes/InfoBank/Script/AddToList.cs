@@ -23,6 +23,9 @@ public class AddToList : MonoBehaviour
                     case "Dialog":
                         GlobalGameInfo.addNewItemToDialogList(titles[i], descriptions[i]);
                         break;
+                    case "Contacts":
+                        GlobalGameInfo.addNewItemToContactsList(titles[i], descriptions[i]);
+                        break;
                     default:
                         GlobalGameInfo.addNewItemToInfoList(titles[i], descriptions[i]); 
                         break;
@@ -33,6 +36,9 @@ public class AddToList : MonoBehaviour
         switch(whichList){
             case "Dialog":
                 fillList(GlobalGameInfo.dialogList);
+                break;
+            case "Contacts":
+                fillList(GlobalGameInfo.contactsList);
                 break;
             default:
                 fillList(GlobalGameInfo.infoList);

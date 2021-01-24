@@ -15,11 +15,16 @@ public class GlobalGameInfo
     }
     public static List<InfoListItem> dialogList = new List<InfoListItem>();
     public static List<InfoListItem> infoList = new List<InfoListItem>();
+    public static List<InfoListItem> contactsList = new List<InfoListItem>();
     public static void addNewItemToDialogList(string title, string description){
         GlobalGameInfo.dialogList.Add(new InfoListItem(title, description));
     }
 
     public static void addNewItemToInfoList(string title, string description){
         GlobalGameInfo.infoList.Add(new InfoListItem(title, description));
+    }
+
+    public static void addNewItemToContactsList(string title, string description){
+        GlobalGameInfo.contactsList.Add(new InfoListItem(title, description));
     }
 }
