@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pronouns: She/Her
+  m_text: 'Pronouns: She/her
 
     Age: 40
 
