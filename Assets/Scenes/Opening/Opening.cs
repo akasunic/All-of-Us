@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void loadMapScene() {
+        Debug.Log("AAAAA");
+        SceneManager.LoadScene("Basic2DMap");
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
