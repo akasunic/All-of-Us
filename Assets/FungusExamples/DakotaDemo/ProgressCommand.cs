@@ -28,6 +28,7 @@ namespace Fungus {
             } else {
                 Invoke("DoProgress", delay);
             }
+            Continue();
         }
 
         protected virtual void DoProgress() {
