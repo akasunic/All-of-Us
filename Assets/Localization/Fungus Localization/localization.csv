@@ -1,0 +1,17 @@
+Key,Description,en,,es
+SAY.NPC-quest_flowchart.15.,,Sherlock! How wonderful to see you!,,Hola! Que tal?
+SAY.NPC-quest_flowchart.17.,,"But, what brings you here?",,"Pero, por que estas aqui?"
+SAY.NPC-quest_flowchart.19.,,"Why, I've come to see you, of course!",,Porque quiero visitar tu!
+SAY.demo-quest_flowchart.1.,,"Ah yes, my hometown. Exactly how I remember it. {wi} I might as well stop by my old house and check up on things.",,"Ah, si, mi ciudad. Exacamente como recuerdo. {wi} Necesito visitar mi casa."
+SAY.demo-quest_flowchart.11.Sherlock,,Oh my goodness! I'm all out of {color=green}ibuprofen{/color}! Where can I go to get more?,,Ay dios mio! No tengo {color=green}ibuprofen{/color}! A donde puedo ir para comprar mas?
+SAY.demo-quest_flowchart.19.Sherlock,,Thank goodness! I'm glad I can go to my local doctor for my medical needs!,,"Ay, muchas gracias, Doctor!"
+SAY.demo-quest_flowchart.33.Sherlock,,"Ok, I think this is the place... What did I need again?",,"Ok, creo que sea el pais. Cual necesito?"
+MENU.demo-quest_flowchart.34,,Insulin,,Insulin
+MENU.demo-quest_flowchart.39,,Penicillin,,Penicillin
+MENU.demo-quest_flowchart.38,,Glucose,,Glucoso(?)
+MENU.demo-quest_flowchart.37,,Ibuprofen,,Ibuprofen
+SAY.demo-quest_flowchart.40.Sherlock,,Hmmm. I don't think that was it.,,Hmmm. Pienso que no fue el correcto.
+SAY.demo-quest_flowchart.41.Sherlock,,That's it! {color=green}Ibuprofen{/color}!,,Lo es! {color=green}Ibuprofen{/color}!
+SAY.demo-quest_flowchart.51.Sherlock,,"Shoot, I think I forgot!",,"Ay, se me olvido!"
+CHARACTER.Sherlock,I am sherlock,Sherlock,,Señor Sherlock
+CHARACTER.Watson,,Watson,,Señor Watson
