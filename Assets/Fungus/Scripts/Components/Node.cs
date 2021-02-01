@@ -1,16 +1,14 @@
-// This code is part of the Fungus library (https://github.com/snozbot/fungus)
+﻿// This code is part of the Fungus library (https://github.com/snozbot/fungus)
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
-﻿using UnityEngine;
+using UnityEngine;
 
-namespace Fungus
-{
+namespace Fungus {
     /// <summary>
     /// Base class for Flowchart nodes.
     /// </summary>
     [AddComponentMenu("")]
-    public class Node : MonoBehaviour
-    {
+    public class Node : MonoBehaviour {
         [SerializeField] protected Rect nodeRect = new Rect(0, 0, 120, 30);
         [SerializeField] protected Color tint = Color.white;
         [SerializeField] protected bool useCustomTint = false;
