@@ -18,24 +18,31 @@ MonoBehaviour:
   m_GUID: 50e59a82418ea634dbd4c1aca2526bb3
   m_SerializeEntries:
   - m_GUID: 0fa511bec31279646977134298a9ce9e
-    m_Address: Chapter Select UI_en
+    m_Address: Chapter Select UI Strings_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: a65b93eeddbd3b84ea9f41213618089e
-    m_Address: Chapter Select UI_es
+    m_Address: Chapter Select UI Strings_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: ff6dd93c6b2873246a9773d5fdc6d764
-    m_Address: Chapter Select UI_fr
+    m_Address: Chapter Select UI Strings_fr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 42f16f4eaec246f47a08013aabb80ce9
+    m_Address: Chapter Select UI Strings_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
