@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Basic2DMap.unity
+    guid: 4b2f29c093d0a41c9b75c5aa6ad27d65
   m_configObjects: {}
