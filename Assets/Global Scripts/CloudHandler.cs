@@ -57,4 +57,23 @@ public class CloudHandler
 
       reference.UpdateChildrenAsync(childUpdates);
     }
+
+
+    public void WriteNewEvent(LoggingEvent evt) {
+
+      if(!isFirebaseInitialized){
+        Debug.Log("ERROR: Database wasn't initialized yet!");
+        return;
+      }
+
+      Debug.Log("Writing to database: TYPE " + evt.getType() + ", INITATOR: " + evt.getInitiator() + ", TIME: " + evt.getTimestamp());
+
+      string key = reference.Push().Key;
+
+      Dictionary<string, System.Object> entryValues = evt.ToDictionary();
+      Dictionary<string, System.Object> childUpdates = new Dictionary<string, System.Object>();
+      childUpdates["/" + key] = entryValues;
+
+      reference.UpdateChildrenAsync(childUpdates);
+    }
 }

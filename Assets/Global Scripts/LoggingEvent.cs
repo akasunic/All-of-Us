@@ -6,13 +6,21 @@ public class LoggingEvent {
   private string initiator;
   private string timestamp;
 
+  private string DATETIME_FORMATTER = "G";
+
   public LoggingEvent() {
   }
 
   public LoggingEvent(string type, string initiator, DateTime timestamp) {
       this.type = type;
       this.initiator = initiator;
-      this.timestamp = timestamp.ToString("F");
+      this.timestamp = timestamp.ToString(DATETIME_FORMATTER);
+  }
+
+  public LoggingEvent(string type, string initiator, string timestamp) {
+      this.type = type;
+      this.initiator = initiator;
+      this.timestamp = timestamp;
   }
 
   public Dictionary<string, System.Object> ToDictionary() {
@@ -41,7 +49,7 @@ public class LoggingEvent {
   }
 
   public void setTimestamp(DateTime dt){
-    this.timestamp = dt.ToString("F");
+    this.timestamp = dt.ToString(DATETIME_FORMATTER);
   }
 
   public void setType(string t ){
