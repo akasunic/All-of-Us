@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,6 @@ public class CloudCaller : MonoBehaviour
 
     //a test function to write something to the database
     public void WriteTest(){
-      cloudHandler.WriteNewEvent("test type", "test initiator", 1000);
+      cloudHandler.WriteNewEvent("test type", "test initiator", DateTime.Now);
     }
 }

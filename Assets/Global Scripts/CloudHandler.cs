@@ -9,30 +9,6 @@ using Firebase.Extensions;
 public class CloudHandler
 {
 
-    public class Event {
-      public string type;
-      public string initiator;
-      public int timestamp;
-
-      public Event() {
-      }
-
-      public Event(string type, string initiator, int timestamp) {
-          this.type = type;
-          this.initiator = initiator;
-          this.timestamp = timestamp;
-      }
-
-      public Dictionary<string, System.Object> ToDictionary() {
-        Dictionary<string, System.Object> result = new Dictionary<string, System.Object>();
-        result["type"] = type;
-        result["initator"] = initiator;
-        result["timestamp"] = timestamp;
-
-        return result;
-      }
-    }
-
     protected bool isFirebaseInitialized = false;
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
     DatabaseReference reference;
@@ -63,7 +39,7 @@ public class CloudHandler
     }
 
     //a function to write a new event to the database
-    public void WriteNewEvent(string type, string initiator, int timestamp) {
+    public void WriteNewEvent(string type, string initiator, DateTime timestamp) {
 
       if(!isFirebaseInitialized){
         Debug.Log("ERROR: Database wasn't initialized yet!");
@@ -73,7 +49,7 @@ public class CloudHandler
       Debug.Log("Writing to database: TYPE " + type + ", INITATOR: " + initiator + ", TIME: " + timestamp);
 
       string key = reference.Push().Key;
-      Event entry = new Event(type, initiator, timestamp);
+      LoggingEvent entry = new LoggingEvent(type, initiator, timestamp);
       Dictionary<string, System.Object> entryValues = entry.ToDictionary();
 
       Dictionary<string, System.Object> childUpdates = new Dictionary<string, System.Object>();
