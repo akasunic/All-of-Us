@@ -1,0 +1,17 @@
+Key,Description,en,es,fr,ja
+SAY.NPC-quest_flowchart.15.,,Sherlock! How wonderful to see you!,Hola! Que tal?,"Bonjour, Sherlock! French text.",NPC Quest 15
+SAY.NPC-quest_flowchart.17.,,"But, what brings you here?","Pero, por que estas aqui?","But, why are you here in French?","Npc, Quest 17"
+SAY.NPC-quest_flowchart.19.,,"Why, I've come to see you, of course!",Porque quiero visitar tu!,Because I want to see you in French!,NPC Quest 19
+SAY.demo-quest_flowchart.1.,,"Ah yes, my hometown. Exactly how I remember it. {wi} I might as well stop by my old house and check up on things.","Ah, si, mi ciudad. Exacamente como recuerdo. {wi} Necesito visitar mi casa.","Ah yes, Paris. French stuff. Gotta go home.",Demo Quest 1
+SAY.demo-quest_flowchart.11.Sherlock,,Oh my goodness! I'm all out of {color=green}ibuprofen{/color}! Where can I go to get more?,Ay dios mio! No tengo {color=green}ibuprofen{/color}! A donde puedo ir para comprar mas?,I don't have French ibuprofen! Where can I get more in French?",Demo Quest 11
+SAY.demo-quest_flowchart.19.Sherlock,,Thank goodness! I'm glad I can go to my local doctor for my medical needs!,"Ay, muchas gracias, Doctor!","Merci, Doctor.",Demo Quest 19
+SAY.demo-quest_flowchart.33.Sherlock,,"Ok, I think this is the place... What did I need again?","Ok, creo que sea el pais. Cual necesito?","Ok, this is the French doctors' office. What French medicine did I need?",Demo Quest 33
+MENU.demo-quest_flowchart.34,,Insulin,Insulin,Insulin,Insulin
+MENU.demo-quest_flowchart.39,,Penicillin,Penicillin,Penicillin,Penicillin
+MENU.demo-quest_flowchart.38,,Glucose,Glucoso,Gleucose,Glucose
+MENU.demo-quest_flowchart.37,,Ibuprofen,Ibuprofen,Ibuprofen,Ibuprofen
+SAY.demo-quest_flowchart.40.Sherlock,,Hmmm. I don't think that was it.,Hmmm. Pienso que no fue el correcto.,Hmmm. That wasn't the right French medicine.,Demo Quest 40
+SAY.demo-quest_flowchart.41.Sherlock,,That's it! {color=green}Ibuprofen{/color}!,Lo es! {color=green}Ibuprofen{/color}!, Se es! {color=green}Ibuprofen{/color}!,Demo Quest 41
+SAY.demo-quest_flowchart.51.Sherlock,,"Shoot, I think I forgot!","Ay, se me olvido!","Shoot, I forgot in French!",Demo Quest 50
+CHARACTER.Sherlock,I am sherlock,Sherlock,Se�or Sherlock,Messieur Sherlock,Sensei Sherlock
+CHARACTER.Watson,,Watson,Se�or Watson,Messieur Watson,Sensein Watson

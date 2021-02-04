@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-ja
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-ja
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9ceb9a7a92acf654ab22f7e968bd1242
+  m_SerializeEntries:
+  - m_GUID: 6252c88fa02326542b23af07176b2d61
+    m_Address: japan
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: ff8c42866914d9f4899e0fb90218844c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 873f8ecce52493440a45cc3aeb85e8c0, type: 2}
+    - {fileID: 11400000, guid: b42c6811280c60e45a332e19c852f4b7, type: 2}
