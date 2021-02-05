@@ -27,9 +27,16 @@ public static class LocalJsonDataController
      * string eventType
      * string eventContent
      */
-    public static void SaveData(string timeStamp, string eventType, string eventContent)
+
+    public static void WriteNewEvent(LoggingEvent evt) {
+        Debug.Log("Writing to local file: TYPE " + evt.getType() + ", INITATOR: " + evt.getInitiator() + ", TIME: " + evt.getTimestamp());
+
+        SaveData(evt.getTimestamp(), evt.getType(), evt.getInitiator());
+    }
+    
+    public static void SaveData(string timeStamp, string eventType, string eventInitiator)
     {
-        JsonData jsonData = new JsonData(timeStamp, eventType, eventContent);
+        JsonData jsonData = new JsonData(timeStamp, eventType, eventInitiator);
         string stringJsonData = ObjectToJson(jsonData);
         SaveJsonFile(stringJsonData);
     }
@@ -54,15 +61,15 @@ public static class LocalJsonDataController
     [System.Serializable]
     private class JsonData
     {
-        public string timeStamp;
-        public string eventType;
-        public string eventContent;
+        private string timeStamp;
+        private string eventType;
+        private string eventInitiator;
 
-        public JsonData(string timeStamp, string eventType, string eventContent)
+        public JsonData(string timeStamp, string eventType, string eventInitiator)
         {
             this.timeStamp = timeStamp;
             this.eventType = eventType;
-            this.eventContent = eventContent;
+            this.eventInitiator = eventInitiator;
         }
     }
 }
