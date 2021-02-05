@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 262913158}
   - component: {fileID: 262913157}
   - component: {fileID: 262913159}
+  - component: {fileID: 262913160}
   m_Layer: 0
   m_Name: 2DMap
   m_TagString: Untagged
@@ -213,6 +214,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77e049e3c7e5142f686f7e4169c468c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &262913160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262913156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa926e84289bf427ba0c82a559554fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &285907470
