@@ -57,7 +57,8 @@ public class CloudHandler
 
     public static void WriteNewEvent(LoggingEvent evt) {
 
-      if(!initializationStarted || !isFirebaseInitialized || reference == null){
+      //if the firebase app isn't initialized and we haven't started initializing it
+      if(!initializationStarted || !isFirebaseInitialized){
         Debug.Log("Database not initialized yet. We will store this event and start setting up the firebase app asyncronously. The event will be added once the app is read.");
         if(eventsToWrite == null){
           eventsToWrite = new ArrayList();
@@ -65,6 +66,14 @@ public class CloudHandler
         eventsToWrite.Add(evt);
         Init();
         return;
+      } 
+      //if firebase is async setting up but not done, we might need to log another
+      //event so we just add that to the list of things to write afterwards
+      else if(initializationStarted && !isFirebaseInitialized){
+        if(eventsToWrite == null){
+          eventsToWrite = new ArrayList();
+        }
+        eventsToWrite.Add(evt);
       }
 
       Debug.Log("Writing to database: TYPE " + evt.getType() + ", INITATOR: " + evt.getInitiator() + ", TIME: " + evt.getTimestamp());
