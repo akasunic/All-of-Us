@@ -16,12 +16,12 @@ public class CloudCaller : MonoBehaviour
 
     //a test function to write something to the database
     public void WriteTest(){
-      cloudHandler.WriteNewEvent("test type", "test initiator", DateTime.Now);
+      CloudHandler.WriteNewEvent("test type", "test initiator", DateTime.Now);
     }
 
     public void WriteTest2(){
       
       LoggingEvent evt = new LoggingEvent("test type 2", "test intiator 2", DateTime.Now);
-      cloudHandler.WriteNewEvent(evt);
+      CloudHandler.WriteNewEvent(evt);
     }
 }
