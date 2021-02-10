@@ -61,9 +61,9 @@ public static class LocalJsonDataController
     [System.Serializable]
     private class JsonData
     {
-        private string timeStamp;
-        private string eventType;
-        private string eventInitiator;
+        public string timeStamp;
+        public string eventType;
+        public string eventInitiator;
 
         public JsonData(string timeStamp, string eventType, string eventInitiator)
         {
