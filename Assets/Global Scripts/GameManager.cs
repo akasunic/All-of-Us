@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     // Static fields
     private int progress = 0;
 
+    // Singleton pattern
     // Create an instance if necessary.
     // Or destroy this to keep singleton pattern.
     private void Awake()
@@ -36,13 +37,43 @@ public class GameManager : MonoBehaviour
 
     // Start Game
     // Set the initial values
+    // call this function using GameManager.Instance.StartGame()
     public void StartGame()
     {
         progress = 0;
     }
 
+    // call this function using GameManager.Instance.GetProgress()
     public int GetProgress()
     {
         return progress;
+    }
+
+    // call this function using GameManager.Instance.IncreaseProgress(int num)
+    public void IncreaseProgress(int num)
+    {
+        if (progress + num >= 0 && progress + num <= 100)
+        {
+            progress += num;
+        }
+        else
+        {
+            progress = 100;
+        }
+        Debug.Log("New Progress = " + progress);
+    }
+
+    // call this function using GameManager.Instance.DecreaseProgress(int num)
+    public void DecreaseProgress(int num)
+    {
+        if (progress - num >= 0 && progress - num <= 100)
+        {
+            progress -= num;
+        }
+        else
+        {
+            progress = 0;
+        }
+        Debug.Log("New Progress = " + progress);
     }
 }
