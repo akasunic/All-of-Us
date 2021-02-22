@@ -13,16 +13,7 @@ namespace Tests
 {
     public class CloudTests
     {
-        private DatabaseReference reference;
-        private CloudHandler cloudHandler;
-
-        [SetUp]
-        public void FirebaseSetup()
-        {
-            if (cloudHandler == null)
-                cloudHandler = new CloudHandler();
-        }
-
+        
         // A Test behaves as an ordinary method
         [Test]
         public void CloudTestsSimplePasses()
@@ -41,7 +32,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator WriteToCloud()
+        public IEnumerator AsyncTestWriteNewEvent()
         {
             bool didFail = false;
             bool isAccessing = true;
