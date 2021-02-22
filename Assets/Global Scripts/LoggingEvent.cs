@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class LoggingEvent {
   private string type;
@@ -29,6 +30,12 @@ public class LoggingEvent {
     result["initator"] = initiator;
     result["timestamp"] = timestamp;
 
+    if (PlayerPrefs.HasKey("sessionId")){
+      result["sessionId"] = SystemInfo.deviceUniqueIdentifier + ":" + PlayerPrefs.GetInt("sessionId");
+    } else {
+      result["sessionId"] = "No Session Id has been intialized yet.";
+    }
+    
     return result;
   }
 
