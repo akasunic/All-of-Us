@@ -40,6 +40,7 @@ public class LocalizationManager : MonoBehaviour
             // use the same language in subsequent scenes.
             activeLanguage = languageCode;
         }
+
         // Set in Unity
         StartCoroutine(SetUnityLanguage(languageCode));
     }
