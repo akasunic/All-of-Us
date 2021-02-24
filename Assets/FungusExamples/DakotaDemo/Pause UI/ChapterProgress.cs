@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Used for keeping track of progress in a single chapter. Acts as an observer in the chapter progress event system.
+/// Keep enabled so it can always update progress.
+/// </summary>
 public class ChapterProgress : MonoBehaviour
 {
     [Tooltip("A list of images (in order) of the progress bar")]

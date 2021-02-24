@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Event system subject for chapter progress.
+/// </summary>
 public class ProgressEvents : MonoBehaviour
 {
 
