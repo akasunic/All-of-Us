@@ -154,7 +154,7 @@ MonoBehaviour:
   - {fileID: 445690718911583528}
   chapter: 4
   numQuests: 1
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
+  tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138197395701409
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 445690718928264456}
   chapter: 3
   numQuests: 1
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
+  tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138197575699470
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   - {fileID: 445690717406619369}
   chapter: 2
   numQuests: 1
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
+  tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138197746183566
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   - {fileID: 445690717945445905}
   chapter: 5
   numQuests: 1
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
+  tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138197805591539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   - {fileID: 445690718406581073}
   chapter: 1
   numQuests: 1
-  tintColor: {r: 0, g: 0, b: 0, a: 0}
+  tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138198856736641
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class ChapterProgress : MonoBehaviour
         " quests get completed.")]
     public Color tintColor;
 
-    void Start()
+    void OnEnable()
     {
         ProgressEvents.instance.onChapterProgress += ProgressChapter;
     }

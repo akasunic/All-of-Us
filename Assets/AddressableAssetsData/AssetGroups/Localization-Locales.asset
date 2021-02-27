@@ -45,27 +45,6 @@ MonoBehaviour:
     - Locale
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: e88bab82f9f18e3448a3b0834e18581f
-    m_Address: Japanese (ja) 2
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 31d2b884149bc984fbdee7a0f7c8df78
-    m_Address: Japanese (ja) 1
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 98f5d394495592c4d8626c4620f28e18
-    m_Address: Japanese (ja)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: ff8c42866914d9f4899e0fb90218844c, type: 2}
   m_SchemaSet:
