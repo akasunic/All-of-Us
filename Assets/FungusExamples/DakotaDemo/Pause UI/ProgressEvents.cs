@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class ProgressEvents : MonoBehaviour
 {
+    /// <summary>
+    /// A queue for holding chapter progress events if we've never opened the pause menu before
+    /// </summary>
     private Queue<int> progressQ;
 
     public static ProgressEvents instance;
