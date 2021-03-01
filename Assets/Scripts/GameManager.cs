@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
 
     // Static fields
-    private int progress = 0;
+    private static int progress = 0;
 
     // Singleton pattern
     // Create an instance if necessary.
@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Instance to use
