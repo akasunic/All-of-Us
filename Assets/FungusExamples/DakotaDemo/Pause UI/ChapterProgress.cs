@@ -22,10 +22,12 @@ public class ChapterProgress : MonoBehaviour
 
     void OnEnable()
     {
+        // add event listener for making progress in the visual novel
         ProgressEvents.instance.onChapterProgress += ProgressChapter;
     }
 
     private void OnDisable() {
+        // remove event listener when disabled
         ProgressEvents.instance.onChapterProgress -= ProgressChapter;
     }
 
@@ -34,7 +36,8 @@ public class ChapterProgress : MonoBehaviour
             if (questsCompleted < numQuests) {
                 questsCompleted++;
                 UpdateChapterUI();
-                // add other things here we want to check/do
+                // add other things here we want to check/do when
+                // finishing a chapter
             }
         }
     }

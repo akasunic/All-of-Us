@@ -22,6 +22,8 @@ public class ProgressEvents : MonoBehaviour
 
     void Update() {
         if (progressQ.Count > 0 && onChapterProgress != null) {
+            // If we made progress while listeners were inactive
+            // tell the active listeners that we made progress.
             onChapterProgress(progressQ.Dequeue());
         }
     }
@@ -31,6 +33,7 @@ public class ProgressEvents : MonoBehaviour
         if (onChapterProgress != null) {
             onChapterProgress(chapter);
         } else {
+            // Progress event listeners are inactive, so queue them for later.
             progressQ.Enqueue(chapter);
         }
     }
