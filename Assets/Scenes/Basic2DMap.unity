@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 253414169}
   - component: {fileID: 253414168}
   - component: {fileID: 253414159}
+  - component: {fileID: 253414174}
   m_Layer: 0
   m_Name: Quest 2
   m_TagString: Untagged
@@ -784,6 +785,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 253414142}
   commandList:
+  - {fileID: 253414174}
   - {fileID: 253414145}
   - {fileID: 253414161}
   - {fileID: 253414147}
@@ -800,6 +802,7 @@ MonoBehaviour:
   - {fileID: 253414154}
   - {fileID: 253414160}
   - {fileID: 253414144}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &253414141
 MonoBehaviour:
@@ -1467,6 +1470,7 @@ MonoBehaviour:
   - {fileID: 253414166}
   - {fileID: 253414165}
   - {fileID: 253414167}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &253414159
 MonoBehaviour:
@@ -1980,7 +1984,27 @@ MonoBehaviour:
   - {fileID: 253414169}
   - {fileID: 253414168}
   - {fileID: 253414159}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
+--- !u!114 &253414174
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253414138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: LibraryVN
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!1 &285907470
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5214,7 @@ MonoBehaviour:
   - {fileID: 1378851719}
   - {fileID: 1378851723}
   - {fileID: 1378851715}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851712
 MonoBehaviour:
@@ -5764,6 +5789,7 @@ MonoBehaviour:
   - {fileID: 1378851724}
   - {fileID: 1378851722}
   - {fileID: 1378851714}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851721
 MonoBehaviour:
@@ -5796,6 +5822,7 @@ MonoBehaviour:
   - {fileID: 1378851773}
   - {fileID: 1378851771}
   - {fileID: 1378851738}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851722
 MonoBehaviour:
@@ -6030,6 +6057,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1378851729}
   - {fileID: 1378851728}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851731
 MonoBehaviour:
@@ -6135,6 +6163,7 @@ MonoBehaviour:
   - {fileID: 1378851736}
   - {fileID: 1378851737}
   - {fileID: 1378851768}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851735
 MonoBehaviour:
@@ -6791,6 +6820,7 @@ MonoBehaviour:
   - {fileID: 1378851766}
   - {fileID: 1378851752}
   - {fileID: 1378851746}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1378851742
 MonoBehaviour:
@@ -8924,6 +8954,7 @@ GameObject:
   - component: {fileID: 1592743673}
   - component: {fileID: 1592743672}
   - component: {fileID: 1592743676}
+  - component: {fileID: 1592743674}
   m_Layer: 0
   m_Name: Variables
   m_TagString: Untagged
@@ -8980,7 +9011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 183.2696
+    x: 184.2696
     y: 49.70053
     width: 85
     height: 40
@@ -8992,7 +9023,25 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1592743672}
+  - {fileID: 1592743674}
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
+--- !u!114 &1592743674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592743670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c657364a3b24e16bdf5946729a8b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  key: 
+  variable: {fileID: 0}
 --- !u!114 &1592743676
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9033,6 +9082,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1592743676}
   commandList: []
+  activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1592743679
 MonoBehaviour:
@@ -9059,8 +9109,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1592743678}
-  selectedCommands: []
+  - {fileID: 1592743673}
+  selectedCommands:
+  - {fileID: 1592743674}
   variables: []
   description: Flowchart that starts the game and keeps track of variables by not
     destroying on load

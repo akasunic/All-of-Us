@@ -11,7 +11,7 @@ public class ProgressEvents : MonoBehaviour
     /// <summary>
     /// A queue for holding chapter progress events if we've never opened the pause menu before
     /// </summary>
-    private Queue<int> progressQ;
+    private static Queue<int> progressQ;
 
     public static ProgressEvents instance;
 
@@ -28,8 +28,8 @@ public class ProgressEvents : MonoBehaviour
         }
     }
 
-    public event Action<int> onChapterProgress;
-    public void ProgressChapter(int chapter) {
+    public static event Action<int> onChapterProgress;
+    public static void ProgressChapter(int chapter) {
         if (onChapterProgress != null) {
             onChapterProgress(chapter);
         } else {
