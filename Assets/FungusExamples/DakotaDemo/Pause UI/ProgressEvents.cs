@@ -9,7 +9,8 @@ using UnityEngine;
 public class ProgressEvents : MonoBehaviour
 {
     /// <summary>
-    /// A queue for holding chapter progress events if we've never opened the pause menu before
+    /// A queue for holding chapter progress events if we've never opened the pause menu before.
+    /// Static to hold values across scenes
     /// </summary>
     private static Queue<int> progressQ;
 
@@ -17,7 +18,8 @@ public class ProgressEvents : MonoBehaviour
 
     void Awake() {
         instance = this;
-        progressQ = new Queue<int>();
+        if (progressQ == null)
+            progressQ = new Queue<int>();
     }
 
     void Update() {

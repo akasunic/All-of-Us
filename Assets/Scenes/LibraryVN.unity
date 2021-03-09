@@ -1959,7 +1959,7 @@ MonoBehaviour:
   shiftOffset: {x: 0, y: 0}
   move: 0
   shiftIntoPlace: 0
-  waitUntilFinished: 0
+  waitUntilFinished: 1
 --- !u!114 &1158275241
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2835,7 +2835,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1158275246}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1158275240}
   variables:
   - {fileID: 1158275262}
   description: The second of the two placeholder quests.
@@ -2954,7 +2955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b85556abd314f3f870c18c013fdcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickMode: 2
+  clickMode: 1
   nextClickDelay: 0
   cancelEnabled: 0
   ignoreMenuClicks: 1

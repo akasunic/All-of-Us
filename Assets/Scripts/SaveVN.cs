@@ -50,11 +50,6 @@ public class SaveVN : MonoBehaviour
             Block savedBlock = savedFC.FindBlock(fcSavedBlockName);
             savedFC.ExecuteBlock(savedBlock, fcSavedCommandIndex);
         } else {
-            List<Variable> fcSavedVariables = variablesFlowchart.Variables;
-
-            foreach (Variable vari in fcSavedVariables) {
-                Debug.Log(vari.Key + ": " + vari.GetValue());
-            }
             // no data saved
             // Debug.Log(fcSavedFlowchartName);
             // do nothing?

@@ -15,10 +15,34 @@ public class ChapterProgress : MonoBehaviour
     public int chapter;
     [Tooltip("The number of quests in this chapter.")]
     public int numQuests;
-    int questsCompleted = 0;
+    /// <summary>
+    /// A static dictionary to hold information about all quests across
+    /// multiple scenes.
+    /// </summary>
+    static Dictionary<int, int> questsCompletedDict;
+    /// <summary>
+    /// An easy reference to the dictionary for updating values relating
+    /// to chapter.
+    /// </summary>
+    int questsCompleted { get {
+            questsCompletedDict.TryGetValue(chapter, out int temp);
+            return temp;
+        } set {
+            questsCompletedDict[chapter] = value;
+        } }
     [Tooltip("The color to tint the progress bar images as" +
         " quests get completed.")]
     public Color tintColor;
+
+    void Start() {
+        if (questsCompletedDict == null)
+            questsCompletedDict = new Dictionary<int, int>();
+
+        if (!questsCompletedDict.ContainsKey(chapter)) {
+            questsCompletedDict.Add(chapter, 0);
+        }
+        UpdateChapterUI();
+    }
 
     void OnEnable()
     {
