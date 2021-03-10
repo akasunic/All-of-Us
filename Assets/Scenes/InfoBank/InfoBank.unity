@@ -1747,25 +1747,25 @@ MonoBehaviour:
   - They/Them/Theirs
   age: 2a000000160000001e00000011000000
   health:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.6
+  - 0.2
+  - 0.6
+  - 0.1
   tech:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.9
+  - 0.5
+  - 1
+  - 1
   time:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.2
+  - 0.1
+  - 1
+  - 1
   resources:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.95
+  - 0.2
+  - 1
+  - 0.2
   listItemPrefab: {fileID: 1829950178707904974, guid: 7eb0ca7189597480d9b32e35a1164403,
     type: 3}
   whichList: Contacts
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368687712}
   m_HandleRect: {fileID: 368687711}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2267,7 +2267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 158.5979}
+  m_AnchoredPosition: {x: 0, y: 158.59792}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1147032902
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 8
-    m_Right: 0
+    m_Right: 12
     m_Top: 8
     m_Bottom: 4
   m_ChildAlignment: 3
@@ -4554,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4996932401787520596
 MonoBehaviour:
   m_ObjectHideFlags: 0
