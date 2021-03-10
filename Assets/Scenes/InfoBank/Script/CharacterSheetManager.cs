@@ -29,7 +29,10 @@ public class CharacterSheetManager : MonoBehaviour
       Transform location = HelperFunctions.FindChildByRecursion(newItem, "location");
       Transform pronouns = HelperFunctions.FindChildByRecursion(newItem, "pronouns");
       Transform age = HelperFunctions.FindChildByRecursion(newItem, "age");
-      //Transform health = HelperFunctions.FindChildByRecursion(newItem, "description");
+      Transform health = HelperFunctions.FindChildByRecursion(newItem, "healthslider");
+      Transform tech = HelperFunctions.FindChildByRecursion(newItem, "techslider");
+      Transform time = HelperFunctions.FindChildByRecursion(newItem, "timeslider");
+      Transform resources = HelperFunctions.FindChildByRecursion(newItem, "resourcesslider");
 
       if(txt != null){
         txt.gameObject.GetComponent<TextMeshProUGUI>().text = character.title;
@@ -48,6 +51,18 @@ public class CharacterSheetManager : MonoBehaviour
       }
       if(job != null){
         job.gameObject.GetComponent<TextMeshProUGUI>().text = character.job;
+      }
+      if(health != null){
+        health.gameObject.GetComponent<CharacterStatsBarController>().setProgress(character.health);
+      }
+      if(tech != null){
+        tech.gameObject.GetComponent<CharacterStatsBarController>().setProgress(character.tech);
+      }
+      if(resources != null){
+        resources.gameObject.GetComponent<CharacterStatsBarController>().setProgress(character.resources);
+      }
+      if(time != null){
+        time.gameObject.GetComponent<CharacterStatsBarController>().setProgress(character.time);
       }
     }
 
