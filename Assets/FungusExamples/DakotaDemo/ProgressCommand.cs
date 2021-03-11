@@ -32,7 +32,7 @@ namespace Fungus {
         }
 
         protected virtual void DoProgress() {
-            ProgressEvents.instance.ProgressChapter(chapter);
+            ProgressEvents.ProgressChapter(chapter);
         }
 
         public override string GetSummary() {
