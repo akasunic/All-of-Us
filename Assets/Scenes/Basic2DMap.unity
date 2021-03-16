@@ -781,8 +781,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 253414140}
+  selectedCommands:
+  - {fileID: 253414174}
   variables: []
   description: The second of the two placeholder quests.
   stepPause: 0
