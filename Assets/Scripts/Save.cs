@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventTests : MonoBehaviour
+public class Save : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,8 +13,6 @@ public class EventTests : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O)) {
-            ProgressEvents.ProgressChapter(1);
-        }
+        
     }
 }
