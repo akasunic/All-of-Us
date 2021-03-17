@@ -13,13 +13,16 @@ public class CharacterStatsBarController : MonoBehaviour
     private Color32 medColor = new Color32(237, 165, 115, 255);
     private Color32 highColor = new Color32(62, 193, 138, 255);
 
+    private const double lowBound = 0.33;
+    private const double medBound = 0.66;
+
     // Update is called once per frame
     public void setProgress(float p)
     {
         slider.value = p;
-        if(p < 0.33){
+        if(p < lowBound){
           fill.color = lowColor;
-        } else if (p < 0.66){
+        } else if (p < medBound){
           fill.color = medColor;
         } else {
           fill.color = highColor;
