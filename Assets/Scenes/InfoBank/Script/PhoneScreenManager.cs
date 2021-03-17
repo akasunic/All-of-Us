@@ -25,6 +25,18 @@ public class PhoneScreenManager : MonoBehaviour
 
     public void switchToPage(string type){
         Debug.Log("switching to " + type);
+
+        //remove all detail screens
+        GameObject detailContainer = GameObject.Find("Detail Container");
+        foreach (Transform child in detailContainer.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        //move back to default position
+        GameObject phoneContainer = GameObject.Find("UI Container");
+        RectTransform rt = phoneContainer.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(0, 0);
+
         GameObject go = getGameObject(type);
         if(lastSelected != null){
             Debug.Log(lastSelected);
