@@ -576,7 +576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 21.41, y: 0}
+  m_AnchoredPosition: {x: 20.04, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7321019363771787789
@@ -608,8 +608,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: years old
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5dd6641163a2e4a04ba2903e2a062912, type: 2}
-  m_sharedMaterial: {fileID: 6094400013521158617, guid: 5dd6641163a2e4a04ba2903e2a062912,
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -920,8 +920,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 42
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5dd6641163a2e4a04ba2903e2a062912, type: 2}
-  m_sharedMaterial: {fileID: 6094400013521158617, guid: 5dd6641163a2e4a04ba2903e2a062912,
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1409,7 +1409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 88.009995, y: 0}
+  m_AnchoredPosition: {x: 84.69, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &4345269948883064789
@@ -2072,8 +2072,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Bloomwood Library
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
-  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2309,7 +2309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 98.52, y: 0}
+  m_AnchoredPosition: {x: 95.200005, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7452373519807030750
@@ -2341,8 +2341,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: He/Him/His
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5dd6641163a2e4a04ba2903e2a062912, type: 2}
-  m_sharedMaterial: {fileID: 6094400013521158617, guid: 5dd6641163a2e4a04ba2903e2a062912,
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2952,8 +2952,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Head Librarian
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5dd6641163a2e4a04ba2903e2a062912, type: 2}
-  m_sharedMaterial: {fileID: 6094400013521158617, guid: 5dd6641163a2e4a04ba2903e2a062912,
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3240,8 +3240,8 @@ MonoBehaviour:
     last year, he hasn\u2019t been able to hold his popular story hour in the children's
     wing. He enjoys comic books, science fiction, and is an avid runner."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
-  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
+  m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
+  m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
