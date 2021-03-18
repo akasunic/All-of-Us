@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &444813191
@@ -2709,7 +2709,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1449954520
@@ -2896,8 +2896,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
-  m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
+  m_fontAsset: {fileID: 11400000, guid: 9505972825e1b44c5afb8863f63044e5, type: 2}
+  m_sharedMaterial: {fileID: -1553842562112634723, guid: 9505972825e1b44c5afb8863f63044e5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2922,8 +2922,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4093,7 +4093,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Messages
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
@@ -4397,6 +4397,14 @@ MonoBehaviour:
     Ipsum has been the industry's standard dummy text ever since the 1500s, when
     an unknown printer took a galley of type and scrambled it to make a type specimen
     book. It has survived not only five centuries
+  locations: []
+  jobs: []
+  pronouns: []
+  age: 
+  health: []
+  tech: []
+  time: []
+  resources: []
   listItemPrefab: {fileID: 2834269548889848139, guid: 250e0c29fbe234b58898e86cc86fe055,
     type: 3}
   whichList: Info
@@ -5241,7 +5249,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Notes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
     type: 2}
   m_fontSharedMaterials: []
@@ -5764,6 +5772,14 @@ MonoBehaviour:
     Ipsum has been the industry's standard dummy text ever since the 1500s, when
     an unknown printer took a galley of type and scrambled it to make a type specimen
     book. It has survived not only five centuries
+  locations: []
+  jobs: []
+  pronouns: []
+  age: 
+  health: []
+  tech: []
+  time: []
+  resources: []
   listItemPrefab: {fileID: 2410521005090410589, guid: 222e3e318bc89404280010682cd9cd45,
     type: 3}
   whichList: Dialog
