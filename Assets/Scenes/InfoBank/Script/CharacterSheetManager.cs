@@ -37,12 +37,8 @@ public class CharacterSheetManager : MonoBehaviour
  
     void Update(){
       if (!animationDone && started && timer <= seconds) {
-        // basic timer
         timer += Time.deltaTime;
-        // percent is a 0-1 float showing the percentage of time that has passed on our timer!
         percent = (float) EasingFunctionHelpers.easeIn(timer / seconds);
-        // multiply the percentage to the difference of our two positions
-        // and add to the start
         rt.anchoredPosition = start + difference * percent; 
         rtDetailPage.anchoredPosition = startDetailPage + differenceDetailPage * percent; 
         rt.rotation = Quaternion.Euler(0f, 0f, rotation + rotationDifference * percent);
@@ -55,7 +51,7 @@ public class CharacterSheetManager : MonoBehaviour
       GameObject phone = GameObject.Find("Detail Container");
       GameObject phoneContainer = GameObject.Find("Phone");
       Transform newItem = Instantiate(detailPagePrefab, phone.transform);
-      Debug.Log(newItem, phone);
+      
       if(!animationDone && !started){
         rt = phoneContainer.GetComponent<RectTransform>();
         rtDetailPage = phone.GetComponent<RectTransform>();
@@ -70,6 +66,7 @@ public class CharacterSheetManager : MonoBehaviour
 
         differenceDetailPage = endDetailPage - startDetailPage;
       }
+
       started = true;
       if(lastItem != null){
         Destroy(lastItem.gameObject);
