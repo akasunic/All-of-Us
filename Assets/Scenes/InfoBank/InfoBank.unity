@@ -1713,19 +1713,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titles:
-  - Mr. Silva
-  - Sophia
-  - Chris
-  - Sam
+  - Rashad Williams
+  - Sophia Sun
+  - Chris Smith
+  - Sam De Loux
   descriptions:
-  - 'Pronouns: He/him Age: 40 Live/Work: Eagle Ridge Interests: Dogs, Cooking Computer
-    exp: 1/10 Financial: Good'
+  - "Rashad Williams was born and raised in Bloomwood, and moved back after getting
+    his Master\u2019s Degree in Library Science. He is married with 2 children (wife
+    Cheryl, children Octavia and Charles) and started out as the popular Young Adult
+    Librarian for Bloomwood Library. Since being promoted to Head Librarian last
+    year, he hasn\u2019t been able to hold his popular story hour in the children's
+    wing. He enjoys comic books, science fiction, and is an avid runner."
   - 'Pronouns: She/her Age: 40 Live/Work: Eagle Ridge Interests: Dogs, Cooking Computer
     exp: 1/10 Financial: Good'
   - 'Pronouns: he/him Age: 40 Live/Work: Eagle Ridge Interests: Dogs, Cooking Computer
     exp: 1/10 Financial: Good'
   - 'Pronouns: She/her Age: 40 Live/Work: Eagle Ridge Interests: Dogs, Cooking Computer
     exp: 1/10 Financial: Good'
+  locations:
+  - Bloomwood Library
+  - Spoon
+  - University Center
+  - Flower Park
+  jobs:
+  - Head Librarian
+  - Chef
+  - Software Engineer
+  - Dog Walker
+  pronouns:
+  - He/Him/His
+  - She/Her/Hers
+  - He/Him/His
+  - They/Them/Theirs
+  age: 2a000000160000001e00000011000000
+  health:
+  - 0.6
+  - 0.2
+  - 0.6
+  - 0.1
+  tech:
+  - 0.9
+  - 0.5
+  - 1
+  - 1
+  time:
+  - 0.2
+  - 0.1
+  - 1
+  - 1
+  resources:
+  - 0.95
+  - 0.2
+  - 1
+  - 0.2
   listItemPrefab: {fileID: 1829950178707904974, guid: 7eb0ca7189597480d9b32e35a1164403,
     type: 3}
   whichList: Contacts
@@ -1836,7 +1876,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 368687711}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7796097
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2227,7 +2267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 151.93172}
+  m_AnchoredPosition: {x: 0, y: 158.59792}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1147032902
@@ -2258,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 8
-    m_Right: 0
+    m_Right: 12
     m_Top: 8
     m_Bottom: 4
   m_ChildAlignment: 3
@@ -4317,6 +4357,14 @@ MonoBehaviour:
     Ipsum has been the industry's standard dummy text ever since the 1500s, when
     an unknown printer took a galley of type and scrambled it to make a type specimen
     book. It has survived not only five centuries
+  locations: []
+  jobs: []
+  pronouns: []
+  age: 
+  health: []
+  tech: []
+  time: []
+  resources: []
   listItemPrefab: {fileID: 2834269548889848139, guid: 250e0c29fbe234b58898e86cc86fe055,
     type: 3}
   whichList: Info
@@ -4506,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4996932401787520596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5831,6 +5879,14 @@ MonoBehaviour:
     Ipsum has been the industry's standard dummy text ever since the 1500s, when
     an unknown printer took a galley of type and scrambled it to make a type specimen
     book. It has survived not only five centuries
+  locations: []
+  jobs: []
+  pronouns: []
+  age: 
+  health: []
+  tech: []
+  time: []
+  resources: []
   listItemPrefab: {fileID: 2410521005090410589, guid: 222e3e318bc89404280010682cd9cd45,
     type: 3}
   whichList: Dialog
