@@ -10,61 +10,75 @@ public class CharacterSheetManager : MonoBehaviour
     public Transform detailPagePrefab;
     private GlobalGameInfo.CharacterItem character;
     private static Transform lastItem = null;
+
+    //our animation variables
     private float seconds = 0.4f;
     private float timer;
-    private Vector2 point = new Vector2(-250, -100);
-    private float ptRotation = 9f;
-    private Vector2 difference;
-    private float rotationDifference;
-    private Vector2 start;
-    private float rotation;
     private float percent;
+    private Vector2 startPoint;
+    private Vector2 endPoint = new Vector2(-250, -100);
+    private Vector2 difference;
+    private float startPointRotation;
+    private float endPointRotation = 9f;
+    private float rotationDifference;
+    private Vector2 startPointDetailPage = new Vector2(600, 0);
+    private Vector2 endPointDetailPage = new Vector2(0, 0);
+    private Vector2 differenceDetailPage;
+
+    //the transforms that we animate
+    private RectTransform rtDetailPage;
     private RectTransform rt;
 
-    private Vector2 startDetailPage = new Vector2(600, 0);
-    private Vector2 endDetailPage = new Vector2(0, 0);
-    private Vector2 differenceDetailPage;
-    private RectTransform rtDetailPage;
-
+    //booleans that track animation progress
     private bool started = false;
     private static bool animationDone = false;
+    GameObject phone;
+    GameObject phoneContainer;
 
+    //when the page gets toggled, we want to reset progress variables
     void OnEnable(){
       animationDone = false;
       started = false;
       timer = 0f;
     }
+
+    void Start(){
+      phone = GameObject.Find("Detail Container");
+      phoneContainer = GameObject.Find("Phone");
+      rt = phoneContainer.GetComponent<RectTransform>();
+      rtDetailPage = phone.GetComponent<RectTransform>();
+    }
  
     void Update(){
+      //animate
       if (!animationDone && started && timer <= seconds) {
         timer += Time.deltaTime;
         percent = (float) EasingFunctionHelpers.easeIn(timer / seconds);
-        rt.anchoredPosition = start + difference * percent; 
-        rtDetailPage.anchoredPosition = startDetailPage + differenceDetailPage * percent; 
-        rt.rotation = Quaternion.Euler(0f, 0f, rotation + rotationDifference * percent);
-      } else if (timer > seconds){
-        animationDone = true;
-      }
+        rt.anchoredPosition = startPoint + difference * percent; 
+        rtDetailPage.anchoredPosition = startPointDetailPage + differenceDetailPage * percent; 
+        rt.rotation = Quaternion.Euler(0f, 0f, startPointRotation + rotationDifference * percent);
+        
+        if (timer > seconds){
+          animationDone = true;
+        }
+      } 
     }
     
     public void openDetailPage(){
-      GameObject phone = GameObject.Find("Detail Container");
-      GameObject phoneContainer = GameObject.Find("Phone");
       Transform newItem = Instantiate(detailPagePrefab, phone.transform);
       
+      //animate UI elements in if a different detail overlay hasn't done it already
       if(!animationDone && !started){
-        rt = phoneContainer.GetComponent<RectTransform>();
-        rtDetailPage = phone.GetComponent<RectTransform>();
 
-        rtDetailPage.anchoredPosition = startDetailPage;
+        rtDetailPage.anchoredPosition = startPointDetailPage;
 
-        start = rt.anchoredPosition;
-        rotation = rt.rotation.z;
+        startPoint = rt.anchoredPosition;
+        startPointRotation = rt.rotation.z;
 
-        difference = point-start;
-        rotationDifference = ptRotation-rotation;
+        difference = endPoint - startPoint;
+        rotationDifference = endPointRotation - startPointRotation;
 
-        differenceDetailPage = endDetailPage - startDetailPage;
+        differenceDetailPage = endPointDetailPage - startPointDetailPage;
       }
 
       started = true;
