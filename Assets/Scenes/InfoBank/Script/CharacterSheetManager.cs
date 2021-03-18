@@ -10,7 +10,6 @@ public class CharacterSheetManager : MonoBehaviour
     public Transform detailPagePrefab;
     private GlobalGameInfo.CharacterItem character;
     private static Transform lastItem = null;
-
     private float seconds = 0.4f;
     private float timer;
     private Vector2 point = new Vector2(-250, -100);
