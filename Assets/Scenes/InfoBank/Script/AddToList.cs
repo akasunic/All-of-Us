@@ -45,7 +45,7 @@ public class AddToList : MonoBehaviour
                             resources[i]);
                         break;
                     default:
-                        GlobalGameInfo.addNewItemToInfoList(titles[i], descriptions[i]); 
+                        GlobalGameInfo.addNewItemToInfoList(titles[i], age[i].ToString(), descriptions[i]); 
                         break;
                 }
             }
@@ -59,7 +59,7 @@ public class AddToList : MonoBehaviour
                 fillContactList(GlobalGameInfo.contactsList);
                 break;
             default:
-                fillList(GlobalGameInfo.infoList);
+                fillInfoList(GlobalGameInfo.infoList);
                 break;
         }
     }
@@ -76,6 +76,27 @@ public class AddToList : MonoBehaviour
         }
     }
 
+    private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
+        if(list.Count == 0){return;}
+
+        Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
+        for(int i = 0; i < list.Count; i++){
+            string character = list[i].character;
+            if(!dict.ContainsKey(character)){
+                dict.Add(character, new List<GlobalGameInfo.InfoItem>());
+            }
+            List<GlobalGameInfo.InfoItem> l = dict[character];
+            l.Add(list[i]);
+        }
+
+        Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        foreach( KeyValuePair<string, List<GlobalGameInfo.InfoItem>> elem in dict )
+        {
+            Transform newItem = Instantiate(listItemPrefab, go);
+            newItem.GetComponent<InfoManager>().setDetails(elem.Key, elem.Value);
+        }
+    }
+
     private void fillContactList(List<GlobalGameInfo.CharacterItem> list){
         if(list.Count == 0){return;}
         
@@ -84,6 +105,9 @@ public class AddToList : MonoBehaviour
         for(int i = 0; i < list.Count; i++){
             Transform newItem = Instantiate(listItemPrefab, go);
             newItem.GetComponent<CharacterSheetManager>().setDetails(list[i]);
+            if(i == 0){
+                newItem.GetComponent<CharacterSheetManager>().openDetailPage();
+            }
         }
     }
 

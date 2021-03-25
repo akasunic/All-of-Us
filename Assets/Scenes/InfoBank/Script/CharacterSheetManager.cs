@@ -22,7 +22,7 @@ public class CharacterSheetManager : MonoBehaviour
     private float endPointRotation = 9f;
     private float rotationDifference;
     private Vector2 startPointDetailPage = new Vector2(600, 0);
-    private Vector2 endPointDetailPage = new Vector2(0, 0);
+    private Vector2 endPointDetailPage = new Vector2(415, 0);
     private Vector2 differenceDetailPage;
 
     //the transforms that we animate
@@ -43,45 +43,19 @@ public class CharacterSheetManager : MonoBehaviour
     }
 
     void Start(){
-      phone = GameObject.Find("Detail Container");
+      phone = GameObject.Find("Child Container");
       phoneContainer = GameObject.Find("Phone");
       rt = phoneContainer.GetComponent<RectTransform>();
       rtDetailPage = phone.GetComponent<RectTransform>();
     }
- 
-    void Update(){
-      //animate
-      if (!animationDone && started && timer <= seconds) {
-        timer += Time.deltaTime;
-        percent = (float) EasingFunctionHelpers.easeIn(timer / seconds);
-        rt.anchoredPosition = startPoint + difference * percent; 
-        rtDetailPage.anchoredPosition = startPointDetailPage + differenceDetailPage * percent; 
-        rt.rotation = Quaternion.Euler(0f, 0f, startPointRotation + rotationDifference * percent);
-        
-        if (timer > seconds){
-          animationDone = true;
-        }
-      } 
-    }
+
     
     public void openDetailPage(){
-      Transform newItem = Instantiate(detailPagePrefab, phone.transform);
-      
-      //animate UI elements in if a different detail overlay hasn't done it already
-      if(!animationDone && !started){
-
-        rtDetailPage.anchoredPosition = startPointDetailPage;
-
-        startPoint = rt.anchoredPosition;
-        startPointRotation = rt.rotation.z;
-
-        difference = endPoint - startPoint;
-        rotationDifference = endPointRotation - startPointRotation;
-
-        differenceDetailPage = endPointDetailPage - startPointDetailPage;
+      if(phone == null){
+        phone = GameObject.Find("Child Container");
       }
-
-      started = true;
+      Transform newItem = Instantiate(detailPagePrefab, phone.transform);
+    
       if(lastItem != null){
         Destroy(lastItem.gameObject);
       }
