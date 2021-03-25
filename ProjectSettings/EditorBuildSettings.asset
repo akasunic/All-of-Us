@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/LibraryVN.unity
     guid: 91a3bccdc9a11f043ac45b8aa6f69139
   - enabled: 1
-    path: Assets/Scenes/Rashad Intro Quest.unity
-    guid: 97592fde77a38f64384be87ff5fe8233
+    path: Assets/InkFungus/Documentation/Test Demo/InkFungusTest.unity
+    guid: e119cb1f352aeff44b1a2f00da0be216
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

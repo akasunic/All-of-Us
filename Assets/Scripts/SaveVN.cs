@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using InkFungus;
 using Fungus;
 
 public class SaveVN : MonoBehaviour
@@ -9,6 +10,10 @@ public class SaveVN : MonoBehaviour
     [Tooltip("Parent GameObject for all flowcharts in the scene. " +
         "Any flowchart not a child of this won't be considered for saving.")]
     public GameObject flowchartHolder;
+    [Tooltip("Ink-Fungus narrative director for this scene.")]
+    public NarrativeDirector narrativeDirector;
+
+    private static string cachedKnot;
 
     /// <summary>
     /// A flowchart that holds data for the save point in the visual novel.
@@ -22,22 +27,23 @@ public class SaveVN : MonoBehaviour
     string fcSavedFlowchartName { get {
             return variablesFlowchart.GetStringVariable("savedFlowchartName");
         } }
-    string fcSavedBlockName { get {
-            return variablesFlowchart.GetStringVariable("savedBlockName");
-        } }
-    int fcSavedCommandIndex { get {
-            return variablesFlowchart.GetIntegerVariable("savedCommandIndex");
+    string fcSavedKnot { get {
+            return variablesFlowchart.GetStringVariable("savedKnot");
         } }
 
     void Awake() {
         // Make sure we find the Variables Flowchart before trying to
         // read from it.
+        if (cachedKnot == null)
+            cachedKnot = "intro";
+
         variablesFlowchart = flowchartHolder.transform.
             Find("Variables Flowchart").GetComponent<Flowchart>();
         if (variablesFlowchart == null) {
             Debug.LogError("Couldn't find variables flowchart");
             return;
         }
+        FindObjectOfType<NarrativeDirector>().OnVariablesChanged(variablesFlowchart);
     }
 
     // Start is called before the first frame update
@@ -53,8 +59,9 @@ public class SaveVN : MonoBehaviour
             // data has been saved. load position
             Flowchart savedFC = GameObject.Find(fcSavedFlowchartName).
                 GetComponent<Flowchart>();
-            Block savedBlock = savedFC.FindBlock(fcSavedBlockName);
-            savedFC.ExecuteBlock(savedBlock, fcSavedCommandIndex);
+            // savedFC.SetStringVariable("savedKnot", fcSavedKnot);
+            Debug.Log("savedKnot on load: " + savedFC.GetStringVariable("savedKnot"));
+            savedFC.ExecuteBlock("On Variables Loaded");
         } else {
             // no data saved
             // Debug.Log(fcSavedFlowchartName);
@@ -65,18 +72,18 @@ public class SaveVN : MonoBehaviour
     /// <summary>
     /// Sets the data stored in Variables Flowchart to the arguments.
     /// </summary>
-    public void SetSavedData(string savedFlowchartName, string savedBlockName,
-        int savedCommandIndex) {
+    public void SetSavedData(string savedFlowchartName, string savedKnot) {
         variablesFlowchart.SetStringVariable("savedFlowchartName", savedFlowchartName);
-        variablesFlowchart.SetStringVariable("savedBlockName", savedBlockName);
-        variablesFlowchart.SetIntegerVariable("savedCommandIndex", savedCommandIndex);
+        variablesFlowchart.SetStringVariable("savedKnot", savedKnot);
+        FindObjectOfType<NarrativeDirector>().OnVariablesChanged(variablesFlowchart);
+        Debug.Log("savedKnot on save: " + variablesFlowchart.GetStringVariable("savedKnot"));
     }
 
     /// <summary>
     /// Clear saved data. Useful when changing scenes after finishing quests.
     /// </summary>
     public void ClearSavedData() {
-        SetSavedData("", "", -1);
+        SetSavedData("", "");
     }
 
     /// <summary>
@@ -94,25 +101,13 @@ public class SaveVN : MonoBehaviour
     /// but functionality may be added later to support multiple.
     /// </summary>
     void SaveInfo() {
-        string savedFlowchartName = "";
-        string savedBlockName = "";
-        int savedCommandIndex = -1;
-
-        foreach (Flowchart fc in flowchartHolder.GetComponentsInChildren<Flowchart>()) {
-            List<Block> executingBlocks = fc.GetExecutingBlocks();
-            if (executingBlocks.Count > 0) {
-                // fc has executing block
-                // for now, just get first found executing block.
-                // might have to change later
-                savedFlowchartName = fc.gameObject.name;
-                savedBlockName = executingBlocks[0].BlockName;
-                savedCommandIndex = executingBlocks[0].activeCommand.CommandIndex;
-                break;
-            }
+        string savedFlowchartName = "Variables Flowchart"; // FOR NOW
+        string savedKnot = narrativeDirector.story.state.currentPathString;
+        if (savedKnot == null) {
+            savedKnot = cachedKnot;
+        } else {
+            cachedKnot = savedKnot;
         }
-        if (savedBlockName == "") {
-            Debug.Log("No executing blocks.");
-        }
-        SetSavedData(savedFlowchartName, savedBlockName, savedCommandIndex);
+        SetSavedData(savedFlowchartName, savedKnot);
     }
 }

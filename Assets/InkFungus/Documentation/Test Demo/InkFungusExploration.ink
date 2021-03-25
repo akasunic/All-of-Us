@@ -1,4 +1,5 @@
-VAR savedJump = "astonished"
+VAR savedKnot = ""
+VAR savedFlowchartName = ""
 VAR hasStarted = false
 
 ->intro

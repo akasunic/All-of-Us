@@ -41,12 +41,12 @@ namespace InkFungus
         public Flowchart gatewayFlowchart;
         public float defaultChoiceTime = 5f;
 
-        private Story story;
+        public Story story { get; private set; }
         private Regex compiledDialogRegex;
         private Dictionary<string, Character> characters = new Dictionary<string, Character>();
         private GlobalVariables fungusGlobalVariables;
         private Dictionary<string, List<Flowchart>> syncVariables = new Dictionary<string, List<Flowchart>>();
-        private bool beforeFirstSync = true;
+        // private bool beforeFirstSync = true;
 
         // Configurations driven by Ink tags:
         private bool pause = true;
@@ -360,11 +360,11 @@ namespace InkFungus
                 if (!loading)
                 {
                     story.Continue();
-                    if (beforeFirstSync)
-                    {
-                        SyncAllVariablesToFungus();
-                        beforeFirstSync = false;
-                    }
+                    //if (beforeFirstSync)
+                    //{
+                    //    SyncAllVariablesToFungus();
+                    //    beforeFirstSync = false;
+                    //}
                 }
                 string line = story.currentText;
                 Debug.Log("»" + line);
@@ -608,11 +608,11 @@ namespace InkFungus
         public void OnVariablesChanged(Flowchart origin)
         {
             Debug.Log("OnVariablesChange origin=" + origin.name);
-            if (beforeFirstSync)
-            {
-                Debug.Log("Still initializing, Fungus->Ink sync request ignored");
-                return;
-            }
+            //if (beforeFirstSync)
+            //{
+            //    Debug.Log("Still initializing, Fungus->Ink sync request ignored");
+            //    return;
+            //}
             List<Variable> affectedFungusVariables;
             if (origin != null)
             {
