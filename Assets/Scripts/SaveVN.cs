@@ -13,6 +13,7 @@ public class SaveVN : MonoBehaviour
     [Tooltip("Ink-Fungus narrative director for this scene.")]
     public NarrativeDirector narrativeDirector;
 
+    private bool firstCacheUpdate = false;
     private static string cachedKnot;
 
     /// <summary>
@@ -32,11 +33,11 @@ public class SaveVN : MonoBehaviour
         } }
 
     void Awake() {
-        // Make sure we find the Variables Flowchart before trying to
-        // read from it.
         if (cachedKnot == null)
             cachedKnot = "intro";
 
+        // Make sure we find the Variables Flowchart before trying to
+        // read from it.
         variablesFlowchart = flowchartHolder.transform.
             Find("Variables Flowchart").GetComponent<Flowchart>();
         if (variablesFlowchart == null) {
@@ -55,18 +56,18 @@ public class SaveVN : MonoBehaviour
     IEnumerator LoadingSavedData() {
         yield return new WaitForEndOfFrame();
         // check position in visual novel
-        if (fcSavedFlowchartName != "") {
-            // data has been saved. load position
-            Flowchart savedFC = GameObject.Find(fcSavedFlowchartName).
-                GetComponent<Flowchart>();
-            // savedFC.SetStringVariable("savedKnot", fcSavedKnot);
-            Debug.Log("savedKnot on load: " + savedFC.GetStringVariable("savedKnot"));
-            savedFC.ExecuteBlock("On Variables Loaded");
+
+        if (fcSavedKnot != "") {
+            // data has been saved
+            // before, we used to have to do stuff here, but not for ink
+            Debug.Log("savedKnot on load: " + variablesFlowchart.GetStringVariable("savedKnot"));
         } else {
             // no data saved
             // Debug.Log(fcSavedFlowchartName);
             // do nothing?
+            Debug.Log("No value for savedKnot found.");
         }
+        variablesFlowchart.ExecuteBlock("On Variables Loaded");
     }
 
     /// <summary>
@@ -96,6 +97,18 @@ public class SaveVN : MonoBehaviour
     }
 
     /// <summary>
+    /// Updates the cached knot to the current path.
+    /// </summary>
+    public void UpdateCachedKnot() {
+        if (firstCacheUpdate) {
+            cachedKnot = narrativeDirector.story.state.currentPathString;
+            Debug.Log("Updated cachedKnot to: " + cachedKnot);
+        } else {
+            firstCacheUpdate = true;
+        }
+    }
+
+    /// <summary>
     /// Save the active flowchart, block, and command index to Variables
     /// Flowchart for retrieval earlier. Currently stores one active block,
     /// but functionality may be added later to support multiple.
@@ -106,7 +119,7 @@ public class SaveVN : MonoBehaviour
         if (savedKnot == null) {
             savedKnot = cachedKnot;
         } else {
-            cachedKnot = savedKnot;
+            UpdateCachedKnot();
         }
         SetSavedData(savedFlowchartName, savedKnot);
     }
