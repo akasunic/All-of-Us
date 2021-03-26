@@ -2523,6 +2523,7 @@ GameObject:
   - component: {fileID: 1146814522}
   - component: {fileID: 1146814524}
   - component: {fileID: 1146814523}
+  - component: {fileID: 1146814525}
   m_Layer: 0
   m_Name: Variables Flowchart
   m_TagString: Untagged
@@ -2558,9 +2559,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 73.818184
+    x: 74.954544
     y: 75.681816
-    width: 82.967026
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2585,11 +2586,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 210.92795, y: 112.50085}
+  scrollPos: {x: 214.89835, y: 117.25735}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.9100001
+  zoom: 0.88000005
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -2597,9 +2598,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1146814513}
+  - {fileID: 1146814519}
   selectedCommands:
-  - {fileID: 1146814523}
+  - {fileID: 1146814521}
   variables:
   - {fileID: 1146814491}
   - {fileID: 1146814508}
@@ -2666,7 +2667,7 @@ MonoBehaviour:
   indentLevel: 1
   commenterName: 
   commentText: We've already done the one quest that's in this scene; so just do
-    nothing.
+    nothing
 --- !u!114 &1146814493
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3349,9 +3350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 241.9767
-    y: 71.61387
-    width: 162.08789
+    x: 244.2494
+    y: 73.88659
+    width: 125.90908
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3695,7 +3696,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 469.0295
     y: 230.66844
-    width: 93.95604
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4066,7 +4067,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 246.22736
     y: 224.9866
-    width: 151.09889
+    width: 114.54545
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4083,6 +4084,7 @@ MonoBehaviour:
   - {fileID: 1146814497}
   - {fileID: 1146814496}
   - {fileID: 1146814492}
+  - {fileID: 1146814525}
   - {fileID: 1146814495}
   activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
@@ -4102,7 +4104,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 484.86377
     y: 78.39576
-    width: 100.549446
+    width: 62.272724
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4202,7 +4204,7 @@ MonoBehaviour:
   commentText: Clear jump point saved variables.
 --- !u!114 &1146814523
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4233,6 +4235,22 @@ MonoBehaviour:
   commenterName: 
   commentText: Maybe add something here to indicate that the next time we come back
     to this scene,
+--- !u!114 &1146814525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 75
+  indentLevel: 1
+  commenterName: 
+  commentText: or call some default action, maybe the "quest turnin" thing?
 --- !u!1 &1440244879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4675,7 +4693,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 225.25128
     y: 168.92654
-    width: 170.25314
+    width: 130.25314
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5039,7 +5057,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.83204
     y: 162.97717
-    width: 128.48099
+    width: 88.480995
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
