@@ -5,14 +5,23 @@ using UnityEngine.SceneManagement;
 using InkFungus;
 using Fungus;
 
+
+/// <summary>
+/// Handles the All of Us save system; stores story variables in Fungus
+/// flowchart global variables, then sends the variables'
+/// values to Ink on scene load.
+/// </summary>
 public class SaveVN : MonoBehaviour
 {
+    // After switching to Ink, this holder isn't super necessary because we
+    // no longer search for active Fungus blocks.
     [Tooltip("Parent GameObject for all flowcharts in the scene. " +
         "Any flowchart not a child of this won't be considered for saving.")]
     public GameObject flowchartHolder;
     [Tooltip("Ink-Fungus narrative director for this scene.")]
     public NarrativeDirector narrativeDirector;
 
+    // The cache knot variables help with some null edge cases when saving.
     private bool firstCacheUpdate = false;
     private static string cachedKnot;
 
@@ -44,6 +53,8 @@ public class SaveVN : MonoBehaviour
             Debug.LogError("Couldn't find variables flowchart");
             return;
         }
+        // Send Fungus variables to Ink or else Ink will try to overwrite the Fungus variables.
+        // Might not be totally necessary.
         FindObjectOfType<NarrativeDirector>().OnVariablesChanged(variablesFlowchart);
     }
 
@@ -53,13 +64,18 @@ public class SaveVN : MonoBehaviour
         StartCoroutine(LoadingSavedData());
     }
 
+    /// <summary>
+    /// Coroutine to load the saved data from Variables Flowchart and load a
+    /// point in the story based on what was saved.
+    /// </summary>
     IEnumerator LoadingSavedData() {
+        // Wait for the flowchart to initialize
         yield return new WaitForEndOfFrame();
-        // check position in visual novel
 
+        // check position in visual novel
+        // For Ink, we no longer need to really do anything here
         if (fcSavedKnot != "") {
             // data has been saved
-            // before, we used to have to do stuff here, but not for ink
             Debug.Log("savedKnot on load: " + variablesFlowchart.GetStringVariable("savedKnot"));
         } else {
             // no data saved
@@ -109,18 +125,21 @@ public class SaveVN : MonoBehaviour
     }
 
     /// <summary>
-    /// Save the active flowchart, block, and command index to Variables
-    /// Flowchart for retrieval earlier. Currently stores one active block,
-    /// but functionality may be added later to support multiple.
+    /// Save the flowchart containing the active story info and the
+    /// current knot in the Ink file.
     /// </summary>
     void SaveInfo() {
-        string savedFlowchartName = "Variables Flowchart"; // FOR NOW
+        // After switching to Ink, I think we only need one flowchart FOR NOW
+        string savedFlowchartName = "Variables Flowchart";
         string savedKnot = narrativeDirector.story.state.currentPathString;
+
+        // Edge case of clicking back button while on the last line of dialogue
         if (savedKnot == null) {
             savedKnot = cachedKnot;
         } else {
             UpdateCachedKnot();
         }
+
         SetSavedData(savedFlowchartName, savedKnot);
     }
 }

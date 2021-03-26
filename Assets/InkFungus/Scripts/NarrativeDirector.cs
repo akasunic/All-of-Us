@@ -10,6 +10,9 @@ using System.Globalization;
 
 namespace InkFungus
 {
+    // NOTE: Waiting for first sync with Ink has been commented out due to it 
+    //       being seemingly redundant when reloading a scene, and it doesn't 
+    //       allow for the flowchart variables to be the "master" copies.
     public class NarrativeDirector : MonoBehaviour
     {
         [Header("Basic Settings")]
@@ -41,6 +44,7 @@ namespace InkFungus
         public Flowchart gatewayFlowchart;
         public float defaultChoiceTime = 5f;
 
+        // story has been given a public get for our save system
         public Story story { get; private set; }
         private Regex compiledDialogRegex;
         private Dictionary<string, Character> characters = new Dictionary<string, Character>();

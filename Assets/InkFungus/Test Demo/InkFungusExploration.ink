@@ -11,7 +11,7 @@ Residence of Monsieur Phileas Fogg.
 
 === london ===
 Monsieur Phileas Fogg returned home early from the Reform Club, and in a new-fangled steam-carriage, besides!  
-"Passepartout," said he. "We are going around the world!"
+Rashad "Passepartout. We are going around the world!"
 
 + "Around the world, Monsieur?"
     I was utterly astonished. 
@@ -21,7 +21,7 @@ Monsieur Phileas Fogg returned home early from the Reform Club, and in a new-fan
 
 === astonished ===
 "You are in jest!" I told him in dignified affront. "You make mock of me, Monsieur."
-"I am quite serious."
+Rashad "I am quite serious."
 
 + "But of course"
     -> ending
@@ -33,5 +33,7 @@ I nodded curtly, not believing a word of it.
 
 
 === ending ===
-"We shall circumnavigate the globe within eighty days." He was quite calm as he proposed this wild scheme. "We leave for Paris on the 8:25. In an hour."
+Rashad "We shall circumnavigate the globe within eighty days."
+He was quite calm as he proposed this wild scheme.
+Rashad "We leave for Paris on the 8:25. In an hour."
 -> END

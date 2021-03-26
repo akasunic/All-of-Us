@@ -2520,6 +2520,9 @@ GameObject:
   - component: {fileID: 1146814519}
   - component: {fileID: 1146814520}
   - component: {fileID: 1146814521}
+  - component: {fileID: 1146814522}
+  - component: {fileID: 1146814524}
+  - component: {fileID: 1146814523}
   m_Layer: 0
   m_Name: Variables Flowchart
   m_TagString: Untagged
@@ -2596,7 +2599,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1146814513}
   selectedCommands:
-  - {fileID: 1146814516}
+  - {fileID: 1146814523}
   variables:
   - {fileID: 1146814491}
   - {fileID: 1146814508}
@@ -3347,7 +3350,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 241.9767
-    y: 72.71277
+    y: 71.61387
     width: 162.08789
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3691,7 +3694,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 469.0295
-    y: 229.56953
+    y: 230.66844
     width: 93.95604
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3701,8 +3704,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1146814512}
   commandList:
+  - {fileID: 1146814522}
   - {fileID: 1146814515}
   - {fileID: 1146814514}
+  - {fileID: 1146814524}
+  - {fileID: 1146814523}
   - {fileID: 1146814516}
   - {fileID: 1146814517}
   activeCommand: {fileID: 0}
@@ -4178,6 +4184,55 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1146814522
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 72
+  indentLevel: 0
+  commenterName: 
+  commentText: Clear jump point saved variables.
+--- !u!114 &1146814523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 74
+  indentLevel: 0
+  commenterName: 
+  commentText: do something different in the story (see Start New Section comments)
+--- !u!114 &1146814524
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e8f632db87477eb750446b28d73a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 73
+  indentLevel: 0
+  commenterName: 
+  commentText: Maybe add something here to indicate that the next time we come back
+    to this scene,
 --- !u!1 &1440244879
 GameObject:
   m_ObjectHideFlags: 0
