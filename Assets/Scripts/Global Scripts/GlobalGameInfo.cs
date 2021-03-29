@@ -2,9 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Stores static game info for the infobank
 public class GlobalGameInfo
 {
 
+    public delegate void UpdateNotifications();
+    public static UpdateNotifications updateNotifications;
+
+    public static void setNotificationDelegate(UpdateNotifications n){
+        updateNotifications = n;
+    }
+    
+    public static void clearNotificationDelegate(){
+        updateNotifications = null;
+    }
+
+    //DEPRECATED
     public class InfoListItem 
     {
         public string title;
@@ -12,6 +25,23 @@ public class GlobalGameInfo
         public InfoListItem(string title, string description){
             this.title = title;
             this.description = description;
+        }
+    }
+
+    //THIS ONE IS USED FOR INFO ITEMS
+    public class InfoItem 
+    {
+        public string day;
+        public string description;
+        public string character;
+        public string tagIdentifier;
+
+        public InfoItem(string character, string day, string description){
+            this.character = character;
+            this.day = day;
+            this.description = description;
+            string unhashedKey = character + day + description;
+            this.tagIdentifier = unhashedKey.GetHashCode().ToString();
         }
     }
 
@@ -54,14 +84,38 @@ public class GlobalGameInfo
     }
 
     public static List<InfoListItem> dialogList = new List<InfoListItem>();
-    public static List<InfoListItem> infoList = new List<InfoListItem>();
+    public static List<InfoItem> infoList = new List<InfoItem>();
     public static List<CharacterItem> contactsList = new List<CharacterItem>();
-    public static void addNewItemToDialogList(string title, string description){
+    public static int untaggedObjects = 0;
+
+    public static void addNewItemToDialogList(
+        string title, 
+        string description)
+    {
         GlobalGameInfo.dialogList.Add(new InfoListItem(title, description));
     }
 
-    public static void addNewItemToInfoList(string title, string description){
-        GlobalGameInfo.infoList.Add(new InfoListItem(title, description));
+    public static void decreaseUntaggedObjects(){
+        untaggedObjects--;
+        if(updateNotifications != null){
+            updateNotifications();
+        }
+    }
+
+    public static void increaseUntaggedObjects(){
+        untaggedObjects++;
+        if(updateNotifications != null){
+            updateNotifications();
+        }
+    }
+
+    public static void addNewItemToInfoList(
+        string character, 
+        string day, 
+        string description)
+    {
+        GlobalGameInfo.infoList.Add(new InfoItem(character, day, description));
+        increaseUntaggedObjects();
     }
 
     public static void addNewItemToContactsList(
@@ -88,4 +142,5 @@ public class GlobalGameInfo
             tech,
             resources));
         }
+
 }

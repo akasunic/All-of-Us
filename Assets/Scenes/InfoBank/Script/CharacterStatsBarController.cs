@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//this is used to control the character stats bars
+//calling setProgress will change the value
 public class CharacterStatsBarController : MonoBehaviour
 {
     // public Slider for Unity editor
