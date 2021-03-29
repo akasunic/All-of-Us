@@ -5,83 +5,30 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+//attached to the contact thumbnails
+//populates the text in those
+//but also controls the opening and text of the 
+//contact detail pages
 public class CharacterSheetManager : MonoBehaviour
 {
     public Transform detailPagePrefab;
     private GlobalGameInfo.CharacterItem character;
     private static Transform lastItem = null;
 
-    //our animation variables
-    private float seconds = 0.4f;
-    private float timer;
-    private float percent;
-    private Vector2 startPoint;
-    private Vector2 endPoint = new Vector2(-250, -100);
-    private Vector2 difference;
-    private float startPointRotation;
-    private float endPointRotation = 9f;
-    private float rotationDifference;
-    private Vector2 startPointDetailPage = new Vector2(600, 0);
-    private Vector2 endPointDetailPage = new Vector2(0, 0);
-    private Vector2 differenceDetailPage;
-
-    //the transforms that we animate
-    private RectTransform rtDetailPage;
-    private RectTransform rt;
-
-    //booleans that track animation progress
-    private bool started = false;
-    private static bool animationDone = false;
     GameObject phone;
     GameObject phoneContainer;
 
-    //when the page gets toggled, we want to reset progress variables
-    void OnEnable(){
-      animationDone = false;
-      started = false;
-      timer = 0f;
-    }
-
     void Start(){
-      phone = GameObject.Find("Detail Container");
+      phone = GameObject.Find("Child Container");
       phoneContainer = GameObject.Find("Phone");
-      rt = phoneContainer.GetComponent<RectTransform>();
-      rtDetailPage = phone.GetComponent<RectTransform>();
     }
- 
-    void Update(){
-      //animate
-      if (!animationDone && started && timer <= seconds) {
-        timer += Time.deltaTime;
-        percent = (float) EasingFunctionHelpers.easeIn(timer / seconds);
-        rt.anchoredPosition = startPoint + difference * percent; 
-        rtDetailPage.anchoredPosition = startPointDetailPage + differenceDetailPage * percent; 
-        rt.rotation = Quaternion.Euler(0f, 0f, startPointRotation + rotationDifference * percent);
-        
-        if (timer > seconds){
-          animationDone = true;
-        }
-      } 
-    }
-    
+
     public void openDetailPage(){
-      Transform newItem = Instantiate(detailPagePrefab, phone.transform);
-      
-      //animate UI elements in if a different detail overlay hasn't done it already
-      if(!animationDone && !started){
-
-        rtDetailPage.anchoredPosition = startPointDetailPage;
-
-        startPoint = rt.anchoredPosition;
-        startPointRotation = rt.rotation.z;
-
-        difference = endPoint - startPoint;
-        rotationDifference = endPointRotation - startPointRotation;
-
-        differenceDetailPage = endPointDetailPage - startPointDetailPage;
+      if(phone == null){
+        phone = GameObject.Find("Child Container");
       }
-
-      started = true;
+      Transform newItem = Instantiate(detailPagePrefab, phone.transform);
+    
       if(lastItem != null){
         Destroy(lastItem.gameObject);
       }
