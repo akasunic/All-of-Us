@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//Connects to app buttons, turns the relevant pages on and off
+//also handles the starting animation
+//also handles the border that incidates "active" app
 public class PhoneScreenManager : MonoBehaviour
 {
     public GameObject messages;
     public GameObject notes;
     public GameObject contacts;
 
+    public GameObject messagesBorder;
+    public GameObject notesBorder;
+    public GameObject contactsBorder;
+
     private GameObject lastSelected;
+    private GameObject lastSelectedBorder;
 
     //animation variables
-
     private Vector2 outScreen = new Vector2(0, -60);
     private Vector2 inScreen = new Vector2(-295, -70);
     private float inRotation = 15f;
@@ -70,8 +77,12 @@ public class PhoneScreenManager : MonoBehaviour
         messages.SetActive(false);
         notes.SetActive(false);
         contacts.SetActive(false);
+        messagesBorder.SetActive(false);
+        notesBorder.SetActive(false);
+        contactsBorder.SetActive(false);
 
         lastSelected = null;
+        lastSelectedBorder = null;
 
         //grab objects to animate
         detailContainer = GameObject.Find("Detail Container");
@@ -118,30 +129,44 @@ public class PhoneScreenManager : MonoBehaviour
         animateItemsIn();
         //start toggling pages
         sectionName.GetComponent<TextMeshProUGUI>().text = getSectionName(type);
-        GameObject go = getGameObject(type);
+        GameObject go = null;
+        GameObject border = null;
+        getGameObject(type, ref go, ref border);
         if(lastSelected != null){
-            Debug.Log(lastSelected);
             lastSelected.SetActive(false);
+        }
+        if(lastSelectedBorder != null){
+            lastSelectedBorder.SetActive(false);
         }
         if(go != null){
             go.SetActive(true);
             lastSelected = go;
-            Debug.Log(lastSelected);
+        }
+        if(border != null){
+            border.SetActive(true);
+            lastSelectedBorder = border;
         }
     }
 
-    private GameObject getGameObject(string type){
+    private void getGameObject(string type, ref GameObject go, ref GameObject border){
         switch (type.ToLower()){
             case "messages":
-                return messages;
+                go = messages;
+                border = messagesBorder;
+                break;
             case "notes":
-                return notes;
+                go = notes;
+                border = notesBorder;
+                break;
             case "contacts":
-                return contacts;
+                go = contacts;
+                border = contactsBorder;
+                break;
             case "back":
-                return null;
+                go = null;
+                border = null;
+                break;
         }
-        return null;
     }
     private string getSectionName(string type){
         switch (type.ToLower()){

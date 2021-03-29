@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Stores static game info for the infobank
 public class GlobalGameInfo
 {
 

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+//this script grabs the InfoItems from GlobalGameInfo
+//and then instantiates the journal prefabs from them
+//it replaces the information in the prefabs with the saved info
 public class InfoManager : MonoBehaviour
 {
     public Transform itemPrefab;
@@ -28,10 +31,11 @@ public class InfoManager : MonoBehaviour
          Transform newItem = Instantiate(itemPrefab, go);
           newItem.GetComponent<DetailPageManager>().setText("Day " + items[i].day);
           newItem.GetComponent<DetailPageManager>().setDescription(items[i].description);
-
+          Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
+          if(tagsList != null){
+            tagsList.GetComponent<TagListManager>().SetInfoId(items[i].tagIdentifier);
+          }
+          
       }
-      // Transform descriptionChild = HelperFunctions.FindChildByRecursion(transform, "description");
-      // if(descriptionChild == null) return;
-      // descriptionChild.gameObject.GetComponent<TextMeshProUGUI>().text = character.job;
     }
 }

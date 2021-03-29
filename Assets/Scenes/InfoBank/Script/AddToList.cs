@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//fills the page with the list items from GlobalGameInfo
+//also temporarily starts by filling the globalgameinfo with 
+//placeholder data, but eventually this should be removed
 public class AddToList : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//this is attached to instantiated prefabs and
+//will automatically update the "text" and "description" fields
+//if another script calls setText or setDescription
+//used for smaller prefabs where i need to replace the text
+//it can also handle the opening of "detail pages" but this isn't used anymore
 public class DetailPageManager : MonoBehaviour
 {
     public Transform detailPagePrefab;
@@ -12,20 +17,22 @@ public class DetailPageManager : MonoBehaviour
     private static Transform lastItem = null;
     
     public void openDetailPage(){
-      GameObject phone = GameObject.Find("Detail Container");
-      Transform newItem = Instantiate(detailPagePrefab, phone.transform);
-      if(lastItem != null){
-        Destroy(lastItem.gameObject);
-      }
-      lastItem = newItem;
-      Transform txt = HelperFunctions.FindChildByRecursion(newItem, "text");
-      Transform des = HelperFunctions.FindChildByRecursion(newItem, "description");
+      if(detailPagePrefab != null){
+        GameObject phone = GameObject.Find("Detail Container");
+        Transform newItem = Instantiate(detailPagePrefab, phone.transform);
+        if(lastItem != null){
+          Destroy(lastItem.gameObject);
+        }
+        lastItem = newItem;
+        Transform txt = HelperFunctions.FindChildByRecursion(newItem, "text");
+        Transform des = HelperFunctions.FindChildByRecursion(newItem, "description");
 
-      if(txt != null){
-        txt.gameObject.GetComponent<TextMeshProUGUI>().text = text;
-      }
-      if(des != null){
-        des.gameObject.GetComponent<TextMeshProUGUI>().text = description;
+        if(txt != null){
+          txt.gameObject.GetComponent<TextMeshProUGUI>().text = text;
+        }
+        if(des != null){
+          des.gameObject.GetComponent<TextMeshProUGUI>().text = description;
+        }
       }
     }
 
