@@ -42,7 +42,7 @@ public class TagListManager : MonoBehaviour {
       for(int i = 0; i < list.Count; i++) {
         GameObject tagItem = Instantiate(tagPrefab, transform);
         Debug.Log(tagItem);
-        tagItem.GetComponent<RectTransform>().SetAsFirstSibling();
+        //tagItem.GetComponent<RectTransform>().SetAsFirstSibling();
         string val = list[i];
         tagItem.GetComponent<DetailPageManager>().setText(val);
         listOfTags.Add(tagItem);
