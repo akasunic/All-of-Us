@@ -33,6 +33,7 @@ public class InfoManager : MonoBehaviour
           newItem.GetComponent<DetailPageManager>().setDescription(items[i].description);
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
           if(tagsList != null){
+            Debug.Log("found tagslist");
             tagsList.GetComponent<TagListManager>().SetInfoId(items[i].tagIdentifier);
           }
           

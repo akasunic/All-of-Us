@@ -11,22 +11,13 @@ public class TagListManager : MonoBehaviour {
     public GameObject tagPrefab;
     private List<GameObject> listOfTags = new List<GameObject>();
 
-    //--- SAVING THE BELOW CODE, PENDING CLARIFICATION FROM DESIGN TEAM--- //
-    // public RectTransform heightTransform;
-    // public RectTransform descriptionTransform;
-    // public RectTransform dividerTransform;
-    // public RectTransform parentTransform;
-    // private int incTag = 0;
-    // private int padding = 40;
-    //---END OF SAVED CODE---- //
+    public RectTransform heightTransform;
+    public RectTransform parentTransform;
 
     void Start(){
-      
-      //--- SAVING THE BELOW CODE, PENDING CLARIFICATION FROM DESIGN TEAM--- //
-      // var descriptionHeight = (descriptionTransform.rect.height) + padding;
-      // parentTransform.sizeDelta = new Vector2(500, descriptionHeight );
-      // dividerTransform.localPosition = new Vector2(0, -1 * (descriptionHeight));
-      //---END OF SAVED CODE---- //
+      Canvas.ForceUpdateCanvases(); 
+      var descriptionHeight = parentTransform.rect.height - 10;
+      heightTransform.sizeDelta = new Vector2(132, descriptionHeight );
 
       UpdateList();
     }
@@ -35,6 +26,7 @@ public class TagListManager : MonoBehaviour {
     }
 
     public void AddTagButton(string tag){
+      Debug.Log("Adding " + infoId);
       TagManager.AddTagAndInfo(tag , infoId);
       UpdateList();
     }
@@ -46,8 +38,10 @@ public class TagListManager : MonoBehaviour {
         Destroy(listOfTags[i]);
       }
       listOfTags.Clear();
+      Debug.Log(list.Count);
       for(int i = 0; i < list.Count; i++) {
         GameObject tagItem = Instantiate(tagPrefab, transform);
+        Debug.Log(tagItem);
         tagItem.GetComponent<RectTransform>().SetAsFirstSibling();
         string val = list[i];
         tagItem.GetComponent<DetailPageManager>().setText(val);
