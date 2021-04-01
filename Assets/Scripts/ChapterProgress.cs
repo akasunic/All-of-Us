@@ -34,20 +34,22 @@ public class ChapterProgress : MonoBehaviour
         " quests get completed.")]
     public Color tintColor;
 
-    void Start() {
+    private void Awake() {
         if (questsCompletedDict == null)
             questsCompletedDict = new Dictionary<int, int>();
+    }
 
+    void Start() {
         if (!questsCompletedDict.ContainsKey(chapter)) {
             questsCompletedDict.Add(chapter, 0);
         }
-        UpdateChapterUI();
     }
 
     void OnEnable()
     {
         // add event listener for making progress in the visual novel
         ProgressEvents.onChapterProgress += ProgressChapter;
+        UpdateChapterUI();
     }
 
     private void OnDisable() {
