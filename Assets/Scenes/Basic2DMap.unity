@@ -1644,9 +1644,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1982889619}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 15
   m_WholeNumbers: 0
-  m_Value: 0.713
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c914260446cf486fa06f5048a1d7dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressSlider: {fileID: 377256139}
+  engagementSlider: {fileID: 377256139}
 --- !u!1 &407489612
 GameObject:
   m_ObjectHideFlags: 0
