@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private static readonly int MAX_ENGAGEMENT = 15;
+
     // Singleton pattern
     private static GameManager instance = null;
 
     // Static fields
-    private static int progress = 0;
+    private static int engagement = 0;
 
     // Singleton pattern
     // Create an instance if necessary.
@@ -40,40 +42,22 @@ public class GameManager : MonoBehaviour
     // call this function using GameManager.Instance.StartGame()
     public void StartGame()
     {
-        progress = 0;
+        engagement = 0;
     }
 
-    // call this function using GameManager.Instance.GetProgress()
-    public int GetProgress()
+    // call this function using GameManager.Instance.GetEngagement()
+    public int GetEngagement()
     {
-        return progress;
+        return engagement;
     }
 
-    // call this function using GameManager.Instance.IncreaseProgress(int num)
-    public void IncreaseProgress(int num)
+    // call this function using GameManager.Instance.IncreaseEngagement()
+    public void IncreaseEngagement()
     {
-        if (progress + num >= 0 && progress + num <= 100)
+        if (engagement < MAX_ENGAGEMENT)
         {
-            progress += num;
+            engagement++;
         }
-        else
-        {
-            progress = 100;
-        }
-        Debug.Log("New Progress = " + progress);
-    }
-
-    // call this function using GameManager.Instance.DecreaseProgress(int num)
-    public void DecreaseProgress(int num)
-    {
-        if (progress - num >= 0 && progress - num <= 100)
-        {
-            progress -= num;
-        }
-        else
-        {
-            progress = 0;
-        }
-        Debug.Log("New Progress = " + progress);
+        Debug.Log("New Engagement = " + engagement);
     }
 }
