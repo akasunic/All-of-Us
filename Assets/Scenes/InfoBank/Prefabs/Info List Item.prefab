@@ -117,10 +117,6 @@ MonoBehaviour:
   infoId: 
   tagPrefab: {fileID: 3047187424978626613, guid: 05043785bc7a443b6a7548bc37c23802,
     type: 3}
-  heightTransform: {fileID: 0}
-  descriptionTransform: {fileID: 1783380861218225603}
-  dividerTransform: {fileID: 7341887919517406815}
-  parentTransform: {fileID: 8016197110009607290}
 --- !u!1 &5549656324136885792
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +345,7 @@ GameObject:
   - component: {fileID: 1870257760219511977}
   - component: {fileID: 7826017012782669073}
   - component: {fileID: 7675452607036007844}
+  - component: {fileID: -9196295025148414563}
   m_Layer: 5
   m_Name: Info List Item
   m_TagString: Untagged
@@ -466,6 +463,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detailPagePrefab: {fileID: 0}
+  questId: 
+--- !u!114 &-9196295025148414563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690857612374270864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7675452607036007844}
+          m_MethodName: SelectItemForQuest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6702086934337226346
 GameObject:
   m_ObjectHideFlags: 0

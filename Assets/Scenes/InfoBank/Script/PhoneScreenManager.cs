@@ -158,6 +158,10 @@ public class PhoneScreenManager : MonoBehaviour
                 go = notes;
                 border = notesBorder;
                 break;
+            case "quest":
+                go = notes;
+                border = notesBorder;
+                break;
             case "contacts":
                 go = contacts;
                 border = contactsBorder;
@@ -173,6 +177,8 @@ public class PhoneScreenManager : MonoBehaviour
             case "messages":
                 return "Messages";
             case "notes":
+                return "My Journals";
+            case "quest":
                 return "My Journals";
             case "contacts":
                 return "My Contacts";

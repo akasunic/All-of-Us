@@ -35,6 +35,7 @@ public class GlobalGameInfo
         public string description;
         public string character;
         public string tagIdentifier;
+        public readonly string quest_id;
 
         public InfoItem(string character, string day, string description){
             this.character = character;
@@ -42,6 +43,16 @@ public class GlobalGameInfo
             this.description = description;
             string unhashedKey = character + day + description;
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+        }
+
+        public InfoItem(string character, string day,
+            string description, string quest_id) {
+            this.character = character;
+            this.day = day;
+            this.description = description;
+            string unhashedKey = character + day + description;
+            this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+            this.quest_id = quest_id;
         }
     }
 
@@ -112,9 +123,11 @@ public class GlobalGameInfo
     public static void addNewItemToInfoList(
         string character, 
         string day, 
-        string description)
+        string description,
+        string quest_id = "")
     {
-        GlobalGameInfo.infoList.Add(new InfoItem(character, day, description));
+        GlobalGameInfo.infoList.Add(new InfoItem(character, day, 
+            description, quest_id));
         increaseUntaggedObjects();
     }
 

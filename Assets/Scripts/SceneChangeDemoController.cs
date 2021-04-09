@@ -21,7 +21,7 @@ public class SceneChangeDemoController : MonoBehaviour
         SceneManager.LoadScene("Basic2DMap");
     }
 
-    public void OpenPreviousScene() {
+    public static void LoadPreviousScene() {
         string temp = previousScene;
         previousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(temp);
