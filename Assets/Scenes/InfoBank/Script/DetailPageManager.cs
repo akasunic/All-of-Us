@@ -17,6 +17,8 @@ public class DetailPageManager : MonoBehaviour
     private static Transform lastItem = null;
     [HideInInspector]
     public string questId = "";
+    [HideInInspector]
+    public string character = "";
 
     public void openDetailPage(){
       if(detailPagePrefab != null){
@@ -55,6 +57,6 @@ public class DetailPageManager : MonoBehaviour
 
     public void SelectItemForQuest() {
         // highlight the item in the UI
-        QuestManager.SelectQuest(questId);
+        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character);
     }
 }

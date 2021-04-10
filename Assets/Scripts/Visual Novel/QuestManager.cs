@@ -65,11 +65,4 @@ public class QuestManager : MonoBehaviour
         // load scene?
         SceneChangeDemoController.LoadPreviousScene();
     }
-
-
-
-    // TESTING
-    public static void SelectQuest(string selected_quest) {
-        Debug.Log("Item selected that solves quest " + selected_quest);
-    }
 }

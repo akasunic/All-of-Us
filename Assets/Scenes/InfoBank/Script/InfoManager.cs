@@ -33,6 +33,7 @@ public class InfoManager : MonoBehaviour
           itemDetails.setText("Day " + items[i].day);
           itemDetails.setDescription(items[i].description);
           itemDetails.questId = items[i].quest_id;
+          itemDetails.character = items[i].character;
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
           if(tagsList != null){
             tagsList.GetComponent<TagListManager>().SetInfoId(items[i].tagIdentifier);

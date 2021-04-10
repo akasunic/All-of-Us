@@ -16,6 +16,8 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject notesBorder;
     public GameObject contactsBorder;
 
+    public GameObject questPanel;
+
     private GameObject lastSelected;
     private GameObject lastSelectedBorder;
 
@@ -91,6 +93,7 @@ public class PhoneScreenManager : MonoBehaviour
         phoneContainer = GameObject.Find("Phone");
         rt = phoneContainer.GetComponent<RectTransform>();
         rtDetailPage = detailContainer.GetComponent<RectTransform>();
+
     }
 
     public void animateItemsIn(){
@@ -146,6 +149,10 @@ public class PhoneScreenManager : MonoBehaviour
             border.SetActive(true);
             lastSelectedBorder = border;
         }
+        if (type == "quest") {
+            OpenQuestMenu();
+            return;
+        }
     }
 
     private void getGameObject(string type, ref GameObject go, ref GameObject border){
@@ -186,5 +193,18 @@ public class PhoneScreenManager : MonoBehaviour
                 return "Home Screen";
         }
         return null;
+    }
+    
+    void OpenQuestMenu() {
+
+    }
+
+    public void SelectQuestAnswer(string questId, string character) {
+        Debug.Log("Item selected that solves quest " + questId);
+        // preview text hard-coded for now
+        Transform questMenuContainer = questPanel.transform.GetChild(0);
+        Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
+        selectedQuest.GetComponentInChildren<TextMeshProUGUI>().text = character +
+            " can solve this quest.";
     }
 }
