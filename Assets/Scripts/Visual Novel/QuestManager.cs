@@ -30,14 +30,19 @@ public class QuestManager : MonoBehaviour
                     RemoveQuest(submittedQuest);
                     submittedQuest = null;
                     _status = SubmitStatus.not_submitted;
-                    redeem_fc.ExecuteBlock("Correct Quest");
+                    redeem_fc.SetBooleanVariable("wasQuestSubmitted", true);
+                    redeem_fc.SetBooleanVariable("wasSubmitCorrect", true);
+                    Debug.Log("Correct Quest!");
                     break;
                 case SubmitStatus.incorrect:
                     submittedQuest = null;
                     _status = SubmitStatus.not_submitted;
-                    redeem_fc.ExecuteBlock("Incorrect Quest");
+                    redeem_fc.SetBooleanVariable("wasQuestSubmitted", true);
+                    redeem_fc.SetBooleanVariable("wasSubmitCorrect", false);
+                    Debug.Log("Incorrect Quest!");
                     break;
                 case SubmitStatus.not_submitted:
+                    redeem_fc.SetBooleanVariable("wasQuestSubmitted", false);
                     break;
             }
         }
@@ -63,6 +68,6 @@ public class QuestManager : MonoBehaviour
             _status = SubmitStatus.incorrect;
         }
         // load scene?
-        SceneChangeDemoController.LoadPreviousScene();
+        SceneChangeDemoController.LoadPreviousSceneStatic();
     }
 }

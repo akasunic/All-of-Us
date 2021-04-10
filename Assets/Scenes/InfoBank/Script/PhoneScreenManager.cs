@@ -202,9 +202,16 @@ public class PhoneScreenManager : MonoBehaviour
     public void SelectQuestAnswer(string questId, string character) {
         Debug.Log("Item selected that solves quest " + questId);
         // preview text hard-coded for now
+        if (questPanel == null || !questPanel.activeInHierarchy)
+            return;
         Transform questMenuContainer = questPanel.transform.GetChild(0);
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
         selectedQuest.GetComponentInChildren<TextMeshProUGUI>().text = character +
             " can solve this quest.";
+        QuestManager.submittedQuest = questId;
+    }
+
+    public void SubmitQuest() {
+        QuestManager.SubmitQuest(QuestManager.submittedQuest);
     }
 }

@@ -20,9 +20,12 @@ public class InkMessageHandler : MonoBehaviour
             if (notifInfo.Length == 3) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0], notifInfo[1],
                     notifInfo[2]);
-            } else {
+            } else if (notifInfo.Length == 4) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0], notifInfo[1],
                     notifInfo[2], notifInfo[3]);
+                QuestManager.AddQuest(notifInfo[3]);
+            } else {
+                throw new System.Exception();
             }
         } catch {
             string errormsg = "Error parsing new notification string.\n " +
@@ -47,5 +50,14 @@ public class InkMessageHandler : MonoBehaviour
                 42, 0.6f, 0.2f, 0.9f, 0.95f);
         }
         // else if blah blah blah
+    }
+
+    /// <summary>
+    /// Adds a quest to the quest list. Currently should just be the name of the quest
+    /// that we'll look up later.
+    /// </summary>
+    public void AddQuest() {
+        string questName = _fc.GetStringVariable("new_quest");
+        QuestManager.AddQuest(questName);
     }
 }
