@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SliderBarController : MonoBehaviour
 {
     // public Slider for Unity editor
-    public Slider progressSlider;
+    public Slider engagementSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,8 @@ public class SliderBarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int progress = GameManager.Instance.GetProgress();
-        progressSlider.value = ((float)progress) / 100;
+        int engagement = GameManager.Instance.GetEngagement();
+        engagementSlider.value = engagement;
         
     }
 }

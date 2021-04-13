@@ -7,19 +7,11 @@ public class SceneChangeDemoController : MonoBehaviour
 {
     public void OpenInfoBank()
     {
-        if(GameManager.Instance != null){
-            GameManager.Instance.IncreaseProgress(10);
-        }
-        
         SceneManager.LoadScene("InfoBank");
     }
 
     public void Open2DMap()
     {
-        if(GameManager.Instance != null){
-            GameManager.Instance.IncreaseProgress(5);
-        }
-        
         SceneManager.LoadScene("Basic2DMap");
     }
 
