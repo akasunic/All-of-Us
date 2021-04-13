@@ -30,7 +30,7 @@ public static class TagManager
         {
             tags = new List<string>();
             infoDictionary.Add(info, tags);
-            GlobalGameInfo.decreaseUntaggedObjects();
+            GlobalGameInfo.decreaseUntaggedInfoObjects();
         }
         tags.Add(tag);
         

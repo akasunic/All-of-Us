@@ -42,24 +42,10 @@ public class TagListManager : MonoBehaviour {
       for(int i = 0; i < list.Count; i++) {
         GameObject tagItem = Instantiate(tagPrefab, transform);
         Debug.Log(tagItem);
-        //tagItem.GetComponent<RectTransform>().SetAsFirstSibling();
         string val = list[i];
         tagItem.GetComponent<DetailPageManager>().setText(val);
         listOfTags.Add(tagItem);
       }
-
-      //--- SAVING THE BELOW CODE, PENDING CLARIFICATION FROM DESIGN TEAM--- //
-      // if(list.Count > 0){
-      //   var combinedItemsHeight = (list.Count + 1) * 35;
-      //   var descriptionHeight = (descriptionTransform.rect.height);
-      //   var hei = combinedItemsHeight - descriptionHeight;
-      //   var parentheight = Math.Max(combinedItemsHeight, descriptionHeight + padding);
-      //   heightTransform.sizeDelta = new Vector2(20, (hei < 0) ? 0 : hei);
-      //   parentTransform.sizeDelta = new Vector2(500, parentheight);
-      //   dividerTransform.localPosition = new Vector2(0, -1 * (parentheight));
-      //   Debug.Log(list.Count + ", " + descriptionHeight + ", " + combinedItemsHeight);
-      // }
-      //---END OF SAVED CODE---- //
 
     }
 }
