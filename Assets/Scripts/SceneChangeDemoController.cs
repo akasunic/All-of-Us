@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeDemoController : MonoBehaviour
 {
+    // used for back button
     private static string previousScene = "Basic2DMap";
 
     public void OpenInfoBank()

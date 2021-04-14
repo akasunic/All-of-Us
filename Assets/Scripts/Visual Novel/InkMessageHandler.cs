@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
+/// <summary>
+/// Handles the receiving functions for the Flowchart Ink message handlers.
+/// </summary>
 [RequireComponent(typeof(Flowchart))]
 public class InkMessageHandler : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class InkMessageHandler : MonoBehaviour
         _fc = GetComponent<Flowchart>();
     }
 
+    /// <summary>
+    /// Adds a new notifcation to the notifications list
+    /// </summary>
     public void AddNotification() {
         string notifString = _fc.GetStringVariable("notification");
         string[] notifInfo = notifString.Split('_');
@@ -23,7 +29,7 @@ public class InkMessageHandler : MonoBehaviour
             } else if (notifInfo.Length == 4) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0], notifInfo[1],
                     notifInfo[2], notifInfo[3]);
-                QuestManager.AddQuest(notifInfo[3]);
+                // QuestManager.AddQuest(notifInfo[3]);
             } else {
                 throw new System.Exception();
             }
@@ -39,6 +45,9 @@ public class InkMessageHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds a a new contact to the contacts list
+    /// </summary>
     public void AddContact() {
         string contactString = _fc.GetStringVariable("new_contact");
         if (contactString.ToLower().Contains("rashad")) {
@@ -58,6 +67,17 @@ public class InkMessageHandler : MonoBehaviour
     /// </summary>
     public void AddQuest() {
         string questName = _fc.GetStringVariable("new_quest");
-        QuestManager.AddQuest(questName);
+        string[] questInfo = questName.Split('_');
+        try {
+            QuestManager.AddQuest(questInfo[0], questInfo[1], questInfo[2]);
+        } catch {
+            string errormsg = "Error parsing new quest string.\n " +
+                "Expected string of the form questId_questGiver\n " +
+                "Instead received:";
+            foreach (string s in questInfo) {
+                errormsg += "\n" + s;
+            }
+            Debug.LogError(errormsg);
+        }
     }
 }

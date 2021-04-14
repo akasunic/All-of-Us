@@ -59,4 +59,8 @@ public class DetailPageManager : MonoBehaviour
         // highlight the item in the UI
         FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character);
     }
+
+    public void DeselectItemFromQuest() {
+
+    }
 }

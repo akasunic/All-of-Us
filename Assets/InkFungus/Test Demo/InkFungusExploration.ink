@@ -17,7 +17,7 @@ Monsieur Rashad Williams returned home early from the {Reform Club|Bloomwood Tow
 ~ new_contact = "rashad"
 # new_contact
 Rashad "I need someone with YA Experience."
-~ new_quest = "RashadIntroQuest"
+~ new_quest = "RashadIntroQuest_Rashad_Rashad needs someone with YA experience."
 # new_quest
 Rashad "Passepartout. We are going around the world!"
 

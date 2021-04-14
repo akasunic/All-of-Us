@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 //Connects to app buttons, turns the relevant pages on and off
@@ -94,6 +95,10 @@ public class PhoneScreenManager : MonoBehaviour
         rt = phoneContainer.GetComponent<RectTransform>();
         rtDetailPage = detailContainer.GetComponent<RectTransform>();
 
+        if (FindObjectOfType<QuestManager>() != null) {
+            switchToPage("quest");
+            OpenQuestMenu(); // TESTING
+        }
     }
 
     public void animateItemsIn(){
@@ -149,10 +154,6 @@ public class PhoneScreenManager : MonoBehaviour
             border.SetActive(true);
             lastSelectedBorder = border;
         }
-        if (type == "quest") {
-            OpenQuestMenu();
-            return;
-        }
     }
 
     private void getGameObject(string type, ref GameObject go, ref GameObject border){
@@ -196,8 +197,27 @@ public class PhoneScreenManager : MonoBehaviour
     }
     
     void OpenQuestMenu() {
+        string questGiver = QuestManager.questGiver;
 
+        Transform questPreview = questPanel.transform.
+            GetChild(0).Find("Quest Preview Background");
+        Quest activeQuest = QuestManager.FindQuestByCharacter(questGiver);
+        if (activeQuest == null) {
+            Debug.LogError("No active quest found for character " + questGiver);
+            return;
+        }
+        
+        questPreview.GetComponentInChildren<TextMeshProUGUI>().
+            text = activeQuest.description;
+
+        string imgString = activeQuest.questGiver.ToLower();
+        Image questGiverImg = questPreview.Find("Quest Giver").GetComponent<Image>();
+        
+        questGiverImg.sprite =
+            Resources.Load<Sprite>(imgString + "_circle");
     }
+
+    private static DetailPageManager selectedQuestObj = null; // work in progress
 
     public void SelectQuestAnswer(string questId, string character) {
         Debug.Log("Item selected that solves quest " + questId);
@@ -206,8 +226,17 @@ public class PhoneScreenManager : MonoBehaviour
             return;
         Transform questMenuContainer = questPanel.transform.GetChild(0);
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
-        selectedQuest.GetComponentInChildren<TextMeshProUGUI>().text = character +
-            " can solve this quest.";
+
+        TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
+        _txt.text = character +
+            " has this experience.";
+        _txt.color = Color.black;
+        string imgString = character.ToLower() + "_circle";
+
+        Image questSolverImg = selectedQuest.Find("Quest Solver").GetComponent<Image>();
+        questSolverImg.sprite = Resources.Load<Sprite>(imgString);
+        questSolverImg.color = new Color(255, 255, 255, 255);
+
         QuestManager.submittedQuest = questId;
     }
 

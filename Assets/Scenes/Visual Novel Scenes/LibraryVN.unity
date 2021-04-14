@@ -2823,7 +2823,6 @@ GameObject:
   - component: {fileID: 1146814537}
   - component: {fileID: 1146814539}
   - component: {fileID: 1146814538}
-  - component: {fileID: 1146814542}
   - component: {fileID: 1146814541}
   - component: {fileID: 1146814540}
   - component: {fileID: 1146814511}
@@ -2854,6 +2853,10 @@ GameObject:
   - component: {fileID: 1146814560}
   - component: {fileID: 1146814559}
   - component: {fileID: 1146814562}
+  - component: {fileID: 1146814564}
+  - component: {fileID: 1146814563}
+  - component: {fileID: 1146814565}
+  - component: {fileID: 1146814542}
   m_Layer: 0
   m_Name: Variables Flowchart
   m_TagString: Untagged
@@ -2891,7 +2894,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -10.571747
     y: 75.681816
-    width: 60
+    width: 86.58536
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2916,21 +2919,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 487.21744, y: 14.217003}
+  scrollPos: {x: 324.83606, y: 27.886276}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 0.79000014
+  zoom: 0.8200001
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1146814530}
-  selectedCommands:
-  - {fileID: 1146814528}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1146814491}
   - {fileID: 1146814508}
@@ -3330,7 +3331,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 694.1925
     y: 155.39738
-    width: 139.1139
+    width: 175.60974
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3391,7 +3392,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 147.66634
     y: 30.288816
-    width: 130.25314
+    width: 167.07315
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4039,7 +4040,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 467.96567
     y: 229.60461
-    width: 60
+    width: 95.12195
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4446,7 +4447,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 158.12532
     y: 349.93085
-    width: 112.531624
+    width: 151.2195
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4482,7 +4483,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 484.86377
     y: 78.39576
-    width: 60.632904
+    width: 99.99999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4529,8 +4530,19 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1146814542}
         m_MethodName: UpdateCachedKnot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1826744240}
+        m_MethodName: UpdateLastSpeaker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4746,7 +4758,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 678.83234
     y: 257.8665
-    width: 153.03795
+    width: 189.02437
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4801,7 +4813,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 504.16248
     y: 336.59
-    width: 102.405045
+    width: 140.2439
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4880,7 +4892,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 727.71387
     y: 337.8015
-    width: 104.93669
+    width: 141.46341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4999,7 +5011,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 163.65753
     y: 198.05855
-    width: 101.13922
+    width: 140.2439
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5029,9 +5041,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146814486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe55b0784d2ff74cad9f815ef76047a, type: 3}
+  m_Script: {fileID: 11500000, guid: 08c8ab5af1d5f1f4a821bcd77ca625a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flowchartHolder: {fileID: 1440244879}
+  narrativeDirector: {fileID: 598109540}
 --- !u!114 &1146814543
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5136,7 +5150,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -246.71118
     y: 264.26404
-    width: 98.60758
+    width: 135.36584
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5164,7 +5178,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -242.9136
     y: 128.82089
-    width: 89.74682
+    width: 126.829254
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5451,7 +5465,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.124240875
     y: 197.17534
-    width: 92.278465
+    width: 129.26828
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6055,6 +6069,104 @@ MonoBehaviour:
   scope: 2
   key: new_quest
   value: 
+--- !u!114 &1146814563
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 117
+  indentLevel: 0
+  description: Call AddQuest with the name stored from Ink
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1146814532}
+        m_MethodName: AddQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1146814564
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 697.2756
+    y: 458.82062
+    width: 129.26828
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 118
+  blockName: On New Quest
+  description: 
+  eventHandler: {fileID: 1146814565}
+  commandList:
+  - {fileID: 1146814563}
+  activeCommand: {fileID: 0}
+  suppressAllAutoSelections: 0
+--- !u!114 &1146814565
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1146814564}
+  suppressBlockAutoSelect: 0
+  message: ink new_quest
 --- !u!1 &1365056434
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,14 +6180,13 @@ GameObject:
   - component: {fileID: 1365056439}
   - component: {fileID: 1365056438}
   - component: {fileID: 1365056437}
-  - component: {fileID: 1365056436}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1365056435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6095,20 +6206,6 @@ RectTransform:
   m_AnchoredPosition: {x: -8, y: -32}
   m_SizeDelta: {x: 120, y: 60}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1365056436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365056434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c8ab5af1d5f1f4a821bcd77ca625a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flowchartHolder: {fileID: 1440244879}
-  narrativeDirector: {fileID: 598109540}
 --- !u!114 &1365056437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6164,7 +6261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1365056436}
+      - m_Target: {fileID: 0}
         m_MethodName: SaveAndLoadScene
         m_Mode: 5
         m_Arguments:
