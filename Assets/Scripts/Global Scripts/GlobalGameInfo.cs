@@ -6,38 +6,114 @@ using UnityEngine;
 public class GlobalGameInfo
 {
 
-    public delegate void UpdateNotifications();
+    //an enum for notifications
+    public enum NOTIFICATION {
+        INFO,
+        TODO,
+        PHONE
+    };
+
+    //callbacks for when info items and quests get added so the 
+    //phone and app get red notification bubbles
+    public delegate void UpdateNotifications(NOTIFICATION noficationType);
     public static UpdateNotifications updateNotifications;
 
     public static void setNotificationDelegate(UpdateNotifications n){
-        updateNotifications = n;
+        if(updateNotifications != null){
+            updateNotifications += n;
+        } else {
+            updateNotifications = n;
+        }
+        
     }
     
     public static void clearNotificationDelegate(){
         updateNotifications = null;
     }
 
-    //DEPRECATED
-    public class InfoListItem 
-    {
-        public string title;
-        public string description;
-        public InfoListItem(string title, string description){
-            this.title = title;
-            this.description = description;
+    public static void decreaseUntaggedInfoObjects(){
+        untaggedInfoObjects--;
+        if(updateNotifications != null){
+            updateNotifications(NOTIFICATION.INFO);
         }
     }
 
-    //THIS ONE IS USED FOR INFO ITEMS
+    public static void notificationCallback(NOTIFICATION n){
+        if(updateNotifications != null){
+            updateNotifications(n);
+        }
+    }
+
+    public static int getNotificationNumber(NOTIFICATION n){
+        switch(n){
+            case NOTIFICATION.INFO:
+                return untaggedInfoObjects;
+            case NOTIFICATION.TODO:
+                return untaggedTodoObjects;
+            default:
+                return untaggedInfoObjects + untaggedTodoObjects;
+        }
+    }
+
+    //CLASSES FOR PHONE ITEMS - TODOs, INFORMATION, CONTACTs
+    public class TodoItem 
+    {
+        public string title;
+        public List<ChecklistItem> checklist;
+        public CharacterResources.CHARACTERS character;
+
+        public int completedItems;
+
+        public TodoItem(string title){
+            this.title = title;
+            this.checklist = new List<ChecklistItem>();
+            this.completedItems = 0;
+        }
+
+        public TodoItem(string title, CharacterResources.CHARACTERS character){
+            this.title = title;
+            this.checklist = new List<ChecklistItem>();
+            this.character = character;
+            this.completedItems = 0;
+        }
+        
+        public ChecklistItem AddToChecklist(string c){
+            ChecklistItem ci = new ChecklistItem(c, this);
+            this.checklist.Add(ci);
+            return ci;
+        }
+    }
+
+    public class ChecklistItem 
+    {
+        public string title;
+        public bool completed;
+        public string id;
+
+        public TodoItem parent;
+        public ChecklistItem(string title, TodoItem parent){
+            this.title = title;
+            this.id = title.GetHashCode().ToString();
+            this.parent = parent;
+        }
+
+        public void CompleteTask(){
+            this.completed = true;
+            this.parent.completedItems++;
+        }
+    }
+
     public class InfoItem 
     {
-        public string day;
+        public int day;
         public string description;
         public string character;
+        public CharacterResources.CHARACTERS characterEnum;
         public string tagIdentifier;
 
-        public InfoItem(string character, string day, string description){
+        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description){
             this.character = character;
+            this.characterEnum = characterEnum;
             this.day = day;
             this.description = description;
             string unhashedKey = character + day + description;
@@ -57,6 +133,7 @@ public class GlobalGameInfo
         public float time;
         public float tech;
         public float resources;
+        public CharacterResources.CHARACTERS identifier;
 
         public CharacterItem(        
             string title, 
@@ -81,66 +158,45 @@ public class GlobalGameInfo
             this.tech = tech;
             this.resources = resources;
         }
+
+        public void SetCharacterEnum(CharacterResources.CHARACTERS c){
+            this.identifier = c;
+        }
     }
 
-    public static List<InfoListItem> dialogList = new List<InfoListItem>();
+    public static List<TodoItem> todoList = new List<TodoItem>();
     public static List<InfoItem> infoList = new List<InfoItem>();
-    public static List<CharacterItem> contactsList = new List<CharacterItem>();
-    public static int untaggedObjects = 0;
+    public static Dictionary<CharacterResources.CHARACTERS, CharacterItem> contactsList = new Dictionary<CharacterResources.CHARACTERS, CharacterItem>();
+    public static int untaggedTodoObjects = 0;
+    public static int untaggedInfoObjects = 0;
 
-    public static void addNewItemToDialogList(
-        string title, 
-        string description)
+    public static void addNewItemToTodoList(
+        string title, CharacterResources.CHARACTERS c)
     {
-        GlobalGameInfo.dialogList.Add(new InfoListItem(title, description));
+        GlobalGameInfo.todoList.Add(new TodoItem(title, c));
+        untaggedTodoObjects++;
+        notificationCallback(NOTIFICATION.TODO);
     }
 
-    public static void decreaseUntaggedObjects(){
-        untaggedObjects--;
-        if(updateNotifications != null){
-            updateNotifications();
-        }
-    }
-
-    public static void increaseUntaggedObjects(){
-        untaggedObjects++;
-        if(updateNotifications != null){
-            updateNotifications();
-        }
+    public static ChecklistItem addNewTodoToExistingList(string title, string checklistitem)
+    {
+        TodoItem t = GlobalGameInfo.todoList.Find(item => item.title == title);
+        return t.AddToChecklist(checklistitem);
     }
 
     public static void addNewItemToInfoList(
         string character, 
-        string day, 
+        CharacterResources.CHARACTERS characterEnum,
+        int day, 
         string description)
     {
-        GlobalGameInfo.infoList.Add(new InfoItem(character, day, description));
-        increaseUntaggedObjects();
+        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description));
+        untaggedInfoObjects++;
+        notificationCallback(NOTIFICATION.INFO);
     }
-
-    public static void addNewItemToContactsList(
-        string title, 
-        string description,
-        string job,
-        string location,
-        string pronouns, 
-        int age,
-        float health,
-        float time,
-        float tech,
-        float resources){
-
-        GlobalGameInfo.contactsList.Add(new CharacterItem(        
-            title, 
-            description,
-            job,
-            location,
-            pronouns, 
-            age,
-            health,
-            time,
-            tech,
-            resources));
-        }
+    
+    public static void addNewItemToContactsList(CharacterItem c){
+        GlobalGameInfo.contactsList.Add(c.identifier, c);
+    }
 
 }
