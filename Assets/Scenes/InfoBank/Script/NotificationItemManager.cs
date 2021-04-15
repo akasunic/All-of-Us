@@ -11,25 +11,39 @@ using TMPro;
  * and then when the journal updates, this gets called
  * as a callback, and then it will update the text to
  * the number of notifications, and also turn the bubble on
- * YOU SHOULD ONLY HAVE ONE PREFAB WITH THIS SCRIPT PER SCENE
  */
-
 public class NotificationItemManager : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    public TextMeshProUGUI updatedText;
     public GameObject bubble;
 
+    public GlobalGameInfo.NOTIFICATION notificationType;
+
     void Start(){
+
       GlobalGameInfo.setNotificationDelegate(setCounter);
-      setCounter();
+      updateUIElements();
     }
 
     void OnDestroy(){
       GlobalGameInfo.clearNotificationDelegate();
     }
-    public void setCounter(){
-      int untagged = GlobalGameInfo.untaggedObjects;
+    public void setCounter(GlobalGameInfo.NOTIFICATION n){
 
+      if(notificationType == GlobalGameInfo.NOTIFICATION.PHONE){
+        if(n == GlobalGameInfo.NOTIFICATION.INFO){
+          updatedText.text = "MyJournal Updated";
+        } else if (n ==GlobalGameInfo.NOTIFICATION.TODO){
+          updatedText.text = "MyTodo Updated";
+        }
+      }
+      updateUIElements();
+    }
+
+    public void updateUIElements(){
+      int untagged = GlobalGameInfo.getNotificationNumber(notificationType);
+      Debug.Log(notificationType + ", " + untagged);
       if(untagged == 0){
         if(bubble != null){
           bubble.SetActive(false);
@@ -40,6 +54,6 @@ public class NotificationItemManager : MonoBehaviour
         }
         text.text = untagged.ToString();
       }
-      
+
     }
 }

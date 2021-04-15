@@ -7,6 +7,7 @@ TagManager:
   - Laser
   - Enemy
   - Text
+  - HintBubble
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - UI on top
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI overlay
+    uniqueID: 2426214873
     locked: 0

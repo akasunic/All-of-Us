@@ -5,58 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 
 //fills the page with the list items from GlobalGameInfo
-//also temporarily starts by filling the globalgameinfo with 
-//placeholder data, but eventually this should be removed
 public class AddToList : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public string[] titles;
-    public string[] descriptions;
-    public string[] locations;
-    public string[] jobs;
-    public string[] pronouns;
-    public int[] age;
-    public float[] health;
-    public float[] tech;
-    public float[] time;
-    public float[] resources;
 
     public Transform listItemPrefab;
     public string whichList = "Dialog";
 
     void Start()
     {
-        if(titles.Length != descriptions.Length){
-            Debug.Log("Placeholder title and description lengths need to be equal.");
-        } else {
-            for(int i = 0; i < titles.Length; i++){
-                switch(whichList){
-                    case "Dialog":
-                        GlobalGameInfo.addNewItemToDialogList(titles[i], descriptions[i]);
-                        break;
-                    case "Contacts":
-                        GlobalGameInfo.addNewItemToContactsList(
-                            titles[i], 
-                            descriptions[i],
-                            jobs[i],
-                            locations[i],
-                            pronouns[i],
-                            age[i],
-                            health[i],
-                            time[i],
-                            tech[i],
-                            resources[i]);
-                        break;
-                    default:
-                        GlobalGameInfo.addNewItemToInfoList(titles[i], age[i].ToString(), descriptions[i]); 
-                        break;
-                }
-            }
-        }
-
         switch(whichList){
             case "Dialog":
-                fillList(GlobalGameInfo.dialogList);
+                fillTodoList(GlobalGameInfo.todoList);
                 break;
             case "Contacts":
                 fillContactList(GlobalGameInfo.contactsList);
@@ -67,22 +26,30 @@ public class AddToList : MonoBehaviour
         }
     }
 
-    private void fillList(List<GlobalGameInfo.InfoListItem> list){
-        if(list.Count == 0){return;}
+    private void fillTodoList(List<GlobalGameInfo.TodoItem> list){
+        
+        if(list.Count == 0){
+            return;
+        }
         
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
+        
         Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        
         for(int i = 0; i < list.Count; i++){
             Transform newItem = Instantiate(listItemPrefab, go);
-            newItem.GetComponent<DetailPageManager>().setText(list[i].title);
-            newItem.GetComponent<DetailPageManager>().setDescription(list[i].description);
+            newItem.GetComponent<TodoManager>().setDetails(list[i]);
         }
     }
 
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
-        if(list.Count == 0){return;}
+        
+        if(list.Count == 0){
+            return;
+        }
 
         Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
+        
         for(int i = 0; i < list.Count; i++){
             string character = list[i].character;
             if(!dict.ContainsKey(character)){
@@ -100,27 +67,21 @@ public class AddToList : MonoBehaviour
         }
     }
 
-    private void fillContactList(List<GlobalGameInfo.CharacterItem> list){
+    private void fillContactList(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> list){
         if(list.Count == 0){return;}
         
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
         Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
-        for(int i = 0; i < list.Count; i++){
+        bool firstitem = true;
+        
+        foreach(KeyValuePair<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> entry in list)
+        {
             Transform newItem = Instantiate(listItemPrefab, go);
-            newItem.GetComponent<CharacterSheetManager>().setDetails(list[i]);
-            if(i == 0){
+            newItem.GetComponent<CharacterSheetManager>().setDetails(entry.Value);
+            if(firstitem){
                 newItem.GetComponent<CharacterSheetManager>().openDetailPage();
+                firstitem = false;
             }
         }
-    }
-
-    public void createNewListItem(GlobalGameInfo.InfoListItem item){
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
