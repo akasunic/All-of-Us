@@ -15,6 +15,8 @@ public class CharacterSheetManager : MonoBehaviour
     private GlobalGameInfo.CharacterItem character;
     private static Transform lastItem = null;
 
+    CharacterResources cr;
+
     GameObject phone;
     GameObject phoneContainer;
 
@@ -27,6 +29,11 @@ public class CharacterSheetManager : MonoBehaviour
       if(phone == null){
         phone = GameObject.Find("Child Container");
       }
+
+      if(cr == null){
+        cr = new CharacterResources();
+      }
+
       Transform newItem = Instantiate(detailPagePrefab, phone.transform);
     
       if(lastItem != null){
@@ -35,6 +42,7 @@ public class CharacterSheetManager : MonoBehaviour
 
       lastItem = newItem;
       Transform txt = HelperFunctions.FindChildByRecursion(newItem, "text");
+      Transform image = HelperFunctions.FindChildByRecursion(newItem, "profile");
       Transform des = HelperFunctions.FindChildByRecursion(newItem, "description");
       Transform job = HelperFunctions.FindChildByRecursion(newItem, "job");
       Transform location = HelperFunctions.FindChildByRecursion(newItem, "location");
@@ -47,6 +55,9 @@ public class CharacterSheetManager : MonoBehaviour
 
       if(txt != null){
         txt.gameObject.GetComponent<TextMeshProUGUI>().text = character.title;
+      }
+      if(image != null){
+        image.gameObject.GetComponent<Image>().sprite = cr.GetNeutralHeadshot(character.identifier);
       }
       if(des != null){
         des.gameObject.GetComponent<TextMeshProUGUI>().text = character.description;
