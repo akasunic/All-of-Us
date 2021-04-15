@@ -14,9 +14,9 @@ Residence of Monsieur Rashad Williams.
 
 === london ===
 Monsieur Rashad Williams returned home early from the {Reform Club|Bloomwood Town Hall}, and in a new-fangled steam-carriage, besides!  
-~ new_contact = "rashad"
+~ new_contact = "Rashad"
 # new_contact
-Rashad "I need someone with YA Experience."
+Rashad?Smiling "I need someone with YA Experience."
 ~ new_quest = "RashadIntroQuest_Rashad_Rashad needs someone with YA experience."
 # new_quest
 Rashad "Passepartout. We are going around the world!"
