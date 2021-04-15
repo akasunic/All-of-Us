@@ -81,7 +81,13 @@ public class CharacterResources
   public static GlobalGameInfo.CharacterItem Rashad(){
     GlobalGameInfo.CharacterItem rashad = new GlobalGameInfo.CharacterItem(
       "Rashad Williams",
-      "Rashad Williams was born and raised in Bloomwood, and moved back after getting his Master’s Degree in Library Science. He is married with 2 children (wife Cheryl, children Octavia and Charles) and started out as the popular Young Adult Librarian for Bloomwood Library. Since being promoted to Head Librarian last year, he hasn’t been able to hold his popular story hour in the children's wing. He enjoys comic books, science fiction, and is an avid runner.",
+      "Rashad Williams was born and raised in Bloomwood, and moved back after"
+      + " getting his Master’s Degree in Library Science. He is married with 2 " 
+      + "children (wife Cheryl, children Octavia and Charles) and started out as"
+      + " the popular Young Adult Librarian for Bloomwood Library. Since being "
+      + "promoted to Head Librarian last year, he hasn’t been able to hold his "
+      + "popular story hour in the children's wing. He enjoys comic books, science"
+      + " fiction, and is an avid runner.",
       "Head Librarian",
       "Bloomwood Library",
       "He/Him/His",
@@ -98,7 +104,20 @@ public class CharacterResources
   public static GlobalGameInfo.CharacterItem Lila(){
     GlobalGameInfo.CharacterItem lila = new GlobalGameInfo.CharacterItem(
       "Lila",
-      "Lila was born in a nearby city and moved to Bloomwood at the age of 10 when her single mother switched her job to be at the local community center. She fell in love with the community center as a teenager and after getting her teaching degree at the local state school, she was able to return and get a teaching job at the community center to work with all ages, but her heart lies with educating the next generation of Bloomwood. She has been dating her partner Trisha for about 2 years. Now that she has been working at the center for about 3 years and the former director retired, she is starting to think about other goals she has for the community- like generating a strong community service club and bringing in experts from nearby cities to teach classes. Outside of her job, she also enjoys chasing her dog Charlie at the park, movie nights, and visiting her nieces in their nearby hometown.",
+      "Lila was born in a nearby city and moved to "
+      + "Bloomwood at the age of 10 when her single mother "
+      + "switched her job to be at the local community center. "
+      + "She fell in love with the community center as a teenager "
+      + "and after getting her teaching degree at the local state school, "
+      + "she was able to return and get a teaching job at the community "
+      + "center to work with all ages, but her heart lies with educating"
+      + " the next generation of Bloomwood. She has been dating her partner"
+      + " Trisha for about 2 years. Now that she has been working at the center"
+      + " for about 3 years and the former director retired, she is starting to"
+      + " think about other goals she has for the community- like generating a strong"
+      + " community service club and bringing in experts from nearby cities to teach classes. "
+      + "Outside of her job, she also enjoys chasing her dog Charlie at the park, movie nights,"
+      + " and visiting her nieces in their nearby hometown.",
       "The Helpful Headstart Teacher",
       "Community Center",
       "She/Her/Hers",
@@ -115,7 +134,7 @@ public class CharacterResources
   public static GlobalGameInfo.CharacterItem Calindas(){
     GlobalGameInfo.CharacterItem calindas = new GlobalGameInfo.CharacterItem(
       "Mr. Calindas",
-      "Mr. Calindas was born and raised in Bloomwood, and moved back after getting his Master’s Degree in Library Science. He is married with 2 children (wife Cheryl, children Octavia and Charles) and started out as the popular Young Adult Librarian for Bloomwood Library. Since being promoted to Head Librarian last year, he hasn’t been able to hold his popular story hour in the children's wing. He enjoys comic books, science fiction, and is an avid runner.",
+      "placeholder bio",
       "Nurse",
       "Hospital",
       "He/Him/His",
@@ -131,7 +150,7 @@ public class CharacterResources
   public static GlobalGameInfo.CharacterItem Elisa(){
     GlobalGameInfo.CharacterItem elisa = new GlobalGameInfo.CharacterItem(
       "Elisa",
-      "Elisa was born and raised in Bloomwood, and moved back after getting his Master’s Degree in Library Science. He is married with 2 children (wife Cheryl, children Octavia and Charles) and started out as the popular Young Adult Librarian for Bloomwood Library. Since being promoted to Head Librarian last year, he hasn’t been able to hold his popular story hour in the children's wing. He enjoys comic books, science fiction, and is an avid runner.",
+      "placeholder bio",
       "Student",
       "Bloomwood Uni",
       "She/Her/Hers",
