@@ -219,7 +219,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     private static DetailPageManager selectedQuestObj = null; // work in progress
 
-    public void SelectQuestAnswer(string questId, string character) {
+    public void SelectQuestAnswer(string questId, string character, string description) {
         Debug.Log("Item selected that solves quest " + questId);
         // preview text hard-coded for now
         if (questPanel == null || !questPanel.activeInHierarchy)
@@ -228,8 +228,7 @@ public class PhoneScreenManager : MonoBehaviour
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
 
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
-        _txt.text = character +
-            " has this experience.";
+        _txt.text = description;
         _txt.color = Color.black;
         string imgString = character.ToLower() + "_circle";
 

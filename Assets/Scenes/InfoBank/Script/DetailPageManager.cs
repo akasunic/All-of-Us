@@ -20,6 +20,10 @@ public class DetailPageManager : MonoBehaviour
     [HideInInspector]
     public string character = "";
 
+    void Start() {
+        DeselectItemInUI();
+    }
+
     public void openDetailPage(){
       if(detailPagePrefab != null){
         GameObject phone = GameObject.Find("Detail Container");
@@ -57,10 +61,19 @@ public class DetailPageManager : MonoBehaviour
 
     public void SelectItemForQuest() {
         // highlight the item in the UI
-        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character);
+        Debug.Log(GetComponent<Image>().color);
+        DeselectItemInUI();
+        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
+        GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
+        selectedItem = this;
+        Debug.Log(GetComponent<Image>().color);
     }
 
-    public void DeselectItemFromQuest() {
-
+    private static DetailPageManager selectedItem;
+    private void DeselectItemInUI() {
+        if (selectedItem == null)
+            return;
+        selectedItem.GetComponent<Image>().color = new Color(1, 1, 1, 1f / 255f);
+        selectedItem = null;
     }
 }

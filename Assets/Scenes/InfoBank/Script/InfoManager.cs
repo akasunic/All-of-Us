@@ -43,7 +43,7 @@ public class InfoManager : MonoBehaviour
           DetailPageManager itemDetails = newItem.GetComponent<DetailPageManager>();
           itemDetails.setText("Day " + items[i].day);
           itemDetails.setDescription(items[i].description);
-          itemDetails.questId = items[i].quest_id;
+          itemDetails.questId = items[i].quest.questId;
           itemDetails.character = items[i].character;
 
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
@@ -58,4 +58,26 @@ public class InfoManager : MonoBehaviour
             //trigger.triggers.Add(entry);
         }
     }
+
+    //string questId;
+    //string character;
+    //string description;
+
+    //public void SelectItemForQuest() {
+    //    // highlight the item in the UI
+    //    Debug.Log(GetComponent<Image>().color);
+    //    DeselectItemInUI();
+    //    FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
+    //    GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f);
+    //    selectedItem = this;
+    //    Debug.Log(GetComponent<Image>().color);
+    //}
+
+    //private static InfoManager selectedItem;
+    //private void DeselectItemInUI() {
+    //    if (selectedItem == null)
+    //        return;
+    //    selectedItem.GetComponent<Image>().color = Color.white;
+    //    selectedItem = null;
+    //}
 }

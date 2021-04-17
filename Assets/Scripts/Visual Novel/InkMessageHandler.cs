@@ -24,11 +24,16 @@ public class InkMessageHandler : MonoBehaviour
 
         try {
             if (notifInfo.Length == 3) {
-                GlobalGameInfo.addNewItemToInfoList(notifInfo[0], notifInfo[1],
-                    notifInfo[2]);
+                GlobalGameInfo.addNewItemToInfoList(notifInfo[0], 
+                    CharacterFromString(notifInfo[0]), int.Parse(notifInfo[1]), notifInfo[2]);
             } else if (notifInfo.Length == 4) {
-                GlobalGameInfo.addNewItemToInfoList(notifInfo[0], notifInfo[1],
-                    notifInfo[2], notifInfo[3]);
+                Quest q = new Quest();
+                q.questGiver = notifInfo[0];
+                q.questId = notifInfo[3];
+                q.description = notifInfo[2];
+                GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
+                    CharacterFromString(notifInfo[0]), int.Parse(notifInfo[1]), 
+                    notifInfo[2], q);
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {
                 throw new System.Exception();
@@ -45,18 +50,53 @@ public class InkMessageHandler : MonoBehaviour
         }
     }
 
+    CharacterResources.CHARACTERS CharacterFromString(string character) {
+        switch (character.ToLower()) {
+            case "rashad":
+                return CharacterResources.CHARACTERS.RASHAD;
+            case "lila":
+                return CharacterResources.CHARACTERS.LILA;
+            case "calindas":
+                return CharacterResources.CHARACTERS.CALINDAS;
+            case "elisa":
+                return CharacterResources.CHARACTERS.ELISA;
+            default:
+                if (character.ToLower().Contains("calindas")) {
+                    return CharacterResources.CHARACTERS.CALINDAS;
+                }
+                return CharacterResources.CHARACTERS.RASHAD;
+        }
+    }
+
+    string StringFromCharacter(CharacterResources.CHARACTERS character) {
+        switch (character) {
+            case CharacterResources.CHARACTERS.RASHAD:
+                return "Rashad";
+            case CharacterResources.CHARACTERS.LILA:
+                return "Lila";
+            case CharacterResources.CHARACTERS.CALINDAS:
+                return "Mr. Calindas";
+            case CharacterResources.CHARACTERS.ELISA:
+                return "Elisa";
+        }
+        return "Rashad";
+    }
+
     /// <summary>
     /// Adds a a new contact to the contacts list
     /// </summary>
     public void AddContact() {
         string contactString = _fc.GetStringVariable("new_contact");
-        if (contactString.ToLower().Contains("rashad")) {
-            GlobalGameInfo.addNewItemToContactsList(
-                "Rashad Williams",
-                "Rashad Williams was born and raised in Bloomwood, and moved back after getting his Master’s Degree in Library Science. He is married with 2 children(wife Cheryl, children Octavia and Charles) and started out as the popular Young Adult Librarian for Bloomwood Library. Since being promoted to Head Librarian last year, he hasn’t been able to hold his popular story hour in the children's wing. He enjoys comic books, science fiction, and is an avid runner.",
-                "Head Librarian", "Bloomwood Library",
-                "He/Him/His",
-                42, 0.6f, 0.2f, 0.9f, 0.95f);
+        contactString = contactString.ToLower();
+
+        if (contactString.Contains("rashad")) {
+            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
+        } else if (contactString.Contains("lila")) {
+            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
+        } else if (contactString.Contains("calindas")) {
+            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
+        } else if (contactString.Contains("elisa")) {
+            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
         }
         // else if blah blah blah
     }
