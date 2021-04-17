@@ -174,6 +174,41 @@ public class GlobalGameInfo
         public void SetCharacterEnum(CharacterResources.CHARACTERS c){
             this.identifier = c;
         }
+
+        public void UpdateStat(string target, float num)
+        {
+            switch (target)
+            {
+                case "health":
+                    health = GetNewValue(health, num);
+                    break;
+                case "time":
+                    time = GetNewValue(time, num);
+                    break;
+                case "tech":
+                    tech = GetNewValue(tech, num);
+                    break;
+                case "resources":
+                    resources = GetNewValue(resources, num);
+                    break;
+                default:
+                    throw new System.Exception("Wrong Argument");
+            }
+        }
+
+        private static float GetNewValue(float original, float num)
+        {
+            float ans = original + num;
+            if (ans > 1)
+            {
+                ans = 1;
+            }
+            if (ans < 0)
+            {
+                ans = 0;
+            }
+            return ans;
+        }
     }
 
     public static List<TodoItem> todoList = new List<TodoItem>();
