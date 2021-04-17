@@ -47,8 +47,8 @@ MonoBehaviour:
   nameColor: {r: 0.33333334, g: 0.5882353, b: 0.56078434, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 73183781afe59ed4d82ece9b1700a591, type: 3}
   - {fileID: 21300000, guid: 4ecea87e08f637d40907bf1735e7eec7, type: 3}
+  - {fileID: 21300000, guid: 73183781afe59ed4d82ece9b1700a591, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: Rashad -- the Bloomwood Head Librarian.

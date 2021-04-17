@@ -230,7 +230,7 @@ public class PhoneScreenManager : MonoBehaviour
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
         _txt.text = description;
         _txt.color = Color.black;
-        string imgString = character.ToLower() + "_circle";
+        string imgString = character.ToLower() + "_small";
 
         Image questSolverImg = selectedQuest.Find("Quest Solver").GetComponent<Image>();
         questSolverImg.sprite = Resources.Load<Sprite>(imgString);
