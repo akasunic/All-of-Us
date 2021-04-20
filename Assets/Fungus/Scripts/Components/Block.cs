@@ -45,7 +45,8 @@ namespace Fungus
 
         protected ExecutionState executionState;
 
-        protected Command activeCommand;
+        [HideInInspector]
+        public Command activeCommand;
 
         protected Action lastOnCompleteAction;
 
