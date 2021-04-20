@@ -6,6 +6,9 @@ using UnityEngine;
 public class GlobalGameInfo
 {
 
+    public static string name;
+    public static string pronouns;
+
     //an enum for notifications
     public enum NOTIFICATION {
         INFO,
