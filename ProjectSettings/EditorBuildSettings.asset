@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/InkFungus/Test Demo/InkFungusTest.unity
     guid: e119cb1f352aeff44b1a2f00da0be216
+  - enabled: 1
+    path: Assets/Scenes/Backstories.unity
+    guid: adc4ddd5288a241938ae50f786161a14
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
