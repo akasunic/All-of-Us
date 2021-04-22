@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 //Connects to app buttons, turns the relevant pages on and off
@@ -15,6 +16,8 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject messagesBorder;
     public GameObject notesBorder;
     public GameObject contactsBorder;
+
+    public GameObject questPanel;
 
     private GameObject lastSelected;
     private GameObject lastSelectedBorder;
@@ -91,6 +94,11 @@ public class PhoneScreenManager : MonoBehaviour
         phoneContainer = GameObject.Find("Phone");
         rt = phoneContainer.GetComponent<RectTransform>();
         rtDetailPage = detailContainer.GetComponent<RectTransform>();
+
+        if (FindObjectOfType<QuestManager>() != null) {
+            switchToPage("quest");
+            OpenQuestMenu(); // TESTING
+        }
     }
 
     public void animateItemsIn(){
@@ -158,6 +166,10 @@ public class PhoneScreenManager : MonoBehaviour
                 go = notes;
                 border = notesBorder;
                 break;
+            case "quest":
+                go = notes;
+                border = notesBorder;
+                break;
             case "contacts":
                 go = contacts;
                 border = contactsBorder;
@@ -174,11 +186,60 @@ public class PhoneScreenManager : MonoBehaviour
                 return "Messages";
             case "notes":
                 return "My Journals";
+            case "quest":
+                return "My Journals";
             case "contacts":
                 return "My Contacts";
             case "back":
                 return "Home Screen";
         }
         return null;
+    }
+    
+    void OpenQuestMenu() {
+        string questGiver = QuestManager.questGiver;
+
+        Transform questPreview = questPanel.transform.
+            GetChild(0).Find("Quest Preview Background");
+        Quest activeQuest = QuestManager.FindQuestByCharacter(questGiver);
+        if (activeQuest == null) {
+            Debug.LogError("No active quest found for character " + questGiver);
+            return;
+        }
+        
+        questPreview.GetComponentInChildren<TextMeshProUGUI>().
+            text = activeQuest.description;
+
+        string imgString = activeQuest.questGiver.ToLower();
+        Image questGiverImg = questPreview.Find("Quest Giver").GetComponent<Image>();
+        
+        questGiverImg.sprite =
+            Resources.Load<Sprite>(imgString + "_circle");
+    }
+
+    private static DetailPageManager selectedQuestObj = null; // work in progress
+
+    public void SelectQuestAnswer(string questId, string character, string description) {
+        Debug.Log("Item selected that solves quest " + questId);
+        // preview text hard-coded for now
+        if (questPanel == null || !questPanel.activeInHierarchy)
+            return;
+        Transform questMenuContainer = questPanel.transform.GetChild(0);
+        Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
+
+        TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
+        _txt.text = description;
+        _txt.color = Color.black;
+        string imgString = character.ToLower() + "_small";
+
+        Image questSolverImg = selectedQuest.Find("Quest Solver").GetComponent<Image>();
+        questSolverImg.sprite = Resources.Load<Sprite>(imgString);
+        questSolverImg.color = new Color(255, 255, 255, 255);
+
+        QuestManager.submittedQuest = questId;
+    }
+
+    public void SubmitQuest() {
+        QuestManager.SubmitQuest(QuestManager.submittedQuest);
     }
 }
