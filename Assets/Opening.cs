@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
 {
-    public void loadMapScene() {
+
+    public void loadBackstoriesScene() {
 
         //set a session id if not there yet
         ResetGame.startGame();
@@ -12,7 +13,7 @@ public class Opening : MonoBehaviour
         // Testing logging an event
         DataCollection.LogEvent("Type test", "Initiator test");
 
-        SceneManager.LoadScene("Basic2DMap");
+        SceneManager.LoadScene("Backstories");
     }
     
     
