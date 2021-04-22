@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/InfoBank/InfoBank.unity
     guid: 60eceb705c7c343c88496ac3f4f317f7
   - enabled: 1
-    path: Assets/Scenes/LibraryVN.unity
-    guid: 91a3bccdc9a11f043ac45b8aa6f69139
+    path: Assets/Scenes/Visual Novel Scenes/LibraryVN.unity
+    guid: fcb8f057e2db35647a644d563b91c06b
   - enabled: 1
     path: Assets/InkFungus/Test Demo/InkFungusTest.unity
     guid: e119cb1f352aeff44b1a2f00da0be216
@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel Scenes/Quest Turnin Testing.unity
+    guid: 012e5d99837562a40bad6666d27d2b31
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8b06978d4fc5da74b9713990bc515b59,
       type: 2}
