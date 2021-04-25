@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject dialogue;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI contentText;
+    public AudioSource audioSource;
     public GameObject[] stages;
 
     private int stage;
@@ -49,6 +50,8 @@ public class TutorialManager : MonoBehaviour
         }
 
         CustomActions();
+
+        audioSource.Play();
     }
 
     public void EndTutorial()
