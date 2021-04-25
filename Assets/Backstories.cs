@@ -36,7 +36,7 @@ public class Backstories : MonoBehaviour
                 current_text_counter++;
                 break;
             default:
-                SceneManager.LoadScene("Basic2DMap");
+                SceneManager.LoadScene("Tutorial");
                 current_text_counter = 1;
                 break;
         }
