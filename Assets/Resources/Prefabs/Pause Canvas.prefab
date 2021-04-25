@@ -1352,7 +1352,7 @@ MonoBehaviour:
   - {fileID: 445690717601077021}
   - {fileID: 445690718406581073}
   chapter: 1
-  numQuests: 1
+  numQuests: 2
   tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &8451138198856736641
 GameObject:

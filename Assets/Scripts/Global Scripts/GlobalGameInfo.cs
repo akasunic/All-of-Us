@@ -113,6 +113,7 @@ public class GlobalGameInfo
         public string character;
         public CharacterResources.CHARACTERS characterEnum;
         public string tagIdentifier;
+        public readonly Quest quest;
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description){
             this.character = character;
@@ -121,6 +122,17 @@ public class GlobalGameInfo
             this.description = description;
             string unhashedKey = character + day + description;
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+        }
+
+        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, 
+            int day, string description, Quest quest) {
+            this.character = character;
+            this.characterEnum = characterEnum;
+            this.day = day;
+            this.description = description;
+            string unhashedKey = character + day + description;
+            this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+            this.quest = quest;
         }
     }
 
@@ -226,9 +238,10 @@ public class GlobalGameInfo
         string character, 
         CharacterResources.CHARACTERS characterEnum,
         int day, 
-        string description)
+        string description,
+        Quest quest = null)
     {
-        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description));
+        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
     }

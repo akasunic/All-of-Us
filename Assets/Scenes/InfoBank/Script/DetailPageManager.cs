@@ -15,7 +15,15 @@ public class DetailPageManager : MonoBehaviour
     private string text = "Failed to load";
     private string description = "Failed to load";
     private static Transform lastItem = null;
-    
+    [HideInInspector]
+    public string questId = "";
+    [HideInInspector]
+    public string character = "";
+
+    void Start() {
+        DeselectItemInUI();
+    }
+
     public void openDetailPage(){
       if(detailPagePrefab != null){
         GameObject phone = GameObject.Find("Detail Container");
@@ -49,5 +57,23 @@ public class DetailPageManager : MonoBehaviour
       Transform descriptionChild = HelperFunctions.FindChildByRecursion(transform, "description");
       if(descriptionChild == null) return;
       descriptionChild.gameObject.GetComponent<TextMeshProUGUI>().text = description;
+    }
+
+    public void SelectItemForQuest() {
+        // highlight the item in the UI
+        Debug.Log(GetComponent<Image>().color);
+        DeselectItemInUI();
+        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
+        GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
+        selectedItem = this;
+        Debug.Log(GetComponent<Image>().color);
+    }
+
+    private static DetailPageManager selectedItem;
+    private void DeselectItemInUI() {
+        if (selectedItem == null)
+            return;
+        selectedItem.GetComponent<Image>().color = new Color(1, 1, 1, 1f / 255f);
+        selectedItem = null;
     }
 }
