@@ -41,7 +41,7 @@ I nodded curtly, not believing a word of it.
 
 === ending ===
 Rashad "We shall circumnavigate the globe within eighty days."
-~ notification = "Lila_1_Lila has YA experience._RashadIntroQuest"
+~ notification = "Lila_1_Lila has YA experience._sample quest info.txt"
 # notification
 He was quite calm as he proposed this wild scheme.
 Rashad "We leave for Paris on the 8:25. In an hour."

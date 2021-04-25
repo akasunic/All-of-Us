@@ -31,8 +31,10 @@ public class InkMessageHandler : MonoBehaviour
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
                 q.questGiver = notifInfo[0];
-                q.questId = notifInfo[3];
                 q.description = notifInfo[2];
+
+                q.questId = ReadQuestTitle(notifInfo[3]);
+
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     int.Parse(notifInfo[1]), notifInfo[2], q);
@@ -43,12 +45,24 @@ public class InkMessageHandler : MonoBehaviour
         } catch {
             string errormsg = "Error parsing new notification string.\n " +
                 "Expected string of the form character_day_description " +
-                "or character_day_description_questId\n" +
+                "or character_day_description_questInfoTxtFile\n" +
                 "Instead received:";
             foreach (string s in notifInfo) {
                 errormsg += "\n" + s;
             }
             Debug.LogError(errormsg);
+        }
+    }
+
+    private string ReadQuestTitle(string path) {
+        char sep = Path.DirectorySeparatorChar;
+        string pwd = Directory.GetCurrentDirectory() + sep;
+        string dir = pwd + "Assets" + sep + "Story Files" + sep + path;
+
+        using (StreamReader reader = File.OpenText(dir)) {
+            string s = reader.ReadLine();
+            reader.Close();
+            return s;
         }
     }
 
@@ -141,6 +155,7 @@ public class InkMessageHandler : MonoBehaviour
                 GlobalGameInfo.addNewTodoToExistingList(q.questId,
                     subtask);
             }
+            reader.Close();
         }
 
         QuestManager.AddQuest(q);
