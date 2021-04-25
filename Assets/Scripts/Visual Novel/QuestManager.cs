@@ -13,8 +13,10 @@ public class Quest {
     public string questId; // used to identify quests behind the scenes
     public string questGiver; // the NPC who assigned the quest
     public string description; // description of the quest. Used for UI
-    // need exp gain amounts?
-    // need story progress amount?
+    public bool incHealth; // does this quest increase the giver's health stat?
+    public bool incTime; // increase the giver's time stat?
+    public bool incTech; // increase the giver's tech stat?
+    public bool incResources; // increase the giver's resources stat?
 }
 
 /// <summary>
@@ -122,6 +124,10 @@ public class QuestManager : MonoBehaviour
         newQuest.description = description;
 
         activeQuests.Add(newQuest);
+    }
+
+    public static void AddQuest(Quest q) {
+        activeQuests.Add(q);
     }
 
     /// <summary>

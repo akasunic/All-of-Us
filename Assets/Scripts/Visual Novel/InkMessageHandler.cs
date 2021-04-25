@@ -1,5 +1,6 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using Fungus;
 
@@ -25,15 +26,16 @@ public class InkMessageHandler : MonoBehaviour
         try {
             if (notifInfo.Length == 3) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0], 
-                    CharacterFromString(notifInfo[0]), int.Parse(notifInfo[1]), notifInfo[2]);
+                    HelperFunctions.CharacterFromString(notifInfo[0]),
+                    int.Parse(notifInfo[1]), notifInfo[2]);
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
                 q.questGiver = notifInfo[0];
                 q.questId = notifInfo[3];
                 q.description = notifInfo[2];
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
-                    CharacterFromString(notifInfo[0]), int.Parse(notifInfo[1]), 
-                    notifInfo[2], q);
+                    HelperFunctions.CharacterFromString(notifInfo[0]),
+                    int.Parse(notifInfo[1]), notifInfo[2], q);
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {
                 throw new System.Exception();
@@ -48,38 +50,6 @@ public class InkMessageHandler : MonoBehaviour
             }
             Debug.LogError(errormsg);
         }
-    }
-
-    CharacterResources.CHARACTERS CharacterFromString(string character) {
-        switch (character.ToLower()) {
-            case "rashad":
-                return CharacterResources.CHARACTERS.RASHAD;
-            case "lila":
-                return CharacterResources.CHARACTERS.LILA;
-            case "calindas":
-                return CharacterResources.CHARACTERS.CALINDAS;
-            case "elisa":
-                return CharacterResources.CHARACTERS.ELISA;
-            default:
-                if (character.ToLower().Contains("calindas")) {
-                    return CharacterResources.CHARACTERS.CALINDAS;
-                }
-                return CharacterResources.CHARACTERS.RASHAD;
-        }
-    }
-
-    string StringFromCharacter(CharacterResources.CHARACTERS character) {
-        switch (character) {
-            case CharacterResources.CHARACTERS.RASHAD:
-                return "Rashad";
-            case CharacterResources.CHARACTERS.LILA:
-                return "Lila";
-            case CharacterResources.CHARACTERS.CALINDAS:
-                return "Mr. Calindas";
-            case CharacterResources.CHARACTERS.ELISA:
-                return "Elisa";
-        }
-        return "Rashad";
     }
 
     /// <summary>
@@ -105,19 +75,88 @@ public class InkMessageHandler : MonoBehaviour
     /// Adds a quest to the quest list. Currently should just be the name of the quest
     /// that we'll look up later.
     /// </summary>
+    //public void AddQuest() {
+    //    string questName = _fc.GetStringVariable("new_quest");
+    //    string[] questInfo = questName.Split('_');
+    //    try {
+    //        QuestManager.AddQuest(questInfo[0], questInfo[1], questInfo[2]);
+    //    } catch {
+    //        string errormsg = "Error parsing new quest string.\n " +
+    //            "Expected string of the form questId_questGiver\n " +
+    //            "Instead received:";
+    //        foreach (string s in questInfo) {
+    //            errormsg += "\n" + s;
+    //        }
+    //        Debug.LogError(errormsg);
+    //    }
+    //}
+
+    /// <summary>
+    /// New version of Add Quests reads quest info from a file.
+    /// Switched to file reading as the amount of relevant quest info increased.
+    /// </summary>
     public void AddQuest() {
-        string questName = _fc.GetStringVariable("new_quest");
-        string[] questInfo = questName.Split('_');
-        try {
-            QuestManager.AddQuest(questInfo[0], questInfo[1], questInfo[2]);
-        } catch {
-            string errormsg = "Error parsing new quest string.\n " +
-                "Expected string of the form questId_questGiver\n " +
-                "Instead received:";
-            foreach (string s in questInfo) {
-                errormsg += "\n" + s;
+        char sep = Path.DirectorySeparatorChar;
+        string pwd = Directory.GetCurrentDirectory() + sep;
+        string questFileName = _fc.GetStringVariable("new_quest");
+        string dir = pwd + "Assets" + sep + "Story Files" + sep + questFileName;
+
+        Quest q = new Quest();
+
+        using (StreamReader reader = File.OpenText(dir)) {
+            // Quest Title
+            string line = reader.ReadLine();
+            q.questId = line;
+
+            // Quest Giver
+            line = reader.ReadLine();
+            q.questGiver = line;
+
+            // Health exp, should be a 0 or 1
+            line = reader.ReadLine();
+            q.incHealth = ParseBitString(line, "health");
+
+            // Time exp
+            line = reader.ReadLine();
+            q.incTime = ParseBitString(line, "time");
+
+            // Tech exp
+            line = reader.ReadLine();
+            q.incTech = ParseBitString(line, "tech");
+
+            // Resources exp
+            line = reader.ReadLine();
+            q.incResources = ParseBitString(line, "resources");
+
+            // Subtasks, not necessarily a fixed amt
+            List<string> subtasks = new List<string>();
+            line = reader.ReadLine();
+            while (line != null && line.Trim() != "") {
+                subtasks.Add(line);
+                line = reader.ReadLine();
             }
-            Debug.LogError(errormsg);
+            GlobalGameInfo.addNewItemToTodoList(q.questId,
+                HelperFunctions.CharacterFromString(q.questGiver));
+            foreach (string subtask in subtasks) {
+                GlobalGameInfo.addNewTodoToExistingList(q.questId,
+                    subtask);
+            }
+        }
+
+        QuestManager.AddQuest(q);
+    }
+
+    private bool ParseBitString(string s, string expTypeMsg = "") {
+        switch (s) {
+            case "0":
+                return false;
+            case "1":
+                return true;
+            default:
+                Debug.LogError("Error when parsing " + expTypeMsg +
+                    " exp bit string. Expected 0 or 1, but instead received " +
+                    s);
+                return false;
         }
     }
 }
