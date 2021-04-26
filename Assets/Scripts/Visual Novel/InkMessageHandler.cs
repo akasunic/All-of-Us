@@ -165,11 +165,11 @@ public class InkMessageHandler : MonoBehaviour
         switch (s) {
             case "0":
                 return false;
-            case "1":
+            case "+1":
                 return true;
             default:
                 Debug.LogError("Error when parsing " + expTypeMsg +
-                    " exp bit string. Expected 0 or 1, but instead received " +
+                    " exp bit string. Expected 0 or +1, but instead received " +
                     s);
                 return false;
         }
