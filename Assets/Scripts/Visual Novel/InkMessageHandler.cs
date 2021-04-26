@@ -81,6 +81,8 @@ public class InkMessageHandler : MonoBehaviour
             GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
         } else if (contactString.Contains("elisa")) {
             GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
+        } else if (contactString.Contains("lee")) {
+            // GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
         }
         // else if blah blah blah
     }

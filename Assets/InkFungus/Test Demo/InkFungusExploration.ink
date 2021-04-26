@@ -5,6 +5,12 @@ VAR new_quest = ""
 ->intro
 
 === intro ===
+Rashad?Neutral " "
++ [Go to london 1.]
+    -> london
++ [Go to london 2.]
+    -> london
+
 LONDON, 1872
 Residence of Monsieur Rashad Williams.
 -> london

@@ -97,9 +97,18 @@ public class QuestManager : MonoBehaviour
     private void IncreaseExpValues(Quest q) {
         // would have met character by now
         try {
-            GlobalGameInfo.contactsList[q.questGiver].UpdateStat("poop", 1);
+            if (q.incHealth)
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("health", 1);
+            if (q.incTime)
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("time", 1);
+            if (q.incTech)
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("tech", 1);
+            if (q.incResources)
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("resources", 1);
         } catch {
-
+            Debug.LogError("Character " +
+                HelperFunctions.StringFromCharacter(q.questGiver) +
+                " not met yet.");
         }
     }
 
