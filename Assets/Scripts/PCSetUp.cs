@@ -35,7 +35,7 @@ public class PCSetUp : MonoBehaviour
 
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Backstories");
     }
 
     private string GetPronouns(int intPronouns)
