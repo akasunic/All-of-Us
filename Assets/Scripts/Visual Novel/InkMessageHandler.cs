@@ -30,7 +30,7 @@ public class InkMessageHandler : MonoBehaviour
                     int.Parse(notifInfo[1]), notifInfo[2]);
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
-                q.questGiver = notifInfo[0];
+                q.questGiver = HelperFunctions.CharacterFromString(notifInfo[0]);
                 q.description = notifInfo[2];
 
                 q.questId = ReadQuestTitle(notifInfo[3]);
@@ -121,10 +121,11 @@ public class InkMessageHandler : MonoBehaviour
             // Quest Title
             string line = reader.ReadLine();
             q.questId = line;
+            q.description = line; // RE-EVALUATE WHAT TO PUT HERE
 
             // Quest Giver
             line = reader.ReadLine();
-            q.questGiver = line;
+            q.questGiver = HelperFunctions.CharacterFromString(line);
 
             // Health exp, should be a 0 or 1
             line = reader.ReadLine();
@@ -149,8 +150,7 @@ public class InkMessageHandler : MonoBehaviour
                 subtasks.Add(line);
                 line = reader.ReadLine();
             }
-            GlobalGameInfo.addNewItemToTodoList(q.questId,
-                HelperFunctions.CharacterFromString(q.questGiver));
+            GlobalGameInfo.addNewItemToTodoList(q.questId, q.questGiver);
             foreach (string subtask in subtasks) {
                 GlobalGameInfo.addNewTodoToExistingList(q.questId,
                     subtask);

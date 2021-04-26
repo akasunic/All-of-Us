@@ -1,6 +1,3 @@
-VAR savedKnot = ""
-VAR savedFlowchartName = ""
-VAR hasStarted = false
 VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""

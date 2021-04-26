@@ -11,7 +11,7 @@ using Fungus;
 /// </summary>
 public class Quest {
     public string questId; // used to identify quests behind the scenes
-    public string questGiver; // the NPC who assigned the quest
+    public CharacterResources.CHARACTERS questGiver; // the NPC who assigned the quest
     public string description; // description of the quest. Used for UI
     public bool incHealth; // does this quest increase the giver's health stat?
     public bool incTime; // increase the giver's time stat?
@@ -52,7 +52,7 @@ public class QuestManager : MonoBehaviour
     /// Contains the ID of the quest we tried to solve.
     /// Used when returning to VN scene.
     /// </summary>
-    public static string submittedQuest;
+    public static Quest submittedQuest;
     /// <summary>
     /// Contains the name of the person whose quest we're about to solve.
     /// Used when going to turnin scene.
@@ -75,6 +75,9 @@ public class QuestManager : MonoBehaviour
                     _status = SubmitStatus.not_submitted;
                     redeem_fc.SetBooleanVariable("wasQuestSubmitted", true);
                     redeem_fc.SetBooleanVariable("wasSubmitCorrect", true);
+
+                    IncreaseExpValues(submittedQuest);
+
                     Debug.Log("Correct Quest!");
                     break;
                 case SubmitStatus.incorrect:
@@ -88,6 +91,15 @@ public class QuestManager : MonoBehaviour
                     redeem_fc.SetBooleanVariable("wasQuestSubmitted", false);
                     break;
             }
+        }
+    }
+
+    private void IncreaseExpValues(Quest q) {
+        // would have met character by now
+        try {
+            GlobalGameInfo.contactsList[q.questGiver].UpdateStat("poop", 1);
+        } catch {
+
         }
     }
 
@@ -114,6 +126,11 @@ public class QuestManager : MonoBehaviour
     /// <param name="questGiver">The questGiver of the new quest.</param>
     /// <param name="description">The description of the new quest.</param>
     public static void AddQuest(string questId, string questGiver, string description) {
+        AddQuest(questId, HelperFunctions.CharacterFromString(questGiver), description);
+    }
+
+    public static void AddQuest(string questId, CharacterResources.CHARACTERS questGiver,
+        string description) {
         foreach (Quest q in activeQuests) {
             if (q.questId == questId)
                 return;
@@ -133,10 +150,12 @@ public class QuestManager : MonoBehaviour
     /// <summary>
     /// Removes a quest from questList whose questId matches the input questId
     /// </summary>
-    /// <param name="questId">The questId key to search for in the list</param>
-    public static void RemoveQuest(string questId) {
+    /// <param name="q">The q to search for in the list</param>
+    public static void RemoveQuest(Quest quest) {
+        // i'm not just doing list.contains here because the references will
+        // be different
         foreach (Quest q in activeQuests) {
-            if (q.questId == questId) {
+            if (q.questId == quest.questId) {
                 activeQuests.Remove(q);
                 return;
             }
@@ -149,33 +168,38 @@ public class QuestManager : MonoBehaviour
     /// </summary>
     /// <param name="questId">The questId to compare against. If this is the active quest,
     /// the answer is "correct." Else, it is "incorrect."</param>
-    public static void SubmitQuest(string questId) {
+    public static void SubmitQuest(Quest quest) {
         _status = SubmitStatus.incorrect;
 
+        // i'm not just doing list.contains here because the references will
+        // be different
         foreach (Quest q in activeQuests) {
-            if (q.questId == questId) {
+            if (q.questId == quest.questId) {
                 _status = SubmitStatus.correct;
-                submittedQuest = questId;
+                submittedQuest = quest;
                 break;
             }
         }
-        // load scene?
-        // TODO: make progress
         SceneChangeDemoController.LoadPreviousSceneStatic();
     }
 
     /// <summary>
-    /// Finds character's active quest in questList. Assumes each character
+    /// Finds character's active quest in activeQuests. Assumes each character
     /// can only have one active quest at a time.
     /// </summary>
-    /// <param name="character">The character to search for in questList</param>
+    /// <param name="character">The character to search for in activeQuests</param>
     /// <returns></returns>
     public static Quest FindQuestByCharacter(string character) {
-        foreach (Quest q in activeQuests) {
-            if (q.questGiver == character) {
-                return q;
-            }
-        }
-        return null;
+        return activeQuests.Find(item => item.questGiver ==
+            HelperFunctions.CharacterFromString(character));
+    }
+
+    /// <summary>
+    /// Finds a quest in activeQuests by searching by questId.
+    /// </summary>
+    /// <param name="questId">The quest id to search for in activeQuests</param>
+    /// <returns></returns>
+    public static Quest FindQuestById(string questId) {
+        return activeQuests.Find(item => item.questId == questId);
     }
 }
