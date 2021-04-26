@@ -41,6 +41,13 @@ public class GlobalGameInfo
         }
     }
 
+    public static void decreaseUntaggedTodoObjects(){
+        untaggedTodoObjects--;
+        if(updateNotifications != null){
+            updateNotifications(NOTIFICATION.TODO);
+        }
+    }
+
     public static void notificationCallback(NOTIFICATION n){
         if(updateNotifications != null){
             updateNotifications(n);
@@ -66,11 +73,13 @@ public class GlobalGameInfo
         public CharacterResources.CHARACTERS character;
 
         public int completedItems;
+        public bool showNotification;
 
         public TodoItem(string title){
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
+            this.showNotification = true;
         }
 
         public TodoItem(string title, CharacterResources.CHARACTERS character){
@@ -78,6 +87,7 @@ public class GlobalGameInfo
             this.checklist = new List<ChecklistItem>();
             this.character = character;
             this.completedItems = 0;
+            this.showNotification = true;
         }
         
         public ChecklistItem AddToChecklist(string c){
@@ -113,6 +123,7 @@ public class GlobalGameInfo
         public string character;
         public CharacterResources.CHARACTERS characterEnum;
         public string tagIdentifier;
+        public bool showNotification;
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description){
             this.character = character;
@@ -121,6 +132,7 @@ public class GlobalGameInfo
             this.description = description;
             string unhashedKey = character + day + description;
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+            this.showNotification = true;
         }
     }
 
