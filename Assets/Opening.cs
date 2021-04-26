@@ -13,7 +13,7 @@ public class Opening : MonoBehaviour
         // Testing logging an event
         DataCollection.LogEvent("Type test", "Initiator test");
 
-        SceneManager.LoadScene("Backstories");
+        SceneManager.LoadScene("PCSetUp");
     }
     
     
