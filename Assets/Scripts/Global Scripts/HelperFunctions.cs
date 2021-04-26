@@ -17,6 +17,43 @@ public static class HelperFunctions
               return result;
       }
       return null;
-  }
+    }
+
+    public static CharacterResources.CHARACTERS CharacterFromString(string character) {
+        // spaghetti cuz of things like formatting with mr. calindas etc
+
+        string lower = character.ToLower();
+        if (lower.Contains("calindas")) {
+            return CharacterResources.CHARACTERS.CALINDAS;
+        } else if (lower.Contains("rashad")) {
+            return CharacterResources.CHARACTERS.RASHAD;
+        } else if (lower.Contains("elisa")) {
+            return CharacterResources.CHARACTERS.ELISA;
+        } else if (lower.Contains("lila")) {
+            return CharacterResources.CHARACTERS.LILA;
+            //} else if (lower.Contains("lee")) {
+            //    // return CHARACTERS.LEE
+
+        } else {
+            Debug.LogError("Unknown character to parse to enum. Received " +
+                character +
+                ". Try one of: calindas, rashad, elisa, lila, lee");
+            return CharacterResources.CHARACTERS.RASHAD;
+        }
+    }
+
+    public static string StringFromCharacter(CharacterResources.CHARACTERS character) {
+        switch (character) {
+            case CharacterResources.CHARACTERS.RASHAD:
+                return "Rashad";
+            case CharacterResources.CHARACTERS.LILA:
+                return "Lila";
+            case CharacterResources.CHARACTERS.CALINDAS:
+                return "Mr. Calindas";
+            case CharacterResources.CHARACTERS.ELISA:
+                return "Elisa";
+        }
+        return "Rashad";
+    }
 
 }

@@ -210,14 +210,15 @@ public class PhoneScreenManager : MonoBehaviour
         questPreview.GetComponentInChildren<TextMeshProUGUI>().
             text = activeQuest.description;
 
-        string imgString = activeQuest.questGiver.ToLower();
+        string imgString = HelperFunctions.StringFromCharacter(activeQuest.questGiver)
+            .ToLower();
         Image questGiverImg = questPreview.Find("Quest Giver").GetComponent<Image>();
         
         questGiverImg.sprite =
-            Resources.Load<Sprite>(imgString + "_circle");
+            Resources.Load<Sprite>(imgString + "_small");
     }
 
-    private static DetailPageManager selectedQuestObj = null; // work in progress
+    // private static DetailPageManager selectedQuestObj = null; // work in progress
 
     public void SelectQuestAnswer(string questId, string character, string description) {
         Debug.Log("Item selected that solves quest " + questId);
@@ -236,7 +237,7 @@ public class PhoneScreenManager : MonoBehaviour
         questSolverImg.sprite = Resources.Load<Sprite>(imgString);
         questSolverImg.color = new Color(255, 255, 255, 255);
 
-        QuestManager.submittedQuest = questId;
+        QuestManager.submittedQuest = QuestManager.FindQuestById(questId);
     }
 
     public void SubmitQuest() {

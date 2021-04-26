@@ -169,7 +169,6 @@ public class DetailPageManager : MonoBehaviour
 
     public void SelectItemForQuest() {
         // highlight the item in the UI
-        Debug.Log(GetComponent<Image>().color);
         DeselectItemInUI();
         FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
         GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);

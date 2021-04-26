@@ -7,7 +7,7 @@ using Fungus;
 
 
 /// <summary>
-/// Handles the All of Us save system; stores story variables in Fungus
+/// [DEPRECATED] Handles the All of Us save system; stores story variables in Fungus
 /// flowchart global variables, then sends the variables'
 /// values to Ink on scene load.
 /// </summary>

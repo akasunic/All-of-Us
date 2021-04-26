@@ -1,6 +1,3 @@
-VAR savedKnot = ""
-VAR savedFlowchartName = ""
-VAR hasStarted = false
 VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
@@ -8,6 +5,12 @@ VAR new_quest = ""
 ->intro
 
 === intro ===
+Rashad?Neutral " "
++ [Go to london 1.]
+    -> london
++ [Go to london 2.]
+    -> london
+
 LONDON, 1872
 Residence of Monsieur Rashad Williams.
 -> london
@@ -17,7 +20,7 @@ Monsieur Rashad Williams returned home early from the {Reform Club|Bloomwood Tow
 ~ new_contact = "Rashad"
 # new_contact
 Rashad?Smiling "I need someone with YA Experience."
-~ new_quest = "RashadIntroQuest_Rashad_Rashad needs someone with YA experience."
+~ new_quest = "sample quest info.txt"
 # new_quest
 Rashad "Passepartout. We are going around the world!"
 
@@ -41,7 +44,7 @@ I nodded curtly, not believing a word of it.
 
 === ending ===
 Rashad "We shall circumnavigate the globe within eighty days."
-~ notification = "Lila_1_Lila has YA experience._RashadIntroQuest"
+~ notification = "Lila_1_Lila has YA experience._sample quest info.txt"
 # notification
 He was quite calm as he proposed this wild scheme.
 Rashad "We leave for Paris on the 8:25. In an hour."
