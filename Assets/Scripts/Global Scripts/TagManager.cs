@@ -42,7 +42,7 @@ public static class TagManager
     public static List<string> defaultTags = new List<string>{
         "Rashad",
         "Lila",
-        "Calindas",
+        "Mr. Calindas",
         "Elisa",
         "Mrs. Lee"
     }; 
