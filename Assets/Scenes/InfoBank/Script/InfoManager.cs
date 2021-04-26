@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
-using System;
 
 //this script grabs the InfoItems from GlobalGameInfo
 //and then instantiates the journal prefabs from them
@@ -42,12 +42,42 @@ public class InfoManager : MonoBehaviour
          Transform newItem = Instantiate(itemPrefab, go);
           newItem.GetComponent<DetailPageManager>().setInfo(items[i]);
            
+          DetailPageManager itemDetails = newItem.GetComponent<DetailPageManager>();
+          itemDetails.questId = items[i].quest.questId;
+          itemDetails.character = items[i].character;
+
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
           if(tagsList != null){
             Debug.Log("found tagslist");
             tagsList.GetComponent<TagListManager>().SetInfoId(items[i].tagIdentifier);
-          }
-          
-      }
+            }
+            //EventTrigger trigger = newItem.GetComponent<EventTrigger>();
+            //EventTrigger.Entry entry = new EventTrigger.Entry();
+            //entry.eventID = EventTriggerType.PointerClick;
+            //entry.callback.AddListener((data) => itemDetails.SelectItem());
+            //trigger.triggers.Add(entry);
+        }
     }
+
+    //string questId;
+    //string character;
+    //string description;
+
+    //public void SelectItemForQuest() {
+    //    // highlight the item in the UI
+    //    Debug.Log(GetComponent<Image>().color);
+    //    DeselectItemInUI();
+    //    FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
+    //    GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f);
+    //    selectedItem = this;
+    //    Debug.Log(GetComponent<Image>().color);
+    //}
+
+    //private static InfoManager selectedItem;
+    //private void DeselectItemInUI() {
+    //    if (selectedItem == null)
+    //        return;
+    //    selectedItem.GetComponent<Image>().color = Color.white;
+    //    selectedItem = null;
+    //}
 }
