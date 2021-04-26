@@ -14,7 +14,9 @@ public class AddCustomTag : MonoBehaviour
     }
 
     public void addCustomTag(){
-        TagManager.AddToCustomTags(inputTagText);
+        if(inputTagText.Length > 0){
+            TagManager.AddToCustomTags(inputTagText);
+        }
     }
   
     public void inputValue(TMP_InputField userInput)
