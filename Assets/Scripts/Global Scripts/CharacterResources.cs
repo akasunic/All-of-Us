@@ -41,11 +41,11 @@ public class CharacterResources
 
     calindasNeutral = Resources.Load<Sprite>("calindas_neutral");
     calindasTalking = Resources.Load<Sprite>("calindas_talking");
-    calindasSmall = Resources.Load<Sprite>("rashad_small");
+    calindasSmall = Resources.Load<Sprite>("calindas_small");
     
     elisaNeutral = Resources.Load<Sprite>("elisa_neutral");
     elisaTalking = Resources.Load<Sprite>("elisa_talking");
-    elisaSmall = Resources.Load<Sprite>("rashad_small");
+    elisaSmall = Resources.Load<Sprite>("elisa_small");
   }
 
   public Sprite GetSmallIcon(CHARACTERS c){

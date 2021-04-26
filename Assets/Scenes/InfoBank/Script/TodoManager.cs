@@ -34,12 +34,12 @@ public class TodoManager : MonoBehaviour
       greyDropdown = Resources.Load<Sprite>("dropdown_open");
       greenDropdown = Resources.Load<Sprite>("dropdown_closed_green");
       greenBackground = Resources.Load<Sprite>("greenbg");
-      Debug.Log(greenBackground);
     }
     public void setDetails(GlobalGameInfo.TodoItem item){
       if(cr == null){
         cr = new CharacterResources();
       }
+
       string title = item.title;
       List<GlobalGameInfo.ChecklistItem> checklist = item.checklist;
       Transform textChild = HelperFunctions.FindChildByRecursion(transform, "title");
@@ -57,12 +57,27 @@ public class TodoManager : MonoBehaviour
         newItem.GetComponent<ChecklistManager>().setItem(checklist[i]);
       }
 
+      if(item.showNotification){
+        GlobalGameInfo.decreaseUntaggedTodoObjects();
+      }
+
+      if(!item.showNotification){
+        Transform redbubble = HelperFunctions.FindChildByRecursion(transform, "redbubble");
+        redbubble.gameObject.SetActive(false);
+      }
+      item.showNotification = false;
+
+
+      
+
       completed = (item.completedItems == item.checklist.Count);
 
       if(completed){
         backgroundImage.sprite = greenBackground;
         dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
       }
+
+      
 
       checklistItems.SetActive(false);
       resetLayouts();

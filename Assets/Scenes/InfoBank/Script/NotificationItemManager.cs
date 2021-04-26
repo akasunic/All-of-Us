@@ -43,7 +43,6 @@ public class NotificationItemManager : MonoBehaviour
 
     public void updateUIElements(){
       int untagged = GlobalGameInfo.getNotificationNumber(notificationType);
-      Debug.Log(notificationType + ", " + untagged);
       if(untagged == 0){
         if(bubble != null){
           bubble.SetActive(false);
