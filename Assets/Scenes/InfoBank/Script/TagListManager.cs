@@ -36,6 +36,7 @@ public class TagListManager : MonoBehaviour {
 
 
     public void UpdateList(){
+      Debug.Log("updating");
       List<string> list = TagManager.GetTags(infoId);
 
       for(int i = 0; i < listOfTags.Count; i++){

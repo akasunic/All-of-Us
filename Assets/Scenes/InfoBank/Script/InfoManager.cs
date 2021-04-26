@@ -43,7 +43,9 @@ public class InfoManager : MonoBehaviour
           newItem.GetComponent<DetailPageManager>().setInfo(items[i]);
            
           DetailPageManager itemDetails = newItem.GetComponent<DetailPageManager>();
-          itemDetails.questId = items[i].quest.questId;
+          if(items[i].quest != null){
+            itemDetails.questId = items[i].quest.questId;
+          }
           itemDetails.character = items[i].character;
 
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");

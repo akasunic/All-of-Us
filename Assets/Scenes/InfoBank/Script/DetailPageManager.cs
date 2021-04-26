@@ -60,6 +60,7 @@ public class DetailPageManager : MonoBehaviour
 
     //if they save
     public static void updateLastOverlayItemWithTagsList(){
+      Debug.Log("update changed tags list");
       if(changedTags == null) return;
       List<string> tags = TagManager.GetTags(openedInfoItem.tagIdentifier);
 
