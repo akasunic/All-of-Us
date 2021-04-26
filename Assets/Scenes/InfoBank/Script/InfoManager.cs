@@ -39,11 +39,13 @@ public class InfoManager : MonoBehaviour
 
       Transform go = this.gameObject.transform.Find("Panel");
       for(int i = 0; i < items.Count; i++){
-          Transform newItem = Instantiate(itemPrefab, go);
+         Transform newItem = Instantiate(itemPrefab, go);
+          newItem.GetComponent<DetailPageManager>().setInfo(items[i]);
+           
           DetailPageManager itemDetails = newItem.GetComponent<DetailPageManager>();
-          itemDetails.setText("Day " + items[i].day);
-          itemDetails.setDescription(items[i].description);
-          itemDetails.questId = items[i].quest.questId;
+          if(items[i].quest != null){
+            itemDetails.questId = items[i].quest.questId;
+          }
           itemDetails.character = items[i].character;
 
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");

@@ -12,8 +12,11 @@ using System;
 public class CharacterSheetManager : MonoBehaviour
 {
     public Transform detailPagePrefab;
+    public Sprite unselectedBg;
+    public Sprite selectedBg;
     private GlobalGameInfo.CharacterItem character;
     private static Transform lastItem = null;
+    private static GameObject lastTabItem = null;
 
     CharacterResources cr;
 
@@ -40,7 +43,19 @@ public class CharacterSheetManager : MonoBehaviour
         Destroy(lastItem.gameObject);
       }
 
+      if(lastTabItem != null){
+        Vector3 lastpos = lastTabItem.GetComponent<RectTransform>().anchoredPosition;
+        lastTabItem.GetComponent<RectTransform>().anchoredPosition = lastpos + new Vector3(30, 0, 0);
+        lastTabItem.GetComponent<Image>().sprite = unselectedBg; 
+      }
+
       lastItem = newItem;
+      lastTabItem = transform.GetChild(0).gameObject;
+
+      Vector3 lastpos2 = lastTabItem.GetComponent<RectTransform>().anchoredPosition;
+      lastTabItem.GetComponent<RectTransform>().anchoredPosition = lastpos2 + new Vector3(-30, 0, 0); 
+      lastTabItem.GetComponent<Image>().sprite = selectedBg; 
+
       Transform txt = HelperFunctions.FindChildByRecursion(newItem, "text");
       Transform image = HelperFunctions.FindChildByRecursion(newItem, "profile");
       Transform des = HelperFunctions.FindChildByRecursion(newItem, "description");

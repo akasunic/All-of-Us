@@ -20,7 +20,7 @@ public class ChecklistManager : MonoBehaviour
     public void setItem(GlobalGameInfo.ChecklistItem ci){
       item = ci;
       setText(item.title);
-      setCheckmark(item.completed);
+      //setCheckmark(item.completed);
     }
 
     public void setText(string text){
@@ -29,11 +29,12 @@ public class ChecklistManager : MonoBehaviour
       textChild.gameObject.GetComponent<TextMeshProUGUI>().text = text;
     }
 
-    public void setCheckmark(bool isDone){
-      if(isDone){
-        checkmark.sprite = checkedSprite;
-      } else {
-        checkmark.sprite = uncheckedSprite;
-      }
-    }
+    //removing this feature for now
+    // public void setCheckmark(bool isDone){
+    //   if(isDone){
+    //     checkmark.sprite = checkedSprite;
+    //   } else {
+    //     checkmark.sprite = uncheckedSprite;
+    //   }
+    // }
 }

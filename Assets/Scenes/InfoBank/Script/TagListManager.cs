@@ -19,29 +19,32 @@ public class TagListManager : MonoBehaviour {
       var descriptionHeight = parentTransform.rect.height - 10;
       heightTransform.sizeDelta = new Vector2(132, descriptionHeight );
 
+      TagManager.setDelegate(UpdateList);
+
       UpdateList();
     }
+
     public void SetInfoId(string id){
       infoId = id;
     }
 
     public void AddTagButton(string tag){
-      Debug.Log("Adding " + infoId);
       TagManager.AddTagAndInfo(tag , infoId);
       UpdateList();
     }
 
+
+
     public void UpdateList(){
+      Debug.Log("updating");
       List<string> list = TagManager.GetTags(infoId);
 
       for(int i = 0; i < listOfTags.Count; i++){
         Destroy(listOfTags[i]);
       }
       listOfTags.Clear();
-      Debug.Log(list.Count);
       for(int i = 0; i < list.Count; i++) {
         GameObject tagItem = Instantiate(tagPrefab, transform);
-        Debug.Log(tagItem);
         string val = list[i];
         tagItem.GetComponent<DetailPageManager>().setText(val);
         listOfTags.Add(tagItem);
