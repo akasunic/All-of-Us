@@ -628,12 +628,12 @@ PrefabInstance:
     - target: {fileID: 5975825617858713872, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 10.45
       objectReference: {fileID: 0}
     - target: {fileID: 5975825617858713872, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 21.61
       objectReference: {fileID: 0}
     - target: {fileID: 6861777948896379087, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -744,6 +744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PhoneIconPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307407355242500947, guid: a27e3f7ab345a49bcb17231945f6502d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a27e3f7ab345a49bcb17231945f6502d, type: 3}
@@ -1213,7 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5589ca0e58e25c4cb0dd64d4a7512e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ink: {fileID: 4900000, guid: 478772b9cc143e44b80dce81020fed35, type: 3}
+  ink: {fileID: 0}
   sayDialog: {fileID: 400864714}
   menuDialog: {fileID: 237699669}
   defaultCharacterColor: {r: 0, g: 0, b: 0, a: 1}
@@ -2925,9 +2930,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1146814507}
+  - {fileID: 1146814541}
   selectedCommands:
-  - {fileID: 1146814502}
+  - {fileID: 1146814491}
   variables:
   - {fileID: 1146814531}
   - {fileID: 1146814536}
@@ -3269,10 +3274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd74d6f06bb141a0962a7411dcd8398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  narrativeDirector: {fileID: 598109540}
 --- !u!114 &1146814502
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

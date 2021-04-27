@@ -17,6 +17,7 @@ namespace InkFungus
     {
         [Header("Basic Settings")]
         public TextAsset ink;
+        public static TextAsset staticInk;
         public SayDialog sayDialog;
         public MenuDialog menuDialog;
         public Color defaultCharacterColor;
@@ -110,7 +111,11 @@ namespace InkFungus
 
         void Awake()
         {
-            story = new Story(ink.text);
+            if (ink != null) {
+                story = new Story(ink.text);
+            } else {
+                story = new Story(staticInk.text);
+            }
             if (sayDialog == null)
             {
                 sayDialog = FindObjectOfType<SayDialog>();

@@ -7,7 +7,6 @@ using UnityEngine;
 public class CharacterResources
 {
 
-  [System.Serializable]
   public enum CHARACTERS{
     RASHAD,
     LILA,

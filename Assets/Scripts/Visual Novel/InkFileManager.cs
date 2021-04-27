@@ -30,7 +30,7 @@ public class InkFileManager : MonoBehaviour {
             }
         } }
 
-    public string ActiveFileName { get {
+    public static string ActiveFileName { get {
             try {
                 return ActivePersonQuestList[activeFileIdx.Item1][activeFileIdx.Item2];
             } catch {
@@ -52,6 +52,7 @@ public class InkFileManager : MonoBehaviour {
             instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.activeSceneChanged += OnSceneChanged;
+            activeFileIdx = (-1, -1);
         }
     }
 
@@ -67,18 +68,19 @@ public class InkFileManager : MonoBehaviour {
     /// </summary>
     /// <returns>true if both components are found, false otherwise</returns>
     bool GetVisualNovelComponents() {
-        _fc = GameObject.Find("Variables Flowchart").
-            GetComponent<Flowchart>();
-        narrativeDirector = FindObjectOfType<NarrativeDirector>();
+        try {
+            _fc = GameObject.Find("Variables Flowchart").
+                GetComponent<Flowchart>();
+            narrativeDirector = FindObjectOfType<NarrativeDirector>();
+        } catch {
+            return false;
+        }
         return (_fc && narrativeDirector);
     }
 
     private void OnSceneChanged(Scene prev, Scene next) {
         if (!GetVisualNovelComponents())
             return;
-
-        // should have an active file if we're in a visual novel scene?
-        narrativeDirector.ink = Resources.Load<TextAsset>(ActiveFileName);
         
         _fc.ExecuteBlock("On Variables Loaded");
     }
@@ -145,6 +147,11 @@ public class InkFileManager : MonoBehaviour {
 
         // try start a new quest
         if (CanStartQuest(character)) {
+            const int DAY_TEST = 1;
+
+            activeFileIdx = (DAY_TEST - 1, 0);
+
+            NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));
             // for now
             SceneManager.LoadScene("LibraryVN");
         } else {
@@ -153,10 +160,16 @@ public class InkFileManager : MonoBehaviour {
             string fileToLoad = ActivePersonQuestList[questNum][chapterNum];
             // is this the next person to speak to for the quest?
             if (character == GetSpeakerFromFile(fileToLoad)) {
+                NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));
                 // for now
                 SceneManager.LoadScene("LibraryVN");
             }
         }
+    }
+
+    private string InkToJson(string inkFilename) {
+        return inkFilename.Split(new string[] { ".ink" },
+            System.StringSplitOptions.None)[0];
     }
 
     /// <summary>
@@ -169,9 +182,8 @@ public class InkFileManager : MonoBehaviour {
     private CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
         char sep = Path.DirectorySeparatorChar;
         string pwd = Directory.GetCurrentDirectory() + sep;
-        string questFileName = _fc.GetStringVariable(fileName);
         string dir = pwd + "Assets" + sep + "Story Files" + sep + "Resources" +
-            sep + questFileName;
+            sep + fileName;
 
         using (StreamReader reader = File.OpenText(dir)) {
             string line;

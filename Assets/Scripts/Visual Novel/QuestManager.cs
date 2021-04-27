@@ -98,13 +98,13 @@ public class QuestManager : MonoBehaviour
         // would have met character by now
         try {
             if (q.incHealth)
-                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("health", 1);
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("health");
             if (q.incTime)
-                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("time", 1);
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("time");
             if (q.incTech)
-                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("tech", 1);
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("tech");
             if (q.incResources)
-                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("resources", 1);
+                GlobalGameInfo.contactsList[q.questGiver].UpdateStat("resources");
         } catch {
             Debug.LogError("Character " +
                 HelperFunctions.StringFromCharacter(q.questGiver) +
