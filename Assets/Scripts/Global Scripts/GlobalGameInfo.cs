@@ -190,37 +190,41 @@ public class GlobalGameInfo
             this.identifier = c;
         }
 
-        public void UpdateStat(string target, float num)
+        public void UpdateStat(string target)
         {
             switch (target)
             {
                 case "health":
-                    health = GetNewValue(health, num);
+                    health = GetNewValue(health);
                     break;
                 case "time":
-                    time = GetNewValue(time, num);
+                    time = GetNewValue(time);
                     break;
                 case "tech":
-                    tech = GetNewValue(tech, num);
+                    tech = GetNewValue(tech);
                     break;
                 case "resources":
-                    resources = GetNewValue(resources, num);
+                    resources = GetNewValue(resources);
                     break;
                 default:
                     throw new System.Exception("Wrong Argument");
             }
         }
 
-        private static float GetNewValue(float original, float num)
+        private static float GetNewValue(float original)
         {
+            // 5 levels total
+            // Starts from 0 to 1. Increase by 0.2
+            float num = 0.2f;
+
             float ans = original + num;
-            if (ans > 1)
+            if (ans > 1.0f)
             {
-                ans = 1;
+                ans = 1.0f;
             }
-            if (ans < 0)
+            if (ans < 0.0f)
             {
-                ans = 0;
+                ans = 0.0f;
             }
             return ans;
         }
