@@ -52,8 +52,11 @@ public static class HelperFunctions
                 return "Mr. Calindas";
             case CharacterResources.CHARACTERS.ELISA:
                 return "Elisa";
+            //case CharacterResources.CHARACTERS.LEE:
+            //    return "Mrs. Lee";
+            default:
+                return "Rashad";
         }
-        return "Rashad";
     }
 
 }
