@@ -156,6 +156,7 @@ public class GlobalGameInfo
     public class CharacterItem
     {
         public string title;
+        public string shortname;
         public string description;
         public string job;
         public string location;
@@ -169,6 +170,7 @@ public class GlobalGameInfo
 
         public CharacterItem(
             string title,
+            string shortname,
             string description,
             string job,
             string location,
@@ -180,6 +182,7 @@ public class GlobalGameInfo
             float resources) {
 
             this.title = title;
+            this.shortname = shortname;
             this.description = description;
             this.job = job;
             this.location = location;
@@ -196,6 +199,28 @@ public class GlobalGameInfo
         }
 
         public void UpdateStat(string target)
+        {
+            switch (target)
+            {
+                case "health":
+                    health = GetNewValue(health);
+                    break;
+                case "time":
+                    time = GetNewValue(time);
+                    break;
+                case "tech":
+                    tech = GetNewValue(tech);
+                    break;
+                case "resources":
+                    resources = GetNewValue(resources);
+                    break;
+                default:
+                    throw new System.Exception("Wrong Argument");
+            }
+        }
+
+        //needed to fix compile error
+        public void UpdateStat(string target, int val)
         {
             switch (target)
             {
