@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class EndOfQuestTest : MonoBehaviour
 {
     public EndOfQuest endOfQuest;
     private int i = 0;
+
+    public void EndOfGameTest() {
+        SceneManager.LoadScene("Ending");
+    }
 
     public void Test()
     {
