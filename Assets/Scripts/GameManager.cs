@@ -37,21 +37,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start Game
-    // Set the initial values
-    // call this function using GameManager.Instance.StartGame()
+    // Depricated.
     public void StartGame()
     {
         engagement = 0;
     }
 
-    // call this function using GameManager.Instance.GetEngagement()
+    // Depricated. Instead use GlobalGameInfo
     public int GetEngagement()
     {
         return engagement;
     }
 
-    // call this function using GameManager.Instance.IncreaseEngagement()
+    // Depricated. Instead use GlobalGameInfo
     public void IncreaseEngagement()
     {
         if (engagement < MAX_ENGAGEMENT)
