@@ -26,7 +26,7 @@ public class SliderBarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        int engagement = GameManager.Instance.GetEngagement();
+        int engagement = GlobalGameInfo.GetEngagement();
 
         if(!animate){
             engagementSlider.value = engagement;
