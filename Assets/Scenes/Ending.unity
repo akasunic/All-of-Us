@@ -264,14 +264,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1468568441}
-  textContainer: {fileID: 2003880688}
+  LastTextField: {fileID: 18064240}
   nextButton: {fileID: 15422681}
-  balloons: {fileID: 152565960}
-  mrcalindas: {fileID: 1157761055}
-  mrslee: {fileID: 960338172}
-  elisa: {fileID: 1111681158}
-  lila: {fileID: 615560779}
-  rashad: {fileID: 58900595}
+  mrcalindas: {fileID: 1157761057}
+  mrslee: {fileID: 960338174}
+  elisa: {fileID: 1111681160}
+  lila: {fileID: 615560781}
+  rashad: {fileID: 58900597}
+--- !u!1 &18064238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18064239}
+  - component: {fileID: 18064241}
+  - component: {fileID: 18064240}
+  m_Layer: 5
+  m_Name: LastText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &18064239
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18064238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 909741469}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 73, y: -106}
+  m_SizeDelta: {x: 580, y: 320}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &18064240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18064238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f0f34f46b4a16420fa43a112ecf09cbc, type: 3}
+    m_FontSize: 36
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "It\u2019s always been the people. "
+--- !u!222 &18064241
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18064238}
+  m_CullTransparentMesh: 0
 --- !u!1 &58900595
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +672,7 @@ RectTransform:
   - {fileID: 1111681159}
   - {fileID: 615560780}
   - {fileID: 58900596}
+  - {fileID: 18064239}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
