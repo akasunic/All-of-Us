@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-guid: 3393fc106973e4abcb8e6662b0ed8a00
+guid: 74193e18bd1bb4a1c9e9fbd60cbda22d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-<<<<<<< HEAD
-    enableMipMap: 1
-=======
     enableMipMap: 0
->>>>>>> 3842a2a174d77ee65268aefdff8e01acf782379f
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -38,15 +34,6 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-<<<<<<< HEAD
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
-  nPOTScale: 1
-  lightmap: 0
-  compressionQuality: 50
-  spriteMode: 0
-=======
     wrapU: 1
     wrapV: 1
     wrapW: -1
@@ -54,7 +41,6 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
->>>>>>> 3842a2a174d77ee65268aefdff8e01acf782379f
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,15 +49,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  spriteTessellationDetail: -1
-  textureType: 0
-=======
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
->>>>>>> 3842a2a174d77ee65268aefdff8e01acf782379f
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
