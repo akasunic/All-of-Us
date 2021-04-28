@@ -108,10 +108,6 @@ public class CharacterSheetManager : MonoBehaviour
 
       Transform textChild = HelperFunctions.FindChildByRecursion(transform, "text");
       if(textChild == null) return;
-      textChild.gameObject.GetComponent<TextMeshProUGUI>().text = character.title;
-      
-      Transform descriptionChild = HelperFunctions.FindChildByRecursion(transform, "description");
-      if(descriptionChild == null) return;
-      descriptionChild.gameObject.GetComponent<TextMeshProUGUI>().text = character.job;
+      textChild.gameObject.GetComponent<TextMeshProUGUI>().text = character.shortname;
     }
 }

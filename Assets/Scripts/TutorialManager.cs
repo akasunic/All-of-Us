@@ -12,6 +12,8 @@ public class TutorialManager : MonoBehaviour
     public TextMeshProUGUI contentText;
     public AudioSource audioSource;
     public GameObject[] stages;
+    public TextMeshProUGUI[] npcNameText;
+    public GameObject[] lilaImages;
 
     private int stage;
     private Vector3 dialoguePosition;
@@ -57,6 +59,18 @@ public class TutorialManager : MonoBehaviour
     public void EndTutorial()
     {
         SceneManager.LoadScene("Basic2DMap");
+    }
+
+    public void ActivateLila()
+    {
+        for (int i = 0; i < npcNameText.Length; i++)
+        {
+            npcNameText[i].text = "Lila";
+        }
+        for (int i = 0; i < lilaImages.Length; i++)
+        {
+            lilaImages[i].SetActive(true);
+        }
     }
 
     public void CustomActions()

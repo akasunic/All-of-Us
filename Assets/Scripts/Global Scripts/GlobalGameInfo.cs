@@ -5,8 +5,13 @@ using UnityEngine;
 //Stores static game info for the infobank
 public class GlobalGameInfo
 {
+    // CURRENT DAY (0 to 4)
+    // 0 is Monday and 4 is Block Party day
+    private static int currentDay = 0;
 
+    // player's name
     public static string name;
+    // player's pronouns
     public static string pronouns;
 
     //an enum for notifications
@@ -21,41 +26,41 @@ public class GlobalGameInfo
     public delegate void UpdateNotifications(NOTIFICATION noficationType);
     public static UpdateNotifications updateNotifications;
 
-    public static void setNotificationDelegate(UpdateNotifications n){
-        if(updateNotifications != null){
+    public static void setNotificationDelegate(UpdateNotifications n) {
+        if (updateNotifications != null) {
             updateNotifications += n;
         } else {
             updateNotifications = n;
         }
-        
+
     }
-    
-    public static void clearNotificationDelegate(){
+
+    public static void clearNotificationDelegate() {
         updateNotifications = null;
     }
 
-    public static void decreaseUntaggedInfoObjects(){
+    public static void decreaseUntaggedInfoObjects() {
         untaggedInfoObjects--;
-        if(updateNotifications != null){
+        if (updateNotifications != null) {
             updateNotifications(NOTIFICATION.INFO);
         }
     }
 
-    public static void decreaseUntaggedTodoObjects(){
+    public static void decreaseUntaggedTodoObjects() {
         untaggedTodoObjects--;
-        if(updateNotifications != null){
+        if (updateNotifications != null) {
             updateNotifications(NOTIFICATION.TODO);
         }
     }
 
-    public static void notificationCallback(NOTIFICATION n){
-        if(updateNotifications != null){
+    public static void notificationCallback(NOTIFICATION n) {
+        if (updateNotifications != null) {
             updateNotifications(n);
         }
     }
 
-    public static int getNotificationNumber(NOTIFICATION n){
-        switch(n){
+    public static int getNotificationNumber(NOTIFICATION n) {
+        switch (n) {
             case NOTIFICATION.INFO:
                 return untaggedInfoObjects;
             case NOTIFICATION.TODO:
@@ -66,7 +71,7 @@ public class GlobalGameInfo
     }
 
     //CLASSES FOR PHONE ITEMS - TODOs, INFORMATION, CONTACTs
-    public class TodoItem 
+    public class TodoItem
     {
         public string title;
         public List<ChecklistItem> checklist;
@@ -75,48 +80,48 @@ public class GlobalGameInfo
         public int completedItems;
         public bool showNotification;
 
-        public TodoItem(string title){
+        public TodoItem(string title) {
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
             this.showNotification = true;
         }
 
-        public TodoItem(string title, CharacterResources.CHARACTERS character){
+        public TodoItem(string title, CharacterResources.CHARACTERS character) {
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.character = character;
             this.completedItems = 0;
             this.showNotification = true;
         }
-        
-        public ChecklistItem AddToChecklist(string c){
+
+        public ChecklistItem AddToChecklist(string c) {
             ChecklistItem ci = new ChecklistItem(c, this);
             this.checklist.Add(ci);
             return ci;
         }
     }
 
-    public class ChecklistItem 
+    public class ChecklistItem
     {
         public string title;
         public bool completed;
         public string id;
 
         public TodoItem parent;
-        public ChecklistItem(string title, TodoItem parent){
+        public ChecklistItem(string title, TodoItem parent) {
             this.title = title;
             this.id = title.GetHashCode().ToString();
             this.parent = parent;
         }
 
-        public void CompleteTask(){
+        public void CompleteTask() {
             this.completed = true;
             this.parent.completedItems++;
         }
     }
 
-    public class InfoItem 
+    public class InfoItem
     {
         public int day;
         public string description;
@@ -126,7 +131,7 @@ public class GlobalGameInfo
         public bool showNotification;
         public readonly Quest quest;
 
-        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description){
+        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
             this.character = character;
             this.characterEnum = characterEnum;
             this.day = day;
@@ -136,7 +141,7 @@ public class GlobalGameInfo
             this.showNotification = true;
         }
 
-        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, 
+        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
             this.character = character;
             this.characterEnum = characterEnum;
@@ -151,10 +156,11 @@ public class GlobalGameInfo
     public class CharacterItem
     {
         public string title;
+        public string shortname;
         public string description;
         public string job;
         public string location;
-        public string pronouns; 
+        public string pronouns;
         public int age;
         public float health;
         public float time;
@@ -162,19 +168,21 @@ public class GlobalGameInfo
         public float resources;
         public CharacterResources.CHARACTERS identifier;
 
-        public CharacterItem(        
-            string title, 
+        public CharacterItem(
+            string title,
+            string shortname,
             string description,
             string job,
             string location,
-            string pronouns, 
+            string pronouns,
             int age,
             float health,
             float time,
             float tech,
-            float resources){
+            float resources) {
 
             this.title = title;
+            this.shortname = shortname;
             this.description = description;
             this.job = job;
             this.location = location;
@@ -186,11 +194,33 @@ public class GlobalGameInfo
             this.resources = resources;
         }
 
-        public void SetCharacterEnum(CharacterResources.CHARACTERS c){
+        public void SetCharacterEnum(CharacterResources.CHARACTERS c) {
             this.identifier = c;
         }
 
         public void UpdateStat(string target)
+        {
+            switch (target)
+            {
+                case "health":
+                    health = GetNewValue(health);
+                    break;
+                case "time":
+                    time = GetNewValue(time);
+                    break;
+                case "tech":
+                    tech = GetNewValue(tech);
+                    break;
+                case "resources":
+                    resources = GetNewValue(resources);
+                    break;
+                default:
+                    throw new System.Exception("Wrong Argument");
+            }
+        }
+
+        //needed to fix compile error
+        public void UpdateStat(string target, int val)
         {
             switch (target)
             {
@@ -251,9 +281,9 @@ public class GlobalGameInfo
     }
 
     public static void addNewItemToInfoList(
-        string character, 
+        string character,
         CharacterResources.CHARACTERS characterEnum,
-        int day, 
+        int day,
         string description,
         Quest quest = null)
     {
@@ -261,9 +291,28 @@ public class GlobalGameInfo
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
     }
-    
-    public static void addNewItemToContactsList(CharacterItem c){
+
+    public static void addNewItemToContactsList(CharacterItem c) {
         GlobalGameInfo.contactsList.Add(c.identifier, c);
     }
 
+    public static int GetCurrentDay()
+    {
+        return currentDay;
+    }
+
+    public static int GetRemainDays()
+    {
+        return 4 - currentDay;
+    }
+
+    public static void IncreaseDay()
+    {
+        currentDay++;
+        if (currentDay > 4)
+        {
+            currentDay = 4;
+        }
+        Debug.Log("Current Day: " + currentDay);
+    }
 }
