@@ -1,61 +1,94 @@
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-Character looks happy.
+-> intro
 
-* Small talk. -> Chat1
-* Lead in to quest. -> QuestIntro
+===intro===
+~ new_quest = "Rashad1.txt"
+# new_quest
+~ new_contact = "Rashad"
+# new_contact
+
+Rashad?Smiling "Hey {player_name}! How have you been?"
+
+* I've been okay, but tired. You know how it is. I'm just trying to get this block party started.
+  -> Chat1
+* I'm doing really great! I'm really looking forward to this Block Party I've been planning.
+  -> QuestIntro
 
 ==Chat1==
-Character looks happy.
+Rashad?Smiling "I do know. I've been here trying to get more programs started, <i>and</i> doing admin work."
+Rashad?Smiling "Plus, the library has basically become a hub for social services. It's not just books these days."
 
-* Small talk. -> Chat2
-* Lead in to quest. -> QuestIntro
+* Really? That sounds like a lot of work to do.
+  -> Chat2
+* I feel you there. Is there anything I can help with?
+  -> QuestIntro
 
 ==Chat2==
-Character looks happy.
+Rashad?Smiling "It really is a lot of work, honestly. Between us, the board isn't always understanding when it comes to what the community actually needs."
+Rashad?Smiling "Someone has to watch out for <i>us</i>, you know? Anyway adventurer, is there anything I can help you with?"
 
-* Lead in to quest. -> QuestIntro
+* I do need something from you if it's not too much?
+  -> QuestIntro
+* I do have something, but you're dealing with a lot. You know if you ever need an extra hand or support...
+  ->Chat3
+
+== Chat3 ==
+Rashad?Neutral "That's really kind {player_name}. It really is a lot of work, honestly. Between us, the board isn't always understanding when it comes to what the community actually needs."
+Rashad?Neutral "Someone has to watch out for <i>us</i>, you know? Anyway, is there anything I can help you with?" 
+
+* Yeah, there's something you can help me with, if you have the time?
+  -> QuestIntro
 
 ==QuestIntro==
-Character looks neutral.
+Rashad?Smiling "Sure, how can I help?"
 
-* Learn more about the quest. -> QuestDetails1
-* Accept the quest. -> QuestAcceptance
+* I was wondering if I could convince you to have a library tent at the block party where people could sign up for a library card, or hear about library services?
+  ->QuestDetails1
+* I could really use a library tent for the Block Party.
+  ->QuestDetails1
 
 ==QuestDetails1==
-Character looks neutral.
+Rashad?Smiling "Hmm, that's not too hard, but the library is swamped. It would help me a lot if I could find someone for this open position in the YA section."
+Rashad?Smiling "It's perfect for a student, who knows YA Lit. Do you think you may know anyone?"
 
-* Tell me more. -> QuestDetails2
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails1
-* Accept the quest. -> QuestAcceptance
-
-==OptionalQuestDetails1==
-Character looks neutral.
-
-* Tell me more. -> QuestDetails2
-* Accept the quest. -> QuestAcceptance
+* I may know someone. Can you tell me some more information?
+  -> QuestDetails2
+* Hmm. I'm not sure if I know anyone. Can you tell me some information?
+  -> OptionalQuestDetails1
+* Sure! If I can find someone for the job, can we get the library on board?
+  -> QuestAcceptance
 
 ==QuestDetails2==
-Character looks neutral.
+Rashad?Neutral "Sure! We're looking for a part time worker in the YA section to reshelve books, run a help desk, and run a storytime on Saturdays."
+Rashad?Neutral "If you find someone, just have them send to the posting on the library website."
 
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails2
-* Accept the quest. -> QuestAcceptance
+* I think I can find someone, do you think you could do the Block Party if I do?
+  -> QuestAcceptance
+* Excellent. Is there anything else I should know?
+  -> OptionalQuestDetails1
 
-==OptionalQuestDetails2==
-Character looks neutral.
+==OptionalQuestDetails1==
+Rashad?Smiling "I mean, it'd be perfect for a student. You can study when you staff the help desk. Oh, they'll need at <b>least 1 reference</b>, too."
 
-* Accept the quest. -> QuestAcceptance
-* Accept the quest a different way. -> QuestAcceptance
+* Accept the quest.
+  -> QuestAcceptance
 
 ==QuestAcceptance==
-Character looks happy. Quest materials are delivered here.
+Rashad?Smiling "Yes! I'll be able to move some things around. If you can find someone to apply for the YA position, we could even have the bookmobile there!"
 
-* Transition to goodbye. -> Goodbye
-* A different transition. -> Goodbye
+* Yes! I love the bookmobile, thanks Rashad!
+  -> Goodbye
+* Thanks, man. i appreciate this. I can find someone!
+  -> Goodbye
 
 ==Goodbye==
-Character looks happy.
+Rashad?Smiling "Solid. If we can get even a single application it would help a lot. Octavia and Charles are going to be super excited about the weekend. I'm going to head into a meeting, see you soon!" 
 
-* Goodbye! ->END
-* Goodbye a different way! ->END
-
-
+* Bye Rashad!
+  ->END
+*I hope you're ready to drive the bookmobile! See you soon!
+  ->END

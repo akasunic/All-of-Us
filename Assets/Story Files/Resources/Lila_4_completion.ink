@@ -1,53 +1,81 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+==intro==
+Lila?Smiling "Hi {player_name}! Good to see you."
+
+* {not TempGoodbye} Hey Lila! Ooo, what are you working on? It's beautiful!
+    -> Chat1
+* {not TempGoodbye} I talked to a few people who want to hang out this weekend! Are you too busy right now to talk?
+    -> ReadyToSolve
+* {TempGoodbye} Okay, I'm ready. Are you low on time?
+    -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Lila?Neutral "Thank you! I've been designing tattoos for a while now, I don't ink them all but I enjoy practicing the process."
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* You could definitely make a side hustle out of this.
+    -> Chat2
+* That's really cool. I do have a few updates about this weekend though, if you don't mind me interrupting your drawing.
+    -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Lila?Smiling "I always have too many things going on. At some point I'll probably make an art instagram page though to guage interest. See if it's worth the time!"
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* I might know a few people who would support that idea! I hope you don't mind, I set up a few friend dates for you.
+    -> ReadyToSolve
 
 ==ReadyToSolve==
-Character is neutral. 
+Lila?Neutral "Of course not!"
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Alright, here's what I have.
+    -> PuzzleInterface
+* Let me make sure I found all the possibilities for you.
+    -> TempGoodbye
 
+// info solve: Mrs. Lee is attending a new yoga class on Sunday, and wants you to come with her.
+// info solve: Elisa said she would love to hang out if you're interested. She's going to find you at the Block Party tomorrow!
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* good solution chosen
+    -> GoodSolution
+* bad solution chosen
+    -> BadSolution
+
+
 
 ==GoodSolution==
-Character is happy.
+Lila?Smiling "I would love to!"
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+* Glad I could find someone to help.
+    -> SolvedGoodbye
+
 
 ==BadSolution==
-Character is neutral.
+Lila?Neutral "I don't think so."
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Mrs. Lee also suggested something else...
+    -> PuzzleInterface
+* I’ll go ask them again. See what else I can find for you to do.
+    -> TempGoodbye
 
 ==SolvedGoodbye==
-Character is happy.
+Lila?Smiling "I'm really looking forward to this weekend now. Thank you, {player_name}. I can always count on you! Stop by the community center next week and we can catch up. I'd better finish this work so I can go home and see Trisha. It's Friday night, grillin' night!"
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+* Always great to talk, Lila. I'll see you!
+    -> END
+* Until then! Have fun this weekend if I don't run into you!
+    -> END
 
 ==TempGoodbye==
-Character is neutral.
+Lila?Neutral "I'll be here!"
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* Be right back!
+    -> END
+* See you soon.
+    -> END

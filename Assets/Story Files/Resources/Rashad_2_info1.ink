@@ -1,52 +1,91 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+==intro ==
+Mrcalindas?Smiling "Hello {player_name}. Finally decided to join my running club, eh?" 
+
+* Hello, Mr. Calindas! And no, you <i>know</i> I don't run.
+  -> Chat1
+* Hello Mr. Calindas! And no, but you know where I am if you decide to run a dance class.
+  -> Chat1
 
 ==Chat1==
-Character is happy.
+Mrcalindas?Smiling "Hey, as long as you're getting outside, I'm happy. Now, what do you need? You have the "Help me please, Mr. Calindas face." Do you need to learn how to boil water, again?"
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+* Hey! I only forgot how to boil water that one time...
+  -> Chat2
+* Okay, you got me. I could really use your help. But not with boiling water.
+  -> Explain1
 
 ==Chat2==
-Character is happy.
+Mrcalindas?Smiling "Yes, and that's why we got you that electric kettle. It was easier for you than rememebring to turn the pot off." 
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* Okay, that's fair. You really saved me there.
+  -> Chat3
+* That's actually fair! But you're right, I could use some advice about stress.
+  -> Explain1
 
 ==Chat3==
-Character is happy.
+Mrcalindas?Smiling "I know. Now let's save you again, what do you need now? Finally ready to make an omelette?"
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+* No, not that. I have a friend who could use some advice about stress.
+  -> Explain1
+* Ooo...maybe a rain check on the omelette. A friend of mine could use some advice on dealing with stress.
+  -> Explain1
 
 ==Explain1==
-Character is neutral.
+Mrcalindas?Neutral "Stress, eh? Stress is actually a lot more serious than people think it is. It's good you're asking for advice. Can you tell me more?" 
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* My friend hasn't been sleeping well due to workplace stress.
+  ->Explain2
+* My friend has been really stressed out. Their sleep is suffering, and I'm worried.
+  ->Explain2
 
 ==Explain2==
-Character is neutral.
+Mrcalindas?Neutral "Hmm. Well, stress can really impact sleep and that's not good at all. Your friend should take this seriously. Stress can harm your heart. This is why I run!" 
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* Wow, really? Can you give me some tips to help them?
+  -> Suggestion1
+* It can affect the heart?! They've really been struggling...
+  -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Mrcalindas?Smiling "Melatonin, helps you to sleep when taken before bed, but check with a doctor first before taking it."
+Mrcalindas?Smiling "Physical activity, and mindfulness activities like yoga can all help with stress. They can try that." 
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+~ notification = "Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better"
+# notification
+~ notification = "Mrcalindas_Day 2_Physical activity can relieve stress_Rashad2"
+# notification
+~ notification = "Mrcalindas_Day 2_Mindfulness activities like yoga can relieve stress"
+# notification
+
+* {not Suggestion2} Hmm. That sounds good, but I think this is really serious.
+  -> Suggestion2
+* That sounds really helpful. I'll let them know! Thank you so much!
+  -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Mrcalindas?Smiling "Hmm. Stress, can harm your heart over time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+~ notification = "Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2"
+# notification
+~ notification = "Mrcalindas_Day 2_Consider Counseling or therapy in addition to exercise_Rashad2"
+# notification
+
+* {not Suggestion1} Thank you so much, is there anything else?
+  -> Suggestion1
+* Thank you so much for this, Mr. Calindas!
+  -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Mrcalindas?Smiling "My pleasure, {player_name}. Tell your friend they're welcome to join us for the running club. I'm going to go back to work, you take care okay?"
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* Goodbye, Mr. Calindas! Thanks!
+  ->END
+* Thank you so much for your help Mr. Calindas. Take care!
+  ->END

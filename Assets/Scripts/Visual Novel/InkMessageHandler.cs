@@ -27,17 +27,17 @@ public class InkMessageHandler : MonoBehaviour
             if (notifInfo.Length == 3) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0], 
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    int.Parse(notifInfo[1]), notifInfo[2]);
+                    GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2]);
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
                 q.questGiver = HelperFunctions.CharacterFromString(notifInfo[0]);
                 q.description = notifInfo[2];
 
-                q.questId = ReadQuestTitle(notifInfo[3]);
+                q.questId = ReadQuestTitle(notifInfo[3] + ".txt");
 
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    int.Parse(notifInfo[1]), notifInfo[2], q);
+                    GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2], q);
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {
                 throw new System.Exception();
@@ -54,6 +54,22 @@ public class InkMessageHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Advances the quest in the InkFileManager
+    /// </summary>
+    public void AdvanceQuest() {
+        if (!InkFileManager.instance.TryAdvanceQuest()) {
+            Debug.LogWarning("Tried to advance quest but failed. Should this " +
+                "have been a turnin?");
+        }
+    }
+
+    /// <summary>
+    /// Opens the file at Assets/StoryFiles/path and reads the first line to get
+    /// the quest title.
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
     private string ReadQuestTitle(string path) {
         char sep = Path.DirectorySeparatorChar;
         string pwd = Directory.GetCurrentDirectory() + sep;
@@ -73,16 +89,22 @@ public class InkMessageHandler : MonoBehaviour
         string contactString = _fc.GetStringVariable("new_contact");
         contactString = contactString.ToLower();
 
-        if (contactString.Contains("rashad")) {
-            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
-        } else if (contactString.Contains("lila")) {
-            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
-        } else if (contactString.Contains("calindas")) {
-            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
-        } else if (contactString.Contains("elisa")) {
-            GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
-        } else if (contactString.Contains("lee")) {
-            // GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
+        switch (HelperFunctions.CharacterFromString(contactString)) {
+            case CharacterResources.CHARACTERS.RASHAD:
+                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
+                break;
+            case CharacterResources.CHARACTERS.LILA:
+                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
+                break;
+            case CharacterResources.CHARACTERS.CALINDAS:
+                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
+                break;
+            case CharacterResources.CHARACTERS.ELISA:
+                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Elisa());
+                break;
+            case CharacterResources.CHARACTERS.LEE:
+                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee());
+                break;
         }
         // else if blah blah blah
     }

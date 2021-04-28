@@ -1,53 +1,83 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+==intro==
+Lila?Smiling "Hi {player_name}!"
+
+* {not TempGoodbye} Hi Lila! What are you up to?
+    -> Chat1
+* {not TempGoodbye} Hello Lila! I have some new resources for you.
+    -> ReadyToSolve
+* {TempGoodbye} I'm back! 
+    -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Lila?Neutral "I was just emailing the speaker for Saturday back. I'm starting to get really excited about this group! I've been thinking about it for so many years."
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* It's going to be such a good resource for the LGBTQ+ community. Many kudos!
+    -> Chat2
+* I have some information on what we talked about this morning, so solving this won't take years for you!
+    -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Lila?Neutral "Thanks! I was thinking about it yesterday, and I think I'm also going to learn a lot about myself, you know? Mentoring goes both ways, especially in this kind of situation."
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* It does. If you want, I have some information about what we talked about this morning.
+    -> ReadyToSolve
 
+// solve info: Mrs. Lee is willing to talk about her experiences as a woman related to her health.
+// solve info: Mr. Calindas knows a younger gynecologist who specializes in PCOS. She works at the clinic with him, so she's close by.
 ==ReadyToSolve==
-Character is neutral. 
+Lila?Neutral "That was fast! Did you find anything?"
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* I found that there's a lot of people looking out for you!
+    -> PuzzleInterface
+* Let me go check on something first.
+    -> TempGoodbye
 
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* good solution chosen
+    -> GoodSolution
+* bad solution chosen
+    -> BadSolution
+ 
 
 ==GoodSolution==
-Character is happy.
+Lila?Smiling "I think this will make me a lot more confident going into this issue. Thanks {player_name}!"
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+
+* So, are you feeling better about this now? 
+    Lila "Yep! "
+    -> SolvedGoodbye
+
 
 ==BadSolution==
-Character is neutral.
+Lila?Neutral "Maybe, I'll think about it. I was hoping to feel more prepared on my own, and have a doctor specialized in the area we talked about, PCOS."
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* That's true, I think I heard something else about that.
+    -> PuzzleInterface
+* Let me get back to you on that. I'll go check again.
+    -> TempGoodbye
 
+    
 ==SolvedGoodbye==
-Character is happy.
+Lila?Smiling "It feels good to know I have places I can turn for this. I'll talk to Mrs. Lee later today, and look up the contact Mr. Calindas gave you. I'm crossing off my whole list of health concerns in one week! Wow! Thanks so much, {player_name}."
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+* There is always support when you look for it, promise! I'll see you around, Lila.
+    -> END
+* Of course! Bye, Lila!
+    -> END
 
 ==TempGoodbye==
-Character is neutral.
+Lila?Neutral "No problem, let me know!"
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* Be right back!
+    -> END
+* Will do!
+    -> END

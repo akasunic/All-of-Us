@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6470687367542334420}
   - component: {fileID: 5594973405476564035}
   m_Layer: 0
-  m_Name: Mrs. Lee
+  m_Name: Mrslee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 6274453883202735242}
   - component: {fileID: 711898997038621399}
   m_Layer: 0
-  m_Name: Mr. Calindas
+  m_Name: Mrcalindas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

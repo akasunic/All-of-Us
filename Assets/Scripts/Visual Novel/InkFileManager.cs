@@ -23,8 +23,8 @@ public class InkFileManager : MonoBehaviour {
                     return elisaQuests;
                 case CharacterResources.CHARACTERS.CALINDAS:
                     return calindasQuests;
-                //case CharacterResources.CHARACTERS.LEE:
-                //    return leeQuests;
+                case CharacterResources.CHARACTERS.LEE:
+                    return leeQuests;
                 default:
                     return rashadQuests;
             }
@@ -46,14 +46,15 @@ public class InkFileManager : MonoBehaviour {
     private static bool completedDailyLee;
 
     public static InkFileManager instance;
+    private static bool didAdd = false;
 
     private void Awake() {
-        if (!instance) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+        if (!didAdd) {
             SceneManager.activeSceneChanged += OnSceneChanged;
             activeFileIdx = (-1, -1);
+            didAdd = true;
         }
+        instance = this;
     }
 
     // Start is called before the first frame update
@@ -81,8 +82,33 @@ public class InkFileManager : MonoBehaviour {
     private void OnSceneChanged(Scene prev, Scene next) {
         if (!GetVisualNovelComponents())
             return;
-        
+
+        _fc.SetStringVariable("player_name", GlobalGameInfo.name);
         _fc.ExecuteBlock("On Variables Loaded");
+    }
+
+    public static void OnQuestCompleted(CharacterResources.CHARACTERS questGiver) {
+        switch (questGiver) {
+            case CharacterResources.CHARACTERS.RASHAD:
+                completedDailyRashad = true;
+                break;
+            case CharacterResources.CHARACTERS.LILA:
+                completedDailyLila = true;
+                break;
+            case CharacterResources.CHARACTERS.ELISA:
+                completedDailyElisa = true;
+                break;
+            case CharacterResources.CHARACTERS.CALINDAS:
+                completedDailyCalindas = true;
+                break;
+            case CharacterResources.CHARACTERS.LEE:
+                completedDailyLee = true;
+                break;
+        }
+
+        // progress bar?
+        // do something once all 5 are done for the day
+        activeFileIdx = (-1, -1);
     }
 
     /// <summary>
@@ -104,8 +130,8 @@ public class InkFileManager : MonoBehaviour {
                 return !completedDailyElisa;
             case CharacterResources.CHARACTERS.CALINDAS:
                 return !completedDailyCalindas;
-            //case CharacterResources.CHARACTERS.LEE:
-            //    return !completedDailyLee;
+            case CharacterResources.CHARACTERS.LEE:
+                return !completedDailyLee;
         }
         return false;
     }
@@ -147,9 +173,8 @@ public class InkFileManager : MonoBehaviour {
 
         // try start a new quest
         if (CanStartQuest(character)) {
-            const int DAY_TEST = 1;
-
-            activeFileIdx = (DAY_TEST - 1, 0);
+            activeFileIdx = (GlobalGameInfo.GetCurrentDay(), 0);
+            activeQuestGiver = character;
 
             NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));
             // for now
@@ -168,6 +193,7 @@ public class InkFileManager : MonoBehaviour {
     }
 
     private string InkToJson(string inkFilename) {
+        // turns out we don't actually need .json
         return inkFilename.Split(new string[] { ".ink" },
             System.StringSplitOptions.None)[0];
     }
@@ -217,17 +243,17 @@ public class InkFileManager : MonoBehaviour {
         rashadQuest2Files, rashadQuest3Files, rashadQuest4Files};
 
     private static readonly string[] calindasQuest1Files = {
-        "Calindas_1_delivery.ink", "Calindas_1_info1.ink",
-        "Calindas_1_info2.ink", "Calindas_1_completion.ink" };
+        "Mrcalindas_1_delivery.ink", "Mrcalindas_1_info1.ink",
+        "Mrcalindas_1_info2.ink", "Mrcalindas_1_completion.ink" };
     private static readonly string[] calindasQuest2Files = {
-        "Calindas_2_delivery.ink", "Calindas_2_info1.ink",
-        "Calindas_2_info2.ink", "Calindas_2_completion.ink" };
+        "Mrcalindas_2_delivery.ink", "Mrcalindas_2_info1.ink",
+        "Mrcalindas_2_info2.ink", "Mrcalindas_2_completion.ink" };
     private static readonly string[] calindasQuest3Files = {
-        "Calindas_3_delivery.ink", "Calindas_3_info1.ink",
-        "Calindas_3_info2.ink", "Calindas_3_completion.ink" };
+        "Mrcalindas_3_delivery.ink", "Mrcalindas_3_info1.ink",
+        "Mrcalindas_3_info2.ink", "Mrcalindas_3_completion.ink" };
     private static readonly string[] calindasQuest4Files = {
-        "Calindas_4_delivery.ink", "Calindas_4_info1.ink",
-        "Calindas_4_info2.ink", "Calindas_4_completion.ink" };
+        "Mrcalindas_4_delivery.ink", "Mrcalindas_4_info1.ink",
+        "Mrcalindas_4_info2.ink", "Mrcalindas_4_completion.ink" };
     private static readonly string[][] calindasQuests = { calindasQuest1Files,
         calindasQuest2Files, calindasQuest3Files, calindasQuest4Files};
 

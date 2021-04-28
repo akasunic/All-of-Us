@@ -1,61 +1,92 @@
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-Character looks happy.
+-> intro
 
-* Small talk. -> Chat1
-* Lead in to quest. -> QuestIntro
+==intro==
+~ new_quest = "Mrslee3.txt"
+# new_quest
+Mrslee?Neutral " "
+
+* It's good to see you out and about!
+  -> Chat1
+* How are you, Mrs. Lee?
+  -> QuestIntro
 
 ==Chat1==
-Character looks happy.
+Mrslee?Smiling "Hey. {player_name}. Today I volunteer to work with the kids."
 
-* Small talk. -> Chat2
-* Lead in to quest. -> QuestIntro
+* That is so awesome, Mrs. Lee.
+  -> Chat2
+* What have you been up to?
+  -> QuestIntro
 
 ==Chat2==
-Character looks happy.
+Mrslee?Smiling "Yah. You know the kids always making noise! Ha ha. I am relax now. Because of the kids, and their funny noise."
 
-* Lead in to quest. -> QuestIntro
+* That is just about the sweetest thing I've heard all day.
+  -> QuestIntro
+* No headaches?
+  -> QuestIntro
 
 ==QuestIntro==
-Character looks neutral.
+Mrslee?Smiling "Oh. The appointment. I made appointment at doctor office. Eddie said he was relief."
 
-* Learn more about the quest. -> QuestDetails1
-* Accept the quest. -> QuestAcceptance
+* That's awesome, Mrs. Lee! But how are you feeling about it?
+  -> QuestDetails1
+* I'm here if you need help preparing. Mentally, emotionally, logistically..
+  -> QuestAcceptance
 
 ==QuestDetails1==
-Character looks neutral.
+Mrslee?Neutral "Me? I am concern. Nervous!"
 
-* Tell me more. -> QuestDetails2
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails1
-* Accept the quest. -> QuestAcceptance
+* I think that's okay to feel nervous before an appointment.
+  -> QuestDetails2
+* Do you want to talk about it?
+  -> OptionalQuestDetails1
+* I could maybe help you prepare.
+  -> QuestAcceptance
 
 ==OptionalQuestDetails1==
-Character looks neutral.
+Mrslee?Neutral "You know? Doctor always speak so fast."
 
-* Tell me more. -> QuestDetails2
-* Accept the quest. -> QuestAcceptance
+* I understand, I'm sure that's a stressful experience for you, Mrs. Lee
+  -> QuestDetails2
+* Maybe I can support you in some way.
+  -> QuestAcceptance
 
 ==QuestDetails2==
-Character looks neutral.
+Mrslee?Neutral "I forget everything! My feeling.. my words."
 
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails2
-* Accept the quest. -> QuestAcceptance
+* Mh-hm... I hear you.
+  -> OptionalQuestDetails2
+* Maybe we can prepare together?
+  -> QuestAcceptance
 
 ==OptionalQuestDetails2==
-Character looks neutral.
+Mrslee?Neutral "Why I'm gonna go if nobody listen to me?"
 
-* Accept the quest. -> QuestAcceptance
-* Accept the quest a different way. -> QuestAcceptance
+* I am always here to listen to you.
+  -> QuestAcceptance
+* Let's think about this together
+  -> QuestAcceptance
 
 ==QuestAcceptance==
-Character looks happy. Quest materials are delivered here.
+Mrslee?Neutral "Thank you. What you think I should do? I feel nervous to go to doctor's appointment. How to prepare?"
 
-* Transition to goodbye. -> Goodbye
-* A different transition. -> Goodbye
+* I'm gonna think about it!
+  -> Goodbye
+* I'll be back soon, sit tight!
+  -> Goodbye
 
 ==Goodbye==
-Character looks happy.
+Mrslee?Neutral "Yes, thank you, {player_name}.
 
-* Goodbye! ->END
-* Goodbye a different way! ->END
+* See you soon!
+  ->END
+* Sure thing, Mrs. Lee.
+  ->END
 
 

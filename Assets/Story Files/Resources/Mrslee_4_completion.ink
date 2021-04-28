@@ -1,53 +1,82 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+==intro==
+Mrslee?Smiling "Hey. {player_name}."
+
+* {not TempGoodbye} Have you heard from Eddie again?
+  -> Chat1
+* {not TempGoodbye} I have advice for you
+  -> ReadyToSolve
+* {TempGoodbye} I think I got it this time
+  -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Mrslee?Neutral "No, he is focus on driving."
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* That's good
+  -> Chat2
+* I thought about your question earlier
+  -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Mrslee?Neutral "I have been missing him."
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* I know, Mrs. Lee!
+  -> ReadyToSolve
+* He's almost here.
+  -> ReadyToSolve
 
 ==ReadyToSolve==
-Character is neutral. 
+Mrslee?Smiling "What do I do about my health and good future health?" 
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Start puzzle interface.
+  -> PuzzleInterface
+* Wait, lemme come back!
+  -> TempGoodbye
 
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* They picked a solution marked good.
+  -> GoodSolution
+* They picked a solution marked bad.
+  -> BadSolution
 
+//info: mrs lee can write down history of her and Eddie
+//info: mrs lee can discuss health history with eddie
 ==GoodSolution==
-Character is happy.
+Mrslee?Smiling "YES! I feel energy to do this."
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+* Awesome, Mrs. Lee
+  -> SolvedGoodbye
+* I'm happy to hear this
+  -> SolvedGoodbye
 
 ==BadSolution==
-Character is neutral.
+Mrslee?Neutral "Aghhhhhh. No"
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Try again?
+  -> PuzzleInterface
+* Actually, I'm not ready.
+  -> TempGoodbye
 
 ==SolvedGoodbye==
-Character is happy.
+Mrslee?Neutral "I understand... I will continue to think about my health. And I feel support. Thank you. I will go find Eddie now."
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+* OK! I am really proud of you
+  -> END
+* Of course, see you later Mrs Lee
+  -> END
 
 ==TempGoodbye==
-Character is neutral.
+Mrslee?Neutral "Come back soon"
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* I will!
+  -> END
+* Give me a bit, Mrs Lee
+  -> END

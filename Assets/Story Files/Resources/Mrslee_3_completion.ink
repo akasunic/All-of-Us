@@ -1,53 +1,79 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+==intro==
+Mrslee?Smiling " "
+* {not TempGoodbye} How are you?
+  -> Chat1
+* {not TempGoodbye} I thought about how to prepare!
+  -> ReadyToSolve
+* {TempGoodbye} I really though about it this time.
+  -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Mrslee?Smiling "Hey. Can you believe it, still no headache."
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* What about th--
+  -> Chat2
+* I can help you.
+  -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Mrslee?Neutral "Oh my God! I just remember what I worry about. The appointment!"
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* I can help you.
+  -> ReadyToSolve
+* It's okay, Mrs. Lee
+  -> ReadyToSolve
 
 ==ReadyToSolve==
-Character is neutral. 
+Mrslee?Neutral "OK. What should I do?"
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Start puzzle interface.
+  -> PuzzleInterface
+* Actually, I'm not ready.
+  -> TempGoodbye
 
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* They picked a solution marked good.
+  -> GoodSolution
+* They picked a solution marked bad.
+  -> BadSolution
 
-==GoodSolution==
-Character is happy.
+===GoodSolution==
+Mrslee?Smiling "Oh. I think that makes me feel much better. Good idea!
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+* I'm so glad
+  -> SolvedGoodbye
+* Yay!
+  -> SolvedGoodbye
 
 ==BadSolution==
-Character is neutral.
+Mrslee?Neutral "I don't think!"
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Try again?
+  -> PuzzleInterface
+* Let me come back, Mrs. Lee!
+  -> TempGoodbye
 
 ==SolvedGoodbye==
-Character is happy.
+Mrslee?Smiling "{player_name}. Thank you. This way, no stress."
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+* Goodbye!
+  -> END
+* Goodbye a different way!
+  -> END
 
 ==TempGoodbye==
-Character is neutral.
+Mrslee?Neutral "OK. I will wait."
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* No worries, Mrs. Lee 
+  -> END
+* I'm sorry!!
+  -> END

@@ -1,52 +1,74 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
 
-==Chat1==
-Character is happy.
+===intro===
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+MrCalindas?Smiling "Hello, {player_name}. Can I help you with something?"
 
-==Chat2==
-Character is happy.
++My friend is really stressed out. Do you have any ideas on how to cope with stress?
+    ->followUp
+    
+===followUp===
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+MrCalindas?Neutral "Is it general stress? Or stress about something specific?"
 
-==Chat3==
-Character is happy.
++She's a first-gen college student, and she's having trouble finding people to talk to who relate to what she's going through.
+    ->firstGenResources
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+===firstGenResources===
 
-==Explain1==
-Character is neutral.
+MrCalindas?Smiling "In that case, she should focus on getting support from her school, or other first-gen students."
+MrCalindas?Smiling "Whether it's a mentor or using school resources,"
+MrCalindas?Smiling "having a place where she can feel connected to the community and like she's not the only one going through this kind of stress will go a long way to improve her mental health."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+~ notification = "Mrcalindas_Day 3_Getting connected with your community can help reduce stress_Elisa3"
+# notification
+~ notification = "Mrcalindas_Day 3_You could get a mentor or use school resources"
+# notification
 
-==Explain2==
-Character is neutral.
++Where's a good place to look for a mentor?
+    ->CalindasMentor
+    
+===CalindasMentor===
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+MrCalindas?Smiling "A good place to look would be around her social group, or else around the school's network."
+MrCalindas?Smiling "So, if she personally knows any upperclassmen or former students who were first-gen, they'd be a great choice to talk to."
 
-==Suggestion1==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+~ notification = "Mrcalindas_Day 3_Reach out to upperclassmen and former students for help_Elisa3"
+# notification
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
++Where should she look in the school's network?
+    ->schoolResources
+    
+===schoolResources===
 
-==Suggestion2==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+MrCalindas?Neutral "If she has a teacher she already knows, and they were first gen, they could also be a good mentor for her."
+MrCalindas?Neutral "Otherwise, sometimes colleges actually have specific programs to help first-gen students connect with mentors, or else form a community- do you know if they have that?"
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+~ notification = "Mrcalindas_Day 3_Reach out to teachers and make use of school programs_Elisa3"
+# notification
+~ notification = "Mrcalindas_Day 3_Colleges don't always have programs to help first-gen students"
+# notification
 
-==Goodbye==
-Character is happy.
++I'm not sure, but I can ask Elisa.
+    -> CalindasSegueOut
+    
+===CalindasSegueOut===
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+MrCalindas?Smiling "Good idea. No matter what her school offers, though, she should definitely feel free to reach out to other people who were first-gen for support."
+MrCalindas?Smiling "Tell her that it's not a bother, and that people usually love to help other students going through similar experiences to them."
+
++Thanks Mr. Calindas!
+    ->CBye
+    
+===CBye===
+
+MrCalindas?Smiling "No problem. Have a good day, {player_name}."
+
++You too!
+    ->END
+    

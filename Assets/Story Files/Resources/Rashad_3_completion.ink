@@ -1,53 +1,79 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+== intro ==
+Rashad?Smiling "Hey {player_name}! Good news, I got the bookmobile to come. So we'll be able to do library cards and give away free books. I am really excited about it. Free books!" 
+
+* {not TempGoodbye} That's amazing, Rashad! I'm excited, too!
+  -> Chat1
+* {not TempGoodbye} That's so cool Rashad! hey, I think I have some information for you.
+  -> ReadyToSolve
+* {TempGoodbye} Wow! I am really excited about this. I also think you'll be excited what I found for you.
+  -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Rashad?Smiling "I am really happy you asked us. We have a lot of work to do, but I love it. I feel like this is exactly what we needed. The library, me..." 
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* Rashad, seriously. This is great news. It sounds like maybe your stress levels went down.
+  -> Chat2
+* Speaking of you, I have some answers for you.
+  -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Rashad?Neutral "Well, just a little bit. Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* I do have some information, actually.
+  -> ReadyToSolve
+* Hey, I wanted to make the time. Now, I do have some information for you, if you're ready.
+  -> ReadyToSolve
 
 ==ReadyToSolve==
-Character is neutral. 
+Rashad?Neutral "Oh, I didn't know you would find out what I needed this soon. You worked really fast, {player_name}. Thank you. What did you find out?"
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Start puzzle interface.
+  -> PuzzleInterface
+* Actually, give me a second. I want to make sure my information is correct.
+  -> TempGoodbye
 
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* -> GoodSolution
+* -> BadSolution
 
 ==GoodSolution==
-Character is happy.
+ Rashad?Smiling "That good to know. This makes me a lot less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+* Thanks for trusting me. Oh, and there's a running club. Talk to Mr. Calindas about it.
+  -> SolvedGoodbye
+* Thanks for trusting me, Rashad. Oh, and talk to Mr. Calindas. There's a running club you may like.
+  -> SolvedGoodbye
 
 ==BadSolution==
-Character is neutral.
+Rashad?Neutral "Hmm, okay. I still don't know what to expect..."
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Wait a second. Let me try that again.
+  -> PuzzleInterface
+* Actually, I need to check my notes. I may have some more information.
+  -> TempGoodbye
 
 ==SolvedGoodbye==
-Character is happy.
+Rashad?Smiling "Oh yeah! Running could definitely help with my stress. I'll talk to him."
+Rashad?Smiling "Thank you so much for helping out, again. I'm actually going to go give Lila's suggestion a ring. See you soon, {player_name}."
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+*  Good luck, Rashad. See you soon!
+  -> END
+* Looking forward to the bookmobile! Whoo! See you!
+  -> END
 
 ==TempGoodbye==
-Character is neutral.
+Rashad?Neutral "Okay. Look, I know it's not an easy ask. I just need a bit more information. See you soon."
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* Okay, I'll catch you soon.
+  -> END
+* I got you, I'll be back soon.
+  -> END

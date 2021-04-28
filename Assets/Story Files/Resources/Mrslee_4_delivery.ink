@@ -1,61 +1,94 @@
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-Character looks happy.
+-> intro
 
-* Small talk. -> Chat1
-* Lead in to quest. -> QuestIntro
+==intro==
+~ new_quest = "Mrslee4.txt"
+# new_quest
+Mrslee?Smiling "You wanna see Eddie?"
+
+* Hey, Mrs. Lee!
+  -> Chat1
+* Eddie is back?
+  -> QuestIntro
 
 ==Chat1==
-Character looks happy.
+Mrslee?Smiling "I was reading the newspaper. I was thinking a lot! I hear my phone ringing. It was Eddie! Says he's coming soon!"
 
-* Small talk. -> Chat2
-* Lead in to quest. -> QuestIntro
+* That's super exciting, Mrs. Lee!
+   -> Chat2
+* What were you thinking about?
+  -> QuestIntro
+
 
 ==Chat2==
-Character looks happy.
+Mrslee?Smiling "OH. You know. I went to doctor's office. Doctor was a "SHE," and she was very, very smart. I feel like I understand lotta things now."
 
-* Lead in to quest. -> QuestIntro
+* Yay!! Do you want to talk about it?-> QuestIntro
+
 
 ==QuestIntro==
-Character looks neutral.
+Mrslee?Smiling "You know. Eddie's very important to me and I talk about him a lot."
 
-* Learn more about the quest. -> QuestDetails1
-* Accept the quest. -> QuestAcceptance
+* I know that, Mrs. Lee, it's sweet.
+  -> QuestDetails1
+* You need to think about yourself, too!
+  -> QuestAcceptance
+
 
 ==QuestDetails1==
-Character looks neutral.
+Mrslee?Smiling "I ask lotta question about his blood pressure. You know, it's very funny!"
 
-* Tell me more. -> QuestDetails2
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails1
-* Accept the quest. -> QuestAcceptance
+* What about the headaches?
+  -> QuestDetails2
+* What is so funny?
+  -> OptionalQuestDetails1
+* It was your appointment!
+  -> QuestAcceptance
 
 ==OptionalQuestDetails1==
-Character looks neutral.
+Mrslee?Smiling "Doctor said "Mrs. Lee. Your blood pressure is ... a VERY good number." She asked how I feel. Lots of questions about me."
 
-* Tell me more. -> QuestDetails2
-* Accept the quest. -> QuestAcceptance
+* Yes, the appointment was for you!
+  -> QuestDetails2
+* I'd really like to help you out.
+  -> QuestAcceptance
+
 
 ==QuestDetails2==
-Character looks neutral.
+Mrslee?Smiling "We talk about my headache. You know! My eye exam was so bad!"
 
-* Tell me more, but kind of a tangent. -> OptionalQuestDetails2
-* Accept the quest. -> QuestAcceptance
+* What does that mean?
+  -> OptionalQuestDetails2
+* You're collecting information about you!
+  -> QuestAcceptance
+
 
 ==OptionalQuestDetails2==
-Character looks neutral.
+Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. So my head is aching."
 
-* Accept the quest. -> QuestAcceptance
-* Accept the quest a different way. -> QuestAcceptance
+* It's great to have some answers!
+  -> QuestAcceptance
+* You should feel very accomplished, Mrs. Lee!
+  -> QuestAcceptance
+
 
 ==QuestAcceptance==
-Character looks happy. Quest materials are delivered here.
+Mrslee?Smiling "I am thinking about this. My health is very important, too! How should I continue my good health practice?"
 
-* Transition to goodbye. -> Goodbye
-* A different transition. -> Goodbye
+* I'm going to think about it.
+  -> Goodbye
+* I'll be back soon with some ideas.
+  -> Goodbye
 
+//mrs lee is happy
 ==Goodbye==
-Character looks happy.
+Mrslee?Smiling "OK. I will sit here and think."
 
-* Goodbye! ->END
-* Goodbye a different way! ->END
+* Okay, Mrs. Lee
+  ->END
 
 

@@ -1,52 +1,97 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+== intro ==
+Lila?Neutral "Hey {player_name}! How are you feeling today?" 
+
+* Hi Lila! I'm doing well! I could use some- is that glitter?
+  -> Chat1
+* Hey Lila! ...are you covered in glitter?
+  -> Chat1
 
 ==Chat1==
-Character is happy.
+Lila?Smiling "The pre-school life is the life of one covered perpetually in glitter, yes. I'm one with the sparkle, now."
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+* Well, I only know one thing about glitter...it travels. Should I be afraid?
+  -> Chat2
+* That sounds delightful. Hey, can I ask your help with something?
+  -> Explain1
 
 ==Chat2==
-Character is happy.
+Lila?Smiling "Well, you know this glitter will get all over you despite the fact we haven't hugged. I'd just accept it now if I were you. Besides, art is a great way to destress."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* Really? I didn't know that. I thought glitter was the bane of all existence.
+  -> Chat3
+* Actually speaking of stress, I could use some advice.
+  -> Explain1
 
 ==Chat3==
-Character is happy.
+Lila?Smiling "Well, glitter does get everywhere, but yes I teach the children to use art to express themselves."
+Lila?Smiling "It's so important to keep stress levels down. Especially people of color or other marginalized identities."
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+* That's really wonderful, maybe you can help me with some advice for a friend.
+  -> Explain1
+* Really? Maybe you can help me with some advice about stress?
+  -> Explain1
 
 ==Explain1==
-Character is neutral.
+Lila?Smiling "Sure! Stress can be really difficult to handle. I suffer from a lot of stress, and you'd be surprised how it can hurt your health."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* Well, that's just it. My friend may be experiencing racial stress.
+  -> Explain2
+* Is there such a thing as racial stress? I'm beginning to worry about a friend.
+  -> Explain2
 
 ==Explain2==
-Character is neutral.
+Lila?Neutral "If your friend is a person of color, they aren't imagining it. Racial stress is real, and can actually cause post traumatic stress."
+Lila?Neutral "That can harm your heart, and lead to other health issues. It's serious." 
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* Do you have any suggestions for them?
+  -> Suggestion1
+* That does sound serious. What can we do for them?
+  -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Lila?Smiling "Well, your friend should talk to someone, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+~ notification = "Lila_Day 2_Racial stress is real, and serious_Rashad2"
+# notification
+~ notification = "Lila_Day 2_Self care activities can help with stress"
+# notification
+
+* Is that all? Is there anything they can do?
+  -> Suggestion2
+* That's sounds like good advice, thanks!
+  -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Lila?Neutral "It's important that your friend see a mental health professional from their cultural background."
+Lila?Neutral "Sustained collective trauma and workplace microagressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS."
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+~ notification = "Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2"
+# notification
+~ notification = "Lila_Day 2_RBTS can lead to mental health issues_Rashad2"
+# notification
+~ notification = "Lila_Day 2_Microagressions and sustained collective trauma can harm mental health_Rashad2"
+# notification
+~ notification = "Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2"
+# notification
+
+* That's very helpful, Lila. Do you know any other tips?
+  -> Suggestion1
+* That's wonderful advice, Lila. Thank you so much.
+  -> Goodbye
 
 ==Goodbye==
-Character is happy.
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+Lila?Smiling "Happy to help, {player_name}. I have the name of some therapists who specialize in racial stress, so if your friend needs a recommendation let me know okay?"
+Lila?Smiling "Now, I'm going to head off and get deglittered. See ya!"
+
+* Thanks so much, Lila! See you soon!
+  ->END
+* Bye Lila! Good luck with the glitter.
+  ->END

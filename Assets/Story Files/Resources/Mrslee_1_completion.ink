@@ -1,53 +1,83 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
+
+==intro==
+Mrslee?Neutral "I am so frustrate--I feel so frustrate!"
+
+* {not TempGoodbye} Talk to me, Mrs. Lee
+  -> Chat1
+* {not TempGoodbye} I think I might be able to help you
+  -> ReadyToSolve
+* {TempGoodbye} Ok, I'm ready this time!
+  -> ReadyToSolve
 
 ==Chat1==
-Character is neutral.
+Mrslee?Neutral "I'm so concerning about Eddie. He has high blood pressure and I worry bad things gonna happen if he don't take."
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+* When does he need the medication?
+  -> Chat2
+* I can help you.
+  -> ReadyToSolve
 
 ==Chat2==
-Character is neutral.
+Mrslee?Neutral "He needs medicine when he arrive before the weekend maybe? I need to make sure it's correct."
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+* I think I know what to do!
+  -> ReadyToSolve
+* We'll make sure he gets it in time.
+  -> ReadyToSolve
 
 ==ReadyToSolve==
-Character is neutral. 
+Mrslee?Neutral "What do you think?"
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Start puzzle interface.
+  -> PuzzleInterface
+* I'll come back to help!
+  -> TempGoodbye
 
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* They picked a solution marked good.
+  -> GoodSolution
+* They picked a solution marked bad.
+  -> BadSolution
 
+//info: Lila can go to the pharmacy with Mrs. Lee 
+//info: Use the drug information portal can describe generic drug names
 ==GoodSolution==
-Character is happy.
+Mrslee?Smiling "Actually, I think that is a great idea. I should have thought of that myself..."
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+* It's okay to ask for help, Mrs. Lee
+  -> SolvedGoodbye
+* I'm here to support you!
+  -> SolvedGoodbye
 
+//do all of the other possible info types fall here?
 ==BadSolution==
-Character is neutral.
+Mrslee?Neutral "I don't think that's really going to help me."
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+* Okay, okay, let me think...
+  -> PuzzleInterface
+* I'll come back soon
+  -> TempGoodbye
 
 ==SolvedGoodbye==
-Character is happy.
+Mrslee?Smiling "You're right, [player name].I feel much better about medicine now. I will tell Eddie you helped me. He will be glad I am making new friend."
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+* Of course, Mrs. Lee. See you around!
+  -> END
+* I'm so happy to hear it!
+  -> END
 
 ==TempGoodbye==
-Character is neutral.
+Mrslee?Neutral "Okay, come back soon!"
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+* No worries, Mrs. Lee. I will.
+  -> END
+* I'll be back before Eddie arrives!
+  -> END

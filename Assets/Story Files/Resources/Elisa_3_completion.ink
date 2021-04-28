@@ -1,53 +1,58 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
 
-==Chat1==
-Character is neutral.
+===intro===
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+Elisa?Smiling "Oh hey, {player_name}! Did you find any info for me?"
 
-==Chat2==
-Character is neutral.
-
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
-
-==ReadyToSolve==
-Character is neutral. 
-
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
-
+* Start puzzle interface ->PuzzleInterface
+* I don't think so ->thanksForTrying
+    
 ==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+# turnin
 
 * They picked a solution marked good. -> GoodSolution
 * They picked a solution marked bad. -> BadSolution
 
-==GoodSolution==
-Character is happy.
+    
+===BadSolution===
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+Elisa?Neutral "Thanks for asking around, but I'm still not quite sure what to do. Do you have any more info for me?"
 
-==BadSolution==
-Character is neutral.
+* Let me try again ->PuzzleInterface
+* No sorry, that's all I could find out.
+    ->thanksForTrying
+    
+===thanksForTrying===
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+Elisa?Neutral "Oh, well thanks for trying at least! I guess I'll keep looking around online to see if I can find anything... let me know if you find anything else, ok?"
 
-==SolvedGoodbye==
-Character is happy.
+*Will do!
+    ->END
+    
+    
+===GoodSolution===
 
-* Goodbye! -> END
-* Goodbye a different way! -> END
+Elisa?Smiling "Thanks {player_name}! Come to think of it, there are a few Nature Club girls I know who graduated last year that were first-gen."
+Elisa?Smiling "I'll see if I can catch up with them, and ask them for some advice."
 
-==TempGoodbye==
-Character is neutral.
+*Sounds great, Elisa!
+    ->thanks2
+    
+===thanks2===
 
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+Elisa?Neutral "As far as school resources, I'm not sure what they offer. I think I'm gonna head over to the student center and see what I can find. Thanks again, {player_name}!"
+
+*You're welcome! Good luck at the student center!
+    ->seeYou
+    
+===seeYou===
+
+Elisa?Smiling "Thanks, I'll see you later then!"
+
+*See ya!
+    ->END

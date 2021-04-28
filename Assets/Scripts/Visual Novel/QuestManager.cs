@@ -57,7 +57,7 @@ public class QuestManager : MonoBehaviour
     /// Contains the name of the person whose quest we're about to solve.
     /// Used when going to turnin scene.
     /// </summary>
-    public static string questGiver;
+    public static CharacterResources.CHARACTERS questGiver;
 
     public void Awake() {
         instance = this;
@@ -71,13 +71,14 @@ public class QuestManager : MonoBehaviour
             switch (_status) {
                 case SubmitStatus.correct:
                     RemoveQuest(submittedQuest);
-                    submittedQuest = null;
                     _status = SubmitStatus.not_submitted;
                     redeem_fc.SetBooleanVariable("wasQuestSubmitted", true);
                     redeem_fc.SetBooleanVariable("wasSubmitCorrect", true);
 
+                    InkFileManager.OnQuestCompleted(submittedQuest.questGiver);
                     IncreaseExpValues(submittedQuest);
 
+                    submittedQuest = null;
                     Debug.Log("Correct Quest!");
                     break;
                 case SubmitStatus.incorrect:
@@ -116,9 +117,12 @@ public class QuestManager : MonoBehaviour
     /// Updates questGiver
     /// </summary>
     public void UpdateLastSpeaker() {
-        string nameText = FindObjectOfType<SayDialog>().NameText;
-        if (nameText != null)
-            questGiver = nameText;
+        SayDialog sd = FindObjectOfType<SayDialog>();
+        if (sd == null)
+            return;
+        string nameText = sd.NameText;
+        if (nameText != null && nameText != "")
+            questGiver = HelperFunctions.CharacterFromString(nameText);
     }
 
     /// <summary>
@@ -182,12 +186,16 @@ public class QuestManager : MonoBehaviour
 
         // i'm not just doing list.contains here because the references will
         // be different
-        foreach (Quest q in activeQuests) {
-            if (q.questId == quest.questId) {
-                _status = SubmitStatus.correct;
-                submittedQuest = quest;
-                break;
+        try {
+            foreach (Quest q in activeQuests) {
+                if (q.questId == quest.questId) {
+                    _status = SubmitStatus.correct;
+                    submittedQuest = quest;
+                    break;
+                }
             }
+        } catch {
+
         }
         SceneChangeDemoController.LoadPreviousSceneStatic();
     }

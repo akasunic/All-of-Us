@@ -31,9 +31,8 @@ public static class HelperFunctions
             return CharacterResources.CHARACTERS.ELISA;
         } else if (lower.Contains("lila")) {
             return CharacterResources.CHARACTERS.LILA;
-            //} else if (lower.Contains("lee")) {
-            //    // return CHARACTERS.LEE
-
+        } else if (lower.Contains("lee")) {
+            return CharacterResources.CHARACTERS.LEE;
         } else {
             Debug.LogError("Unknown character to parse to enum. Received " +
                 character +
@@ -52,8 +51,8 @@ public static class HelperFunctions
                 return "Mr. Calindas";
             case CharacterResources.CHARACTERS.ELISA:
                 return "Elisa";
-            //case CharacterResources.CHARACTERS.LEE:
-            //    return "Mrs. Lee";
+            case CharacterResources.CHARACTERS.LEE:
+                return "Mrs. Lee";
             default:
                 return "Rashad";
         }

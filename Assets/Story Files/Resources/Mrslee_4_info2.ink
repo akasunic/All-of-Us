@@ -1,52 +1,83 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+==intro==
+Lila?Smiling "Hey, friend!"
+
+* Hey Lila
+  -> Chat1
+* Got a minute?
+  -> Chat1
 
 ==Chat1==
-Character is happy.
+Lila?Smiling "Hmm how are you?"
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+* I was just checking out ... the community center programming!
+  -> Chat2
+* I heard Eddie is on the drive over!
+  -> Explain1
 
 ==Chat2==
-Character is happy.
+Lila?Smiling "We have a lot going on this weekend, I don't even think all the events are posted yet..."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* What are you most excited about?
+  -> Chat3
+* Have you seen Eddie?
+  -> Explain1
 
 ==Chat3==
-Character is happy.
+Lila?Smiling "I'm most excited to see everyone, actually! I haven't seen Eddie in what feels like forever."
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+* Aw, you and Eddie are really close.
+  -> Explain1
+* Mrs. Lee said this is the longest he's been gone!
+   -> Explain1
 
 ==Explain1==
-Character is neutral.
+Lila?Smiling "Eddie is like a brother to me, seriously. I can't wait to hear about his experience away at school. We have so much catching up to do... at least we used to tell each other everything."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* Awww.
+  -> Explain2
+* Are he and Mrs. Lee very open with each other?
+  -> Explain2
 
 ==Explain2==
-Character is neutral.
+Lila?Smiling "Y'know, my perception is that a little distance between them is helping Eddie and helping Mrs. Lee get to know themselves a little bit more."
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* So this weekend is like a reunion!
+  -> Suggestion1
+* Are you gonna go to their house later?
+  -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Lila?Smiling "Eddie's been learning a lot about exercise and his blood pressure, and his diet. He's been cooking, if you can believe it!"
+Lila?Smiling "Mrs. Lee could start the conversation to show that she's thinking about him, and she could write down his medical history over the last few months."
+~ notification = "Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4"
+# notification
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+* {not Suggestion2} That's an important conversation to have
+  -> Suggestion2
+* That's actually a really great idea
+  -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Lila?Smiling "Yeah, I could go and facilitate a conversation about their health, but I don't think they really need me. They've grown so much in their ability to connect as a family."
+~ notification = "Lila_Day 4_Lila could facilitate the health conversation between Mrs. Lee and Eddie"
+# notification
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+* {not Suggestion1} Hmmm...
+  -> Suggestion1
+* I think that's a good idea.
+  -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Lila?Smiling "Listen, still lots to prepare. I gotta run."
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* You and me both!
+  ->END
+* OK! Bye!
+  ->END

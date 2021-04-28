@@ -1,52 +1,82 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+==intro==
+~ new_contact = "Lila"
+# new_contact
+Lila?Smiling "Hey, {player_name}!! How are you?"
+
+* Hi! It's awesome running into you here.
+  -> Chat1
+* Aw, hey! My day just got better because I ran into you!
+  -> Chat1
 
 ==Chat1==
-Character is happy.
-
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+Lila?Smiling "Well you always know where to find me. If you didn't, well, I work here most every day."
+* Do you enjoy it?
+  -> Chat2
+* That's awesome. I ran into Mrs. Lee, you two are very close I remember.
+  -> Explain1
 
 ==Chat2==
-Character is happy.
+Lila?Smiling "I really do. I love this place and the people. Oh! I even got Mrs Lee a volunteering position here."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* That is very sweet. You were close with Eddie, right?
+  -> Chat3
+* Nice! Speaking of Mrs. Lee... I could use your help.
+  -> Explain1
 
 ==Chat3==
-Character is happy.
+Lila?Smiling "Yeah! We were neighbors growing up. We did the whole "walking to school together" thing as kids."
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+* Aw, then would you mind if I asked you to help Mrs. Lee?
+  -> Explain1
+* That sounds like a really nice memory. Can I ask you for something regarding Eddie and Mrs Lee?
+  -> Explain1
 
 ==Explain1==
-Character is neutral.
+Lila?Smiling "Ohh yes! I haven't seen her today, I've been so busy running around here. I know she takes her aerobics class today."
+Lila?Smiling "She loves those. She's really been coming out of her shell recently... being around other people definitely helps. I love to see it. She's okay, right?"
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* She's actually a little discouraged from an encounter at the pharmacy.
+  -> Explain2
+* She needs some encouragement speaking up for herself at the pharmacy.
+  -> Explain2
 
 ==Explain2==
-Character is neutral.
+Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into her power. She can do hard things. I understand that she doesn't really feel it though."
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* It's so nice to hear you pump her up like this.
+  -> Suggestion1
+* Would you feel comfortable going with her to the pharmacy?
+  -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I give her a big pep talk."
+~ notification = "Lila_Day 1_Maybe it’s time i give her a big pep talk"
+# notification
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+* Maybe you could go with her to the pharmacy
+  -> Suggestion2
+* She could use that
+  -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Lila?Smiling "I can go to the pharmacy with Mrs. Lee. I can support her! I love that lady."
+~ notification = "Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1"
+# notification
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+* I think that would make her feel really comfortable if you were with her.
+  -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Lila?Smiling "Sounds good. I can take a break from here whenever!"
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* Thanks, you rock!
+  ->END
+* You're a great friend, Lila. Thank you.
+  ->END

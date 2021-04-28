@@ -1,53 +1,58 @@
-Character is happy.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* {not TempGoodbye} Let's chat. -> Chat1
-* {not TempGoodbye} I can help you. -> ReadyToSolve
-* {TempGoodbye} I can help you, with reference to our past conversation. -> ReadyToSolve
+-> intro
 
-==Chat1==
-Character is neutral.
+===intro===
 
-* Let's chat more. -> Chat2
-* I can help you. -> ReadyToSolve
+Elisa?Smiling "Oh, hey {player_name}!"
 
-==Chat2==
-Character is neutral.
+*Hey Elisa! 
+    -> casual
+*Oh hey- I found out more info on that immunization stuff you were talking about.
+    -> PuzzleInterface
+    
+===casual===
 
-* I can help you. -> ReadyToSolve
-* I can help you, a different way. -> ReadyToSolve
+Elisa?Neutral "Ugh, I tried to ask around about the vaccination stuff but no one knows what I should do. How about you, did you find anything?"
 
-==ReadyToSolve==
-Character is neutral. 
+*Yes! 
+    -> PuzzleInterface
+*No, not yet.
+    ->backToExplore
+    
+===PuzzleInterface===
+# turnin
 
-* Start puzzle interface. -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
+*So... (puzzle interface opens and player inserts helpful info)
+    -> GoodSolution
+*So... (puzzle interface opens and player inserts unhelpful info)
+    -> BadSolution
+    
+===BadSolution===
 
-==PuzzleInterface==
-Character is neutral. Puzzle interface pops up.
+Elisa?Neutral "I see... you didn't happen to find out anything else, did you?"
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+*Yes! (puzzle interface opens and player inserts helpful info)
+    ->PuzzleInterface
+*No, sorry.
+    ->backToExplore
+    
+===backToExplore===
 
-==GoodSolution==
-Character is happy.
+Elisa?Neutral "Gotcha. Well, if you find any more info for me, definitely let me know!"
 
-* Yay! -> SolvedGoodbye
-* Yay a different way! -> SolvedGoodbye
+*Will do!
+    -> END
+*Alright, see you later then!
+    -> END
+    
+===GoodSolution===
 
-==BadSolution==
-Character is neutral.
+Elisa?Smiling "Got it! Thanks, {player_name}, you're a life saver. Actually, I should be able to head down to the office today and figure out what vaccines I'm missing before the forms are due."
+Elisa?Smiling "I should run over there before they close- see you later!"
 
-* Try again? -> PuzzleInterface
-* Actually, I'm not ready. -> TempGoodbye
-
-==SolvedGoodbye==
-Character is happy.
-
-* Goodbye! -> END
-* Goodbye a different way! -> END
-
-==TempGoodbye==
-Character is neutral.
-
-* Ok, see you later! -> END
-* Ok, see you later a different way! -> END
+*See you! 
+    -> END

@@ -1,52 +1,83 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+== intro ==
+Mrslee?Smiling "{player_name}! Hello!"
+
+* Hi Mrs. Lee! How are you?
+    -> Chat1
+* Hello! Where are you headed with that swimsuit? 
+    -> Chat1
 
 ==Chat1==
-Character is happy.
+Mrslee?Smiling "Water fitness! Me and Korean ladies meet there every week."
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+* That sounds like fun!
+    -> Chat2
+* Do you do any other fitness classes here in the community center?
+    -> Explain1
 
 ==Chat2==
-Character is happy.
+Mrslee?Smiling "It is. Been good to fill time so I don't worry for Eddie too much."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* He's doing so well, you are a great grandmother Mrs. Lee.
+    -> Chat3
+* Any other fitness classes you are using to fill your time too?
+    -> Explain1
 
 ==Chat3==
-Character is happy.
+Mrslee?Smiling "Aw thank you. He and Lila are my babies."
 
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+* I was actually wondering, do you do any other fitness activities here?
+    -> Explain1
 
 ==Explain1==
-Character is neutral.
+Mrslee?Neutral "Yes, I think yesterday about trying yoga after Block Party on Sunday."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* Do you think Lila might be interested in doing it with you?
+    -> Explain2
+* Yoga sounds relaxing. Would you be willing to invite Lila?
+    -> Explain2
 
 ==Explain2==
-Character is neutral.
+Mrslee?Neutral "Lila? She want to do yoga?"
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* If you invite her I think she would!
+    -> Suggestion1
+* She might! I was thinking she might be more starting a new activity and meeting new people with you.
+    -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Mrslee?Smiling "She can come to water fitness with me!"
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to water fitness to spend time with Mrs. Lee and her friends"
+# notification
+
+* She might like that, but I think she might be more interested in something she can meet new people at. She knows all your friends!
+    -> Suggestion2
+* Good idea! I'll tell her the time and to meet you there.
+    -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Mrslee?Smiling "Oh, Lila do need to move more than now. I invite her to Sunday class!"
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to yoga with her, where both of them will be new students_Lila4"
+# notification
+
+* She could be interested in something else too.
+    -> Suggestion1
+* Sunday would be great. Right after the Block Party. Maybe she'll have met some of the yoga attendees there!
+    -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Mrslee?Smiling "Always excited to do things with Lila! I have to go. Class start now!"
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* Thanks Mrs. Lee, see you around! 
+    ->END
+* We all love Lila! Bye now!
+    ->END
+

@@ -1,52 +1,71 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+==intro==
+Elisa?Smiling "Hey {player_name}."
+
+* What's up, Elisa?
+  -> Chat1
+* Are you studying, I see?
+  -> Chat1
 
 ==Chat1==
-Character is happy.
+Elisa?Smiling "My mom just sent a meme in the family group chat. I'm shocked. It was good!"
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+That's so funny!
+  -> Chat2
+Can I ask for your opinion on something?
+  -> Explain1
 
 ==Chat2==
-Character is happy.
+Elisa?Smiling "Now all my siblings are hopping on it... ugh this is so distracting actually. I should be studying..."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
-
-==Chat3==
-Character is happy.
-
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
+Can I ask you something?
+  -> Explain1
 
 ==Explain1==
-Character is neutral.
+Elisa?Neutral "Yeah, sure you can ask me anything and I'll tell you if I'm comfortable answering."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+Do you get nervous about going to the doctors?
+  -> Explain2
 
 ==Explain2==
-Character is neutral.
+Elisa?Smiling "I am totally fine talking about this. You scared me for a second! But, no, I don't get nervous at the doctor's. My parents are a different story though it's like an entire ordeal."
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+What do you mean?
+  -> Suggestion1
+What kind of ordeal?
+  -> Suggestion2
 
 ==Suggestion1==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Elisa?Smiling "Actually it is a good idea, but they write down any questions or symptoms to bring up to the doctor."
+~ notification = "Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3"
+# notification
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+* That's smart, and so they just read it?
+  -> Suggestion2
+* That's a good idea.
+  -> Goodbye
 
 ==Suggestion2==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Elisa?Smiling "Yeah, my parents don't speak English as good as me so like when my dad goes he gets a spanish translator to come into the room with him."
+Elisa?Smiling "And they will translate any of his questions. I'm pretty sure it's only available for spanish at our clinic here."
+~ notification = "Elisa_Day 3_Translators can sit in on the doctor's appointment (Spanish only)"
+# notification
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+* That's a good resource though
+  -> Suggestion1
+* A translator! Awesome!
+  -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Elisa?Neutral "Okay, enough talking about my parents, this conversation is making me sleepy."
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* Haha always nice chatting, Elisa
+  ->END
+* Buh-bye!
+  ->END

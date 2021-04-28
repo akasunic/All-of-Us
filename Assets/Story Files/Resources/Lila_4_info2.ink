@@ -1,52 +1,65 @@
-Hi.
+VAR player_name = ""
+VAR notification = ""
+VAR new_contact = ""
+VAR new_quest = ""
 
-* Hi! -> Chat1
-* Hi a different way! -> Chat1
+-> intro
+
+==intro==
+Elisa?Smiling "Hey {player_name}!"
+
+* Hey Elisa! How are you?
+    -> Chat1
+* Nice to see you, Elisa! Glad I could catch you for a second. How are you?
+    -> Chat1
 
 ==Chat1==
-Character is happy.
+Elisa?Smiling "Pretty good. Running around as usual. I'm looking forward to the Block Party tomorrow! Even though I'll probably just be chasing my little sibs around looking after them."
 
-Let's chat more! -> Chat2
-I could use your help. -> Explain1
+* Glad to hear it! Everyone I've talked to recently is either running a booth or stopping by for a few hours at least.
+    -> Chat2
+* Me too! Aw, hopefully you can drop them at Lila's child care for a little while so you can spend a little time with your friends.
+    -> Explain1
 
 ==Chat2==
-Character is happy.
+Elisa?Smiling "If I can help out, I will! Still have to see whether I need to work tomorrow morning or whether I can help set up."
 
-Let's chat more! -> Chat3
-I could use your help. -> Explain1
+* It's no problem if you can't, just want you to be free to enjoy it!
+    -> Explain1
 
-==Chat3==
-Character is happy.
-
-I could use your help. -> Explain1
-I could use your help, a different way. -> Explain1
 
 ==Explain1==
-Character is neutral.
+Elisa?Neutral "I hope so! Sometimes I just wish I was had an older sibling so I could be the youngest and run around."
 
-Here's more information. -> Explain2
-Here's more information, a different way. -> Explain2
+* They are lucky to have you. We talked earlier this week about that mentorship you were looking for, how is that working out?
+    -> Explain2
 
 ==Explain2==
-Character is neutral.
+Elisa?Neutral "One of the girls and I connected, and she's great, but she lives the town over so I can't see her that much. I was hoping to find someone in Bloomwood."
 
-Segue to suggestion1. -> Suggestion1
-Segue to suggestion2. -> Suggestion2
+* Have you thought about reaching out to Lila? She's not first-gen, but she's definitely had a unique life.
+    -> Suggestion1
 
 ==Suggestion1==
-Player gains a piece of information that CAN help with the quest. Character is happy.
+Elisa?Smiling "Are you sure she isn't too busy?"
 
-* {not Suggestion2} Try another way. -> Suggestion2
-* That's great! -> Goodbye
+* She might be busy, but she's really good at making time for the people she cares about.
+    -> Suggestion2
 
 ==Suggestion2==
-Player gains a piece of information that SOUNDS LIKE it can help with the quest, but isn't quite right. Character is happy.
+Elisa?Smiling "Then I would love to!"
 
-* {not Suggestion1} Try another way. -> Suggestion1
-* That's great! -> Goodbye
+~ notification = "Elisa_Day 4_Elisa wants to get to know Lila better, and is going to reach out this weekend to set up a coffee date_Lila4"
+# notification
+
+* Nice! Lila's not the best at reaching out, otherwise I think she would have already. She sees a lot of herself in you.
+    -> Goodbye
 
 ==Goodbye==
-Character is happy.
+Elisa?Smiling "I look up to her so much! That's really reassuring to hear right now since I'm going through so much with my family and school."
+Elisa?Smiling "I have to go now, but I'll try to find her tomorrow and ask her to coffee. I'll see you later!"
 
-* Goodbye. ->END
-* Goodbye, a different way. ->END
+* Bye Elisa!
+    ->END
+* See you later! Good luck!
+    ->END
