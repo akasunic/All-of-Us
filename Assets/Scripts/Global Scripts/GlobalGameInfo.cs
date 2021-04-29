@@ -25,10 +25,20 @@ public class GlobalGameInfo
         PHONE
     };
 
+    private static bool newDay = false;
+
     //callbacks for when info items and quests get added so the 
     //phone and app get red notification bubbles
     public delegate void UpdateNotifications(NOTIFICATION noficationType);
     public static UpdateNotifications updateNotifications;
+
+    public static void toggleNewDay() {
+        newDay = !newDay;
+    }
+
+    public static bool getNewDayVariable() {
+        return newDay;
+    }
 
     public static void setNotificationDelegate(UpdateNotifications n) {
         if (updateNotifications != null) {
