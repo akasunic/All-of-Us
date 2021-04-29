@@ -1,6 +1,7 @@
 VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
+VAR player_name = ""
 
 ->intro
 

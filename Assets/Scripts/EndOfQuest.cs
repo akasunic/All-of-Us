@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndOfQuest : MonoBehaviour
 {
-    private Dictionary<string, Quest> questMap = new Dictionary<string, Quest>();
+    private static Dictionary<string, Quest> questMap = new Dictionary<string, Quest>();
 
     [SerializeField]
     public GameObject endOfQuest;
@@ -20,8 +21,10 @@ public class EndOfQuest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questMap = new Dictionary<string, Quest>();
-        BuildQuestMap();
+        if (questMap == null || questMap.Count == 0) {
+            questMap = new Dictionary<string, Quest>();
+            BuildQuestMap();
+        }
     }
 
     // Update is called once per frame
@@ -35,7 +38,8 @@ public class EndOfQuest : MonoBehaviour
         Quest quest;
         if (!questMap.TryGetValue(questTitle, out quest))
         {
-            throw new System.Exception("Cannot find the Quest Title");
+            throw new System.Exception("Cannot find the Quest Title \"" +
+                questTitle + "\"");
         }
 
         // set texts
@@ -100,6 +104,10 @@ public class EndOfQuest : MonoBehaviour
         endOfQuest.SetActive(false);
         // increaes the engagement
         GlobalGameInfo.IncreaseEngagement();
+        if (GlobalGameInfo.GetCurrentDay() == 3 &&
+            InkFileManager.instance.CanAdvanceDay()) {
+            SceneManager.LoadScene("Ending");
+        }
     }
 
     public class Quest

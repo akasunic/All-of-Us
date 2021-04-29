@@ -36,4 +36,8 @@ public class SceneChangeDemoController : MonoBehaviour
         previousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(scene);
     }
+
+    public void OpenVNScene(string character) {
+
+    }
 }
