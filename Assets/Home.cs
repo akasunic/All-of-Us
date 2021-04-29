@@ -73,7 +73,7 @@ public class Home : MonoBehaviour {
         // Go back to map
         SceneManager.LoadScene("Basic2DMap");
 
-        // Hint bubble for next day
+        // Toggle new day (triggers hint bubble to say "Good Morning")
         GlobalGameInfo.toggleNewDay();
     }
 
