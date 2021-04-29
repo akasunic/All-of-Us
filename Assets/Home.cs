@@ -105,7 +105,7 @@ public class Home : MonoBehaviour {
 
     public void goToSleep() {
         // Only if PC has finished the 5 quests for the day
-        // if (InkFileManager.instance.CanAdvanceDay()) {
+        if (InkFileManager.CanAdvanceDay()) {
 
             // Increase day by one
             GlobalGameInfo.IncreaseDay();
@@ -115,8 +115,7 @@ public class Home : MonoBehaviour {
 
             // Toggle new day (triggers hint bubble to say "Good Morning")
             GlobalGameInfo.toggleNewDay();
-
-        // }
+        }
     }
 
 }
