@@ -33,7 +33,7 @@ Rashad?Smiling "The Board approved an initiative I wanted to talk to you about. 
   -> QuestIntro
 
 ==QuestIntro==
-Rashad?Smiling “Hey now. Bloomwood spirit, was- is a thing."
+Rashad?Smiling "Hey now. Bloomwood spirit, was- is a thing."
 Rashad?Smiling "I explained the changing demographics to the board when I pitched on this, but I want to get an intergenerational dialogue going at the library. "
 Rashad?Smiling "A lot of our seniors and young people frequent the library, and I'd like to bring them together.”
 

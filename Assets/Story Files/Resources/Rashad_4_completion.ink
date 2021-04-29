@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 == intro == 
-Rashad?Smiling “Oo! Hey, {player_name}! How's it going? Excited for the weekend?”
+Rashad?Smiling "Oo! Hey, {player_name}! How's it going? Excited for the weekend?"
 
 * {not TempGoodbye} Yes! I just got us a cotton candy machine, and I am going to basically drown in it. Bounce house, djs...it's all coming together.
   -> Chat1
@@ -16,7 +16,7 @@ Rashad?Smiling “Oo! Hey, {player_name}! How's it going? Excited for the weeken
   -> ReadyToSolve
 
 ==Chat1==
-Rashad?Smiling “Oh, you're adding cotton candy to your list of skills eh? So bread, boiling water, and cotton candy? Sounds like reality tv show ingredients.”
+Rashad?Smiling "Oh, you're adding cotton candy to your list of skills eh? So bread, boiling water, and cotton candy? Sounds like reality tv show ingredients."
 
 * You know what? That's messed up! I may not cook well, but I'm learning, hah!
   -> Chat2
@@ -24,7 +24,7 @@ Rashad?Smiling “Oh, you're adding cotton candy to your list of skills eh? So b
   -> ReadyToSolve
 
 ==Chat2==
-Rashad?Smiling “ You know I’m playing. You have information? For the initiative? What did you find out?”
+Rashad?Smiling " You know I’m playing. You have information? For the initiative? What did you find out?"
 
 * Well, I met up with Elisa and Mrs. Lee and they taught me a lot. Here's what I learned.
   -> ReadyToSolve
@@ -32,7 +32,7 @@ Rashad?Smiling “ You know I’m playing. You have information? For the initiat
   -> ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Neutral “I'm not surprised. Elisa is really smart and thoughtful, and Mrs. Lee has a close relationship with Eddie. She's helped me out many times. What did you find out that can help?”
+Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful, and Mrs. Lee has a close relationship with Eddie. She's helped me out many times. What did you find out that can help?"
 
 * Start puzzle interface.
   -> PuzzleInterface
@@ -46,7 +46,7 @@ Rashad?Neutral “I'm not surprised. Elisa is really smart and thoughtful, and M
 * -> BadSolution
 
 ==GoodSolution==
-Rashad?Smiling “Wow. This is great information. I had an idea that both teens and seniors could benefit from this, but I didn't know how much. Thank you so much for looking into this, {player_name}.”
+Rashad?Smiling "Wow. This is great information. I had an idea that both teens and seniors could benefit from this, but I didn't know how much. Thank you so much for looking into this, {player_name}."
 
 * Sweet! I'm so happy I could help Rashad. Let me know if you need anything else!
   -> SolvedGoodbye
@@ -54,7 +54,7 @@ Rashad?Smiling “Wow. This is great information. I had an idea that both teens 
   -> SolvedGoodbye
 
 ==BadSolution==
-Rashad?Neutral “Oh. Well, that's kind of not what I was looking for. Did they say anything else? I want to know how it benefits seniors and teens.”
+Rashad?Neutral "Oh. Well, that's kind of not what I was looking for. Did they say anything else? I want to know how it benefits seniors and teens."
  
 * Hmm. Wait a second, let me try that again.
   -> PuzzleInterface
@@ -72,7 +72,7 @@ Rashad?Smiling "You've been such a great asset this week. I'm sure your gourmet 
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral “Oh, okay. Sounds like a plan. I'm going to go pickup Charles and Octavia, catch you later?”
+Rashad?Neutral "Oh, okay. Sounds like a plan. I'm going to go pickup Charles and Octavia, catch you later?"
 
 * Ok, I'll be back when I know more. See you soon!
   ->END

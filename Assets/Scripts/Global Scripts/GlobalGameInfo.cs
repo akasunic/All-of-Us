@@ -7,10 +7,10 @@ public class GlobalGameInfo
 {
     // CURRENT DAY (0 to 4)
     // 0 is Monday and 4 is Block Party day
-    private static int currentDay = 0;
+    private static int currentDay = 2;
 
     // player's name
-    public static string name;
+    public static string name = "";
     // player's pronouns
     public static string pronouns;
 

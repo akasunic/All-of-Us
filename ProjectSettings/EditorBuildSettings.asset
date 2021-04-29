@@ -27,23 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Visual Novel Scenes/LibraryVN.unity
     guid: fcb8f057e2db35647a644d563b91c06b
   - enabled: 1
-    path: Assets/InkFungus/Test Demo/InkFungusTest.unity
-    guid: e119cb1f352aeff44b1a2f00da0be216
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/FungusExamples/DakotaDemo/DakotaDemo.unity
-    guid: ecb0d0060c8c32f448f581a527315f9a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/Visual Novel Scenes/Quest Turnin Testing.unity
     guid: 012e5d99837562a40bad6666d27d2b31
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 217cb52ce0d6c44f5bfbd5b63b0cfb4c
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: e8ead7d5d56a24a15b1e8b8759566222

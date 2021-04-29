@@ -74,7 +74,7 @@ Lila?Neutral "I could even, like, write down what I think her symptoms are? To, 
   -> Goodbye
 
 ==Goodbye==
-Lila?Smiling Lila "Oh, shoot, I gotta get back to work. I hope this was helpful. Let me know!"
+Lila?Smiling "Oh, shoot, I gotta get back to work. I hope this was helpful. Let me know!"
 
 * Okay, thanks Lila
   ->END

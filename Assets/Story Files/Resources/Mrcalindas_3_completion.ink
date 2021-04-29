@@ -58,7 +58,7 @@ Mrcalindas?Smiling "My Mother is going to be so excited. It's always nice to hav
 
 * My pleasure, Mr. Calindas. Let me know if anything else comes up okay? I'll catch you later!
   -> SolvedGoodbye
-* Anything for Mother Calindas. I'm happy she's settling in. Let me know if you need naything else, okay? See you soon!
+* Anything for Mother Calindas. I'm happy she's settling in. Let me know if you need anything else, okay? See you soon!
   -> SolvedGoodbye
 
 ==BadSolution==
@@ -71,7 +71,7 @@ Mrcalindas?Neutral "Hmm. Well, we know it's overwhelming It's why we asked about
   -> TempGoodbye
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling ""
+Mrcalindas?Smiling " "
 
 * Goodbye!
   -> END

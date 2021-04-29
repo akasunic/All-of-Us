@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 == intro ==
 
-Mrslee?Neutral “Hello {player_name}! Do you know if there will be a lot of young people at the Block Party this weekend? My grandson is visiting.”
+Mrslee?Neutral "Hello {player_name}! Do you know if there will be a lot of young people at the Block Party this weekend? My grandson is visiting."
 
 * Hi Mrs. Lee. Actually, yes. Elisa is running a succulent booth, and the whole neighborhood is coming out.
   -> Chat1
@@ -15,7 +15,7 @@ Mrslee?Neutral “Hello {player_name}! Do you know if there will be a lot of you
   -> Chat1
 
 ==Chat1==
-Mrslee?Smiling “Oh, good. I want to make sure there's thing for him to do. I don't want him to be so bored with me.”
+Mrslee?Smiling "Oh, good. I want to make sure there's thing for him to do. I don't want him to be so bored with me."
 
 * Oh, Mrs. Lee he won't be bored with you. You're plenty exciting. Plus, you could teach him a lot.
   -> Chat2
@@ -41,7 +41,7 @@ Mrslee?Smiling "Though, I think you probably can learn more than you think. Eddi
   -> Explain1
 
 ==Explain1==
-Mrslee?Neutral “Oh? How can <i>I</i> help?” 
+Mrslee?Neutral "Oh? How can <i>I</i> help?" 
 
 *Rashad wants to link seniors like you, and teens. I'd like to know what seniors may enjoy.
   -> Explain2
@@ -87,7 +87,7 @@ Mrslee?Smiling "It's good for your mental health. We teach each other, that's im
   -> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling “I'm so happy I could help, {player_name}. I'm heading off to my exercise class now, but you tell Rashad, I'd be happy to help. See you soon!”
+Mrslee?Smiling "I'm so happy I could help, {player_name}. I'm heading off to my exercise class now, but you tell Rashad, I'd be happy to help. See you soon!"
 
 * Goodbye Mrs. Lee! Have a blast in there.
   ->END

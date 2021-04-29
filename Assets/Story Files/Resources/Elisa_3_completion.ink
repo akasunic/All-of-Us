@@ -9,23 +9,28 @@ VAR new_quest = ""
 
 Elisa?Smiling "Oh hey, {player_name}! Did you find any info for me?"
 
-* Start puzzle interface ->PuzzleInterface
-* I don't think so ->thanksForTrying
+* Start puzzle interface
+  -> PuzzleInterface
+* I don't think so
+  -> thanksForTrying
     
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* They picked a solution marked good.
+  -> GoodSolution
+* They picked a solution marked bad.
+  -> BadSolution
 
     
 ===BadSolution===
 
 Elisa?Neutral "Thanks for asking around, but I'm still not quite sure what to do. Do you have any more info for me?"
 
-* Let me try again ->PuzzleInterface
+* Let me try again
+  -> PuzzleInterface
 * No sorry, that's all I could find out.
-    ->thanksForTrying
+  ->thanksForTrying
     
 ===thanksForTrying===
 

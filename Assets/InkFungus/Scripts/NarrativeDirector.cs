@@ -39,6 +39,8 @@ namespace InkFungus
         public string loadMessage = "load";
         public string newKnotStitchMessage = "at";
 
+        // private Queue<string> msgQueue;
+
         [Header("Advanced Settings")]
         public string dialogRegex =
         @"^(?<character>[\w\- ]*)(\?(?<portrait>[\w\-]+))? ""(?<text>((""[^""]*"")|(.))+?)""?[ ]*$";
@@ -134,6 +136,11 @@ namespace InkFungus
             flags.Add("auto", new Flag(autoProceed));
             flags.Add("verbatim", new Flag(ignoreDialogRegex));
             flags.Add("timer", new Flag(choiceTimer));
+
+            //story.ObserveVariable("notification", (string varName, object newValue) => {
+            //    GameObject.Find("Notification Message Receiver").
+            //    SendMessage("Notification", newValue);
+            //});
         }
 
         private void SyncListToFungus(string inkListName, object inkListNewValue)
@@ -305,6 +312,7 @@ namespace InkFungus
             {
                 syncVariables.Remove(unsyncVariableName);
             }
+            // msgQueue = new Queue<string>();
             Idle();
         }
 
@@ -318,6 +326,11 @@ namespace InkFungus
                     Resume();
                 }
             }
+            //while (msgQueue.Count > 0) {
+            //    GameObject.Find("Notification Message Receiver").
+            //        BroadcastMessage("Notification", msgQueue.Dequeue());
+            //    BroadcastToFungus(msgQueue.Dequeue());
+            //}
         }
 
         public void JumpTo(string pathString)
@@ -577,6 +590,11 @@ namespace InkFungus
                     case "no":
                         YesNo(argument, false);
                         break;
+                    //case "notification":
+                    //    // msgQueue.Enqueue((string)story.variablesState["notification"]);
+                    //    GameObject.Find("Notification Message Receiver").
+                    //        SendMessage("Notification", argument);
+                    //    break;
 
                     default:
                         BroadcastToFungus(command + " " + argument); // simple as that

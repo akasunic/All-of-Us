@@ -19,9 +19,12 @@ public class InkMessageHandler : MonoBehaviour
     /// <summary>
     /// Adds a new notifcation to the notifications list
     /// </summary>
-    public void AddNotification() {
-        string notifString = _fc.GetStringVariable("notification");
-        string[] notifInfo = notifString.Split('_');
+    public void AddNotification(string notifValue = "") {
+
+        if (notifValue == "use_var") {
+            notifValue = _fc.GetStringVariable("notification");
+        }
+        string[] notifInfo = notifValue.Split('_');
 
         try {
             if (notifInfo.Length == 3) {

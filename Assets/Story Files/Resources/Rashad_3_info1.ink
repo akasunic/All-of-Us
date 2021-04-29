@@ -22,7 +22,7 @@ Lila?Smiling "No way, I can finally take out books in peace without him followin
   -> Explain1
 
 ==Chat2==
-Lila?Smiling “Right? Sometimes I worry that Rashad is way too stressed. No one needs to be haunting the Mystery aisle, looking for stray glitter.”
+Lila?Smiling "Right? Sometimes I worry that Rashad is way too stressed. No one needs to be haunting the Mystery aisle, looking for stray glitter."
 
 * Well, to be fair it is a lot more exciting with half the stuff he has to deal with.
   -> Chat3
@@ -30,7 +30,7 @@ Lila?Smiling “Right? Sometimes I worry that Rashad is way too stressed. No one
   -> Explain1
 
 ==Chat3==
-Lila?Smiling “Oh? Well, if he ever needs more excitement, he can teach my class. He won't need to search for glitter, he'll be <i>covered</i> in it. Anyway, what are you up to?”
+Lila?Smiling "Oh? Well, if he ever needs more excitement, he can teach my class. He won't need to search for glitter, he'll be <i>covered</i> in it. Anyway, what are you up to?"
 
 * I could use your advice. Do you remember when I asked about therapy?
   -> Explain1
@@ -38,7 +38,7 @@ Lila?Smiling “Oh? Well, if he ever needs more excitement, he can teach my clas
   -> Explain1
 
 ==Explain1==
-Lila?Neutral “I do remember! Did my information, help?”
+Lila?Neutral "I do remember! Did my information, help?"
 
 * It did! I have some more questions about therapy.
   -> Explain2
@@ -46,7 +46,7 @@ Lila?Neutral “I do remember! Did my information, help?”
   -> Explain2
 
 ==Explain2==
-Lila?Neutral “Okay, sure. I'm happy to help. Finding therapy resources can be difficult if you haven't done it before. Especially if you're looking for a Black therapist.”
+Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be difficult if you haven't done it before. Especially if you're looking for a Black therapist."
 
 * Well, my friend hasn't seen a therapist before, and needs some advice on what to expect.
   -> Suggestion1

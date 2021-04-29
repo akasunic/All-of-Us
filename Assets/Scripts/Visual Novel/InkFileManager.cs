@@ -47,6 +47,7 @@ public class InkFileManager : MonoBehaviour {
 
     public static InkFileManager instance;
     private static bool didAdd = false;
+    public static string completedQuestString = null;
 
     private void Awake() {
         if (!didAdd) {
@@ -80,6 +81,12 @@ public class InkFileManager : MonoBehaviour {
     }
 
     private void OnSceneChanged(Scene prev, Scene next) {
+        EndOfQuest eoq = null;
+        if ((eoq = FindObjectOfType<EndOfQuest>()) &&
+            completedQuestString != null && completedQuestString != "") {
+            eoq.EndQuest(completedQuestString);
+            completedQuestString = null;
+        }
         if (!GetVisualNovelComponents())
             return;
 
@@ -108,6 +115,7 @@ public class InkFileManager : MonoBehaviour {
 
         // progress bar?
         // do something once all 5 are done for the day
+        // GlobalGameInfo.IncreaseEngagement();
         activeFileIdx = (-1, -1);
     }
 
@@ -167,6 +175,17 @@ public class InkFileManager : MonoBehaviour {
             completedDailyLee && completedDailyRashad && completedDailyLila;
     }
 
+    public void TryGoHome() {
+        if (CanAdvanceDay()) {
+            SceneManager.LoadScene("Home");
+            completedDailyCalindas = false;
+            completedDailyRashad = false;
+            completedDailyElisa = false;
+            completedDailyLila = false;
+            completedDailyLee = false;
+        }
+    }
+
     public void TryLoadVNScene(string person) {
         CharacterResources.CHARACTERS character =
             HelperFunctions.CharacterFromString(person);
@@ -182,7 +201,12 @@ public class InkFileManager : MonoBehaviour {
         } else {
             int questNum = activeFileIdx.Item1;
             int chapterNum = activeFileIdx.Item2;
-            string fileToLoad = ActivePersonQuestList[questNum][chapterNum];
+            string fileToLoad = "";
+            try {
+                fileToLoad = ActivePersonQuestList[questNum][chapterNum];
+            } catch (System.IndexOutOfRangeException){
+
+            }
             // is this the next person to speak to for the quest?
             if (character == GetSpeakerFromFile(fileToLoad)) {
                 NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));

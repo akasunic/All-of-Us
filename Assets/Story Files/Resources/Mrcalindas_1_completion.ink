@@ -27,7 +27,8 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more and not waste so much time creating a useful experience for the community. So what programs should we focus on at the Health tent to get the community onboard?""  
+Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more and not waste so much time creating a useful experience for the community."
+Mrcalindas?Neutral "So what programs should we focus on at the Health tent to get the community onboard?""  
 
 *  Start Puzzle interface
     -> PuzzleInterface

@@ -77,6 +77,7 @@ public class QuestManager : MonoBehaviour
 
                     InkFileManager.OnQuestCompleted(submittedQuest.questGiver);
                     IncreaseExpValues(submittedQuest);
+                    InkFileManager.completedQuestString = submittedQuest.questId;
 
                     submittedQuest = null;
                     Debug.Log("Correct Quest!");

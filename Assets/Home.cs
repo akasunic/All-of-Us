@@ -46,9 +46,9 @@ public class Home : MonoBehaviour
 
     public void goToSleep() {
         // Increase day by one
-
+        GlobalGameInfo.IncreaseDay();
         // Go back to map
-
+        SceneManager.LoadScene("Basic2DMap");
         // Hint bubble for next day
     }
 
