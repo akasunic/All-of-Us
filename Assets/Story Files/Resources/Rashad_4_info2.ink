@@ -62,11 +62,11 @@ Mrslee?Smiling "Seniors just need someone to talk to and maybe do light errands.
 Mrslee?Smiling "It makes me feel so good to see how he's grown. I feel like he knows more about how it feels to get old, and I feel like I have something to do. A sense of purpose."
 
 ~ notification = "Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands"
-# notification
+# notification rslee_Day 4_Seniors only need someone to talk to and perhaps do errands
 ~ notification = "Mrslee_Day 4_Teens can learn how it feels to get old"
-# notification
+# notification Mrslee_Day 4_Teens can learn how it feels to get old
 ~ notification = "Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4"
-# notification
+# notification Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4
 
 * {not Suggestion2} Wow. A sense of purpose. What else happens?
   -> Suggestion2
@@ -79,7 +79,7 @@ Mrslee?Smiling "Being close to a senior can help young people learn more about t
 Mrslee?Smiling "It's good for your mental health. We teach each other, that's important."
 
 ~ notification = "Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4"
-# notification
+# notification Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4
 
 * {not Suggestion1} This sounds really great Mrs. Lee. Do you have anything else?
   -> Suggestion1

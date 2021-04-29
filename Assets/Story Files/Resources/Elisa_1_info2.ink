@@ -29,7 +29,7 @@ Lila?Smiling "She'll probably want to practice an elevator pitch for when she go
 Lila?Smiling "The major points to hit would be a personal introduction, what her career goals are, what her experience is, and what she would bring to the company."
 
 ~ notification = "Lila_Day 1_Prepare an elevator pitch_Elisa1"
-# notification
+# notification Lila_Day 1_Prepare an elevator pitch_Elisa1
 
 +Elevator pitch, got it. Do you know what she should bring to the fair?
      ->LCareer2
@@ -39,7 +39,7 @@ Lila?Smiling "The major points to hit would be a personal introduction, what her
 Lila?Smiling "A little! I had to go to a few back when I was in school, but internships and everything were much less common."
 
 ~ notification = "Lila_Day 1_Internships used to be less common"
-# notification
+# notification Lila_Day 1_Internships used to be less common
 
 +Gotcha. Well, do you remember anything about like what to prepare?
     ->LElevatorPitch
@@ -51,7 +51,7 @@ Lila?Smiling "It's really helpful so that they can get a sense of how you might 
 
 
 ~ notification = "Lila_Day 1_Bring copies of your resume to the career fair_Elisa1"
-# notification
+# notification Lila_Day 1_Bring copies of your resume to the career fair_Elisa1
 
 +Awesome! Do you have any tips on conversation with the hirers?
     ->LConvoTips
@@ -63,7 +63,7 @@ Lila?Smiling "Part of it is about knowing you, but a big part of it is also show
 Lila?Smiling "So, you could ask something like what drew them to the company, or what their favorite part of working there is."
 
 ~ notification = "Lila_Day 1_Be sure to prepare questions to ask the hirers_Elisa1"
-# notification
+# notification Lila_Day 1_Be sure to prepare questions to ask the hirers_Elisa1
 
 +Great! Any more general tips for success?
     ->LGenTips
@@ -74,7 +74,7 @@ Lila?Neutral "Hmm... I guess just make sure to follow up with the hirers after t
 Lila?Neutral "Might help the hirers remember you better when they end up looking over your real application."
 
 ~ notification = "Lila_Day 1_Follow up with new contacts after the career fair_Elisa1"
-# notification
+# notification Lila_Day 1_Follow up with new contacts after the career fair_Elisa1
 
 +Great, thanks Lila!
     ->LsegueOut
@@ -86,9 +86,9 @@ Lila?Smiling "I know it gets overwhelming with the crowds and the long wait time
 Lila?Smiling "Plus, doing some positive self-talk before and during the event can really help keep your spirits high!"
 
 ~ notification = "Lila_Day 1_Practice positive self-talk during the event_Elisa1"
-# notification
+# notification Lila_Day 1_Practice positive self-talk during the event_Elisa1
 ~ notification = "Lila_Day 1_It can get overwhelming with all the people in the auditorium"
-# notification
+# notification Lila_Day 1_It can get overwhelming with all the people in the auditorium
 
 +What's positive self-talk?
     ->LselfTalk
@@ -101,7 +101,7 @@ Lila?Smiling "Self talk is like being your own cheerleader. Instead of worrying 
 Lila?Smiling "When I was in college, I used to tell myself, “You eat challenges like this for breakfast!” "
 
 ~ notification = "Lila_Day 1_Telling yourself 'You eat challenges like this for breakfast!' is very positive"
-# notification
+# notification Lila_Day 1_Telling yourself 'You eat challenges like this for breakfast!' is very positive
 
 +Wow, that's awesome!
     ->Lvisual
@@ -113,7 +113,7 @@ Lila?Smiling "When I was in college, I used to tell myself, “You eat challenge
 Lila?Smiling "Oh, and tell her that for another confidence boost, she could try visualizing herself as one of her role models!"
 
 ~ notification = "Lila_Day 1_Visualize your role models for a confidence boost during the event_Elisa1"
-# notification
+# notification Lila_Day 1_Visualize your role models for a confidence boost during the event_Elisa1
 
 +Visualizing herself?
     ->Lvis2
@@ -136,7 +136,7 @@ Lila?Smiling "She could picture her role model before the fair, or even before s
 Lila?Smiling "Absolutely! It's proven to up people's confidence. Oh, and tell her that for another confidence boost, she could try visualizing herself as one of her role models!"
 
 ~ notification = "Lila_Day 1_Visualize your role models for a confidence boost during the event_Elisa1"
-# notification
+# notification Lila_Day 1_Visualize your role models for a confidence boost during the event_Elisa1
 
 +Visualizing herself?
     ->Lvis2

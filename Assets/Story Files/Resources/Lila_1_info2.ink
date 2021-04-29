@@ -65,7 +65,7 @@ Rashad?Neutral "Yeah, I used to run speaker events at an outdoor venue in the pa
 Rashad?Smiling "Ok so I might be able to get this equipment from a local rental place I know. One of my librarians could also maybe come and help set up."
 
 ~ notification = "Rashad_Day 1_A librarian can help you set up the event, and the local electronics store could rent you the equipment"
-# notification
+# notification Rashad_Day 1_A librarian can help you set up the event, and the local electronics store could rent you the equipment
 
 * I'm not sure if she has the budget for that, is there any other way?
     -> Suggestion2
@@ -77,7 +77,7 @@ Rashad?Smiling "Well, it shouldn't take too long, so I can stop by and help Lila
 Rashad?Smiling "I also can look back in the library's storage area, I might still have that equipment and I'd be more than happy to lend it for a night."
 
 ~ notification = "Rashad_Day 1_Rashad can help set up the event, and can lend you equipment from the library_Lila1"
-# notification
+# notification Rashad_Day 1_Rashad can help set up the event, and can lend you equipment from the library_Lila1
 
 * Are there any other options?
     -> Suggestion1

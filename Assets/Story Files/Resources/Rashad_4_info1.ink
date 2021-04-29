@@ -61,11 +61,11 @@ Elisa?Smiling "Well, older people often have problems with tech, so we can help 
 Elisa?Smiling "The doctor said it really helped my grandma's cognitive skills to have someone to talk to. Plus, I really started to understand her more. She also taught me so many random skills."
 
 ~ notification = "Elisa_Day 4_Teens can help teach older people how to use new technology_Rashad4"
-# notification
+# notification Elisa_Day 4_Teens can help teach older people how to use new technology_Rashad4
 ~ notification = "Elisa_Day 4_Talking to other can improve senior cognitive health_Rashad4"
-# notification
+# notification Elisa_Day 4_Talking to other can improve senior cognitive health_Rashad4
 ~ notification = "Elisa_Day 4_Teens can learn random skills"
-# notification
+# notification Elisa_Day 4_Teens can learn random skills
 
 * Elisa, that sounds wonderful. Can you tell me more about what you learned?
   -> Suggestion2
@@ -78,11 +78,11 @@ Elisa?Smiling "My abuelita always supported me when I needed her, and that was s
 Elisa?Smiling "Like, just having someone besides your parents to ask questions to, or get help is so useful. Plus, we taught each other a lot. My pupusas would not be what they are today, without her."
 
 ~ notification = "Elisa_Day 4_Seniors can share culture and preserve heritage_Rashad4"
-# notification
+# notification Elisa_Day 4_Seniors can share culture and preserve heritage_Rashad4
 ~ notification = "Elisa_Day 4_Having people other than parents to talk to is helpful_Rashad4"
-# notification
+# notification Elisa_Day 4_Having people other than parents to talk to is helpful_Rashad4
 ~ notification = "Elisa_Day 4_Teens can learn how to make pupusas"
-# notification
+# notification Elisa_Day 4_Teens can learn how to make pupusas
 
 * {not Suggestion1} Really? That sounds amazing. Is there anything else? -> Suggestion1
 * Elisa, this info is perfect. I knew you'd have some great ideas.

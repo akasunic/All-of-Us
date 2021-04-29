@@ -59,8 +59,8 @@ Elisa?Neutral "A tech question? and you didn't just look it up? Or watch a video
 ==Suggestion1==
 Elisa?Smiling "Well, when I taught my abuela, we made sure to just turn on the largest font size so she could read everything clearly."
 
-~ notification = "Elisa_Day 3_Providing accessible devices with large fonts can help."
-# notification
+~ notification = "Elisa_Day 3_Providing accessible devices with large fonts can help"
+# notification Elisa_Day 3_Providing accessible devices with large fonts can help
 
 * Oh, that sounds helpful. But I think I'm looking for some classes she could join or a tutor. Do you know anything like that?
   -> Suggestion2
@@ -72,9 +72,9 @@ Elisa?Smiling "Oh, yeah. The internet can be really overwhelming for seniors. If
 Elisa?Smiling "Like a tutor. We can do it all in Spanish too." 
 
 ~ notification = "Elisa_Day 3_The internet and new tech can be overwhelming for seniors_Mrcalindas3"
-# notification
+# notification Elisa_Day 3_The internet and new tech can be overwhelming for seniors_Mrcalindas3
 ~ notification = "Elisa_Day 3_Elisa is willing to teach some basic tech in Spanish_Mrcalindas3"
-# notification
+# notification Elisa_Day 3_Elisa is willing to teach some basic tech in Spanish_Mrcalindas3
 
 * That's such a greta idea, Elisa. Is there anything else we should keep in mind?
   -> Suggestion1

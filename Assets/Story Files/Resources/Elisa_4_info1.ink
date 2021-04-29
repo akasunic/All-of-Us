@@ -67,7 +67,7 @@ Mrcalindas?Smiling "The big ones are healthy diet and regular exercise."
 Mrcalindas?Smiling "Eat small portions, make sure you do some light activity every 30 minutes, and do more moderate activity a few times a week. That sort of thing."
 
 ~ notification = "Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4"
-# notification
+# notification Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4
 
 * But how do you know if your blood sugar is getting better or not?
   -> Suggestion2
@@ -81,7 +81,7 @@ Mrcalindas?Smiling "How often you have to monitor those levels depends person-to
 Mrcalindas?Smiling "Otherwise, sometimes treatment includes insulin therapy via injections, but doctors don't always prescribe it."
 
 ~ notification = "Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4"
-# notification
+# notification Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4
 
 * Wait, diet and exercise? What would that look like?
   -> Suggestion1

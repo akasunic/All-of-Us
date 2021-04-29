@@ -59,7 +59,7 @@ Rashad?Smiling "Well, the library would definitely be a good place to find resou
 Rashad?Smiling "I also know my wife swears by walking every day and regulating her salt intake. She says it solves all the problems that matter."
 
 ~ notification = "Rashad_Day 2_Rashad can get Lila a library card to look at health-related literature. He also says his wife walks every day and regulates her salt intake to stay healthy"
-# notification
+# notification Rashad_Day 2_Rashad can get Lila a library card to look at health-related literature. He also says his wife walks every day and regulates her salt intake to stay healthy
 
 * Do you think there is anything else she could look into? Maybe any experiences your mom has had?
     -> Suggestion2
@@ -71,7 +71,7 @@ Rashad?Smiling "Well, a big one when I was really little was that my mom struggl
 Rashad?Smiling "We talk about that diagnosis whenever she gets tested now to check her symptoms. We also have a website at the library that I use when I need more information. I can send it to you."
 
 ~ notification = "Rashad_Day 2_Rashad’s mother had hidden symptoms that later proved to be metabolic syndrome through tests done at the doctor’s office. He also suggested a website he uses regularly that Lila can look at for health information: medlineplus.gov_Lila2"
-# notification
+# notification Rashad_Day 2_Rashad’s mother had hidden symptoms that later proved to be metabolic syndrome through tests done at the doctor’s office. He also suggested a website he uses regularly that Lila can look at for health information: medlineplus.gov_Lila2
 
 * Do you have any other advice?
     -> Suggestion1

@@ -65,7 +65,7 @@ Rashad?Smiling "Oh! You know what, I think he takes insulin shots, too. I rememb
 Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, though. Probably depends on the situation."
 
 ~ notification = "Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4"
-# notification
+# notification Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4
 
 * What is diabetes, anyway? I still don't really understand.
   -> Suggestion2
@@ -78,7 +78,7 @@ Rashad?Smiling "If your blood sugar levels are too high, they know your insulin 
 Rashad?Smiling "All the treatment stuff they do - exercise, healthy eating, medication- is to try to get those levels back to normal."
 
 ~ notification = "Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4"
-# notification
+# notification Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4
 
 * So, does your cousin have to do anything specific to take care of himself?
   -> Suggestion1

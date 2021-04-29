@@ -56,7 +56,7 @@ She's seeeriously anxious
 ==Suggestion1==
 Lila?Smiling "You can suggest that I will go to the appointment with her."
 ~ notification = "Lila_Day 3_Lila can support Mrs. Lee by going to the appointment with her_Mrslee3"
-# notification
+# notification Lila_Day 3_Lila can support Mrs. Lee by going to the appointment with her_Mrslee3
 
 * Hmmm.
   -> Suggestion2
@@ -65,8 +65,8 @@ Lila?Smiling "You can suggest that I will go to the appointment with her."
 
 ==Suggestion2==
 Lila?Neutral "I could even, like, write down what I think her symptoms are? To, like, take the pressure off?"
-~ notification = "Lila_Day 3_Lila can write down Mrs. Lee's symptoms by assuming her problems."
-# notification
+~ notification = "Lila_Day 3_Lila can write down Mrs. Lee's symptoms by assuming her problems"
+# notification Lila_Day 3_Lila can write down Mrs. Lee's symptoms by assuming her problems
 
 * Huh..
   -> Suggestion1

@@ -58,7 +58,7 @@ Mrslee?Smiling "I love helping Lila! She is come to me today, we can talk then."
 Mrslee?Smiling "Lila is strong girl, but when she is not confident, someone has to push – off the cliff, you know? I go with her to appointment."
 
 ~ notification = "Mrslee_Day 3_Mrs. Lee volunteers to talk to Lila about her women’s healthcare questions, and says she will attend the doctors appointment with her"
-# notification
+# notification Mrslee_Day 3_Mrs. Lee volunteers to talk to Lila about her women’s healthcare questions, and says she will attend the doctors appointment with her
 
 * I don't know if she needs a push right now, more someone to confide in.
     -> Suggestion2
@@ -69,7 +69,7 @@ Mrslee?Smiling "Lila is strong girl, but when she is not confident, someone has 
 Mrslee?Smiling "I can do this. Mr. Lee took care of general health, but he had nothing to do with womanhood. I've been taking care of that whole life. If Lila need help, I support her."
 
 ~ notification = "Mrslee_Day 3_Mrs. Lee says she can talk to Lila to support her, and answer her questions about women’s healthcare_Lila3"
-# notification
+# notification Mrslee_Day 3_Mrs. Lee says she can talk to Lila to support her, and answer her questions about women’s healthcare_Lila3
 
 * Are you sure?
     Mrslee?Neutral "Yes, "

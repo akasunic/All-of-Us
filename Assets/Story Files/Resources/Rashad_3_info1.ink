@@ -58,11 +58,11 @@ Lila?Smiling "Well, you should find someone you feel comfortable talking to. Mak
 Lila?Smiling "Oh, and you should make sure they accept your insurance."
 
 ~ notification = "Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3"
-# notification
+# notification Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3
 ~ notification = "Lila_Day 3_Make a list if qualities you need in a therapist and what you want to work on_Rashad3"
-# notification
+# notification Lila_Day 3_Make a list if qualities you need in a therapist and what you want to work on_Rashad3
 ~ notification = "Lila_Day 3_Ask if they accept your insurance_Rashad3"
-# notification
+# notification Lila_Day 3_Ask if they accept your insurance_Rashad3
 
 * That's helpful. Do you have any advice about how the process works?
   -> Suggestion2
@@ -74,11 +74,11 @@ Lila?Smiling "When I looked for a Black therapist, I used an online tool to sear
 Lila?Smiling "At the intake appointment, I asked questions about them and race-based stress to know if we were compatible. Getting recommendations from friends is also useful."
 
 ~ notification = "Lila_Day 3_At an intake appointment you talk to a therapist to see if you are a match_Rashad3"
-# notification
+# notification Lila_Day 3_At an intake appointment you talk to a therapist to see if you are a match_Rashad3
 ~ notification = "Lila_Day 3_Get a recommendation from friends"
-# notification
+# notification Lila_Day 3_Get a recommendation from friends
 ~ notification = "Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3"
-# notification
+# notification Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3
 
 * Wow, that sounds great. Can you recommend anything else?
   -> Suggestion1

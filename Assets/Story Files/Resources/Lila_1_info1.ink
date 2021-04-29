@@ -63,7 +63,7 @@ Elisa?Neutral "I was just about to ask who the speaker was so I could let them k
 Elisa?Smiling "I could invite everyone I know through my socials to an online event if you made one."
 
 ~ notification = "Elisa_Day 1_Elisa can invite people she knows to an online event"
-# notification
+# notification Elisa_Day 1_Elisa can invite people she knows to an online event
 
 * Is there another way you might be able to get the word out?
   -> Suggestion2
@@ -75,7 +75,7 @@ Elisa?Smiling "If Lila could send me a flyer for the event, I can pass it out to
 Elisa?Smiling "And you know, I can also talk to my gender studies professor, I've heard her speak before and I remember it being very thought-provoking. I'll ask if she's free!"
 
 ~ notification = "Elisa_Day 1_Elisa needs a flyer that she can hang around campus, and give to her friends at the high school to hang up. She also has a gender-studies teacher who could be the speaker_Lila1"
-# notification
+# notification Elisa_Day 1_Elisa needs a flyer that she can hang around campus, and give to her friends at the high school to hang up. She also has a gender-studies teacher who could be the speaker_Lila1
 
 * Hmm, how else could you get the word out?
   -> Suggestion1

@@ -58,11 +58,11 @@ Mrcalindas?Smiling "Well, I would say teletherapy is a great idea. It lets you b
 Mrcalindas?Smiling "Oh, and therapists can have a sliding scale, so you pay based on your income. You should like your therapist." 
 
 ~ notification = "Mrcalindas_Day 3_Teletherapy is a great option for those with busy schedules_Rashad3"
-# notification
+# notification Mrcalindas_Day 3_Teletherapy is a great option for those with busy schedules_Rashad3
 ~ notification = "Mrcalindas_Day 3_Therapists can have a sliding scale. You pay based on your income_Rashad3"
-# notification
+# notification Mrcalindas_Day 3_Therapists can have a sliding scale. You pay based on your income_Rashad3
 ~ notification = "Mrcalindas_Day 3_You should like your therapist"
-# notification
+# notification Mrcalindas_Day 3_You should like your therapist
 
 * Hmm, can you tell me more?
   -> Suggestion2
@@ -74,9 +74,9 @@ Mrcalindas?Smiling "Teletherapy is great for flexible schedules. You can email t
 Mrcalindas?Smiling "You get to know each other. If you like the therapist, you can set up weekly video calls. You can talk to your therapist about anything." 
 
 ~ notification = "Mrcalindas_Day 3_You can talk to your therapist about anything"
-# notification
+# notification Mrcalindas_Day 3_You can talk to your therapist about anything
 ~ notification = "Mrcalindas_Day 3_You can email the office to set up an intake appointment_Rashad3"
-# notification
+# notification Mrcalindas_Day 3_You can email the office to set up an intake appointment_Rashad3
 
 * This is so good to know. Especially about the teletherapy.
   -> Suggestion1

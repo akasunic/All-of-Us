@@ -85,7 +85,7 @@ Rashad?Smiling "That way, it's easier for the hirers to see at a glance that you
 Rashad?Neutral "Hmmm... that's the big one. Maybe tell her to bring a pen and a notepad so she can write down people's information."
 
 ~ notification = "Rashad_Day 1_Bring a pen to take notes_Elisa1"
-# notification
+# notification Rashad_Day 1_Bring a pen to take notes_Elisa1
 
 +Got it! Do you have any tips for good conversation?
     ->RConvoTips
@@ -96,7 +96,7 @@ Rashad?Smiling "Sure! The conversation doesn't have to be about marketing yourse
 Rashad?Smiling "So, you could turn the tables on the recruiter- ask them what drew them to the company, what it's like to work there, stuff like that!"
 
 ~ notification = "Rashad_Day 1_Be sure to prepare questions to ask the hirers_Elisa1"
-# notification
+# notification Rashad_Day 1_Be sure to prepare questions to ask the hirers_Elisa1
 
 +Awesome! One last question then, do you have any general tips for success?
     ->RGeneralTips
@@ -117,9 +117,9 @@ Rashad?Smiling "Well, either way, if she needs help she can always swing by the 
 Rashad?Smiling "She'll probably want to email the recruiters or add them on Linkedin after the fair. I can help her set that up if she doesn't have an account yet."
 
 ~ notification = "Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1"
-# notification
+# notification Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1
 ~ notification = "Rashad_Day 1_You can go to the library for more help"
-# notification
+# notification Rashad_Day 1_You can go to the library for more help
 
 +Great, thanks Rashad!
     ->segueOut
@@ -130,9 +130,9 @@ Rashad?Smiling "Alright! Well, she'll probably want to email the recruiters or a
 Rashad?Smiling "And if she needs any help reaching out, be sure to let her know that she's welcome to swing by the Library and ask me any questions."
 
 ~ notification = "Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1"
-# notification
+# notification Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1
 ~ notification = "Rashad_Day 1_You can go to the library for more help"
-# notification
+# notification Rashad_Day 1_You can go to the library for more help
 
 +Great, thanks Rashad!
     ->segueOut
@@ -145,9 +145,9 @@ Rashad?Smiling "I know it gets overwhelming with all the folks in the auditorium
 Rashad?Smiling "Plus, doing some positive self-talk before and during the event can help keep your spirits high."
 
 ~ notification = "Rashad_Day 1_Practice positive self-talk during the event_Elisa1"
-# notification
+# notification Rashad_Day 1_Practice positive self-talk during the event_Elisa1
 ~ notification = "Rashad_Day 1_It can get overwhelming with all the people in the auditorium"
-# notification
+# notification Rashad_Day 1_It can get overwhelming with all the people in the auditorium
 
 +What's positive self-talk?
     ->selfTalk
@@ -181,9 +181,9 @@ Rashad?Smiling "Yeah! If you picture a role model or a strong leader before an e
 Rashad?Smiling "When I get nervous, I always picture Billie Dee Williams. Or my uncle. He kind of looks like Billie Dee Williams, now that I think about it... "
 
 ~ notification = "Rashad_Day 1_Visualize your role models for a confidence boost during the event_Elisa1"
-# notification
+# notification Rashad_Day 1_Visualize your role models for a confidence boost during the event_Elisa1
 ~ notification = "Rashad_Day 1_One person you can imagine is Billie Dee Williams"
-# notification
+# notification Rashad_Day 1_One person you can imagine is Billie Dee Williams
 
 +I'll be sure to pass that along! Thanks Rashad!
     ->REnd
@@ -196,9 +196,9 @@ Rashad?Smiling "Yeah, all she'd have to do is picture a role model or a strong l
 Rashad?Smiling "When I get nervous, I always picture Billie Dee Williams. Or my uncle. He kind of looks like Billie Dee Williams, now that I think about it..."
 
 ~ notification = "Rashad_Day 1_Visualize your role models for a confidence boost during the event_Elisa1"
-# notification
+# notification Rashad_Day 1_Visualize your role models for a confidence boost during the event_Elisa1
 ~ notification = "Rashad_Day 1_One person to imagine is Billie Dee Williams"
-# notification
+# notification Rashad_Day 1_One person to imagine is Billie Dee Williams
 
 +I'll be sure to pass that along! Thanks Rashad!
     ->REnd

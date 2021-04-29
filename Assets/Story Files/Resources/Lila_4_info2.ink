@@ -50,7 +50,7 @@ Elisa?Smiling "Are you sure she isn't too busy?"
 Elisa?Smiling "Then I would love to!"
 
 ~ notification = "Elisa_Day 4_Elisa wants to get to know Lila better, and is going to reach out this weekend to set up a coffee date_Lila4"
-# notification
+# notification Elisa_Day 4_Elisa wants to get to know Lila better, and is going to reach out this weekend to set up a coffee date_Lila4
 
 * Nice! Lila's not the best at reaching out, otherwise I think she would have already. She sees a lot of herself in you.
     -> Goodbye
