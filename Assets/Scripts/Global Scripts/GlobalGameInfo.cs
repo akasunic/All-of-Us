@@ -14,6 +14,10 @@ public class GlobalGameInfo
     // player's pronouns
     public static string pronouns;
 
+    // engagement level
+    private static readonly int MAX_ENGAGEMENT = 20;
+    private static int engagement = 0;
+
     //an enum for notifications
     public enum NOTIFICATION {
         INFO,
@@ -314,5 +318,21 @@ public class GlobalGameInfo
             currentDay = 4;
         }
         Debug.Log("Current Day: " + currentDay);
+    }
+
+    // call this function using GlobalGameInfo.GetEngagement()
+    public static int GetEngagement()
+    {
+        return engagement;
+    }
+
+    // call this function using GameManager.Instance.IncreaseEngagement()
+    public static void IncreaseEngagement()
+    {
+        if (engagement < MAX_ENGAGEMENT)
+        {
+            engagement++;
+        }
+        Debug.Log("New Engagement = " + engagement);
     }
 }
