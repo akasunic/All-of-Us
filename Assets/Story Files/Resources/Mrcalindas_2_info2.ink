@@ -52,9 +52,9 @@ Lila?Smiling "Oh there's lots of benefits too. You know, seniors can suffer from
 Lila?Smiling "Not just that, but volunteering can also increase mental cognition. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
 
 ~ notification = "Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2"
-# notification
+# notification Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2
 ~ notification = "Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2"
-# notification
+# notification Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion2
@@ -66,9 +66,9 @@ Lila?Smiling "Well, you know seniors can suffer depression especially after losi
 Lila?Smiling "There's so many different volunteering activities available. It just depends on what they like, and what makes them feel good." 
 
 ~ notification = "Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse"
-# notification
+# notification Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse
 ~ notification = "Lila_Day 2_There are many different types of activities available"
-# notification
+# notification Lila_Day 2_There are many different types of activities available
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion1

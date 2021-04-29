@@ -55,7 +55,7 @@ Rashad?Neutral "Children with sensory issues can have a great time doing normal 
 Rashad?Smiling "Well, one thing you can do is make sure that all the activities are labeled so that each family knows what to do in each area. That way you can set up expectations."
 
 ~ notification = "Rashad_Day 4_Put up visual signs that explain activities"
-# notification
+# notification Rashad_Day 4_Put up visual signs that explain activities
 
 * That's a great idea. I think a bit more, though. Do you have any other suggestions?
   -> Suggestion2
@@ -67,9 +67,9 @@ Rashad?Smiling "Well, one way to really support families and children is to make
 Rashad?Smiling "I also like to give parents a hand out of all the activities or some sort of map, for the kids to see. That way families and children can decide what they want to do and prepare."
 
 ~ notification = "Rashad_Day 4_Providing a list or a map of activities helps children know what to expect_Mrcalindas4"
-# notification
+# notification Rashad_Day 4_Providing a list or a map of activities helps children know what to expect_Mrcalindas4
 ~ notification = "Rashad_Day 4_A separate quiet and calm space can help children who need a sensory break_Mrcalindas4"
-# notification
+# notification Rashad_Day 4_A separate quiet and calm space can help children who need a sensory break_Mrcalindas4
 
 * Wow, I can definitely get that done for the weekend. DO you have any other tips?
   -> Suggestion1

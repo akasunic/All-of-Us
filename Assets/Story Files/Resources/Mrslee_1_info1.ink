@@ -58,7 +58,7 @@ Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into he
 ==Suggestion1==
 Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I give her a big pep talk."
 ~ notification = "Lila_Day 1_Maybe it’s time i give her a big pep talk"
-# notification
+# notification Lila_Day 1_Maybe it’s time i give her a big pep talk
 
 * Maybe you could go with her to the pharmacy
   -> Suggestion2
@@ -68,7 +68,7 @@ Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I gi
 ==Suggestion2==
 Lila?Smiling "I can go to the pharmacy with Mrs. Lee. I can support her! I love that lady."
 ~ notification = "Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1"
-# notification
+# notification Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1
 
 * I think that would make her feel really comfortable if you were with her.
   -> Goodbye

@@ -57,9 +57,9 @@ Lila?Neutral "Oh that sounds great! I wish more community providers asked what t
 Lila?Smiling "Oh, and it can be hard to get to the health center for people who live on the outskirts of Bloomwood. So maybe public transportation vouchers for health events." 
 
 ~ notification = "Lila_Day 1_Transportation Vouchers can be available"
-# notification
+# notification Lila_Day 1_Transportation Vouchers can be available
 ~ notification = "Lila_Day 1_Parenting classes can help parents with their children's health"
-# notification
+# notification Lila_Day 1_Parenting classes can help parents with their children's health
 
 * That sounds really thoughtful. Can you think of anything else that the community would need to know?
   -> Suggestion2
@@ -71,9 +71,9 @@ Lila?Smiling "Well, it's important for marginalized communities like PoC and LGB
 Lila?Smiling "We can face a lot of stigma, and that harms access to care. Oh, and mental health resources are useful for everyone. We all get stressed or have hard times." 
 
 ~ notification = "Lila_Day 1_LGBTQIA and POC populations can face stigma in healthcare_Mrcalindas1"
-# notification
+# notification Lila_Day 1_LGBTQIA and POC populations can face stigma in healthcare_Mrcalindas1
 ~ notification = "Lila_Day 1_Mental Health help is useful for everyone _Mrcalindas1"
-# notification
+# notification Lila_Day 1_Mental Health help is useful for everyone _Mrcalindas1
 
 * That sounds really thoughtful. Can you think of anything else that the community would need to know?
   -> Suggestion1

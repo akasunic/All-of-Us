@@ -58,7 +58,7 @@ Mrcalindas?Smiling "But I mean, lots has changed recently, like the online tools
 Mrcalindas?Smiling "Ah, are you getting migraines all the time? You should make an appointment to get the doc to check it out."
 Mrcalindas?Smiling "It's probably nothing but we want to keep an eye on symptoms that, y'know, return frequently."
 ~ notification = "Mrcalindas_Day 2_Migraine headaches should be checked out by a doctor"
-# notification
+# notification Mrcalindas_Day 2_Migraine headaches should be checked out by a doctor
 
 * Actually, I'm asking for a friend.
   -> Suggestion2
@@ -69,7 +69,7 @@ Mrcalindas?Smiling "It's probably nothing but we want to keep an eye on symptoms
 Mrcalindas?Smiling "I see. Well tell your friend to make an appointment."
 Mrcalindas?Smiling "And it would be really good if they could track their symptoms and how often the headaches are happening, just so the doc can get a complete understanding of their situation."
 ~ notification = "Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2"
-# notification
+# notification Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2
 
 * Yeah, I will definitely do that.
   -> Goodbye

@@ -44,7 +44,7 @@ What kind of ordeal?
 ==Suggestion1==
 Elisa?Smiling "Actually it is a good idea, but they write down any questions or symptoms to bring up to the doctor."
 ~ notification = "Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3"
-# notification
+# notification Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3
 
 * That's smart, and so they just read it?
   -> Suggestion2
@@ -55,7 +55,7 @@ Elisa?Smiling "Actually it is a good idea, but they write down any questions or 
 Elisa?Smiling "Yeah, my parents don't speak English as good as me so like when my dad goes he gets a spanish translator to come into the room with him."
 Elisa?Smiling "And they will translate any of his questions. I'm pretty sure it's only available for spanish at our clinic here."
 ~ notification = "Elisa_Day 3_Translators can sit in on the doctor's appointment (Spanish only)"
-# notification
+# notification Elisa_Day 3_Translators can sit in on the doctor's appointment (Spanish only)
 
 * That's a good resource though
   -> Suggestion1

@@ -58,11 +58,11 @@ Mrcalindas?Smiling "Melatonin, helps you to sleep when taken before bed, but che
 Mrcalindas?Smiling "Physical activity, and mindfulness activities like yoga can all help with stress. They can try that." 
 
 ~ notification = "Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better"
-# notification
+# notification Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better
 ~ notification = "Mrcalindas_Day 2_Physical activity can relieve stress_Rashad2"
-# notification
+# notification Mrcalindas_Day 2_Physical activity can relieve stress_Rashad2
 ~ notification = "Mrcalindas_Day 2_Mindfulness activities like yoga can relieve stress"
-# notification
+# notification Mrcalindas_Day 2_Mindfulness activities like yoga can relieve stress
 
 * {not Suggestion2} Hmm. That sounds good, but I think this is really serious.
   -> Suggestion2
@@ -73,9 +73,9 @@ Mrcalindas?Smiling "Physical activity, and mindfulness activities like yoga can 
 Mrcalindas?Smiling "Hmm. Stress, can harm your heart over time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
 
 ~ notification = "Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2"
-# notification
+# notification Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2
 ~ notification = "Mrcalindas_Day 2_Consider Counseling or therapy in addition to exercise_Rashad2"
-# notification
+# notification Mrcalindas_Day 2_Consider Counseling or therapy in addition to exercise_Rashad2
 
 * {not Suggestion1} Thank you so much, is there anything else?
   -> Suggestion1

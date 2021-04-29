@@ -53,9 +53,9 @@ Elisa?Smiling "Perfect for me? Really? I love the library. Can you tell me more?
 Elisa?Smiling "Do you know if it would be good for a student? I will definately apply, I love YA literature. I spend all my time there already."
 
 ~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1"
-# notification
+# notification Elisa_Day 1_She loves YA Literature_Rashad1
 ~ notification = "Elisa_Day 1_She spends a lot of time already"
-# notification
+# notification Elisa_Day 1_She spends a lot of time already
 
 * {not Suggestion2} Yes! It would be. Do you want to know anything else?
   -> Suggestion2
@@ -66,11 +66,11 @@ Elisa?Smiling "Do you know if it would be good for a student? I will definately 
 Elisa?Smiling "Do you know if I need a reference or how to apply?"
 
 ~ notification = "Elisa_Day 1_You will write her a reference_Rashad1"
-# notification
+# notification Elisa_Day 1_You will write her a reference_Rashad1
 ~ notification = "Elisa_Day 1_She will use the website to apply_Rashad1"
-# notification
+# notification Elisa_Day 1_She will use the website to apply_Rashad1
 ~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1"
-# notification
+# notification Elisa_Day 1_Elisa will apply to the job_Rashad1
 
 * Yes, I can write you a reference and you can apply on the library website. Any other questions?
   -> Suggestion1

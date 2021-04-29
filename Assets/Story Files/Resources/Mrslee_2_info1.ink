@@ -57,7 +57,7 @@ Rashad?Smiling "Yeah we have tons of workshops at the library. It's an awesome r
 ==Suggestion1==
 Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of people show up for this one."
 ~ notification = "Rashad_Day 2_Mrs. Lee can go to the health programming workshop at the library"
-# notification
+# notification Rashad_Day 2_Mrs. Lee can go to the health programming workshop at the library
 
 * If I get some things done today, I might come by! Will you still be here?
   -> Suggestion2
@@ -67,7 +67,7 @@ Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of
 ==Suggestion2==
 Rashad?Smiling "Heck yeah! If you're in the library, it is literally my job to help you. Need something? I got you."
 ~ notification = "Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2"
-# notification
+# notification Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2
 
 * You are the best Rashad, you don't even know!
   -> Goodbye

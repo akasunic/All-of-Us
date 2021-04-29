@@ -52,9 +52,9 @@ Mrslee?Smiling "She's moving here? To live with Giancarlo? That's nice. Aerobic 
 Mrslee?Smiling "Well, you should talk to a doctor before you start a physical activity. She should know that. You can also just sign u on line or at the Community Center front desk." 
 
 ~ notification = "Mrslee_Day 2_Talk to a doctor before you start a physical routine"
-# notification
-~ notification = "Mrslee_Day 2_You can sign up for classes online or in person."
-# notification
+# notification Mrslee_Day 2_Talk to a doctor before you start a physical routine
+~ notification = "Mrslee_Day 2_You can sign up for classes online or in person"
+# notification Mrslee_Day 2_You can sign up for classes online or in person
 
 * {not Suggestion2} That sounds great, do you anything else about the health or social benefits?
   -> Suggestion2
@@ -66,11 +66,11 @@ Mrslee?Smiling "Oh, yes! For seniors, group exercise is very social. I have a lo
 Mrslee?Smiling "I can stay active and fit, which let's me be independent. It helps me feel strong and keeps my balance up. I love it!"
 
 ~ notification = "Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2
 ~ notification = "Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2
 ~ notification = "Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2
 
 * {not Suggestion1} That sounds amazing! Is there anything else, I should know?
   -> Suggestion1

@@ -44,10 +44,10 @@ Mrcalindas?Neutral "Yes it's just so tragic that he passed. Heart attacks are no
 Mrcalindas?Neutral "Yeah, high blood pressure, y'know, it can lead to a fatal heart attack if you don't keep it in check."
 Mrcalindas?Neutral "You got the at-home monitoring machines, you really can do so much. I wish I could have helped him more. I think Mrs. Lee feels the same way."
 Mrcalindas?Neutral "It's sad. Oh, it looks like I have to get back to work in a second."
-~ notification = "Mrcalindas_Day 1_At-home monitoring machines can be used for monitoring blood pressure."
-# notification
-~ notification = "Mrcalindas_Day 1_High blood pressure can lead to heart attacks."
-# notification
+~ notification = "Mrcalindas_Day 1_At-home monitoring machines can be used for monitoring blood pressure"
+# notification Mrcalindas_Day 1_At-home monitoring machines can be used for monitoring blood pressure
+~ notification = "Mrcalindas_Day 1_High blood pressure can lead to heart attacks"
+# notification Mrcalindas_Day 1_High blood pressure can lead to heart attacks
 
 * How can I learn more about this?
   -> Explain2
@@ -57,7 +57,7 @@ Mrcalindas?Neutral "It's sad. Oh, it looks like I have to get back to work in a 
 ==Explain2==
 Mrcalindas?Smiling "Actually, I got a minute. Look, you can use our online resources. They're trusted and secure, and we've got apps like the drug information portal. Really neat websites."
 ~ notification = "Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1"
-# notification
+# notification Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1
 
 * Thank you so much for this information!
   -> Goodbye

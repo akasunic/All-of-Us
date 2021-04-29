@@ -57,9 +57,9 @@ Rashad?Smiling "Well, honestly Covid taught us that we need to teach people basi
 Rashad?Smiling "We also know that materials should be in many different languages, so that ESL speakers can access our materials." 
 
 ~ notification = "Rashad_Day 1_Materials need to be in many languages"
-# notification
+# notification Rashad_Day 1_Materials need to be in many languages
 ~ notification = "Rashad_Day 1_Teaching basic hygiene is crucial"
-# notification
+# notification Rashad_Day 1_Teaching basic hygiene is crucial
 
 * thoses are great points. Can you think of anything else?
   -> Suggestion2
@@ -70,7 +70,7 @@ Rashad?Smiling "We also know that materials should be in many different language
 Rashad?Smiling "Hmm. Well, having access to free health classes or mental health classes is really useful. I never remember they have those." 
 
 ~ notification = "Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1"
-# notification
+# notification Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1
 
 * Okay, that sounds good. Can you think of anything else?
   -> Suggestion1
