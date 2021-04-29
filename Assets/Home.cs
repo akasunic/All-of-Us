@@ -104,7 +104,6 @@ public class Home : MonoBehaviour {
     }
 
     public void goToSleep() {
-
         // Only if PC has finished the 5 quests for the day
         // if (InkFileManager.instance.CanAdvanceDay()) {
 

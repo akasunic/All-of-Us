@@ -10,7 +10,7 @@ public class GlobalGameInfo
     private static int currentDay = 0;
 
     // player's name
-    public static string name;
+    public static string name = "";
     // player's pronouns
     public static string pronouns;
 

@@ -197,7 +197,7 @@ public class PhoneScreenManager : MonoBehaviour
     }
     
     void OpenQuestMenu() {
-        string questGiver = QuestManager.questGiver;
+        string questGiver = HelperFunctions.StringFromCharacter(QuestManager.questGiver);
 
         Transform questPreview = questPanel.transform.
             GetChild(0).Find("Quest Preview Background");
