@@ -590,11 +590,12 @@ namespace InkFungus
                     case "no":
                         YesNo(argument, false);
                         break;
-                    //case "notification":
-                    //    // msgQueue.Enqueue((string)story.variablesState["notification"]);
-                    //    GameObject.Find("Notification Message Receiver").
-                    //        SendMessage("Notification", argument);
-                    //    break;
+                    // comment out this case statement to use old notification system
+                    case "notification":
+                        // msgQueue.Enqueue((string)story.variablesState["notification"]);
+                        GameObject.Find("Notification Message Receiver").
+                            SendMessage("Notification", argument);
+                        break;
 
                     default:
                         BroadcastToFungus(command + " " + argument); // simple as that

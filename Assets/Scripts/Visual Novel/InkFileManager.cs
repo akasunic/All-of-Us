@@ -44,6 +44,13 @@ public class InkFileManager : MonoBehaviour {
     private static bool completedDailyLila;
     private static bool completedDailyCalindas;
     private static bool completedDailyLee;
+    public static int DailyQuestsCompleted { get {
+            return (completedDailyRashad ? 1 : 0) +
+                (completedDailyElisa ? 1 : 0) +
+                (completedDailyLila ? 1 : 0) +
+                (completedDailyCalindas ? 1 : 0) +
+                (completedDailyLee ? 1 : 0);
+        } }
 
     public static InkFileManager instance;
     private static bool didAdd = false;
@@ -170,7 +177,7 @@ public class InkFileManager : MonoBehaviour {
     /// Returns true if all quests for the day have been completed
     /// </summary>
     /// <returns></returns>
-    public bool CanAdvanceDay() {
+    public static bool CanAdvanceDay() {
         return completedDailyCalindas && completedDailyElisa &&
             completedDailyLee && completedDailyRashad && completedDailyLila;
     }

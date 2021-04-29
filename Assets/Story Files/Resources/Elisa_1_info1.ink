@@ -44,7 +44,7 @@ Rashad?Smiling "She'll probably want to practice an elevator pitch for when she 
 Rashad?Smiling "The major points to hit would be a personal introduction, what her career goals are, what her experience is, and what she would bring to the company."
 
 ~ notification = "Rashad_Day 1_Prepare an elevator pitch_Elisa1"
-# notification
+# notification Rashad_Day 1_Prepare an elevator pitch_Elisa1
 
 +Elevator pitch, got it. What do you think should she bring to the career fair?
     ->RBringItems
@@ -63,9 +63,9 @@ Rashad?Smiling "They won't always keep them, but if they do, the recruiter might
 Rashad?Smiling "She'll probably want to bring a few different ones, too, if she knows what kinds of jobs she's looking for. A targeted resume can help you stand out to recruiters more."
 
 ~ notification = "Rashad_Day 1_Bring copies of your resume to a career fair_Elisa1"
-# notification
+# notification Rashad_Day 1_Bring copies of your resume to a career fair_Elisa1
 ~ notification = "Rashad_Day 1_Recruiters won't always keep your resume"
-# notification
+# notification Rashad_Day 1_Recruiters won't always keep your resume
 
 +What's a targeted resume?
   ->targetedResume 
