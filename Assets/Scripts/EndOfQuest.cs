@@ -11,6 +11,7 @@ public class EndOfQuest : MonoBehaviour
     [SerializeField]
     public GameObject endOfQuest;
     public TextMeshProUGUI remainDays;
+    public TextMeshProUGUI daysText;
     public TextMeshProUGUI title;
     public TextMeshProUGUI description;
     public GameObject[] pictures;
@@ -43,9 +44,13 @@ public class EndOfQuest : MonoBehaviour
         }
 
         // set texts
-        remainDays.text = GlobalGameInfo.GetRemainDays().ToString();
         title.text = questTitle;
         description.text = quest.description;
+        remainDays.text = GlobalGameInfo.GetRemainDays().ToString();
+        if (GlobalGameInfo.GetRemainDays() <= 1)
+        {
+            daysText.text = "DAY";
+        }
 
         // set character and picture
         for (int i = 0; i < pictures.Length; i++)
