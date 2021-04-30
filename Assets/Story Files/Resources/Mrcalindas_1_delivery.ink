@@ -45,7 +45,7 @@ Mrcalindas?Neutral "I'm just a little worried they won't contain what the commun
 
 ==QuestDetails1==
 Mrcalindas?Neutral "I don't have a lot of time to get materials together, so I need to make sure we are giving the community what it needs."
-Mrcalindas?Neutral "I want to know what the community is really concerned abouut health wise."
+Mrcalindas?Neutral "I want to know what the community is really concerned about health-wise."
 Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know what the community really needs. I want people to trust the Bloomwood Clinic."
 
 * That's really thoughtful, Mr. Calindas. Can you tell me more?
@@ -59,7 +59,7 @@ Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know wh
 Mrcalindas?Neutral "It is important. We care about our patients. During Covid, the community rallied behind us and we worked together."
 Mrcalindas?Neutral "It's important to keep that spirit alive by listening to what they want so we keep their trust."  
 
-* I never thoguht of it that way. People should be able to trust their healthcare professionals.
+* I never thought of it that way. People should be able to trust their healthcare professionals.
   -> QuestDetails2
 * You're absolutely right. I can help you with whatever you need.
   -> QuestAcceptance

@@ -43,7 +43,7 @@ Mrcalindas?Neutral "So it's going to be a while before our next lesson. I need t
 
 ==QuestDetails1==
 
-Mrcalindas?Neutral "Well, she is a very fiesty 72 year old lady. She's very used to being active. Since my father passed she's been lonely and I thought living closer to us would be for the best."
+Mrcalindas?Neutral "Well, she is a very feisty 72 year old lady. She's very used to being active. Since my father passed she's been lonely and I thought living closer to us would be for the best."
 
 * Well, that sounds like a great plan. Did you need any help settling her in?
   -> QuestDetails2

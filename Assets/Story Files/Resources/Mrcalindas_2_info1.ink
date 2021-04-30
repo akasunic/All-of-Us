@@ -49,30 +49,30 @@ Mrslee?Smiling "She's moving here? To live with Giancarlo? That's nice. Aerobic 
   -> Suggestion2
 
 ==Suggestion1==
-Mrslee?Smiling "Well, you should talk to a doctor before you start a physical activity. She should know that. You can also just sign u on line or at the Community Center front desk." 
+Mrslee?Smiling "Well, you should talk to a doctor before you start a physical activity. She should know that. You can also just sign up online or at the Community Center front desk." 
 
 ~ notification = "Mrslee_Day 2_Talk to a doctor before you start a physical routine"
-# notification
-~ notification = "Mrslee_Day 2_You can sign up for classes online or in person."
-# notification
+# notification Mrslee_Day 2_Talk to a doctor before you start a physical routine
+~ notification = "Mrslee_Day 2_You can sign up for classes online or in person"
+# notification Mrslee_Day 2_You can sign up for classes online or in person
 
-* {not Suggestion2} That sounds great, do you anything else about the health or social benefits?
+* {not Suggestion2} That sounds great, do you know anything else about the health or social benefits?
   -> Suggestion2
-* This is perfect information Mrs. Lee. Thank you so much for your time!
+* This is perfect information, Mrs. Lee. Thank you so much for your time!
   -> Goodbye
 
 ==Suggestion2==
 Mrslee?Smiling "Oh, yes! For seniors, group exercise is very social. I have a lot of friends in my classes."
-Mrslee?Smiling "I can stay active and fit, which let's me be independent. It helps me feel strong and keeps my balance up. I love it!"
+Mrslee?Smiling "I can stay active and fit, which lets me be independent. It helps me feel strong and keeps my balance up. I love it!"
 
 ~ notification = "Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2
 ~ notification = "Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2
 ~ notification = "Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2"
-# notification
+# notification Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2
 
-* {not Suggestion1} That sounds amazing! Is there anything else, I should know?
+* {not Suggestion1} That sounds amazing! Is there anything else I should know?
   -> Suggestion1
 * This is perfect information Mrs. Lee. Thank you so much for your time!
   -> Goodbye
@@ -82,5 +82,5 @@ Mrslee?Smiling "Thank you for asking me, {player_name}. Let me know when she get
 
 * Goodbye, Mrs. Lee. Have a wonderful day!
   ->END
-* Goodbye, Mrs. lee, have a great time with Lila and the kiddos today!
+* Goodbye, Mrs. Lee, have a great time with Lila and the kiddos today!
   ->END

@@ -286,6 +286,9 @@ public class GlobalGameInfo
         GlobalGameInfo.todoList.Add(new TodoItem(title, c));
         untaggedTodoObjects++;
         notificationCallback(NOTIFICATION.TODO);
+
+        // Data collection
+        DataCollection.LogEvent("Quest added! Quest title: " + title + ", Character: " + c, "QUEST ADDED");
     }
 
     public static ChecklistItem addNewTodoToExistingList(string title, string checklistitem)
@@ -304,6 +307,9 @@ public class GlobalGameInfo
         GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
+
+        // Data collection
+        DataCollection.LogEvent("Journal info added! Info: " + description + ", Character: " + character, "JOURNAL INFO");
     }
 
     public static void addNewItemToContactsList(CharacterItem c) {

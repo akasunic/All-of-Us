@@ -18,9 +18,9 @@ Rashad?Smiling "Hey, hey {player_name}! Glad to see you. The next book in that N
 
 ==Chat1==
 
-Rashad?Smiling "I got us a grant to add more Black and Latine authors to our shelves, so if you have reccommendations, I'm here for them."
+Rashad?Smiling "I got us a grant to add more Black and Latine authors to our shelves, so if you have recommendations, I'm here for them."
 
-* I do have some reccommendations. Congrats on the grant, that's really exciting.
+* I do have some recommendations. Congrats on the grant, that's really exciting.
   -> Chat2
 * I can totally pass those on later. I have a quick question for you, though.
   -> Explain1
@@ -57,11 +57,11 @@ Rashad?Smiling "Well, honestly Covid taught us that we need to teach people basi
 Rashad?Smiling "We also know that materials should be in many different languages, so that ESL speakers can access our materials." 
 
 ~ notification = "Rashad_Day 1_Materials need to be in many languages"
-# notification
+# notification Rashad_Day 1_Materials need to be in many languages
 ~ notification = "Rashad_Day 1_Teaching basic hygiene is crucial"
-# notification
+# notification Rashad_Day 1_Teaching basic hygiene is crucial
 
-* thoses are great points. Can you think of anything else?
+* Those are great points. Can you think of anything else?
   -> Suggestion2
 * That sounds pretty great. I'll take these suggestions back to the clinic.
   -> Goodbye
@@ -70,7 +70,7 @@ Rashad?Smiling "We also know that materials should be in many different language
 Rashad?Smiling "Hmm. Well, having access to free health classes or mental health classes is really useful. I never remember they have those." 
 
 ~ notification = "Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1"
-# notification
+# notification Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1
 
 * Okay, that sounds good. Can you think of anything else?
   -> Suggestion1

@@ -42,7 +42,7 @@ Rashad?Neutral "We are not doing a potato sack race again."
 
 ==Explain2==
 
-Rashad?Neutral "Hmm. Tech classes,  or classes for seniors, or bilingual tech classes?" 
+Rashad?Neutral "Hmm. Tech classes, or classes for seniors, or bilingual tech classes?" 
 
 * I'm looking for a tech class for seniors taught in Tagalog or Spanish.
   -> Suggestion1
@@ -53,7 +53,7 @@ Rashad?Neutral "Hmm. Tech classes,  or classes for seniors, or bilingual tech cl
 Rashad?Smiling "Well, we actually have free tech classes in Spanish and Tagalog. You can sign up at the front desk. They aren't specifically for seniors, but they're small and hands on."  
 
 ~ notification = "Rashad_Day 3_The Library offers small free tech classes in Tagalog and Spanish but they aren't senior specific._Mrcalindas3"
-# notification
+# notification Rashad_Day 3_The Library offers small free tech classes in Tagalog and Spanish but they aren't senior specific._Mrcalindas3
 
 * That's great to know! Is there anything else I should think of?
   -> Suggestion2
@@ -65,11 +65,11 @@ Rashad?Smiling "Well, you know new tech can be really difficult for seniors. The
 Rashad?Smiling "However, it's great to keep families talking to each other and keep up strong bonds." 
 
 ~ notification = "Rashad_Day 3_Seniors can use technology to connect with family and keep bonds strong"
-# notification
+# notification Rashad_Day 3_Seniors can use technology to connect with family and keep bonds strong
 ~ notification = "Rashad_Day 3_The internet and new tech can be overwhelming for seniors"
-# notification
+# notification Rashad_Day 3_The internet and new tech can be overwhelming for seniors
 
-* Hmm. That sounds wonderful. does the library offer any programs to help?
+* Hmm. That sounds wonderful. Does the library offer any programs to help?
   -> Suggestion1
 * This is great information to keep in mind. Thanks.
   -> Goodbye
@@ -79,7 +79,7 @@ Rashad?Smiling "However, it's great to keep families talking to each other and k
 Rashad?Smiling "Happy to help out. Now if you'll excuse me, I'm going to go get a presentation ready for the Board."
 Rashad?Smiling "There's a couple programs for seniors I think we could improve. Be good, {player_name}" 
 
-* Good Luck Rashad! Take care.
+* Good luck Rashad! Take care.
   ->END
-* Bye Bro! Good luck!
+* Bye bro! Good luck!
   ->END

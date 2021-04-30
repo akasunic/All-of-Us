@@ -27,7 +27,7 @@ Elisa?Smiling "Hah. Well, I'm sure you'll be fine. You're usually happy to keep 
 
 Elisa?Smiling "Cotton candy? You sound way too excited for cotton candy. I thought only kids were this excited."
 
-* Look, Elisa, here is some advice from the other side. Never get too old to be excited about sugar on a stick. Or any food on a stick.
+* Look, Elisa, here is some advice from the other side. You never get too old to be excited about sugar on a stick. Or any food on a stick.
   -> Chat3
 * Well, maybe I just never grew up. Hmm.  I popped by to ask Rashad something, but you might be able to help.
   -> Explain1
@@ -36,7 +36,7 @@ Elisa?Smiling "Cotton candy? You sound way too excited for cotton candy. I thoug
 
 Elisa?Smiling "Okay, fair. I do love corndogs. And Satay. And- okay food on a stick is pretty great." 
 
-* See. Never be too old for food on a stick. Hmm. I popped by to ask Rashad something, but you might be able to help.
+* See. Never too old for food on a stick. Hmm. I popped by to ask Rashad something, but you might be able to help.
   -> Explain1
 
 ==Explain1==
@@ -44,23 +44,23 @@ Elisa?Neutral "Oh cool? Is it about food on a stick, or something else?"
 
 * Oh, no it's about technology.
   -> Explain2
-* Definately somehting else. I've got a tech question.
+* Definitely somehting else. I've got a tech question.
   -> Explain2
 
 ==Explain2==
 
-Elisa?Neutral "A tech question? and you didn't just look it up? Or watch a video?" 
+Elisa?Neutral "A tech question? And you didn't just look it up? Or watch a video?" 
 
 * It's not for me, it's for Mother Calindas. She needs some help with technology.
   -> Suggestion1
-* Oh no, I'm looking for some Senior tech classes in Spanish or Tagalog. Mother Calindas needs some hands on help. Do you know anything.
+* Oh no, I'm looking for some senior tech classes in Spanish or Tagalog. Mother Calindas needs some hands-on help. Do you know anything?
   -> Suggestion2
 
 ==Suggestion1==
 Elisa?Smiling "Well, when I taught my abuela, we made sure to just turn on the largest font size so she could read everything clearly."
 
-~ notification = "Elisa_Day 3_Providing accessible devices with large fonts can help."
-# notification
+~ notification = "Elisa_Day 3_Providing accessible devices with large fonts can help"
+# notification Elisa_Day 3_Providing accessible devices with large fonts can help
 
 * Oh, that sounds helpful. But I think I'm looking for some classes she could join or a tutor. Do you know anything like that?
   -> Suggestion2
@@ -72,11 +72,11 @@ Elisa?Smiling "Oh, yeah. The internet can be really overwhelming for seniors. If
 Elisa?Smiling "Like a tutor. We can do it all in Spanish too." 
 
 ~ notification = "Elisa_Day 3_The internet and new tech can be overwhelming for seniors_Mrcalindas3"
-# notification
+# notification Elisa_Day 3_The internet and new tech can be overwhelming for seniors_Mrcalindas3
 ~ notification = "Elisa_Day 3_Elisa is willing to teach some basic tech in Spanish_Mrcalindas3"
-# notification
+# notification Elisa_Day 3_Elisa is willing to teach some basic tech in Spanish_Mrcalindas3
 
-* That's such a greta idea, Elisa. Is there anything else we should keep in mind?
+* That's such a great idea, Elisa. Is there anything else we should keep in mind?
   -> Suggestion1
 * You're so generous, Elisa. I'll have Mr. Calindas email you.
   -> Goodbye
@@ -86,5 +86,5 @@ Elisa?Smiling "Sure, no problem. I hope Mother Calindas is settling in okay. Any
 
 * See ya, Elisa!
   ->END
-* Have an awesome day, and thanks!.
+* Have an awesome day, and thanks!
   ->END

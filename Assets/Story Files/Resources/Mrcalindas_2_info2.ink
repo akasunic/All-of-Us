@@ -23,7 +23,7 @@ Lila?Smiling "Ooo. What did you pick up? I just checked out some new picture boo
   -> Explain1
 
 ==Chat2==
-Lila?Smiling "Chili eh? I have a great recipe for vegan chili if you ever want to try it. It's so easy, the kids in my class make it with me."
+Lila?Smiling "Chili, eh? I have a great recipe for vegan chili if you ever want to try it. It's so easy, the kids in my class make it with me."
 
 * Ooo. I may have to take you up on that. Oh, hey, can I ask you a question?
   -> Explain1
@@ -36,7 +36,7 @@ Lila?Neutral "Sure, {player_name}. What's going on?"
 
 * You got Mrs. Lee that volunteer position, right?
   -> Explain2
-* Well, I think you got Mrs. lee that volunteer position, and I'm curious.
+* Well, I think you got Mrs. Lee that volunteer position, and I'm curious.
   -> Explain2
 
 ==Explain2==
@@ -52,9 +52,9 @@ Lila?Smiling "Oh there's lots of benefits too. You know, seniors can suffer from
 Lila?Smiling "Not just that, but volunteering can also increase mental cognition. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
 
 ~ notification = "Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2"
-# notification
+# notification Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2
 ~ notification = "Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2"
-# notification
+# notification Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion2
@@ -66,9 +66,9 @@ Lila?Smiling "Well, you know seniors can suffer depression especially after losi
 Lila?Smiling "There's so many different volunteering activities available. It just depends on what they like, and what makes them feel good." 
 
 ~ notification = "Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse"
-# notification
+# notification Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse
 ~ notification = "Lila_Day 2_There are many different types of activities available"
-# notification
+# notification Lila_Day 2_There are many different types of activities available
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion1

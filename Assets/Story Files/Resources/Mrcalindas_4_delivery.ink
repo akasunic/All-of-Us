@@ -13,7 +13,7 @@ Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. 
 
 * Hello Mr. Calindas, this looks so sweet. Wait. Is that a unicorn?
   -> Chat1
-* Hey Mr. Calindas! This is so cute, how old is Brooklyn, now?
+* Hey Mr. Calindas! This is so cute, how old is Brooklyn now?
   -> QuestIntro
 
 ==Chat1==
@@ -29,7 +29,7 @@ Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't e
 
 Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her attending the Block Party. It could be a little loud for her..." 
 
-* Oh, really? How old is Brooklyn, now? -> QuestIntro
+* Oh, really? How old is Brooklyn now? -> QuestIntro
 
 ==QuestIntro==
 

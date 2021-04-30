@@ -21,14 +21,14 @@ Mrcalindas?Smiling "Oh, just some classics. I did find a book about cooking panc
 
 * That sounds really fun. I would totally volunteer to taste test.
   -> Chat2
-* That's a great idea, and sound so much fun. Hey, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
+* That's a great idea, and sounds like so much fun. Hey, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
   -> ReadyToSolve
 
 ==Chat2==
 
-Mrcalindas?Neutral "I am not suprised. I'll have Brooklyn and Lucy bring some next door. Maybe you want to take this out after us!" 
+Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some next door. Maybe you want to borrow this after us!" 
 
-* If it has an easy to follow recipe, I'm there. Oh, before I forget, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
+* If it has an easy-to-follow recipe, I'm there. Oh, before I forget, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
   -> ReadyToSolve
 * Well, if it has a recipe I'm there. I'm glad I ran into you, though. I have some information on tech classes.
   -> ReadyToSolve
@@ -63,7 +63,7 @@ Mrcalindas?Smiling "My Mother is going to be so excited. It's always nice to hav
 
 ==BadSolution==
 
-Mrcalindas?Neutral "Hmm. Well, we know it's overwhelming It's why we asked about programs. We could make sure she turns up the font, though... Thank you I guess?" 
+Mrcalindas?Neutral "Hmm. Well, we know it's overwhelming. That's why we asked about programs. We could make sure she turns up the font, though... Thank you I guess?" 
 
 * Wait a second, let me try that again.
   -> PuzzleInterface
@@ -71,11 +71,11 @@ Mrcalindas?Neutral "Hmm. Well, we know it's overwhelming It's why we asked about
   -> TempGoodbye
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling " "
+Mrcalindas?Smiling "I will!"
 
 * Goodbye!
   -> END
-* Goodbye a different way!
+* See you!
   -> END
 
 ==TempGoodbye==

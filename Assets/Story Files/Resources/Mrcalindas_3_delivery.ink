@@ -29,7 +29,7 @@ Mrcalindas?Smiling "When I suggested aerobics, she was very excited, and I've si
 Mrcalindas?Smiling "Well, let me tell you. There's yoga, there's weightlifting, there's aerobics..."
 Mrcalindas?Smiling "There's a lot to keep you active now. Which is good, because my mother has hypertension. The exercise is good for her." 
 
-* Well, keeping fit sounds like a family motto here. s there anything else she may need?
+* Well, keeping fit sounds like a family motto here. Is there anything else she may need?
   -> QuestIntro
 
 ==QuestIntro==

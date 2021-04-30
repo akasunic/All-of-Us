@@ -63,12 +63,12 @@ Mrcalindas?Smiling "We can sit down and plan how best to support everyone that d
 
 ==BadSolution==
 
-Mrcalindas?Neutral "Ah. I see. Well, at least everything will be well labeled. I don't know how we are going to help her if she feel overstimulated, though."
+Mrcalindas?Neutral "Ah. I see. Well, at least everything will be well labeled. I don't know how we are going to help her if she feels overstimulated, though."
 Mrcalindas?Neutral "Wish there was something to do about that..."
 
 * Wait, I think we can do more. Let me try that again.
   -> PuzzleInterface
-* You're right, Mr. Calindas. there's more I can think of. I'll get right back to you.
+* You're right, Mr. Calindas. There's more I can think of. I'll get right back to you.
   -> TempGoodbye
 
 ==SolvedGoodbye==
@@ -77,7 +77,7 @@ Mrcalindas?Smiling "I'm pretty sure if I leave her any longer she will end up wi
 
 * I'm looking forward to it. Give everyone my love! Bye!
   -> END
-* I am not surprised Mother calindas is as busy as you are. Tell everyone, hello for me!
+* I am not surprised Mother Calindas is as busy as you are. Tell everyone hello for me!
   -> END
 
 ==TempGoodbye==

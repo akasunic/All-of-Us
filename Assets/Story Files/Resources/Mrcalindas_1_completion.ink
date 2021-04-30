@@ -11,9 +11,9 @@ Mrcalindas?Smiling "Back already? What did you do, run around the neighborhood?"
 
 * {not TempGoodbye} Maybe I did, maybe I slowly walked while eating all the ensaymadas.
     -> Chat1
-* {not TempGoodbye} I definately did. Ensaymadas are my motivator. Ready to find out what I learned? 
+* {not TempGoodbye} I definitely did. Ensaymadas are my motivator. Ready to find out what I learned? 
     -> ReadyToSolve
-* {TempGoodbye} Maybe, I did sir. Maybe, I did.  Ready to find out what I learned?
+* {TempGoodbye} Maybe, I did sir. Maybe, I did. Ready to find out what I learned?
     -> ReadyToSolve
 
 ==Chat1==
@@ -28,7 +28,7 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 ==ReadyToSolve==
 
 Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more and not waste so much time creating a useful experience for the community."
-Mrcalindas?Neutral "So what programs should we focus on at the Health tent to get the community onboard?""  
+Mrcalindas?Neutral "So what programs should we focus on at the health tent to get the community onboard?""  
 
 *  Start Puzzle interface
     -> PuzzleInterface

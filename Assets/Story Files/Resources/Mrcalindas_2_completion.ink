@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ===intro===
 
-Mrcalindas?Neutral "{player_name}! I'm glad you popped in. I apologize. I know you're so busy, and I aksed you for all that help. No worries if you can't get to it, with all the Block Party, planning." 
+Mrcalindas?Neutral "{player_name}! I'm glad you popped in. I apologize. I know you're so busy, and I asked you for all that help. No worries if you can't get to it, with all the Block Party planning." 
 
 * {not TempGoodbye} What! You help me all the time Mr. Calindas. Plus, I am really excited to meet your Mom.
   -> Chat1
@@ -52,7 +52,7 @@ Mrcalindas?Smiling "That's so sweet of you, {player_name}. Can you tell me what 
 
 ==GoodSolution==
 
-Mrcalindas?Smiling "My Mother Loves volunteering, she's very community minded, so that's good to hear. Plus I didn't know that it could ease depression. My Mother is a widow, so..."
+Mrcalindas?Smiling "My Mother loves volunteering, she's very community minded, so that's good to hear. Plus I didn't know that it could ease depression. My Mother is a widow, so..."
 Mrcalindas?Smiling "Also, I don't know why I didn't think of aerobics classes. My Mother loves to dance. This is great advice." 
 
 * I'm so happy this helps, Mr. Calindas!
