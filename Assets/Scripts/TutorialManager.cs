@@ -78,7 +78,7 @@ public class TutorialManager : MonoBehaviour
         switch (stage)
         {
             case 1:
-                dialogue.transform.position = dialoguePosition + new Vector3(0, 200, 0);
+                dialogue.transform.position = dialoguePosition + new Vector3(0, 300, 0);
                 break;
             case 2:
                 dialogue.transform.position = dialoguePosition;
@@ -86,6 +86,9 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 3:
                 dialogue.SetActive(false);
+                break;
+            case 6:
+                OpenNextStage();
                 break;
             case 7:
                 contentText.text = "I use my phone to keep track of all the things I need to remember as a Community Liaison, and a good neighbor.";
