@@ -10,7 +10,7 @@ VAR new_quest = ""
 # new_quest
 ~ new_contact = "Elisa"
 # new_contact
-Elisa?Smiling "Oh hey {player_name}! Wow, I haven't seen you since __, how've you been?"
+Elisa?Smiling "Oh hey {player_name}! Wow, I haven’t seen you since high school tutoring, how’ve you been?"
 
 *I've been good- hey are you busy this Friday? I would love your help with this block party I'm working on.
   ->BlockTalk
