@@ -239,8 +239,14 @@ public class InkFileManager : MonoBehaviour {
     private CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
         char sep = Path.DirectorySeparatorChar;
         string pwd = Directory.GetCurrentDirectory() + sep;
-        string dir = pwd + "Assets" + sep + "Story Files" + sep + "Resources" +
+        string dir;
+#if UNITY_EDITOR
+        dir = pwd + "Assets" + sep + "Story Files" + sep + "Resources" +
             sep + fileName;
+#elif UNITY_STANDALONE_OSX
+        dir = pwd + "\"Bloomwood Stories Block Party.app\"" + sep +
+        "Contents" + sep + "Resources" + sep + fileName;
+#endif
 
         using (StreamReader reader = File.OpenText(dir)) {
             string line;
