@@ -21,7 +21,7 @@ public class AddToList : MonoBehaviour
                 fillContactList(GlobalGameInfo.contactsList);
                 break;
             default:
-                List<GlobalGameInfo.InfoItem> list = GlobalGameInfo.infoList;
+                List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
                 list.Reverse();
                 fillInfoList(list);
                 break;

@@ -27,6 +27,10 @@ public class TagListManager : MonoBehaviour {
       UpdateList();
     }
 
+    private void OnDestroy() {
+      TagManager.removeDelegate(UpdateList);
+    }
+
     public void SetInfoId(string id){
       infoId = id;
     }
@@ -50,6 +54,10 @@ public class TagListManager : MonoBehaviour {
         string val = list[i];
         tagItem.GetComponent<DetailPageManager>().setText(val);
         listOfTags.Add(tagItem);
+      }
+
+      if(addButtonText == null){
+        return;
       }
 
       if(list.Count == 0){
