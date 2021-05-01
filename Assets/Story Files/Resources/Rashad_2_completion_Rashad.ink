@@ -8,7 +8,7 @@ VAR new_quest = ""
 == intro ==
 Rashad?Smiling "Hey hey, {player_name} it's good to see you. How's it going?"
 
-* {not TempGoodbye} I'm doing well, despite finding glitter everywhere.
+* {not TempGoodbye} I'm doing well, despite finding glitter everywhere from simply setting foot in Lila's classroom.
   -> Chat1
 * {not TempGoodbye} I've really been thinking about you. I found some resources for you.
   -> ReadyToSolve
@@ -18,7 +18,7 @@ Rashad?Smiling "Hey hey, {player_name} it's good to see you. How's it going?"
 ==Chat1==
 Rashad?Smiling "Glitter? You better not get it in a book. That's why we have a whole separate activity room. That stuff <i>travels</i>."
 
-* It does! I was talking to Lila, and she did warn me.
+* It does! Lila did warn me.
   -> Chat2
 * It really does. I asked Lila for some advice, and now...
   -> ReadyToSolve
@@ -34,7 +34,7 @@ Rashad?Neutral "Well, you'd help me sleep better if you made sure to wash your h
 ==ReadyToSolve==
 Rashad?Neutral "That's great, {player_name}. I've really been struggling, and I knew you'd have some great ideas."
 
-* Excellent let's talk about it.
+* Excellent! Let's talk about it.
   -> PuzzleInterface
 * Actually, you know what? I think I need some more time.
   -> TempGoodbye
@@ -46,8 +46,8 @@ Rashad?Neutral "That's great, {player_name}. I've really been struggling, and I 
 *  -> BadSolution
 
 ==GoodSolution==
-Rashad?Smiling "Wow, {player_name}. This <i>is</i> serious. Thank you so much for taking the time to find this out."
-Rashad?Smiling "I haven't tried therapy, and a Black therapist could be really helpful to talk with, you know? And I have been looking to get into running again... I really appreciate this."
+Rashad?Neutral "Wow, {player_name}. This <i>is</i> serious. Thank you so much for taking the time to find this out."
+Rashad?Neutral "I haven't tried therapy, and a Black therapist could be really helpful to talk with, you know? And I have been looking to get into running again... I really appreciate this."
 
 * Oh, and here is a therapist reference from Lila! Anything you need, I got you.
   -> SolvedGoodbye

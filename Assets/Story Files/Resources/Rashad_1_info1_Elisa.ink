@@ -25,20 +25,18 @@ Elisa?Smiling "I'm well! I have a lot on my plate getting ready for school still
   -> Explain1
 
 ==Chat2==
-Elisa?Neutral "It is, a little, bit, honestly. I still have to figure out where to get book expenses from. Ugh, I could use a part time job."
+Elisa?Neutral "It is, a bit, honestly. I still have to figure out where to get money for my books. Ugh, I could use a part time job."
 
- *Well, I may have a solution to that book money, if you wanna hear it?
+ *Well, I may have a solution to that, if you wanna hear it?
   -> Explain1
- *Well, I can't do anything about the stress, but I may have a solution to that book money, if you wanna hear it?
+ *I happened to have stumbled upon something that might be able to help...
   -> Explain1
 
 
 ==Explain1==
 Elisa?Neutral "...Okay? What is it?"
 
- *There's a part time job opening up at the library I think you'd be amazing for. Do you want to hear more?
-  -> Explain2
-*The library has a part time opening, and I think you'd be perfect for.
+ *There's a part time job opening at the library I think you'd be amazing for.
   -> Explain2
 
 ==Explain2==
@@ -50,14 +48,14 @@ Elisa?Smiling "Perfect for me? Really? I love the library. Can you tell me more?
   -> Suggestion2
 
 ==Suggestion1==
-Elisa?Smiling "Do you know if it would be good for a student? I will definately apply, I love YA literature. I spend all my time there already."
+Elisa?Smiling "Do you know if it would be good for a student? I will definitely apply, I love YA literature. I spend all my time there already."
 
 ~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1"
 # notification Elisa_Day 1_She loves YA Literature_Rashad1
 ~ notification = "Elisa_Day 1_She spends a lot of time already"
 # notification Elisa_Day 1_She spends a lot of time already
 
-* {not Suggestion2} Yes! It would be. Do you want to know anything else?
+* {not Suggestion2} Yes! It would be. Did you have any other questions?
   -> Suggestion2
 * Yes! It would be. You can apply through the library's website.
   -> Goodbye
@@ -72,16 +70,16 @@ Elisa?Smiling "Do you know if I need a reference or how to apply?"
 ~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1"
 # notification Elisa_Day 1_Elisa will apply to the job_Rashad1
 
-* Yes, I can write you a reference and you can apply on the library website. Any other questions?
+* {not Suggestion1} Yes, I can write you a reference and you can apply on the library website. Any other questions?
   -> Suggestion1
 * I can write you a reference, and you can apply on the website. That's it!
   -> Goodbye
 
 ==Goodbye==
 Elisa?Smiling "This sounds great, {player_name} I can totally do this. Thanks so much, I really needed to get a part time job,"
-Elisa?Smiling "and I was worried about searching and trying to do everything else I have to do. I've got to head to a club meeting, catch you soon!
+Elisa?Smiling "and I was worried about searching and trying to do everything else I have to do. I've got to head to a club meeting, but I'll catch you soon!
 
 * Catch you soon!
   ->END
-* You'll be awesome! I'll catch you soon!
+* You'll be awesome! I'll see you soon!
   ->END

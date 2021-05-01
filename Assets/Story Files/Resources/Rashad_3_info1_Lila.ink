@@ -34,14 +34,10 @@ Lila?Smiling "Oh? Well, if he ever needs more excitement, he can teach my class.
 
 * I could use your advice. Do you remember when I asked about therapy?
   -> Explain1
-* I'm looking for some advice about therapy. Do you remember our talk?
-  -> Explain1
 
 ==Explain1==
-Lila?Neutral "I do remember! Did my information, help?"
+Lila?Neutral "I do remember! Did my information help?"
 
-* It did! I have some more questions about therapy.
-  -> Explain2
 * You did help, a lot. That's why I'd like to ask you some more questions.
   -> Explain2
 
@@ -55,7 +51,7 @@ Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be di
 
 ==Suggestion1==
 Lila?Smiling "Well, you should find someone you feel comfortable talking to. Making a list of qualities you want in a therapist, and what you want to work on is useful."
-Lila?Smiling "Oh, and you should make sure they accept your insurance."
+Lila?Smiling "You can also do a little research yourself and look at some different common therapy methods to familiarize yourself with what you might like, and to see what's out there. Oh, and you should make sure they accept your insurance."
 
 ~ notification = "Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3"
 # notification Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3
@@ -64,7 +60,7 @@ Lila?Smiling "Oh, and you should make sure they accept your insurance."
 ~ notification = "Lila_Day 3_Ask if they accept your insurance_Rashad3"
 # notification Lila_Day 3_Ask if they accept your insurance_Rashad3
 
-* That's helpful. Do you have any advice about how the process works?
+* {not Suggestion2} That's helpful. Do you have any advice about how the process works?
   -> Suggestion2
 * That's great to know! Thanks so much, Lila.
   -> Goodbye
@@ -80,13 +76,13 @@ Lila?Smiling "At the intake appointment, I asked questions about them and race-b
 ~ notification = "Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3"
 # notification Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3
 
-* Wow, that sounds great. Can you recommend anything else?
+* {not Suggestion1} Wow, that sounds great. Can you recommend anything else?
   -> Suggestion1
 * I'll take this, thank you! Thank you so much for being so open, Lila. Really.
   -> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Hey, mental health is necessary for all of us, right? If you ever need anything else, {player_name} I'm happy to help. Now I'm off to pick up Charlie from doggie daycare. Take care!"
+Lila?Smiling "Hey, mental health is necessary for all of us, right? If you ever need anything else, {player_name} I'm happy to help. Now I'm off to pick up Charlie from his weekly doggie daycare. Take care!"
 
 * Thanks for your help, Lila. Have a good one!
   ->END

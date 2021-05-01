@@ -6,13 +6,13 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I got the bookmobile to come. So we'll be able to do library cards and give away free books. I am really excited about it. Free books!" 
+Rashad?Smiling "Hey {player_name}! Good news, I got the bookmobile to come. So we'll be able to give out library cards and give away free books. I am really excited about it. Free books! Cheers for accessibility!" 
 
 * {not TempGoodbye} That's amazing, Rashad! I'm excited, too!
   -> Chat1
 * {not TempGoodbye} That's so cool Rashad! hey, I think I have some information for you.
   -> ReadyToSolve
-* {TempGoodbye} Wow! I am really excited about this. I also think you'll be excited what I found for you.
+* {TempGoodbye} Wow! I am really excited about this. I also think you'll be excited by what I found for you.
   -> ReadyToSolve
 
 ==Chat1==
@@ -26,8 +26,6 @@ Rashad?Smiling "I am really happy you asked us. We have a lot of work to do, but
 ==Chat2==
 Rashad?Neutral "Well, just a little bit. Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
 
-* I do have some information, actually.
-  -> ReadyToSolve
 * Hey, I wanted to make the time. Now, I do have some information for you, if you're ready.
   -> ReadyToSolve
 
@@ -48,13 +46,11 @@ Rashad?Neutral "Oh, I didn't know you would find out what I needed this soon. Yo
 ==GoodSolution==
  Rashad?Smiling "That good to know. This makes me a lot less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
 
-* Thanks for trusting me. Oh, and there's a running club. Talk to Mr. Calindas about it.
-  -> SolvedGoodbye
-* Thanks for trusting me, Rashad. Oh, and talk to Mr. Calindas. There's a running club you may like.
+* Thanks for trusting me. Oh, and there's a running club you should look into. 2pm on Saturdays at the Community Center with Mr. Calindas!
   -> SolvedGoodbye
 
 ==BadSolution==
-Rashad?Neutral "Hmm, okay. I still don't know what to expect..."
+Rashad?Neutral "Hmm, okay. I still don't quite know what to expect..."
 
 * Wait a second. Let me try that again.
   -> PuzzleInterface

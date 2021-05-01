@@ -14,7 +14,7 @@ Mrcalindas?Smiling "Hello {player_name}. Finally decided to join my running club
   -> Chat1
 
 ==Chat1==
-Mrcalindas?Smiling "Hey, as long as you're getting outside, I'm happy. Now, what do you need? You have the "Help me please, Mr. Calindas face." Do you need to learn how to boil water, again?"
+Mrcalindas?Smiling "Hey, as long as you're getting outside, I'm happy. Now, what do you need? You have the 'Help me please, Mr. Calindas' face. Do you need to learn how to boil water, again?"
 
 * Hey! I only forgot how to boil water that one time...
   -> Chat2
@@ -22,7 +22,7 @@ Mrcalindas?Smiling "Hey, as long as you're getting outside, I'm happy. Now, what
   -> Explain1
 
 ==Chat2==
-Mrcalindas?Smiling "Yes, and that's why we got you that electric kettle. It was easier for you than rememebring to turn the pot off." 
+Mrcalindas?Smiling "Yes, and that's why we got you that electric kettle. It was easier for you than remembering to turn the pot off." 
 
 * Okay, that's fair. You really saved me there.
   -> Chat3
@@ -40,9 +40,7 @@ Mrcalindas?Smiling "I know. Now let's save you again, what do you need now? Fina
 ==Explain1==
 Mrcalindas?Neutral "Stress, eh? Stress is actually a lot more serious than people think it is. It's good you're asking for advice. Can you tell me more?" 
 
-* My friend hasn't been sleeping well due to workplace stress.
-  ->Explain2
-* My friend has been really stressed out. Their sleep is suffering, and I'm worried.
+* My friend hasn't been sleeping well due to workplace stress, and I'm worried.
   ->Explain2
 
 ==Explain2==
@@ -50,12 +48,12 @@ Mrcalindas?Neutral "Hmm. Well, stress can really impact sleep and that's not goo
 
 * Wow, really? Can you give me some tips to help them?
   -> Suggestion1
-* It can affect the heart?! They've really been struggling...
+* It can affect the heart?! Yikes.
   -> Suggestion2
 
 ==Suggestion1==
-Mrcalindas?Smiling "Melatonin, helps you to sleep when taken before bed, but check with a doctor first before taking it."
-Mrcalindas?Smiling "Physical activity, and mindfulness activities like yoga can all help with stress. They can try that." 
+Mrcalindas?Smiling "My first recommendation would be melatonin. It helps you to sleep when taken before bed. Have your friend check with a doctor first before taking it."
+Mrcalindas?Smiling "Physical activity and mindfulness activities like yoga can also help with stress. They can try that as well." 
 
 ~ notification = "Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better"
 # notification Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better
@@ -70,7 +68,7 @@ Mrcalindas?Smiling "Physical activity, and mindfulness activities like yoga can 
   -> Goodbye
 
 ==Suggestion2==
-Mrcalindas?Smiling "Hmm. Stress, can harm your heart over time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
+Mrcalindas?Smiling "Stress can harm your heart over a period of time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
 
 ~ notification = "Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2"
 # notification Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2

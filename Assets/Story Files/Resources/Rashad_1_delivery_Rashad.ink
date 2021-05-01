@@ -15,7 +15,7 @@ Rashad?Smiling "Hey {player_name}! How have you been?"
 
 * I've been okay, but tired. You know how it is. I'm just trying to get this block party started.
   -> Chat1
-* I'm doing really great! I'm really looking forward to this Block Party I've been planning.
+* I'm doing really great! I'm really looking forward to this block party I've been planning. Speaking of, could I ask you about something?
   -> QuestIntro
 
 ==Chat1==
@@ -24,7 +24,7 @@ Rashad?Smiling "Plus, the library has basically become a hub for social services
 
 * Really? That sounds like a lot of work to do.
   -> Chat2
-* I feel you there. Is there anything I can help with?
+* I feel you there. I did have something I wanted to ask you about.
   -> QuestIntro
 
 ==Chat2==
@@ -37,10 +37,9 @@ Rashad?Smiling "Someone has to watch out for <i>us</i>, you know? Anyway adventu
   ->Chat3
 
 == Chat3 ==
-Rashad?Neutral "That's really kind {player_name}. It really is a lot of work, honestly. Between us, the board isn't always understanding when it comes to what the community actually needs."
-Rashad?Neutral "Someone has to watch out for <i>us</i>, you know? Anyway, is there anything I can help you with?" 
+Rashad?Neutral "That's really kind {player_name}. It's manageable right now at least, but maybe we can talk about it at another time."
 
-* Yeah, there's something you can help me with, if you have the time?
+* Okay! Just let me know what you need and I'll be there. If it isn't too much, I wanted to ask you about something.
   -> QuestIntro
 
 ==QuestIntro==
@@ -53,18 +52,18 @@ Rashad?Smiling "Sure, how can I help?"
 
 ==QuestDetails1==
 Rashad?Smiling "Hmm, that's not too hard, but the library is swamped. It would help me a lot if I could find someone for this open position in the YA section."
-Rashad?Smiling "It's perfect for a student, who knows YA Lit. Do you think you may know anyone?"
+Rashad?Smiling "It's perfect for a student, who knows YA Lit. Do you know anyone who might be interested?"
 
-* I may know someone. Can you tell me some more information?
+* I may know someone. Do you have more details about the position?
   -> QuestDetails2
-* Hmm. I'm not sure if I know anyone. Can you tell me some information?
+* Hmm. I'm not sure if I know anyone. Who do you think would be a good fit?
   -> OptionalQuestDetails1
 * Sure! If I can find someone for the job, can we get the library on board?
   -> QuestAcceptance
 
 ==QuestDetails2==
 Rashad?Neutral "Sure! We're looking for a part time worker in the YA section to reshelve books, run a help desk, and run a storytime on Saturdays."
-Rashad?Neutral "If you find someone, just have them send to the posting on the library website."
+Rashad?Neutral "If you find someone, just have them reply to the posting on the library website."
 
 * I think I can find someone, do you think you could do the Block Party if I do?
   -> QuestAcceptance
@@ -72,9 +71,9 @@ Rashad?Neutral "If you find someone, just have them send to the posting on the l
   -> OptionalQuestDetails1
 
 ==OptionalQuestDetails1==
-Rashad?Smiling "I mean, it'd be perfect for a student. You can study when you staff the help desk. Oh, they'll need at <b>least 1 reference</b>, too."
+Rashad?Smiling "I mean, it'd be perfect for a student. They can study when they staff the help desk. Oh, they'll need at <b>least 1 reference</b>, too."
 
-* Accept the quest.
+* That's a reasonable ask. So the block party...?
   -> QuestAcceptance
 
 ==QuestAcceptance==

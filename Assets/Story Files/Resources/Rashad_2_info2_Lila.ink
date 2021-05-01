@@ -48,7 +48,7 @@ Lila?Smiling "Sure! Stress can be really difficult to handle. I suffer from a lo
 
 ==Explain2==
 Lila?Neutral "If your friend is a person of color, they aren't imagining it. Racial stress is real, and can actually cause post traumatic stress."
-Lila?Neutral "That can harm your heart, and lead to other health issues. It's serious." 
+Lila?Neutral "It can harm your heart, and lead to other health issues. It's serious." 
 
 * Do you have any suggestions for them?
   -> Suggestion1
@@ -56,21 +56,21 @@ Lila?Neutral "That can harm your heart, and lead to other health issues. It's se
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Smiling "Well, your friend should talk to someone, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
+Lila?Smiling "Well, your friend should talk to a professional if they can, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
 
 ~ notification = "Lila_Day 2_Racial stress is real, and serious_Rashad2"
 # notification Lila_Day 2_Racial stress is real, and serious_Rashad2
 ~ notification = "Lila_Day 2_Self care activities can help with stress"
 # notification Lila_Day 2_Self care activities can help with stress
 
-* Is that all? Is there anything they can do?
+* {not Suggestion2} Is that all? Is there anything they can do?
   -> Suggestion2
 * That's sounds like good advice, thanks!
   -> Goodbye
 
 ==Suggestion2==
 Lila?Neutral "It's important that your friend see a mental health professional from their cultural background."
-Lila?Neutral "Sustained collective trauma and workplace microagressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS."
+Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS. I've attended therapy for it, and really should continue to."
 
 ~ notification = "Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2"
 # notification Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2
@@ -81,7 +81,7 @@ Lila?Neutral "Sustained collective trauma and workplace microagressions can lead
 ~ notification = "Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2"
 # notification Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2
 
-* That's very helpful, Lila. Do you know any other tips?
+* {not Suggestion1} That's very helpful, Lila. Do you know any other tips?
   -> Suggestion1
 * That's wonderful advice, Lila. Thank you so much.
   -> Goodbye
@@ -89,7 +89,7 @@ Lila?Neutral "Sustained collective trauma and workplace microagressions can lead
 ==Goodbye==
 
 Lila?Smiling "Happy to help, {player_name}. I have the name of some therapists who specialize in racial stress, so if your friend needs a recommendation let me know okay?"
-Lila?Smiling "Now, I'm going to head off and get deglittered. See ya!"
+Lila?Smiling "Now, I'm going to head off and attempt to get deglittered. See ya!"
 
 * Thanks so much, Lila! See you soon!
   ->END

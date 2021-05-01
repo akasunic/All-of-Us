@@ -26,17 +26,17 @@ Rashad?Neutral "What are we going to do with diffusers? In a library?!"
   -> ReadyToSolve
 
 ==Chat2==
-Rashad?Neutral "I know, {player_name}. This is what I mean about the board. They mean well, but the microaggressions can be a bit much."
+Rashad?Neutral "I know, {player_name}. This is what I mean about the board. I think they mean well, but the microaggressions can be a bit much."
 Rashad?Neutral "Anyway, I don't want to take up your time complaining. Do you need anything?"
 
-* You aren't taking my time up. Talking to people is literally my job.
+* You aren't taking up my time. Talking to people is literally my job.
   ->Chat3
 * Hey now, I came to <i>you</i>. Maybe I can lessen the load. I found someone to apply for the position!
   -> ReadyToSolve
 
 ==Chat3== 
-Rashad?Neutral "That's a good point! I just don't want you to think I hate my job. I love this library, and just want to do right by the community."
-Rashad?Neutral "Oh! Did you ever find someone to apply for the Ya position?"
+Rashad?Neutral "That's a good point! I just don't want you to think I hate my job. I love this library, and want to do right by the community."
+Rashad?Neutral "Oh! By the way, did you ever find someone to apply for the YA position?"
 
 *Yes! I totally have someone in mind.
   ->ReadyToSolve
@@ -44,7 +44,7 @@ Rashad?Neutral "Oh! Did you ever find someone to apply for the Ya position?"
   ->ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Smiling " That's great. You did find someone? We've been looking for someone to fill that position for a bit. The library is pretty small, but we have a lot of room for a motivated student"
+Rashad?Smiling "That's great. We've been looking for someone to fill that position for a while. The library is pretty small, but we have a lot of room for a motivated student."
 
 * Start puzzle interface.
   -> PuzzleInterface
@@ -60,9 +60,9 @@ Rashad?Smiling " That's great. You did find someone? We've been looking for some
 ==GoodSolution==
 Rashad?Smiling "Elisa <i>would</i> be a great fit! I do know her. She's really outdoorsy right? She studies here all the time. I'm glad you encouraged her to apply. She'll be an asset here."
 
-* Sweet! Now, do you think that you'd be able to do the Block Party?
+* Sweet! Now, do you think that you'd be able to do the block party?
   -> SolvedGoodbye
-* I thought she could really be a perfect fit. So...Block Party?
+* I wholeheartedly agree. So...block party?
   -> SolvedGoodbye
 
 ==BadSolution==
@@ -74,7 +74,7 @@ Rashad?Neutral "Hmm. I'm not so sure about this one."
   -> TempGoodbye
 
 ==SolvedGoodbye==
-Rashad?Smiling "Yes, we can do the Block Party. Crossing that off my to do list means I can get you a booth now, maybe the bookmobile."
+Rashad?Smiling "Yes, we can do the block party. Crossing that off my to-do list means I can get you a booth now, maybe the bookmobile."
 Rashad?Smiling "We'll be able to sign folks up for library cards and tell them about services. I'll send our Event Coordinator an email now! I'll see you around okay?" 
 
 * Yes! Thanks Rashad. I'll see you this weekend.

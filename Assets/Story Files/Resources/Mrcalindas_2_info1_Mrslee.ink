@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ===intro===
 
-Mrslee?Smiling "Hello {player_name}. How are you doing today?" 
+Mrslee?Smiling "Hello {player_name}. How you today?" 
 
 * Hello Mrs. Lee! I'm so excited I ran into you!
   -> Chat1
@@ -16,7 +16,7 @@ Mrslee?Smiling "Hello {player_name}. How are you doing today?"
 
 ==Chat1==
 
-Mrslee?Smiling "Me? Oh! That's very nice of you to say." 
+Mrslee?Smiling "Me? Oh! That is very nice." 
 
 * Well, it's true. You're always trying to keep fit and engaged. It's really great to talk with you. 
   -> Chat2
@@ -24,7 +24,7 @@ Mrslee?Smiling "Me? Oh! That's very nice of you to say."
   -> Explain1
 
 ==Chat2==
-Mrslee?Smiling "Oh, {player_name} that's so kind of you to say. My aerobics classes make me feel energized. They're really good for you! You should try them." 
+Mrslee?Smiling "Oh, {player_name} so kind. My aerobic class make me feel energy! Really good for you! You try them." 
 
 * Well, I actually want to ask some questions about your classes.
   -> Explain1
@@ -34,14 +34,15 @@ Mrslee?Smiling "Oh, {player_name} that's so kind of you to say. My aerobics clas
 
 ==Explain1==
 
-Mrslee?Smiling "Really? I really enjoy these classes, so I'd be happy to help you. What do you need to know?" 
+Mrslee?Smiling "I really enjoy these class, happy to help. What your question?"
+
 * Mr. Calindas' mother is moving to Bloomwood, and she needs great activities.
   -> Explain2
 * Mr. Calindas' mother is moving here, and I think this might be a fun activity for her.
   -> Explain2
 
 ==Explain2==
-Mrslee?Smiling "She's moving here? To live with Giancarlo? That's nice. Aerobic activities are very good for the mind and body." 
+Mrslee?Smiling "She move here? Live with Giancarlo? That is nice. Aerobic activity very good for mind and body." 
 
 * Are they? Can you tell me more about that?
   -> Suggestion1
@@ -49,7 +50,7 @@ Mrslee?Smiling "She's moving here? To live with Giancarlo? That's nice. Aerobic 
   -> Suggestion2
 
 ==Suggestion1==
-Mrslee?Smiling "Well, you should talk to a doctor before you start a physical activity. She should know that. You can also just sign up online or at the Community Center front desk." 
+Mrslee?Smiling "Well, I think she need to talk to doctor before start new physical activity. She maybe know that. Sign up on computer or at Community Center front desk." 
 
 ~ notification = "Mrslee_Day 2_Talk to a doctor before you start a physical routine"
 # notification Mrslee_Day 2_Talk to a doctor before you start a physical routine
@@ -62,8 +63,8 @@ Mrslee?Smiling "Well, you should talk to a doctor before you start a physical ac
   -> Goodbye
 
 ==Suggestion2==
-Mrslee?Smiling "Oh, yes! For seniors, group exercise is very social. I have a lot of friends in my classes."
-Mrslee?Smiling "I can stay active and fit, which lets me be independent. It helps me feel strong and keeps my balance up. I love it!"
+Mrslee?Smiling "Oh, yes! For elder, group exercise very social. Lot of friend in my class."
+Mrslee?Smiling "I stay fit, strength give me independence! It help me feel strong and my balance good. I love it!"
 
 ~ notification = "Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2"
 # notification Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2
@@ -78,7 +79,7 @@ Mrslee?Smiling "I can stay active and fit, which lets me be independent. It help
   -> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling "Thank you for asking me, {player_name}. Let me know when she gets here. I would love to meet her. I'm going to go get ready to volunteer today. See you soon!" 
+Mrslee?Smiling "Thank you for ask, {player_name}. Tell me when she here. I love to meet her. Now I go get ready to volunteer with Lila today. See you!" 
 
 * Goodbye, Mrs. Lee. Have a wonderful day!
   ->END

@@ -89,8 +89,8 @@ Elisa?Smiling "Like, just having someone besides your parents to ask questions t
   -> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "I know I'm really busy, but tell Rashad, that I could help with this at work if he wants."
-Elisa?Smiling "I would love to be able to connect again, with a senior. I miss my grandparents and this sounds great. Okay, I need to go pick up a tray of fresh baby cacti for the party. See you!"
+Elisa?Smiling "I know I'm really busy, but tell Rashad that I could help with this at work if he wants."
+Elisa?Smiling "I would love to be able to connect with another senior. I miss my grandparents and this sounds great. Okay, I need to go pick up a tray of fresh baby cacti for the party. See you!"
 
 * Don't prick yourself. I'll catch you soon, okay?
   ->END
