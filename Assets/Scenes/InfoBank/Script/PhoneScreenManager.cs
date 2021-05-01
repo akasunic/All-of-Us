@@ -238,6 +238,9 @@ public class PhoneScreenManager : MonoBehaviour
         questSolverImg.color = new Color(255, 255, 255, 255);
 
         QuestManager.submittedQuest = QuestManager.FindQuestById(questId);
+
+        // Data collection
+        DataCollection.LogEvent("Quest answer selected! Quest title: " + questId + ", Character: " + character + ", answer selected: " + description, "QUEST ANSWER SELECTED");
     }
 
     public void SubmitQuest() {

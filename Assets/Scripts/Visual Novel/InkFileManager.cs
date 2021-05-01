@@ -237,99 +237,111 @@ public class InkFileManager : MonoBehaviour {
     /// Assets/Story Files/Resources</param>
     /// <returns>The primary speaking character for the .ink file</returns>
     private CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
-        char sep = Path.DirectorySeparatorChar;
-        string pwd = Directory.GetCurrentDirectory() + sep;
-        string dir = pwd + "Assets" + sep + "Story Files" + sep + "Resources" +
-            sep + fileName;
+        
+        string[] splitLine = fileName.Split('_');
+        string[] splitSecondLine = splitLine[3].Split('.');
+        return HelperFunctions.CharacterFromString(splitSecondLine[0]);
 
-        using (StreamReader reader = File.OpenText(dir)) {
-            string line;
-            while ((line = reader.ReadLine()) != null) {
-                string[] splitLine = line.Split('?');
-                if (splitLine.Length >= 2) {
-                    reader.Close();
-                    return HelperFunctions.CharacterFromString(splitLine[0]);
-                }
-            }
-            reader.Close();
-            Debug.LogError("Couldn't find speaker in file " + fileName);
-            return CharacterResources.CHARACTERS.RASHAD;
-        }
+
+//         char sep = Path.DirectorySeparatorChar;
+//         string pwd = Directory.GetCurrentDirectory() + sep;
+//         string dir;
+// #if UNITY_EDITOR
+//         dir = pwd + "Assets" + sep + "Story Files" + sep + "Resources" +
+//             sep + fileName;
+// #elif UNITY_STANDALONE_OSX
+//         dir = pwd + "\"Bloomwood Stories Block Party.app\"" + sep +
+//         "Contents" + sep + "Resources" + sep + fileName;
+// #endif
+
+//         using (StreamReader reader = File.OpenText(dir)) {
+//             string line;
+//             while ((line = reader.ReadLine()) != null) {
+//                 string[] splitLine = line.Split('?');
+//                 if (splitLine.Length >= 2) {
+//                     reader.Close();
+//                     return HelperFunctions.CharacterFromString(splitLine[0]);
+//                 }
+//             }
+//             reader.Close();
+//             Debug.LogError("Couldn't find speaker in file " + fileName);
+//             return CharacterResources.CHARACTERS.RASHAD;
+//         }
 
     }
 
     private static readonly string[] rashadQuest1Files = {
-        "Rashad_1_delivery.ink", "Rashad_1_info1.ink",
-        "Rashad_1_completion.ink" };
+        "Rashad_1_delivery_Rashad.ink", "Rashad_1_info1_Elisa.ink",
+        "Rashad_1_completion_Rashad.ink" };
     private static readonly string[] rashadQuest2Files = {
-        "Rashad_2_delivery.ink", "Rashad_2_info1.ink",
-        "Rashad_2_info2.ink", "Rashad_2_completion.ink" };
+        "Rashad_2_delivery_Rashad.ink", "Rashad_2_info1_Mrcalindas.ink",
+        "Rashad_2_info2_Lila.ink", "Rashad_2_completion_Rashad.ink" };
     private static readonly string[] rashadQuest3Files = {
-        "Rashad_3_delivery.ink", "Rashad_3_info1.ink",
-        "Rashad_3_info2.ink", "Rashad_3_completion.ink" };
+        "Rashad_3_delivery_Rashad.ink", "Rashad_3_info1_Lila.ink",
+        "Rashad_3_info2_Mrcalindas.ink", "Rashad_3_completion_Rashad.ink" };
     private static readonly string[] rashadQuest4Files = {
-        "Rashad_4_delivery.ink", "Rashad_4_info1.ink",
-        "Rashad_4_info2.ink", "Rashad_4_completion.ink" };
+        "Rashad_4_delivery_Rashad.ink", "Rashad_4_info1_Elisa.ink",
+        "Rashad_4_info2_Mrslee.ink", "Rashad_4_completion_Rashad.ink" };
     private static readonly string[][] rashadQuests = { rashadQuest1Files,
         rashadQuest2Files, rashadQuest3Files, rashadQuest4Files};
 
     private static readonly string[] calindasQuest1Files = {
-        "Mrcalindas_1_delivery.ink", "Mrcalindas_1_info1.ink",
-        "Mrcalindas_1_info2.ink", "Mrcalindas_1_completion.ink" };
+        "Mrcalindas_1_delivery_Mrcalindas.ink", "Mrcalindas_1_info1_Lila.ink",
+        "Mrcalindas_1_info2_Rashad.ink", "Mrcalindas_1_completion_Mrcalindas.ink" };
     private static readonly string[] calindasQuest2Files = {
-        "Mrcalindas_2_delivery.ink", "Mrcalindas_2_info1.ink",
-        "Mrcalindas_2_info2.ink", "Mrcalindas_2_completion.ink" };
+        "Mrcalindas_2_delivery_Mrcalindas.ink", "Mrcalindas_2_info1_Mrslee.ink",
+        "Mrcalindas_2_info2_Lila.ink", "Mrcalindas_2_completion_Mrcalindas.ink" };
     private static readonly string[] calindasQuest3Files = {
-        "Mrcalindas_3_delivery.ink", "Mrcalindas_3_info1.ink",
-        "Mrcalindas_3_info2.ink", "Mrcalindas_3_completion.ink" };
+        "Mrcalindas_3_delivery_Mrcalindas.ink", "Mrcalindas_3_info1_Elisa.ink",
+        "Mrcalindas_3_info2_Rashad.ink", "Mrcalindas_3_completion_Mrcalindas.ink" };
     private static readonly string[] calindasQuest4Files = {
-        "Mrcalindas_4_delivery.ink", "Mrcalindas_4_info1.ink",
-        "Mrcalindas_4_info2.ink", "Mrcalindas_4_completion.ink" };
+        "Mrcalindas_4_delivery_Mrcalindas.ink", "Mrcalindas_4_info1_Rashad.ink",
+        "Mrcalindas_4_info2_Lila.ink", "Mrcalindas_4_completion_Mrcalindas.ink" };
     private static readonly string[][] calindasQuests = { calindasQuest1Files,
         calindasQuest2Files, calindasQuest3Files, calindasQuest4Files};
 
     private static readonly string[] elisaQuest1Files = {
-        "Elisa_1_delivery.ink", "Elisa_1_info1.ink",
-        "Elisa_1_info2.ink", "Elisa_1_completion.ink" };
+        "Elisa_1_delivery_Elisa.ink", "Elisa_1_info1_Rashad.ink",
+        "Elisa_1_info2_Lila.ink", "Elisa_1_completion_Elisa.ink" };
     private static readonly string[] elisaQuest2Files = {
-        "Elisa_2_delivery.ink", "Elisa_2_info1.ink",
-        "Elisa_2_completion.ink" };
+        "Elisa_2_delivery_Elisa.ink", "Elisa_2_info1_Mrcalindas.ink",
+        "Elisa_2_completion_Elisa.ink" };
     private static readonly string[] elisaQuest3Files = {
-        "Elisa_3_delivery.ink", "Elisa_3_info1.ink",
-        "Elisa_3_info2.ink", "Elisa_3_completion.ink" };
+        "Elisa_3_delivery_Elisa.ink", "Elisa_3_info1_Lila.ink",
+        "Elisa_3_info2_Mrcalindas.ink", "Elisa_3_completion_Elisa.ink" };
     private static readonly string[] elisaQuest4Files = {
-        "Elisa_4_delivery.ink", "Elisa_4_info1.ink",
-        "Elisa_4_info2.ink", "Elisa_4_completion.ink" };
+        "Elisa_4_delivery_Elisa.ink", "Elisa_4_info1_Mrcalindas.ink",
+        "Elisa_4_info2_Rashad.ink", "Elisa_4_completion_Elisa.ink" };
     private static readonly string[][] elisaQuests = { elisaQuest1Files,
         elisaQuest2Files, elisaQuest3Files, elisaQuest4Files};
 
     private static readonly string[] leeQuest1Files = {
-        "Mrslee_1_delivery.ink", "Mrslee_1_info1.ink",
-        "Mrslee_1_info2.ink", "Mrslee_1_completion.ink" };
+        "Mrslee_1_delivery_Mrslee.ink", "Mrslee_1_info1_Lila.ink",
+        "Mrslee_1_info2_Mrcalindas.ink", "Mrslee_1_completion_Mrslee.ink" };
     private static readonly string[] leeQuest2Files = {
-        "Mrslee_2_delivery.ink", "Mrslee_2_info1.ink",
-        "Mrslee_2_info2.ink", "Mrslee_2_completion.ink" };
+        "Mrslee_2_delivery_Mrslee.ink", "Mrslee_2_info1_Rashad.ink",
+        "Mrslee_2_info2_Mrcalindas.ink", "Mrslee_2_completion_Mrslee.ink" };
     private static readonly string[] leeQuest3Files = {
-        "Mrslee_3_delivery.ink", "Mrslee_3_info1.ink",
-        "Mrslee_3_info2.ink", "Mrslee_3_completion.ink" };
+        "Mrslee_3_delivery_Mrslee.ink", "Mrslee_3_info1_Lila.ink",
+        "Mrslee_3_info2_Elisa.ink", "Mrslee_3_completion_Mrslee.ink" };
     private static readonly string[] leeQuest4Files = {
-        "Mrslee_4_delivery.ink", "Mrslee_4_info1.ink",
-        "Mrslee_4_info2.ink", "Mrslee_4_completion.ink" };
+        "Mrslee_4_delivery_Mrslee.ink", "Mrslee_4_info1_Rashad.ink",
+        "Mrslee_4_info2_Lila.ink", "Mrslee_4_completion_Mrslee.ink" };
     private static readonly string[][] leeQuests = { leeQuest1Files,
         leeQuest2Files, leeQuest3Files, leeQuest4Files};
 
     private static readonly string[] lilaQuest1Files = {
-        "Lila_1_delivery.ink", "Lila_1_info1.ink",
-        "Lila_1_info2.ink", "Lila_1_completion.ink" };
+        "Lila_1_delivery_Lila.ink", "Lila_1_info1_Elisa.ink",
+        "Lila_1_info2_Rashad.ink", "Lila_1_completion_Lila.ink" };
     private static readonly string[] lilaQuest2Files = {
-        "Lila_2_delivery.ink", "Lila_2_info1.ink",
-        "Lila_2_info2.ink", "Lila_2_completion.ink" };
+        "Lila_2_delivery_Lila.ink", "Lila_2_info1_Rashad.ink",
+        "Lila_2_info2_Mrcalindas.ink", "Lila_2_completion_Lila.ink" };
     private static readonly string[] lilaQuest3Files = {
-        "Lila_3_delivery.ink", "Lila_3_info1.ink",
-        "Lila_3_info2.ink", "Lila_3_completion.ink" };
+        "Lila_3_delivery_Lila.ink", "Lila_3_info1_Mrcalindas.ink",
+        "Lila_3_info2_Mrslee.ink", "Lila_3_completion_Lila.ink" };
     private static readonly string[] lilaQuest4Files = {
-        "Lila_4_delivery.ink", "Lila_4_info1.ink",
-        "Lila_4_info2.ink", "Lila_4_completion.ink" };
+        "Lila_4_delivery_Lila.ink", "Lila_4_info1_Mrslee.ink",
+        "Lila_4_info2_Elisa.ink", "Lila_4_completion_Lila.ink" };
     private static readonly string[][] lilaQuests = { lilaQuest1Files,
         lilaQuest2Files, lilaQuest3Files, lilaQuest4Files};
 }
