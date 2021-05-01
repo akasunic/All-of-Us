@@ -183,14 +183,15 @@ public class InkFileManager : MonoBehaviour {
     }
 
     public void TryGoHome() {
-        if (CanAdvanceDay()) {
-            SceneManager.LoadScene("Home");
-            completedDailyCalindas = false;
-            completedDailyRashad = false;
-            completedDailyElisa = false;
-            completedDailyLila = false;
-            completedDailyLee = false;
-        }
+        SceneManager.LoadScene("Home");
+        // if (CanAdvanceDay()) {
+        //     SceneManager.LoadScene("Home");
+        //     completedDailyCalindas = false;
+        //     completedDailyRashad = false;
+        //     completedDailyElisa = false;
+        //     completedDailyLila = false;
+        //     completedDailyLee = false;
+        // }
     }
 
     public void TryLoadVNScene(string person) {
