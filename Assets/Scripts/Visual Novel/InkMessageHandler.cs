@@ -19,13 +19,13 @@ public class InkMessageHandler : MonoBehaviour
     /// <summary>
     /// Adds a new notifcation to the notifications list
     /// </summary>
-    public void AddNotification(string notifValue = "") {
+    public void AddNotification(string notifValue) {
 
         string[] notifInfo = notifValue.Split('_');
 
         try {
             if (notifInfo.Length == 3) {
-                GlobalGameInfo.addNewItemToInfoList(notifInfo[0], 
+                GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2]);
             } else if (notifInfo.Length == 4) {

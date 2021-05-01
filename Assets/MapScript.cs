@@ -7,7 +7,7 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private void Awake() {
         if (GlobalGameInfo.getNewDayVariable()) {
-            HintBubbleManager.ActivateHintBubble("Good Morning!", "A new day has started in Bloomwood!");
+            HintBubbleManager.ActivateHintBubble("Good Morning!", "It's a new day in Bloomwood!");
             GlobalGameInfo.toggleNewDay();
         }
         
