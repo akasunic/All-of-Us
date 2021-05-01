@@ -46,7 +46,7 @@ public class InfoManager : MonoBehaviour
           if(items[i].quest != null){
             itemDetails.questId = items[i].quest.questId;
           }
-          itemDetails.character = items[i].character;
+          itemDetails.character = items[i].characterEnum;
 
           Transform tagsList = HelperFunctions.FindChildByRecursion(newItem, "tagsList");
           if(tagsList != null){

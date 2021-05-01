@@ -19,16 +19,13 @@ public class InkMessageHandler : MonoBehaviour
     /// <summary>
     /// Adds a new notifcation to the notifications list
     /// </summary>
-    public void AddNotification(string notifValue = "") {
+    public void AddNotification(string notifValue) {
 
-        if (notifValue == "use_var") {
-            notifValue = _fc.GetStringVariable("notification");
-        }
         string[] notifInfo = notifValue.Split('_');
 
         try {
             if (notifInfo.Length == 3) {
-                GlobalGameInfo.addNewItemToInfoList(notifInfo[0], 
+                GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2]);
             } else if (notifInfo.Length == 4) {
@@ -68,21 +65,20 @@ public class InkMessageHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// Opens the file at Assets/StoryFiles/path and reads the first line to get
-    /// the quest title.
+    /// Opens the file at Resources/Quest Files/fileName and reads
+    /// the first line to get the quest title.
     /// </summary>
-    /// <param name="path"></param>
+    /// <param name="fileName"></param>
     /// <returns></returns>
-    private string ReadQuestTitle(string path) {
-        char sep = Path.DirectorySeparatorChar;
-        string pwd = Directory.GetCurrentDirectory() + sep;
-        string dir = pwd + "Assets" + sep + "Story Files" + sep + path;
+    private string ReadQuestTitle(string fileName) {
+        fileName = fileName.Remove(fileName.Length - 4);
+        TextAsset questFile = Resources.Load<TextAsset>("Quest Files/" + fileName);
 
-        using (StreamReader reader = File.OpenText(dir)) {
-            string s = reader.ReadLine();
-            reader.Close();
-            return s;
-        }
+        string txt = questFile.text;
+        StringReader reader = new StringReader(txt);
+        string s = reader.ReadLine();
+        reader.Close();
+        return s;
     }
 
     /// <summary>
@@ -137,53 +133,53 @@ public class InkMessageHandler : MonoBehaviour
     /// Switched to file reading as the amount of relevant quest info increased.
     /// </summary>
     public void AddQuest() {
-        char sep = Path.DirectorySeparatorChar;
-        string pwd = Directory.GetCurrentDirectory() + sep;
-        string questFileName = _fc.GetStringVariable("new_quest");
-        string dir = pwd + "Assets" + sep + "Story Files" + sep + questFileName;
-
+        string fileName = _fc.GetStringVariable("new_quest");
+        fileName = fileName.Remove(fileName.Length - 4);
         Quest q = new Quest();
+        TextAsset questFile = Resources.Load<TextAsset>("Quest Files/" + fileName);
 
-        using (StreamReader reader = File.OpenText(dir)) {
-            // Quest Title
-            string line = reader.ReadLine();
-            q.questId = line;
-            q.description = line; // RE-EVALUATE WHAT TO PUT HERE
+        string txt = questFile.text;
+        StringReader reader = new StringReader(txt);
+        string line;
 
-            // Quest Giver
+        // Quest Title
+        line = reader.ReadLine();
+        q.questId = line;
+        q.description = line; // RE-EVALUATE WHAT TO PUT HERE
+
+        // Quest Giver
+        line = reader.ReadLine();
+        q.questGiver = HelperFunctions.CharacterFromString(line);
+
+        // Health exp, should be a 0 or 1
+        line = reader.ReadLine();
+        q.incHealth = ParseBitString(line, "health");
+
+        // Time exp
+        line = reader.ReadLine();
+        q.incTime = ParseBitString(line, "time");
+
+        // Tech exp
+        line = reader.ReadLine();
+        q.incTech = ParseBitString(line, "tech");
+
+        // Resources exp
+        line = reader.ReadLine();
+        q.incResources = ParseBitString(line, "resources");
+
+        // Subtasks, not necessarily a fixed amt
+        List<string> subtasks = new List<string>();
+        line = reader.ReadLine();
+        while (line != null && line.Trim() != "") {
+            subtasks.Add(line);
             line = reader.ReadLine();
-            q.questGiver = HelperFunctions.CharacterFromString(line);
-
-            // Health exp, should be a 0 or 1
-            line = reader.ReadLine();
-            q.incHealth = ParseBitString(line, "health");
-
-            // Time exp
-            line = reader.ReadLine();
-            q.incTime = ParseBitString(line, "time");
-
-            // Tech exp
-            line = reader.ReadLine();
-            q.incTech = ParseBitString(line, "tech");
-
-            // Resources exp
-            line = reader.ReadLine();
-            q.incResources = ParseBitString(line, "resources");
-
-            // Subtasks, not necessarily a fixed amt
-            List<string> subtasks = new List<string>();
-            line = reader.ReadLine();
-            while (line != null && line.Trim() != "") {
-                subtasks.Add(line);
-                line = reader.ReadLine();
-            }
-            GlobalGameInfo.addNewItemToTodoList(q.questId, q.questGiver);
-            foreach (string subtask in subtasks) {
-                GlobalGameInfo.addNewTodoToExistingList(q.questId,
-                    subtask);
-            }
-            reader.Close();
         }
+        GlobalGameInfo.addNewItemToTodoList(q.questId, q.questGiver);
+        foreach (string subtask in subtasks) {
+            GlobalGameInfo.addNewTodoToExistingList(q.questId,
+                subtask);
+        }
+        reader.Close();
 
         QuestManager.AddQuest(q);
     }

@@ -26,7 +26,7 @@ public class DetailPageManager : MonoBehaviour
     [HideInInspector]
     public string questId = "";
     [HideInInspector]
-    public string character = "";
+    public CharacterResources.CHARACTERS character;
 
     void Start(){
       TagManager.setCustomDelegate(updateDetailPage);
@@ -170,7 +170,8 @@ public class DetailPageManager : MonoBehaviour
     public void SelectItemForQuest() {
         // highlight the item in the UI
         DeselectItemInUI();
-        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId, character, description);
+        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
+            HelperFunctions.StringFromCharacter(character), description);
         GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
         selectedItem = this;
         Debug.Log(GetComponent<Image>().color);

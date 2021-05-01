@@ -1,0 +1,17 @@
+{
+    "name": "InkFungusEditor",
+    "references": [
+        "GUID:80918763dbf67df4aaaf0f8d2d746eb2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Editor"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

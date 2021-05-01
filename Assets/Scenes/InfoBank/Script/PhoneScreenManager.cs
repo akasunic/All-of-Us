@@ -230,6 +230,9 @@ public class PhoneScreenManager : MonoBehaviour
 
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
         _txt.text = description;
+        Vector3 txtPos = _txt.rectTransform.anchoredPosition;
+        txtPos.y = 28;
+        _txt.rectTransform.anchoredPosition = txtPos;
         _txt.color = Color.black;
         string imgString = character.ToLower() + "_small";
 
@@ -238,6 +241,9 @@ public class PhoneScreenManager : MonoBehaviour
         questSolverImg.color = new Color(255, 255, 255, 255);
 
         QuestManager.submittedQuest = QuestManager.FindQuestById(questId);
+
+        // Data collection
+        DataCollection.LogEvent("Quest answer selected! Quest title: " + questId + ", Character: " + character + ", answer selected: " + description, "QUEST ANSWER SELECTED");
     }
 
     public void SubmitQuest() {
