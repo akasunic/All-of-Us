@@ -230,6 +230,9 @@ public class PhoneScreenManager : MonoBehaviour
 
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
         _txt.text = description;
+        Vector3 txtPos = _txt.rectTransform.anchoredPosition;
+        txtPos.y = 28;
+        _txt.rectTransform.anchoredPosition = txtPos;
         _txt.color = Color.black;
         string imgString = character.ToLower() + "_small";
 

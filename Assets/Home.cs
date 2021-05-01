@@ -106,6 +106,8 @@ public class Home : MonoBehaviour {
     public void goToSleep() {
         // Only if PC has finished the 5 quests for the day
         if (InkFileManager.CanAdvanceDay()) {
+            // reset daily quest progess for the next day
+            InkFileManager.ResetDailyBools();
 
             // Increase day by one
             GlobalGameInfo.IncreaseDay();
