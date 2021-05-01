@@ -62,7 +62,7 @@ Mrslee?Smiling "Seniors need someone to talk to and maybe do some errand. We tal
 Mrslee?Smiling "It makes me feel so good to see how he grow. He know more about what it like to be old, and I have someone to talk to. A purpose."
 
 ~ notification = "Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands"
-# notification rslee_Day 4_Seniors only need someone to talk to and perhaps do errands
+# notification Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands
 ~ notification = "Mrslee_Day 4_Teens can learn how it feels to get old"
 # notification Mrslee_Day 4_Teens can learn how it feels to get old
 ~ notification = "Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4"

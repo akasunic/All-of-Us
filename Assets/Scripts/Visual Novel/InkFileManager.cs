@@ -182,16 +182,18 @@ public class InkFileManager : MonoBehaviour {
             completedDailyLee && completedDailyRashad && completedDailyLila;
     }
 
+    public static void ResetDailyBools() {
+        completedDailyCalindas = false;
+        completedDailyRashad = false;
+        completedDailyElisa = false;
+        completedDailyLila = false;
+        completedDailyLee = false;
+    }
+
     public void TryGoHome() {
-        SceneManager.LoadScene("Home");
-        // if (CanAdvanceDay()) {
-        //     SceneManager.LoadScene("Home");
-        //     completedDailyCalindas = false;
-        //     completedDailyRashad = false;
-        //     completedDailyElisa = false;
-        //     completedDailyLila = false;
-        //     completedDailyLee = false;
-        // }
+        if (CanAdvanceDay()) {
+            SceneManager.LoadScene("Home");
+        }
     }
 
     public void TryLoadVNScene(string person) {
@@ -204,8 +206,23 @@ public class InkFileManager : MonoBehaviour {
             activeQuestGiver = character;
 
             NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));
-            // for now
-            SceneManager.LoadScene("LibraryVN");
+            switch (character) {
+                case CharacterResources.CHARACTERS.RASHAD:
+                    SceneManager.LoadScene("LibraryVN");
+                    break;
+                case CharacterResources.CHARACTERS.ELISA:
+                    SceneManager.LoadScene("LibraryVN");
+                    break;
+                case CharacterResources.CHARACTERS.CALINDAS:
+                    SceneManager.LoadScene("HealthVN");
+                    break;
+                case CharacterResources.CHARACTERS.LILA:
+                    SceneManager.LoadScene("CommunityVN");
+                    break;
+                case CharacterResources.CHARACTERS.LEE:
+                    SceneManager.LoadScene("CommunityVN");
+                    break;
+            }
         } else {
             int questNum = activeFileIdx.Item1;
             int chapterNum = activeFileIdx.Item2;
@@ -218,8 +235,23 @@ public class InkFileManager : MonoBehaviour {
             // is this the next person to speak to for the quest?
             if (character == GetSpeakerFromFile(fileToLoad)) {
                 NarrativeDirector.staticInk = Resources.Load<TextAsset>(InkToJson(ActiveFileName));
-                // for now
-                SceneManager.LoadScene("LibraryVN");
+                switch (character) {
+                    case CharacterResources.CHARACTERS.RASHAD:
+                        SceneManager.LoadScene("LibraryVN");
+                        break;
+                    case CharacterResources.CHARACTERS.ELISA:
+                        SceneManager.LoadScene("LibraryVN");
+                        break;
+                    case CharacterResources.CHARACTERS.CALINDAS:
+                        SceneManager.LoadScene("HealthVN");
+                        break;
+                    case CharacterResources.CHARACTERS.LILA:
+                        SceneManager.LoadScene("CommunityVN");
+                        break;
+                    case CharacterResources.CHARACTERS.LEE:
+                        SceneManager.LoadScene("CommunityVN");
+                        break;
+                }
             }
         }
     }

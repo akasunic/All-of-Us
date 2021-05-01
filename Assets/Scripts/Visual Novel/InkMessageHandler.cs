@@ -65,10 +65,10 @@ public class InkMessageHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// Opens the file at Assets/StoryFiles/path and reads the first line to get
-    /// the quest title.
+    /// Opens the file at Resources/Quest Files/fileName and reads
+    /// the first line to get the quest title.
     /// </summary>
-    /// <param name="path"></param>
+    /// <param name="fileName"></param>
     /// <returns></returns>
     private string ReadQuestTitle(string fileName) {
         fileName = fileName.Remove(fileName.Length - 4);
