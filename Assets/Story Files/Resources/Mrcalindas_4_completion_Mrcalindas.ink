@@ -38,7 +38,7 @@ Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying t
 
 Mrcalindas?Neutral "Oh? We would enjoy knowing how to prepare for the day. What are some suggestions of activities at the Block Party Brooklyn may enjoy? How can we prepare?"
 
-* Open Puzzle interface
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, before I commit, let me check my journal again.
   -> TempGoodbye

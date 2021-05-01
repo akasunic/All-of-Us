@@ -34,7 +34,7 @@ Mrslee?Neutral "I have been missing him."
 ==ReadyToSolve==
 Mrslee?Smiling "What do I do about my health and good future health?" 
 
-* Start puzzle interface.
+* Here’s what I have…
   -> PuzzleInterface
 * Wait, lemme come back!
   -> TempGoodbye

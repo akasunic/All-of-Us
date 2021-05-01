@@ -36,7 +36,7 @@ Mrcalindas?Neutral "Well, it is my job to care about the health of our community
 
 Mrcalindas?Smiling "That's so sweet of you, {player_name}. Can you tell me what you found out?"
 
-* Open Puzzle interface
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, I want to give you the best info. I'm going to just check my notes again. Be right back! 
   -> TempGoodbye

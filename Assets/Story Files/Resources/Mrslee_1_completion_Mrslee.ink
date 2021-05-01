@@ -34,7 +34,7 @@ Mrslee?Neutral "He needs medicine when he arrive before the weekend maybe? I nee
 ==ReadyToSolve==
 Mrslee?Neutral "What do you think?"
 
-* Start puzzle interface.
+* Here’s what I have…
   -> PuzzleInterface
 * I'll come back to help!
   -> TempGoodbye

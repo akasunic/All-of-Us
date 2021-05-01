@@ -32,7 +32,7 @@ Rashad?Neutral "Well, just a little bit. Speaking of which, did you ever find ou
 ==ReadyToSolve==
 Rashad?Neutral "Oh, I didn't know you would find out what I needed this soon. You worked really fast, {player_name}. Thank you. What did you find out?"
 
-* Start puzzle interface.
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, give me a second. I want to make sure my information is correct.
   -> TempGoodbye

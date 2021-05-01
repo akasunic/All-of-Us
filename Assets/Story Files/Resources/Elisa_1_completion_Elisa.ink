@@ -9,7 +9,7 @@ VAR new_quest = ""
 
 Elisa?Smiling "Oh hey! How'd it go, did you find any info for me?"
 
-+ Start puzzle interface
++ Here’s what I have…
   -> PuzzleInterface
 
 ==PuzzleInterface==

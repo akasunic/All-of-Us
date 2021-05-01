@@ -46,7 +46,7 @@ Rashad?Neutral "Oh! By the way, did you ever find someone to apply for the YA po
 ==ReadyToSolve==
 Rashad?Smiling "That's great. We've been looking for someone to fill that position for a while. The library is pretty small, but we have a lot of room for a motivated student."
 
-* Start puzzle interface.
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, you know what, let me double check my notes.
   -> TempGoodbye

@@ -37,7 +37,7 @@ Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some n
 
 Mrcalindas?Neutral "Oh, that's good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. Plus, she wants to be very independent, and I support that. I'm looking for some tech classes or tutoring for my mother in Tagalog or Spanish. Did you find some?" 
 
-* Open Puzzle interface
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, I though I was ready... Let me double check my notes?
   -> TempGoodbye

@@ -32,7 +32,7 @@ Mrslee?Neutral "I'm feeling good now because no headache, but when I think about
 ==ReadyToSolve==
 Mrslee?Neutral "What should I do?"
 
-* Start puzzle interface.
+* Here’s what I have…
   -> PuzzleInterface
 * Actually, I'm not ready.
   -> TempGoodbye

@@ -35,7 +35,7 @@ Elisa?Neutral "Ugh, I tried to ask around about the vaccination stuff but no one
 
 Elisa?Neutral "I see... you didn't happen to find out anything else, did you?"
 
-*Yes! (puzzle interface opens and player inserts helpful info)
+*Yes!
     ->PuzzleInterface
 *No, sorry.
     ->backToExplore
