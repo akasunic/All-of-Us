@@ -26,10 +26,10 @@ public class Home : MonoBehaviour {
         // TitleText.enabled = false;
         // yellowContainerText.enabled = false;
         
-        commEngageVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "%";
-        questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() / 5).ToString() + "/20";
-        journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.infoList.Count.ToString();
-        customTagsVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
+        commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
+        questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
+        journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
+        customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
         daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
 
         // commEngageVal.enabled = false;

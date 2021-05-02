@@ -191,9 +191,9 @@ public class InkFileManager : MonoBehaviour {
     }
 
     public void TryGoHome() {
-        if (CanAdvanceDay()) {
+        // if (CanAdvanceDay()) {
             SceneManager.LoadScene("Home");
-        }
+        // }
     }
 
     public void TryLoadVNScene(string person) {
