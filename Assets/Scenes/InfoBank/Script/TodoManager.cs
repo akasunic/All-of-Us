@@ -70,7 +70,7 @@ public class TodoManager : MonoBehaviour
 
       
 
-      completed = (item.completedItems == item.checklist.Count);
+      completed = item.complete;
 
       if(completed){
         backgroundImage.sprite = greenBackground;

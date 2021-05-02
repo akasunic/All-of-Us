@@ -22,7 +22,8 @@ public class GlobalGameInfo
     public enum NOTIFICATION {
         INFO,
         TODO,
-        PHONE
+        PHONE,
+        NONE
     };
 
     private static bool newDay = false;
@@ -94,11 +95,14 @@ public class GlobalGameInfo
         public int completedItems;
         public bool showNotification;
 
+        public bool complete;
+
         public TodoItem(string title) {
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
             this.showNotification = true;
+            this.complete = false;
         }
 
         public TodoItem(string title, CharacterResources.CHARACTERS character) {
@@ -113,6 +117,19 @@ public class GlobalGameInfo
             ChecklistItem ci = new ChecklistItem(c, this);
             this.checklist.Add(ci);
             return ci;
+        }
+
+        public void CompleteTask(){
+            this.complete = true;
+        }
+    }
+
+    public static void FinishTask(string taskName){
+        foreach(TodoItem task in todoList){
+            if(task.title == taskName){
+                task.CompleteTask();
+                break;
+            }
         }
     }
 
@@ -283,6 +300,7 @@ public class GlobalGameInfo
     public static void addNewItemToTodoList(
         string title, CharacterResources.CHARACTERS c)
     {
+        Debug.Log("the notifiation callback should have happend");
         GlobalGameInfo.todoList.Add(new TodoItem(title, c));
         untaggedTodoObjects++;
         notificationCallback(NOTIFICATION.TODO);

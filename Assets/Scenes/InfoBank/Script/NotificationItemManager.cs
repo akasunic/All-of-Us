@@ -16,9 +16,12 @@ public class NotificationItemManager : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public TextMeshProUGUI updatedText;
+    public GameObject updatedTextGameObject;
     public GameObject bubble;
 
     public GlobalGameInfo.NOTIFICATION notificationType;
+
+    public static GlobalGameInfo.NOTIFICATION lastNotificationType;
 
     void Start(){
 
@@ -28,20 +31,32 @@ public class NotificationItemManager : MonoBehaviour
 
     void OnDestroy(){
       GlobalGameInfo.clearNotificationDelegate();
+      lastNotificationType = GlobalGameInfo.NOTIFICATION.NONE;
     }
     public void setCounter(GlobalGameInfo.NOTIFICATION n){
-
-      if(notificationType == GlobalGameInfo.NOTIFICATION.PHONE){
-        if(n == GlobalGameInfo.NOTIFICATION.INFO){
-          updatedText.text = "MyJournal Updated";
-        } else if (n ==GlobalGameInfo.NOTIFICATION.TODO){
-          updatedText.text = "MyTodo Updated";
-        }
-      }
+      
+      lastNotificationType = n;
       updateUIElements();
     }
 
     public void updateUIElements(){
+
+      Debug.Log("last notiication was  " + lastNotificationType);
+      if(notificationType == GlobalGameInfo.NOTIFICATION.PHONE){
+
+        if (lastNotificationType == GlobalGameInfo.NOTIFICATION.NONE){
+          updatedTextGameObject.SetActive(false);
+        } else {
+          updatedTextGameObject.SetActive(true);
+        }
+
+        if(lastNotificationType == GlobalGameInfo.NOTIFICATION.INFO){
+          updatedText.text = "MyJournal Updated";
+        } else if (lastNotificationType ==GlobalGameInfo.NOTIFICATION.TODO){
+          updatedText.text = "MyTodo Updated";
+        }   
+      }
+
       int untagged = GlobalGameInfo.getNotificationNumber(notificationType);
       if(untagged == 0){
         if(bubble != null){

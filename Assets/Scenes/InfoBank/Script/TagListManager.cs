@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 // this script tracks the tags for the list of tags that we have in the journal
 // it both adds to the tag list from TagManager and ALSO
@@ -16,13 +17,18 @@ public class TagListManager : MonoBehaviour {
     public RectTransform parentTransform;
 
     public GameObject addButtonText;
+    public GameObject addTagObject;
 
     void Start(){
       Canvas.ForceUpdateCanvases(); 
-      var descriptionHeight = parentTransform.rect.height - 10;
-      heightTransform.sizeDelta = new Vector2(132, descriptionHeight );
+      //var descriptionHeight = parentTransform.rect.height - 10;
+      //heightTransform.sizeDelta = new Vector2(132, descriptionHeight );
 
       TagManager.setDelegate(UpdateList);
+
+      if(SceneManager.GetActiveScene().name != "InfoBank"){
+        addTagObject.SetActive(false);
+      }
 
       UpdateList();
     }
