@@ -8,7 +8,7 @@ VAR new_quest = ""
 ===intro===
 ~ new_contact = "Rashad"
 # new_contact
-Rashad?Smiling "Hi Lila! What brings you?"
+Rashad?Smiling "Hi {player_name}! What brings you?"
 
 * Hey Rashad! Wanted to check in and see how the library corner set up is going. 
     -> Chat1
