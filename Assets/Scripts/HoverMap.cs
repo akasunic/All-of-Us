@@ -7,10 +7,14 @@ public class HoverMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject hoverItem;
     public GameObject clickItem;
+
+    //other scrips can change this
+    public bool isViewable = true;
+
     //Do this when the cursor enters the rect area of this selectable UI object.
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(hoverItem != null){
+        if(hoverItem != null && isViewable){
             hoverItem.SetActive(true);
         }
     }
@@ -20,7 +24,7 @@ public class HoverMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if(hoverItem != null){
             hoverItem.SetActive(false);
         }
-        if(clickItem != null){
+        if(clickItem != null && isViewable){
             clickItem.SetActive(true);
         }
     }

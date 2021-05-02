@@ -56,6 +56,11 @@ public class PhoneScreenManager : MonoBehaviour
     GameObject detailChildContainer;
     GameObject phoneContainer;
     GameObject sectionName; 
+    GameObject sectionIcon; 
+
+    public Sprite todoIcon;
+    public Sprite contactsIcon;
+    public Sprite journalIcon;
  
     void Update(){
       if (started && timer <= seconds) {
@@ -91,6 +96,7 @@ public class PhoneScreenManager : MonoBehaviour
         detailContainer = GameObject.Find("Detail Container");
         detailChildContainer = GameObject.Find("Child Container");
         sectionName = GameObject.Find("Section Name");
+        sectionIcon = GameObject.Find("Section Icon");
         phoneContainer = GameObject.Find("Phone");
         rt = phoneContainer.GetComponent<RectTransform>();
         rtDetailPage = detailContainer.GetComponent<RectTransform>();
@@ -137,6 +143,7 @@ public class PhoneScreenManager : MonoBehaviour
         animateItemsIn();
         //start toggling pages
         sectionName.GetComponent<TextMeshProUGUI>().text = getSectionName(type);
+        sectionIcon.GetComponent<Image>().sprite = getSectionIcon(type);
         GameObject go = null;
         GameObject border = null;
         getGameObject(type, ref go, ref border);
@@ -183,7 +190,7 @@ public class PhoneScreenManager : MonoBehaviour
     private string getSectionName(string type){
         switch (type.ToLower()){
             case "messages":
-                return "Messages";
+                return "To-do List";
             case "notes":
                 return "My Journals";
             case "quest":
@@ -192,6 +199,22 @@ public class PhoneScreenManager : MonoBehaviour
                 return "My Contacts";
             case "back":
                 return "Home Screen";
+        }
+        return null;
+    }
+
+    private Sprite getSectionIcon(string type){
+        switch (type.ToLower()){
+            case "messages":
+                return todoIcon;
+            case "notes":
+                return journalIcon;
+            case "quest":
+                return journalIcon;
+            case "contacts":
+                return contactsIcon;
+            case "back":
+                return journalIcon;
         }
         return null;
     }

@@ -21,7 +21,9 @@ public class AddToList : MonoBehaviour
                 fillContactList(GlobalGameInfo.contactsList);
                 break;
             default:
-                fillInfoList(GlobalGameInfo.infoList);
+                List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
+                list.Reverse();
+                fillInfoList(list);
                 break;
         }
     }
@@ -47,6 +49,8 @@ public class AddToList : MonoBehaviour
         if(list.Count == 0){
             return;
         }
+
+        Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
 
         Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
         

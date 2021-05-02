@@ -102,7 +102,9 @@ public class EndOfQuest : MonoBehaviour
 
         // activate the screen
         endOfQuest.SetActive(true);
-
+        
+        Debug.Log(questTitle);
+        GlobalGameInfo.FinishTask(questTitle);
         // Data collection
         DataCollection.LogEvent("Quest Completed! Title: " + questTitle + ", Character: " + quest.character, "QUEST COMPLETION");
     }
