@@ -82,9 +82,9 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
-        messages.SetActive(false);
-        notes.SetActive(false);
-        contacts.SetActive(false);
+        messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
+        notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
+        contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         messagesBorder.SetActive(false);
         notesBorder.SetActive(false);
         contactsBorder.SetActive(false);
@@ -148,13 +148,18 @@ public class PhoneScreenManager : MonoBehaviour
         GameObject border = null;
         getGameObject(type, ref go, ref border);
         if(lastSelected != null){
-            lastSelected.SetActive(false);
+            lastSelected.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         }
         if(lastSelectedBorder != null){
             lastSelectedBorder.SetActive(false);
         }
+
+        if(lastSelected == messages){
+            GlobalGameInfo.SeeAllTodoItems();
+        }
+
         if(go != null){
-            go.SetActive(true);
+            go.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
             lastSelected = go;
         }
         if(border != null){

@@ -40,8 +40,6 @@ public class NotificationItemManager : MonoBehaviour
     }
 
     public void updateUIElements(){
-
-      Debug.Log("last notiication was  " + lastNotificationType);
       if(notificationType == GlobalGameInfo.NOTIFICATION.PHONE){
 
         if (lastNotificationType == GlobalGameInfo.NOTIFICATION.NONE){
@@ -58,6 +56,7 @@ public class NotificationItemManager : MonoBehaviour
       }
 
       int untagged = GlobalGameInfo.getNotificationNumber(notificationType);
+      
       if(untagged == 0){
         if(bubble != null){
           bubble.SetActive(false);

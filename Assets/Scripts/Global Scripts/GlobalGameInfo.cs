@@ -369,4 +369,13 @@ public class GlobalGameInfo
         }
         Debug.Log("New Engagement = " + engagement);
     }
+
+    public static void SeeAllTodoItems(){
+        foreach(TodoItem item in todoList){
+            if(item.showNotification){
+                decreaseUntaggedTodoObjects();
+            }
+            item.showNotification = false;
+        }
+    }
 }

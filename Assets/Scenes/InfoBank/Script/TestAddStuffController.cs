@@ -50,6 +50,8 @@ public class TestAddStuffController : MonoBehaviour
         GlobalGameInfo.addNewItemToTodoList("Rashad: Find part-time worker for library", CharacterResources.CHARACTERS.RASHAD);
         GlobalGameInfo.addNewTodoToExistingList("Rashad: Find part-time worker for library", "Talk to Rashad, learn about the quest.").CompleteTask();
         GlobalGameInfo.addNewTodoToExistingList("Rashad: Find part-time worker for library", "Talk to Lila.");
+                GlobalGameInfo.addNewTodoToExistingList("Rashad: Find part-time worker for library", "Talk to Rashad, learn about the quest.").CompleteTask();
+        GlobalGameInfo.addNewTodoToExistingList("Rashad: Find part-time worker for library", "Talk to Lila.");
     }
 
     public void AddLilaTodo(){

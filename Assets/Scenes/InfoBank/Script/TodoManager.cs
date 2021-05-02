@@ -27,6 +27,13 @@ public class TodoManager : MonoBehaviour
     private Sprite greenBackground;
 
     private bool completed;
+    private bool opened;
+
+    private RectTransform titleRTransform;
+
+    List<GlobalGameInfo.ChecklistItem> checklist;
+
+    private float extraPadding = 100f;
 
     void Awake(){
       cr = new CharacterResources();
@@ -41,9 +48,10 @@ public class TodoManager : MonoBehaviour
       }
 
       string title = item.title;
-      List<GlobalGameInfo.ChecklistItem> checklist = item.checklist;
+      checklist = item.checklist;
       Transform textChild = HelperFunctions.FindChildByRecursion(transform, "title");
       if(textChild == null) return;
+      titleRTransform = textChild.gameObject.GetComponent<RectTransform>();
       textChild.gameObject.GetComponent<TextMeshProUGUI>().text = title;
       Transform go = HelperFunctions.FindChildByRecursion(transform, "checklist");
       checklistItems = go.gameObject;
@@ -57,17 +65,10 @@ public class TodoManager : MonoBehaviour
         newItem.GetComponent<ChecklistManager>().setItem(checklist[i]);
       }
 
-      if(item.showNotification){
-        GlobalGameInfo.decreaseUntaggedTodoObjects();
-      }
-
       if(!item.showNotification){
         Transform redbubble = HelperFunctions.FindChildByRecursion(transform, "redbubble");
         redbubble.gameObject.SetActive(false);
       }
-      item.showNotification = false;
-
-
       
 
       completed = item.complete;
@@ -76,16 +77,15 @@ public class TodoManager : MonoBehaviour
         backgroundImage.sprite = greenBackground;
         dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
       }
-
-      
-
-      checklistItems.SetActive(false);
       resetLayouts();
+      gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f, titleRTransform.sizeDelta.y + extraPadding); 
+      checklistItems.SetActive(false);
 
     }
 
     public void toggleChecklist(){
-      if(checklistItems.activeSelf){
+      if(opened){
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f,  titleRTransform.sizeDelta.y + extraPadding);
         checklistItems.SetActive(false);
         profileImage.SetActive(false);
         dropdownImage.gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -94,9 +94,12 @@ public class TodoManager : MonoBehaviour
         } else {
           dropdownImage.gameObject.GetComponent<Image>().sprite = redDropdown;
         }
+        opened = false;
         
       } else {
+        opened = true;
         checklistItems.SetActive(true);
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f, checklist.Count * 30 + titleRTransform.sizeDelta.y + extraPadding);
         profileImage.SetActive(true);
         dropdownImage.gameObject.GetComponent<Image>().sprite = greyDropdown;
         if(completed){
