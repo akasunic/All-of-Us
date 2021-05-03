@@ -34,7 +34,7 @@ Rashad?Smiling "Maybe eventually it can become a staple again when I have more t
     -> Explain1
 
 ==Chat3==
-Rashad?Smiling "The kids are great, blah blah. ___ is great too, we've been alternating days of more and less time with the kids since we both have slightly flexible jobs,"
+Rashad?Smiling "The kids are great. Cheryl is great too, we've been alternating days of more and less time with the kids since we both have slightly flexible jobs,"
 Rashad?Smiling "and it's definitely helped the family dynamic as a whole."
 
 * Good to hear. I'm working on a youth initiative right now with Lila actually, and I think I could use your help with equipment for a speaker event. 
