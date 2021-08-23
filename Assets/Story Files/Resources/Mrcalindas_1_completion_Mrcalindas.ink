@@ -75,5 +75,5 @@ Mrcalindas?Smiling "Well, I appreciate you for always doing good things for ever
 Mrcalindas?Neutral "Those ensaymadas are on the line, {player_name} so I have no problems with you coming back. See you soon."
 * Ok, see you later!
  -> END
-* I'll be right back! The secrets of ensaymada will be mine!
+* I'll be right back! The secrets of ensaymada will one day be mine!
  -> END
