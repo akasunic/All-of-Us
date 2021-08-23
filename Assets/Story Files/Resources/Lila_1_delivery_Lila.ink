@@ -43,7 +43,7 @@ Lila?Smiling "Usually I try to stray away from adding more work on my plate outs
 
 
 == clinic == 
-Lila?Smiling "I'm working a childcare booth during the day to help out Rashad, but I could possibly host the event at night."
+Lila?Smiling "I'm working a childcare booth during the day to help out Rashad, but I could probably host the event at night."
 Lila?Smiling "That might be a good way to get more kids to come too, since the daytime activities would be wrapped up!"
 
 + Yeah! This initiative is wonderful. What do you need to do to make it happen this weekend?

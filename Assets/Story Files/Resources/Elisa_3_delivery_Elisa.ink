@@ -20,7 +20,7 @@ Elisa?Smiling "Oh, hey {player_name}!"
 
 Elisa?Smiling "What brings you to the library? Still working on stuff for the block party?"
 
-*Yeah, there’s lots of details we're still working out... did you think any more about that succulent booth?
+*Yeah, there’s lots of details we're still working out... did you think about that succulent booth job?
     ->blockPartyQ3
 *Nah, I was just in the neighborhood!
     ->Neighborhood
@@ -38,7 +38,7 @@ Elisa?Neutral "I don't know, I still feel kinda down, though."
 ===blockPartyQ3===
 
 Elisa?Neutral "Oh, right! I'm still thinking about it. I'm still feeling pretty stressed between school, and looking after my siblings, and working on all this transfer stuff..."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really get where I'm coming from."
+Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really understand, even though they try."
 
 *Hmm... have you tried talking to anyone else about it?
     ->talkWithOthers
@@ -47,11 +47,11 @@ Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they d
 
 ===Neighborhood===
 
-Elisa?Smiling "Oh please, when are you not in the neighborhood? "Bloomwood spirit" never seems to take a holiday these days."
+Elisa?Smiling "Oh please, when are you not in the neighborhood? "Bloomwood spirit" never seems to take a holiday these days!"
 
 *Alright, alright, point taken. Anyways, how are things with you?
     ->Q32
-*Holiday? I've got a block party to plan! A Holiday can wait!
+*Holiday? I've got a block party to plan! A holiday can wait!
     ->preBlockPartyQ3
     
 ===preBlockPartyQ3===
@@ -137,7 +137,7 @@ Elisa?Neutral "Mostly they just change the subject, or say not to worry about it
 ===acceptQ3===
 
 Elisa?Smiling "If you're willing to look around for me, that'd be a big help!"
-Elisa?Smiling "I have no idea where to find someone like that, but if you can find me anyone who's been through something similar, I'd love to talk to them about it. Let me know what you find!"
+Elisa?Smiling "I have no idea where to find anyone, but if you can find someone who's been through something similar, I'd love to get their advice. Let me know what you find!"
 
 *See you!
     ->END

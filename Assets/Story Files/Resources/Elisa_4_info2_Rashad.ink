@@ -62,7 +62,7 @@ Rashad?Neutral "In terms of treatment, I know he carries a blood glucose meter w
 ==Suggestion1==
 Rashad?Smiling "Yeah, he has to be more careful about what he eats, and make an effort to get out and exercise."
 Rashad?Smiling "Oh! You know what, I think he takes insulin shots, too. I remember him mentioning that once."
-Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, though. Probably depends on the situation."
+Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, though. A lot depends on the situation, which is why a doctor is in charge in these situations."
 
 ~ notification = "Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4"
 # notification Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4
@@ -89,7 +89,7 @@ Rashad?Smiling "All the treatment stuff they do - exercise, healthy eating, medi
 
 Rashad?Smiling "Yeah, no worries! If you think of anything other questions, just let me know. Farewell, adventurer!"
 
-* Ha, "farewell"  to you too.
+* Farewell to you too!
   ->END
 * Alright, alright, bye Rashad.
   ->END

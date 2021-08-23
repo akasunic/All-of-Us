@@ -16,12 +16,12 @@ Mrcalindas?Smiling "Hello, {player_name}. Can I help you with something?"
 
 Mrcalindas?Neutral "Is it general stress? Or stress about something specific?"
 
-+She's a first-gen college student, and she's having trouble finding people to talk to who relate to what she's going through.
++She's a first generation college student, and she's having trouble finding people to talk to who relate to what she's going through.
     ->firstGenResources
 
 ===firstGenResources===
 
-Mrcalindas?Smiling "In that case, she should focus on getting support from her school, or other first-gen students."
+Mrcalindas?Smiling "In that case, she should focus on getting support from her school, or other first generation students."
 Mrcalindas?Smiling "Whether it's a mentor or using school resources,"
 Mrcalindas?Smiling "having a place where she can feel connected to the community and like she's not the only one going through this kind of stress will go a long way to improve her mental health."
 

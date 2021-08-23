@@ -16,7 +16,7 @@ Lila?Smiling "Hey {player_name}! Good to see you."
     -> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "Not too bad. Been working late here at the community center, but Trisha always stops by with dinner when I'm stuck here which is nice."
+Lila?Neutral "Not too bad. Been working late here, but Trisha always stops by with dinner when I'm stuck at my desk, which is nice."
 
 * That's sweet. What are you working on?
     -> Chat2
@@ -26,6 +26,7 @@ Lila?Neutral "Not too bad. Been working late here at the community center, but T
 
 ==Chat2==
 Lila?Neutral "Lesson plans for next week. I have an assistant who usually helps me with them, but she only has ten paid hours a week, so she doesn't stay past that."
+Lila?Neutral "The rest falls on me! Regardless of my hours."
 
 * Let me know if I can help with that. Speaking of, I got some information on the speaker event Saturday.
     Lila?Smiling "Oh cool! "
@@ -71,7 +72,7 @@ Lila?Neutral "That would work, but I’m not sure it covers enough that it would
     
 
 ==SolvedGoodbye==
-Lila?Smiling "Wow, thank you so much, {player_name}. Thank you for suggesting we move the event to this weekend, I think it’s really going to boost attendance and awareness. Please stop by again soon if you get the chance!
+Lila?Smiling "Wow, thank you so much, {player_name}. Having the event this weekend would really boost attendance and awareness. Please stop by again soon if you get the chance!
 
 * No worries, Lila. That's what I'm here for. See you soon! 
     -> END

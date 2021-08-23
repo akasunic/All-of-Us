@@ -35,7 +35,7 @@ Rashad?Smiling "Ohhh I forgot about that. Your Mom had to hose it down. It was a
 
 Rashad?Neutral "We are not doing a potato sack race again." 
 
-* No. No. I was wondering if the library has any bilingual classes or classes for seniors in tech?
+* No. No. I was wondering if the library has any bilingual classes? Or classes for seniors in tech?
   -> Explain2
 * You know I'm not talking about that. I was wondering if the library had any classes for seniors about tech?
   -> Explain2

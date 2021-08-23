@@ -54,7 +54,7 @@ Rashad?Neutral "Oh? My Opinion? What do you need to know?"
 
 ==Suggestion1==
 Rashad?Smiling "Well, honestly Covid taught us that we need to teach people basic hygiene. At the library, we want people to wash their hands often."
-Rashad?Smiling "We also know that materials should be in many different languages, so that ESL speakers can access our materials." 
+Rashad?Smiling "We also know that materials should be in many different languages, so that EEnglish-as-a-second-language, or ESL, speakers can access our materials." 
 
 ~ notification = "Rashad_Day 1_Materials need to be in many languages"
 # notification Rashad_Day 1_Materials need to be in many languages

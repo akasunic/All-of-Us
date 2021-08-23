@@ -43,7 +43,7 @@ Mrcalindas?Smiling "Good luck with all that. I'm sure it'll turn out great."
 
 ==Explain1==
 
-Mrcalindas?Neutral "Well, generally, if someone has diabetes, it means that their blood sugar levels are too high because their body isn't producing enough insulin."
+Mrcalindas?Neutral "Well, generally, if someone has diabetes, it means their blood sugar levels are too high because their body isn't producing enough insulin."
 Mrcalindas?Neutral "Not everyone experiences it in the same way, either. Depending on genetics and age, someone could have Type 2 Diabetes instead of Type 1 Diabetes. Does that help?"
 
 * Sort of- I wanted to know what it's like to diagnose type 2 diabetes for adults, and what treatment looks like.
@@ -63,8 +63,8 @@ Mrcalindas?Neutral "From there, there are a couple of different treatments avail
 
 ==Suggestion1==
 
-Mrcalindas?Smiling "The big ones are healthy diet and regular exercise."
-Mrcalindas?Smiling "Eat small portions, make sure you do some light activity every 30 minutes, and do more moderate activity a few times a week. That sort of thing."
+Mrcalindas?Smiling "The big ones are a diverse, nutrient-rich diet and regular exercise."
+Mrcalindas?Smiling "Eat small portions, make sure you do some light activity every 30 minutes, and do more moderate activity a few times a week."
 
 ~ notification = "Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4"
 # notification Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4
@@ -77,8 +77,8 @@ Mrcalindas?Smiling "Eat small portions, make sure you do some light activity eve
 ==Suggestion2==
 
 Mrcalindas?Smiling "Well, it's fairly simple. Other than looking after your diet and exercising every day, you'd be monitoring your blood sugar levels at home via a blood glucose meter."
-Mrcalindas?Smiling "How often you have to monitor those levels depends person-to-person, but it's usually around once a day."
-Mrcalindas?Smiling "Otherwise, sometimes treatment includes insulin therapy via injections, but doctors don't always prescribe it."
+Mrcalindas?Smiling "How often you have to monitor those levels depends person-to-person, but it's usually once a day."
+Mrcalindas?Smiling "Otherwise, treatment can include insulin therapy via injections, but doctors don't always prescribe it."
 
 ~ notification = "Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4"
 # notification Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4

@@ -29,7 +29,7 @@ Elisa?Smiling "If I can help out, I will! Still have to see whether I need to wo
 
 
 ==Explain1==
-Elisa?Neutral "I hope so! Sometimes I just wish I was had an older sibling so I could be the youngest and run around."
+Elisa?Neutral "I hope so! Sometimes I wish I had an older sibling so I could be the youngest and run around and play."
 
 * They are lucky to have you. We talked earlier this week about that mentorship you were looking for, how is that working out?
     -> Explain2
@@ -52,7 +52,7 @@ Elisa?Smiling "Then I would love to!"
 ~ notification = "Elisa_Day 4_Elisa wants to get to know Lila better, and is going to reach out this weekend to set up a coffee date_Lila4"
 # notification Elisa_Day 4_Elisa wants to get to know Lila better, and is going to reach out this weekend to set up a coffee date_Lila4
 
-* Nice! Lila's not the best at reaching out, otherwise I think she would have already. She sees a lot of herself in you.
+* Nice! Lila's not the best at reaching out, otherwise I think she would have already. She sees a lot of herself in you. The chaos especially!
     -> Goodbye
 
 ==Goodbye==

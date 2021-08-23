@@ -9,7 +9,7 @@ VAR new_quest = ""
 ~ new_contact = "Lila"
 # new_contact
 
-Lila?Smiling "Hey {player_name}! How are you feeling this fine day?"
+Lila?Smiling "Hey {player_name}! How are you feeling today?"
 
 * Hey Lila! Are you on break?
   -> Chat1
@@ -18,9 +18,9 @@ Lila?Smiling "Hey {player_name}! How are you feeling this fine day?"
 
 ==Chat1==
 
-Lila?Smiling "It's naptime, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try and get outside pretty frequently." 
+Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try and get outside pretty frequently." 
  
-* I'm glad you got them to nap so you could actually catch a break.
+* I'm glad you got them to nap so you could relax.
   -> Chat2
 * I know you're on a break, but could I ask you for your opinion on something?
   -> Explain1
@@ -67,7 +67,7 @@ Lila?Smiling "Oh, and it can be hard to get to the health center for people who 
   -> Goodbye
 
 ==Suggestion2==
-Lila?Smiling "Well, it's important for marginalized communities like PoC and LGBTQIA folks get the help they need with no judgements."
+Lila?Smiling "Well, it's important for communities of color and LGBTQIA folks get the help they need with no judgements."
 Lila?Smiling "We can face a lot of stigma, and that harms access to care. Oh, and mental health resources are useful for everyone. We all get stressed or have hard times." 
 
 ~ notification = "Lila_Day 1_LGBTQIA and POC populations can face stigma in healthcare_Mrcalindas1"

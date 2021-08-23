@@ -22,26 +22,26 @@ Elisa?Smiling "Oh, it went really well! We had really good turnout, and it seeme
 
 *That's awesome! 
     -> recap2
-*Cool, cool... so the block party is coming up fast here. 
+*Cool, cool... so the block party is coming up sooooonnn. 
     -> jumpAlt
     
 ===jump===
 
-Elisa?Neutral "Oh right, the block party! I don't know, I can't really commit to anything right now, but I promise I'll keep thinking about it!"
-Elisa?Neutral "It's just that I'm still pretty booked this week- and random things keep popping up, too."
+Elisa?Neutral "Oh right, the block party! I wish I had an answer for sure, but I promise I'll keep thinking about it!"
+Elisa?Neutral "I want to be honest with myself about what I can commit to. Random things keep popping up, too."
 
 *Like what? 
     -> explain
-*Oh, is it more school stuff?
+*More school stuff?
     -> explainAlt
     
 ===recap2===
 
 Elisa?Smiling "Yeah!! Anyway, what's new with you?"
 
-*Still gearing up for that big block party, actually... can you work it? 
+*Still gearing up for that big block party, actually... do you know if you could run that booth yet? 
     ->work
-*Oh I've been good, I've just been working on stuff for the block party. 
+*Oh I've been good, I've just been working on the block party. Helping out a few people here and there too. 
     -> jumpAlt
     
 ===jumpAlt===
@@ -50,32 +50,32 @@ Elisa?Smiling "Oh, that's right! Did you still want me to work that succulent bo
 
 *Yeah, that'd be great! 
     -> quest2
-*I mean, only if you're free, I know you're super busy 
+*Only if you're free! I don't want to pressure you, I know you're super busy.
     -> quest2Alt
 
 ===quest2===
 
-Elisa?Neutral "Hmm ok... I can't commit to anything right now, but I promise I'll keep thinking about it! It's just that I'm still pretty booked this week- and random things keep popping up, too."
+Elisa?Neutral "Hmm ok... not yet, but I promise I'll try to work out some free time! I want to be honest with myself about what I can commit to. Random things keep popping up, too."
 
 *Like what? 
     -> explain
-*Oh, is it more school stuff? 
+*More school stuff? 
     -> explainAlt
 
 ===quest2Alt===
 
-Elisa?Neutral "Yeah, I'm still pretty busy unfortunately... and random things keep popping up, too. Like, just today- I’m getting ready to transfer schools and finish my degree, right?"
-Elisa?Neutral "Today I got an email saying that they need my vaccination records before I can go there, and of course my parents have no idea where they could be."
+Elisa?Neutral "Yeah, I'm still pretty busy unfortunately... random things keep popping up, too. Like, just today- I’m getting ready to transfer schools and finish my degree, right?"
+Elisa?Neutral "Today I got an email this morning saying that they need my vaccination records before I can go there, and my parents have no idea where they are."
 
 *Oh no!
     -> notHelp
-*Maybe I could help?
+*Do you think I could help?
     -> help
 
 ===explain===
 
 Elisa?Neutral "Well, like today- I’m getting ready to transfer schools and finish my degree, right?"
-Elisa?Neutral "Today I got an email saying that they need my vaccination records before I can go there, and of course my parents have no idea where they could be."
+Elisa?Neutral "I got an email this morning saying that they need my vaccination records before I can go there, and of course my parents have no idea where they could be."
 
 *Oh no! 
     -> notHelp
