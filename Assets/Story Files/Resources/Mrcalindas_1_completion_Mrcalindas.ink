@@ -22,7 +22,7 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 
 * ...uh...sure... Anyway, I asked Lila and Rashad what they thought.
     -> ReadyToSolve
-* If by save you mean devoured. Anyway, I asked Lila and Rashad what they thought.
+* If by save you mean devoured... Anyway, I asked Lila and Rashad what they thought.
     -> ReadyToSolve
 
 ==ReadyToSolve==
@@ -64,7 +64,7 @@ Mrcalindas?Neutral "Hmm. Is that it? maybe you want to check your notes again?"
     -> TempGoodbye
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "Well, I appreciate you for always doing good things for everyone here in Bloomwood. Now go bug someone else. See you soon!" 
+Mrcalindas?Smiling "Well, I appreciate you for always doing good things for everyone here in Bloomwood. I'll see you around!" 
 
 * Tell Mrs. Calindas I said hi! See you soon!
  -> END
@@ -75,5 +75,5 @@ Mrcalindas?Smiling "Well, I appreciate you for always doing good things for ever
 Mrcalindas?Neutral "Those ensaymadas are on the line, {player_name} so I have no problems with you coming back. See you soon."
 * Ok, see you later!
  -> END
-* I'll be right back! The secrets of ensaymada will be mine!
+* I'll be right back! The secrets of ensaymada will one day be mine!
  -> END

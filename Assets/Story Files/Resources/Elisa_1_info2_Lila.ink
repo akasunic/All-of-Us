@@ -37,14 +37,15 @@ Lila?Smiling "The major points to hit would be a personal introduction, what her
 ===LCareer1===
 
 Lila?Smiling "A little! I had to go to a few back when I was in school, but internships and everything were much less common."
+Lila?Smiling "I only was expected to do one internship after my third year. Now I know students start small internships after their first year!"
 
 ~ notification = "Lila_Day 1_Internships used to be less common"
 # notification Lila_Day 1_Internships used to be less common
 
-+Gotcha. Well, do you remember anything about like what to prepare?
++Gotcha. Well, do you remember anything about what to prepare?
     ->LElevatorPitch
     
-===LCareer2===
+===LCareer2=== //want to take this part out of either Rashad's or Lila's
 
 Lila?Smiling "Oh yeah, sure! Usually you want to bring printed copies of your resume to the fair, that way you can hand them to potential employers."
 Lila?Smiling "It's really helpful so that they can get a sense of how you might fit in their company, and sometimes they even hand the paper copies off to their higher-ups at the end of the day."
@@ -59,18 +60,18 @@ Lila?Smiling "It's really helpful so that they can get a sense of how you might 
 ===LConvoTips===
 
 Lila?Smiling "It's important to have questions to ask them, too!"
-Lila?Smiling "Part of it is about knowing you, but a big part of it is also showing that you're interested or making a personal connection with the hirer."
-Lila?Smiling "So, you could ask something like what drew them to the company, or what their favorite part of working there is."
+Lila?Smiling "Part of it is about knowing you, but a big part of it is also showing that you're interested or making a personal connection with the recruiter."
+Lila?Smiling "Get creative with your questions! Intriguing them is memorable and they'll think of you later."
 
-~ notification = "Lila_Day 1_Be sure to prepare questions to ask the hirers_Elisa1"
-# notification Lila_Day 1_Be sure to prepare questions to ask the hirers_Elisa1
+~ notification = "Lila_Day 1_Be sure to prepare questions to ask the recruiters_Elisa1"
+# notification Lila_Day 1_Be sure to prepare questions to ask the recruiters_Elisa1
 
 +Great! Any more general tips for success?
     ->LGenTips
 
 ===LGenTips===
 
-Lila?Neutral "Hmm... I guess just make sure to follow up with the hirers after the fair, especially if you end up applying to the job afterwards!"
+Lila?Neutral "Hmm... I guess just make sure to follow up with the recruiters after the fair, especially if you end up applying to the job afterwards!"
 Lila?Neutral "Might help the hirers remember you better when they end up looking over your real application."
 
 ~ notification = "Lila_Day 1_Follow up with new contacts after the career fair_Elisa1"

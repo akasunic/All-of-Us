@@ -36,13 +36,13 @@ Mrcalindas?Smiling "Well, that's assuming that they have them, anyway. But even 
 ~ notification = "Mrcalindas_Day 2_You can find vaccination records in online health portals_Elisa2"
 # notification Mrcalindas_Day 2_You can find vaccination records in online health portals_Elisa2
 
-*I don't actually know if she has an online health portal.
+*I don't know if she has an online health portal, could you explain that more?
     ->notOnline
 
 ===notOnline===
 
 Mrcalindas?Smiling "It would depend on her care provider, some offer an online system where patients can check records and view appointments."
-Mrcalindas?Smiling "If not, though, she could go back to her old physician and ask for a physical copy."
+Mrcalindas?Smiling "If not, though, she could go back to her old physician and ask for a physical copy. Her parents should know who her pediatrician was."
 
 ~ notification = "Mrcalindas_Day 2_You can find vaccination records at previous physicians' offices_Elisa2"
 # notification Mrcalindas_Day 2_You can find vaccination records at previous physicians' offices_Elisa2
@@ -73,7 +73,7 @@ Mrcalindas?Smiling "She could also try a pharmacy- I would tell her to research 
 ~ notification = "Mrcalindas_Day 2_Free clinics and pharmacies can be a less expensive place to get vaccinated_Elisa2"
 # notification Mrcalindas_Day 2_Free clinics and pharmacies can be a less expensive place to get vaccinated_Elisa2
 
-*Got it. Which vaccines would she need to get? 
+*Got it. Which vaccines would she need? 
     ->whichVac
 
 ===whichVac===
@@ -84,7 +84,7 @@ Mrcalindas?Smiling "She can find out what vaccines she'd need by looking it up o
 ~ notification = "Mrcalindas_Day 2_You may need Meningitis, Hepatitis, or HPV vaccines"
 # notification Mrcalindas_Day 2_You may need Meningitis, Hepatitis, or HPV vaccines
 
-*Where on the website do you think it would be?
+*Do you know where on the website?
     ->searchTerms
     
 ===searchTerms===

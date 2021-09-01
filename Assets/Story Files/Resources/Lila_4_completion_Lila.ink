@@ -16,7 +16,7 @@ Lila?Smiling "Hi {player_name}! Good to see you."
     -> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "Thank you! I've been designing tattoos for a while now, I don't ink them all but I enjoy practicing the process."
+Lila?Neutral "Thank you! It's a tattoo, I've been designing them for a while now. I don't ink them all but I enjoy practicing the process."
 
 * You could definitely make a side hustle out of this.
     -> Chat2
@@ -24,7 +24,7 @@ Lila?Neutral "Thank you! I've been designing tattoos for a while now, I don't in
     -> ReadyToSolve
 
 ==Chat2==
-Lila?Smiling "I always have too many things going on. At some point I'll probably make an art instagram page though to guage interest. See if it's worth the time!"
+Lila?Smiling "I always have too many things going on. At some point I'll make an art instagram page though, to guage interest. See if it's worth the time!"
 
 * I might know a few people who would support that idea! I hope you don't mind, I set up a few friend dates for you.
     -> ReadyToSolve

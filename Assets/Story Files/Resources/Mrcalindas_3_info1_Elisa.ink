@@ -36,7 +36,7 @@ Elisa?Smiling "Cotton candy? You sound way too excited for cotton candy. I thoug
 
 Elisa?Smiling "Okay, fair. I do love corndogs. And Satay. And- okay food on a stick is pretty great." 
 
-* See. Never too old for food on a stick. Hmm. I popped by to ask Rashad something, but you might be able to help.
+* See?! Never too old for food on a stick. You know, I stopped by to ask Rashad something, but you might be able to help.
   -> Explain1
 
 ==Explain1==

@@ -16,7 +16,7 @@ Elisa?Smiling "Oh, hey {player_name}!"
     
 ===casual===
 
-Elisa?Neutral "Ugh, I tried to ask around about the vaccination stuff but no one knows what I should do. How about you, did you find anything?"
+Elisa?Neutral "Ugh, I tried to ask around about the vaccination stuff but no one knows what I should do. How about you? Did you find anything?"
 
 *Yes! 
     -> PuzzleInterface

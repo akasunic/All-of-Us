@@ -53,7 +53,7 @@ Mrcalindas?Neutral "Oh? We would enjoy knowing how to prepare for the day. What 
 
 ==GoodSolution==
 
-Mrcalindas?Smiling "Oh, wow {player_name} this is a lot of good news. We don't want Brooklyn to feel singled out, so making all of the activities open to all children will make her and us feel good."
+Mrcalindas?Smiling "Oh, wow {player_name} this is a lot of good news. We don't want Brooklyn to feel singled out, so making all of the activities open to all children will make everyone feel good."
 Mrcalindas?Smiling "We can sit down and plan how best to support everyone that day, now."
 
 * Awesome! I know it's no unicorn, but I do hope she'll have a great time.
@@ -64,7 +64,7 @@ Mrcalindas?Smiling "We can sit down and plan how best to support everyone that d
 ==BadSolution==
 
 Mrcalindas?Neutral "Ah. I see. Well, at least everything will be well labeled. I don't know how we are going to help her if she feels overstimulated, though."
-Mrcalindas?Neutral "Wish there was something to do about that..."
+Mrcalindas?Neutral "Wish there was something we could do about that when we notice it happening."
 
 * Wait, I think we can do more. Let me try that again.
   -> PuzzleInterface

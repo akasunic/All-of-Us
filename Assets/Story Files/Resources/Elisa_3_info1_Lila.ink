@@ -27,7 +27,7 @@ Lila?Neutral "It'll also probably be more comfortable for Elisa to connect with 
     
 ===institutionalConnections===
 
-Lila?Smiling "You can also tell her that she could reach out to any first-gen teachers she knows at her school for advice. I'm sure they'd love to help her."
+Lila?Smiling "You can also tell her that she could reach out to any first generation teachers she knows at her school for advice. I'm sure they'd love to help her."
 Lila?Smiling "Or, if nothing else, sometimes colleges actually have specific programs to help first-gen students form a community- do you know if they have that?"
 
 ~ notification = "Lila_Day 3_Reach out to teachers and make use of school programs_Elisa3"
@@ -42,7 +42,7 @@ Lila?Smiling "Or, if nothing else, sometimes colleges actually have specific pro
 
 Lila?Smiling "Awesome! Yeah, the big thing is just for Elisa to get some more support in whatever way she can."
 Lila?Smiling "Whether it's a mentor or using school resources,"
-Lila?Smiling "having a place where she can feel connected to the community and like she's not the only one going through this kind of stress will go a long way to improve her mental health."
+Lila?Smiling "having a place where she can feel connected to the community and like she's not alone in her stress will go a long way to improve her mental health."
 
 ~ notification = "Lila_Day 3_Getting connected with your community can help reduce stress_Elisa3"
 # notification Lila_Day 3_Getting connected with your community can help reduce stress_Elisa3

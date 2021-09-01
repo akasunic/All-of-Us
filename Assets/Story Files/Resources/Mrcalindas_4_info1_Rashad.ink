@@ -34,7 +34,7 @@ Rashad?Neutral "Really? What makes you say that?"
 
 ==Explain1==
 
-Rashad?Neutral "I'm actually really happy you're thinking about this. A lot of children can have a rough time with sensory issues. We see it at the library all the time. Can you tell me some more?"
+Rashad?Neutral "I'm actually really happy you're thinking about this. A lot of children can have a rough time without proper support. We see it at the library all the time. Can you tell me some more?"
 
 * Sure, there's a child who is really excited to come, but I want to make sure I can support them if it's too overwhelming.
   -> Explain2

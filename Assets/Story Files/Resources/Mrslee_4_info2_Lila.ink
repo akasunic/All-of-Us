@@ -14,7 +14,7 @@ Lila?Smiling "Hey, friend!"
   -> Chat1
 
 ==Chat1==
-Lila?Smiling "Hmm how are you?"
+Lila?Smiling "Hmm, how are you?"
 
 * I was just checking out ... the community center programming!
   -> Chat2
@@ -30,7 +30,7 @@ Lila?Smiling "We have a lot going on this weekend, I don't even think all the ev
   -> Explain1
 
 ==Chat3==
-Lila?Smiling "I'm most excited to see everyone, actually! I haven't seen Eddie in what feels like forever."
+Lila?Smiling "I'm most excited to see everyone! I haven't seen Eddie in what feels like forever."
 
 * Aw, you and Eddie are really close.
   -> Explain1

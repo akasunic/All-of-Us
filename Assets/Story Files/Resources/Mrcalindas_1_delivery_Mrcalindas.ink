@@ -35,7 +35,7 @@ Mrcalindas?Smiling "It's been a long time since this neighborhood had a party, I
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Oh? What do you need? I was going to volunteer to run the booth, and bring little swag bags."
+Mrcalindas?Neutral "Oh? What do you need? I was going to volunteer to run the booth, and bring little gift bags."
 Mrcalindas?Neutral "I'm just a little worried they won't contain what the community needs... Wait a second. Maybe you can help me? 
 
 * Oh that's great! I was going to ask you to run the booth. How can I help you?
@@ -91,7 +91,7 @@ Mrcalindas?Smiling "And can you ask Rashad what older people and students may ne
   -> Goodbye
 
 ==Goodbye==
-Mrcalindas?Smiling "Good job, {player_name}. I'll tell you what. Do this for me, and next weekend Lucy and I will teach you how to make her ensaymadas. Deal? Now, stop bugging me. I'll see you soon." 
+Mrcalindas?Smiling "Good job, {player_name}. I'll tell you what. Do this for me, and next weekend Lucy and I will teach you how to make her ensaymadas. Deal? I'll see you soon." 
 
 * BEST. DEAL. EVER. I'll get on it now. See you soon!
   ->END

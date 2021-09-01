@@ -44,8 +44,8 @@ Elisa?Neutral "She's been eating a lot more than usual, and drinking a lot more 
 
 ==QuestDetails1==
 
-Elisa?Neutral "Well, my uncle on my mom's side has diabetes, and I think it might be one of those genetic things."
-Elisa?Neutral "I don't know, I guess it might not be diabetes. That's just the first thing my mind went to."
+Elisa?Neutral "Well, my uncle on my mom's side has diabetes, and I think it might be genetic."
+Elisa?Neutral "But I don't know, I could be wrong. That's just the first thing my mind went to."
 
 * Would you want to take your mom to the doctor?
   -> QuestDetails2
@@ -56,7 +56,7 @@ Elisa?Neutral "I don't know, I guess it might not be diabetes. That's just the f
 
 ==OptionalQuestDetails1==
 
-Elisa?Neutral "I think it's type 2. I haven't seen him in a while, though... I should really call him up and see how he's doing with all that."
+Elisa?Neutral "I think it's type 2. I haven't seen him in a while, though... I should really call him up and see how he's doing."
 
 * Well, if it is diabetes, would your mom be willing to go to a doctor?
   -> QuestDetails2
@@ -76,7 +76,7 @@ Elisa?Neutral "I feel like if I knew what tests the doctor would run then I coul
 ==OptionalQuestDetails2==
 
 Elisa?Neutral "Honestly, I'm not sure. My mom was working late nights at the office last month, so I don't really know when it started."
-Elisa?Neutral "I first noticed the eating and drinking thing about a week ago. I thought it would just go away, but it hasn't."
+Elisa?Neutral "I first noticed the eating and drinking thing about a week ago."
 
 * Got it! Let me see what I can find out for you.
   -> QuestAcceptance
@@ -86,6 +86,7 @@ Elisa?Neutral "I first noticed the eating and drinking thing about a week ago. I
 ==QuestAcceptance==
 
 Elisa?Smiling "That'd be great, {player_name}! Yeah, if you could find out what the testing process is like for diabetes and what treatments there are, that'd really help me out a lot."
+Elisa?Smiling "I want to make sure she has the care she needs as soon as possible if this is what's happening."
 
 * Can do!
   -> Goodbye

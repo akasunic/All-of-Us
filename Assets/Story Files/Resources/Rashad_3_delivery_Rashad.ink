@@ -60,7 +60,7 @@ Rashad?Neutral "Yeah, of course. It's my first time asking for help. I'm so busy
 
 ==QuestDetails2==
 Rashad?Neutral "Since it's my first time with therapy, I'm really nervous. I think opening up in this way is going to be tough for me."
-Rashad?Neutral "I want to find someone who really understands, so like a list of what to ask or look for maybe?"
+Rashad?Neutral "I want to find someone who really understands, so like a list of what to ask or look for?"
 Rashad?Neutral "Plus they need to take my health insurance. I'd be open to teletherapy too, at least to try and see!"
 
 * Teletherapy? I can definitely look into that.
@@ -70,7 +70,7 @@ Rashad?Neutral "Plus they need to take my health insurance. I'd be open to telet
 
 ==OptionalQuestDetails2==
 Rashad?Neutral "Yeah, teletherapy might be a good fit because my schedule is so busy. My doctor suggested it."
-Rashad?Neutral "If you can't find a therapist, maybe some other options would help too. I just want to be supported, you know?"
+Rashad?Neutral "If you can't find a therapist, maybe I can figure out something else. I just want to be supported, you know?"
 
 * Well, I am happy to help support. Let me ask around and see if I can find some info for you.
   -> QuestAcceptance

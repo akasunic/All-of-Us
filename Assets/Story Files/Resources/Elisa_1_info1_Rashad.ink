@@ -10,18 +10,18 @@ VAR new_quest = ""
 # new_contact
 Rashad?Smiling "Hey there adventurer! What's your quest today?"
 
-+Ha, I've gotta go dig up some ancient tomes on career fairs.
++ Ha, I've gotta go dig up some ancient tomes on career fairs from the back of the library.
     ->R1
-+You wouldn't happen to know anything about career fairs, would you?
++ You wouldn't happen to know anything about career fairs, would you?
     ->R2
 
 ===R1===
 
-Rashad?Smiling "Career fair huh? Now that takes me back. What are you learning about career fairs for? Block party planning got you down?"
+Rashad?Smiling "Career fairs, huh? Now that takes me back. What are you learning about career fairs for? Block party planning got you down?"
 
-+No, no, I'm doing research to help my friend Elisa. She's a college student.
++ No, no, I'm doing research to help my friend Elisa. She's a college student.
     ->R3
-+As if! It's for a friend of mine. 
++ Yes, career fairs are the topic to turn to if I'm down and out from planning... It's for a friend of mine. 
     ->R4
 
 ===R2===
@@ -51,7 +51,7 @@ Rashad?Smiling "The major points to hit would be a personal introduction, what h
 
 ===R4===
 
-Rashad?Smiling "A friend of yours! Well, any friend of {player_name}'s is a friend of mine! What seems to be the problem?"
+Rashad?Smiling "A friend of yours! Well, any friend of {player_name} is a friend of mine! What seems to be the problem?"
 
 +Well, she's never been to a career fair before and she needs some advice. What should she prepare before the event?
     ->elevatorPitch
@@ -59,13 +59,13 @@ Rashad?Smiling "A friend of yours! Well, any friend of {player_name}'s is a frie
 ===RBringItems===
 
 Rashad?Smiling "Ah, well tell her to bring some copies of her resume to hand off to the recruiters."
-Rashad?Smiling "They won't always keep them, but if they do, the recruiter might pass it onto other people in the company that are hiring."
+Rashad?Smiling "If they aren't interested in you for the position they are looking for, the recruiter might pass it onto other people in the company that are hiring."
 Rashad?Smiling "She'll probably want to bring a few different ones, too, if she knows what kinds of jobs she's looking for. A targeted resume can help you stand out to recruiters more."
 
 ~ notification = "Rashad_Day 1_Bring copies of your resume to a career fair_Elisa1"
 # notification Rashad_Day 1_Bring copies of your resume to a career fair_Elisa1
-~ notification = "Rashad_Day 1_Recruiters won't always keep your resume"
-# notification Rashad_Day 1_Recruiters won't always keep your resume
+~ notification = "Rashad_Day 1_Recruiters might pass off your resume"
+# notification Rashad_Day 1_Recruiters might pass off your resume
 
 +What's a targeted resume?
   ->targetedResume 
@@ -74,8 +74,8 @@ Rashad?Smiling "She'll probably want to bring a few different ones, too, if she 
 
 ===targetedResume===
 
-Rashad?Smiling "It's just like a normal resume, only it narrows down your work experience and education to just what's relevant for the role you're applying to."
-Rashad?Smiling "That way, it's easier for the hirers to see at a glance that you'd be a good fit."
+Rashad?Smiling "It's just like a normal resume, only it narrows down your work experience and education to what's specifically relevant for the role you're applying to."
+Rashad?Smiling "That way, it's easier for the recruiters to see at a glance that you'd be a good fit."
 
 +Got it. Is there anything else she should bring?
 -> RBringNotes
@@ -92,19 +92,19 @@ Rashad?Neutral "Hmmm... that's the big one. Maybe tell her to bring a pen and a 
     
 ===RConvoTips===
 
-Rashad?Smiling "Sure! The conversation doesn't have to be about marketing yourself and convincing them to hire you, your friend should try to make a good connection."
-Rashad?Smiling "So, you could turn the tables on the recruiter- ask them what drew them to the company, what it's like to work there, stuff like that!"
+Rashad?Smiling "Sure! The conversation doesn't have to only be about marketing yourself. Your friend should try to make a good connection."
+Rashad?Smiling "So, you can turn the tables on the recruiter- ask them what drew them to the company, what it's like to work there, stuff like that!"
 
-~ notification = "Rashad_Day 1_Be sure to prepare questions to ask the hirers_Elisa1"
-# notification Rashad_Day 1_Be sure to prepare questions to ask the hirers_Elisa1
+~ notification = "Rashad_Day 1_Be sure to prepare questions to ask the recruiters_Elisa1"
+# notification Rashad_Day 1_Be sure to prepare questions to ask the recruiters_Elisa1
 
-+Awesome! One last question then, do you have any general tips for success?
++Awesome! One last question, do you have any general tips for success?
     ->RGeneralTips
 
 
 ===RGeneralTips===
 
-Rashad?Neutral "Just be sure to follow up afterwards, definitely. You can contact most recruiters online- do you know if she's good with computers?"
+Rashad?Neutral "Be sure to follow up afterwards. You can contact most recruiters online- do you know if she's good with computers?"
 
 +Not really, no.
     ->Rtech1
@@ -114,7 +114,7 @@ Rashad?Neutral "Just be sure to follow up afterwards, definitely. You can contac
 ===Rtech1===
 
 Rashad?Smiling "Well, either way, if she needs help she can always swing by the library!"
-Rashad?Smiling "She'll probably want to email the recruiters or add them on Linkedin after the fair. I can help her set that up if she doesn't have an account yet."
+Rashad?Smiling "She'll probably want to email the recruiters or add them on LinkedIn after the fair. I can help her set that up if she doesn't have an account yet."
 
 ~ notification = "Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1"
 # notification Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1
@@ -126,8 +126,8 @@ Rashad?Smiling "She'll probably want to email the recruiters or add them on Link
     
 ===Rtech2===
 
-Rashad?Smiling "Alright! Well, she'll probably want to email the recruiters or add them on Linkedin after the fair."
-Rashad?Smiling "And if she needs any help reaching out, be sure to let her know that she's welcome to swing by the Library and ask me any questions."
+Rashad?Smiling "Alright! Well, she'll probably want to email the recruiters or add them on LinkedIn after the fair."
+Rashad?Smiling "And if she needs any help reaching out, be sure to let her know that she's welcome to swing by the library and ask me any questions."
 
 ~ notification = "Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1"
 # notification Rashad_Day 1_Linkedin and email are great places to follow up_Elisa1

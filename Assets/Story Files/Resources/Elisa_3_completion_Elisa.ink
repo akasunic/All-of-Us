@@ -42,7 +42,7 @@ Elisa?Neutral "Oh, well thanks for trying at least! I guess I'll keep looking ar
     
 ===GoodSolution===
 
-Elisa?Smiling "Thanks {player_name}! Come to think of it, there are a few Nature Club girls I know who graduated last year that were first-gen."
+Elisa?Smiling "Thanks {player_name}! Come to think of it, there are a few Nature Club members I know who graduated last year that were first generation students as well."
 Elisa?Smiling "I'll see if I can catch up with them, and ask them for some advice."
 
 *Sounds great, Elisa!
@@ -50,7 +50,7 @@ Elisa?Smiling "I'll see if I can catch up with them, and ask them for some advic
     
 ===thanks2===
 
-Elisa?Neutral "As far as school resources, I'm not sure what they offer. I think I'm gonna head over to the student center and see what I can find. Thanks again, {player_name}!"
+Elisa?Neutral "As far as school resources, I'm not sure what they offer. I think I'm gonna walk over to the student center and see what I can find. Thanks again, {player_name}!"
 
 *You're welcome! Good luck at the student center!
     ->seeYou

@@ -42,7 +42,7 @@ Lila?Neutral "Along similar lines, when I was on that website researching metabo
     -> QuestDetails2
 
 ==QuestDetails1==
-Lila?Neutral "I'm a little uncomfortable talking to my doctor about it since he's a man, and it's a women's health issue. I would feel more comfortable talking to someone who could relate to my symptoms."
+Lila?Neutral "I'm a little uncomfortable talking to my doctor about it since he's a man, and it's a women's health issue. I would feel more comfortable talking to someone who could relate to me."
 
 * Tell me more. 
     -> QuestDetails2

@@ -14,7 +14,7 @@ Lila?Smiling "Hey, {player_name}. Sit down and I'll be right there... I want to 
   -> Chat1
 
 ==Chat1==
-Lila?Smiling "Things here have been getting busier every day! Im glad mrs lee is here i've been running around all day its nice to have you as my excuse to sit for a second"
+Lila?Smiling "Things here have been getting busier every day! Im glad Mrs. Lee is here- I've been running around all day. It's nice to have you as my excuse to sit for a second!"
 
 Glad to see you.
   -> Chat2
