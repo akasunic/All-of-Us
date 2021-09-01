@@ -67,7 +67,7 @@ Mrslee?Neutral "I don't think that's really going to help me."
   -> TempGoodbye
 
 ==SolvedGoodbye==
-Mrslee?Smiling "You're right, [player name].I feel much better about medicine now. I will tell Eddie you helped me. He will be glad I am making new friend."
+Mrslee?Smiling "You're right, {player_name}.I feel much better about medicine now. I will tell Eddie you helped me. He will be glad I am making new friend."
 
 * Of course, Mrs. Lee. See you around!
   -> END

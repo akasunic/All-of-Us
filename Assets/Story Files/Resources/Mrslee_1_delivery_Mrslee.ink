@@ -18,7 +18,7 @@ Mrslee?Neutral " "
   -> QuestIntro
 
 ==Chat1==
-Mrslee?Smiling "{player_name}. Hi {player_name}. Good to see you. Yes, this is fitness class."
+Mrslee?Smiling "Hi {player_name}. Good to see you. Yes, this is fitness class."
 
 + That is awesome. How was it?
   -> Chat2
