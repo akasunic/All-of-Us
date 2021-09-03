@@ -56,12 +56,13 @@ Lila?Neutral "It can harm your heart, and lead to other health issues. It's seri
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Smiling "Well, your friend should talk to a professional if they can, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
 
 ~ notification = "Lila_Day 2_Racial stress is real, and serious_Rashad2"
 # notification Lila_Day 2_Racial stress is real, and serious_Rashad2
 ~ notification = "Lila_Day 2_Self care activities can help with stress"
 # notification Lila_Day 2_Self care activities can help with stress
+
+Lila?Smiling "Well, your friend should talk to a professional if they can, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
 
 * {not Suggestion2} Is that all? Is there anything they can do?
   -> Suggestion2
@@ -69,8 +70,6 @@ Lila?Smiling "Well, your friend should talk to a professional if they can, and t
   -> Goodbye
 
 ==Suggestion2==
-Lila?Neutral "It's important that your friend see a mental health professional from their cultural background."
-Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS. I've attended therapy for it, and really should continue to."
 
 ~ notification = "Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2"
 # notification Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2
@@ -80,6 +79,9 @@ Lila?Neutral "Sustained collective trauma and workplace microaggressions can lea
 # notification Lila_Day 2_Microagressions and sustained collective trauma can harm mental health_Rashad2
 ~ notification = "Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2"
 # notification Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2
+
+Lila?Neutral "It's important that your friend see a mental health professional from their cultural background."
+Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS. I've attended therapy for it, and really should continue to."
 
 * {not Suggestion1} That's very helpful, Lila. Do you know any other tips?
   -> Suggestion1

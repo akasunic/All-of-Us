@@ -45,7 +45,6 @@ Rashad?Smiling "Yeah, for real! And she's pretty impressive with her tech. I onc
 * I could come to a workshop sometime.
   -> Explain2
 
-
 ==Explain2==
 Rashad?Smiling "Yeah we have tons of workshops at the library. It's an awesome resource. The workshops. I am also an awesome resource. Haha!"
 
@@ -55,9 +54,10 @@ Rashad?Smiling "Yeah we have tons of workshops at the library. It's an awesome r
   -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of people show up for this one."
 ~ notification = "Rashad_Day 2_Mrs. Lee can go to the health programming workshop at the library"
 # notification Rashad_Day 2_Mrs. Lee can go to the health programming workshop at the library
+
+Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of people show up for this one."
 
 * If I get some things done today, I might come by! Will you still be here?
   -> Suggestion2
@@ -65,9 +65,10 @@ Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Heck yeah! If you're in the library, it is literally my job to help you. Need something? I got you."
 ~ notification = "Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2"
 # notification Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2
+
+Rashad?Smiling "Heck yeah! If you're in the library, it is literally my job to help you. Need something? I got you."
 
 * You are the best Rashad, you don't even know!
   -> Goodbye

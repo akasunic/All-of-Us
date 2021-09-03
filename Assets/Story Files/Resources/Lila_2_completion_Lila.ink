@@ -68,8 +68,6 @@ Lila?Neutral "Hmm. Maybe. I don’t know if that makes me feel better about this
 * Maybe I can find more information from Rashad or Mr. Calindas. I'll go ask them again.
     -> TempGoodbye
 
-    
-
 ==SolvedGoodbye==
 Lila?Smiling "All these recommendations make me feel much more confident about the information I'm getting. I know my mom would be happy I'm listening to community members. I’ll look at the resource you gave me, and schedule an appointment afterwards. Can't be too careful."
 

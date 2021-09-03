@@ -53,11 +53,11 @@ Rashad?Smiling "Yeah, I got a minute. What's up?"
 * How the heck are you kids? They never come by!
   -> Suggestion2
 
-
 ==Suggestion1==
-Rashad?Smiling "I keep track of my whole families' health information in one folder. Actually it's bigger than a folder, but you get what I mean. All the stuff. All the symptoms. One place. Boom."
 ~ notification = "Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4"
 # notification Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4
+
+Rashad?Smiling "I keep track of my whole families' health information in one folder. Actually it's bigger than a folder, but you get what I mean. All the stuff. All the symptoms. One place. Boom."
 
 * Hmm, maybe that could work
   -> Suggestion2
@@ -65,9 +65,10 @@ Rashad?Smiling "I keep track of my whole families' health information in one fol
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Yeah, Cheryl and the kids will be at the block party. We can all say hi!"
 ~ notification = "Rashad_Day 4_Cheryl and the kids will be at the block party!"
 # notification Rashad_Day 4_Cheryl and the kids will be at the block party!
+
+Rashad?Smiling "Yeah, Cheryl and the kids will be at the block party. We can all say hi!"
 
 * What type of health maintenance does your family do?
   -> Suggestion1

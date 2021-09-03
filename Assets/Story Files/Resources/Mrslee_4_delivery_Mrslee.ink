@@ -8,6 +8,7 @@ VAR new_quest = ""
 ==intro==
 ~ new_quest = "Mrslee4.txt"
 # new_quest
+
 Mrslee?Smiling "You wanna see Eddie?"
 
 * Hey, Mrs. Lee!
@@ -23,12 +24,10 @@ Mrslee?Smiling "I was reading the newspaper. I was thinking a lot! I hear my pho
 * What were you thinking about?
   -> QuestIntro
 
-
 ==Chat2==
 Mrslee?Smiling "OH. You know. I went to doctor's office. Doctor was a "SHE," and she was very, very smart. I feel like I understand lotta things now."
 
 * Yay!! Do you want to talk about it?-> QuestIntro
-
 
 ==QuestIntro==
 Mrslee?Smiling "You know. Eddie's very important to me and I talk about him a lot."
@@ -37,7 +36,6 @@ Mrslee?Smiling "You know. Eddie's very important to me and I talk about him a lo
   -> QuestDetails1
 * You need to think about yourself, too!
   -> QuestAcceptance
-
 
 ==QuestDetails1==
 Mrslee?Smiling "I ask lotta question about his blood pressure. You know, it's very funny!"
@@ -57,7 +55,6 @@ Mrslee?Smiling "Doctor said "Mrs. Lee. Your blood pressure is ... a VERY good nu
 * I'd really like to help you out.
   -> QuestAcceptance
 
-
 ==QuestDetails2==
 Mrslee?Smiling "We talk about my headache. You know! My eye exam was so bad!"
 
@@ -66,7 +63,6 @@ Mrslee?Smiling "We talk about my headache. You know! My eye exam was so bad!"
 * You're collecting information about you!
   -> QuestAcceptance
 
-
 ==OptionalQuestDetails2==
 Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. So my head is aching."
 
@@ -74,7 +70,6 @@ Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. 
   -> QuestAcceptance
 * You should feel very accomplished, Mrs. Lee!
   -> QuestAcceptance
-
 
 ==QuestAcceptance==
 Mrslee?Smiling "I am thinking about this. My health is very important, too! How should I continue my good health practice?"

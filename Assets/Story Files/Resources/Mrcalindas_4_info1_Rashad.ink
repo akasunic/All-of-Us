@@ -9,7 +9,6 @@ VAR new_quest = ""
 
 Rashad?Neutral "Hey {player_name} what's up? How are you feeling?" 
 
-
 * Hey Rashad! I'm doing well, I'm thinking a lot about the Block Party. What are you up to?
   -> Chat1
 * I'm alright. This Block Party is really on my mind. What are you up to?
@@ -18,6 +17,7 @@ Rashad?Neutral "Hey {player_name} what's up? How are you feeling?"
 ==Chat1==
 
 Rashad?Smiling "Actually I like playing a little pick-up basketball on my lunch break. My doctor suggested I try it. You look a little stressed. What's going on?" 
+
 * I'm worried the Block Party isn't that inclusive.
   -> Chat2
 * Actually, maybe you can help me out.
@@ -52,10 +52,11 @@ Rashad?Neutral "Children with sensory issues can have a great time doing normal 
   -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Well, one thing you can do is make sure that all the activities are labeled so that each family knows what to do in each area. That way you can set up expectations."
 
 ~ notification = "Rashad_Day 4_Put up visual signs that explain activities"
 # notification Rashad_Day 4_Put up visual signs that explain activities
+
+Rashad?Smiling "Well, one thing you can do is make sure that all the activities are labeled so that each family knows what to do in each area. That way you can set up expectations."
 
 * That's a great idea. I think a bit more, though. Do you have any other suggestions?
   -> Suggestion2
@@ -63,13 +64,14 @@ Rashad?Smiling "Well, one thing you can do is make sure that all the activities 
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Well, one way to really support families and children is to make sure there's a quiet space to go. If a kid needs a break from all that running around, it can be nice to just chill."
-Rashad?Smiling "I also like to give parents a hand out of all the activities or some sort of map, for the kids to see. That way families and children can decide what they want to do and prepare."
 
 ~ notification = "Rashad_Day 4_Providing a list or a map of activities helps children know what to expect_Mrcalindas4"
 # notification Rashad_Day 4_Providing a list or a map of activities helps children know what to expect_Mrcalindas4
 ~ notification = "Rashad_Day 4_A separate quiet and calm space can help children who need a sensory break_Mrcalindas4"
 # notification Rashad_Day 4_A separate quiet and calm space can help children who need a sensory break_Mrcalindas4
+
+Rashad?Smiling "Well, one way to really support families and children is to make sure there's a quiet space to go. If a kid needs a break from all that running around, it can be nice to just chill."
+Rashad?Smiling "I also like to give parents a hand out of all the activities or some sort of map, for the kids to see. That way families and children can decide what they want to do and prepare."
 
 * Wow, I can definitely get that done for the weekend. Do you have any other tips?
   -> Suggestion1

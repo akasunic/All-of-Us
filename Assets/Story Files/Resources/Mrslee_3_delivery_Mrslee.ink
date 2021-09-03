@@ -8,6 +8,7 @@ VAR new_quest = ""
 ==intro==
 ~ new_quest = "Mrslee3.txt"
 # new_quest
+
 Mrslee?Neutral " "
 
 * It's good to see you out and about!

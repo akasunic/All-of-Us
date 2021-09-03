@@ -46,16 +46,13 @@ Lila?Neutral "That was fast! Did you find anything?"
     -> GoodSolution
 * bad solution chosen
     -> BadSolution
- 
 
 ==GoodSolution==
 Lila?Smiling "I think this will make me a lot more confident going into this issue. Thanks {player_name}!"
 
-
 * So, are you feeling better about this now? 
     Lila "Yep! "
     -> SolvedGoodbye
-
 
 ==BadSolution==
 Lila?Neutral "Maybe, I'll think about it. I was hoping to feel more prepared on my own, and have a doctor specialized in the area we talked about, PCOS."
@@ -65,7 +62,6 @@ Lila?Neutral "Maybe, I'll think about it. I was hoping to feel more prepared on 
 * Let me get back to you on that. I'll go check again.
     -> TempGoodbye
 
-    
 ==SolvedGoodbye==
 Lila?Smiling "It feels good to know I have places I can turn for this. I'll talk to Mrs. Lee later today, and look up the contact Mr. Calindas gave you. I'm crossing off my whole list of health concerns in one week! Wow! Thanks so much, {player_name}."
 

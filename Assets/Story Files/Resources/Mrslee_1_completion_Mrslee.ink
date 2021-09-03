@@ -58,6 +58,7 @@ Mrslee?Smiling "Actually, I think that is a great idea. I should have thought of
   -> SolvedGoodbye
 
 //do all of the other possible info types fall here?
+
 ==BadSolution==
 Mrslee?Neutral "I don't think that's really going to help me."
 

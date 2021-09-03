@@ -63,11 +63,11 @@ Mrcalindas?Neutral "From there, there are a couple of different treatments avail
 
 ==Suggestion1==
 
-Mrcalindas?Smiling "The big ones are a diverse, nutrient-rich diet and regular exercise."
-Mrcalindas?Smiling "Eat small portions, make sure you do some light activity every 30 minutes, and do more moderate activity a few times a week."
-
 ~ notification = "Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4"
 # notification Mrcalindas_Day 4_Healthy diet and exercise helps treat diabetes_Elisa4
+
+Mrcalindas?Smiling "The big ones are a diverse, nutrient-rich diet and regular exercise."
+Mrcalindas?Smiling "Eat small portions, make sure you do some light activity every 30 minutes, and do more moderate activity a few times a week."
 
 * But how do you know if your blood sugar is getting better or not?
   -> Suggestion2
@@ -76,12 +76,12 @@ Mrcalindas?Smiling "Eat small portions, make sure you do some light activity eve
 
 ==Suggestion2==
 
+~ notification = "Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4"
+# notification Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4
+
 Mrcalindas?Smiling "Well, it's fairly simple. Other than looking after your diet and exercising every day, you'd be monitoring your blood sugar levels at home via a blood glucose meter."
 Mrcalindas?Smiling "How often you have to monitor those levels depends person-to-person, but it's usually once a day."
 Mrcalindas?Smiling "Otherwise, treatment can include insulin therapy via injections, but doctors don't always prescribe it."
-
-~ notification = "Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4"
-# notification Mrcalindas_Day 4_Monitoring your blood sugar and insulin therapy helps treat diabetes_Elisa4
 
 * Wait, diet and exercise? What would that look like?
   -> Suggestion1

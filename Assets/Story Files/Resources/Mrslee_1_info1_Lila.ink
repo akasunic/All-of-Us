@@ -8,6 +8,7 @@ VAR new_quest = ""
 ==intro==
 ~ new_contact = "Lila"
 # new_contact
+
 Lila?Smiling "Hey, {player_name}!! How are you?"
 
 * Hi! It's awesome running into you here.
@@ -17,6 +18,7 @@ Lila?Smiling "Hey, {player_name}!! How are you?"
 
 ==Chat1==
 Lila?Smiling "Well you always know where to find me. If you didn't, well, I work here most every day."
+
 * Do you enjoy it?
   -> Chat2
 * That's awesome. I ran into Mrs. Lee, you two are very close I remember.
@@ -56,9 +58,10 @@ Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into he
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I give her a big pep talk."
 ~ notification = "Lila_Day 1_Maybe it’s time i give her a big pep talk"
 # notification Lila_Day 1_Maybe it’s time i give her a big pep talk
+
+Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I give her a big pep talk."
 
 * Maybe you could go with her to the pharmacy
   -> Suggestion2
@@ -66,9 +69,10 @@ Lila?Neutral "I kind of talk to her like this all the time. Maybe it's time I gi
   -> Goodbye
 
 ==Suggestion2==
-Lila?Smiling "I can go to the pharmacy with Mrs. Lee. I can support her! I love that lady."
 ~ notification = "Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1"
 # notification Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1
+
+Lila?Smiling "I can go to the pharmacy with Mrs. Lee. I can support her! I love that lady."
 
 * I think that would make her feel really comfortable if you were with her.
   -> Goodbye

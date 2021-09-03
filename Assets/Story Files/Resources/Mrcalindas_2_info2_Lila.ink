@@ -30,7 +30,6 @@ Lila?Smiling "Chili, eh? I have a great recipe for vegan chili if you ever want 
 * I would love the recipe! Oh, actually while I have you, can I ask you a question?
   -> Explain1
 
-
 ==Explain1==
 Lila?Neutral "Sure, {player_name}. What's going on?" 
 
@@ -48,13 +47,14 @@ Lila?Neutral "I did get Mrs. Lee a volunteer position. She's really wonderful wi
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Smiling "Oh there's lots of benefits too. You know, seniors can suffer from depression like all of us. Volunteering decreases depression."
-Lila?Smiling "Not just that, but volunteering can also increase mental cognition. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
 
 ~ notification = "Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2"
 # notification Lila_Day 2_Volunteering helps mental cognition_Mrcalindas2
 ~ notification = "Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2"
 # notification Lila_Day 2_Volunteering in the community can help seniors' depression_Mrcalindas2
+
+Lila?Smiling "Oh there's lots of benefits too. You know, seniors can suffer from depression like all of us. Volunteering decreases depression."
+Lila?Smiling "Not just that, but volunteering can also increase mental cognition. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion2
@@ -62,13 +62,14 @@ Lila?Smiling "Not just that, but volunteering can also increase mental cognition
   -> Goodbye
 
 ==Suggestion2==
-Lila?Smiling "Well, you know seniors can suffer depression especially after losing a spouse. So, that a thing."
-Lila?Smiling "There's so many different volunteering activities available. It just depends on what they like, and what makes them feel good." 
 
 ~ notification = "Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse"
 # notification Lila_Day 2_Seniors can suffer from depression, especially after losing a spouse
 ~ notification = "Lila_Day 2_There are many different types of activities available"
 # notification Lila_Day 2_There are many different types of activities available
+
+Lila?Smiling "Well, you know seniors can suffer depression especially after losing a spouse. So, that a thing."
+Lila?Smiling "There's so many different volunteering activities available. It just depends on what they like, and what makes them feel good." 
 
 * Wow. That sounds great, Lila. Do you have any more tips?
   -> Suggestion1

@@ -44,7 +44,7 @@ Rashad?Neutral "Oh, I didn't know you would find out what I needed this soon. Yo
 * -> BadSolution
 
 ==GoodSolution==
- Rashad?Smiling "That good to know. This makes me a lot less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
+Rashad?Smiling "That good to know. This makes me a lot less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
 
 * Thanks for trusting me. Oh, and there's a running club you should look into. 2pm on Saturdays at the Community Center with Mr. Calindas!
   -> SolvedGoodbye

@@ -8,6 +8,7 @@ VAR new_quest = ""
 ===intro===
 ~ new_quest = "Lila2.txt"
 # new_quest
+
 Lila?Smiling "Hi {player_name}! How are you today?"
 
 * Doing well, Lila! How are you? You look busy. 

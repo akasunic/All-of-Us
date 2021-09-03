@@ -30,13 +30,13 @@ Mrcalindas?Neutral "Oh! Yes, there are a few options."
 * She really wants to be aware of anything she should be watching out for.
     -> Suggestion2
 
-
 ==Suggestion1==
-Mrcalindas?Smiling "I definitely think if she can, she should talk to her mom."
-Mrcalindas?Smiling "She will likely also be able to tell her some possible information about her father if she has it, and about her grandparents."
 
 ~ notification = "Mrcalindas_Day 2_Mr. Calindas suggests Lila prioritize contacting her mom to find her family health history"
 # notification Mrcalindas_Day 2_Mr. Calindas suggests Lila prioritize contacting her mom to find her family health history
+
+Mrcalindas?Smiling "I definitely think if she can, she should talk to her mom."
+Mrcalindas?Smiling "She will likely also be able to tell her some possible information about her father if she has it, and about her grandparents."
 
 * Her mom is pretty inaccessible right now traveling. Is there any other way she can look into her history herself?
     -> Suggestion2
@@ -44,11 +44,12 @@ Mrcalindas?Smiling "She will likely also be able to tell her some possible infor
     -> Goodbye
 
 ==Suggestion2==
-Mrcalindas?Smiling "Yeah! Genetic testing is available to look for gene markers that can make individuals more at-risk for certain diseases, syndromes, and reactions."
-Mrcalindas?Smiling "There are other tests she should do to be safe if she doesn't have a lot of healthcare background, like comprehensive tests to check high-risk markers."
 
 ~ notification = "Mrcalindas_Day 2_Mr. Calindas suggests Lila look into genetic testing on medlineplus.gov/genetics to find genetic markers that might indicate she is prone to certain illnesses, and also says that comprehensive testing is important if she doesn’t know what she should be looking out for_Lila2"
 # notification Mrcalindas_Day 2_Mr. Calindas suggests Lila look into genetic testing on medlineplus.gov/genetics to find genetic markers that might indicate she is prone to certain illnesses, and also says that comprehensive testing is important if she doesn’t know what she should be looking out for_Lila2
+
+Mrcalindas?Smiling "Yeah! Genetic testing is available to look for gene markers that can make individuals more at-risk for certain diseases, syndromes, and reactions."
+Mrcalindas?Smiling "There are other tests she should do to be safe if she doesn't have a lot of healthcare background, like comprehensive tests to check high-risk markers."
 
 * Are there any other options?
     -> Suggestion1

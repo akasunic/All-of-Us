@@ -10,6 +10,7 @@ VAR new_quest = ""
 # new_quest
 ~ new_contact = "Mrcalindas"
 # new_contact
+
 Mrcalindas?Smiling  "{player_name}! Come here, I have something for you from Elisa. She worried you didn't have breakfast and sent me with extra ensaymada for you. I knew you'd come in eventually!" 
 
 * What? Really? Mrs. Calindas always knows the way to my heart: food.

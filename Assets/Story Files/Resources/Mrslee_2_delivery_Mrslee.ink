@@ -10,6 +10,7 @@ VAR new_quest = ""
 # new_quest
 
 Mrslee?Neutral "What's up?"
+
 * Hey Mrs. Lee. How did the medication go?
   -> Chat1
 * Are you okay, Mrs. Lee?

@@ -10,6 +10,7 @@ VAR new_quest = ""
 # new_quest
 ~ new_contact = "Mrslee"
 # new_contact
+
 Mrslee?Neutral " "
 
 * Mrs. Lee! Were you just in that workout class?

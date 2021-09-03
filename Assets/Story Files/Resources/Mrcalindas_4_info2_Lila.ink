@@ -51,14 +51,15 @@ Lila?Neutral "Adults too. Having some different options could help everyone have
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Smiling "Creating smaller quieter activities can really help."
-Lila?Smiling "One thing we can do is have a smaller sensory activity like making slime in bags so that children can take a break from the bounce house."
-Lila?Smiling "Also, we can all avoid making children feel bad about themselves for feeling overstimulated. It's not their fault, and they aren't misbehaving. We all process things differently."
 
 ~ notification = "Lila_Day 4_A calm sensory activity can help all children to regulate their emotions_Mrcalindas4"
 # notification Lila_Day 4_A calm sensory activity can help all children to regulate their emotions_Mrcalindas4
 ~ notification = "Lila_Day 4_Avoid judging or blaming the child for feeling overstimulated_Mrcalindas4"
 # notification Lila_Day 4_Avoid judging or blaming the child for feeling overstimulated_Mrcalindas4
+
+Lila?Smiling "Creating smaller quieter activities can really help."
+Lila?Smiling "One thing we can do is have a smaller sensory activity like making slime in bags so that children can take a break from the bounce house."
+Lila?Smiling "Also, we can all avoid making children feel bad about themselves for feeling overstimulated. It's not their fault, and they aren't misbehaving. We all process things differently."
 
 * I never thought about it like that. Do you have any other ideas?
   -> Suggestion2
@@ -66,10 +67,11 @@ Lila?Smiling "Also, we can all avoid making children feel bad about themselves f
   -> Goodbye
 
 ==Suggestion2==
-Lila?Smiling "Well, one thing we do have is a quiet book corner in the children's area. Kids can draw or color and relax in beanbags." 
 
 ~ notification = "Lila_Day 4_There's a quiet corner in the children's area"
 # notification Lila_Day 4_There's a quiet corner in the children's area
+
+Lila?Smiling "Well, one thing we do have is a quiet book corner in the children's area. Kids can draw or color and relax in beanbags." 
 
 * Hmm. That sounds like a great start. Is there anything else you can think of doing?
   -> Suggestion1
