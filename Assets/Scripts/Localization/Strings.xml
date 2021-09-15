@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+    <English>
+         <string name="backstories_1">Morning in Bloomwood is my favorite time. I grew up here, and from my apartment’s window, I can hear everyone waking up around me. The neighborhood used to feel as alive as the people.\n\nIn the summer, folks fixed their cars outside my building and played music until the street lamps came on. There was always an end of summer block party, and always something to do. Now? Not so much.</string>
+         <string name="backstories_2">Times have changed. People feel distant from each other. Developers built mixed use high rises, and new programs have come in bringing grants, funding, and new facilities. This was great, except the rents got higher and it felt like half the neighborhood was getting left behind. More and more of our old neighbors are moving out. More and more new faces are moving in, who aren’t as connected to the people already living here.</string>
+         <string name="backstories_3">Not everyone in Bloomwood is getting a fair shake these days. Instead of talking to your neighbor, folks called in noise complaints. It feels like no one knows their neighbors anymore. We just keep to ourselves. I want to change that. Bloomwood was never the place where you ignored your neighbors. So I came up with a plan. A good one. As the Bloomwood Community Liaison to the city, I was able to secure a permit for an old school style block party to celebrate the reopening of our Community Center....</string>
+         <string name="backstories_4">... I got us a bouncy house, food, even a health fair! Now I just have to convince some folks to help me work it. I know who to ask. I know how to ask them.  I’ve always been good at connecting people and helping everyone out. Maybe if I can connect everyone in the neighborhood, Bloomwood can see that what really makes a neighborhood is not the buildings, or the grants, or the businesses that rush in. It’s the people.</string>
+    </English>
+
+    <French>
+         <string name="backstories_1"></string>
+         <string name="backstories_2"></string>
+         <string name="backstories_3"></string>
+         <string name="backstories_4"></string>
+    </French>
+
+    <German>
+         <string name="backstories_1"></string>
+         <string name="backstories_2"></string>
+         <string name="backstories_3"></string>
+         <string name="backstories_4"></string>
+    </German>
+</languages>
