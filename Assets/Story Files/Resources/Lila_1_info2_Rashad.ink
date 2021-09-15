@@ -8,6 +8,7 @@ VAR new_quest = ""
 ===intro===
 ~ new_contact = "Rashad"
 # new_contact
+
 Rashad?Smiling "Hi {player_name}! What brings you?"
 
 * Hey Rashad! Wanted to check in and see how the library corner set up is going. 
@@ -62,10 +63,11 @@ Rashad?Neutral "Yeah, I used to run speaker events at an outdoor venue in the pa
     -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Ok so I might be able to get this equipment from a local rental place I know. One of my librarians could also maybe come and help set up."
 
 ~ notification = "Rashad_Day 1_A librarian can help you set up the event, and the local electronics store could rent you the equipment"
 # notification Rashad_Day 1_A librarian can help you set up the event, and the local electronics store could rent you the equipment
+
+Rashad?Smiling "Ok so I might be able to get this equipment from a local rental place I know. One of my librarians could also maybe come and help set up."
 
 * I'm not sure if she has the budget for that, is there any other way?
     -> Suggestion2
@@ -73,11 +75,12 @@ Rashad?Smiling "Ok so I might be able to get this equipment from a local rental 
     -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Well, it shouldn't take too long, so I can stop by and help Lila set up."
-Rashad?Smiling "I also can look back in the library's storage area, I might still have that equipment and I'd be more than happy to lend it for a night."
 
 ~ notification = "Rashad_Day 1_Rashad can help set up the event, and can lend you equipment from the library_Lila1"
 # notification Rashad_Day 1_Rashad can help set up the event, and can lend you equipment from the library_Lila1
+
+Rashad?Smiling "Well, it shouldn't take too long, so I can stop by and help Lila set up."
+Rashad?Smiling "I also can look back in the library's storage area, I might still have that equipment and I'd be more than happy to lend it for a night."
 
 * Are there any other options?
     -> Suggestion1

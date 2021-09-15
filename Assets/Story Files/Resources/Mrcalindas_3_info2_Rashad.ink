@@ -30,7 +30,8 @@ Rashad?Smiling "Ohhh I forgot about that. Your Mom had to hose it down. It was a
 * I remember. Ah... Oh! I could use your help.
   -> Explain1
 * She sure did. Oh, you know what. I have a question for you.
-  -> Explain1 
+  -> Explain1
+
 ==Explain1==
 
 Rashad?Neutral "We are not doing a potato sack race again." 
@@ -50,10 +51,10 @@ Rashad?Neutral "Hmm. Tech classes, or classes for seniors, or bilingual tech cla
   -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Well, we actually have free tech classes in Spanish and Tagalog. You can sign up at the front desk. They aren't specifically for seniors, but they're small and hands on."  
-
 ~ notification = "Rashad_Day 3_The Library offers small free tech classes in Tagalog and Spanish but they aren't senior specific._Mrcalindas3"
 # notification Rashad_Day 3_The Library offers small free tech classes in Tagalog and Spanish but they aren't senior specific._Mrcalindas3
+
+Rashad?Smiling "Well, we actually have free tech classes in Spanish and Tagalog. You can sign up at the front desk. They aren't specifically for seniors, but they're small and hands on."  
 
 * That's great to know! Is there anything else I should think of?
   -> Suggestion2
@@ -61,13 +62,14 @@ Rashad?Smiling "Well, we actually have free tech classes in Spanish and Tagalog.
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Well, you know new tech can be really difficult for seniors. The internet can be really overwhelming."
-Rashad?Smiling "However, it's great to keep families talking to each other and keep up strong bonds." 
 
 ~ notification = "Rashad_Day 3_Seniors can use technology to connect with family and keep bonds strong"
 # notification Rashad_Day 3_Seniors can use technology to connect with family and keep bonds strong
 ~ notification = "Rashad_Day 3_The internet and new tech can be overwhelming for seniors"
 # notification Rashad_Day 3_The internet and new tech can be overwhelming for seniors
+
+Rashad?Smiling "Well, you know new tech can be really difficult for seniors. The internet can be really overwhelming."
+Rashad?Smiling "However, it's great to keep families talking to each other and keep up strong bonds." 
 
 * Hmm. That sounds wonderful. Does the library offer any programs to help?
   -> Suggestion1

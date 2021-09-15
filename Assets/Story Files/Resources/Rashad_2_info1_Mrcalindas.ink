@@ -52,8 +52,6 @@ Mrcalindas?Neutral "Hmm. Well, stress can really impact sleep and that's not goo
   -> Suggestion2
 
 ==Suggestion1==
-Mrcalindas?Smiling "My first recommendation would be melatonin. It helps you to sleep when taken before bed. Have your friend check with a doctor first before taking it."
-Mrcalindas?Smiling "Physical activity and mindfulness activities like yoga can also help with stress. They can try that as well." 
 
 ~ notification = "Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better"
 # notification Mrcalindas_Day 2_Taking melatonin before bed can help you sleep better
@@ -62,18 +60,22 @@ Mrcalindas?Smiling "Physical activity and mindfulness activities like yoga can a
 ~ notification = "Mrcalindas_Day 2_Mindfulness activities like yoga can relieve stress"
 # notification Mrcalindas_Day 2_Mindfulness activities like yoga can relieve stress
 
+Mrcalindas?Smiling "My first recommendation would be melatonin. It helps you to sleep when taken before bed. Have your friend check with a doctor first before taking it."
+Mrcalindas?Smiling "Physical activity and mindfulness activities like yoga can also help with stress. They can try that as well." 
+
 * {not Suggestion2} Hmm. That sounds good, but I think this is really serious.
   -> Suggestion2
 * That sounds really helpful. I'll let them know! Thank you so much!
   -> Goodbye
 
 ==Suggestion2==
-Mrcalindas?Smiling "Stress can harm your heart over a period of time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
 
 ~ notification = "Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2"
 # notification Mrcalindas_Day 2_Stress can cause harm to your heart over time_Rashad2
 ~ notification = "Mrcalindas_Day 2_Consider Counseling or therapy in addition to exercise_Rashad2"
 # notification Mrcalindas_Day 2_Consider Counseling or therapy in addition to exercise_Rashad2
+
+Mrcalindas?Smiling "Stress can harm your heart over a period of time. It's very serious, so it's important your friend consider counseling or therapy as well as exercise."
 
 * {not Suggestion1} Thank you so much, is there anything else?
   -> Suggestion1

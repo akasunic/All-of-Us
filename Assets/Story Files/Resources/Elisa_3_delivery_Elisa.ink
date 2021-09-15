@@ -63,7 +63,6 @@ Elisa?Neutral "Fair enough! I'm still thinking about the succulent booth, by the
 *Still stressed out, huh?
     ->BlockPartyQ3alt2
     
-    
 ===preBlockPartyQ3alt===
 
 Elisa?Neutral "Hey, speaking of, I haven't forgotten about your succulent booth. I'm definitely still thinking about it, it's just- I've got a lot on my plate still."

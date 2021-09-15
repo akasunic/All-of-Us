@@ -27,7 +27,7 @@ Rashad?Smiling "The entire decade? Tell the truth, you forgot what a disco ball 
 ==Chat2==
 Rashad?Smiling "Mmm. Hmm. You know you imagined a disco ball.You can't cover by appealing to my nerdy heart. Anyway, is there something I can do for you?"
 
-*  No, no. I just stopped by to check on you. How have you been? Sleeping alright?
+* No, no. I just stopped by to check on you. How have you been? Sleeping alright?
   -> QuestIntro
 
 ==QuestIntro==

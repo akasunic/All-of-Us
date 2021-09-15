@@ -52,10 +52,11 @@ Mrcalindas?Neutral "Does she have any other specific things she's looking for?"
     -> Suggestion2
 
 ==Suggestion1==
-Mrcalindas?Smiling "Here's the contact info for the one I am going to take my mom to, she's great, and I've known her for many years. She does specialize in older women though."
 
 ~ notification = "Mrcalindas_Day 3_Mr. Calindas suggests his mom’s gynecologist, who specializes in older women, and who he has known for a long time"
 # notification Mrcalindas_Day 3_Mr. Calindas suggests his mom’s gynecologist, who specializes in older women, and who he has known for a long time
+
+Mrcalindas?Smiling "Here's the contact info for the one I am going to take my mom to, she's great, and I've known her for many years. She does specialize in older women though."
 
 * Do you have any recommendations for one that a first-timer could see? Maybe who specializes in young adults? 
     Mrcalindas?Neutral "Oh, yes! "
@@ -64,10 +65,11 @@ Mrcalindas?Smiling "Here's the contact info for the one I am going to take my mo
     -> Goodbye
 
 ==Suggestion2==
-Mrcalindas?Smiling "Here's a younger doctor who I met working at the clinic, so she's close by and can definitely help with the issues you described."
 
 ~ notification = "Mrcalindas_Day 3_Mr. Calindas suggests a younger doctor who works at the Bloomwood Clinic with him. She also specializes in PCOS_Lila3"
 # notification Mrcalindas_Day 3_Mr. Calindas suggests a younger doctor who works at the Bloomwood Clinic with him. She also specializes in PCOS_Lila3
+
+Mrcalindas?Smiling "Here's a younger doctor who I met working at the clinic, so she's close by and can definitely help with the issues you described."
 
 * Any other options?
     -> Suggestion1

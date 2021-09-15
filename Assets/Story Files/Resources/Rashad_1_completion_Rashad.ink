@@ -8,7 +8,6 @@ VAR new_quest = ""
 == intro == 
 Rashad?Smiling "Hey {player_name}!. How are you feeling today?" 
 
-
 * {not TempGoodbye} I'm alright. How are you feeling? I remember you telling me about how much you had on your plate.
   -> Chat1
 * {not TempGoodbye} I'm alright, I was hoping to check in about that YA position?

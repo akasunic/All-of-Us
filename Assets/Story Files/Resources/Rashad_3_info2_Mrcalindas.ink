@@ -54,8 +54,6 @@ Mrcalindas?Neutral "Teletherapy is just as great as in person. It can be a good 
   -> Suggestion2
 
 ==Suggestion1==
-Mrcalindas?Smiling "Tell them it's a great place to start if you are nervous! One thing to be cautious of is to make sure you have a place to attend the session where no one can hear you, so you can speak openly."
-Mrcalindas?Smiling "Oh, and therapists can have a sliding scale, so you pay based on your income." 
 
 ~ notification = "Mrcalindas_Day 3_Teletherapy is a great option for those with busy schedules_Rashad3"
 # notification Mrcalindas_Day 3_Teletherapy is a great option for those with busy schedules_Rashad3
@@ -64,19 +62,23 @@ Mrcalindas?Smiling "Oh, and therapists can have a sliding scale, so you pay base
 ~ notification = "Mrcalindas_Day 3_You should like your therapist"
 # notification Mrcalindas_Day 3_You should like your therapist
 
+Mrcalindas?Smiling "Tell them it's a great place to start if you are nervous! One thing to be cautious of is to make sure you have a place to attend the session where no one can hear you, so you can speak openly."
+Mrcalindas?Smiling "Oh, and therapists can have a sliding scale, so you pay based on your income." 
+
 * {not Suggestion2} Hmm, can you tell me more?
   -> Suggestion2
 * This is great! I really appreciate all this advice.
   -> Goodbye
 
 ==Suggestion2==
-Mrcalindas?Smiling "Teletherapy is great for flexible schedules. You can email the office to set up an intake appointment."
-Mrcalindas?Smiling "In intake, you get to know each other, and discuss your expectations for each other such as attendance and weekly action items. If you like the therapist, you can set up weekly video calls. You can talk to your therapist about anything." 
 
 ~ notification = "Mrcalindas_Day 3_You can talk to your therapist about anything"
 # notification Mrcalindas_Day 3_You can talk to your therapist about anything
 ~ notification = "Mrcalindas_Day 3_You can email the office to set up an intake appointment_Rashad3"
 # notification Mrcalindas_Day 3_You can email the office to set up an intake appointment_Rashad3
+
+Mrcalindas?Smiling "Teletherapy is great for flexible schedules. You can email the office to set up an intake appointment."
+Mrcalindas?Smiling "In intake, you get to know each other, and discuss your expectations for each other such as attendance and weekly action items. If you like the therapist, you can set up weekly video calls. You can talk to your therapist about anything." 
 
 * {not Suggestion1} This is so good to know.
   -> Suggestion1

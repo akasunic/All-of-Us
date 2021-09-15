@@ -9,7 +9,7 @@ VAR new_quest = ""
 ~ new_contact = "Elisa"
 # new_contact
 
-Elisa?Smiling "Hi {player_name} it's good to see you! How's your day going?"
+Elisa?Smiling "Hi {player_name}, it's good to see you! How's your day going?"
 
 * It's going pretty great. Still trying to get this block party started. How are you?
   -> Chat1
@@ -48,12 +48,12 @@ Elisa?Smiling "Perfect for me? Really? I love the library. Can you tell me more?
   -> Suggestion2
 
 ==Suggestion1==
-Elisa?Smiling "Do you know if it would be good for a student? I will definitely apply, I love YA literature. I spend all my time there already."
-
 ~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1"
 # notification Elisa_Day 1_She loves YA Literature_Rashad1
 ~ notification = "Elisa_Day 1_She spends a lot of time already"
 # notification Elisa_Day 1_She spends a lot of time already
+
+Elisa?Smiling "Do you know if it would be good for a student? I will definitely apply, I love YA literature. I spend all my time there already."
 
 * {not Suggestion2} Yes! It would be. Did you have any other questions?
   -> Suggestion2
@@ -61,14 +61,14 @@ Elisa?Smiling "Do you know if it would be good for a student? I will definitely 
   -> Goodbye
 
 ==Suggestion2==
-Elisa?Smiling "Do you know if I need a reference or how to apply?"
-
 ~ notification = "Elisa_Day 1_You will write her a reference_Rashad1"
 # notification Elisa_Day 1_You will write her a reference_Rashad1
 ~ notification = "Elisa_Day 1_She will use the website to apply_Rashad1"
 # notification Elisa_Day 1_She will use the website to apply_Rashad1
 ~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1"
 # notification Elisa_Day 1_Elisa will apply to the job_Rashad1
+
+Elisa?Smiling "Do you know if I need a reference or how to apply?"
 
 * {not Suggestion1} Yes, I can write you a reference and you can apply on the library website. Any other questions?
   -> Suggestion1

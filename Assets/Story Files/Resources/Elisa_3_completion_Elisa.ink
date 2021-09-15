@@ -39,7 +39,6 @@ Elisa?Neutral "Oh, well thanks for trying at least! I guess I'll keep looking ar
 *Will do!
     ->END
     
-    
 ===GoodSolution===
 
 Elisa?Smiling "Thanks {player_name}! Come to think of it, there are a few Nature Club members I know who graduated last year that were first generation students as well."

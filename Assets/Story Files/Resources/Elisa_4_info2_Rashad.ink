@@ -60,12 +60,13 @@ Rashad?Neutral "In terms of treatment, I know he carries a blood glucose meter w
   -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Yeah, he has to be more careful about what he eats, and make an effort to get out and exercise."
-Rashad?Smiling "Oh! You know what, I think he takes insulin shots, too. I remember him mentioning that once."
-Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, though. A lot depends on the situation, which is why a doctor is in charge in these situations."
 
 ~ notification = "Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4"
 # notification Rashad_Day 4_Diet, exercise, and insulin shots can help treat diabetes_Elisa4
+
+Rashad?Smiling "Yeah, he has to be more careful about what he eats, and make an effort to get out and exercise."
+Rashad?Smiling "Oh! You know what, I think he takes insulin shots, too. I remember him mentioning that once."
+Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, though. A lot depends on the situation, which is why a doctor is in charge in these situations."
 
 * What is diabetes, anyway? I still don't really understand.
   -> Suggestion2
@@ -73,12 +74,13 @@ Rashad?Smiling "I don't think all people with type 2 diabetes have to do that, t
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "It has to do with the pancreas, I think. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
-Rashad?Smiling "If your blood sugar levels are too high, they know your insulin levels are out of balance."
-Rashad?Smiling "All the treatment stuff they do - exercise, healthy eating, medication- is to try to get those levels back to normal."
 
 ~ notification = "Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4"
 # notification Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4
+
+Rashad?Smiling "It has to do with the pancreas, I think. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
+Rashad?Smiling "If your blood sugar levels are too high, they know your insulin levels are out of balance."
+Rashad?Smiling "All the treatment stuff they do - exercise, healthy eating, medication- is to try to get those levels back to normal."
 
 * So, does your cousin have to do anything specific to take care of himself?
   -> Suggestion1

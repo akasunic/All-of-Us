@@ -8,6 +8,7 @@ VAR new_quest = ""
 ===intro===
 ~ new_quest = "Rashad4.txt"
 # new_quest
+
 Rashad?Smiling "Hey, {player_name}! I'm glad you stopped by. I just wanted to thank you for helping me out this week. I was able to get a lot done because of you."
 
 * Hey Rashad! Thanks, man. We're friends, so it's the least I can do. How did everything work out?
@@ -51,7 +52,7 @@ Rashad?Smiling "Except instead of mowing lawns, they exchange knowledge. That wa
   -> QuestDetails2
 * Ooo, please tell me the teens get neat skills, like cooking. I could have used that...
   -> OptionalQuestDetails1
-*That sounds great! Is there anything I can help with?.
+* That sounds great! Is there anything I can help with?.
   -> QuestAcceptance
 
 ==OptionalQuestDetails1==
@@ -71,7 +72,6 @@ Rashad?Neutral "There's a lot they can teach each other, and we can offer this a
   -> QuestAcceptance
 * It would look great on a resume, but it would be stellar for the community. How can I help?
   -> QuestAcceptance
-
 
 ==QuestAcceptance==
 Rashad?Smiling "You know I'm happy you asked about that, because I do have something you can do."

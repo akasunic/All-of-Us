@@ -53,13 +53,14 @@ Rashad?Neutral "Oh? My Opinion? What do you need to know?"
   -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Well, honestly Covid taught us that we need to teach people basic hygiene. At the library, we want people to wash their hands often."
-Rashad?Smiling "We also know that materials should be in many different languages, so that EEnglish-as-a-second-language, or ESL, speakers can access our materials." 
 
 ~ notification = "Rashad_Day 1_Materials need to be in many languages"
 # notification Rashad_Day 1_Materials need to be in many languages
 ~ notification = "Rashad_Day 1_Teaching basic hygiene is crucial"
 # notification Rashad_Day 1_Teaching basic hygiene is crucial
+
+Rashad?Smiling "Well, honestly Covid taught us that we need to teach people basic hygiene. At the library, we want people to wash their hands often."
+Rashad?Smiling "We also know that materials should be in many different languages, so that EEnglish-as-a-second-language, or ESL, speakers can access our materials." 
 
 * Those are great points. Can you think of anything else?
   -> Suggestion2
@@ -67,10 +68,11 @@ Rashad?Smiling "We also know that materials should be in many different language
   -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Hmm. Well, having access to free health classes or mental health classes is really useful. I never remember they have those." 
 
 ~ notification = "Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1"
 # notification Rashad_Day 1_Free health and mental wellbeing classes are useful_Mrcalindas1
+
+Rashad?Smiling "Hmm. Well, having access to free health classes or mental health classes is really useful. I never remember they have those." 
 
 * Okay, that sounds good. Can you think of anything else?
   -> Suggestion1

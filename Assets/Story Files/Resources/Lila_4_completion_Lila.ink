@@ -47,14 +47,11 @@ Lila?Neutral "Of course not!"
 * bad solution chosen
     -> BadSolution
 
-
-
 ==GoodSolution==
 Lila?Smiling "I would love to!"
 
 * Glad I could find someone to help.
     -> SolvedGoodbye
-
 
 ==BadSolution==
 Lila?Neutral "I don't think so."

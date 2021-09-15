@@ -82,7 +82,6 @@ Elisa?Neutral "I got an email this morning saying that they need my vaccination 
 *Maybe I could help? 
     -> help
     
-    
 ===explainAlt===
 
 Elisa?Neutral "Yeah- or, well, future school stuff. I’m getting ready to transfer schools and finish my degree,"
@@ -93,7 +92,6 @@ Elisa?Neutral "and it turns out they need my vaccination records before I can go
 *Maybe I could help? 
     -> help
 
-    
 ===work===
 
 Elisa?Neutral "I don't know, I can't really commit to anything right now, but I promise I'll keep thinking about it!"

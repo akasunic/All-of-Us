@@ -7,6 +7,7 @@ VAR new_quest = ""
 
 ==intro==
 Mrslee?Smiling " "
+
 * {not TempGoodbye} How are you?
   -> Chat1
 * {not TempGoodbye} I thought about how to prepare!

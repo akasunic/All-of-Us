@@ -31,7 +31,6 @@ Mrslee?Smiling "Oh, {player_name} so kind. My aerobic class make me feel energy!
 * That's actually, great to hear. I actually am looking for some information about classes.
   -> Explain1
 
-
 ==Explain1==
 
 Mrslee?Smiling "I really enjoy these class, happy to help. What your question?"
@@ -50,12 +49,13 @@ Mrslee?Smiling "She move here? Live with Giancarlo? That is nice. Aerobic activi
   -> Suggestion2
 
 ==Suggestion1==
-Mrslee?Smiling "Well, I think she need to talk to doctor before start new physical activity. She maybe know that. Sign up on computer or at Community Center front desk." 
 
 ~ notification = "Mrslee_Day 2_Talk to a doctor before you start a physical routine"
 # notification Mrslee_Day 2_Talk to a doctor before you start a physical routine
 ~ notification = "Mrslee_Day 2_You can sign up for classes online or in person"
 # notification Mrslee_Day 2_You can sign up for classes online or in person
+
+Mrslee?Smiling "Well, I think she need to talk to doctor before start new physical activity. She maybe know that. Sign up on computer or at Community Center front desk." 
 
 * {not Suggestion2} That sounds great, do you know anything else about the health or social benefits?
   -> Suggestion2
@@ -63,8 +63,6 @@ Mrslee?Smiling "Well, I think she need to talk to doctor before start new physic
   -> Goodbye
 
 ==Suggestion2==
-Mrslee?Smiling "Oh, yes! For elder, group exercise very social. Lot of friend in my class."
-Mrslee?Smiling "I stay fit, strength give me independence! It help me feel strong and my balance good. I love it!"
 
 ~ notification = "Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2"
 # notification Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2
@@ -72,6 +70,9 @@ Mrslee?Smiling "I stay fit, strength give me independence! It help me feel stron
 # notification Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2
 ~ notification = "Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2"
 # notification Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2
+
+Mrslee?Smiling "Oh, yes! For elder, group exercise very social. Lot of friend in my class."
+Mrslee?Smiling "I stay fit, strength give me independence! It help me feel strong and my balance good. I love it!"
 
 * {not Suggestion1} That sounds amazing! Is there anything else I should know?
   -> Suggestion1

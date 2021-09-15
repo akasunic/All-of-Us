@@ -58,9 +58,6 @@ Mrslee?Neutral "I have more time, so I can learn thing he curious about and give
   -> Suggestion2
 
 ==Suggestion1==
-Mrslee?Smiling "Seniors need someone to talk to and maybe do some errand. We talk, we laugh...Eddie learn about Korea when we are together. "
-Mrslee?Smiling "It makes me feel so good to see how he grow. He know more about what it like to be old, and I have someone to talk to. A purpose."
-
 ~ notification = "Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands"
 # notification Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands
 ~ notification = "Mrslee_Day 4_Teens can learn how it feels to get old"
@@ -68,18 +65,22 @@ Mrslee?Smiling "It makes me feel so good to see how he grow. He know more about 
 ~ notification = "Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4"
 # notification Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4
 
+Mrslee?Smiling "Seniors need someone to talk to and maybe do some errand. We talk, we laugh...Eddie learn about Korea when we are together. "
+Mrslee?Smiling "It makes me feel so good to see how he grow. He know more about what it like to be old, and I have someone to talk to. A purpose."
+
 * {not Suggestion2} Wow. A sense of purpose. What else happens?
   -> Suggestion2
 * That's great to hear, Mrs. Lee.
   -> Goodbye
 
 ==Suggestion2==
-Mrslee?Smiling "Rashad has good idea. Eddie teach me how to do thing on computer and phone, I teach Eddie life."
-Mrslee?Smiling "Being close to elder give young people world perspective, show them age is good thing, and not to be anxious."
-Mrslee?Smiling "Good for mind. We teach each other, important."
 
 ~ notification = "Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4"
 # notification Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4
+
+Mrslee?Smiling "Rashad has good idea. Eddie teach me how to do thing on computer and phone, I teach Eddie life."
+Mrslee?Smiling "Being close to elder give young people world perspective, show them age is good thing, and not to be anxious."
+Mrslee?Smiling "Good for mind. We teach each other, important."
 
 * {not Suggestion1} This sounds really great, Mrs. Lee. Do you have anything else?
   -> Suggestion1

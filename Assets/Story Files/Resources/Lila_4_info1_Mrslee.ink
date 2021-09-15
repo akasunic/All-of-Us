@@ -52,10 +52,11 @@ Mrslee?Neutral "Lila? She want to do yoga?"
     -> Suggestion2
 
 ==Suggestion1==
-Mrslee?Smiling "She can come to water fitness with me!"
 
 ~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to water fitness to spend time with Mrs. Lee and her friends"
 # notification Mrslee_Day 4_Mrs. Lee invites Lila to come to water fitness to spend time with Mrs. Lee and her friends
+
+Mrslee?Smiling "She can come to water fitness with me!"
 
 * She might like that, but I think she might be more interested in something she can meet new people at. She knows all your friends!
     -> Suggestion2
@@ -63,10 +64,11 @@ Mrslee?Smiling "She can come to water fitness with me!"
     -> Goodbye
 
 ==Suggestion2==
-Mrslee?Smiling "Oh, Lila do need to move more than now. I invite her to Sunday class!"
 
 ~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to yoga with her, where both of them will be new students_Lila4"
 # notification Mrslee_Day 4_Mrs. Lee invites Lila to come to yoga with her, where both of them will be new students_Lila4
+
+Mrslee?Smiling "Oh, Lila do need to move more than now. I invite her to Sunday class!"
 
 * She could be interested in something else too.
     -> Suggestion1

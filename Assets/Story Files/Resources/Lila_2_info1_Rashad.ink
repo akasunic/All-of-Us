@@ -9,8 +9,12 @@ VAR new_quest = ""
 Rashad?Smiling "Heyyy {player_name}!"
 
 * Hi Rashad! What's up.
-    Rashad "Just sat down for a little reading. "-> Chat1
+    -> PreChat1
 * Hey Rashad! What's that you're reading?
+    -> Chat1
+
+== PreChat1 ==
+Rashad?Smiling "Just sat down for a little reading. "
     -> Chat1
 
 ==Chat1==
@@ -55,11 +59,12 @@ Rashad?Neutral "Is she okay? Can I do something to help or do you need my mom?"
     -> Suggestion2
 
 ==Suggestion1==
-Rashad?Smiling "Well, the library would definitely be a good place to find resources, I can get her a card if she needs one."
-Rashad?Smiling "I also know my wife swears by walking every day and regulating her salt intake. She says it solves all the problems that matter."
 
 ~ notification = "Rashad_Day 2_Rashad can get Lila a library card to look at health-related literature. He also says his wife walks every day and regulates her salt intake to stay healthy"
 # notification Rashad_Day 2_Rashad can get Lila a library card to look at health-related literature. He also says his wife walks every day and regulates her salt intake to stay healthy
+
+Rashad?Smiling "Well, the library would definitely be a good place to find resources, I can get her a card if she needs one."
+Rashad?Smiling "I also know my wife swears by walking every day and regulating her salt intake. She says it solves all the problems that matter."
 
 * Do you think there is anything else she could look into? Maybe any experiences your mom has had?
     -> Suggestion2
@@ -67,11 +72,12 @@ Rashad?Smiling "I also know my wife swears by walking every day and regulating h
     -> Goodbye
 
 ==Suggestion2==
-Rashad?Smiling "Well, a big one when I was really little was that my mom struggled with some unnoticeable symptoms that led to metabolic syndrome."
-Rashad?Smiling "We talk about that diagnosis whenever she gets tested now to check her symptoms. We also have a website at the library that I use when I need more information. I can send it to you."
 
 ~ notification = "Rashad_Day 2_Rashad’s mother had hidden symptoms that later proved to be metabolic syndrome through tests done at the doctor’s office. He also suggested a website he uses regularly that Lila can look at for health information: medlineplus.gov_Lila2"
 # notification Rashad_Day 2_Rashad’s mother had hidden symptoms that later proved to be metabolic syndrome through tests done at the doctor’s office. He also suggested a website he uses regularly that Lila can look at for health information: medlineplus.gov_Lila2
+
+Rashad?Smiling "Well, a big one when I was really little was that my mom struggled with some unnoticeable symptoms that led to metabolic syndrome."
+Rashad?Smiling "We talk about that diagnosis whenever she gets tested now to check her symptoms. We also have a website at the library that I use when I need more information. I can send it to you."
 
 * Do you have any other advice?
     -> Suggestion1

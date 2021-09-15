@@ -50,8 +50,6 @@ Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be di
   -> Suggestion2
 
 ==Suggestion1==
-Lila?Smiling "Well, you should find someone you feel comfortable talking to. Making a list of qualities you want in a therapist, and what you want to work on is useful."
-Lila?Smiling "You can also do a little research yourself and look at some different common therapy methods to familiarize yourself with what you might like, and to see what's out there. Oh, and you should make sure they accept your insurance."
 
 ~ notification = "Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3"
 # notification Lila_Day 3_You should feel comfortable talking to your therapist_Rashad3
@@ -60,14 +58,15 @@ Lila?Smiling "You can also do a little research yourself and look at some differ
 ~ notification = "Lila_Day 3_Ask if they accept your insurance_Rashad3"
 # notification Lila_Day 3_Ask if they accept your insurance_Rashad3
 
+Lila?Smiling "Well, you should find someone you feel comfortable talking to. Making a list of qualities you want in a therapist, and what you want to work on is useful."
+Lila?Smiling "You can also do a little research yourself and look at some different common therapy methods to familiarize yourself with what you might like, and to see what's out there. Oh, and you should make sure they accept your insurance."
+
 * {not Suggestion2} That's helpful. Do you have any advice about how the process works?
   -> Suggestion2
 * That's great to know! Thanks so much, Lila.
   -> Goodbye
 
 ==Suggestion2==
-Lila?Smiling "When I looked for a Black therapist, I used an online tool to search in our area and ask for recommendations. When I called, we set up an intake appointment to get to know each other."
-Lila?Smiling "At the intake appointment, I asked questions about them and race-based stress to know if we were compatible. Getting recommendations from friends is also useful."
 
 ~ notification = "Lila_Day 3_At an intake appointment you talk to a therapist to see if you are a match_Rashad3"
 # notification Lila_Day 3_At an intake appointment you talk to a therapist to see if you are a match_Rashad3
@@ -75,6 +74,9 @@ Lila?Smiling "At the intake appointment, I asked questions about them and race-b
 # notification Lila_Day 3_Get a recommendation from friends
 ~ notification = "Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3"
 # notification Lila_Day 3_Ask a therapist if they have experience with RBST_Rashad3
+
+Lila?Smiling "When I looked for a Black therapist, I used an online tool to search in our area and ask for recommendations. When I called, we set up an intake appointment to get to know each other."
+Lila?Smiling "At the intake appointment, I asked questions about them and race-based stress to know if we were compatible. Getting recommendations from friends is also useful."
 
 * {not Suggestion1} Wow, that sounds great. Can you recommend anything else?
   -> Suggestion1

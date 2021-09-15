@@ -60,7 +60,6 @@ Mrcalindas?Neutral "Our whole family is going to be there, but Jessica doesn't w
 * Okay, I think I can try and find some tips!.
   -> QuestAcceptance
 
-
 ==QuestAcceptance==
 Mrcalindas?Smiling "Thank you so much {player_name}. If you could give us some information on activities so we can prepare, and make sure there are some options for her, we'd appreciate it."
 Mrcalindas?Smiling "Don't worry, I don't expect unicorns." 
