@@ -9,7 +9,7 @@ public class Backstories : MonoBehaviour
     private int current_text_counter = 1;
 
     // Localization Feature
-    public Lang LMan = new Lang(false);
+    public Lang LangClass = new Lang(false);
 
     public Text Textfield;
     public GameObject skipButton;
@@ -21,22 +21,22 @@ public class Backstories : MonoBehaviour
 
     void Start()
     {
-        Textfield.text = LMan.getString("backstories_1");
+        Textfield.text = LangClass.getString("backstories_1");
     }
 
 
     public void setNextText() {
         switch (current_text_counter) {
             case 1:
-                Textfield.text = LMan.getString("backstories_2");
+                Textfield.text = LangClass.getString("backstories_2");
                 current_text_counter++;
                 break;
             case 2:
-                Textfield.text = LMan.getString("backstories_3");
+                Textfield.text = LangClass.getString("backstories_3");
                 current_text_counter++;
                 break;
             case 3:
-                Textfield.text = LMan.getString("backstories_4");
+                Textfield.text = LangClass.getString("backstories_4");
                 current_text_counter++;
                 break;
             default:
