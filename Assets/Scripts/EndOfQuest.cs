@@ -18,6 +18,8 @@ public class EndOfQuest : MonoBehaviour
     public GameObject[] upcomingDays;
     public GameObject[] currentDays;
     public GameObject[] pastDays;
+    // Localization Feature
+    public Lang LangClass = new Lang(false);
 
     // Start is called before the first frame update
     void Start()
@@ -134,29 +136,29 @@ public class EndOfQuest : MonoBehaviour
 
     private void BuildQuestMap()
     {
-        questMap.Add("A Little Help from Your Friends", new Quest("You found a library assistant in the YA section! Check in with Rashad and see how he’s doing.", "Rashad"));
-        questMap.Add("Under Pressure", new Quest("You helped Rashad learn about race based stress! Check in later and see how he’s doing.", "Rashad"));
-        questMap.Add("Running on Empty", new Quest("You helped Rashad figure out the next steps for getting therapy. Check in later to see how he’s feeling.", "Rashad"));
-        questMap.Add("A New Horizon", new Quest("You helped Rashad figure out the benefits of intergenerational outreach. Great work this week!", "Rashad"));
+        questMap.Add(LangClass.getString("end_of_quest_rashad_1_title"), new Quest(LangClass.getString("end_of_quest_rashad_1_desc"), "Rashad"));
+        questMap.Add(LangClass.getString("end_of_quest_rashad_2_title"), new Quest(LangClass.getString("end_of_quest_rashad_2_desc"), "Rashad"));
+        questMap.Add(LangClass.getString("end_of_quest_rashad_3_title"), new Quest(LangClass.getString("end_of_quest_rashad_3_desc"), "Rashad"));
+        questMap.Add(LangClass.getString("end_of_quest_rashad_4_title"), new Quest(LangClass.getString("end_of_quest_rashad_4_desc"), "Rashad"));
 
-        questMap.Add("LGBTQ+ Support", new Quest("You helped Lila with logistics for her first community event! Check in and see if she needs anything.", "Lila"));
-        questMap.Add("Making time for what's important", new Quest("You helped Lila learn about her family health history options! See how she’s doing.", "Lila"));
-        questMap.Add("Is this normal?", new Quest("You helped Lila get information and support for her feminine health care needs. Check in and see how she feels!", "Lila"));
-        questMap.Add("Where are my people?", new Quest("You helped Lila make new connections in the neighborhood! Great work this week!", "Lila"));
+        questMap.Add(LangClass.getString("end_of_quest_lila_1_title"), new Quest(LangClass.getString("end_of_quest_lila_1_desc"), "Lila"));
+        questMap.Add(LangClass.getString("end_of_quest_lila_2_title"), new Quest(LangClass.getString("end_of_quest_lila_2_desc"), "Lila"));
+        questMap.Add(LangClass.getString("end_of_quest_lila_3_title"), new Quest(LangClass.getString("end_of_quest_lila_3_desc"), "Lila"));
+        questMap.Add(LangClass.getString("end_of_quest_lila_4_title"), new Quest(LangClass.getString("end_of_quest_lila_4_desc"), "Lila"));
 
-        questMap.Add("What the Community Really Needs", new Quest("Mr. Calindas feels like he’s prepared for the Health Fair! Check in later to see if he needs anything else.", "Calindas"));
-        questMap.Add("Mother Calindas' New Home", new Quest("Mr. Calindas feels like his Mother will love the neighborhood! Check in and see how he’s doing!", "Calindas"));
-        questMap.Add("Tech Support for Mom", new Quest("You helped Mr. Calindas find some program options for Mother Calindas. Check in to see if he needs anything else!", "Calindas"));
-        questMap.Add("Fun Day for Brooklyn", new Quest("Mr. Calindas’ family feels like the Block Party is going to be accessible for his granddaughter! Great work this week!", "Calindas"));
+        questMap.Add(LangClass.getString("end_of_quest_calindas_1_title"), new Quest(LangClass.getString("end_of_quest_calindas_1_desc"), "Calindas"));
+        questMap.Add(LangClass.getString("end_of_quest_calindas_2_title"), new Quest(LangClass.getString("end_of_quest_calindas_2_desc"), "Calindas"));
+        questMap.Add(LangClass.getString("end_of_quest_calindas_3_title"), new Quest(LangClass.getString("end_of_quest_calindas_3_desc"), "Calindas"));
+        questMap.Add(LangClass.getString("end_of_quest_calindas_4_title"), new Quest(LangClass.getString("end_of_quest_calindas_4_desc"), "Calindas"));
 
-        questMap.Add("Help Mrs. Lee verify that Eddie’s medication is correct", new Quest("You helped Mrs. Lee figure out the correct prescription for her grandson, Eddie. Check in with her, and see how she’s doing.", "Lee"));
-        questMap.Add("Empower Mrs. Lee to schedule a doctor’s appointment", new Quest("You encouraged Mrs. Lee to seek treatment for her headaches! Check in on her and see if she needs anything else.", "Lee"));
-        questMap.Add("Help Mrs. Lee prepare for her doctor's appointment", new Quest("Mrs. Lee is prepared for her doctor’s appointment! You should check in with her to see how she’s doing.", "Lee"));
-        questMap.Add("Encourage Mrs. Lee to continue her health journey", new Quest("Mrs. Lee is feeling in charge of her health! Great work this week!", "Lee"));
+        questMap.Add(LangClass.getString("end_of_quest_lee_1_title"), new Quest(LangClass.getString("end_of_quest_lee_1_desc"), "Lee"));
+        questMap.Add(LangClass.getString("end_of_quest_lee_2_title"), new Quest(LangClass.getString("end_of_quest_lee_2_desc"), "Lee"));
+        questMap.Add(LangClass.getString("end_of_quest_lee_3_title"), new Quest(LangClass.getString("end_of_quest_lee_3_desc"), "Lee"));
+        questMap.Add(LangClass.getString("end_of_quest_lee_4_title"), new Quest(LangClass.getString("end_of_quest_lee_4_desc"), "Lee"));
 
-        questMap.Add("Find out more info on career fairs", new Quest("You helped Elisa get ready for her career fair and learn networking tips. Check in with her and see how she is.", "Elisa"));
-        questMap.Add("Find out how to get vaccination records", new Quest("You helped Elisa with her immunization questions! Stop by and ask if she needs anything.", "Elisa"));
-        questMap.Add("Find a mentor for Elisa", new Quest("You helped Elisa get support as a first generation college student. Check in and see how she’s feeling.", "Elisa"));
-        questMap.Add("Find out more info on diabetes", new Quest("You helped Elisa and her Mom with diabetes information. Great work this week!", "Elisa"));
+        questMap.Add(LangClass.getString("end_of_quest_elisa_1_title"), new Quest(LangClass.getString("end_of_quest_elisa_1_desc"), "Elisa"));
+        questMap.Add(LangClass.getString("end_of_quest_elisa_2_title"), new Quest(LangClass.getString("end_of_quest_elisa_2_desc"), "Elisa"));
+        questMap.Add(LangClass.getString("end_of_quest_elisa_3_title"), new Quest(LangClass.getString("end_of_quest_elisa_3_desc"), "Elisa"));
+        questMap.Add(LangClass.getString("end_of_quest_elisa_4_title"), new Quest(LangClass.getString("end_of_quest_elisa_4_desc"), "Elisa"));
     }
 }

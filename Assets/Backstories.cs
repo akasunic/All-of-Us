@@ -7,12 +7,11 @@ public class Backstories : MonoBehaviour
 
 {
     private int current_text_counter = 1;
+    public Text Textfield;
+    public GameObject skipButton;
 
     // Localization Feature
     public Lang LangClass = new Lang(false);
-
-    public Text Textfield;
-    public GameObject skipButton;
 
     public void loadTutorialScene() {
 

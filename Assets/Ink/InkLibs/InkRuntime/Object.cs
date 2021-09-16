@@ -223,7 +223,7 @@ namespace Ink.Runtime
         }
 
         /// Required for implicit bool comparison
-        public static bool operator ==(Object a, Object b)
+        public static bool operator == (Object a, Object b)
         {
             return object.ReferenceEquals (a, b);
         }
