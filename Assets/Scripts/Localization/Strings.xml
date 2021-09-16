@@ -2,6 +2,7 @@
 <languages>
 
     <English>
+
         <string name="backstories_1">Morning in Bloomwood is my favorite time. I grew up here, and from my apartment’s window, I can hear everyone waking up around me. The neighborhood used to feel as alive as the people. In the summer, folks fixed their cars outside my building and played music until the street lamps came on. There was always an end of summer block party, and always something to do. Now? Not so much.</string>
         <string name="backstories_2">Times have changed. People feel distant from each other. Developers built mixed use high rises, and new programs have come in bringing grants, funding, and new facilities. This was great, except the rents got higher and it felt like half the neighborhood was getting left behind. More and more of our old neighbors are moving out. More and more new faces are moving in, who aren’t as connected to the people already living here.</string>
         <string name="backstories_3">Not everyone in Bloomwood is getting a fair shake these days. Instead of talking to your neighbor, folks called in noise complaints. It feels like no one knows their neighbors anymore. We just keep to ourselves. I want to change that. Bloomwood was never the place where you ignored your neighbors. So I came up with a plan. A good one. As the Bloomwood Community Liaison to the city, I was able to secure a permit for an old school style block party to celebrate the reopening of our Community Center....</string>
@@ -21,6 +22,7 @@
         <string name="todo_updated">MyTodo Updated</string>
     
         <string name="day">DAY</string>
+        <string name="start">START</string>
         
         <string name="end_of_quest_rashad_1_title">A Little Help from Your Friends</string>
         <string name="end_of_quest_rashad_1_desc">You found a library assistant in the YA section! Check in with Rashad and see how he’s doing.</string>
@@ -72,9 +74,11 @@
         <string name="tutorial_todo">When I have something I need to do, it’s written in my To Do App. I like to keep track of any new information I have that can help other people in the neighborhood out.</string>
         <string name="tutorial_notes">I like to keep track of any new information I have that can help other people in the neighborhood out. I keep this in my Notes app.</string>
         <string name="tutorial_contacts">I like to help make connections in the community, so I make sure to keep my Contacts app updated to keep up with the lives and needs of my friends.</string>
+
     </English>
 
     <Spanish>
+
         <string name="backstories_1"></string>
         <string name="backstories_2"></string>
         <string name="backstories_3"></string>
@@ -93,7 +97,8 @@
         <string name="journal_updated"></string>
         <string name="todo_updated"></string>
 
-        <string name="day">DAY</string>
+        <string name="day"></string>
+        <string name="start">Comienzo</string>
 
         <string name="end_of_quest_rashad_1_title"></string>
         <string name="end_of_quest_rashad_1_desc"></string>
@@ -139,6 +144,13 @@
         <string name="end_of_quest_elisa_3_desc"></string>
         <string name="end_of_quest_elisa_4_title"></string>
         <string name="end_of_quest_elisa_4_desc"></string>
+
+        <string name="tutorial_building"></string>
+        <string name="tutorial_phone"></string>
+        <string name="tutorial_todo"></string>
+        <string name="tutorial_notes"></string>
+        <string name="tutorial_contacts"></string>
+
     </Spanish>
 
 </languages>
