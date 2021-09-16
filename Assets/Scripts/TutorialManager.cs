@@ -15,6 +15,8 @@ public class TutorialManager : MonoBehaviour
     public TextMeshProUGUI[] npcNameText;
     public GameObject[] lilaImages;
 
+    // Localization Feature
+    public Lang LangClass = new Lang(false);
     private int stage;
     private Vector3 dialoguePosition;
 
@@ -82,7 +84,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 2:
                 dialogue.transform.position = dialoguePosition;
-                contentText.text = "Click on a building to see who’s at this location!";
+                contentText.text = LangClass.getString("tutorial_building");
                 break;
             case 3:
                 dialogue.SetActive(false);
@@ -91,28 +93,28 @@ public class TutorialManager : MonoBehaviour
                 OpenNextStage();
                 break;
             case 7:
-                contentText.text = "I use my phone to keep track of all the things I need to remember as a Community Liaison, and a good neighbor.";
+                contentText.text = LangClass.getString("tutorial_phone");
                 dialogue.SetActive(true);
                 break;
             case 8:
                 dialogue.SetActive(false);
                 break;
             case 10:
-                contentText.text = "When I have something I need to do, it’s written in my To Do App. I like to keep track of any new information I have that can help other people in the neighborhood out.";
+                contentText.text = LangClass.getString("tutorial_todo");
                 dialogue.SetActive(true);
                 break;
             case 11:
                 dialogue.SetActive(false);
                 break;
             case 12:
-                contentText.text = "I like to keep track of any new information I have that can help other people in the neighborhood out. I keep this in my Notes app.";
+                contentText.text = LangClass.getString("tutorial_notes");
                 dialogue.SetActive(true);
                 break;
             case 13:
                 dialogue.SetActive(false);
                 break;
             case 14:
-                contentText.text = "I like to help make connections in the community, so I make sure to keep my Contacts app updated to keep up with the lives and needs of my friends.";
+                contentText.text = LangClass.getString("tutorial_contacts");
                 dialogue.SetActive(true);
                 break;
             case 15:

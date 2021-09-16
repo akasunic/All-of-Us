@@ -51,7 +51,7 @@ public class EndOfQuest : MonoBehaviour
         remainDays.text = GlobalGameInfo.GetRemainDays().ToString();
         if (GlobalGameInfo.GetRemainDays() <= 1)
         {
-            daysText.text = "DAY";
+            daysText.text = LangClass.getString("day");
         }
 
         // set character and picture
