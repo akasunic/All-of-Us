@@ -23,6 +23,8 @@
     
         <string name="day">DAY</string>
         <string name="start">START</string>
+        <string name="skip">SKIP STORY</string>
+        <string name="next">NEXT</string>
         
         <string name="end_of_quest_rashad_1_title">A Little Help from Your Friends</string>
         <string name="end_of_quest_rashad_1_desc">You found a library assistant in the YA section! Check in with Rashad and see how he’s doing.</string>
@@ -98,7 +100,9 @@
         <string name="todo_updated"></string>
 
         <string name="day"></string>
-        <string name="start">Comienzo</string>
+        <string name="start"></string>
+        <string name="skip"></string>
+        <string name="next"></string>
 
         <string name="end_of_quest_rashad_1_title"></string>
         <string name="end_of_quest_rashad_1_desc"></string>

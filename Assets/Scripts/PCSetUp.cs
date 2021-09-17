@@ -1,22 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Collections.Generic;
 
 public class PCSetUp : MonoBehaviour
 {
     public InputField nameInputField;
+    public TextMeshProUGUI StartButton;
     public Dropdown pronounsDropDown;
     private string firstName;
     private int intPronouns;
     private string pronouns;
+    
+    // Localization Feature
+    public Lang LangClass = new Lang(false);
 
     // Start is called before the first frame update
     void Start()
     {
-
+        StartButton.text = LangClass.getString("start");
     }
 
     // Update is called once per frame
