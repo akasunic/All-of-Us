@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -21,10 +22,18 @@ public class Home : MonoBehaviour {
     public GameObject customTagsVal;
     public GameObject daysUntilBlockPartyVal;
 
+    // Localization Feature
+    public Lang LangClass = new Lang(false);
+
+    public TextMeshProUGUI BackToMapText;
+    public TextMeshProUGUI BackToHomeText;
     private void Start() {
 
         // TitleText.enabled = false;
         // yellowContainerText.enabled = false;
+
+        BackToMapText.text = LangClass.getString("back");
+        BackToHomeText.text = LangClass.getString("back");
         
         commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
         questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";

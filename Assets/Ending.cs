@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class Ending : MonoBehaviour
     // Localization Feature
     public Lang LangClass = new Lang(false);
 
+    public TextMeshProUGUI NextText;
     public Text Textfield;
     public Text LastTextField;
     public GameObject nextButton;
@@ -24,6 +26,7 @@ public class Ending : MonoBehaviour
     private void Start() {
 
         Textfield.text = LangClass.getString("ending_1");
+        NextText.text = LangClass.getString("next");
 
         mrcalindas.enabled = false;
         mrslee.enabled = false;
