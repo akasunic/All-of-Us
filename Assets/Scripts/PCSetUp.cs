@@ -9,7 +9,7 @@ using System.Collections.Generic;
 public class PCSetUp : MonoBehaviour
 {
     public InputField nameInputField;
-    public TextMeshProUGUI StartButton;
+    public TextMeshProUGUI StartText;
     public Dropdown pronounsDropDown;
     private string firstName;
     private int intPronouns;
@@ -21,7 +21,7 @@ public class PCSetUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartButton.text = LangClass.getString("start");
+        StartText.text = LangClass.getString("start");
     }
 
     // Update is called once per frame

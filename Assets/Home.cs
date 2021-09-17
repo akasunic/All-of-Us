@@ -25,15 +25,19 @@ public class Home : MonoBehaviour {
     // Localization Feature
     public Lang LangClass = new Lang(false);
 
+    public TextMeshProUGUI SectionName;
     public TextMeshProUGUI BackToMapText;
     public TextMeshProUGUI BackToHomeText;
+    public TextMeshProUGUI InfoText;
+    public TextMeshProUGUI GoToSleepText;
     private void Start() {
-
-        // TitleText.enabled = false;
-        // yellowContainerText.enabled = false;
 
         BackToMapText.text = LangClass.getString("back");
         BackToHomeText.text = LangClass.getString("back");
+        
+        SectionName.text = LangClass.getString("home");
+        InfoText.text = LangClass.getString("info");
+        GoToSleepText.text = LangClass.getString("go_to_sleep");
         
         commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
         questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
@@ -41,33 +45,12 @@ public class Home : MonoBehaviour {
         customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
         daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
 
-        // commEngageVal.enabled = false;
-        // questsCompletedVal.enabled = false;
-        // journalEntriesVal.enabled = false;
-        // customTagsVal.enabled = false;
-        // daysUntilBlockPartyVal.enabled = false;
-
-        // yellowContainer.SetActive(false);
-        // whiteContainer.SetActive(false);
-        // backButton.SetActive(false);
-        // separatingLines.SetActive(false);
-        // statTitles.SetActive(false);
-        
-        // infoButton.SetActive(true);
-        // goToSleepButton.SetActive(true);
-
     }
     
     public void showInfo() {
 
         TitleText.SetActive(true);
         yellowContainerText.SetActive(true);
-
-        // commEngageVal.enabled = true;
-        // questsCompletedVal.enabled = true;
-        // journalEntriesVal.enabled = true;
-        // customTagsVal.enabled = true;
-        // daysUntilBlockPartyVal.enabled = true;
 
         commEngageVal.SetActive(true);
         questsCompletedVal.SetActive(true);
@@ -89,12 +72,6 @@ public class Home : MonoBehaviour {
 
         TitleText.SetActive(false);
         yellowContainerText.SetActive(false);
-
-        // commEngageVal.enabled = false;
-        // questsCompletedVal.enabled = false;
-        // journalEntriesVal.enabled = false;
-        // customTagsVal.enabled = false;
-        // daysUntilBlockPartyVal.enabled = false;
 
         commEngageVal.SetActive(false);
         questsCompletedVal.SetActive(false);
