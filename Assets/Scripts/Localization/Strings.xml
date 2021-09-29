@@ -22,12 +22,26 @@
         <string name="todo_updated">MyTodo Updated</string>
     
         <string name="day">DAY</string>
-        <string name="start">START</string>
+        <string name="continue">CONTINUE</string>
+        <string name="new_game">NEW GAME</string>
+        <string name="tutorial">TUTORIAL</string>
         <string name="skip">SKIP STORY</string>
         <string name="next">NEXT</string>
         <string name="back">BACK</string>
         <string name="info">INFO</string>
         <string name="go_to_sleep">GO TO SLEEP</string>
+        <string name="english">English</string>
+        <string name="french">French</string>
+        
+        <string name="pc_setup_title">Who are you?</string>
+        <string name="name_field">Name</string>
+        <string name="pronouns_field">Pronouns</string>
+        <string name="language_field">Language</string>
+        <string name="she_her">She/Her</string>
+        <string name="he_his">He/His</string>
+        <string name="they_them">They/Them</string>
+        <string name="first_name">First Name</string>
+        <string name="choose_one">Choose Onesssss</string>
         
         <string name="home">Home</string>
         <string name="community_center">Bloomwood Community Center</string>
@@ -112,6 +126,8 @@
         <string name="skip"></string>
         <string name="next"></string>
         <string name="back"></string>
+        <string name="info"></string>
+        <string name="go_to_sleep"></string>
 
         <string name="home"></string>
         <string name="community_center"></string>

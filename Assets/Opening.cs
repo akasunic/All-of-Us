@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
 {
-    public TextMeshProUGUI ButtonText;
+    public TextMeshProUGUI ContinueButton;
+    public TextMeshProUGUI NewGameButton;
+    public TextMeshProUGUI TutorialButton;
 
 
     // Localization Feature
@@ -15,16 +17,26 @@ public class Opening : MonoBehaviour
 
     void Start()
     {
-        ButtonText.text = LangClass.getString("start");
+        ContinueButton.text = LangClass.getString("continue");
+        NewGameButton.text = LangClass.getString("new_game");
+        TutorialButton.text = LangClass.getString("tutorial");
     }
 
 
-    public void loadBackstoriesScene() {
+    public void onNewGameClick() {
 
         //set a session id if not there yet
         ResetGame.startGame();
 
         SceneManager.LoadScene("PCSetUp");
+    }
+
+    public void onTutorialClick() {
+
+        //set a session id if not there yet
+        ResetGame.startGame();
+
+        SceneManager.LoadScene("Tutorial");
     }
     
     

@@ -9,11 +9,21 @@ using System.Collections.Generic;
 public class PCSetUp : MonoBehaviour
 {
     public InputField nameInputField;
-    public TextMeshProUGUI StartText;
+    public TextMeshProUGUI TitleText;
+    public TextMeshProUGUI NameText;
+    public TextMeshProUGUI PronounsText;
+    public TextMeshProUGUI LanguageText;
+    public TextMeshProUGUI ContinueText;
+    public Text pronounsDropDownLabel;
+    public Text languageDropDownLabel;
     public Dropdown pronounsDropDown;
+    public Dropdown languageDropDown;
+    public Button continueButton;
     private string firstName;
     private int intPronouns;
     private string pronouns;
+    private int intLanguage;
+    private string language;
     
     // Localization Feature
     public Lang LangClass = new Lang(false);
@@ -21,7 +31,23 @@ public class PCSetUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartText.text = LangClass.getString("start");
+        TitleText.text = LangClass.getString("pc_setup_title");
+        NameText.text = LangClass.getString("name_field");
+        PronounsText.text = LangClass.getString("pronouns_field");
+        LanguageText.text = LangClass.getString("language_field");
+        ContinueText.text = LangClass.getString("continue");
+
+        continueButton.interactable = false;
+
+        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
+        List<string> languageDropDownOptions = new List<string> { LangClass.getString("english"), LangClass.getString("french")};
+
+        pronounsDropDown.AddOptions(pronounsDropDownOptions);
+        languageDropDown.AddOptions(languageDropDownOptions);
+
+        nameInputField.placeholder.GetComponent<Text>().text = LangClass.getString("first_name");
+        pronounsDropDown.captionText.text = LangClass.getString("choose_one");
+        languageDropDown.captionText.text = "aaaaaa";
     }
 
     // Update is called once per frame
@@ -29,18 +55,25 @@ public class PCSetUp : MonoBehaviour
     {
         firstName = nameInputField.text;
         intPronouns = pronounsDropDown.value;
+        intLanguage = languageDropDown.value;
+
+        if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0)
+        {
+            continueButton.interactable = true;
+        }
     }
 
     public void Submit()
     {
-        if (firstName == null || firstName.Equals("") || intPronouns == 0)
+        if (firstName == null || firstName.Equals("") || intPronouns == 0 || intLanguage == 0)
         {
-            Debug.Log("Name and Pronouns cannot be empty");
+            Debug.Log("Name, Pronouns, and Language cannot be empty");
             return;
         }
 
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
+        GlobalGameInfo.language = GetLanguages(intLanguage);
         SceneManager.LoadScene("Backstories");
     }
 
@@ -49,11 +82,24 @@ public class PCSetUp : MonoBehaviour
         switch (intPronouns)
         {
             case 1:
-                return "She/Her";
+                return LangClass.getString("she_her");
             case 2:
-                return "He/His";
+                return LangClass.getString("he_his");
             case 3:
-                return "They/Them";
+                return LangClass.getString("they_them");
+            default:
+                return null;
+        }
+    }
+
+    private string GetLanguages(int intLanguage)
+    {
+        switch (intLanguage)
+        {
+            case 1:
+                return LangClass.getString("english");
+            case 2:
+                return LangClass.getString("french");
             default:
                 return null;
         }
