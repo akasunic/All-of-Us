@@ -62,14 +62,12 @@ public class PCSetUp : MonoBehaviour
 
         if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0)
         {
-            continueButton.enabled = false;
-            inactiveContinueButton.enabled = true;
-        } else {
             continueButton.enabled = true;
             inactiveContinueButton.enabled = false;
+        } else {
+            continueButton.enabled = false;
+            inactiveContinueButton.enabled = true;
         }
-
-        Debug.Log(firstName);
     }
 
     public void Submit()
