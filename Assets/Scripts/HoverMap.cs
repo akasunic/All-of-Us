@@ -7,6 +7,12 @@ public class HoverMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject hoverItem;
     public GameObject clickItem;
+    public GameObject imageItem;
+    public GameObject blackOverlay;
+    public Sprite overrideSprite;
+ 
+    private Sprite oldSprite;
+    private int imageItemOldSiblingIndex;
 
     //other scrips can change this
     public bool isViewable = true;
@@ -16,6 +22,18 @@ public class HoverMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if(hoverItem != null && isViewable){
             hoverItem.SetActive(true);
+            Image imageComponent = imageItem.GetComponent<Image>();
+            if (imageComponent != null && oldSprite == null)
+            {
+                oldSprite = imageComponent.sprite;
+                imageComponent.sprite = overrideSprite;
+                imageItemOldSiblingIndex = imageItem.transform.GetSiblingIndex();
+                imageItem.transform.SetAsLastSibling();
+                if (blackOverlay != null)
+                {
+                    blackOverlay.SetActive(true);
+                }
+            }
         }
     }
 
@@ -32,6 +50,17 @@ public class HoverMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if(hoverItem != null){
             hoverItem.SetActive(false);
+            Image imageComponent = imageItem.GetComponent<Image>();
+            if (imageComponent != null && oldSprite != null)
+            {
+                imageComponent.sprite = oldSprite;
+                oldSprite = null;
+                imageItem.transform.SetSiblingIndex(imageItemOldSiblingIndex);
+                if (blackOverlay != null)
+                {
+                    blackOverlay.SetActive(false);
+                }
+            }
         }
         if(clickItem != null){
             clickItem.SetActive(false);
