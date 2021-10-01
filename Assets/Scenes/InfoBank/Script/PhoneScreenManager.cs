@@ -12,10 +12,12 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject messages;
     public GameObject notes;
     public GameObject contacts;
+    public GameObject settings;
 
     public GameObject messagesBorder;
     public GameObject notesBorder;
     public GameObject contactsBorder;
+    public GameObject settingsBorder;
 
     public GameObject questPanel;
 
@@ -61,6 +63,7 @@ public class PhoneScreenManager : MonoBehaviour
     public Sprite todoIcon;
     public Sprite contactsIcon;
     public Sprite journalIcon;
+    public Sprite settingsIcon;
  
     void Update(){
       if (started && timer <= seconds) {
@@ -85,9 +88,11 @@ public class PhoneScreenManager : MonoBehaviour
         messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
+        settings.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         messagesBorder.SetActive(false);
         notesBorder.SetActive(false);
         contactsBorder.SetActive(false);
+        settingsBorder.SetActive(false);
 
         lastSelected = null;
         lastSelectedBorder = null;
@@ -186,6 +191,10 @@ public class PhoneScreenManager : MonoBehaviour
                 go = contacts;
                 border = contactsBorder;
                 break;
+            case "settings":
+                go = settings;
+                border = settingsBorder;
+                break;
             case "back":
                 go = null;
                 border = null;
@@ -202,6 +211,8 @@ public class PhoneScreenManager : MonoBehaviour
                 return "My Journals";
             case "contacts":
                 return "My Contacts";
+            case "settings":
+                return "Settings";
             case "back":
                 return "Home Screen";
         }
@@ -218,6 +229,8 @@ public class PhoneScreenManager : MonoBehaviour
                 return journalIcon;
             case "contacts":
                 return contactsIcon;
+            case "settings":
+                return settingsIcon;
             case "back":
                 return journalIcon;
         }

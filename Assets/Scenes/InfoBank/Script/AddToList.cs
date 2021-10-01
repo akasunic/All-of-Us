@@ -20,6 +20,9 @@ public class AddToList : MonoBehaviour
             case "Contacts":
                 fillContactList(GlobalGameInfo.contactsList);
                 break;
+            case "Settings":
+                fillSettingsList();
+                break;
             default:
                 List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
                 list.Reverse();
@@ -42,6 +45,20 @@ public class AddToList : MonoBehaviour
             Transform newItem = Instantiate(listItemPrefab, go);
             newItem.GetComponent<TodoManager>().setDetails(list[i]);
         }
+    }
+
+    private void fillSettingsList()
+    {
+        /*
+        if (list.Count == 0)
+        {
+            return;
+        }
+
+        Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
+
+        Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        */
     }
 
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
