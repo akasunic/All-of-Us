@@ -17,11 +17,12 @@ public class PCSetUp : MonoBehaviour
     public TextMeshProUGUI InactiveContinueText;
     public Text pronounsDropDownLabel;
     public Text languageDropDownLabel;
+    public Text nameFieldPlaceholder;
     public Dropdown pronounsDropDown;
     public Dropdown languageDropDown;
     public Button continueButton;
     public Button inactiveContinueButton;
-    private string firstName;
+    private string firstName = "";
     private int intPronouns;
     private string pronouns;
     private int intLanguage;
@@ -40,6 +41,11 @@ public class PCSetUp : MonoBehaviour
         LanguageText.text = LangClass.getString("language_field");
         ContinueText.text = LangClass.getString("continue");
         InactiveContinueText.text = LangClass.getString("continue");
+        nameFieldPlaceholder.text = LangClass.getString("first_name");
+
+        // Control continue buttons
+        continueButton.gameObject.SetActive(false);
+        inactiveContinueButton.gameObject.SetActive(true);
 
         // Setting dropdown lists
         List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
@@ -48,7 +54,7 @@ public class PCSetUp : MonoBehaviour
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
 
-        nameInputField.placeholder.GetComponent<Text>().text = LangClass.getString("first_name");
+        // nameInputField.placeholder.GetComponent<Text>().text = LangClass.getString("first_name");
         pronounsDropDown.captionText.text = LangClass.getString("choose_one");
         languageDropDown.captionText.text = LangClass.getString("choose_one");
     }
@@ -56,17 +62,21 @@ public class PCSetUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        firstName = nameInputField.text;
+        firstName = nameInputField.GetComponent<InputField>().text;
         intPronouns = pronounsDropDown.value;
         intLanguage = languageDropDown.value;
 
+        Debug.Log(firstName);
+        Debug.Log(intPronouns);
+        Debug.Log(intLanguage);
+
         if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0)
         {
-            continueButton.enabled = true;
-            inactiveContinueButton.enabled = false;
+            continueButton.gameObject.SetActive(true);
+            inactiveContinueButton.gameObject.SetActive(false);
         } else {
-            continueButton.enabled = false;
-            inactiveContinueButton.enabled = true;
+            continueButton.gameObject.SetActive(false);
+            inactiveContinueButton.gameObject.SetActive(true);
         }
     }
 
