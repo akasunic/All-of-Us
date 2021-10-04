@@ -25,6 +25,8 @@ public class Ending : MonoBehaviour
 
     private void Start() {
 
+        LangClass.setLanguage(GlobalGameInfo.language);
+
         Textfield.text = LangClass.getString("ending_1");
         NextText.text = LangClass.getString("next");
 

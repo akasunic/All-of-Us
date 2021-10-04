@@ -266,8 +266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1468568441}
   skipButton: {fileID: 35378272}
-  SkipText: {fileID: 0}
-  NextText: {fileID: 0}
+  SkipText: {fileID: 948899106}
+  NextText: {fileID: 1445020790}
 --- !u!1 &23522179
 GameObject:
   m_ObjectHideFlags: 1

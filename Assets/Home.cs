@@ -30,7 +30,10 @@ public class Home : MonoBehaviour {
     public TextMeshProUGUI BackToHomeText;
     public TextMeshProUGUI InfoText;
     public TextMeshProUGUI GoToSleepText;
+
     private void Start() {
+
+        LangClass.setLanguage(GlobalGameInfo.language);
 
         BackToMapText.text = LangClass.getString("back");
         BackToHomeText.text = LangClass.getString("back");

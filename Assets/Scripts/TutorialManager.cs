@@ -23,6 +23,9 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        LangClass.setLanguage(GlobalGameInfo.language);
+        
         stage = 0;
         dialoguePosition = dialogue.transform.position;
 

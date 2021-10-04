@@ -24,6 +24,9 @@ public class EndOfQuest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        LangClass.setLanguage(GlobalGameInfo.language);
+        
         if (questMap == null || questMap.Count == 0) {
             questMap = new Dictionary<string, Quest>();
             BuildQuestMap();

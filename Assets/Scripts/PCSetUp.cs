@@ -34,6 +34,8 @@ public class PCSetUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LangClass.setLanguage(GlobalGameInfo.language);
+        
         // Setting texts from Strings.xml
         TitleText.text = LangClass.getString("pc_setup_title");
         NameText.text = LangClass.getString("name_field");
@@ -48,15 +50,14 @@ public class PCSetUp : MonoBehaviour
         inactiveContinueButton.gameObject.SetActive(true);
 
         // Setting dropdown lists
-        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
-        List<string> languageDropDownOptions = new List<string> { LangClass.getString("english"), LangClass.getString("french")};
+        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
+        List<string> languageDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("english"), LangClass.getString("french")};
+
+        pronounsDropDown.ClearOptions();
+        languageDropDown.ClearOptions();
 
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
-
-        // nameInputField.placeholder.GetComponent<Text>().text = LangClass.getString("first_name");
-        pronounsDropDown.captionText.text = LangClass.getString("choose_one");
-        languageDropDown.captionText.text = LangClass.getString("choose_one");
     }
 
     // Update is called once per frame
@@ -65,10 +66,6 @@ public class PCSetUp : MonoBehaviour
         firstName = nameInputField.GetComponent<InputField>().text;
         intPronouns = pronounsDropDown.value;
         intLanguage = languageDropDown.value;
-
-        Debug.Log(firstName);
-        Debug.Log(intPronouns);
-        Debug.Log(intLanguage);
 
         if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0)
         {
@@ -91,6 +88,14 @@ public class PCSetUp : MonoBehaviour
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
         GlobalGameInfo.language = GetLanguages(intLanguage);
+
+        // Change the language globally
+        Debug.Log(GetLanguages(intLanguage));
+        
+        Debug.Log(LangClass.getCurrentLanguage());
+        LangClass.setLanguage(GetLanguages(intLanguage));
+        Debug.Log(LangClass.getCurrentLanguage());
+        
         SceneManager.LoadScene("Backstories");
     }
 

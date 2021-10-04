@@ -67,12 +67,15 @@ public class Lang
      
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
+
         if (element != null) {
             var elemEnum = element.GetEnumerator();
             while (elemEnum.MoveNext()) {
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
+            currentLang = language;
+
         } else {
             Debug.LogError("The specified language does not exist: " + language);
         }
@@ -97,12 +100,15 @@ public class Lang
      
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
+
         if (element != null) {
             var elemEnum = element.GetEnumerator();
             while (elemEnum.MoveNext()) {
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
+            currentLang = language;
+
         } else {
             Debug.LogError("The specified language does not exist: " + language);
         }
@@ -136,6 +142,10 @@ public class Lang
         }
  
         return (string)Strings[name];
+    }
+
+    public string getCurrentLanguage () {
+        return currentLang;
     }
  
 }

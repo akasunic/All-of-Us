@@ -23,6 +23,8 @@ public class Backstories : MonoBehaviour
 
     void Start()
     {
+        LangClass.setLanguage(GlobalGameInfo.language);
+
         Textfield.text = LangClass.getString("backstories_1");
         SkipText.text = LangClass.getString("skip");
         NextText.text = LangClass.getString("next");

@@ -27,6 +27,8 @@ public class NotificationItemManager : MonoBehaviour
 
     void Start(){
 
+      LangClass.setLanguage(GlobalGameInfo.language);
+
       GlobalGameInfo.setNotificationDelegate(setCounter);
       updateUIElements();
     }

@@ -101,7 +101,7 @@
 
     </English>
 
-    <Spanish>
+    <French>
 
         <string name="backstories_1"></string>
         <string name="backstories_2"></string>
@@ -122,12 +122,26 @@
         <string name="todo_updated"></string>
 
         <string name="day"></string>
-        <string name="start"></string>
+        <string name="continue"></string>
+        <string name="new_game"></string>
+        <string name="tutorial"></string>
         <string name="skip"></string>
         <string name="next"></string>
         <string name="back"></string>
         <string name="info"></string>
         <string name="go_to_sleep"></string>
+        <string name="english"></string>
+        <string name="french"></string>
+
+        <string name="pc_setup_title"></string>
+        <string name="name_field"></string>
+        <string name="pronouns_field"></string>
+        <string name="language_field"></string>
+        <string name="she_her"></string>
+        <string name="he_his"></string>
+        <string name="they_them"></string>
+        <string name="first_name"></string>
+        <string name="choose_one"></string>
 
         <string name="home"></string>
         <string name="community_center"></string>
@@ -185,6 +199,6 @@
         <string name="tutorial_notes"></string>
         <string name="tutorial_contacts"></string>
 
-    </Spanish>
+    </French>
 
 </languages>
