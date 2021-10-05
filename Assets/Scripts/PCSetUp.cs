@@ -37,12 +37,9 @@ public class PCSetUp : MonoBehaviour
         LangClass.setLanguage(GlobalGameInfo.language);
         
         // Setting texts from Strings.xml
-        TitleText.text = LangClass.getString("pc_setup_title");
         NameText.text = LangClass.getString("name_field");
         PronounsText.text = LangClass.getString("pronouns_field");
         LanguageText.text = LangClass.getString("language_field");
-        ContinueText.text = LangClass.getString("continue");
-        InactiveContinueText.text = LangClass.getString("continue");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
 
         // Control continue buttons
@@ -58,6 +55,29 @@ public class PCSetUp : MonoBehaviour
 
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
+
+
+        string buttonText = "";
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            buttonText = LangClass.getString("continue");
+            TitleText.text = LangClass.getString("pc_setup_title");
+        } else {
+            // Populate data from current settings
+            firstName = GlobalGameInfo.name;
+            nameInputField.text = GlobalGameInfo.name;
+
+            intPronouns = GlobalGameInfo.pronounsInt;
+            pronounsDropDown.value = intPronouns;
+
+            intLanguage = GlobalGameInfo.languageInt;
+            languageDropDown.value = intLanguage;
+
+            buttonText = LangClass.getString("save");
+        }
+
+        ContinueText.text = buttonText;
+        InactiveContinueText.text = buttonText;
+
     }
 
     // Update is called once per frame
@@ -88,15 +108,17 @@ public class PCSetUp : MonoBehaviour
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
         GlobalGameInfo.language = GetLanguages(intLanguage);
+        GlobalGameInfo.pronounsInt = pronounsDropDown.value;
+        GlobalGameInfo.languageInt = languageDropDown.value;
 
         // Change the language globally
-        Debug.Log(GetLanguages(intLanguage));
-        
-        Debug.Log(LangClass.getCurrentLanguage());
         LangClass.setLanguage(GetLanguages(intLanguage));
-        Debug.Log(LangClass.getCurrentLanguage());
         
-        SceneManager.LoadScene("Backstories");
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            SceneManager.LoadScene("Backstories");
+        } else {
+            SceneManager.LoadScene("Basic2DMap");
+        }
     }
 
     private string GetPronouns(int intPronouns)

@@ -13,8 +13,10 @@ public class GlobalGameInfo
     public static string name = "";
     // player's pronouns
     public static string pronouns;
+    public static int pronounsInt = 0;
     // Game's language
     public static string language = "English";
+    public static int languageInt = 0;
 
     // engagement level
     private static readonly int MAX_ENGAGEMENT = 20;
