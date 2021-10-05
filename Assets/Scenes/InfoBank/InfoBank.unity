@@ -835,8 +835,8 @@ MonoBehaviour:
   NameText: {fileID: 975964938}
   PronounsText: {fileID: 1647819920}
   LanguageText: {fileID: 1092080783}
-  ContinueText: {fileID: 0}
-  InactiveContinueText: {fileID: 0}
+  ContinueText: {fileID: 799725435}
+  InactiveContinueText: {fileID: 274692955}
   pronounsDropDownLabel: {fileID: 1754754793}
   languageDropDownLabel: {fileID: 2052819509}
   nameFieldPlaceholder: {fileID: 1311408409}

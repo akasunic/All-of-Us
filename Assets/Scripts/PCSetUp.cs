@@ -42,23 +42,6 @@ public class PCSetUp : MonoBehaviour
         LanguageText.text = LangClass.getString("language_field");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
 
-        string buttonText = "";
-        if (SceneManager.GetActiveScene().name == "PCSetUp") {
-            buttonText = LangClass.getString("continue");
-            TitleText.text = LangClass.getString("pc_setup_title");
-        } else {
-            // Populate data from current settings
-            firstName = GlobalGameInfo.name;
-            nameInputField.text = GlobalGameInfo.name;
-            // intPronouns = GlobalGameInfo.pronouns;
-            // intLanguage = GlobalGameInfo.language;
-
-            buttonText = LangClass.getString("save");
-        }
-
-        ContinueText.text = buttonText;
-        InactiveContinueText.text = buttonText;
-
         // Control continue buttons
         continueButton.gameObject.SetActive(false);
         inactiveContinueButton.gameObject.SetActive(true);
@@ -72,6 +55,29 @@ public class PCSetUp : MonoBehaviour
 
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
+
+
+        string buttonText = "";
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            buttonText = LangClass.getString("continue");
+            TitleText.text = LangClass.getString("pc_setup_title");
+        } else {
+            // Populate data from current settings
+            firstName = GlobalGameInfo.name;
+            nameInputField.text = GlobalGameInfo.name;
+
+            intPronouns = GlobalGameInfo.pronounsInt;
+            pronounsDropDown.value = intPronouns;
+
+            intLanguage = GlobalGameInfo.languageInt;
+            languageDropDown.value = intLanguage;
+
+            buttonText = LangClass.getString("save");
+        }
+
+        ContinueText.text = buttonText;
+        InactiveContinueText.text = buttonText;
+
     }
 
     // Update is called once per frame
@@ -102,6 +108,8 @@ public class PCSetUp : MonoBehaviour
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
         GlobalGameInfo.language = GetLanguages(intLanguage);
+        GlobalGameInfo.pronounsInt = pronounsDropDown.value;
+        GlobalGameInfo.languageInt = languageDropDown.value;
 
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
