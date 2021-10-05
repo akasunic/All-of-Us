@@ -31,7 +31,7 @@
         <string name="info">INFO</string>
         <string name="go_to_sleep">GO TO SLEEP</string>
         <string name="english">English</string>
-        <string name="french">French</string>
+        <string name="spanish">Spanish</string>
         
         <string name="pc_setup_title">Who are you?</string>
         <string name="name_field">Name</string>
@@ -101,7 +101,7 @@
 
     </English>
 
-    <French>
+    <Spanish>
 
         <string name="backstories_1"></string>
         <string name="backstories_2"></string>
@@ -199,6 +199,6 @@
         <string name="tutorial_notes"></string>
         <string name="tutorial_contacts"></string>
 
-    </French>
+    </Spanish>
 
 </languages>

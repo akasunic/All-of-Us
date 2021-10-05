@@ -51,7 +51,7 @@ public class PCSetUp : MonoBehaviour
 
         // Setting dropdown lists
         List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
-        List<string> languageDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("english"), LangClass.getString("french")};
+        List<string> languageDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("english"), LangClass.getString("spanish")};
 
         pronounsDropDown.ClearOptions();
         languageDropDown.ClearOptions();
@@ -121,7 +121,7 @@ public class PCSetUp : MonoBehaviour
             case 1:
                 return LangClass.getString("english");
             case 2:
-                return LangClass.getString("french");
+                return LangClass.getString("spanish");
             default:
                 return null;
         }
