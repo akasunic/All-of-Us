@@ -37,13 +37,27 @@ public class PCSetUp : MonoBehaviour
         LangClass.setLanguage(GlobalGameInfo.language);
         
         // Setting texts from Strings.xml
-        TitleText.text = LangClass.getString("pc_setup_title");
         NameText.text = LangClass.getString("name_field");
         PronounsText.text = LangClass.getString("pronouns_field");
         LanguageText.text = LangClass.getString("language_field");
-        ContinueText.text = LangClass.getString("continue");
-        InactiveContinueText.text = LangClass.getString("continue");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
+
+        string buttonText = "";
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            buttonText = LangClass.getString("continue");
+            TitleText.text = LangClass.getString("pc_setup_title");
+        } else {
+            // Populate data from current settings
+            firstName = GlobalGameInfo.name;
+            nameInputField.text = GlobalGameInfo.name;
+            // intPronouns = GlobalGameInfo.pronouns;
+            // intLanguage = GlobalGameInfo.language;
+
+            buttonText = LangClass.getString("save");
+        }
+
+        ContinueText.text = buttonText;
+        InactiveContinueText.text = buttonText;
 
         // Control continue buttons
         continueButton.gameObject.SetActive(false);
@@ -90,13 +104,13 @@ public class PCSetUp : MonoBehaviour
         GlobalGameInfo.language = GetLanguages(intLanguage);
 
         // Change the language globally
-        Debug.Log(GetLanguages(intLanguage));
-        
-        Debug.Log(LangClass.getCurrentLanguage());
         LangClass.setLanguage(GetLanguages(intLanguage));
-        Debug.Log(LangClass.getCurrentLanguage());
         
-        SceneManager.LoadScene("Backstories");
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            SceneManager.LoadScene("Backstories");
+        } else {
+            SceneManager.LoadScene("Basic2DMap");
+        }
     }
 
     private string GetPronouns(int intPronouns)

@@ -32,6 +32,7 @@
         <string name="next">NEXT</string>
         <string name="back">BACK</string>
         <string name="info">INFO</string>
+        <string name="save">SAVE</string>
         <string name="go_to_sleep">GO TO SLEEP</string>
         <string name="english">English</string>
         <string name="spanish">Spanish</string>
@@ -123,6 +124,10 @@
 
         <string name="journal_updated"></string>
         <string name="todo_updated"></string>
+        <string name ="phone_settings_app"></string>
+        <string name ="phone_contacts_app"></string>
+        <string name ="phone_todo_app"></string>
+        <string name ="phone_notes_app"></string>
 
         <string name="day"></string>
         <string name="continue"></string>
@@ -132,6 +137,7 @@
         <string name="next"></string>
         <string name="back"></string>
         <string name="info"></string>
+        <string name="save"></string>
         <string name="go_to_sleep"></string>
         <string name="english"></string>
         <string name="french"></string>
