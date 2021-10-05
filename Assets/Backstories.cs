@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -7,12 +8,13 @@ public class Backstories : MonoBehaviour
 
 {
     private int current_text_counter = 1;
+    public Text Textfield;
+    public GameObject skipButton;
+    public TextMeshProUGUI SkipText;
+    public TextMeshProUGUI NextText;
 
     // Localization Feature
     public Lang LangClass = new Lang(false);
-
-    public Text Textfield;
-    public GameObject skipButton;
 
     public void loadTutorialScene() {
 
@@ -21,7 +23,11 @@ public class Backstories : MonoBehaviour
 
     void Start()
     {
+        LangClass.setLanguage(GlobalGameInfo.language);
+
         Textfield.text = LangClass.getString("backstories_1");
+        SkipText.text = LangClass.getString("skip");
+        NextText.text = LangClass.getString("next");
     }
 
 
