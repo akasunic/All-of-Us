@@ -8,16 +8,10 @@ using System.Threading;
 public class Home : MonoBehaviour {
 
     public GameObject goToSleepButton;
-    public GameObject TitleText;
-    public GameObject commEngageVal;
-    public GameObject questsCompletedVal;
-    public GameObject journalEntriesVal;
-    public GameObject customTagsVal;
-    public GameObject daysUntilBlockPartyVal;
     public TextMeshProUGUI WeekText;
     public TextMeshProUGUI DayText;
     public TextMeshProUGUI CommunityManagerText;
-    public TextMeshProUGUI NameText = GlobalGameInfo.name;
+    public TextMeshProUGUI NameText;
     public TextMeshProUGUI DaySummaryText;
     public TextMeshProUGUI GoToSleepText;
 
@@ -34,12 +28,14 @@ public class Home : MonoBehaviour {
         CommunityManagerText.text = LangClass.getString("comm_manager");
         DaySummaryText.text = LangClass.getString("day_summary");
         GoToSleepText.text = LangClass.getString("go_to_sleep");
+
+        NameText.SetText(GlobalGameInfo.name);
         
-        commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
-        questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
-        journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
-        customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
-        daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
+        // commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
+        // questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
+        // journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
+        // customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
+        // daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
 
     }
     
