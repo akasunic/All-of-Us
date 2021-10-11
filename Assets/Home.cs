@@ -23,13 +23,15 @@ public class Home : MonoBehaviour {
 
         LangClass.setLanguage(GlobalGameInfo.language);
 
-        WeekText.text = LangClass.getString("week");
+        WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         DayText.text = LangClass.getString("wednesday");
         CommunityManagerText.text = LangClass.getString("comm_manager");
         DaySummaryText.text = LangClass.getString("day_summary");
         GoToSleepText.text = LangClass.getString("go_to_sleep");
 
         NameText.SetText(GlobalGameInfo.name);
+
+        // Stats
         
         // commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
         // questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
