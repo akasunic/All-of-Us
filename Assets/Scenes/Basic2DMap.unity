@@ -3262,11 +3262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f596603764c6c99f47c11c21b85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters: []
   hoverItem: {fileID: 1148208794}
   clickItem: {fileID: 0}
   imageItem: {fileID: 295476106}
   blackOverlay: {fileID: 1338740201}
-  overrideSprite: {fileID: 21300000, guid: 2d2c39ebeaf74441798abd6cc787c93f, type: 3}
   isViewable: 1
 --- !u!114 &295476113
 MonoBehaviour:
@@ -4900,7 +4900,6 @@ GameObject:
   - component: {fileID: 505961543}
   - component: {fileID: 505961547}
   - component: {fileID: 505961548}
-  - component: {fileID: 505961549}
   m_Layer: 5
   m_Name: Building Community Center
   m_TagString: Untagged
@@ -5003,7 +5002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0aff8af9733fe4846a30a8111f466aa2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e3c85e4fc290b0479ab3375f56a34dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5033,11 +5032,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f596603764c6c99f47c11c21b85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 765804140}
+  - {fileID: 223347656}
   hoverItem: {fileID: 1750745673}
   clickItem: {fileID: 1425449113}
   imageItem: {fileID: 505961541}
   blackOverlay: {fileID: 1338740201}
-  overrideSprite: {fileID: 21300000, guid: 9e3c85e4fc290b0479ab3375f56a34dd, type: 3}
   isViewable: 1
 --- !u!114 &505961548
 MonoBehaviour:
@@ -5049,18 +5050,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &505961549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505961541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &526026977
@@ -8475,7 +8464,6 @@ GameObject:
   - component: {fileID: 959099454}
   - component: {fileID: 959099458}
   - component: {fileID: 959099459}
-  - component: {fileID: 959099460}
   m_Layer: 5
   m_Name: Building Health Center
   m_TagString: Untagged
@@ -8578,7 +8566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3d029f0bd57741b48ce5049d50ca34e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9358f23d2c575e74ca72f17557e06d30, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8608,11 +8596,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f596603764c6c99f47c11c21b85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 1408853287}
   hoverItem: {fileID: 1750972781}
   clickItem: {fileID: 1610277972}
   imageItem: {fileID: 959099452}
   blackOverlay: {fileID: 1338740201}
-  overrideSprite: {fileID: 21300000, guid: 9358f23d2c575e74ca72f17557e06d30, type: 3}
   isViewable: 1
 --- !u!114 &959099459
 MonoBehaviour:
@@ -8624,18 +8613,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &959099460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959099452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &969519136
@@ -8653,7 +8630,6 @@ GameObject:
   - component: {fileID: 969519138}
   - component: {fileID: 969519142}
   - component: {fileID: 969519143}
-  - component: {fileID: 969519144}
   m_Layer: 5
   m_Name: Building Library
   m_TagString: Untagged
@@ -8756,7 +8732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87e88bc2374cc4252a5276f3db8d319f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aec9c4fd18baddb419c689d252aeb494, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8786,11 +8762,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f658f596603764c6c99f47c11c21b85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 1265054088399377630}
+  - {fileID: 6661675301049132699}
   hoverItem: {fileID: 2100649200}
   clickItem: {fileID: 8657637586658780540}
   imageItem: {fileID: 969519136}
   blackOverlay: {fileID: 1338740201}
-  overrideSprite: {fileID: 21300000, guid: aec9c4fd18baddb419c689d252aeb494, type: 3}
   isViewable: 1
 --- !u!114 &969519143
 MonoBehaviour:
@@ -8802,18 +8780,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &969519144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969519136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &993174105
@@ -9032,6 +8998,7 @@ GameObject:
   - component: {fileID: 995221140}
   - component: {fileID: 995221142}
   - component: {fileID: 995221141}
+  - component: {fileID: 995221143}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -9095,6 +9062,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995221139}
   m_CullTransparentMesh: 0
+--- !u!114 &995221143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995221139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995252445
 GameObject:
   m_ObjectHideFlags: 0
@@ -10597,6 +10576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257829165}
   - component: {fileID: 1257829166}
+  - component: {fileID: 1257829167}
   m_Layer: 5
   m_Name: HoverPhone
   m_TagString: Untagged
@@ -10638,6 +10618,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverItem: {fileID: 1954259024}
+--- !u!114 &1257829167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257829164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1266810175
 GameObject:
   m_ObjectHideFlags: 0
@@ -15387,6 +15379,7 @@ GameObject:
   - component: {fileID: 1425449114}
   - component: {fileID: 1425449116}
   - component: {fileID: 1425449115}
+  - component: {fileID: 1425449117}
   m_Layer: 5
   m_Name: Community Center Click Container
   m_TagString: Untagged
@@ -15453,6 +15446,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425449113}
   m_CullTransparentMesh: 0
+--- !u!114 &1425449117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425449113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 765804140}
+  - {fileID: 223347656}
+  imageObject: {fileID: 1425449113}
+  singleBubble: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
 --- !u!1 &1429891382
 GameObject:
   m_ObjectHideFlags: 0
@@ -17193,6 +17203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610277973}
   - component: {fileID: 1610277974}
+  - component: {fileID: 1610277975}
   m_Layer: 5
   m_Name: Hospital Click Container
   m_TagString: Untagged
@@ -17229,6 +17240,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610277972}
   m_CullTransparentMesh: 0
+--- !u!114 &1610277975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610277972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 1408853287}
+  imageObject: {fileID: 694090776}
+  singleBubble: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
 --- !u!1 &1617774700
 GameObject:
   m_ObjectHideFlags: 1
@@ -22491,6 +22518,8 @@ MonoBehaviour:
   characters:
   - {fileID: 1265054088399377630}
   - {fileID: 6661675301049132699}
+  imageObject: {fileID: 8657637586658780540}
+  singleBubble: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
 --- !u!224 &8817009324822665356
 RectTransform:
   m_ObjectHideFlags: 0

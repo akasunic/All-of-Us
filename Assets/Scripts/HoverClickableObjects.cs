@@ -13,7 +13,8 @@ public class HoverClickableObjects : MonoBehaviour, IPointerEnterHandler, IPoint
 
     public void OnPointerClick(PointerEventData eventData)
     {
-            }
+        MouseCursor.turnOnClickableObjectCursor(false);
+    }
     public void OnPointerExit(PointerEventData eventData)
     {
         MouseCursor.turnOnClickableObjectCursor(false);
