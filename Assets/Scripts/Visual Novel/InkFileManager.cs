@@ -130,7 +130,7 @@ public class InkFileManager : MonoBehaviour {
     /// Returns true if you can start a quest for character
     /// </summary>
     /// <returns></returns>
-    public bool CanStartQuest(CharacterResources.CHARACTERS character) {
+    public static bool CanStartQuest(CharacterResources.CHARACTERS character) {
         // a quest is already active
         if (activeFileIdx != (-1, -1))
             return false;

@@ -2416,7 +2416,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65
     y: 67.52941
-    width: 126.47057
+    width: 84.35293
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4244,6 +4244,7 @@ GameObject:
   - component: {fileID: 470624888}
   - component: {fileID: 470624889}
   - component: {fileID: 470624890}
+  - component: {fileID: 470624891}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4287,6 +4288,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fd74d6f06bb141a0962a7411dcd8398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &470624891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470624887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234a1560dfb4ddb47a44acfde619d3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &474293755 stripped
@@ -4887,6 +4900,7 @@ GameObject:
   - component: {fileID: 505961543}
   - component: {fileID: 505961547}
   - component: {fileID: 505961548}
+  - component: {fileID: 505961549}
   m_Layer: 5
   m_Name: Building Community Center
   m_TagString: Untagged
@@ -5035,6 +5049,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &505961549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505961541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &526026977
@@ -8449,6 +8475,7 @@ GameObject:
   - component: {fileID: 959099454}
   - component: {fileID: 959099458}
   - component: {fileID: 959099459}
+  - component: {fileID: 959099460}
   m_Layer: 5
   m_Name: Building Health Center
   m_TagString: Untagged
@@ -8599,6 +8626,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &959099460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959099452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &969519136
 GameObject:
   m_ObjectHideFlags: 0
@@ -8614,6 +8653,7 @@ GameObject:
   - component: {fileID: 969519138}
   - component: {fileID: 969519142}
   - component: {fileID: 969519143}
+  - component: {fileID: 969519144}
   m_Layer: 5
   m_Name: Building Library
   m_TagString: Untagged
@@ -8762,6 +8802,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &969519144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969519136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &993174105
@@ -22416,6 +22468,7 @@ GameObject:
   - component: {fileID: 3179130030197155637}
   - component: {fileID: 5396786624123752646}
   - component: {fileID: 3569735904204731611}
+  - component: {fileID: 8657637586658780541}
   m_Layer: 5
   m_Name: Library Click Container
   m_TagString: Untagged
@@ -22423,6 +22476,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &8657637586658780541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8657637586658780540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 1265054088399377630}
+  - {fileID: 6661675301049132699}
 --- !u!224 &8817009324822665356
 RectTransform:
   m_ObjectHideFlags: 0
