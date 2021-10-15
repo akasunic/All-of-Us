@@ -364,7 +364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Bloomwood Health Clinic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
   m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
@@ -888,12 +888,12 @@ PrefabInstance:
         type: 3}
       propertyPath: nameTextContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 400864715}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: nameTextContainer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 400864715}
     - target: {fileID: 1421595297659837796, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -913,6 +913,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &400864715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 117100066682227849, guid: 8fabe75eb30eba946af749d41214c5a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 400864713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &504589051
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +937,6 @@ GameObject:
   - component: {fileID: 504589054}
   - component: {fileID: 504589053}
   - component: {fileID: 504589052}
-  - component: {fileID: 504589056}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1014,19 +1025,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &504589056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504589051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1b5ec7b8e3048edac7c7eb084b72bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: {fileID: 50304210}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1034,41 +1032,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5594973405476564035, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.b
-      value: 0.5176471
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594973405476564035, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.g
-      value: 0.5372549
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594973405476564035, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.r
-      value: 0.21960786
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871115996923929042, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: description
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871115996923929042, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.b
-      value: 0.5568628
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871115996923929042, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.g
-      value: 0.6156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871115996923929042, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: nameColor.r
-      value: 0.97647065
-      objectReference: {fileID: 0}
     - target: {fileID: 5871115997210615027, guid: 71a0a1c822028414bbded9f06f599abf,
         type: 3}
       propertyPath: m_RootOrder
@@ -1128,11 +1091,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Characters
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871115997705033633, guid: 71a0a1c822028414bbded9f06f599abf,
-        type: 3}
-      propertyPath: description
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71a0a1c822028414bbded9f06f599abf, type: 3}
@@ -1231,6 +1189,7 @@ GameObject:
   - component: {fileID: 708418959}
   - component: {fileID: 708418958}
   - component: {fileID: 708418957}
+  - component: {fileID: 708418955}
   m_Layer: 0
   m_Name: Gateway Flowchart
   m_TagString: Untagged
@@ -1292,6 +1251,23 @@ MonoBehaviour:
   scope: 0
   key: optionChosen
   value: 0
+--- !u!114 &708418955
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708418952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455eef468aabfb344a0573a5ce9ec8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  optionIndex:
+    integerRef: {fileID: 708418954}
+    integerVal: 0
 --- !u!114 &708418956
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1317,7 +1293,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 0}
+  - {fileID: 708418955}
   activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &708418957
@@ -2879,12 +2855,16 @@ GameObject:
   - component: {fileID: 1146814500}
   - component: {fileID: 1146814502}
   - component: {fileID: 1146814503}
+  - component: {fileID: 1146814506}
+  - component: {fileID: 1146814505}
+  - component: {fileID: 1146814491}
   - component: {fileID: 1146814514}
   - component: {fileID: 1146814509}
   - component: {fileID: 1146814511}
   - component: {fileID: 1146814508}
   - component: {fileID: 1146814515}
   - component: {fileID: 1146814516}
+  - component: {fileID: 1146814542}
   - component: {fileID: 1146814559}
   m_Layer: 0
   m_Name: Variables Flowchart
@@ -2951,6 +2931,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &1146814491
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6863f37f0bd753a47a685373932c4615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 126
+  indentLevel: 0
+  knotOrStitch:
+    stringRef: {fileID: 0}
+    stringVal: intro
 --- !u!114 &1146814500
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3011,6 +3008,40 @@ MonoBehaviour:
   scope: 2
   key: player_name
   value: 
+--- !u!114 &1146814505
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6863f37f0bd753a47a685373932c4615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 125
+  indentLevel: 0
+  knotOrStitch:
+    stringRef: {fileID: 0}
+    stringVal: BadSolution
+--- !u!114 &1146814506
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6863f37f0bd753a47a685373932c4615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 124
+  indentLevel: 0
+  knotOrStitch:
+    stringRef: {fileID: 0}
+    stringVal: GoodSolution
 --- !u!114 &1146814507
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3037,7 +3068,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1146814502}
-  - {fileID: 0}
+  - {fileID: 1146814542}
   - {fileID: 1146814559}
   - {fileID: 1146814540}
   activeCommand: {fileID: 0}
@@ -4060,9 +4091,23 @@ MonoBehaviour:
   - {fileID: 1146814557}
   - {fileID: 1146814558}
   - {fileID: 1146814500}
-  - {fileID: 0}
+  - {fileID: 1146814491}
   activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
+--- !u!114 &1146814542
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146814486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75be0d6fbd6aa8040a75cdefd3dcf013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 133
+  indentLevel: 0
 --- !u!114 &1146814543
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4176,7 +4221,7 @@ MonoBehaviour:
   description: Is called when we submit the incorrect answer to a quest.
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 0}
+  - {fileID: 1146814505}
   activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
 --- !u!114 &1146814547
@@ -4204,7 +4249,7 @@ MonoBehaviour:
   description: Is called when we submit the correct answer to a quest.
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 0}
+  - {fileID: 1146814506}
   - {fileID: 1146814560}
   activeCommand: {fileID: 0}
   suppressAllAutoSelections: 0
@@ -5868,8 +5913,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 1647766281}
   - {fileID: 1647766280}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1647766292}
+  - {fileID: 1647766293}
   - {fileID: 1647766279}
   - {fileID: 1647766291}
   - {fileID: 1647766276}
@@ -6231,8 +6276,8 @@ MonoBehaviour:
   eventHandler: {fileID: 1647766289}
   commandList:
   - {fileID: 1647766288}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1647766285}
+  - {fileID: 1647766278}
   - {fileID: 1647766294}
   - {fileID: 1647766287}
   - {fileID: 1647766286}

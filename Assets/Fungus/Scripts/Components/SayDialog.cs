@@ -25,9 +25,9 @@ namespace Fungus
 
         [Tooltip("The name text UI object")]
         [SerializeField] protected Text nameText;
-
+        
         [Tooltip("The name text background UI object")]
-        [SerializeField] protected Image nameTextContainer;
+        public Image nameTextContainer;
 
         [Tooltip("TextAdapter will search for appropriate output on this GameObject if nameText is null")]
         [SerializeField] protected GameObject nameTextGO;
@@ -452,6 +452,7 @@ namespace Fungus
                 var subbedName = stringSubstituter.SubstituteStrings(name);
                 NameText = subbedName;
                 nameTextAdapter.SetTextColor(Color.black);
+
                 nameTextContainer.color = color;
             }
         }
