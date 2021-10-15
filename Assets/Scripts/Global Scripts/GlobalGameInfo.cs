@@ -6,9 +6,15 @@ using UnityEngine;
 public class GlobalGameInfo
 {
     // CURRENT DAY (0 to 4)
-    // 0 is Monday and 4 is Block Party day
+    // 0 is Monday and 4 is Friday - Block Party day
     private static int currentDay = 0;
+    // CURRENT WEEK (0 to 4)
+    private static int currentWeek = 0;
+    // CURRENT NPC FOR THE WEEK (the name as string)
+    private static string currentNPC = "";
 
+    // CURRENT TASK FOR THE DAY (as string)
+    private static string currentTask = "";
     // player's name
     public static string name = "";
     // player's pronouns
@@ -341,6 +347,21 @@ public class GlobalGameInfo
     public static int GetCurrentDay()
     {
         return currentDay;
+    }
+
+    public static int GetCurrentWeek()
+    {
+        return currentWeek;
+    }
+
+    public static string GetCurrentNPC()
+    {
+        return currentNPC;
+    }
+
+    public static string GetCurrentTask()
+    {
+        return currentTask;
     }
 
     public static int GetRemainDays()
