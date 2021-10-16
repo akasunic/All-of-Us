@@ -6,14 +6,15 @@ using UnityEngine.EventSystems;// Required when using Event data.
 
 public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler// required interface when using the OnPointerEnter method.
 {
-    public List<GameObject> characters;
-    public GameObject hoverItem;
+    public List<GameObject> characters; 
     public GameObject clickItem;
     public GameObject imageItem;
     public GameObject blackOverlay;
  
     private Sprite oldSprite;
     private int imageItemOldSiblingIndex;
+
+    
 
     //other scrips can change this
     public bool isViewable = true;
@@ -44,9 +45,8 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
     //Do this when the cursor enters the rect area of this selectable UI object and the building has characters you can talk to
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(hoverItem != null && isViewable && canTalkToAtLeastOneCharacter() && !hovering){
-            MouseCursor.turnOnClickableObjectCursor(true);
-            hoverItem.SetActive(true);
+        if(clickItem != null && isViewable && canTalkToAtLeastOneCharacter() && !hovering){
+            clickItem.SetActive(true);
             hovering = true;
             oldScale = imageItem.transform.localScale;
             float newX = oldScale.x * 1.1f;
@@ -65,10 +65,6 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(hoverItem != null && canTalkToAtLeastOneCharacter())
-        {
-            hoverItem.SetActive(false);
-        }
         if(clickItem != null && isViewable && canTalkToAtLeastOneCharacter())
         {
             clickItem.SetActive(true);
@@ -76,19 +72,14 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(hoverItem != null && hovering){
-            MouseCursor.turnOnClickableObjectCursor(false);
+        if(clickItem != null && hovering){
             AnimateScale(oldScale);
             hovering = false;
-            hoverItem.SetActive(false);
+            clickItem.SetActive(false);
             imageItem.transform.SetSiblingIndex(imageItemOldSiblingIndex);
             if (blackOverlay != null)
             {
                 blackOverlay.SetActive(false);
-            }
-            if (clickItem != null)
-            {
-                clickItem.SetActive(false);
             }
         }
         

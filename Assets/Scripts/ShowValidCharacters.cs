@@ -9,7 +9,14 @@ public class ShowValidCharacters : MonoBehaviour
     public List<GameObject> characters;
     public GameObject imageObject;
     public Sprite singleBubble;
-   
+    public int singleNPCXposition;
+
+    private void Start()
+    {
+        Image imageComponent = imageObject.GetComponent<Image>();
+        imageComponent.SetNativeSize();
+    }
+
     private void OnEnable()
     {
         int clickableCharacters = 0;
@@ -38,13 +45,14 @@ public class ShowValidCharacters : MonoBehaviour
         if (clickableCharacters == 1)
         {
             Vector3 oldPosition = clickableCharacter.transform.localPosition;
-            Vector3 newPosition = new Vector3(0, oldPosition.y, oldPosition.z);
+            Vector3 newPosition = new Vector3(singleNPCXposition, oldPosition.y, oldPosition.z);
             clickableCharacter.transform.localPosition = newPosition;
             // If the buildling had two people, now use the single bubble
             Image imageComponent = imageObject.GetComponent<Image>();
             if (imageComponent != null)
             {
                 imageComponent.sprite = singleBubble;
+                imageComponent.SetNativeSize();
             }
         }
     }
