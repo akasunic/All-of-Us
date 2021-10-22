@@ -28,7 +28,8 @@ public class MapScript : MonoBehaviour
     public GameObject ExitGame;
     public GameObject NPCAndTask;
     public Image NPCImage;
-    
+    public GameObject blackOverlay;
+
     // Localization Feature
     public Lang LangClass = new Lang(false);
 
@@ -69,8 +70,16 @@ public class MapScript : MonoBehaviour
         // Move object of NPC and task
         if (calendarIconPressed) {
             NPCAndTask.transform.position = new Vector3(1324, 768, 0f);
+            if (blackOverlay != null)
+            {
+                blackOverlay.SetActive(true);
+            }
         } else {
             NPCAndTask.transform.position = new Vector3(1024, 768, 0f);
+            if (blackOverlay != null)
+            {
+                blackOverlay.SetActive(false);
+            }
         }
 
         // Show back button
