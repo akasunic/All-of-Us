@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 217cb52ce0d6c44f5bfbd5b63b0cfb4c
   - enabled: 1
+    path: Assets/Scenes/Saving.unity
+    guid: 1a6868137f4d9c04ba909302b6e31cfc
+  - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: e8ead7d5d56a24a15b1e8b8759566222
   - enabled: 1

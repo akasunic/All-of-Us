@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;// Required when using Event data.
 
 public class ExpandOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public GameObject hoverItem;
     private Vector3 oldScale;
     private bool animating;
 
