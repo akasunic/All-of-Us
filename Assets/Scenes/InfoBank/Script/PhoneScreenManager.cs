@@ -9,6 +9,7 @@ using TMPro;
 //also handles the border that incidates "active" app
 public class PhoneScreenManager : MonoBehaviour
 {
+    public GameObject detailContainer;
     public GameObject messages;
     public GameObject notes;
     public GameObject contacts;
@@ -56,7 +57,7 @@ public class PhoneScreenManager : MonoBehaviour
     //phone screen animation vars
     private bool started = false;
 
-    GameObject detailContainer;
+    
     GameObject detailChildContainer;
     GameObject phoneContainer;
     GameObject sectionName; 
@@ -101,7 +102,9 @@ public class PhoneScreenManager : MonoBehaviour
         lastSelectedBorder = null;
 
         //grab objects to animate
-        detailContainer = GameObject.Find("Detail Container");
+        // Having it active messes up clicking the apps in the phone
+        // Only turn it on when we even register a click
+        detailContainer.SetActive(false);
         detailChildContainer = GameObject.Find("Child Container");
         sectionName = GameObject.Find("Section Name");
         sectionIcon = GameObject.Find("Section Icon");
@@ -148,6 +151,8 @@ public class PhoneScreenManager : MonoBehaviour
     }
 
     public void switchToPage(string type){
+        // Only turn on the detailContainer when switching to a page, so then we have animations
+        detailContainer.SetActive(true);
         animateItemsIn();
         //start toggling pages
         sectionName.GetComponent<TextMeshProUGUI>().text = getSectionName(type);
