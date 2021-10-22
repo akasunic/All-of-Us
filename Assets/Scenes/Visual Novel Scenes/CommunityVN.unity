@@ -884,11 +884,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 464373319083908891, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7850175c1a5fa4c5da65788d22f0eace,
+        type: 3}
     - target: {fileID: 464373319276694328, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: nameTextContainer
       value: 
       objectReference: {fileID: 400864715}
+    - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: nameTextGO
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: nameTextContainer
@@ -921,6 +932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDialogClickedFlag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetButtonClickedFlag
       objectReference: {fileID: 0}
@@ -939,12 +955,27 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 38.07499
       objectReference: {fileID: 0}
+    - target: {fileID: 6389105109118563856, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNextLineFlag
+      objectReference: {fileID: 0}
     - target: {fileID: 6828474475021315328, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7850175c1a5fa4c5da65788d22f0eace,
         type: 3}
+    - target: {fileID: 7395074698476989240, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445580612507203525, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fabe75eb30eba946af749d41214c5a3, type: 3}
 --- !u!114 &400864714 stripped
