@@ -14,6 +14,7 @@ public class Home : MonoBehaviour {
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI DaySummaryText;
     public TextMeshProUGUI GoToSleepText;
+    public GameObject blackOverlay;
 
     // Localization Feature
     public Lang LangClass = new Lang(false);
@@ -30,6 +31,11 @@ public class Home : MonoBehaviour {
         GoToSleepText.text = LangClass.getString("go_to_sleep");
 
         NameText.SetText(GlobalGameInfo.name);
+
+        if (blackOverlay != null)
+        {
+            blackOverlay.SetActive(true);
+        }
 
         // Stats
         
