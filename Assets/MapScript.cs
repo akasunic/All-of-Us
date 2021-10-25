@@ -27,7 +27,11 @@ public class MapScript : MonoBehaviour
     public GameObject BackButton;
     public GameObject ExitGame;
     public GameObject NPCAndTask;
-    public Image NPCImage;
+    public Image RashadImage;
+    public Image MrsLeeImage;
+    public Image MrCalindasImage;
+    public Image LilaImage;
+    public Image ElisaImage;
     public GameObject blackOverlay;
 
     // Localization Feature
@@ -53,6 +57,32 @@ public class MapScript : MonoBehaviour
         ProgressWontSave.text = LangClass.getString("progress_wont_save");
 
         // Update NPC Image
+        RashadImage.enabled = false;
+        MrsLeeImage.enabled = false;
+        MrCalindasImage.enabled = false;
+        LilaImage.enabled = false;
+        ElisaImage.enabled = false;
+
+        switch (CurrentNPC.text) {
+            case "Rashad":
+                RashadImage.enabled = true;
+                break;
+            case "MrsLee":
+                MrsLeeImage.enabled = true;
+                break;
+            case "MrCalindas":
+                MrCalindasImage.enabled = true;
+                break;
+            case "Lila":
+                LilaImage.enabled = true;
+                break;
+            case "Elisa":
+                ElisaImage.enabled = true;
+                break;
+            default:
+                break;
+        }
+        
 
     }
 

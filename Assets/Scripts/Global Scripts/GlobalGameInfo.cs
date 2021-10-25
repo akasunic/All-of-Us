@@ -11,7 +11,7 @@ public class GlobalGameInfo
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
     // CURRENT NPC FOR THE WEEK (the name as string)
-    private static string currentNPC = "Example NPC";
+    private static string currentNPC = "Elisa";
 
     // CURRENT TASK FOR THE DAY (as string)
     private static string currentTask = "Example current task";
