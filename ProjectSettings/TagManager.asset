@@ -12,6 +12,7 @@ TagManager:
   - NumberText
   - PlayerText
   - WeekText
+  - Content
   layers:
   - Default
   - TransparentFX

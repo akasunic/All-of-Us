@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScreen.unity
     guid: 4fa94cd1ff6fa445da2cc4255a3fbf96
+  - enabled: 1
+    path: Assets/Scenes/StartWeek.unity
+    guid: 3af52b76c926e4001a5faf64bbab3e80
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8b06978d4fc5da74b9713990bc515b59,
       type: 2}
