@@ -1,5 +1,6 @@
-﻿using System.Collections;
+﻿using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -8,6 +9,7 @@ public class StartWeek : MonoBehaviour
 
     static public List<GameObject> savedGamesUI;
     public GameObject prefabSavedGameItem;
+    public GameObject BackButton;
     public string[][] savedGamesInfo = new string[6][];
     // Start is called before the first frame update
     void Start()
@@ -88,5 +90,10 @@ public class StartWeek : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void GoToOpeningScreen() {
+        // Go back to opening screen
+        SceneManager.LoadScene("OpeningScene");
     }
 }

@@ -40,6 +40,11 @@ public class Opening : MonoBehaviour
 
         SceneManager.LoadScene("Tutorial");
     }
+
+    public void onContinueClick() {
+
+        SceneManager.LoadScene("StartWeek");
+    }
     
     
 }
