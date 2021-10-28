@@ -5625,6 +5625,7 @@ MonoBehaviour:
   clickItem: {fileID: 1425449113}
   imageItem: {fileID: 505961541}
   blackOverlay: {fileID: 1338740201}
+  calendarMessage: {fileID: 1807340487}
   isViewable: 1
 --- !u!114 &505961548
 MonoBehaviour:
@@ -9606,6 +9607,7 @@ MonoBehaviour:
   clickItem: {fileID: 1610277972}
   imageItem: {fileID: 959099452}
   blackOverlay: {fileID: 1338740201}
+  calendarMessage: {fileID: 1807340487}
   isViewable: 1
 --- !u!114 &959099459
 MonoBehaviour:
@@ -9772,6 +9774,7 @@ MonoBehaviour:
   clickItem: {fileID: 8657637586658780540}
   imageItem: {fileID: 969519136}
   blackOverlay: {fileID: 1338740201}
+  calendarMessage: {fileID: 1807340487}
   isViewable: 1
 --- !u!114 &969519143
 MonoBehaviour:
