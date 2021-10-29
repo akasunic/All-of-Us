@@ -56,6 +56,9 @@
         <string name="save">SAVE</string>
         <string name="go_to_sleep">GO TO SLEEP</string>
         <string name="current_task">Current Task</string>
+        
+        <string name="saved_games">Saved Games</string>
+        <string name="next_npc">Who would be the next Block Party protagonist?</string>
 
         <string name="days_left">DAYS LEFT</string>
         <string name="to_block_party">to block party for</string>
