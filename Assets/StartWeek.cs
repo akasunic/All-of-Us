@@ -14,6 +14,27 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI Title;
     public GameObject ScrollView;
     public string[][] savedGamesInfo = new string[6][];
+    public GameObject SelectProfile;
+    public TextMeshProUGUI SelectProfileText;
+    public Dictionary<string, int> exampleProgress; // Later take from actual object
+    
+    // NPC images
+    public GameObject Rashad0;
+    public GameObject Rashad1;
+    public TextMeshProUGUI RashadCompleted;
+    public GameObject Lila0;
+    public GameObject Lila1;
+    public TextMeshProUGUI LilaCompleted;
+    public GameObject Elisa0;
+    public GameObject Elisa1;
+    public TextMeshProUGUI ElisaCompleted;
+    public GameObject MrCalindas0;
+    public GameObject MrCalindas1;
+    public TextMeshProUGUI MrCalindasCompleted;
+    public GameObject MrsLee0;
+    public GameObject MrsLee1;
+    public TextMeshProUGUI MrsLeeCompleted;
+
     public Lang LangClass = new Lang(false);
     
     // Start is called before the first frame update
@@ -23,6 +44,13 @@ public class StartWeek : MonoBehaviour
         Title.text = LangClass.getString("saved_games");
 
         savedGamesUI = new List<GameObject>();
+
+        exampleProgress = new Dictionary<string, int>();
+        exampleProgress.Add("Rashad", 1);
+        exampleProgress.Add("MrsLee", 0);
+        exampleProgress.Add("Lila", 1);
+        exampleProgress.Add("Elisa", 0);
+        exampleProgress.Add("MrCalindas", 0);
 
         // savedGamesInfo = new List<List<string>>();
         savedGamesInfo[0] = new string[4];
@@ -86,6 +114,30 @@ public class StartWeek : MonoBehaviour
         // Change view to selecting a profile
         Title.text = LangClass.getString("next_npc");
         ScrollView.SetActive(false);
+
+        SelectProfile.SetActive(true);
+        SelectProfileText.enabled = true;
+
+        RashadCompleted.enabled = (exampleProgress["Rashad"] == 1);
+        Rashad0.SetActive(exampleProgress["Rashad"] == 0);
+        Rashad1.SetActive(exampleProgress["Rashad"] == 1);
+
+        MrsLeeCompleted.enabled = (exampleProgress["MrsLee"] == 1);
+        MrsLee0.SetActive(exampleProgress["MrsLee"] == 0);
+        MrsLee1.SetActive(exampleProgress["MrsLee"] == 1);
+
+        MrCalindasCompleted.enabled = (exampleProgress["MrCalindas"] == 1);
+        MrCalindas0.SetActive(exampleProgress["MrCalindas"] == 0);
+        MrCalindas1.SetActive(exampleProgress["MrCalindas"] == 1);
+
+        LilaCompleted.enabled = (exampleProgress["Lila"] == 1);
+        Lila0.SetActive(exampleProgress["Lila"] == 0);
+        Lila1.SetActive(exampleProgress["Lila"] == 1);
+
+        ElisaCompleted.enabled = (exampleProgress["Elisa"] == 1);
+        Elisa0.SetActive(exampleProgress["Elisa"] == 0);
+        Elisa1.SetActive(exampleProgress["Elisa"] == 1);
+
     }
 
     public void GoToOpeningScreen() {
