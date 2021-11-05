@@ -1,6 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
+using System.Threading;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -15,7 +16,9 @@ public class StartWeek : MonoBehaviour
     public GameObject ScrollView;
     public string[][] savedGamesInfo = new string[6][];
     public GameObject SelectProfile;
+    public GameObject StartWeekContainer;
     public TextMeshProUGUI SelectProfileText;
+    public TextMeshProUGUI SelectedNPC;
     public Dictionary<string, int> exampleProgress; // Later take from actual object
     
     // NPC images
@@ -46,7 +49,7 @@ public class StartWeek : MonoBehaviour
         savedGamesUI = new List<GameObject>();
 
         exampleProgress = new Dictionary<string, int>();
-        exampleProgress.Add("Rashad", 1);
+        exampleProgress.Add("Rashad", 0);
         exampleProgress.Add("MrsLee", 0);
         exampleProgress.Add("Lila", 1);
         exampleProgress.Add("Elisa", 0);
@@ -59,26 +62,18 @@ public class StartWeek : MonoBehaviour
         savedGamesInfo[3] = new string[4];
         savedGamesInfo[4] = new string[4];
         savedGamesInfo[5] = new string[4];
-        // savedGamesInfo[6] = new string[4];
-        // savedGamesInfo[7] = new string[4];
-        // savedGamesInfo[8] = new string[4];
-        // savedGamesInfo[9] = new string[4];
 
         string[] list = new string[4];
-        list[0] = "Sara";
+        list[0] = "James";
         list[1] = "3";
-        list[2] = "2";
-        list[3] = "1";
+        list[2] = "4";
+        list[3] = "2";
         savedGamesInfo[0] = list;
         savedGamesInfo[1] = list;
         savedGamesInfo[2] = list;
         savedGamesInfo[3] = list;
         savedGamesInfo[4] = list;
         savedGamesInfo[5] = list;
-        // savedGamesInfo[6] = list;
-        // savedGamesInfo[7] = list;
-        // savedGamesInfo[8] = list;
-        // savedGamesInfo[9] = list;
 
         int y_location = 152;
 
@@ -95,7 +90,7 @@ public class StartWeek : MonoBehaviour
                 playerText.text = savedGame[0];
 
                 TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
-                weekAndDay.text = "Week " + savedGame[1] + ", Day " + savedGame[2];;
+                weekAndDay.text = "Week " + savedGame[1] + ", Day " + savedGame[2];
                 
                 TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
                 numberText.text = savedGame[3];
@@ -107,10 +102,10 @@ public class StartWeek : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void clickOnSavedGame() {
+
         // Change view to selecting a profile
         Title.text = LangClass.getString("next_npc");
         ScrollView.SetActive(false);
@@ -140,8 +135,39 @@ public class StartWeek : MonoBehaviour
 
     }
 
+    public void selectNPC(string NPC) {
+
+        // Show NPC's character card
+        StartWeekContainer.SetActive(true);
+        SelectedNPC.text = NPC + "?";
+        GlobalGameInfo.SetCurrentNPC(NPC);
+
+        // Update the current NPC in the global script
+        switch (NPC) {
+            case "Rashad":
+                break;
+            case "Lila":
+                break;
+            case "Elisa":
+                break;
+            case "Mr. Calindas":
+                break;
+            case "Mrs. Lee":
+                break;
+            default:
+                break;
+        }
+        
+        // Rashad0.gameObject.transform.localScale += new Vector3(0.2f, 0.2f, 0);
+    }
+
     public void GoToOpeningScreen() {
         // Go back to opening screen
         SceneManager.LoadScene("OpeningScene");
+    }
+
+    public void GoToMapScene() {
+        // Go back to opening screen
+        SceneManager.LoadScene("Basic2DMap");
     }
 }

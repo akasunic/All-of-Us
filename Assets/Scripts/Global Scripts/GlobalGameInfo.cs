@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Stores static game info for the infobank
-public class GlobalGameInfo
+public static class GlobalGameInfo
 {
     // CURRENT DAY (0 to 4)
     // 0 is Monday and 4 is Friday - Block Party day
@@ -357,6 +357,10 @@ public class GlobalGameInfo
     public static string GetCurrentNPC()
     {
         return currentNPC;
+    }
+
+    public static void SetCurrentNPC(string NPC) {
+        currentNPC = NPC;
     }
 
     public static string GetCurrentTask()

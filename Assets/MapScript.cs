@@ -67,10 +67,10 @@ public class MapScript : MonoBehaviour
             case "Rashad":
                 RashadImage.enabled = true;
                 break;
-            case "MrsLee":
+            case "Mrs. Lee":
                 MrsLeeImage.enabled = true;
                 break;
-            case "MrCalindas":
+            case "Mr. Calindas":
                 MrCalindasImage.enabled = true;
                 break;
             case "Lila":
