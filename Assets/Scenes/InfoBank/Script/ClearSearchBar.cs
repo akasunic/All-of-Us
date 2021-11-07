@@ -19,7 +19,8 @@ public class ClearSearchBar : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerClick(PointerEventData eventData)
     {
         searchBar.text = "";
-        definitionsManager.ClearDescription(); 
+        definitionsManager.ClearDescription();
+        SelectDictionaryTerm.ClearSelectedTerm();
     }
     public void OnPointerExit(PointerEventData eventData)
     {

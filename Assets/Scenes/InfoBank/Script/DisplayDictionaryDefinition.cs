@@ -97,17 +97,20 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
         }
         else
         {
-            WordNotFound();
+            WordNotFound(word);
         }
         
     }
 
-    public void WordNotFound()
+    public void WordNotFound(string inputWord)
     {
         definitionDisplay.SetActive(false);
         defaultDisplay.SetActive(false);
         missingDisplay.SetActive(true);
+        Text missingText = missingDisplay.GetComponentInChildren<Text>();
+        missingText.text = "Oops, we can't find: " + inputWord;
         currentDisplay = DisplayStatus.MISSING;
+        
     }
     public void ClearDescription()
     {
