@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+[Serializable]
 public class SavedGame : object {
 
-    private string playerName;
+    private string name;
     private int week;
     private int day;
     private string language;
@@ -13,7 +14,7 @@ public class SavedGame : object {
 
 
     public SavedGame(string playerName) {
-        playerName = playerName;
+        name = playerName;
         week = 0;
         day = 0;
         progress = new Dictionary<string, int>();
@@ -25,12 +26,12 @@ public class SavedGame : object {
         progress.Add("MrCalindas", 0);
     }
 
-    public string getPlayerName() {
-        return playerName;
+    public string getName() {
+        return name;
     }
 
-    public void setPlayerName(string newPlayerName) {
-        playerName = newPlayerName;
+    public void setName(string newPlayerName) {
+        name = newPlayerName;
     }
 
     public int getWeek() {

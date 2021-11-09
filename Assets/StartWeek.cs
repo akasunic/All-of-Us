@@ -19,7 +19,6 @@ public class StartWeek : MonoBehaviour
     public GameObject StartWeekContainer;
     public TextMeshProUGUI SelectProfileText;
     public TextMeshProUGUI SelectedNPC;
-    public Dictionary<string, int> exampleProgress; // Later take from actual object
     
     // NPC images
     public GameObject Rashad0;
@@ -52,63 +51,48 @@ public class StartWeek : MonoBehaviour
 
 
     public Lang LangClass = new Lang(false);
+    SavedGame currentGame;
     
     // Start is called before the first frame update
     void Start()
     {
 
+        // List<SavedGame> dataToStore = new List<SavedGame>();
+        // exampleSG.setCharacterDone("Rashad");
+        // exampleSG.incDay();
+        // exampleSG.incWeek();
+        // dataToStore.Add(exampleSG);
+        // dataToStore.Add(exampleSG2);
+        // dataToStore.Add(exampleSG3);
+        // SaveSerial.SaveGame(dataToStore);
+
+        List<SavedGame> data = SaveSerial.LoadGame();
+
         Title.text = LangClass.getString("saved_games");
 
-        savedGamesUI = new List<GameObject>();
-
-        exampleProgress = new Dictionary<string, int>();
-        exampleProgress.Add("Rashad", 0);
-        exampleProgress.Add("MrsLee", 0);
-        exampleProgress.Add("Lila", 0);
-        exampleProgress.Add("Elisa", 0);
-        exampleProgress.Add("MrCalindas", 0);
-
-        // savedGamesInfo = new List<List<string>>();
-        savedGamesInfo[0] = new string[4];
-        savedGamesInfo[1] = new string[4];
-        savedGamesInfo[2] = new string[4];
-        savedGamesInfo[3] = new string[4];
-        savedGamesInfo[4] = new string[4];
-        savedGamesInfo[5] = new string[4];
-
-        string[] list = new string[4];
-        list[0] = "James";
-        list[1] = "3";
-        list[2] = "4";
-        list[3] = "2";
-        savedGamesInfo[0] = list;
-        savedGamesInfo[1] = list;
-        savedGamesInfo[2] = list;
-        savedGamesInfo[3] = list;
-        savedGamesInfo[4] = list;
-        savedGamesInfo[5] = list;
-
         int y_location = 152;
+        int gameNum = 1;
 
-        foreach(string[] savedGame in savedGamesInfo) {
-            GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(0, y_location, 0f), Quaternion.identity);
-            
+        foreach(SavedGame savedGame in data) {
+            GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(-330f, y_location, 0f), Quaternion.identity);
+
             UnityEngine.UI.Button btn = savedGameItem.GetComponent<Button>();
-            btn.onClick.AddListener(clickOnSavedGame);
+            btn.onClick.AddListener(delegate{clickOnSavedGame(savedGame);});
 
             if (savedGameItem != null) {
                 savedGameItem.transform.SetParent (GameObject.FindGameObjectWithTag("Content").transform, false);
                 
                 TextMeshProUGUI playerText = savedGameItem.transform.Find("Player").GetComponent<TextMeshProUGUI>();
-                playerText.text = savedGame[0];
+                playerText.text = savedGame.getName();
 
                 TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
-                weekAndDay.text = "Week " + savedGame[1] + ", Day " + savedGame[2];
+                weekAndDay.text = "Week " + savedGame.getWeek() + ", Day " + savedGame.getDay();
                 
                 TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
-                numberText.text = savedGame[3];
+                numberText.text = gameNum.ToString();
             }
             y_location -= 135;
+            gameNum++;
         }
     }
 
@@ -117,34 +101,35 @@ public class StartWeek : MonoBehaviour
     {
     }
 
-    public void clickOnSavedGame() {
+    public void clickOnSavedGame(SavedGame savedGame) {
 
         // Change view to selecting a profile
         Title.text = LangClass.getString("next_npc");
         ScrollView.SetActive(false);
+        currentGame = savedGame;
 
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 
-        RashadCompleted.enabled = (exampleProgress["Rashad"] == 1);
-        Rashad0.SetActive(exampleProgress["Rashad"] == 0);
-        Rashad1.SetActive(exampleProgress["Rashad"] == 1);
+        RashadCompleted.enabled = (savedGame.getProgress()["Rashad"] == 1);
+        Rashad0.SetActive(savedGame.getProgress()["Rashad"] == 0);
+        Rashad1.SetActive(savedGame.getProgress()["Rashad"] == 1);
 
-        MrsLeeCompleted.enabled = (exampleProgress["MrsLee"] == 1);
-        MrsLee0.SetActive(exampleProgress["MrsLee"] == 0);
-        MrsLee1.SetActive(exampleProgress["MrsLee"] == 1);
+        MrsLeeCompleted.enabled = (savedGame.getProgress()["MrsLee"] == 1);
+        MrsLee0.SetActive(savedGame.getProgress()["MrsLee"] == 0);
+        MrsLee1.SetActive(savedGame.getProgress()["MrsLee"] == 1);
 
-        MrCalindasCompleted.enabled = (exampleProgress["MrCalindas"] == 1);
-        MrCalindas0.SetActive(exampleProgress["MrCalindas"] == 0);
-        MrCalindas1.SetActive(exampleProgress["MrCalindas"] == 1);
+        MrCalindasCompleted.enabled = (savedGame.getProgress()["MrCalindas"] == 1);
+        MrCalindas0.SetActive(savedGame.getProgress()["MrCalindas"] == 0);
+        MrCalindas1.SetActive(savedGame.getProgress()["MrCalindas"] == 1);
 
-        LilaCompleted.enabled = (exampleProgress["Lila"] == 1);
-        Lila0.SetActive(exampleProgress["Lila"] == 0);
-        Lila1.SetActive(exampleProgress["Lila"] == 1);
+        LilaCompleted.enabled = (savedGame.getProgress()["Lila"] == 1);
+        Lila0.SetActive(savedGame.getProgress()["Lila"] == 0);
+        Lila1.SetActive(savedGame.getProgress()["Lila"] == 1);
 
-        ElisaCompleted.enabled = (exampleProgress["Elisa"] == 1);
-        Elisa0.SetActive(exampleProgress["Elisa"] == 0);
-        Elisa1.SetActive(exampleProgress["Elisa"] == 1);
+        ElisaCompleted.enabled = (savedGame.getProgress()["Elisa"] == 1);
+        Elisa0.SetActive(savedGame.getProgress()["Elisa"] == 0);
+        Elisa1.SetActive(savedGame.getProgress()["Elisa"] == 1);
 
     }
 
