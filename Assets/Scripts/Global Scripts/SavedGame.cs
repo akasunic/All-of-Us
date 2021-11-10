@@ -70,7 +70,7 @@ public class SavedGame : object {
     }
 
     public void setCharacterDone(string character) {
-        progress.Add(character, 1);
+        progress[character] = 1;
     }
 
 }

@@ -57,40 +57,57 @@ public class StartWeek : MonoBehaviour
     void Start()
     {
 
-        // List<SavedGame> dataToStore = new List<SavedGame>();
+        // If arrived from PCSetup, go to select profile
+        if (GlobalGameInfo.pcsetupCalled) {
+            GlobalGameInfo.pcsetupCalled = false;
+            this.clickOnSavedGame(GlobalGameInfo.savedGame);
+        }
+
+        // Dictionary<string, SavedGame> dataToStore = new Dictionary<string, SavedGame>();
+        // SavedGame exampleSG = new SavedGame("AAA");
+        // SavedGame exampleSG2 = new SavedGame("BBB");
+        // SavedGame exampleSG3 = new SavedGame("CCC");
+
         // exampleSG.setCharacterDone("Rashad");
         // exampleSG.incDay();
         // exampleSG.incWeek();
-        // dataToStore.Add(exampleSG);
-        // dataToStore.Add(exampleSG2);
-        // dataToStore.Add(exampleSG3);
+
+        // dataToStore.Add("AAA", exampleSG);
+        // dataToStore.Add("BBB", exampleSG2);
+        // dataToStore.Add("CCC", exampleSG3);
+        
         // SaveSerial.SaveGame(dataToStore);
 
-        List<SavedGame> data = SaveSerial.LoadGame();
+
+        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
 
         Title.text = LangClass.getString("saved_games");
 
         int y_location = 152;
         int gameNum = 1;
 
-        foreach(SavedGame savedGame in data) {
+        foreach(KeyValuePair<string, SavedGame> pair in data) {
             GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(-330f, y_location, 0f), Quaternion.identity);
 
             UnityEngine.UI.Button btn = savedGameItem.GetComponent<Button>();
-            btn.onClick.AddListener(delegate{clickOnSavedGame(savedGame);});
 
             if (savedGameItem != null) {
+
+                btn.onClick.AddListener(delegate{clickOnSavedGame(pair.Value);});
+                
                 savedGameItem.transform.SetParent (GameObject.FindGameObjectWithTag("Content").transform, false);
                 
                 TextMeshProUGUI playerText = savedGameItem.transform.Find("Player").GetComponent<TextMeshProUGUI>();
-                playerText.text = savedGame.getName();
+                playerText.text = "Player: " + pair.Value.getName();
 
                 TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
-                weekAndDay.text = "Week " + savedGame.getWeek() + ", Day " + savedGame.getDay();
+                weekAndDay.text = "Week " + pair.Value.getWeek() + ", Day " + pair.Value.getDay();
                 
                 TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
                 numberText.text = gameNum.ToString();
+            
             }
+
             y_location -= 135;
             gameNum++;
         }
@@ -105,8 +122,19 @@ public class StartWeek : MonoBehaviour
 
         // Change view to selecting a profile
         Title.text = LangClass.getString("next_npc");
-        ScrollView.SetActive(false);
         currentGame = savedGame;
+        
+        // Update global variables
+        GlobalGameInfo.SetPlayerName(savedGame.getName());
+        GlobalGameInfo.SetCurrentDay(savedGame.getDay());
+        GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
+        GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
+        GlobalGameInfo.language = savedGame.getLanguage();
+        // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];
+        // TODO add pronouns later
+
+        // Updating local variables
+        ScrollView.SetActive(false);
 
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
@@ -200,5 +228,10 @@ public class StartWeek : MonoBehaviour
     public void GoToMapScene() {
         // Go back to opening screen
         SceneManager.LoadScene("Basic2DMap");
+    }
+
+    public void GoToPCSetupScene() {
+        // Go back to opening screen
+        SceneManager.LoadScene("PCSetUp");
     }
 }

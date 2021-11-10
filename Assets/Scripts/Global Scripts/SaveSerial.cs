@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public static class SaveSerial : object {
 
-    public static void SaveGame(List<SavedGame> dataToSave)
+    public static void SaveGame(Dictionary<string, SavedGame> dataToSave)
     {
         BinaryFormatter bf = new BinaryFormatter(); 
         FileStream file = File.Create(Application.persistentDataPath 
@@ -16,7 +16,7 @@ public static class SaveSerial : object {
         Debug.Log("Game data saved!");
     }
 
-    public static List<SavedGame> LoadGame()
+    public static Dictionary<string, SavedGame> LoadGame()
     {
         if (File.Exists(Application.persistentDataPath 
                     + "/SavedData.dat"))
@@ -25,7 +25,7 @@ public static class SaveSerial : object {
             FileStream file = 
                     File.Open(Application.persistentDataPath 
                     + "/SavedData.dat", FileMode.Open);
-            List<SavedGame> data = (List<SavedGame>)bf.Deserialize(file);
+            Dictionary<string, SavedGame> data = (Dictionary<string, SavedGame>)bf.Deserialize(file);
             file.Close();
             Debug.Log("Game data loaded!");
             return data;
