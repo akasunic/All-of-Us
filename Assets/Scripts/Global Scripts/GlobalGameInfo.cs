@@ -9,6 +9,7 @@ public static class GlobalGameInfo
     // PLAYER INFORMATION
 
     public static bool pcsetupCalled = false;
+    public static bool gotalkFlag = false;
     public static SavedGame savedGame;
 
     // CURRENT DAY (0 to 4)
@@ -20,10 +21,10 @@ public static class GlobalGameInfo
     private static Dictionary<string, int> currentProgress = new Dictionary<string, int>();
 
     // CURRENT NPC FOR THE WEEK (the name as string)
-    private static string currentNPC = "Elisa";
+    private static string currentNPC = "";
 
     // CURRENT TASK FOR THE DAY (as string)
-    private static string currentTask = "Example current task";
+    private static string currentTask = "";
     // player's name
     public static string name = "";
     // player's pronouns

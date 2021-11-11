@@ -159,6 +159,8 @@ public class StartWeek : MonoBehaviour
         Elisa0.SetActive(savedGame.getProgress()["Elisa"] == 0);
         Elisa1.SetActive(savedGame.getProgress()["Elisa"] == 1);
 
+        LangClass.setLanguage(GlobalGameInfo.language);
+
     }
 
     public void resetCharacterCards() {
@@ -174,6 +176,7 @@ public class StartWeek : MonoBehaviour
         StartWeekContainer.SetActive(true);
         SelectedNPC.text = NPC + "?";
         GlobalGameInfo.SetCurrentNPC(NPC);
+        GlobalGameInfo.gotalkFlag = true;
         this.resetCharacterCards();
 
         // Update the current NPC in the global script
