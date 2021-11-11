@@ -107,8 +107,15 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
         definitionDisplay.SetActive(false);
         defaultDisplay.SetActive(false);
         missingDisplay.SetActive(true);
-        Text missingText = missingDisplay.GetComponentInChildren<Text>();
-        missingText.text = "Oops, we can't find: " + inputWord;
+        foreach (Transform child in missingDisplay.transform)
+        {
+            GameObject childObj = child.gameObject;
+            if (childObj.name == "MissingText")
+            {
+                Text missingText = childObj.GetComponentInChildren<Text>();
+                missingText.text = "\"" + inputWord + "\"";
+            }
+        }
         currentDisplay = DisplayStatus.MISSING;
         
     }
