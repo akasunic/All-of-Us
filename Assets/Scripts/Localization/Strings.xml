@@ -2,11 +2,6 @@
 <languages>
 
     <English>
-        <string name="backstories_1">Morning in Bloomwood is my favorite time. I grew up here, and from my apartment’s window, I can hear everyone waking up around me. The neighborhood used to feel as alive as the people. In the summer, folks fixed their cars outside my building and played music until the street lamps came on. There was always an end of summer block party, and always something to do. Now? Not so much.</string>
-        <string name="backstories_2">Times have changed. People feel distant from each other. Developers built mixed use high rises, and new programs have come in bringing grants, funding, and new facilities. This was great, except the rents got higher and it felt like half the neighborhood was getting left behind. More and more of our old neighbors are moving out. More and more new faces are moving in, who aren’t as connected to the people already living here.</string>
-        <string name="backstories_3">Not everyone in Bloomwood is getting a fair shake these days. Instead of talking to your neighbor, folks called in noise complaints. It feels like no one knows their neighbors anymore. We just keep to ourselves. I want to change that. Bloomwood was never the place where you ignored your neighbors. So I came up with a plan. A good one. As the Bloomwood Community Liaison to the city, I was able to secure a permit for an old school style block party to celebrate the reopening of our Community Center....</string>
-        <string name="backstories_4">... I got us a bouncy house, food, even a health fair! Now I just have to convince some folks to help me work it. I know who to ask. I know how to ask them. I’ve always been good at connecting people and helping everyone out. Maybe if I can connect everyone in the neighborhood, Bloomwood can see that what really makes a neighborhood is not the buildings, or the grants, or the businesses that rush in. It’s the people.</string>
-        
         <string name="ending_1">I’ve been talking so much about Bloomwood Spirit and getting this block party ready.  Today as we blocked off streets and inflated the giant bounce house, I wondered if all my efforts to help did the job. People have bigger issues. Health, money, family, school...did we make enough time? Share enough resources?</string>
         <string name="ending_2">Our Block Party is a connection between the old Bloomwood and the new Bloomwood. The smells of food and the whirring of the cotton candy machine all brought back memories. But could this bring the people?</string>
         <string name="ending_3">Just as I began to worry, Mr. Calindas arrived to set up the Healthcare tent. He patted me on the back before he went to instruct volunteer nurses on how to work with the community. “Paz and Jessica are showing up soon! Don’t worry!”</string>
@@ -56,6 +51,32 @@
         <string name="save">SAVE</string>
         <string name="go_to_sleep">GO TO SLEEP</string>
         <string name="current_task">Current Task</string>
+        <string name="meet">Meet</string>
+        <string name="good_morning_message">Good morning! Another beautiful week at Bloomwood. Ready to plan for a new Block Party?</string>
+        
+        <string name="saved_games">Saved Games</string>
+        <string name="next_npc">Who would be the next Block Party protagonist?</string>
+
+        <string name="rashad_name">Rashad Williams</string>
+        <string name="rashad_age_pronouns">42 years old | He/Him/His</string>
+        <string name="rashad_title">Head Librarian, Bloomwood Library</string>
+        <string name="rashad_description">Rashad Williams was born and raised in Bloomwood, and moved back after getting his Master’s Degree in Library Science. He is married with 2 children (Wife Cheryl, children Octavia and Charles) and started out as the popular Young Adult Librarian for Bloomwood Library. Since being promoted to Head Librarian last year, he’s tried to make new programs available for the Bloomwood Community. He enjoys comic books, science fiction, and is an avid runner.</string>
+        <string name="lila_name">Lila Morgan</string>
+        <string name="lila_age_pronouns">26 years old | She/Her/Hers</string>
+        <string name="lila_title">Head Start Teacher, Community Center</string>
+        <string name="lila_description">Lila Morgan grew up near Bloomwood, and moved to town when she was 17, where she worked with her mom at the Community Center, assisting her in her job as a Head Start teacher. After attending college at a state school nearby, Lila has recently returned to Bloomwood to take her mom’s position as she leaves to travel, and now lives in town with her partner Trisha. She is close with Mrs. Lee, and loves designing tattoos, teaching her border collie Charlie partner tricks, and long car rides with Trisha.</string>
+        <string name="elisa_name">Elisa Ramirez</string>
+        <string name="elisa_age_pronouns">19 years old | She/Her/Hers</string>
+        <string name="elisa_title">College Student, Bloomwood Library</string>
+        <string name="elisa_description">Elisa Ramirez grew up in Bloomwood, where her parents moved after leaving El Salvador. She’s currently living with her family while attending Bloomwood College. She loves reading, spending time with friends, physical activity, and the outdoors. She is currently the VP of her school’s nature club, and an aspiring freeclimber. She’s almost done with her Associates degree at Bloomwood College, and is currently getting ready to complete her Bachelor’s at a university nearby. She’s studying business, and intends to become a financial advisor once she graduates.</string>
+        <string name="mrcalindas_name">Mr. Calindas</string>
+        <string name="mrcalindas_age_pronouns">58 years old | He/Him/His</string>
+        <string name="mrcalindas_title">Head Nurse, Bloomwood Health Clinic</string>
+        <string name="mrcalindas_description">Giancarlo Calindas, is respectfully known as Mr. Calindas in the neighborhood. He moved into the neighborhood 20 years ago, when his wife, Paz took a job teaching Biology at Bloomwood Highschool. A second generation Filipino American, Mr. Calindas’ parents were farmworkers in Southern California, who brought him up with a strong sense of community. Mr. Calindas is the steward for his nurse’s union and likes to unwind by running. He cares deeply about the health and well-being of the neighborhood, and his daughter Jessica and his granddaughter, Brooklyn. </string>
+        <string name="mrslee_name">Mrs. Lee</string>
+        <string name="mrslee_age_pronouns">65 years old | She/Her/Hers</string>
+        <string name="mrslee_title">Elder, Community Center</string>
+        <string name="mrslee_description">Mrs. Lee is an elder in Bloomwood where she has lived for the last 20 years. Mrs. Lee and her husband Dr. Lee emigrated from South Korea with their grandson Eddie. Together, they raised Eddie in Bloomwood, speaking a mix of English and Korean. After the recent passing of her husband, Mrs. Lee schedules regular video calls with her Korean friends and occasionally with Eddie, when he’s not in his university library. Mrs. Lee loves attending fitness classes at the Community Center and her favorite color is pink!</string>
 
         <string name="days_left">DAYS LEFT</string>
         <string name="to_block_party">to block party for</string>
@@ -133,11 +154,6 @@
     </English>
 
     <Spanish>
-        <string name="backstories_1"></string>
-        <string name="backstories_2"></string>
-        <string name="backstories_3"></string>
-        <string name="backstories_4"></string>
-
         <string name="ending_1"></string>
         <string name="ending_2"></string>
         <string name="ending_3"></string>
@@ -243,6 +259,10 @@
         <string name="tutorial_todo"></string>
         <string name="tutorial_notes"></string>
         <string name="tutorial_contacts"></string>
+
+        <string name="meet"></string>
+        <string name="good_morning_message"></string>
+        
     </Spanish>
 
 </languages>

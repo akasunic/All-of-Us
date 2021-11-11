@@ -3,24 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Stores static game info for the infobank
-public class GlobalGameInfo
+public static class GlobalGameInfo
 {
+
+    // PLAYER INFORMATION
+
+    public static bool pcsetupCalled = false;
+    public static bool gotalkFlag = false;
+    public static SavedGame savedGame;
+
     // CURRENT DAY (0 to 4)
     // 0 is Monday and 4 is Friday - Block Party day
     private static int currentDay = 0;
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
+    // CURRENT PROGRESS FOR PLAYER
+    private static Dictionary<string, int> currentProgress = new Dictionary<string, int>();
+
     // CURRENT NPC FOR THE WEEK (the name as string)
-    private static string currentNPC = "Elisa";
+    private static string currentNPC = "";
 
     // CURRENT TASK FOR THE DAY (as string)
-    private static string currentTask = "Example current task";
+    private static string currentTask = "";
     // player's name
     public static string name = "";
     // player's pronouns
-    public static string pronouns;
+    public static string pronouns = "";
     public static int pronounsInt = 0;
     // Game's language
+    public static Dictionary<string, int> langDict = new Dictionary<string, int>(){{"English", 0}, {"Spanish", 1}};
+
     public static string language = "English";
     public static int languageInt = 0;
 
@@ -348,15 +360,43 @@ public class GlobalGameInfo
     {
         return currentDay;
     }
+    public static void SetCurrentDay(int day) {
+        currentDay = day;
+    }
 
     public static int GetCurrentWeek()
     {
         return currentWeek;
     }
 
+    public static void SetCurrentWeek(int week) {
+        currentWeek = week;
+    }
+
+    public static Dictionary<string, int> GetCurrentProgress()
+    {
+        return currentProgress;
+    }
+
+    public static void SetCurrentProgress(Dictionary<string, int> progress) {
+        currentProgress = progress;
+    }
+    public static string GetPlayerName()
+    {
+        return name;
+    }
+
+    public static void SetPlayerName(string playerName) {
+        name = playerName;
+    }
+
     public static string GetCurrentNPC()
     {
         return currentNPC;
+    }
+
+    public static void SetCurrentNPC(string NPC) {
+        currentNPC = NPC;
     }
 
     public static string GetCurrentTask()

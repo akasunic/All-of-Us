@@ -105,6 +105,11 @@ public class PCSetUp : MonoBehaviour
             return;
         }
 
+        if (isTaken(firstName)) {
+            Debug.Log("Name, Pronouns, and Language cannot be empty");
+            return;
+        }
+
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
         GlobalGameInfo.language = GetLanguages(intLanguage);
@@ -114,11 +119,32 @@ public class PCSetUp : MonoBehaviour
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
         
-        if (SceneManager.GetActiveScene().name == "PCSetUp") {
-            SceneManager.LoadScene("Backstories");
-        } else {
+        // Add new player to saved data
+        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+        SavedGame newPlayer = new SavedGame(firstName);
+        newPlayer.setLanguage(GetLanguages(intLanguage));
+        GlobalGameInfo.savedGame = newPlayer;
+        currentData.Add(firstName, newPlayer);
+        SaveSerial.SaveGame(currentData);
+        
+        if (SceneManager.GetActiveScene().name != "PCSetUp") {
+            // Coming from phone scene
             SceneManager.LoadScene("Basic2DMap");
+        } else {
+            // Coming from PCsetup scene
+            GlobalGameInfo.pcsetupCalled = true;
+            SceneManager.LoadScene("StartWeek");
         }
+
+
+    }
+
+    private bool isTaken(string name) {
+        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        foreach(KeyValuePair<string, SavedGame> pair in data) {
+            if (pair.Value.getName() == name) return true;
+        }
+        return false;
     }
 
     private string GetPronouns(int intPronouns)

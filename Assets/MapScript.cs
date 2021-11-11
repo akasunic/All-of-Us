@@ -11,6 +11,12 @@ public class MapScript : MonoBehaviour
     public bool calendarIconPressed = false;
     public TextMeshProUGUI WeekText;
     public TextMeshProUGUI ShortDayText;
+    public TextMeshProUGUI WeekTextPopup;
+    public TextMeshProUGUI ShortDayTextPopup;
+    public TextMeshProUGUI CalendarWeekTextPopup;
+    public TextMeshProUGUI CalendarShortDayTextPopup;
+    public TextMeshProUGUI MeetNPCText;
+    public TextMeshProUGUI GoodMorningText;
     public TextMeshProUGUI CurrentTaskTitle;
     public TextMeshProUGUI CurrentTask;
     public TextMeshProUGUI CurrentNPC;
@@ -27,6 +33,8 @@ public class MapScript : MonoBehaviour
     public GameObject BackButton;
     public GameObject ExitGame;
     public GameObject NPCAndTask;
+    public GameObject GoTalkButton;
+    public GameObject CalendarPopup;
     public Image RashadImage;
     public Image MrsLeeImage;
     public Image MrCalindasImage;
@@ -39,10 +47,45 @@ public class MapScript : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start() {
-        LangClass.setLanguage(GlobalGameInfo.language);
 
+        if (GlobalGameInfo.gotalkFlag == true) this.OpenGoTalkDialog();
+
+        MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
+        GoodMorningText.text = LangClass.getString("good_morning_message");
+        
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
-        ShortDayText.text = LangClass.getString("wednesday_short");
+        WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+
+        switch (GlobalGameInfo.GetCurrentDay()) {
+            case 0:
+                ShortDayText.text = LangClass.getString("monday_short");
+                ShortDayTextPopup.text = LangClass.getString("monday_short");
+                CalendarShortDayTextPopup.text = LangClass.getString("monday_short");
+                break;
+            case 1:
+                ShortDayText.text = LangClass.getString("tuesday_short");
+                ShortDayTextPopup.text = LangClass.getString("tuesday_short");
+                CalendarShortDayTextPopup.text = LangClass.getString("tuesday_short");
+                break;
+            case 2:
+                ShortDayText.text = LangClass.getString("wednesday_short");
+                ShortDayTextPopup.text = LangClass.getString("wednesday_short");
+                CalendarShortDayTextPopup.text = LangClass.getString("wednesday_short");
+                break;
+            case 3:
+                ShortDayText.text = LangClass.getString("thursday_short");
+                ShortDayTextPopup.text = LangClass.getString("thursday_short");
+                CalendarShortDayTextPopup.text = LangClass.getString("thursday_short");
+                break;
+            case 4:
+                ShortDayText.text = LangClass.getString("friday_short");
+                ShortDayTextPopup.text = LangClass.getString("friday_short");
+                CalendarShortDayTextPopup.text = LangClass.getString("friday_short");
+                break;
+            default:
+            break;
+        }
         CurrentTaskTitle.text = LangClass.getString("current_task");
         CurrentTask.text = GlobalGameInfo.GetCurrentTask();
         CurrentNPC.text = GlobalGameInfo.GetCurrentNPC();
@@ -67,10 +110,10 @@ public class MapScript : MonoBehaviour
             case "Rashad":
                 RashadImage.enabled = true;
                 break;
-            case "MrsLee":
+            case "Mrs. Lee":
                 MrsLeeImage.enabled = true;
                 break;
-            case "MrCalindas":
+            case "Mr. Calindas":
                 MrCalindasImage.enabled = true;
                 break;
             case "Lila":
@@ -82,7 +125,6 @@ public class MapScript : MonoBehaviour
             default:
                 break;
         }
-        
 
     }
 
@@ -121,6 +163,11 @@ public class MapScript : MonoBehaviour
 
     }
 
+    public void GoTalk() {
+        InkFileManager ifm = new InkFileManager();
+        ifm.TryLoadVNScene(GlobalGameInfo.GetCurrentNPC());
+    }
+
     public void GoToOpeningScreen() {
         // Go back to opening screen
         SceneManager.LoadScene("OpeningScene");
@@ -137,5 +184,11 @@ public class MapScript : MonoBehaviour
             GlobalGameInfo.toggleNewDay();
         }
         
+    }
+
+    public void OpenGoTalkDialog() {
+        CalendarPopup.SetActive(true);
+        blackOverlay.SetActive(true);
+        GlobalGameInfo.gotalkFlag = false;
     }
 }

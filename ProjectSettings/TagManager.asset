@@ -8,6 +8,11 @@ TagManager:
   - Enemy
   - Text
   - HintBubble
+  - Canvas
+  - NumberText
+  - PlayerText
+  - WeekText
+  - Content
   layers:
   - Default
   - TransparentFX
