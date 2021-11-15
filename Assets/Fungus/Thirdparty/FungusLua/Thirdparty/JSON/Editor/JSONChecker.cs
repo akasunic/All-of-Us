@@ -1,7 +1,9 @@
 //#define PERFTEST        //For testing performance of parse/stringify.  Turn on editor profiling to see how we're doing
 
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 #if UNITY_2017_1_OR_NEWER
 using UnityEngine.Networking;
 #endif

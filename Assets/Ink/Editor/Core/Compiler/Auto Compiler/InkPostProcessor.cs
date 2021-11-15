@@ -1,6 +1,8 @@
 ﻿// Automatically creates JSON files from an ink placed within the Assets/Ink folder.
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.IO;
 using Debug = UnityEngine.Debug;
 using System.Collections.Generic;
