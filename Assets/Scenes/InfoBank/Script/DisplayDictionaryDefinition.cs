@@ -17,9 +17,13 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     public enum DisplayStatus { DEFAULT, MISSING, DEFINITION };
     private DisplayStatus currentDisplay;
 
+    public bool visualNovelDictionary;
+
     public GameObject missingDisplay;
     public GameObject defaultDisplay;
     public GameObject definitionDisplay;
+    public GameObject parentDisplay;
+    public GameObject termsDisplay;
 
     private Hashtable Words;
     private List<string> orderedWords;
@@ -55,11 +59,19 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     }
     public int GetNumWords()
     {
+        if (Words == null)
+        {
+            initWords();
+        }
         return Words.Count;
     }
 
     public List<String> GetWords()
     {
+        if (Words == null)
+        {
+            initWords();
+        }
         return orderedWords;
     }
 
@@ -117,7 +129,6 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
             }
         }
         currentDisplay = DisplayStatus.MISSING;
-        
     }
     public void ClearDescription()
     {
@@ -130,8 +141,17 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     {
         if (updateWord != "")
         {
+            if (visualNovelDictionary)
+            {
+                termsDisplay.SetActive(false);
+                parentDisplay.SetActive(true);
+            }
             DisplayDescription(updateWord);
-            updateWord = "";
+        }
+        // Is visual novel dictionary and word is ""
+        else if (visualNovelDictionary)
+        {
+            parentDisplay.SetActive(false);
         }
     }
     
