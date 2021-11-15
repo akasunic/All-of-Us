@@ -18,8 +18,7 @@ public class TodoManager : MonoBehaviour
     public GameObject dropdownImage;
 
     public Image backgroundImage;
-    private int backgroundImageDefaultTopBottomPadding = 100;
-    private int backgroundImageDefaultHeight;
+    public static int backgroundImageDefaultHeight = 100;
     private int backgroundOpenedHeight;
 
     private int checklistTopPadding;
@@ -70,8 +69,7 @@ public class TodoManager : MonoBehaviour
         checklistItemHeight = (int)glg.cellSize.y;
         checklistTopPadding = (int)glg.padding.top;
         // How big the opened image should be? 
-        backgroundImageDefaultHeight = (int)titleRTransform.rect.height + backgroundImageDefaultTopBottomPadding;
-        backgroundOpenedHeight = checklistTopPadding + checklist.Count * checklistItemHeight + backgroundImageDefaultHeight;
+        backgroundOpenedHeight = checklistTopPadding + checklist.Count * checklistItemHeight + backgroundImageDefaultHeight + (int)titleRTransform.rect.height;
         backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
         for (int i = 0; i < checklist.Count; i++){
         Transform newItem = Instantiate(itemPrefab, go);
@@ -91,19 +89,35 @@ public class TodoManager : MonoBehaviour
     }
 
     public void toggleChecklist(){
+        AddToList.ToggleTodoListUpdated();
+        Debug.Log("Add to list toggled");
         if (opened){
         //gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f,  titleRTransform.sizeDelta.y + extraPadding);
         checklistItems.SetActive(false);
-        profileImage.SetActive(false);
+        // profileImage.SetActive(false);
         opened = false;
         backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
 
         } else {
         opened = true;
         checklistItems.SetActive(true);
-        profileImage.SetActive(true);
+        // profileImage.SetActive(true);
         backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundOpenedHeight);
         }
+    }
+
+    public int getDefaultHeight()
+    {
+        return backgroundImageDefaultHeight;
+    }
+    public int getOpenedHeight()
+    {
+        return backgroundOpenedHeight;
+    }
+
+    public bool isOpened()
+    {
+        return opened;
     }
 
     //we need to reset the layouts or else they look weird when you open or

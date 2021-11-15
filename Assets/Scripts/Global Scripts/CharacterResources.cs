@@ -57,7 +57,26 @@ public class CharacterResources
     leeSmall = Resources.Load<Sprite>("lee_small");
   }
 
-  public Sprite GetSmallIcon(CHARACTERS c){
+   public string GetName(CHARACTERS c)
+    {
+        switch (c)
+        {
+            case CHARACTERS.RASHAD:
+                return "Rashad";
+            case CHARACTERS.LILA:
+                return "Lila";
+            case CHARACTERS.CALINDAS:
+                return "Calindas";
+            case CHARACTERS.ELISA:
+                return "Elisa";
+            case CHARACTERS.LEE:
+                return "Lee";
+            default:
+                return "Rashad";
+        }
+    }
+
+    public Sprite GetSmallIcon(CHARACTERS c){
     switch (c){
       case CHARACTERS.RASHAD:
         return rashadSmall;
