@@ -26,7 +26,7 @@ public class AddToList : MonoBehaviour
             case "Dictionary":
                 fillDictionaryList();
                 break;
-            default:
+            case "Info":
                 List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
                 list.Reverse();
                 fillInfoList(list);
@@ -43,8 +43,22 @@ public class AddToList : MonoBehaviour
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
         
         Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
-        
+        IDictionary<string, Transform> subsections = new Dictionary<string, Transform>(); 
         for(int i = 0; i < list.Count; i++){
+            /*
+            Transform newItem;
+            if (subsections.ContainsKey(list[i].subsection))
+            {
+                Transform subsection = subsections[list[i].subsection];
+                newItem = Instantiate(listItemPrefab, subsection);
+            }
+            else
+            {
+                Transform newSubsection = Instantiate(todoListSubsectionPrefab, go);
+                subsections.Add(list[i].subsection, newSubsection);
+                newItem = Instantiate(listItemPrefab, newSubsection);
+            }
+            */
             Transform newItem = Instantiate(listItemPrefab, go);
             newItem.GetComponent<TodoManager>().setDetails(list[i]);
         }
@@ -85,6 +99,7 @@ public class AddToList : MonoBehaviour
             Transform newItem = Instantiate(listItemPrefab, go);
             newItem.GetComponent<InfoManager>().setDetails(elem.Key, elem.Value);
         }
+        
     }
 
     private void fillContactList(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> list){

@@ -110,6 +110,7 @@ public static class GlobalGameInfo
     //CLASSES FOR PHONE ITEMS - TODOs, INFORMATION, CONTACTs
     public class TodoItem
     {
+        public string subsection;
         public string title;
         public List<ChecklistItem> checklist;
         public CharacterResources.CHARACTERS character;
@@ -125,6 +126,7 @@ public static class GlobalGameInfo
             this.completedItems = 0;
             this.showNotification = true;
             this.complete = false;
+            this.subsection = "placeholder";
         }
 
         public TodoItem(string title, CharacterResources.CHARACTERS character) {
@@ -133,6 +135,7 @@ public static class GlobalGameInfo
             this.character = character;
             this.completedItems = 0;
             this.showNotification = true;
+            this.subsection = "placeholder";
         }
 
         public ChecklistItem AddToChecklist(string c) {

@@ -18,6 +18,12 @@ public class TodoManager : MonoBehaviour
     public GameObject dropdownImage;
 
     public Image backgroundImage;
+    private int backgroundImageDefaultTopBottomPadding = 100;
+    private int backgroundImageDefaultHeight;
+    private int backgroundOpenedHeight;
+
+    private int checklistTopPadding;
+    private int checklistItemHeight;
 
     private GameObject profileImage;
 
@@ -60,17 +66,18 @@ public class TodoManager : MonoBehaviour
       if(image != null){
         image.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.character);
       }
-      for(int i = 0; i < checklist.Count; i++){
+      GridLayoutGroup glg = go.GetComponent<GridLayoutGroup>();
+        checklistItemHeight = (int)glg.cellSize.y;
+        checklistTopPadding = (int)glg.padding.top;
+        // How big the opened image should be? 
+        backgroundImageDefaultHeight = (int)titleRTransform.rect.height + backgroundImageDefaultTopBottomPadding;
+        backgroundOpenedHeight = checklistTopPadding + checklist.Count * checklistItemHeight + backgroundImageDefaultHeight;
+        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
+        for (int i = 0; i < checklist.Count; i++){
         Transform newItem = Instantiate(itemPrefab, go);
         newItem.GetComponent<ChecklistManager>().setItem(checklist[i]);
       }
-
-      if(!item.showNotification){
-        Transform redbubble = HelperFunctions.FindChildByRecursion(transform, "redbubble");
-        redbubble.gameObject.SetActive(false);
-      }
       
-
       completed = item.complete;
 
       if(completed){
@@ -84,34 +91,25 @@ public class TodoManager : MonoBehaviour
     }
 
     public void toggleChecklist(){
-      if(opened){
-        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f,  titleRTransform.sizeDelta.y + extraPadding);
+        if (opened){
+        //gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f,  titleRTransform.sizeDelta.y + extraPadding);
         checklistItems.SetActive(false);
         profileImage.SetActive(false);
-        dropdownImage.gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-        if(completed){
-          dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
-        } else {
-          dropdownImage.gameObject.GetComponent<Image>().sprite = redDropdown;
-        }
         opened = false;
-        
-      } else {
+        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
+
+        } else {
         opened = true;
         checklistItems.SetActive(true);
-        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f, checklist.Count * 30 + titleRTransform.sizeDelta.y + extraPadding);
         profileImage.SetActive(true);
-        dropdownImage.gameObject.GetComponent<Image>().sprite = greyDropdown;
-        if(completed){
-          dropdownImage.gameObject.GetComponent<Image>().color = new Color32(50, 50, 50, 255);
+        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundOpenedHeight);
         }
-      }
-      resetLayouts();
     }
 
     //we need to reset the layouts or else they look weird when you open or
     //close the dropdown in the quests
     private void resetLayouts(){
+        /*
       Canvas.ForceUpdateCanvases();
       gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
       gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
@@ -122,5 +120,6 @@ public class TodoManager : MonoBehaviour
       transform.parent.GetComponent<VerticalLayoutGroup>().enabled = false;
       transform.parent.GetComponent<VerticalLayoutGroup>().enabled = true;
       Canvas.ForceUpdateCanvases();
+        */
     }
 }
