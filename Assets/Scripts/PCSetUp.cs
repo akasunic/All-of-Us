@@ -106,7 +106,7 @@ public class PCSetUp : MonoBehaviour
         }
 
         if (isTaken(firstName)) {
-            Debug.Log("Name, Pronouns, and Language cannot be empty");
+            Debug.Log("Name is already taken");
             return;
         }
 
@@ -121,6 +121,9 @@ public class PCSetUp : MonoBehaviour
         
         // Add new player to saved data
         Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+        if (currentData == null) {
+            currentData = new Dictionary<string, SavedGame>();
+        }
         SavedGame newPlayer = new SavedGame(firstName);
         newPlayer.setLanguage(GetLanguages(intLanguage));
         GlobalGameInfo.savedGame = newPlayer;
@@ -141,6 +144,7 @@ public class PCSetUp : MonoBehaviour
 
     private bool isTaken(string name) {
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        if (data == null) return false;
         foreach(KeyValuePair<string, SavedGame> pair in data) {
             if (pair.Value.getName() == name) return true;
         }
