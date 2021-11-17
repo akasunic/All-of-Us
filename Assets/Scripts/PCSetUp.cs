@@ -23,9 +23,9 @@ public class PCSetUp : MonoBehaviour
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
-    private int intPronouns;
+    private int intPronouns = 0;
     private string pronouns;
-    private int intLanguage;
+    private int intLanguage = 0;
     private string language;
     
     // Localization Feature
@@ -51,9 +51,8 @@ public class PCSetUp : MonoBehaviour
         List<string> languageDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("english"), LangClass.getString("spanish")};
 
         pronounsDropDown.ClearOptions();
-        languageDropDown.ClearOptions();
-
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
+        languageDropDown.ClearOptions();
         languageDropDown.AddOptions(languageDropDownOptions);
 
 
@@ -83,6 +82,9 @@ public class PCSetUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void EditForm() {
         firstName = nameInputField.GetComponent<InputField>().text;
         intPronouns = pronounsDropDown.value;
         intLanguage = languageDropDown.value;
