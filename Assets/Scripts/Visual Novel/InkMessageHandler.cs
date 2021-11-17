@@ -85,6 +85,7 @@ public class InkMessageHandler : MonoBehaviour
     /// Adds a a new contact to the contacts list
     /// </summary>
     public void AddContact() {
+
         string contactString = _fc.GetStringVariable("new_contact");
         contactString = contactString.ToLower();
 
@@ -105,7 +106,6 @@ public class InkMessageHandler : MonoBehaviour
                 GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee());
                 break;
         }
-        // else if blah blah blah
     }
 
     /// <summary>
