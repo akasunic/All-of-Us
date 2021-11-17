@@ -89,6 +89,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
+
         messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
@@ -182,6 +183,7 @@ public class PhoneScreenManager : MonoBehaviour
     }
 
     private void getGameObject(string type, ref GameObject go, ref GameObject border){
+
         switch (type.ToLower()){
             case "messages":
                 go = messages;
