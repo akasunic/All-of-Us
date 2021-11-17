@@ -94,10 +94,12 @@ public class PhoneScreenManager : MonoBehaviour
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         settings.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
+        dictionary.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         messagesBorder.SetActive(false);
         notesBorder.SetActive(false);
         contactsBorder.SetActive(false);
         settingsBorder.SetActive(false);
+        dictionaryBorder.SetActive(false);
 
         lastSelected = null;
         lastSelectedBorder = null;
