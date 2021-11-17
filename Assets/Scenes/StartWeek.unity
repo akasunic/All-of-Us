@@ -353,7 +353,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 42 years old | He/Him/His
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
     type: 2}
   m_fontSharedMaterials: []
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: 0, z: 259.07367, w: -26.395004}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &115633951
@@ -466,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.9, y: 55.8}
+  m_AnchoredPosition: {x: -60, y: 55.8}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152212102
@@ -1160,7 +1160,7 @@ MonoBehaviour:
     Description Description Description Description Description Description Description
     Description '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
     type: 2}
   m_fontSharedMaterials: []
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: -17.263367, z: 18.664429, w: -43.658447}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &334486582
@@ -1544,7 +1544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 294.25604}
+  m_AnchoredPosition: {x: -30, y: 294.25473}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -4765,7 +4765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.6, y: -85.90001}
+  m_AnchoredPosition: {x: 76, y: -85.90001}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677956031
@@ -4976,7 +4976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.9, y: -228.5}
+  m_AnchoredPosition: {x: -60, y: -228.5}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1728997860
@@ -5321,7 +5321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.9, y: -89.7}
+  m_AnchoredPosition: {x: -60, y: -89.7}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868096328
@@ -5613,7 +5613,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Head Librarian, Bloomwood Library
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
     type: 2}
   m_fontSharedMaterials: []
@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: 0, z: 60.203125, w: 27.769638}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1937276724
@@ -5843,7 +5843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.7, y: 55.8}
+  m_AnchoredPosition: {x: 76, y: 55.8}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997920215
@@ -6024,8 +6024,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1843045361}
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.7691293
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

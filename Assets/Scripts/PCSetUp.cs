@@ -82,9 +82,6 @@ public class PCSetUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    }
-
-    public void EditForm() {
         firstName = nameInputField.GetComponent<InputField>().text;
         intPronouns = pronounsDropDown.value;
         intLanguage = languageDropDown.value;
@@ -97,6 +94,10 @@ public class PCSetUp : MonoBehaviour
             continueButton.gameObject.SetActive(false);
             inactiveContinueButton.gameObject.SetActive(true);
         }
+    }
+
+    public void EditForm() {
+
     }
 
     public void Submit()
