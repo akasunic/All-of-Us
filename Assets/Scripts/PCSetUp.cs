@@ -20,6 +20,7 @@ public class PCSetUp : MonoBehaviour
     public Text nameFieldPlaceholder;
     public Dropdown pronounsDropDown;
     public Dropdown languageDropDown;
+    public GameObject backButton;
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
@@ -96,8 +97,8 @@ public class PCSetUp : MonoBehaviour
         }
     }
 
-    public void EditForm() {
-
+    public void goBack() {
+        SceneManager.LoadScene("OpeningScene");
     }
 
     public void Submit()

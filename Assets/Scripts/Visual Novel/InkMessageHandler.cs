@@ -147,12 +147,14 @@ public class InkMessageHandler : MonoBehaviour
         q.questId = line;
         q.description = line; // RE-EVALUATE WHAT TO PUT HERE
 
-        // Setting the new quest title to be the current "NPC task"
+        // Setting the new quest title to be the "current NPC task"
         GlobalGameInfo.SetCurrentTask(line);
 
         // Quest Giver
         line = reader.ReadLine();
         q.questGiver = HelperFunctions.CharacterFromString(line);
+        // Setting the new quest giver to be the "current NPC"
+        GlobalGameInfo.SetCurrentNPC(line);
 
         // Health exp, should be a 0 or 1
         line = reader.ReadLine();
