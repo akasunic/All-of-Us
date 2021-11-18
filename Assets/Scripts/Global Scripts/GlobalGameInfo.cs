@@ -404,6 +404,10 @@ public static class GlobalGameInfo
         return currentTask;
     }
 
+    public static void SetCurrentTask(string task) {
+        currentTask = task;
+    }
+
     public static int GetRemainDays()
     {
         return 4 - currentDay;
