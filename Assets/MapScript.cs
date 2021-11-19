@@ -48,7 +48,11 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start() {
 
-        if (GlobalGameInfo.gotalkFlag == true) this.OpenGoTalkDialog();
+        if (GlobalGameInfo.gotalkFlag == true) {
+            CalendarIcon.SetActive(false);
+            PhoneIcon.SetActive(false);
+            this.OpenGoTalkDialog();
+        }
 
         MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
         GoodMorningText.text = LangClass.getString("good_morning_message");
