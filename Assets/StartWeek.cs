@@ -49,6 +49,7 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI CharacterCardTitle;
     public TextMeshProUGUI CharacterCardDescription;
 
+    public GameObject blackOverlay;
 
     public Lang LangClass = new Lang(false);
     SavedGame currentGame;
@@ -164,7 +165,7 @@ public class StartWeek : MonoBehaviour
 
         // Updating local variables
         ScrollView.SetActive(false);
-
+        blackOverlay.SetActive(true);
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 
