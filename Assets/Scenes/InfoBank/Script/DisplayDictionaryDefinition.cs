@@ -18,7 +18,7 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     private DisplayStatus currentDisplay;
 
     public bool visualNovelDictionary;
-
+    private bool firstTimeInVisual = true;
     public GameObject missingDisplay;
     public GameObject defaultDisplay;
     public GameObject definitionDisplay;
@@ -30,6 +30,7 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Here again!");
         initWords(); 
     }
 
@@ -139,12 +140,26 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
     }
     private void Update()
     {
+        // This first if statement is just to make sure the definitions won't be displayed once we FIRST enter a visual novel scene
+        if (visualNovelDictionary && firstTimeInVisual)
+        {
+            firstTimeInVisual = false;
+            updateWord = "";
+        }
         if (updateWord != "")
         {
             if (visualNovelDictionary)
             {
                 termsDisplay.SetActive(false);
                 parentDisplay.SetActive(true);
+            }
+            // If we are in the phone app, we want to make sure the next time we go to a visual novel dictionary, the definition screen
+            // is turned off
+            // This is mega inelegant, but I don't want to add stuff to every button that transitions to the visual novels, so this is just
+            // easier albeit hacky
+            else
+            {
+                firstTimeInVisual = true;
             }
             DisplayDescription(updateWord);
         }
