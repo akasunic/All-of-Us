@@ -8,6 +8,7 @@ using TMPro;
 public class AddToList : MonoBehaviour
 {
 
+    public Transform todoPersonPrefab;
     public Transform listItemPrefab;
     public string whichList = "Dialog";
     private static bool todoListUpdated = false;
@@ -37,40 +38,62 @@ public class AddToList : MonoBehaviour
     }
 
     private void fillTodoList(List<GlobalGameInfo.TodoItem> list){
+        list.Add(list[0]);
         todoList = new List<Transform>(); 
         if(list.Count == 0){
             return;
         }
         
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
-
+        Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        int defaultItemShift = TodoManager.backgroundImageDefaultHeight;
+        // Hardcoded value in the scene, header is 100 units height
+        int defaultHeaderShift = 100;
+        int todoPersonY = -40;
+        int todoPersonX = 30;
+        // Give 40 units of spacing between each person
+        int spacing = 40;
         CharacterResources cr = new CharacterResources();
-        Transform header = this.gameObject.transform.Find("Scroll View/Viewport/Content/Header");
-        header.gameObject.SetActive(true);
-        Transform characterName = header.transform.Find("Character/CharacterName");
-        
-        Transform characterPic = header.transform.Find("Character/CharacterPic");
-        characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[0].character);
-        characterName.gameObject.GetComponent<Text>().text = cr.GetName(list[0].character).ToUpper();
+        for (int i = 0; i < list.Count; i++) {
+            Transform newTodoPerson = Instantiate(todoPersonPrefab, contentParent);
+            // Update a person's header
+            Transform header = newTodoPerson.Find("Header");
+            header.gameObject.SetActive(true);
+            Transform characterName = header.transform.Find("Character/CharacterName");
+            Transform characterPic = header.transform.Find("Character/CharacterPic");
+            Transform daysPassed = header.transform.Find("DaysPassed");
+            characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[i].character);
+            characterName.gameObject.GetComponent<Text>().text = cr.GetName(list[i].character).ToUpper();
 
-        Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content/TodoItemList");
-        int defaultShift = TodoManager.backgroundImageDefaultHeight;
-        for(int i = 0; i < list.Count; i++){
-            Transform newItem = Instantiate(listItemPrefab, go);
+            // Set person header's y position
+            Vector3 newPos = new Vector3(todoPersonX, todoPersonY, 0);
+            newTodoPerson.localPosition = newPos;
+
+            // Create the todo item list;
+            Transform newItemListParent = newTodoPerson.Find("TodoItemList");
+            Transform newItem = Instantiate(listItemPrefab, newItemListParent);
             newItem.GetComponent<TodoManager>().setDetails(list[i]);
-            Vector3 curPos = newItem.localPosition;
-            Vector3 newPos = new Vector3(curPos.x, curPos.y + defaultShift * i, curPos.z);
-            newItem.localPosition = newPos;
+            Vector3 newItemPos = new Vector3(0, 0, 0);
+            newItem.localPosition = newItemPos;
 
             todoList.Add(newItem);
+
+            foreach (Transform child in daysPassed)
+            {
+                child.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+            }
+            todoPersonY -= (spacing + defaultHeaderShift + defaultItemShift);
         }
-        Transform newItem2 = Instantiate(listItemPrefab, go);
-        newItem2.GetComponent<TodoManager>().setDetails(list[0]);
+        RectTransform rt = contentParent.GetComponent<RectTransform>();
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, (-40 - todoPersonY));
     }
 
     public void Update()
     {
-        updateTodoList();
+        if (todoListUpdated)
+        {
+            updateTodoList();
+        }
         todoListUpdated = false;
     }
 
@@ -82,20 +105,22 @@ public class AddToList : MonoBehaviour
     public void updateTodoList()
     {
         float shift = 0;
+        int defaultShift = TodoManager.backgroundImageDefaultHeight;
         for (int i = 0; i < todoList.Count; i++)
         {
+            float defaultPos = -i * defaultShift;
             TodoManager tm = todoList[i].gameObject.GetComponent<TodoManager>();
-            if (shift > 0)
-            {
-                Vector3 curPos = todoList[i].localPosition;
-                Vector3 newPos = new Vector3(curPos.x, curPos.y + shift, curPos.z);
-                todoList[i].localPosition = newPos;
-            }
+            Vector3 curPos = todoList[i].localPosition;
+            Vector3 newPos = new Vector3(curPos.x, defaultPos - shift, curPos.z);
+            todoList[i].localPosition = newPos;
             if (tm.isOpened())
             {
                 shift += (tm.getOpenedHeight() - tm.getDefaultHeight());
             }
         }
+        Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        RectTransform rt = contentParent.GetComponent<RectTransform>();
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, (-40 - todoPersonY));
     }
 
     private void fillSettingsList()

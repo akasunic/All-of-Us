@@ -18,6 +18,9 @@ public class TodoManager : MonoBehaviour
     public GameObject dropdownImage;
 
     public Image backgroundImage;
+    public Image checklistArrowImage;
+    public Image checklistDoneImage;
+
     public static int backgroundImageDefaultHeight = 100;
     private int backgroundOpenedHeight;
 
@@ -37,6 +40,10 @@ public class TodoManager : MonoBehaviour
     private RectTransform titleRTransform;
 
     List<GlobalGameInfo.ChecklistItem> checklist;
+
+    private Transform checklistTransform = null;
+    private Transform dropdownTransformArrow = null;
+    private Transform dropdownTransformDone = null;
 
     private float extraPadding = 100f;
 
@@ -82,28 +89,52 @@ public class TodoManager : MonoBehaviour
         backgroundImage.sprite = greenBackground;
         dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
       }
-      resetLayouts();
       gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f, titleRTransform.sizeDelta.y + extraPadding); 
       checklistItems.SetActive(false);
 
+        checklistTransform = this.transform.Find("content/checklist");
+        dropdownTransformArrow = this.transform.Find("content/Panel for dropdown/dropdownArrow");
+        dropdownTransformDone = this.transform.Find("content/Panel for dropdown/dropdownDone");
     }
 
     public void toggleChecklist(){
         AddToList.ToggleTodoListUpdated();
         Debug.Log("Add to list toggled");
-        if (opened){
-        //gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f,  titleRTransform.sizeDelta.y + extraPadding);
-        checklistItems.SetActive(false);
-        // profileImage.SetActive(false);
-        opened = false;
-        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
+        if (opened)
+        {
+            checklistItems.SetActive(false);
+            opened = false;
+            backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
 
-        } else {
-        opened = true;
-        checklistItems.SetActive(true);
-        // profileImage.SetActive(true);
-        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundOpenedHeight);
+        } 
+        else 
+        {
+            opened = true;
+            checklistItems.SetActive(true);
+            backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundOpenedHeight);
         }
+    }
+
+    public void Update()
+    {
+        if (checklistTransform != null && dropdownTransformArrow != null && dropdownTransformDone != null)
+        {
+            bool allChecked = true;
+            foreach (Transform child in checklistTransform)
+            {
+                allChecked = allChecked && child.gameObject.GetComponent<ChecklistManager>().isChecked();
+            }
+            if (allChecked)
+            {
+                dropdownTransformArrow.gameObject.SetActive(false);
+                dropdownTransformDone.gameObject.SetActive(true);
+            }
+            else
+            {
+                dropdownTransformDone.gameObject.SetActive(false);
+                dropdownTransformArrow.gameObject.SetActive(true);
+            }
+        } 
     }
 
     public int getDefaultHeight()
@@ -120,20 +151,4 @@ public class TodoManager : MonoBehaviour
         return opened;
     }
 
-    //we need to reset the layouts or else they look weird when you open or
-    //close the dropdown in the quests
-    private void resetLayouts(){
-        /*
-      Canvas.ForceUpdateCanvases();
-      gameObject.GetComponent<VerticalLayoutGroup>().enabled = false;
-      gameObject.GetComponent<VerticalLayoutGroup>().enabled = true;
-      Canvas.ForceUpdateCanvases();
-      checklistItems.GetComponent<VerticalLayoutGroup>().enabled = false;
-      checklistItems.GetComponent<VerticalLayoutGroup>().enabled = true;
-      Canvas.ForceUpdateCanvases();
-      transform.parent.GetComponent<VerticalLayoutGroup>().enabled = false;
-      transform.parent.GetComponent<VerticalLayoutGroup>().enabled = true;
-      Canvas.ForceUpdateCanvases();
-        */
-    }
 }
