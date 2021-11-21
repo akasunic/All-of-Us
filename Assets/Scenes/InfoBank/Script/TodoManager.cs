@@ -22,10 +22,6 @@ public class TodoManager : MonoBehaviour
     public Image checklistDoneImage;
 
     public static int backgroundImageDefaultHeight = 100;
-    private int backgroundOpenedHeight;
-
-    private int checklistTopPadding;
-    private int checklistItemHeight;
 
     private GameObject profileImage;
 
@@ -45,7 +41,6 @@ public class TodoManager : MonoBehaviour
     private Transform dropdownTransformArrow = null;
     private Transform dropdownTransformDone = null;
 
-    private float extraPadding = 100f;
 
     void Awake(){
       cr = new CharacterResources();
@@ -55,68 +50,59 @@ public class TodoManager : MonoBehaviour
       greenBackground = Resources.Load<Sprite>("greenbg");
     }
     public void setDetails(GlobalGameInfo.TodoItem item){
-      if(cr == null){
-        cr = new CharacterResources();
-      }
+        if(cr == null){
+            cr = new CharacterResources();
+        }
 
-      string title = item.title;
-      checklist = item.checklist;
-      Transform textChild = HelperFunctions.FindChildByRecursion(transform, "title");
-      if(textChild == null) return;
-      titleRTransform = textChild.gameObject.GetComponent<RectTransform>();
-      textChild.gameObject.GetComponent<TextMeshProUGUI>().text = title;
-      Transform go = HelperFunctions.FindChildByRecursion(transform, "checklist");
-      checklistItems = go.gameObject;
-      Transform image = HelperFunctions.FindChildByRecursion(transform, "image");
-      profileImage = image.gameObject;
-      if(image != null){
-        image.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.character);
-      }
-      GridLayoutGroup glg = go.GetComponent<GridLayoutGroup>();
-        checklistItemHeight = (int)glg.cellSize.y;
-        checklistTopPadding = (int)glg.padding.top;
-        // How big the opened image should be? 
-        backgroundOpenedHeight = checklistTopPadding + checklist.Count * checklistItemHeight + backgroundImageDefaultHeight + (int)titleRTransform.rect.height;
-        backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
+        // Update checklist title
+        string title = item.title;
+        Transform textChild = HelperFunctions.FindChildByRecursion(transform, "title");
+        if(textChild == null) return;
+        titleRTransform = textChild.gameObject.GetComponent<RectTransform>();
+        textChild.gameObject.GetComponent<TextMeshProUGUI>().text = title;
+
+        // Add checklist items to checklist object 
+        Transform go = HelperFunctions.FindChildByRecursion(transform, "checklist");
+        checklistItems = go.gameObject;
+        GridLayoutGroup glg = go.GetComponent<GridLayoutGroup>();
+        checklist = item.checklist;
         for (int i = 0; i < checklist.Count; i++){
-        Transform newItem = Instantiate(itemPrefab, go);
-        newItem.GetComponent<ChecklistManager>().setItem(checklist[i]);
-      }
-      
-      completed = item.complete;
+            Transform newItem = Instantiate(itemPrefab, go);
+            newItem.GetComponent<ChecklistManager>().setItem(checklist[i]);
+        }
+        
+        // If they are all completed already, update the arrow sprite to be the green checkmark
+        completed = item.complete;
+        if(completed){
+            backgroundImage.sprite = greenBackground;
+            dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
+        }
 
-      if(completed){
-        backgroundImage.sprite = greenBackground;
-        dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
-      }
-      gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(152f, titleRTransform.sizeDelta.y + extraPadding); 
-      checklistItems.SetActive(false);
+        // Should not be open by default
+        checklistItems.SetActive(false);
 
-        checklistTransform = this.transform.Find("content/checklist");
-        dropdownTransformArrow = this.transform.Find("content/Panel for dropdown/dropdownArrow");
-        dropdownTransformDone = this.transform.Find("content/Panel for dropdown/dropdownDone");
+        // Used for toggleChecklist
+        checklistTransform = this.transform.Find("checklist");
+        dropdownTransformArrow = this.transform.Find("Header/dropdown/dropdownArrow");
+        dropdownTransformDone = this.transform.Find("Header/dropdown/dropdownDone");
     }
 
     public void toggleChecklist(){
-        AddToList.ToggleTodoListUpdated();
-        Debug.Log("Add to list toggled");
         if (opened)
         {
-            checklistItems.SetActive(false);
             opened = false;
-            backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundImageDefaultHeight);
-
+            checklistItems.SetActive(false);
         } 
         else 
         {
             opened = true;
             checklistItems.SetActive(true);
-            backgroundImage.gameObject.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, backgroundOpenedHeight);
         }
     }
 
     public void Update()
     {
+        // If all the checklist elements are checked, then give a green checkmark instead of the arrow
         if (checklistTransform != null && dropdownTransformArrow != null && dropdownTransformDone != null)
         {
             bool allChecked = true;
@@ -136,19 +122,4 @@ public class TodoManager : MonoBehaviour
             }
         } 
     }
-
-    public int getDefaultHeight()
-    {
-        return backgroundImageDefaultHeight;
-    }
-    public int getOpenedHeight()
-    {
-        return backgroundOpenedHeight;
-    }
-
-    public bool isOpened()
-    {
-        return opened;
-    }
-
 }
