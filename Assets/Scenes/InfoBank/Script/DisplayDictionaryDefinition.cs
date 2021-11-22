@@ -137,6 +137,7 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
         missingDisplay.SetActive(false);
         defaultDisplay.SetActive(true);
         currentDisplay = DisplayStatus.DEFAULT;
+        updateWord = "";
     }
     private void Update()
     {
