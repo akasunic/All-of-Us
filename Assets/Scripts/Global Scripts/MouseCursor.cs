@@ -17,7 +17,12 @@ public class MouseCursor : MonoBehaviour
     {
         #if UNITY_EDITOR
             defaultCursor = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/ArtAssets/Resources/default_cursor.png", typeof(Texture2D));
-            clickableObjectCursor = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/ArtAssets/Resources/clickable_cursor.png", typeof(Texture2D));
+
+            string file = (Texture2D)Application.streamingAssetsPath + "/clickable_cursor.png";
+            var rawData = System.IO.File.ReadAllBytes(file);
+            clickableObjectCursor.LoadImage(rawData);
+
+            // clickableObjectCursor = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/ArtAssets/Resources/clickable_cursor.png", typeof(Texture2D));
             currentCursor = defaultCursor;
         #endif
     }
