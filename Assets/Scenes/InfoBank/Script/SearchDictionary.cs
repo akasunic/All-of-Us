@@ -190,7 +190,7 @@ public class SearchDictionary : MonoBehaviour
             // Reset it to the top of the window
             clearAllHighlights();
             verticalScrollbar.value = 1;
-            definitionsManager.WordNotFound(searchWord); 
+            definitionsManager.WordNotFound(searchWord);
             // For visual novel, if there are no results, turn off the search dictionary terms field
             if (visualNovelDictionary)
             {
