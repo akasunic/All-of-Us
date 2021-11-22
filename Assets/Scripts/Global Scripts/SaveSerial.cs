@@ -9,7 +9,8 @@ public static class SaveSerial : object {
     public static void SaveGame(Dictionary<string, SavedGame> dataToSave)
     {
         BinaryFormatter bf = new BinaryFormatter(); 
-        FileStream file = File.Create(Application.persistentDataPath 
+        
+        FileStream file = File.Create(Application.streamingAssetsPath 
                     + "/SavedData.dat"); 
         bf.Serialize(file, dataToSave);
         file.Close();
@@ -18,12 +19,12 @@ public static class SaveSerial : object {
 
     public static Dictionary<string, SavedGame> LoadGame()
     {
-        if (File.Exists(Application.persistentDataPath 
+        if (File.Exists(Application.streamingAssetsPath 
                     + "/SavedData.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = 
-                    File.Open(Application.persistentDataPath 
+                    File.Open(Application.streamingAssetsPath
                     + "/SavedData.dat", FileMode.Open);
             Dictionary<string, SavedGame> data = (Dictionary<string, SavedGame>)bf.Deserialize(file);
             file.Close();

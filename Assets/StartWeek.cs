@@ -49,6 +49,7 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI CharacterCardTitle;
     public TextMeshProUGUI CharacterCardDescription;
 
+    public GameObject blackOverlay;
 
     public Lang LangClass = new Lang(false);
     SavedGame currentGame;
@@ -105,11 +106,40 @@ public class StartWeek : MonoBehaviour
                 
                 TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
                 numberText.text = gameNum.ToString();
-            
+
+                TextMeshProUGUI completedText = savedGameItem.transform.Find("Completed Text").GetComponent<TextMeshProUGUI>();
+                completedText.text = (pair.Value.getWeek() - 1) + "/5 " + LangClass.getString("completed");
+
+                this.loadCompletedBarImage(savedGameItem, pair.Value.getWeek());
             }
 
             y_location -= 135;
             gameNum++;
+        }
+    }
+
+    public void loadCompletedBarImage(GameObject savedGameItem, int week) {
+        Image completedBar = savedGameItem.transform.Find("Completed Bar").GetComponent<Image>();
+
+        switch (week) {
+            case 1:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed0");
+                break;
+            case 2:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed1");
+                break;
+            case 3:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed2");
+                break;
+            case 4:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed3");
+                break;
+            case 5:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed4");
+                break;
+            case 6:
+                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed5");
+                break;
         }
     }
 
@@ -135,7 +165,7 @@ public class StartWeek : MonoBehaviour
 
         // Updating local variables
         ScrollView.SetActive(false);
-
+        blackOverlay.SetActive(true);
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 

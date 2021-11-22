@@ -85,6 +85,7 @@ public class InkMessageHandler : MonoBehaviour
     /// Adds a a new contact to the contacts list
     /// </summary>
     public void AddContact() {
+
         string contactString = _fc.GetStringVariable("new_contact");
         contactString = contactString.ToLower();
 
@@ -105,7 +106,6 @@ public class InkMessageHandler : MonoBehaviour
                 GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee());
                 break;
         }
-        // else if blah blah blah
     }
 
     /// <summary>
@@ -147,9 +147,14 @@ public class InkMessageHandler : MonoBehaviour
         q.questId = line;
         q.description = line; // RE-EVALUATE WHAT TO PUT HERE
 
+        // Setting the new quest title to be the "current NPC task"
+        GlobalGameInfo.SetCurrentTask(line);
+
         // Quest Giver
         line = reader.ReadLine();
         q.questGiver = HelperFunctions.CharacterFromString(line);
+        // Setting the new quest giver to be the "current NPC"
+        GlobalGameInfo.SetCurrentNPC(line);
 
         // Health exp, should be a 0 or 1
         line = reader.ReadLine();

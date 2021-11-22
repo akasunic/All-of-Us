@@ -224,7 +224,7 @@ public class InkFileManager : MonoBehaviour {
 
 
 
-        public void TryGoHome() {
+    public void TryGoHome() {
         // if (CanAdvanceDay()) {
             SceneManager.LoadScene("Home");
         // }

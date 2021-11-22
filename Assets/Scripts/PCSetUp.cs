@@ -20,12 +20,13 @@ public class PCSetUp : MonoBehaviour
     public Text nameFieldPlaceholder;
     public Dropdown pronounsDropDown;
     public Dropdown languageDropDown;
+    public GameObject backButton;
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
-    private int intPronouns;
+    private int intPronouns = 0;
     private string pronouns;
-    private int intLanguage;
+    private int intLanguage = 0;
     private string language;
     
     // Localization Feature
@@ -47,11 +48,8 @@ public class PCSetUp : MonoBehaviour
         inactiveContinueButton.gameObject.SetActive(true);
 
         // Setting dropdown lists
-        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
-        List<string> languageDropDownOptions = new List<string> { LangClass.getString("choose_one"), LangClass.getString("english"), LangClass.getString("spanish")};
-
-        pronounsDropDown.ClearOptions();
-        languageDropDown.ClearOptions();
+        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
+        List<string> languageDropDownOptions = new List<string> { LangClass.getString("english"), LangClass.getString("spanish")};
 
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
@@ -97,6 +95,10 @@ public class PCSetUp : MonoBehaviour
         }
     }
 
+    public void goBack() {
+        SceneManager.LoadScene("OpeningScene");
+    }
+
     public void Submit()
     {
         if (firstName == null || firstName.Equals("") || intPronouns == 0 || intLanguage == 0)
@@ -106,7 +108,7 @@ public class PCSetUp : MonoBehaviour
         }
 
         if (isTaken(firstName)) {
-            Debug.Log("Name, Pronouns, and Language cannot be empty");
+            Debug.Log("Name is already taken");
             return;
         }
 
@@ -121,6 +123,9 @@ public class PCSetUp : MonoBehaviour
         
         // Add new player to saved data
         Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+        if (currentData == null) {
+            currentData = new Dictionary<string, SavedGame>();
+        }
         SavedGame newPlayer = new SavedGame(firstName);
         newPlayer.setLanguage(GetLanguages(intLanguage));
         GlobalGameInfo.savedGame = newPlayer;
@@ -141,6 +146,7 @@ public class PCSetUp : MonoBehaviour
 
     private bool isTaken(string name) {
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        if (data == null) return false;
         foreach(KeyValuePair<string, SavedGame> pair in data) {
             if (pair.Value.getName() == name) return true;
         }

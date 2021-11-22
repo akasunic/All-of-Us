@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 //this is attached to instantiated prefabs and
 //will automatically update the "text" and "description" fields
@@ -170,13 +171,15 @@ public class DetailPageManager : MonoBehaviour
     }
 
     public void SelectItemForQuest() {
-        // highlight the item in the UI
-        DeselectItemInUI();
-        FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
-            HelperFunctions.StringFromCharacter(character), description);
-        GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
-        selectedItem = this;
-        Debug.Log(GetComponent<Image>().color);
+        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
+          // highlight the item in the UI
+          DeselectItemInUI();
+          FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
+              HelperFunctions.StringFromCharacter(character), description);
+          GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
+          selectedItem = this;
+          Debug.Log(GetComponent<Image>().color);
+        }    
     }
 
     private static DetailPageManager selectedItem;

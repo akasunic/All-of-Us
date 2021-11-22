@@ -48,16 +48,20 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start() {
 
-        if (GlobalGameInfo.gotalkFlag == true) this.OpenGoTalkDialog();
+        if (GlobalGameInfo.gotalkFlag == true) {
+            CalendarIcon.SetActive(false);
+            PhoneIcon.SetActive(false);
+            this.OpenGoTalkDialog();
+        }
 
         MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
         GoodMorningText.text = LangClass.getString("good_morning_message");
         
-        WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
-        WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
-        CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
+        WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
+        CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
 
-        switch (GlobalGameInfo.GetCurrentDay()) {
+        switch (GlobalGameInfo.GetCurrentDay() - 1) {
             case 0:
                 ShortDayText.text = LangClass.getString("monday_short");
                 ShortDayTextPopup.text = LangClass.getString("monday_short");

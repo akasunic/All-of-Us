@@ -15,8 +15,8 @@ public class SavedGame : object {
 
     public SavedGame(string playerName) {
         name = playerName;
-        week = 0;
-        day = 0;
+        week = 1;
+        day = 1;
         progress = new Dictionary<string, int>();
 
         progress.Add("Rashad", 0);

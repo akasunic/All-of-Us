@@ -18,7 +18,7 @@ using UnityEngine;
 public class Lang
 {
     private string currentLang = "English";
-    private string xml_path = Directory.GetCurrentDirectory() + "/Assets/Scripts/Localization/Strings.xml";
+    private string xml_path = Application.streamingAssetsPath + "/Strings.xml";
 
     private Hashtable Strings;
  
