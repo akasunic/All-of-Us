@@ -102,6 +102,7 @@ public class TodoManager : MonoBehaviour
 
     public void Update()
     {
+        /*
         // If all the checklist elements are checked, then give a green checkmark instead of the arrow
         if (checklistTransform != null && dropdownTransformArrow != null && dropdownTransformDone != null)
         {
@@ -121,5 +122,6 @@ public class TodoManager : MonoBehaviour
                 dropdownTransformArrow.gameObject.SetActive(true);
             }
         } 
+        */
     }
 }

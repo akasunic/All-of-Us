@@ -182,6 +182,14 @@ public class PhoneScreenManager : MonoBehaviour
             border.SetActive(true);
             lastSelectedBorder = border;
         }
+        // For the Notes/journal app only, update that we have seen all the bullet points (if there are any once now)
+        if(type.ToLower() == "notes")
+        {
+            for (int i = 0; i < GlobalGameInfo.infoList.Count; i++)
+            {
+                GlobalGameInfo.infoList[i].timesViewed++;
+            }
+        }
     }
 
     private void getGameObject(string type, ref GameObject go, ref GameObject border){

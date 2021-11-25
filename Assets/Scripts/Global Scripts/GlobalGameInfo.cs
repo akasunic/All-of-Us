@@ -183,8 +183,10 @@ public static class GlobalGameInfo
         public string tagIdentifier;
         public bool showNotification;
         public readonly Quest quest;
+        public int timesViewed;
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
+            this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
             this.day = day;
@@ -196,6 +198,7 @@ public static class GlobalGameInfo
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
+            this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
             this.day = day;
