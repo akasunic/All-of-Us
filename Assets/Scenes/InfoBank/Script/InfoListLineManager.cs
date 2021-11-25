@@ -13,6 +13,9 @@ public class InfoListLineManager : MonoBehaviour
     {
         this.item = item;
         this.isLast = isLast;
+        // Update the detail page manager
+        GetComponent<DetailPageManager>().setInfo(item);
+
         this.transform.Find("Content/Text").GetComponent<Text>().text = item.description;
         // If its the last note, we don't want to the divider
         if(isLast)

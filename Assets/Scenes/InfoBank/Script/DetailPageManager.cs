@@ -20,6 +20,9 @@ public class DetailPageManager : MonoBehaviour
     private static Transform lastItem = null;
     private static GlobalGameInfo.InfoItem openedInfoItem;
 
+    private Color defaultColor = new Color(0.1960f, 0.1960f, 0.196f);
+    private Color selectedColor = Color.red;
+
     private Transform overlayItem = null;
 
     private GlobalGameInfo.InfoItem infoItem;
@@ -145,23 +148,10 @@ public class DetailPageManager : MonoBehaviour
     }
 
     public void setInfo(GlobalGameInfo.InfoItem item){
+        Debug.Log("SETTING INFO");
       infoItem = item;
       text = "Day " + item.day;
-      Transform textChild = HelperFunctions.FindChildByRecursion(transform, "text");
-      if(textChild == null) return;
-      textChild.gameObject.GetComponent<TextMeshProUGUI>().text = text;
-
       description = item.description;
-      Transform descriptionChild = HelperFunctions.FindChildByRecursion(transform, "description");
-      if(descriptionChild == null) return;
-      descriptionChild.gameObject.GetComponent<TextMeshProUGUI>().text = description;
-      
-        /*
-      if(TagManager.GetTags(item.tagIdentifier).Count > 0){
-        Transform redbubble = HelperFunctions.FindChildByRecursion(transform, "redbubble");
-        redbubble.gameObject.SetActive(false);
-      }
-        */
     }
 
     public void setText(string txt){
@@ -173,12 +163,20 @@ public class DetailPageManager : MonoBehaviour
     public void SelectItemForQuest() {
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
           // highlight the item in the UI
-          DeselectItemInUI();
+          // DeselectItemInUI();
           FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
               HelperFunctions.StringFromCharacter(character), description);
-          GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
-          selectedItem = this;
-          Debug.Log(GetComponent<Image>().color);
+            // GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
+
+            // Debug.Log(GetComponent<Image>().color);
+
+            // Set the text to be red
+            if (selectedItem != null)
+            {
+                selectedItem.transform.Find("Content/Text").GetComponent<Text>().color = defaultColor;
+            }
+            selectedItem = this;
+            this.transform.Find("Content/Text").GetComponent<Text>().color = selectedColor;
         }    
     }
 
