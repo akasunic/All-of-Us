@@ -356,8 +356,12 @@ public static class GlobalGameInfo
     }
 
     public static void addNewItemToContactsList(CharacterItem c) {
-        GlobalGameInfo.contactsList.Add(c.identifier, c);
+        if(!GlobalGameInfo.contactsList.ContainsKey(c.identifier))
+        {
+            GlobalGameInfo.contactsList.Add(c.identifier, c);
+        }
     }
+        
 
     public static int GetCurrentDay()
     {
