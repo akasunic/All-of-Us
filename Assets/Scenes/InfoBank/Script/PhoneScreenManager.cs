@@ -23,6 +23,7 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject dictionaryBorder;
 
     public GameObject questPanel;
+    public GameObject notesNotificationBubble;
 
     private GameObject lastSelected;
     private GameObject lastSelectedBorder;
@@ -189,6 +190,7 @@ public class PhoneScreenManager : MonoBehaviour
             {
                 GlobalGameInfo.infoList[i].timesViewed++;
             }
+            notesNotificationBubble.SetActive(false);
         }
     }
 
