@@ -23,6 +23,7 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject dictionaryBorder;
 
     public GameObject questPanel;
+    public GameObject notesNotificationBubble;
 
     private GameObject lastSelected;
     private GameObject lastSelectedBorder;
@@ -181,6 +182,15 @@ public class PhoneScreenManager : MonoBehaviour
         if(border != null){
             border.SetActive(true);
             lastSelectedBorder = border;
+        }
+        // For the Notes/journal app only, update that we have seen all the bullet points (if there are any once now)
+        if(type.ToLower() == "notes")
+        {
+            for (int i = 0; i < GlobalGameInfo.infoList.Count; i++)
+            {
+                GlobalGameInfo.infoList[i].timesViewed++;
+            }
+            notesNotificationBubble.SetActive(false);
         }
     }
 

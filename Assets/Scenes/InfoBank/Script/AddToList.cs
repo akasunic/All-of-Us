@@ -57,7 +57,7 @@ public class AddToList : MonoBehaviour
     }
 
     private void fillTodoList(List<GlobalGameInfo.TodoItem> list){
-        
+        Debug.Log("MAKING ONCE AGAIN");
         if(list.Count == 0){
             return;
         }
