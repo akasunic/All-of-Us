@@ -38,6 +38,7 @@ public class InkMessageHandler : MonoBehaviour
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2], q);
+                
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {
                 throw new System.Exception();
@@ -149,7 +150,7 @@ public class InkMessageHandler : MonoBehaviour
 
         // Setting the new quest title to be the "current NPC task"
         GlobalGameInfo.SetCurrentTask(line);
-
+        
         // Quest Giver
         line = reader.ReadLine();
         q.questGiver = HelperFunctions.CharacterFromString(line);

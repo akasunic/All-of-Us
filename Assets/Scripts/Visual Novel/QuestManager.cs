@@ -189,10 +189,8 @@ public class QuestManager : MonoBehaviour
         // be different
         try {
             foreach (Quest q in activeQuests) {
-                Debug.Log("TRY QUEST");
                 if (q.questId == quest.questId) {
                     _status = SubmitStatus.correct;
-                    Debug.Log("QUEST CORRECT");
                     submittedQuest = quest;
                     break;
                 }

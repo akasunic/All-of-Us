@@ -185,16 +185,16 @@ public static class GlobalGameInfo
         public readonly Quest quest;
         public int timesViewed;
 
-        public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
-            this.timesViewed = 0;
-            this.character = character;
-            this.characterEnum = characterEnum;
-            this.day = day;
-            this.description = description;
-            string unhashedKey = character + day + description;
-            this.tagIdentifier = unhashedKey.GetHashCode().ToString();
-            this.showNotification = true;
-        }
+        // public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
+        //     this.timesViewed = 0;
+        //     this.character = character;
+        //     this.characterEnum = characterEnum;
+        //     this.day = day;
+        //     this.description = description;
+        //     string unhashedKey = character + day + description;
+        //     this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+        //     this.showNotification = true;
+        // }
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
@@ -205,6 +205,7 @@ public static class GlobalGameInfo
             this.description = description;
             string unhashedKey = character + day + description;
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
+            this.showNotification = true;
             this.quest = quest;
         }
     }
