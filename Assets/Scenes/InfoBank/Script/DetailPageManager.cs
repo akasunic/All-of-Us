@@ -152,6 +152,7 @@ public class DetailPageManager : MonoBehaviour
       infoItem = item;
       text = "Day " + item.day;
       description = item.description;
+      questId = item.quest.questId;
     }
 
     public void setText(string txt){
