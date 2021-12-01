@@ -416,6 +416,17 @@ public static class GlobalGameInfo
     public static void IncreaseDay()
     {
         currentDay++;
+        
+        // Increase day in saved game object
+        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+
+        foreach(KeyValuePair<string, SavedGame> pair in currentData) {
+            if (pair.Key == GlobalGameInfo.name) {
+                pair.Value.incDay();
+                SaveSerial.SaveGame(currentData);
+                break;
+            }
+        }
         if (currentDay > 4)
         {
             currentDay = 4;

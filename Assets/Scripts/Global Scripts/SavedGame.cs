@@ -13,8 +13,9 @@ public class SavedGame : object {
     private Dictionary<string, int> progress;
 
 
-    public SavedGame(string playerName) {
+    public SavedGame(string playerName, string chosenLanguage) {
         name = playerName;
+        language = chosenLanguage;
         week = 1;
         day = 1;
         progress = new Dictionary<string, int>();

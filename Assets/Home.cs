@@ -56,11 +56,8 @@ public class Home : MonoBehaviour {
             // Increase day by one
             GlobalGameInfo.IncreaseDay();
 
-            // Go back to map
-            SceneManager.LoadScene("Basic2DMap");
-
-            // Toggle new day (triggers hint bubble to say "Good Morning")
-            GlobalGameInfo.toggleNewDay();
+            // Go to saving scene
+            SceneManager.LoadScene("Saving");
         }
     }
 

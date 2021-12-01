@@ -2,6 +2,12 @@
 <languages>
 
     <English>
+
+        <string name="backstories_1">Example 1</string>
+        <string name="backstories_2">Example 2</string>
+        <string name="backstories_3">Example 3</string>
+        <string name="backstories_4">Example 4</string>
+
         <string name="ending_1">I’ve been talking so much about Bloomwood Spirit and getting this block party ready.  Today as we blocked off streets and inflated the giant bounce house, I wondered if all my efforts to help did the job. People have bigger issues. Health, money, family, school...did we make enough time? Share enough resources?</string>
         <string name="ending_2">Our Block Party is a connection between the old Bloomwood and the new Bloomwood. The smells of food and the whirring of the cotton candy machine all brought back memories. But could this bring the people?</string>
         <string name="ending_3">Just as I began to worry, Mr. Calindas arrived to set up the Healthcare tent. He patted me on the back before he went to instruct volunteer nurses on how to work with the community. “Paz and Jessica are showing up soon! Don’t worry!”</string>
