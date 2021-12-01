@@ -64,22 +64,6 @@ public class StartWeek : MonoBehaviour
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 
-        // Dictionary<string, SavedGame> dataToStore = new Dictionary<string, SavedGame>();
-        // SavedGame exampleSG = new SavedGame("AAA");
-        // SavedGame exampleSG2 = new SavedGame("BBB");
-        // SavedGame exampleSG3 = new SavedGame("CCC");
-
-        // exampleSG.setCharacterDone("Rashad");
-        // exampleSG.incDay();
-        // exampleSG.incWeek();
-
-        // dataToStore.Add("AAA", exampleSG);
-        // dataToStore.Add("BBB", exampleSG2);
-        // dataToStore.Add("CCC", exampleSG3);
-        
-        // SaveSerial.SaveGame(dataToStore);
-
-
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
 
         Title.text = LangClass.getString("saved_games");

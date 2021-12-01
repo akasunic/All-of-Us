@@ -30,7 +30,7 @@ public class Opening : MonoBehaviour
         //set a session id if not there yet
         ResetGame.startGame();
 
-        SceneManager.LoadScene("PCSetUp");
+        SceneManager.LoadScene("Backstories");
     }
 
     public void onTutorialClick() {

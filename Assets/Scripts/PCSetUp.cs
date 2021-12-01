@@ -101,6 +101,8 @@ public class PCSetUp : MonoBehaviour
 
     public void Submit()
     {
+        string previousName = GlobalGameInfo.name;
+
         if (firstName == null || firstName.Equals("") || intPronouns == 0 || intLanguage == 0)
         {
             Debug.Log("Name, Pronouns, and Language cannot be empty");
@@ -121,17 +123,31 @@ public class PCSetUp : MonoBehaviour
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
         
-        // Add new player to saved data
-        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
-        if (currentData == null) {
-            currentData = new Dictionary<string, SavedGame>();
+        if (SceneManager.GetActiveScene().name == "PCSetUp") {
+            // Add new player to saved data
+            Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+            if (currentData == null) {
+                currentData = new Dictionary<string, SavedGame>();
+            }
+            SavedGame newPlayer = new SavedGame(firstName, GetLanguages(intLanguage));
+            GlobalGameInfo.savedGame = newPlayer;
+            currentData.Add(firstName, newPlayer);
+            SaveSerial.SaveGame(currentData);
+        } else {
+            Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+
+            foreach(KeyValuePair<string, SavedGame> pair in currentData) {
+                if (pair.Key == previousName) {
+                    pair.Value.setName(GlobalGameInfo.name);
+                    pair.Value.setLanguage(GlobalGameInfo.language);
+                    // Pronouns are not used currently in the game
+                    SaveSerial.SaveGame(currentData);
+                    break;
+                }
+            }
+
         }
-        SavedGame newPlayer = new SavedGame(firstName);
-        newPlayer.setLanguage(GetLanguages(intLanguage));
-        GlobalGameInfo.savedGame = newPlayer;
-        currentData.Add(firstName, newPlayer);
-        SaveSerial.SaveGame(currentData);
-        
+
         if (SceneManager.GetActiveScene().name != "PCSetUp") {
             // Coming from phone scene
             SceneManager.LoadScene("Basic2DMap");
