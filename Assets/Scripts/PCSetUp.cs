@@ -136,16 +136,13 @@ public class PCSetUp : MonoBehaviour
         } else {
             Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
 
-            foreach(KeyValuePair<string, SavedGame> pair in currentData) {
-                if (pair.Key == previousName) {
-                    pair.Value.setName(GlobalGameInfo.name);
-                    pair.Value.setLanguage(GlobalGameInfo.language);
-                    // Pronouns are not used currently in the game
-                    SaveSerial.SaveGame(currentData);
-                    break;
-                }
-            }
-
+            SavedGame current = GlobalGameInfo.savedGame;
+            current.setName(GlobalGameInfo.name);
+            current.setLanguage(GlobalGameInfo.language);
+            currentData.Remove(previousName);
+            currentData.Add(GlobalGameInfo.name, current);
+            // Pronouns are not used currently in the game
+            SaveSerial.SaveGame(currentData);
         }
 
         if (SceneManager.GetActiveScene().name != "PCSetUp") {

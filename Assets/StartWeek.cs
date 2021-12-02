@@ -64,6 +64,12 @@ public class StartWeek : MonoBehaviour
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 
+        // If arrived from ending a week in the game, go to select profile
+        if (GlobalGameInfo.weekEndedFlag) {
+            GlobalGameInfo.weekEndedFlag = false;
+            this.clickOnSavedGame(GlobalGameInfo.savedGame);
+        }
+
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
 
         Title.text = LangClass.getString("saved_games");
@@ -144,6 +150,7 @@ public class StartWeek : MonoBehaviour
         GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
         GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
         GlobalGameInfo.language = savedGame.getLanguage();
+        GlobalGameInfo.savedGame = savedGame;
         // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];
         // TODO add pronouns later
 
