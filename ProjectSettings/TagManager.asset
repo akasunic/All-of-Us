@@ -13,6 +13,7 @@ TagManager:
   - PlayerText
   - WeekText
   - Content
+  - Input
   layers:
   - Default
   - TransparentFX

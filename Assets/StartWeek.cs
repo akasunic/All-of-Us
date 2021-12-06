@@ -149,6 +149,9 @@ public class StartWeek : MonoBehaviour
         GlobalGameInfo.SetCurrentDay(savedGame.getDay());
         GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
         GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
+        // GlobalGameInfo.todoList = savedGame.getTodoItems();
+        // GlobalGameInfo.infoList = savedGame.getInfoItems();
+        // GlobalGameInfo.contactsList = savedGame.getContactItems();
         GlobalGameInfo.language = savedGame.getLanguage();
         GlobalGameInfo.savedGame = savedGame;
         // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];

@@ -9,7 +9,8 @@ using System.Collections.Generic;
 public class PCSetUp : MonoBehaviour
 {
     public InputField nameInputField;
-    public TextMeshProUGUI TitleText;
+    public TextMeshProUGUI WelcomeTitle;
+    public TextMeshProUGUI WelcomeText;
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI PronounsText;
     public TextMeshProUGUI LanguageText;
@@ -21,6 +22,8 @@ public class PCSetUp : MonoBehaviour
     public Dropdown pronounsDropDown;
     public Dropdown languageDropDown;
     public GameObject backButton;
+    public Image NameError;
+    public TextMeshProUGUI NameErrorText;
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
@@ -36,7 +39,7 @@ public class PCSetUp : MonoBehaviour
     void Start()
     {
         LangClass.setLanguage(GlobalGameInfo.language);
-        
+
         // Setting texts from Strings.xml
         NameText.text = LangClass.getString("name_field");
         PronounsText.text = LangClass.getString("pronouns_field");
@@ -48,21 +51,21 @@ public class PCSetUp : MonoBehaviour
         inactiveContinueButton.gameObject.SetActive(true);
 
         // Setting dropdown lists
-        List<string> pronounsDropDownOptions = new List<string> { LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
-        List<string> languageDropDownOptions = new List<string> { LangClass.getString("english"), LangClass.getString("spanish")};
+        List<string> pronounsDropDownOptions = new List<string> { "", LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
+        List<string> languageDropDownOptions = new List<string> { "", LangClass.getString("english"), LangClass.getString("spanish")};
 
         pronounsDropDown.AddOptions(pronounsDropDownOptions);
         languageDropDown.AddOptions(languageDropDownOptions);
 
-
         string buttonText = "";
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
             buttonText = LangClass.getString("continue");
-            TitleText.text = LangClass.getString("pc_setup_title");
+            WelcomeTitle.text = LangClass.getString("welcome_title");
+            WelcomeText.text = LangClass.getString("welcome_text");
         } else {
             // Populate data from current settings
             firstName = GlobalGameInfo.name;
-            nameInputField.text = GlobalGameInfo.name;
+            nameInputField.text = firstName;
 
             intPronouns = GlobalGameInfo.pronounsInt;
             pronounsDropDown.value = intPronouns;
@@ -79,14 +82,13 @@ public class PCSetUp : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         firstName = nameInputField.GetComponent<InputField>().text;
         intPronouns = pronounsDropDown.value;
         intLanguage = languageDropDown.value;
 
-        if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0)
-        {
+        if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0) {
             continueButton.gameObject.SetActive(true);
             inactiveContinueButton.gameObject.SetActive(false);
         } else {
@@ -95,24 +97,23 @@ public class PCSetUp : MonoBehaviour
         }
     }
 
+    public void onEditData() {
+        NameError.gameObject.SetActive(false);
+        NameErrorText.text = "";
+    }
+
     public void goBack() {
         SceneManager.LoadScene("OpeningScene");
     }
 
     public void Submit()
     {
-        string previousName = GlobalGameInfo.name;
-
-        if (firstName == null || firstName.Equals("") || intPronouns == 0 || intLanguage == 0)
-        {
-            Debug.Log("Name, Pronouns, and Language cannot be empty");
-            return;
-        }
-
         if (isTaken(firstName)) {
-            Debug.Log("Name is already taken");
+            NameError.gameObject.SetActive(true);
+            NameErrorText.text = LangClass.getString("name_taken");
             return;
         }
+        string previousName = GlobalGameInfo.name;
 
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(intPronouns);
@@ -122,7 +123,7 @@ public class PCSetUp : MonoBehaviour
 
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
-        
+
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
             // Add new player to saved data
             Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
@@ -144,7 +145,6 @@ public class PCSetUp : MonoBehaviour
             // Pronouns are not used currently in the game
             SaveSerial.SaveGame(currentData);
         }
-
         if (SceneManager.GetActiveScene().name != "PCSetUp") {
             // Coming from phone scene
             SceneManager.LoadScene("Basic2DMap");
@@ -153,14 +153,14 @@ public class PCSetUp : MonoBehaviour
             GlobalGameInfo.pcsetupCalled = true;
             SceneManager.LoadScene("StartWeek");
         }
-
-
     }
 
     private bool isTaken(string name) {
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
         if (data == null) return false;
+        Debug.Log(name);
         foreach(KeyValuePair<string, SavedGame> pair in data) {
+            Debug.Log("PAIR VALUE: " + pair.Value.getName());
             if (pair.Value.getName() == name) return true;
         }
         return false;

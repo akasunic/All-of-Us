@@ -102,7 +102,10 @@
         <string name="they_them">They/Them</string>
         <string name="first_name">First Name</string>
         <string name="choose_one">Choose One</string>
-        
+        <string name="welcome_title">Welcome to Bloomwood</string>
+        <string name="welcome_text">Congratulations on your new role as the new Community Manager!</string>
+        <string name="name_taken">Name is taken</string>
+
         <string name="home">Home</string>
         <string name="community_center">Bloomwood Community Center</string>
         <string name="health_clinic">Bloomwood Health Clinic</string>
@@ -210,6 +213,8 @@
         <string name="they_them"></string>
         <string name="first_name"></string>
         <string name="choose_one"></string>
+        <string name="welcome_title"></string>
+        <string name="welcome_text"></string>
 
         <string name="home"></string>
         <string name="community_center"></string>
