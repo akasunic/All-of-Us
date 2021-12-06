@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1146814489}
+  selectedFlowchart: {fileID: 708418953}
 --- !u!4 &392645906
 Transform:
   m_ObjectHideFlags: 1
@@ -900,6 +900,16 @@ PrefabInstance:
       propertyPath: nameTextContainer
       value: 
       objectReference: {fileID: 400864715}
+    - target: {fileID: 464373319276694340, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464373319276694341, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: nameTextGO
@@ -954,6 +964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918973070073455866, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6108565321715087459, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
