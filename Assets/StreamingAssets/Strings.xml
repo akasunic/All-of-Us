@@ -156,11 +156,33 @@
         <string name="end_of_quest_elisa_4_title">Find out more info on diabetes</string>
         <string name="end_of_quest_elisa_4_desc">You helped Elisa and her Mom with diabetes information. Great work this week!</string>
         
-        <string name="tutorial_building">Click on a building to see who’s at this location!</string>
-        <string name="tutorial_phone">I use my phone to keep track of all the things I need to remember as a Community Liaison, and a good neighbor.</string>
-        <string name="tutorial_todo">When I have something I need to do, it’s written in my To Do App. I like to keep track of any new information I have that can help other people in the neighborhood out.</string>
-        <string name="tutorial_notes">I like to keep track of any new information I have that can help other people in the neighborhood out. I keep this in my Notes app.</string>
-        <string name="tutorial_contacts">I like to help make connections in the community, so I make sure to keep my Contacts app updated to keep up with the lives and needs of my friends.</string>
+        <string name="tutorial_startweek_yellowtitle">What should I do?</string>
+        <string name="tutorial_startweek_whitetitle">Choose a character</string>
+        <string name="tutorial_startweek_whitetext">To learn about the different community members you can help, click on their picture. Then you will be able to read more about them.</string>
+        <string name="tutorial_startweek_buttontext">GOT IT</string>
+
+        <string name="dictionary_vn_yellowtitle">Tools and Resources</string>
+        <string name="dictionary_vn_whitetitle">Search in Dictionary</string>
+        <string name="dictionary_vn_whitetext">You are about to meet Rashad! If you see words or phrases that you are not familiar with, you can try to search it using the dictionary here. Blue text in the dialogue boxes are included in the dictionary.</string>
+        <string name="dictionary_vn_buttontext">GOT IT</string>
+
+        <string name="task_map_yellowtitle">What should I do?</string>
+        <string name="task_map_whitetitle">Check your task</string>
+        <string name="task_map_whitetext">It was a great conversation! Now you will go gather more information and help them out.</string>
+        <string name="task_map_buttontext">NEXT</string>
+
+        <string name="neighbors_map_yellowtitle">What should I do?</string>
+        <string name="neighbors_map_whitetitle">Meet Neighbors</string>
+        <string name="neighbors_map_whitetext">On the map, you will see places where you can learn more, or connect the character you are helping with neighbors. Talk to people around town for advice and ideas.
+
+Hover to see who is in each location, and click their profile to start the conversation.</string>
+        <string name="neighbors_map_buttontext">NEXT</string>
+
+        <string name="phone_map_yellowtitle">What should I do?</string>
+        <string name="phone_map_whitetitle">Open your phone</string>
+        <string name="phone_map_whitetext">Click on your phone and look at your to-do list, it will help you find out your next steps!</string>
+        <string name="phone_map_buttontext">GOT IT</string>
+
     </English>
 
     <Spanish>

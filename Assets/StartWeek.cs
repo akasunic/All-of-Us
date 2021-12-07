@@ -50,6 +50,16 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI CharacterCardDescription;
 
     public GameObject blackOverlay;
+    
+    // Tutorial components
+    public GameObject TutorialContainer;
+    public GameObject TutorialArrow;
+    public Button TutorialButton;
+    public TextMeshProUGUI YellowTitle;
+    public TextMeshProUGUI WhiteTitle;
+    public TextMeshProUGUI WhiteText;
+    public TextMeshProUGUI ButtonText;
+
 
     public Lang LangClass = new Lang(false);
     SavedGame currentGame;
@@ -163,6 +173,18 @@ public class StartWeek : MonoBehaviour
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 
+        // Tutorial
+        if (!GlobalGameInfo.startWeekFlag) {
+            TutorialContainer.SetActive(true);
+            TutorialArrow.SetActive(true);
+            TutorialButton.enabled = true;
+
+            YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
+            WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
+            WhiteText.text = LangClass.getString("tutorial_startweek_whitetext");
+            ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
+        }
+
         RashadCompleted.enabled = (savedGame.getProgress()["Rashad"] == 1);
         Rashad0.SetActive(savedGame.getProgress()["Rashad"] == 0);
         Rashad1.SetActive(savedGame.getProgress()["Rashad"] == 1);
@@ -185,6 +207,13 @@ public class StartWeek : MonoBehaviour
 
         LangClass.setLanguage(GlobalGameInfo.language);
 
+    }
+
+    public void tutorialClick() {
+        TutorialContainer.SetActive(false);
+        TutorialArrow.SetActive(false);
+        TutorialButton.enabled = false;
+        GlobalGameInfo.startWeekFlag = true;
     }
 
     public void resetCharacterCards() {
