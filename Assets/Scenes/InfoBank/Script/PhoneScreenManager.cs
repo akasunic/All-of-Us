@@ -69,7 +69,19 @@ public class PhoneScreenManager : MonoBehaviour
     public Sprite journalIcon;
     public Sprite settingsIcon;
     public Sprite dictionaryIcon;
+
+    // Tutorial components
+    public GameObject TutorialContainer;
+    public GameObject TutorialArrow;
+    public Button TutorialButton;
+    public TextMeshProUGUI YellowTitle;
+    public TextMeshProUGUI WhiteTitle;
+    public TextMeshProUGUI WhiteText;
+    public TextMeshProUGUI ButtonText;
+    public string appName = "";
  
+     public Lang LangClass = new Lang(false);
+
     void Update(){
       if (started && timer <= seconds) {
         timer += Time.deltaTime;
@@ -90,6 +102,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
+        LangClass.setLanguage(GlobalGameInfo.language);
 
         messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
@@ -200,10 +213,36 @@ public class PhoneScreenManager : MonoBehaviour
             case "messages":
                 go = messages;
                 border = messagesBorder;
+                // Tutorial
+                if (!GlobalGameInfo.todolistTutorialFlag) {
+                    TutorialContainer.SetActive(true);
+                    TutorialArrow.SetActive(true);
+                    TutorialButton.enabled = true;
+
+                    YellowTitle.text = LangClass.getString("todolist_phone_yellowtitle");
+                    WhiteTitle.text = LangClass.getString("todolist_phone_whitetitle");
+                    WhiteText.text = LangClass.getString("todolist_phone_whitetext");
+                    ButtonText.text = LangClass.getString("todolist_phone_buttontext");
+
+                    appName = "todolist";
+                }
                 break;
             case "notes":
                 go = notes;
                 border = notesBorder;
+                // Tutorial
+                if (!GlobalGameInfo.myjournalsTutorialFlag) {
+                    TutorialContainer.SetActive(true);
+                    TutorialArrow.SetActive(true);
+                    TutorialButton.enabled = true;
+
+                    YellowTitle.text = LangClass.getString("myjournals_phone_yellowtitle");
+                    WhiteTitle.text = LangClass.getString("myjournals_phone_whitetitle");
+                    WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
+                    ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
+
+                    appName = "myjournals";
+                }
                 break;
             case "quest":
                 go = notes;
@@ -227,6 +266,19 @@ public class PhoneScreenManager : MonoBehaviour
                 break;
         }
     }
+
+    public void tutorialClick() {
+        TutorialContainer.SetActive(false);
+        TutorialArrow.SetActive(false);
+        TutorialButton.enabled = false;
+
+        if (appName == "todolist") {
+            GlobalGameInfo.todolistTutorialFlag = true;
+        } else if (appName == "myjournals") {
+            GlobalGameInfo.myjournalsTutorialFlag = true;
+        }
+    }
+
     private string getSectionName(string type){
         switch (type.ToLower()){
             case "messages":
