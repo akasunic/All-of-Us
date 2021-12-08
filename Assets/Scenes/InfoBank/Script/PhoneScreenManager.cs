@@ -78,9 +78,9 @@ public class PhoneScreenManager : MonoBehaviour
     public TextMeshProUGUI WhiteTitle;
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
-    public string appName = "";
- 
-     public Lang LangClass = new Lang(false);
+    public float secondsPassed = 0.0f;
+
+    public Lang LangClass = new Lang(false);
 
     void Update(){
       if (started && timer <= seconds) {
@@ -215,6 +215,7 @@ public class PhoneScreenManager : MonoBehaviour
                 border = messagesBorder;
                 // Tutorial
                 if (!GlobalGameInfo.todolistTutorialFlag) {
+
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
                     TutorialButton.enabled = true;
@@ -224,7 +225,7 @@ public class PhoneScreenManager : MonoBehaviour
                     WhiteText.text = LangClass.getString("todolist_phone_whitetext");
                     ButtonText.text = LangClass.getString("todolist_phone_buttontext");
 
-                    appName = "todolist";
+                    GlobalGameInfo.todolistTutorialFlag = true;
                 }
                 break;
             case "notes":
@@ -232,6 +233,7 @@ public class PhoneScreenManager : MonoBehaviour
                 border = notesBorder;
                 // Tutorial
                 if (!GlobalGameInfo.myjournalsTutorialFlag) {
+
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
                     TutorialButton.enabled = true;
@@ -241,7 +243,7 @@ public class PhoneScreenManager : MonoBehaviour
                     WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
                     ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
 
-                    appName = "myjournals";
+                    GlobalGameInfo.myjournalsTutorialFlag = true;
                 }
                 break;
             case "quest":
@@ -271,12 +273,6 @@ public class PhoneScreenManager : MonoBehaviour
         TutorialContainer.SetActive(false);
         TutorialArrow.SetActive(false);
         TutorialButton.enabled = false;
-
-        if (appName == "todolist") {
-            GlobalGameInfo.todolistTutorialFlag = true;
-        } else if (appName == "myjournals") {
-            GlobalGameInfo.myjournalsTutorialFlag = true;
-        }
     }
 
     private string getSectionName(string type){
