@@ -1448,6 +1448,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103804881}
   m_CullTransparentMesh: 0
+--- !u!1 &116342090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116342091}
+  - component: {fileID: 116342093}
+  - component: {fileID: 116342092}
+  m_Layer: 5
+  m_Name: Phone Glow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &116342091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116342090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 617101840}
+  m_Father: {fileID: 285907474}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 18.7, y: 5.8}
+  m_SizeDelta: {x: 1061.5278, y: 756.30615}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &116342092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116342090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 56af1e2411a254e258f9aa5ee09a1383, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &116342093
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116342090}
+  m_CullTransparentMesh: 0
 --- !u!1 &116684559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,9 +3974,9 @@ RectTransform:
   - {fileID: 1292372888}
   - {fileID: 997478827}
   - {fileID: 1733356764}
-  - {fileID: 902842814}
   - {fileID: 2007376821}
-  - {fileID: 617101840}
+  - {fileID: 1683752350}
+  - {fileID: 116342091}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3976,6 +4051,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 1858819627}
   WhiteTextPhone: {fileID: 1720343131}
   ButtonTextPhone: {fileID: 1956383894}
+  TaskGlow: {fileID: 1683752349}
+  PhoneGlow: {fileID: 116342090}
 --- !u!1 &295407292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7248,7 +7325,7 @@ MonoBehaviour:
   MrCalindasImage: {fileID: 0}
   LilaImage: {fileID: 0}
   ElisaImage: {fileID: 0}
-  blackOverlay: {fileID: 0}
+  blackOverlay: {fileID: 1338740201}
   TutorialContainerTask: {fileID: 902842813}
   TutorialArrowTask: {fileID: 374026479}
   TutorialButtonTask: {fileID: 581900358}
@@ -7270,6 +7347,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 1683752349}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &581900358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7734,12 +7813,12 @@ RectTransform:
   - {fileID: 2051520525}
   - {fileID: 1858819626}
   - {fileID: 1720343130}
-  m_Father: {fileID: 285907474}
-  m_RootOrder: 7
+  m_Father: {fileID: 116342091}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275.1, y: 137.5}
+  m_AnchoredPosition: {x: 256.39993, y: 131.70001}
   m_SizeDelta: {x: 349.99036, y: 186.59897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617101841
@@ -8189,6 +8268,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 116342090}
 --- !u!114 &649775385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10188,7 +10269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &902842814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10205,12 +10286,12 @@ RectTransform:
   - {fileID: 631851493}
   - {fileID: 2097960659}
   - {fileID: 1394865277}
-  m_Father: {fileID: 285907474}
-  m_RootOrder: 5
+  m_Father: {fileID: 1683752350}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -176, y: 124}
+  m_AnchoredPosition: {x: -261.33398, y: 143.5}
   m_SizeDelta: {x: 349.99036, y: 186.59897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902842815
@@ -18732,6 +18813,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &1419691954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20335,7 +20418,7 @@ MonoBehaviour:
   MrCalindasImage: {fileID: 0}
   LilaImage: {fileID: 0}
   ElisaImage: {fileID: 0}
-  blackOverlay: {fileID: 0}
+  blackOverlay: {fileID: 1338740201}
   TutorialContainerTask: {fileID: 0}
   TutorialArrowTask: {fileID: 0}
   TutorialButtonTask: {fileID: 0}
@@ -20357,6 +20440,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 116342090}
 --- !u!114 &1558165555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22579,6 +22664,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681186353}
   m_CullTransparentMesh: 0
+--- !u!1 &1683752349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683752350}
+  - component: {fileID: 1683752352}
+  - component: {fileID: 1683752351}
+  m_Layer: 5
+  m_Name: Task Glow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1683752350
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683752349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 902842814}
+  m_Father: {fileID: 285907474}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 85.334, y: -19.5}
+  m_SizeDelta: {x: 1194.6675, y: 807}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1683752351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683752349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 158d295e1e8c343d88826c236fb1df41, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1683752352
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683752349}
+  m_CullTransparentMesh: 0
 --- !u!1 &1685983231
 GameObject:
   m_ObjectHideFlags: 0
@@ -23964,6 +24124,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &1782759940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25305,6 +25467,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &1885034761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26949,7 +27113,7 @@ RectTransform:
   - {fileID: 917441538}
   - {fileID: 1384525864}
   m_Father: {fileID: 285907474}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27709,6 +27873,8 @@ MonoBehaviour:
   WhiteTitlePhone: {fileID: 0}
   WhiteTextPhone: {fileID: 0}
   ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!1 &2070193913
 GameObject:
   m_ObjectHideFlags: 0

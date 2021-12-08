@@ -59,6 +59,7 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI WhiteTitle;
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
+    public GameObject Glow;
 
 
     public Lang LangClass = new Lang(false);
@@ -177,6 +178,7 @@ public class StartWeek : MonoBehaviour
         if (!GlobalGameInfo.startWeekFlag) {
             TutorialContainer.SetActive(true);
             TutorialArrow.SetActive(true);
+            Glow.SetActive(true);
             TutorialButton.enabled = true;
 
             YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
@@ -212,6 +214,7 @@ public class StartWeek : MonoBehaviour
     public void tutorialClick() {
         TutorialContainer.SetActive(false);
         TutorialArrow.SetActive(false);
+        Glow.SetActive(false);
         TutorialButton.enabled = false;
         GlobalGameInfo.startWeekFlag = true;
     }
