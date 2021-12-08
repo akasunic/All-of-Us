@@ -118,11 +118,13 @@ public class EndOfQuest : MonoBehaviour
     {
         endOfQuest.SetActive(false);
         // increaes the engagement
-        GlobalGameInfo.IncreaseEngagement();
-        if (GlobalGameInfo.GetCurrentDay() == 3 &&
-            InkFileManager.CanAdvanceDay()) {
-            SceneManager.LoadScene("Ending");
-        }
+        // GlobalGameInfo.IncreaseEngagement();
+        // if (GlobalGameInfo.GetCurrentDay() == 3 &&
+        //     InkFileManager.CanAdvanceDay()) {
+        //     SceneManager.LoadScene("Ending");
+        // }
+        SceneManager.LoadScene("Home");
+
     }
 
     public class Quest

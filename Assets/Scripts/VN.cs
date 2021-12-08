@@ -9,6 +9,15 @@ using System.Collections.Generic;
 public class VN : MonoBehaviour
 {
     public TextMeshProUGUI buildingName;
+
+    // Tutorial components
+    public GameObject TutorialContainer;
+    public GameObject TutorialArrow;
+    public Button TutorialButton;
+    public TextMeshProUGUI YellowTitle;
+    public TextMeshProUGUI WhiteTitle;
+    public TextMeshProUGUI WhiteText;
+    public TextMeshProUGUI ButtonText;
     
     // Localization Feature
     public Lang LangClass = new Lang(false);
@@ -18,9 +27,7 @@ public class VN : MonoBehaviour
     {
         LangClass.setLanguage(GlobalGameInfo.language);
         
-        buildingName.text = LangClass.getString("name_field");
-
-        LangClass.setLanguage(GlobalGameInfo.language);
+        // buildingName.text = LangClass.getString("name_field");
 
         switch (SceneManager.GetActiveScene().name) {
             case ("CommunityVN"):
@@ -34,6 +41,25 @@ public class VN : MonoBehaviour
                 break;
         }
 
+        // Tutorial
+        if (!GlobalGameInfo.dictionaryFlag) {
+            TutorialContainer.SetActive(true);
+            TutorialArrow.SetActive(true);
+            TutorialButton.enabled = true;
+
+            YellowTitle.text = LangClass.getString("dictionary_vn_yellowtitle");
+            WhiteTitle.text = LangClass.getString("dictionary_vn_whitetitle");
+            WhiteText.text = LangClass.getString("dictionary_vn_whitetext");
+            ButtonText.text = LangClass.getString("dictionary_vn_buttontext");
+        }
+
+    }
+
+    public void tutorialClick() {
+        TutorialContainer.SetActive(false);
+        TutorialArrow.SetActive(false);
+        TutorialButton.enabled = false;
+        GlobalGameInfo.dictionaryFlag = true;
     }
 
     // Update is called once per frame

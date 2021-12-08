@@ -86,7 +86,6 @@ public class InkMessageHandler : MonoBehaviour
     /// Adds a a new contact to the contacts list
     /// </summary>
     public void AddContact() {
-        Debug.Log("ACTUALLY HERE AGAIN");
         string contactString = _fc.GetStringVariable("new_contact");
         contactString = contactString.ToLower();
 

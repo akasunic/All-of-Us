@@ -13,7 +13,7 @@ public class LoadSavingScreen : MonoBehaviour, IPointerEnterHandler, IPointerExi
     }
 
     public void OnPointerClick(PointerEventData eventData)
-    {
+    {        
         SceneManager.LoadScene("Saving");
     }
     public void OnPointerExit(PointerEventData eventData)

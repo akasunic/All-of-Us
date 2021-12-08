@@ -42,17 +42,38 @@ public class MapScript : MonoBehaviour
     public Image ElisaImage;
     public GameObject blackOverlay;
 
+    // Tutorial components
+    public GameObject TutorialContainerTask;
+    public GameObject TutorialArrowTask;
+    public Button TutorialButtonTask;
+    public TextMeshProUGUI YellowTitleTask;
+    public TextMeshProUGUI WhiteTitleTask;
+    public TextMeshProUGUI WhiteTextTask;
+    public TextMeshProUGUI ButtonTextTask;
+    public GameObject TutorialContainerNeighbors;
+    public Button TutorialButtonNeighbors;
+    public TextMeshProUGUI YellowTitleNeighbors;
+    public TextMeshProUGUI WhiteTitleNeighbors;
+    public TextMeshProUGUI WhiteTextNeighbors;
+    public GameObject NeighborsImage;
+    public TextMeshProUGUI ButtonTextNeighbors;
+    public GameObject TutorialContainerPhone;
+    public GameObject TutorialArrowPhone;
+    public Button TutorialButtonPhone;
+    public TextMeshProUGUI YellowTitlePhone;
+    public TextMeshProUGUI WhiteTitlePhone;
+    public TextMeshProUGUI WhiteTextPhone;
+    public TextMeshProUGUI ButtonTextPhone;
+    public GameObject TaskGlow;
+    public GameObject PhoneGlow;
+
+    private float secondsPassed = 0.0f;
+
     // Localization Feature
     public Lang LangClass = new Lang(false);
 
     // Start is called before the first frame update
-    private void Start() {
-
-        if (GlobalGameInfo.gotalkFlag == true) {
-            CalendarIcon.SetActive(false);
-            PhoneIcon.SetActive(false);
-            this.OpenGoTalkDialog();
-        }
+    private IEnumerator Start() {
 
         MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
         GoodMorningText.text = LangClass.getString("good_morning_message");
@@ -130,6 +151,84 @@ public class MapScript : MonoBehaviour
                 break;
         }
 
+        if (GlobalGameInfo.gotalkFlag == true) {
+            CalendarIcon.SetActive(false);
+            PhoneIcon.SetActive(false);
+            this.OpenGoTalkDialog();
+        } else {
+            // Tutorial
+            if (!GlobalGameInfo.mapFlag) {
+
+                while (true)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    if (secondsPassed > 3.0f)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        secondsPassed += 0.1f;
+                    }
+                }
+
+                TutorialContainerTask.SetActive(true);
+                TutorialArrowTask.SetActive(true);
+                TaskGlow.SetActive(true);
+                TutorialButtonTask.enabled = true;
+
+                // Text for the task container
+                YellowTitleTask.text = LangClass.getString("task_map_yellowtitle");
+                WhiteTitleTask.text = LangClass.getString("task_map_whitetitle");
+                WhiteTextTask.text = LangClass.getString("task_map_whitetext");
+                ButtonTextTask.text = LangClass.getString("task_map_buttontext");
+
+                // Text for the neighbors container
+                YellowTitleNeighbors.text = LangClass.getString("neighbors_map_yellowtitle");
+                WhiteTitleNeighbors.text = LangClass.getString("neighbors_map_whitetitle");
+                WhiteTextNeighbors.text = LangClass.getString("neighbors_map_whitetext");
+                ButtonTextNeighbors.text = LangClass.getString("neighbors_map_buttontext");
+
+                // Text for the phone container
+                YellowTitlePhone.text = LangClass.getString("phone_map_yellowtitle");
+                WhiteTitlePhone.text = LangClass.getString("phone_map_whitetitle");
+                WhiteTextPhone.text = LangClass.getString("phone_map_whitetext");
+                ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
+            }
+        }
+
+
+    }
+
+    public void tutorialTaskClick() {
+        TutorialContainerTask.SetActive(false);
+        TutorialArrowTask.SetActive(false);
+        TaskGlow.SetActive(false);
+        TutorialButtonTask.enabled = false;
+
+        TutorialContainerNeighbors.SetActive(true);
+        TutorialButtonNeighbors.enabled = true;
+        NeighborsImage.SetActive(true);
+        blackOverlay.SetActive(true);
+    }
+    public void tutorialNeighborsClick() {
+        TutorialContainerNeighbors.SetActive(false);
+        TutorialButtonNeighbors.enabled = false;
+        NeighborsImage.SetActive(false);
+        blackOverlay.SetActive(false);
+
+        TutorialContainerPhone.SetActive(true);
+        TutorialArrowPhone.SetActive(true);
+        PhoneGlow.SetActive(true);
+        TutorialButtonPhone.enabled = true;
+    }
+    public void tutorialPhoneClick() {
+        TutorialContainerPhone.SetActive(false);
+        TutorialArrowPhone.SetActive(false);
+        PhoneGlow.SetActive(false);
+        TutorialButtonPhone.enabled = false;
+
+        GlobalGameInfo.mapFlag = true;
     }
 
     public void toggleCalendarIcon()

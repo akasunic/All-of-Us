@@ -11,6 +11,9 @@ public class SavedGame : object {
     private int day;
     private string language;
     private Dictionary<string, int> progress;
+    // private List<GlobalGameInfo.TodoItem> todoList;
+    // private List<GlobalGameInfo.InfoItem> infoList;
+    // private Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> contactsList;
 
 
     public SavedGame(string playerName, string chosenLanguage) {
@@ -19,6 +22,9 @@ public class SavedGame : object {
         week = 1;
         day = 1;
         progress = new Dictionary<string, int>();
+        // todoList = new List<GlobalGameInfo.TodoItem>();
+        // infoList = new List<GlobalGameInfo.InfoItem>();
+        // contactsList = new Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem>();
 
         progress.Add("Rashad", 0);
         progress.Add("MrsLee", 0);
@@ -49,6 +55,10 @@ public class SavedGame : object {
 
     public void incDay() {
         day += 1;
+        if (day > 3) {
+            this.incWeek();
+            day = 0;
+        }
     }
 
     public string getLanguage() {
@@ -69,6 +79,30 @@ public class SavedGame : object {
         }
         return false;
     }
+
+    // public List<GlobalGameInfo.TodoItem> getTodoItems() {
+    //     return todoList;
+    // }
+
+    // public void setTodoItems(List<GlobalGameInfo.TodoItem> items) {
+    //     todoList = items;
+    // }
+
+    // public List<GlobalGameInfo.InfoItem> getInfoItems() {
+    //     return infoList;
+    // }
+
+    // public void setInfoItems(List<GlobalGameInfo.InfoItem> items) {
+    //     infoList = items;
+    // }
+
+    // public Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> getContactItems() {
+    //     return contactsList;
+    // }
+
+    // public void setContactItems(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> items) {
+    //     contactsList = items;
+    // }
 
     public void setCharacterDone(string character) {
         progress[character] = 1;

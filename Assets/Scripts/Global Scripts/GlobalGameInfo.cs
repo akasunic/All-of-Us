@@ -6,10 +6,17 @@ using UnityEngine;
 public static class GlobalGameInfo
 {
 
-    // PLAYER INFORMATION
+    // Tutorial Flags
+    public static bool startWeekFlag = false;
+    public static bool dictionaryFlag = false;
+    public static bool mapFlag = false;
+    public static bool todolistTutorialFlag = false;
+    public static bool myjournalsTutorialFlag = false;
 
+    // PLAYER INFORMATION
     public static bool pcsetupCalled = false;
     public static bool gotalkFlag = false;
+    public static bool weekEndedFlag = false;
     public static SavedGame savedGame;
 
     // CURRENT DAY (0 to 4)
