@@ -25,25 +25,7 @@ public class Backstories : MonoBehaviour
 
 
     public void setNextText() {
-        switch (current_text_counter) {
-            case 1:
-                Textfield.text = LangClass.getString("backstories_2");
-                current_text_counter++;
-                break;
-            case 2:
-                Textfield.text = LangClass.getString("backstories_3");
-                current_text_counter++;
-                break;
-            case 3:
-                Textfield.text = LangClass.getString("backstories_4");
-                current_text_counter++;
-                break;
-            default:
-                SceneManager.LoadScene("PCSetup");
-                current_text_counter = 1;
-                break;
-        }
-            
+        SceneManager.LoadScene("PCSetup");
     }
     
 }

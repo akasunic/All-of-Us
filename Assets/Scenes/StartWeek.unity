@@ -242,7 +242,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -363,7 +364,7 @@ MonoBehaviour:
   m_text: 42 years old | He/Him/His
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
-  m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
+  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -427,7 +428,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: 0, z: 259.07367, w: -26.395004}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &115633951
@@ -615,7 +616,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 1207259351}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 361923527}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 2030261519}
   Rashad1: {fileID: 1246711880}
   RashadCompleted: {fileID: 1176167385}
@@ -1121,7 +1123,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -1321,7 +1324,7 @@ MonoBehaviour:
     Description '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
-  m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
+  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1385,7 +1388,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: -17.263367, z: 18.664429, w: -43.658447}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &334486582
@@ -1704,7 +1707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 294.25604}
+  m_AnchoredPosition: {x: -30, y: 191.8132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -1780,7 +1783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -197.4, y: 45.1371}
+  m_AnchoredPosition: {x: -220.39, y: 60.525}
   m_SizeDelta: {x: 94.79184, y: 96.32471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485864858
@@ -1859,8 +1862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.500038, y: -48}
-  m_SizeDelta: {x: 349.99036, y: 186.59897}
+  m_AnchoredPosition: {x: 54.9, y: -84.4}
+  m_SizeDelta: {x: 396.73425, y: 259.31183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561344073
 MonoBehaviour:
@@ -1933,7 +1936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -30}
+  m_AnchoredPosition: {x: 26.5, y: -27}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695574931
@@ -1955,7 +1958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If not, you can select a different profile!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
@@ -2019,7 +2022,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -113.832184, y: 0, z: -1.3792725, w: -4.322708}
+  m_margin: {x: -85.726715, y: 0, z: -40.024292, w: -4.322708}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2404,7 +2407,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 0}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 0}
+  StartWeekText1: {fileID: 0}
+  StartWeekText2: {fileID: 0}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -2604,7 +2608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90.9, y: -90.1}
+  m_AnchoredPosition: {x: -92, y: -124}
   m_SizeDelta: {x: 99.16124, y: 37.806442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977901878
@@ -2717,7 +2721,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 0}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 0}
+  StartWeekText1: {fileID: 0}
+  StartWeekText2: {fileID: 0}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -3005,7 +3010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.08, y: 18.500004}
+  m_AnchoredPosition: {x: -39.081, y: 40}
   m_SizeDelta: {x: 303.8374, y: 51.825012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046484848
@@ -3091,7 +3096,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 39.809937, y: 0, z: 62.218567, w: 22.123886}
+  m_margin: {x: 39.809937, y: 0, z: -2.1843262, w: 22.123886}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3226,7 +3231,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -4457,7 +4463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48, y: 46}
+  m_AnchoredPosition: {x: -66, y: 69.413}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299710351
@@ -5222,7 +5228,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -5356,7 +5363,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 0}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 0}
+  StartWeekText1: {fileID: 0}
+  StartWeekText2: {fileID: 0}
   Rashad0: {fileID: 0}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}
@@ -6230,7 +6238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.8, y: 6.5}
+  m_AnchoredPosition: {x: -101.500046, y: 6.5}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1843045359
@@ -6500,7 +6508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you ready to start the week and plan the next block party for
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
@@ -6637,7 +6645,7 @@ MonoBehaviour:
   m_text: Head Librarian, Bloomwood Library
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
-  m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
+  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6701,7 +6709,7 @@ MonoBehaviour:
   m_margin: {x: -113.832184, y: 0, z: 60.203125, w: 27.769638}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1937276724
@@ -7000,8 +7008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.38, y: -24.499989}
-  m_SizeDelta: {x: 356.76227, y: 73.724976}
+  m_AnchoredPosition: {x: -12.619, y: -31}
+  m_SizeDelta: {x: 356.76227, y: 112.158905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2017037678
 MonoBehaviour:
@@ -7086,7 +7094,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 39.809937, y: 0, z: 62.218567, w: 22.123886}
+  m_margin: {x: 39.809937, y: 0, z: 17.552124, w: 22.123886}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7182,7 +7190,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7357,7 +7365,8 @@ MonoBehaviour:
   SelectProfile: {fileID: 0}
   StartWeekContainer: {fileID: 1260188725}
   SelectProfileText: {fileID: 0}
-  SelectedNPC: {fileID: 1755581820}
+  StartWeekText1: {fileID: 1881587402}
+  StartWeekText2: {fileID: 695574931}
   Rashad0: {fileID: 2030261519}
   Rashad1: {fileID: 0}
   RashadCompleted: {fileID: 0}

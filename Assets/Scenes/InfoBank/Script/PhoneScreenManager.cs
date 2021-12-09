@@ -78,6 +78,7 @@ public class PhoneScreenManager : MonoBehaviour
     public TextMeshProUGUI WhiteTitle;
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
+    public GameObject Glow;
     public float secondsPassed = 0.0f;
 
     public Lang LangClass = new Lang(false);
@@ -219,6 +220,7 @@ public class PhoneScreenManager : MonoBehaviour
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
                     TutorialButton.enabled = true;
+                    Glow.SetActive(true);
 
                     YellowTitle.text = LangClass.getString("todolist_phone_yellowtitle");
                     WhiteTitle.text = LangClass.getString("todolist_phone_whitetitle");
@@ -237,6 +239,7 @@ public class PhoneScreenManager : MonoBehaviour
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
                     TutorialButton.enabled = true;
+                    Glow.SetActive(true);
 
                     YellowTitle.text = LangClass.getString("myjournals_phone_yellowtitle");
                     WhiteTitle.text = LangClass.getString("myjournals_phone_whitetitle");
@@ -273,6 +276,7 @@ public class PhoneScreenManager : MonoBehaviour
         TutorialContainer.SetActive(false);
         TutorialArrow.SetActive(false);
         TutorialButton.enabled = false;
+        Glow.SetActive(false);
     }
 
     private string getSectionName(string type){

@@ -6354,7 +6354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.6, y: 162.6}
+  m_AnchoredPosition: {x: -139.6, y: 170.1}
   m_SizeDelta: {x: 243.19473, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706903910
@@ -7609,6 +7609,29 @@ MonoBehaviour:
   LilaImage: {fileID: 0}
   ElisaImage: {fileID: 0}
   blackOverlay: {fileID: 0}
+  TutorialContainerTask: {fileID: 0}
+  TutorialArrowTask: {fileID: 0}
+  TutorialButtonTask: {fileID: 0}
+  YellowTitleTask: {fileID: 0}
+  WhiteTitleTask: {fileID: 0}
+  WhiteTextTask: {fileID: 0}
+  ButtonTextTask: {fileID: 0}
+  TutorialContainerNeighbors: {fileID: 0}
+  TutorialButtonNeighbors: {fileID: 0}
+  YellowTitleNeighbors: {fileID: 0}
+  WhiteTitleNeighbors: {fileID: 0}
+  WhiteTextNeighbors: {fileID: 0}
+  NeighborsImage: {fileID: 0}
+  ButtonTextNeighbors: {fileID: 0}
+  TutorialContainerPhone: {fileID: 0}
+  TutorialArrowPhone: {fileID: 0}
+  TutorialButtonPhone: {fileID: 0}
+  YellowTitlePhone: {fileID: 0}
+  WhiteTitlePhone: {fileID: 0}
+  WhiteTextPhone: {fileID: 0}
+  ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &960185953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15255,8 +15278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.15, y: -47.8}
-  m_SizeDelta: {x: 469.50037, y: 60.42009}
+  m_AnchoredPosition: {x: 83.99, y: -51.97}
+  m_SizeDelta: {x: 411.17102, y: 68.75285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022160728
 MonoBehaviour:
@@ -15305,13 +15328,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -15341,7 +15364,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.5596313, w: 0.789093}
+  m_margin: {x: 0, y: 0, z: 0.29211426, w: -1.9885254}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -3,11 +3,9 @@
 
     <English>
 
-        <string name="backstories_1">Example 1</string>
-        <string name="backstories_2">Example 2</string>
-        <string name="backstories_3">Example 3</string>
-        <string name="backstories_4">Example 4</string>
-
+        <string name="backstories_1">There’s so much to love about Bloomwood! I grew up here, but I lost my connection to the community when I went away to college. I’m back now, ready to help my neighborhood thrive. 
+I am excited to start my new role as Community Manager. Everyone has a story, and I can’t wait to learn about each of my neighbors. I’m hoping everyone will agree to participate in a series of block parties all month long, so we can celebrate our successes together.
+</string>
         <string name="ending_1">I’ve been talking so much about Bloomwood Spirit and getting this block party ready.  Today as we blocked off streets and inflated the giant bounce house, I wondered if all my efforts to help did the job. People have bigger issues. Health, money, family, school...did we make enough time? Share enough resources?</string>
         <string name="ending_2">Our Block Party is a connection between the old Bloomwood and the new Bloomwood. The smells of food and the whirring of the cotton candy machine all brought back memories. But could this bring the people?</string>
         <string name="ending_3">Just as I began to worry, Mr. Calindas arrived to set up the Healthcare tent. He patted me on the back before he went to instruct volunteer nurses on how to work with the community. “Paz and Jessica are showing up soon! Don’t worry!”</string>
@@ -62,7 +60,7 @@
         <string name="completed">Completed</string>
         
         <string name="saved_games">Saved Games</string>
-        <string name="next_npc">Who would be the next Block Party protagonist?</string>
+        <string name="next_npc">Where Do I Want to Start?</string>
 
         <string name="rashad_name">Rashad Williams</string>
         <string name="rashad_age_pronouns">42 years old | He/Him/His</string>
@@ -103,13 +101,17 @@
         <string name="first_name">First Name</string>
         <string name="choose_one">Choose One</string>
         <string name="welcome_title">Welcome to Bloomwood</string>
-        <string name="welcome_text">Congratulations on your new role as the new Community Manager!</string>
+        <string name="welcome_text">Congratulations! Before you start your new role as our Community Manager, tell us a little bit about yourself</string>
         <string name="name_taken">Name is taken</string>
 
         <string name="home">Home</string>
         <string name="community_center">Bloomwood Community Center</string>
         <string name="health_clinic">Bloomwood Health Clinic</string>
         <string name="library">Bloomwood Library</string>
+
+        <string name="startweek_text1">Are you ready to start the week and help</string>
+        <string name="startweek_text2">solve some problems?</string>
+        <string name="startweek_text3">If not, you can select a different neighbor!</string>
 
         <string name="end_of_quest_rashad_1_title">A Little Help from Your Friends</string>
         <string name="end_of_quest_rashad_1_desc">You found a library assistant in the YA section! Check in with Rashad and see how he’s doing.</string>
@@ -157,25 +159,27 @@
         <string name="end_of_quest_elisa_4_desc">You helped Elisa and her Mom with diabetes information. Great work this week!</string>
         
         <string name="tutorial_startweek_yellowtitle">What should I do?</string>
-        <string name="tutorial_startweek_whitetitle">Choose a character</string>
-        <string name="tutorial_startweek_whitetext">To learn about the different community members you can help, click on their picture. Then you will be able to read more about them.</string>
+        <string name="tutorial_startweek_whitetitle">Who should I chat with first?</string>
+        <string name="tutorial_startweek_whitetext_1">Welcome, </string>
+        <string name="tutorial_startweek_whitetext_2">, New Community Manager! 
+Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems.</string>
         <string name="tutorial_startweek_buttontext">GOT IT</string>
 
         <string name="dictionary_vn_yellowtitle">Tools and Resources</string>
-        <string name="dictionary_vn_whitetitle">Search in Dictionary</string>
-        <string name="dictionary_vn_whitetext">You are about to meet Rashad! If you see words or phrases that you are not familiar with, you can try to search it using the dictionary here. Blue text in the dialogue boxes are included in the dictionary.</string>
+        <string name="dictionary_vn_whitetitle">Search the Dictionary</string>
+        <string name="dictionary_vn_whitetext">If you see unfamiliar words or phrases, check here for more information. Any words in the dialogue that are blue will be in here for sure.</string>
         <string name="dictionary_vn_buttontext">GOT IT</string>
 
-        <string name="task_map_yellowtitle">What should I do?</string>
-        <string name="task_map_whitetitle">Check your task</string>
+        <string name="task_map_yellowtitle">What Next?</string>
+        <string name="task_map_whitetitle">Stay On Task!</string>
         <string name="task_map_whitetext">It was a great conversation! Now you will go gather more information and help them out.</string>
         <string name="task_map_buttontext">NEXT</string>
 
         <string name="neighbors_map_yellowtitle">What should I do?</string>
-        <string name="neighbors_map_whitetitle">Meet Neighbors</string>
-        <string name="neighbors_map_whitetext">On the map, you will see places where you can learn more, or connect the character you are helping with neighbors. Talk to people around town for advice and ideas.
+        <string name="neighbors_map_whitetitle">Ask The Experts!</string>
+        <string name="neighbors_map_whitetext">On the map, you will see places where you can learn more. Each of your neighbors has specific expertise, and will be able to help with some of the questions you have. Talk to people around town for advice and ideas. 
 
-Hover to see who is in each location, and click their profile to start the conversation.</string>
+Hover to see who is in each location right now, and click on the neighbor to start a conversation.</string>
         <string name="neighbors_map_buttontext">NEXT</string>
 
         <string name="phone_map_yellowtitle">What should I do?</string>
@@ -184,18 +188,14 @@ Hover to see who is in each location, and click their profile to start the conve
         <string name="phone_map_buttontext">GOT IT</string>
 
         <string name="todolist_phone_yellowtitle">Tools and Resources</string>
-        <string name="todolist_phone_whitetitle">To-do List</string>
-        <string name="todolist_phone_whitetext">To solve a quest, you can check the To-do List on your phone for the next steps. 
-
-You can also view the completed tasks in the past days and weeks.</string>
+        <string name="todolist_phone_whitetitle">Check Your To-Do List</string>
+        <string name="todolist_phone_whitetext">To offer a solution to your neighbor, you will need to collect all the available data. The To-do list on your phone will help you see what you’ve already learned, and what your next steps are.</string>
         <string name="todolist_phone_buttontext">GOT IT</string>
 
         <string name="myjournals_phone_yellowtitle">Tools and Resources</string>
-        <string name="myjournals_phone_whitetitle">My Journals</string>
-        <string name="myjournals_phone_whitetext">You just learned a lot from conversations! Important information is automatically saved in MyJournals. 
-
-You can review information from past weeks as well!
-</string>
+        <string name="myjournals_phone_whitetitle">My Journal</string>
+        <string name="myjournals_phone_whitetext">Each conversation you have provides information that might help your neighbors. Useful facts are saved in your journal.
+You can also see what you’ve learned already for other neighbors.</string>
         <string name="myjournals_phone_buttontext">GOT IT</string>
 
     </English>
