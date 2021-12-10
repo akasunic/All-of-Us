@@ -18,6 +18,7 @@ public class VN : MonoBehaviour
     public TextMeshProUGUI WhiteTitle;
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
+    public GameObject Glow;
     
     // Localization Feature
     public Lang LangClass = new Lang(false);
@@ -46,6 +47,7 @@ public class VN : MonoBehaviour
             TutorialContainer.SetActive(true);
             TutorialArrow.SetActive(true);
             TutorialButton.enabled = true;
+            Glow.SetActive(true);
 
             YellowTitle.text = LangClass.getString("dictionary_vn_yellowtitle");
             WhiteTitle.text = LangClass.getString("dictionary_vn_whitetitle");
@@ -60,6 +62,7 @@ public class VN : MonoBehaviour
         TutorialArrow.SetActive(false);
         TutorialButton.enabled = false;
         GlobalGameInfo.dictionaryFlag = true;
+        Glow.SetActive(false);
     }
 
     // Update is called once per frame

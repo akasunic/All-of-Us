@@ -799,24 +799,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 0}
-  WelcomeTitle: {fileID: 0}
-  WelcomeText: {fileID: 0}
-  NameText: {fileID: 0}
-  PronounsText: {fileID: 0}
-  LanguageText: {fileID: 0}
-  ContinueText: {fileID: 0}
-  InactiveContinueText: {fileID: 0}
-  pronounsDropDownLabel: {fileID: 0}
-  languageDropDownLabel: {fileID: 0}
-  nameFieldPlaceholder: {fileID: 0}
-  pronounsDropDown: {fileID: 0}
-  languageDropDown: {fileID: 0}
+  nameInputField: {fileID: 211806039}
+  WelcomeTitle: {fileID: 706903910}
+  WelcomeText: {fileID: 2022160728}
+  NameText: {fileID: 1880341430}
+  PronounsText: {fileID: 1775591508}
+  LanguageText: {fileID: 414662878}
+  ContinueText: {fileID: 522261444}
+  InactiveContinueText: {fileID: 362686728}
+  pronounsDropDownLabel: {fileID: 1942646769}
+  languageDropDownLabel: {fileID: 109335163}
+  nameFieldPlaceholder: {fileID: 896049704}
+  pronounsDropDown: {fileID: 1175897488}
+  languageDropDown: {fileID: 1833719007}
   backButton: {fileID: 66654038}
-  NameError: {fileID: 0}
-  NameErrorText: {fileID: 0}
-  continueButton: {fileID: 0}
-  inactiveContinueButton: {fileID: 0}
+  NameError: {fileID: 299528523}
+  NameErrorText: {fileID: 2099114439}
+  continueButton: {fileID: 1584470664}
+  inactiveContinueButton: {fileID: 1142785952}
 --- !u!114 &66654041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1857,7 +1857,6 @@ GameObject:
   - component: {fileID: 211806041}
   - component: {fileID: 211806040}
   - component: {fileID: 211806039}
-  - component: {fileID: 211806042}
   m_Layer: 5
   m_Name: Name Input
   m_TagString: Input
@@ -1941,18 +1940,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 211806042}
-        m_MethodName: onEditData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -1997,36 +1985,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211806037}
   m_CullTransparentMesh: 0
---- !u!114 &211806042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211806037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 1175897488}
-  languageDropDown: {fileID: 1833719007}
-  backButton: {fileID: 66654038}
-  NameError: {fileID: 299528523}
-  NameErrorText: {fileID: 2099114439}
-  continueButton: {fileID: 1584470664}
-  inactiveContinueButton: {fileID: 1142785952}
 --- !u!1 &219886254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,7 +6312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.6, y: 162.6}
+  m_AnchoredPosition: {x: -139.6, y: 170.1}
   m_SizeDelta: {x: 243.19473, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706903910
@@ -7609,6 +7567,29 @@ MonoBehaviour:
   LilaImage: {fileID: 0}
   ElisaImage: {fileID: 0}
   blackOverlay: {fileID: 0}
+  TutorialContainerTask: {fileID: 0}
+  TutorialArrowTask: {fileID: 0}
+  TutorialButtonTask: {fileID: 0}
+  YellowTitleTask: {fileID: 0}
+  WhiteTitleTask: {fileID: 0}
+  WhiteTextTask: {fileID: 0}
+  ButtonTextTask: {fileID: 0}
+  TutorialContainerNeighbors: {fileID: 0}
+  TutorialButtonNeighbors: {fileID: 0}
+  YellowTitleNeighbors: {fileID: 0}
+  WhiteTitleNeighbors: {fileID: 0}
+  WhiteTextNeighbors: {fileID: 0}
+  NeighborsImage: {fileID: 0}
+  ButtonTextNeighbors: {fileID: 0}
+  TutorialContainerPhone: {fileID: 0}
+  TutorialArrowPhone: {fileID: 0}
+  TutorialButtonPhone: {fileID: 0}
+  YellowTitlePhone: {fileID: 0}
+  WhiteTitlePhone: {fileID: 0}
+  WhiteTextPhone: {fileID: 0}
+  ButtonTextPhone: {fileID: 0}
+  TaskGlow: {fileID: 0}
+  PhoneGlow: {fileID: 0}
 --- !u!114 &960185953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8825,7 +8806,6 @@ GameObject:
   - component: {fileID: 1142785953}
   - component: {fileID: 1142785952}
   - component: {fileID: 1142785955}
-  - component: {fileID: 1142785956}
   m_Layer: 5
   m_Name: Inactive Continue Button
   m_TagString: Untagged
@@ -8895,18 +8875,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1142785953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Submit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1142785953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8956,36 +8925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1142785956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142785950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 1175897488}
-  languageDropDown: {fileID: 1833719007}
-  backButton: {fileID: 66654038}
-  NameError: {fileID: 299528523}
-  NameErrorText: {fileID: 2099114439}
-  continueButton: {fileID: 1584470664}
-  inactiveContinueButton: {fileID: 1142785952}
 --- !u!1 &1169944561
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,7 +9119,6 @@ GameObject:
   - component: {fileID: 1175897489}
   - component: {fileID: 1175897488}
   - component: {fileID: 1175897491}
-  - component: {fileID: 1175897492}
   m_Layer: 5
   m_Name: Pronouns Dropdown
   m_TagString: Untagged
@@ -9261,18 +9199,7 @@ MonoBehaviour:
     m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1175897492}
-        m_MethodName: onEditData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1175897489
 MonoBehaviour:
@@ -9323,36 +9250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1175897492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175897486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 1175897488}
-  languageDropDown: {fileID: 1833719007}
-  backButton: {fileID: 66654038}
-  NameError: {fileID: 299528523}
-  NameErrorText: {fileID: 2099114439}
-  continueButton: {fileID: 1584470664}
-  inactiveContinueButton: {fileID: 1142785952}
 --- !u!1 &1178798082
 GameObject:
   m_ObjectHideFlags: 0
@@ -12345,8 +12242,8 @@ GameObject:
   - component: {fileID: 1584470666}
   - component: {fileID: 1584470665}
   - component: {fileID: 1584470664}
-  - component: {fileID: 1584470667}
   - component: {fileID: 1584470668}
+  - component: {fileID: 1584470667}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -12478,19 +12375,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
+  WelcomeTitle: {fileID: 0}
+  WelcomeText: {fileID: 0}
+  NameText: {fileID: 0}
+  PronounsText: {fileID: 0}
+  LanguageText: {fileID: 0}
+  ContinueText: {fileID: 0}
+  InactiveContinueText: {fileID: 0}
+  pronounsDropDownLabel: {fileID: 0}
+  languageDropDownLabel: {fileID: 0}
+  nameFieldPlaceholder: {fileID: 0}
   pronounsDropDown: {fileID: 1175897488}
   languageDropDown: {fileID: 1833719007}
-  backButton: {fileID: 66654038}
+  backButton: {fileID: 0}
   NameError: {fileID: 299528523}
   NameErrorText: {fileID: 2099114439}
   continueButton: {fileID: 1584470664}
@@ -13719,7 +13616,6 @@ GameObject:
   - component: {fileID: 1833719008}
   - component: {fileID: 1833719007}
   - component: {fileID: 1833719010}
-  - component: {fileID: 1833719011}
   m_Layer: 5
   m_Name: Language Dropdown
   m_TagString: Untagged
@@ -13800,18 +13696,7 @@ MonoBehaviour:
     m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1833719011}
-        m_MethodName: onEditData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1833719008
 MonoBehaviour:
@@ -13862,36 +13747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1833719011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833719005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 1175897488}
-  languageDropDown: {fileID: 1833719007}
-  backButton: {fileID: 66654038}
-  NameError: {fileID: 299528523}
-  NameErrorText: {fileID: 2099114439}
-  continueButton: {fileID: 1584470664}
-  inactiveContinueButton: {fileID: 1142785952}
 --- !u!1 &1849433613
 GameObject:
   m_ObjectHideFlags: 0
@@ -15255,8 +15110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.15, y: -47.8}
-  m_SizeDelta: {x: 469.50037, y: 60.42009}
+  m_AnchoredPosition: {x: 83.99, y: -51.97}
+  m_SizeDelta: {x: 411.17102, y: 68.75285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022160728
 MonoBehaviour:
@@ -15305,13 +15160,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -15341,7 +15196,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.5596313, w: 0.789093}
+  m_margin: {x: 0, y: 0, z: 0.29211426, w: -1.9885254}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

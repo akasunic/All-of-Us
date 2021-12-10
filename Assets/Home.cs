@@ -15,6 +15,15 @@ public class Home : MonoBehaviour {
     public TextMeshProUGUI DaySummaryText;
     public TextMeshProUGUI GoToSleepText;
     public GameObject blackOverlay;
+    // Day data
+    public TextMeshProUGUI NewJournalEntriesText;
+    public TextMeshProUGUI NewJournalEntriesValue;
+    public TextMeshProUGUI BlockPartyPreparationsText;
+    public TextMeshProUGUI BlockPartyPreparationsValue;
+    public TextMeshProUGUI SucculentsPlantedText;
+    public TextMeshProUGUI SucculentsPlantedValue;
+    public TextMeshProUGUI CommunityEngagementText;
+    public TextMeshProUGUI CommunityEngagementValue;
 
     // Localization Feature
     public Lang LangClass = new Lang(false);
@@ -44,7 +53,14 @@ public class Home : MonoBehaviour {
         // journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
         // customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
         // daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
-
+        NewJournalEntriesText.text = LangClass.getString("new_journal_entries");
+        NewJournalEntriesValue.text = "5";
+        BlockPartyPreparationsText.text = LangClass.getString("block_party_preparations");
+        BlockPartyPreparationsValue.text = ((GlobalGameInfo.GetCurrentDay() + 1) * 25).ToString() + "%";
+        SucculentsPlantedText.text = LangClass.getString("succulents_planted");
+        SucculentsPlantedValue.text = Random.Range(1, 10).ToString();
+        CommunityEngagementText.text = LangClass.getString("community_engagement");
+        CommunityEngagementValue.text = ((GlobalGameInfo.GetCurrentWeek()) * 20 + (GlobalGameInfo.GetCurrentDay() + 1) * 5).ToString() + "%";
     }
     
     public void goToSleep() {

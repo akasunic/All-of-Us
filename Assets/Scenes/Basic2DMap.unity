@@ -10440,7 +10440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -119.76, y: -74}
+  m_AnchoredPosition: {x: -119.76, y: -40}
   m_SizeDelta: {x: 388.47205, y: 202.00537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917441539
@@ -14440,7 +14440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162.08, y: 46}
+  m_AnchoredPosition: {x: -162.08, y: 80}
   m_SizeDelta: {x: 303.8374, y: 51.825012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347010599
@@ -19919,7 +19919,7 @@ PrefabInstance:
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_text
-      value: MyJournal\nUpdated
+      value: My Journal\nUpdated
       objectReference: {fileID: 0}
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -21359,7 +21359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: 84}
+  m_AnchoredPosition: {x: -189, y: 118}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606044758

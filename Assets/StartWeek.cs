@@ -18,7 +18,8 @@ public class StartWeek : MonoBehaviour
     public GameObject SelectProfile;
     public GameObject StartWeekContainer;
     public TextMeshProUGUI SelectProfileText;
-    public TextMeshProUGUI SelectedNPC;
+    public TextMeshProUGUI StartWeekText1;
+    public TextMeshProUGUI StartWeekText2;
     
     // NPC images
     public GameObject Rashad0;
@@ -183,7 +184,7 @@ public class StartWeek : MonoBehaviour
 
             YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
             WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
-            WhiteText.text = LangClass.getString("tutorial_startweek_whitetext");
+            WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
             ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
         }
 
@@ -230,7 +231,8 @@ public class StartWeek : MonoBehaviour
 
         // Show NPC's character card
         StartWeekContainer.SetActive(true);
-        SelectedNPC.text = NPC + "?";
+        StartWeekText1.text = LangClass.getString("startweek_text1") + " " + NPC + " " + LangClass.getString("startweek_text2");
+        StartWeekText2.text = LangClass.getString("startweek_text3");
         GlobalGameInfo.SetCurrentNPC(NPC);
         GlobalGameInfo.gotalkFlag = true;
         this.resetCharacterCards();
