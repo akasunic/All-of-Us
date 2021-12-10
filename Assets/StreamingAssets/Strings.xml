@@ -20,7 +20,7 @@ I am excited to start my new role as Community Manager. Everyone has a story, an
         <string name="todo_updated">MyTodo Updated</string>
         <string name ="phone_settings_app">Settings</string>
         <string name ="phone_contacts_app">Contacts</string>
-        <string name ="phone_todo_app">To-do List</string>
+        <string name ="phone_todo_app">To-Do List</string>
         <string name ="phone_notes_app">My Journal</string>
         <string name ="phone_dictionary_app">Dictionary</string>
     
@@ -109,6 +109,11 @@ I am excited to start my new role as Community Manager. Everyone has a story, an
         <string name="health_clinic">Bloomwood Health Clinic</string>
         <string name="library">Bloomwood Library</string>
 
+        <string name="new_journal_entries">New Journal Entries</string>
+        <string name="block_party_preparations">Block Party Preparations</string>
+        <string name="succulents_planted">Succulents Planted</string>
+        <string name="community_engagement">Community Engagement</string>
+
         <string name="startweek_text1">Are you ready to start the week and help</string>
         <string name="startweek_text2">solve some problems?</string>
         <string name="startweek_text3">If not, you can select a different neighbor!</string>
@@ -184,12 +189,12 @@ Hover to see who is in each location right now, and click on the neighbor to sta
 
         <string name="phone_map_yellowtitle">What should I do?</string>
         <string name="phone_map_whitetitle">Open your phone</string>
-        <string name="phone_map_whitetext">Click on your phone and look at your to-do list, it will help you find out your next steps!</string>
+        <string name="phone_map_whitetext">Click on your phone and look at your To-Do List, it will help you find out your next steps!</string>
         <string name="phone_map_buttontext">GOT IT</string>
 
         <string name="todolist_phone_yellowtitle">Tools and Resources</string>
         <string name="todolist_phone_whitetitle">Check Your To-Do List</string>
-        <string name="todolist_phone_whitetext">To offer a solution to your neighbor, you will need to collect all the available data. The To-do list on your phone will help you see what you’ve already learned, and what your next steps are.</string>
+        <string name="todolist_phone_whitetext">To offer a solution to your neighbor, you will need to collect all the available data. The To-Do List on your phone will help you see what you’ve already learned, and what your next steps are.</string>
         <string name="todolist_phone_buttontext">GOT IT</string>
 
         <string name="myjournals_phone_yellowtitle">Tools and Resources</string>

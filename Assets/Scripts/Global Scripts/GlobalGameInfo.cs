@@ -19,8 +19,8 @@ public static class GlobalGameInfo
     public static bool weekEndedFlag = false;
     public static SavedGame savedGame;
 
-    // CURRENT DAY (0 to 4)
-    // 0 is Monday and 4 is Friday - Block Party day
+    // CURRENT DAY (0 to 3)
+    // 0 is Monday and 3 is Thursday. Friday is Block Party day
     private static int currentDay = 0;
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;

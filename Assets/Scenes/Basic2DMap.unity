@@ -19919,7 +19919,7 @@ PrefabInstance:
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_text
-      value: MyJournal\nUpdated
+      value: My Journal\nUpdated
       objectReference: {fileID: 0}
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}

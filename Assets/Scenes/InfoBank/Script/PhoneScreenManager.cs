@@ -282,11 +282,11 @@ public class PhoneScreenManager : MonoBehaviour
     private string getSectionName(string type){
         switch (type.ToLower()){
             case "messages":
-                return "To-do List";
+                return "To-Do List";
             case "notes":
-                return "My Journals";
+                return "My Journal";
             case "quest":
-                return "My Journals";
+                return "My Journal";
             case "contacts":
                 return "My Contacts";
             case "settings":
