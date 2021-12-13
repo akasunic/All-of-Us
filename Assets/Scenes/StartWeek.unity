@@ -1707,7 +1707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 158.65015}
+  m_AnchoredPosition: {x: -30, y: 294.25604}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   LilaCard: {fileID: 0}
   MrCalindasCard: {fileID: 0}
   MrsLeeCard: {fileID: 0}
-  CharacterCardName: {fileID: 0}
+  CharacterCardName: {fileID: 1275764834}
   CharacterCardAgePronouns: {fileID: 0}
   CharacterCardTitle: {fileID: 0}
   CharacterCardDescription: {fileID: 0}
@@ -7190,7 +7190,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

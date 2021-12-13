@@ -8,17 +8,12 @@ public static class SaveSerial : object {
 
     public static void SaveGame(Dictionary<string, SavedGame> dataToSave)
     {
-        Debug.Log("AAA");
         BinaryFormatter bf = new BinaryFormatter(); 
-        Debug.Log("BBB");
         
         FileStream file = File.Create(Application.streamingAssetsPath 
                     + "/SavedData.dat"); 
-        Debug.Log("CCC");
         bf.Serialize(file, dataToSave);
-        Debug.Log("DDD");
         file.Close();
-        Debug.Log("EEE");
         Debug.Log("Game data saved!");
     }
 
@@ -36,7 +31,7 @@ public static class SaveSerial : object {
             Debug.Log("Game data loaded!");
             return data;
         } else {
-            Debug.LogError("There is no save data!");
+            Debug.Log("There is no save data!");
             return null;
         }
     }

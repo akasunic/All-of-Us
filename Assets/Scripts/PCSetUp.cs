@@ -124,6 +124,7 @@ public class PCSetUp : MonoBehaviour
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
 
+        // TODO consider moving some parts here to the SavingGame script
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
             // Add new player to saved data
             Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
@@ -158,7 +159,6 @@ public class PCSetUp : MonoBehaviour
     private bool isTaken(string name) {
         Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
         if (data == null) return false;
-        Debug.Log(name);
         foreach(KeyValuePair<string, SavedGame> pair in data) {
             Debug.Log("PAIR VALUE: " + pair.Value.getName());
             if (pair.Value.getName() == name) return true;

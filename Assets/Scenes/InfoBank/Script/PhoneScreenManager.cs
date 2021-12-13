@@ -215,7 +215,7 @@ public class PhoneScreenManager : MonoBehaviour
                 go = messages;
                 border = messagesBorder;
                 // Tutorial
-                if (!GlobalGameInfo.todolistTutorialFlag) {
+                if (!GlobalGameInfo.todolistFlag) {
 
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
@@ -227,14 +227,14 @@ public class PhoneScreenManager : MonoBehaviour
                     WhiteText.text = LangClass.getString("todolist_phone_whitetext");
                     ButtonText.text = LangClass.getString("todolist_phone_buttontext");
 
-                    GlobalGameInfo.todolistTutorialFlag = true;
+                    GlobalGameInfo.todolistFlag = true;
                 }
                 break;
             case "notes":
                 go = notes;
                 border = notesBorder;
                 // Tutorial
-                if (!GlobalGameInfo.myjournalsTutorialFlag) {
+                if (!GlobalGameInfo.myjournalFlag) {
 
                     TutorialContainer.SetActive(true);
                     TutorialArrow.SetActive(true);
@@ -246,7 +246,7 @@ public class PhoneScreenManager : MonoBehaviour
                     WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
                     ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
 
-                    GlobalGameInfo.myjournalsTutorialFlag = true;
+                    GlobalGameInfo.myjournalFlag = true;
                 }
                 break;
             case "quest":

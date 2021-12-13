@@ -104,13 +104,13 @@ public class StartWeek : MonoBehaviour
                 playerText.text = "Player: " + pair.Value.getName();
 
                 TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
-                weekAndDay.text = "Week " + pair.Value.getWeek() + ", Day " + pair.Value.getDay();
+                weekAndDay.text = "Week " + (pair.Value.getWeek() + 1) + ", Day " + (pair.Value.getDay() + 1);
                 
                 TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
                 numberText.text = gameNum.ToString();
 
                 TextMeshProUGUI completedText = savedGameItem.transform.Find("Completed Text").GetComponent<TextMeshProUGUI>();
-                completedText.text = (pair.Value.getWeek() - 1) + "/5 " + LangClass.getString("completed");
+                completedText.text = (pair.Value.getWeek()) + "/5 " + LangClass.getString("completed");
 
                 this.loadCompletedBarImage(savedGameItem, pair.Value.getWeek());
             }
@@ -123,26 +123,28 @@ public class StartWeek : MonoBehaviour
     public void loadCompletedBarImage(GameObject savedGameItem, int week) {
         Image completedBar = savedGameItem.transform.Find("Completed Bar").GetComponent<Image>();
 
-        switch (week) {
-            case 1:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed0");
-                break;
-            case 2:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed1");
-                break;
-            case 3:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed2");
-                break;
-            case 4:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed3");
-                break;
-            case 5:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed4");
-                break;
-            case 6:
-                completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed5");
-                break;
-        }
+        // switch (week) {
+        //     case 0:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed0");
+        //         break;
+        //     case 1:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed1");
+        //         break;
+        //     case 2:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed2");
+        //         break;
+        //     case 3:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed3");
+        //         break;
+        //     case 4:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed4");
+        //         break;
+        //     case 5:
+        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed5");
+        //         break;
+        // }
+        completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed" + week);
+
     }
 
     // Update is called once per frame
@@ -156,18 +158,34 @@ public class StartWeek : MonoBehaviour
         Title.text = LangClass.getString("next_npc");
         currentGame = savedGame;
         
+        // TODO later move to SavingGame.cs as a load function
         // Update global variables
         GlobalGameInfo.SetPlayerName(savedGame.getName());
         GlobalGameInfo.SetCurrentDay(savedGame.getDay());
         GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
         GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
+        
+        // Loading phone info
         // GlobalGameInfo.todoList = savedGame.getTodoItems();
         // GlobalGameInfo.infoList = savedGame.getInfoItems();
-        // GlobalGameInfo.contactsList = savedGame.getContactItems();
+        GlobalGameInfo.contactsList = savedGame.getContactItems();
+
+        // Loading tutorial flags
+        GlobalGameInfo.startWeekFlag = savedGame.getTutorialFlag("StartWeek");
+        GlobalGameInfo.dictionaryFlag = savedGame.getTutorialFlag("Dictionary");
+        GlobalGameInfo.mapFlag = savedGame.getTutorialFlag("Map");
+        GlobalGameInfo.todolistFlag = savedGame.getTutorialFlag("TodoList");
+        GlobalGameInfo.myjournalFlag = savedGame.getTutorialFlag("MyJournal");
+
         GlobalGameInfo.language = savedGame.getLanguage();
         GlobalGameInfo.savedGame = savedGame;
         // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];
         // TODO add pronouns later
+
+        // If player is in the middle of quest - go back to open quest
+        if (savedGame.isInMiddleOFQuest()) {
+            this.goBackToOpenQuest(savedGame.getNPCOfCurrentQuest());
+        }
 
         // Updating local variables
         ScrollView.SetActive(false);
@@ -188,25 +206,25 @@ public class StartWeek : MonoBehaviour
             ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
         }
 
-        RashadCompleted.enabled = (savedGame.getProgress()["Rashad"] == 1);
+        RashadCompleted.enabled = (savedGame.getProgress()["Rashad"] == 2);
         Rashad0.SetActive(savedGame.getProgress()["Rashad"] == 0);
-        Rashad1.SetActive(savedGame.getProgress()["Rashad"] == 1);
+        Rashad1.SetActive(savedGame.getProgress()["Rashad"] == 2);
 
-        MrsLeeCompleted.enabled = (savedGame.getProgress()["MrsLee"] == 1);
-        MrsLee0.SetActive(savedGame.getProgress()["MrsLee"] == 0);
-        MrsLee1.SetActive(savedGame.getProgress()["MrsLee"] == 1);
+        MrsLeeCompleted.enabled = (savedGame.getProgress()["Mrs. Lee"] == 2);
+        MrsLee0.SetActive(savedGame.getProgress()["Mrs. Lee"] == 0);
+        MrsLee1.SetActive(savedGame.getProgress()["Mrs. Lee"] == 2);
 
-        MrCalindasCompleted.enabled = (savedGame.getProgress()["MrCalindas"] == 1);
-        MrCalindas0.SetActive(savedGame.getProgress()["MrCalindas"] == 0);
-        MrCalindas1.SetActive(savedGame.getProgress()["MrCalindas"] == 1);
+        MrCalindasCompleted.enabled = (savedGame.getProgress()["Mr. Calindas"] == 2);
+        MrCalindas0.SetActive(savedGame.getProgress()["Mr. Calindas"] == 0);
+        MrCalindas1.SetActive(savedGame.getProgress()["Mr. Calindas"] == 2);
 
-        LilaCompleted.enabled = (savedGame.getProgress()["Lila"] == 1);
+        LilaCompleted.enabled = (savedGame.getProgress()["Lila"] == 2);
         Lila0.SetActive(savedGame.getProgress()["Lila"] == 0);
-        Lila1.SetActive(savedGame.getProgress()["Lila"] == 1);
+        Lila1.SetActive(savedGame.getProgress()["Lila"] == 2);
 
-        ElisaCompleted.enabled = (savedGame.getProgress()["Elisa"] == 1);
+        ElisaCompleted.enabled = (savedGame.getProgress()["Elisa"] == 2);
         Elisa0.SetActive(savedGame.getProgress()["Elisa"] == 0);
-        Elisa1.SetActive(savedGame.getProgress()["Elisa"] == 1);
+        Elisa1.SetActive(savedGame.getProgress()["Elisa"] == 2);
 
         LangClass.setLanguage(GlobalGameInfo.language);
 
@@ -227,6 +245,13 @@ public class StartWeek : MonoBehaviour
         MrCalindasCard.SetActive(false);
         MrsLeeCard.SetActive(false);
     }
+    
+    public void goBackToOpenQuest(string NPCOfCurrentQuest) {
+        GlobalGameInfo.SetCurrentNPC(NPCOfCurrentQuest);
+        GlobalGameInfo.gotalkFlag = true;
+        SceneManager.LoadScene("Basic2DMap");
+    }
+
     public void selectNPC(string NPC) {
 
         // Show NPC's character card
@@ -287,6 +312,7 @@ public class StartWeek : MonoBehaviour
     }
 
     public void GoToMapScene() {
+        SavingGame.setNPCOfCurrentQuest(GlobalGameInfo.GetCurrentNPC());
         // Go back to opening screen
         SceneManager.LoadScene("Basic2DMap");
     }

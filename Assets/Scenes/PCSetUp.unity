@@ -12375,16 +12375,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 0}
-  WelcomeText: {fileID: 0}
-  NameText: {fileID: 0}
-  PronounsText: {fileID: 0}
-  LanguageText: {fileID: 0}
-  ContinueText: {fileID: 0}
-  InactiveContinueText: {fileID: 0}
+  WelcomeTitle: {fileID: 706903910}
+  WelcomeText: {fileID: 2022160728}
+  NameText: {fileID: 1880341430}
+  PronounsText: {fileID: 1775591508}
+  LanguageText: {fileID: 414662878}
+  ContinueText: {fileID: 522261444}
+  InactiveContinueText: {fileID: 362686728}
   pronounsDropDownLabel: {fileID: 0}
   languageDropDownLabel: {fileID: 0}
-  nameFieldPlaceholder: {fileID: 0}
+  nameFieldPlaceholder: {fileID: 896049704}
   pronounsDropDown: {fileID: 1175897488}
   languageDropDown: {fileID: 1833719007}
   backButton: {fileID: 0}
