@@ -355,6 +355,8 @@ public static class GlobalGameInfo
         string description,
         Quest quest = null)
     {
+        // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
+
         GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
