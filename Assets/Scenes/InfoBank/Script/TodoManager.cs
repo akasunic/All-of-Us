@@ -40,6 +40,7 @@ public class TodoManager : MonoBehaviour
     private Transform checklistTransform = null;
     private Transform dropdownTransformArrow = null;
     private Transform dropdownTransformDone = null;
+    private string todoTitle = null;
 
 
     void Awake(){
@@ -55,11 +56,13 @@ public class TodoManager : MonoBehaviour
         }
 
         // Update checklist title
-        string title = item.title;
+        todoTitle = item.title;
         Transform textChild = HelperFunctions.FindChildByRecursion(transform, "title");
         if(textChild == null) return;
         titleRTransform = textChild.gameObject.GetComponent<RectTransform>();
-        textChild.gameObject.GetComponent<TextMeshProUGUI>().text = title;
+        textChild.gameObject.GetComponent<TextMeshProUGUI>().text = todoTitle;
+
+        
 
         // Add checklist items to checklist object 
         Transform go = HelperFunctions.FindChildByRecursion(transform, "checklist");
@@ -85,6 +88,13 @@ public class TodoManager : MonoBehaviour
         checklistTransform = this.transform.Find("checklist");
         dropdownTransformArrow = this.transform.Find("Header/dropdown/dropdownArrow");
         dropdownTransformDone = this.transform.Find("Header/dropdown/dropdownDone");
+
+        // When creating this todoitem, if its the current task, then have it open when the phone screen opens
+        if (todoTitle == GlobalGameInfo.GetCurrentTask())
+        {
+            opened = true;
+            checklistItems.SetActive(true);
+        }
     }
 
     public void toggleChecklist(){
@@ -102,26 +112,6 @@ public class TodoManager : MonoBehaviour
 
     public void Update()
     {
-        /*
-        // If all the checklist elements are checked, then give a green checkmark instead of the arrow
-        if (checklistTransform != null && dropdownTransformArrow != null && dropdownTransformDone != null)
-        {
-            bool allChecked = true;
-            foreach (Transform child in checklistTransform)
-            {
-                allChecked = allChecked && child.gameObject.GetComponent<ChecklistManager>().isChecked();
-            }
-            if (allChecked)
-            {
-                dropdownTransformArrow.gameObject.SetActive(false);
-                dropdownTransformDone.gameObject.SetActive(true);
-            }
-            else
-            {
-                dropdownTransformDone.gameObject.SetActive(false);
-                dropdownTransformArrow.gameObject.SetActive(true);
-            }
-        } 
-        */
+        
     }
 }
