@@ -162,7 +162,7 @@ public class MapScript : MonoBehaviour
                 while (true)
                 {
                     yield return new WaitForSeconds(0.1f);
-                    if (secondsPassed > 3.0f)
+                    if (secondsPassed > 1.0f)
                     {
                         break;
                     }

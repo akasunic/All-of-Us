@@ -47,7 +47,11 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
     //Do this when the cursor enters the rect area of this selectable UI object and the building has characters you can talk to
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(clickItem != null && isViewable && canTalkToAtLeastOneCharacter() && !hovering && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy){
+        if(clickItem != null && isViewable 
+            && canTalkToAtLeastOneCharacter() && !hovering
+            && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy
+            && GlobalGameInfo.mapFlag
+            ){
             clickItem.SetActive(true);
             hovering = true;
             oldScale = imageItem.transform.localScale;
@@ -67,14 +71,14 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(clickItem != null && isViewable && canTalkToAtLeastOneCharacter() && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy)
+        if(clickItem != null && isViewable && canTalkToAtLeastOneCharacter() && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy && GlobalGameInfo.mapFlag)
         {
             clickItem.SetActive(true);
         }
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(clickItem != null && hovering && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy)
+        if(clickItem != null && hovering && !calendarMessage.activeInHierarchy && !calendarPopup.activeInHierarchy && GlobalGameInfo.mapFlag)
         {
             AnimateScale(oldScale);
             hovering = false;
