@@ -126,15 +126,22 @@ public class InkFileManager : MonoBehaviour {
         activeFileIdx = (-1, -1);
     }
 
+
+    private static bool CanStartSubsequentQuest(CharacterResources.CHARACTERS character)
+    {
+        CharacterResources cr = new CharacterResources();
+        return GlobalGameInfo.GetCurrentNPC() == cr.GetName(character);
+    }
     /// <summary>
     /// Returns true if you can start a quest for character
     /// </summary>
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
         // a quest is already active
-        if (activeFileIdx != (-1, -1))
+        if (activeFileIdx != (-1, -1) || (GlobalGameInfo.GetCurrentNPC() != ""))
+        {
             return false;
-
+        }
         // have we already done their quest for the day?
         switch (character) {
             case CharacterResources.CHARACTERS.RASHAD:
@@ -195,13 +202,15 @@ public class InkFileManager : MonoBehaviour {
 
     public static bool CanSpeakToForCurrentQuestOrNewQuest(CharacterResources.CHARACTERS character)
     {
-        // try start a new quest
-        if (CanStartQuest(character))
+        // If there is no active quest
+        if (activeFileIdx == (-1, -1))
         {
-            return true;
+            // First one is a brand new quest, second one is the character is the current NPC, and we can start a new quest with them
+            return CanStartQuest(character) || CanStartSubsequentQuest(character);
         }
         else
         {
+            
             int questNum = activeFileIdx.Item1;
             int chapterNum = activeFileIdx.Item2;
             string fileToLoad = "";
@@ -324,7 +333,7 @@ public class InkFileManager : MonoBehaviour {
     /// Assets/Story Files/Resources</param>
     /// <returns>The primary speaking character for the .ink file</returns>
     private static CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
-        
+        Debug.Log("FILENAME: " + fileName);
         string[] splitLine = fileName.Split('_');
         string[] splitSecondLine = splitLine[3].Split('.');
         return HelperFunctions.CharacterFromString(splitSecondLine[0]);
