@@ -10,8 +10,8 @@ public static class GlobalGameInfo
     public static bool startWeekFlag = false;
     public static bool dictionaryFlag = false;
     public static bool mapFlag = false;
-    public static bool todolistTutorialFlag = false;
-    public static bool myjournalsTutorialFlag = false;
+    public static bool todolistFlag = false;
+    public static bool myjournalFlag = false;
 
     // PLAYER INFORMATION
     public static bool pcsetupCalled = false;
@@ -19,8 +19,8 @@ public static class GlobalGameInfo
     public static bool weekEndedFlag = false;
     public static SavedGame savedGame;
 
-    // CURRENT DAY (0 to 3)
-    // 0 is Monday and 3 is Thursday. Friday is Block Party day
+    // CURRENT DAY (0 to 4)
+    // 0 is Monday and 4 is Friday
     private static int currentDay = 0;
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
@@ -46,6 +46,9 @@ public static class GlobalGameInfo
     // engagement level
     private static readonly int MAX_ENGAGEMENT = 20;
     private static int engagement = 0;
+
+    // Data of all saved slots
+    public static Dictionary<string, SavedGame> gameData;
 
     //an enum for notifications
     public enum NOTIFICATION {
@@ -115,6 +118,7 @@ public static class GlobalGameInfo
     }
 
     //CLASSES FOR PHONE ITEMS - TODOs, INFORMATION, CONTACTs
+    [System.Serializable]
     public class TodoItem
     {
         public string title;
@@ -180,7 +184,8 @@ public static class GlobalGameInfo
             this.parent.completedItems++;
         }
     }
-
+    
+    [System.Serializable]
     public class InfoItem
     {
         public int day;
@@ -217,6 +222,7 @@ public static class GlobalGameInfo
         }
     }
 
+    [System.Serializable]
     public class CharacterItem
     {
         public string title;
@@ -435,15 +441,15 @@ public static class GlobalGameInfo
         currentDay++;
         
         // Increase day in saved game object
-        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+        // Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
 
-        foreach(KeyValuePair<string, SavedGame> pair in currentData) {
-            if (pair.Key == GlobalGameInfo.name) {
-                pair.Value.incDay();
-                SaveSerial.SaveGame(currentData);
-                break;
-            }
-        }
+        // foreach(KeyValuePair<string, SavedGame> pair in currentData) {
+        //     if (pair.Key == GlobalGameInfo.name) {
+        //         pair.Value.incDay();
+        //         SaveSerial.SaveGame(currentData);
+        //         break;
+        //     }
+        // }
         if (currentDay > 4)
         {
             currentDay = 4;

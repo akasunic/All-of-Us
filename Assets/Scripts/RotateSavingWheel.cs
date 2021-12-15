@@ -12,35 +12,14 @@ public class RotateSavingWheel : MonoBehaviour
     void Start()
     {
         secondsPassed = 0.0f;
-
-        // *******************************************
-        // ******* SAVING PROGRESS IN THE GAME *******
-        // *******************************************
-        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
-        SavedGame current = GlobalGameInfo.savedGame;
-
-        // Update and save day
-        GlobalGameInfo.SetCurrentDay(GlobalGameInfo.GetCurrentDay() + 1);
-        current.incDay();
-        // Update and save progress
-        if (GlobalGameInfo.GetCurrentDay() == 4) {
-            current.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
-            weekEndedFlag = true;
-        }
-        // Save todolist
-        // current.setTodoItems(GlobalGameInfo.todoList);
-        // Save my journal
-        // current.setInfoItems(GlobalGameInfo.infoList);
-        // Save contacts
-        // current.setContactItems(GlobalGameInfo.contactsList);
-        // Save quests
-        // TODO
-
-        currentData[GlobalGameInfo.name] = current;
-        // Pronouns are not used currently in the game
-        SaveSerial.SaveGame(currentData);
+        // Saving the game progress
+        SavingGame.SaveGameProgress();
 
         StartCoroutine(RotateWheel());
+
+        if (GlobalGameInfo.GetCurrentDay() == 4) {
+            weekEndedFlag = true;
+        }
         
         if (weekEndedFlag) {
             GlobalGameInfo.weekEndedFlag = true;

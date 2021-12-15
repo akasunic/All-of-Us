@@ -10,27 +10,41 @@ public class SavedGame : object {
     private int week;
     private int day;
     private string language;
-    private Dictionary<string, int> progress;
-    // private List<GlobalGameInfo.TodoItem> todoList;
-    // private List<GlobalGameInfo.InfoItem> infoList;
-    // private Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> contactsList;
 
+    // Explanation on the progress variable:
+    // 0 : Player has not started week of NPC
+    // 1 : Player is currently playing NPCs week
+    // 2: Player has finished week of NPC
+    private Dictionary<string, int> progress;
+    private List<GlobalGameInfo.TodoItem> todoList;
+    private List<GlobalGameInfo.InfoItem> infoList;
+    private Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> contactsList;
+
+    private Dictionary<string, bool> tutorialFlags;
 
     public SavedGame(string playerName, string chosenLanguage) {
         name = playerName;
         language = chosenLanguage;
-        week = 1;
-        day = 1;
+        week = 0;
+        day = 0;
         progress = new Dictionary<string, int>();
-        // todoList = new List<GlobalGameInfo.TodoItem>();
-        // infoList = new List<GlobalGameInfo.InfoItem>();
-        // contactsList = new Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem>();
+        todoList = new List<GlobalGameInfo.TodoItem>();
+        infoList = new List<GlobalGameInfo.InfoItem>();
+        contactsList = new Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem>();
 
         progress.Add("Rashad", 0);
-        progress.Add("MrsLee", 0);
+        progress.Add("Mrs. Lee", 0);
         progress.Add("Lila", 0);
         progress.Add("Elisa", 0);
-        progress.Add("MrCalindas", 0);
+        progress.Add("Mr. Calindas", 0);
+
+        tutorialFlags = new Dictionary<string, bool>();
+
+        tutorialFlags.Add("StartWeek", false);
+        tutorialFlags.Add("Dictionary", false);
+        tutorialFlags.Add("Map", false);
+        tutorialFlags.Add("TodoList", false);
+        tutorialFlags.Add("MyJournal", false);
     }
 
     public string getName() {
@@ -61,6 +75,24 @@ public class SavedGame : object {
         }
     }
 
+    public bool isInMiddleOFQuest() {
+        foreach(KeyValuePair<string, int> pair in progress) {
+            if (pair.Value == 1) return true;
+        }
+        return false;
+    }
+
+    public string getNPCOfCurrentQuest() {
+        foreach(KeyValuePair<string, int> pair in progress) {
+            if (pair.Value == 1) return pair.Key;
+        }
+        return "";
+    }
+
+    public void setNPCOfCurrentQuest(string NPC) {
+        progress[NPC] = 1;
+    }
+
     public string getLanguage() {
         return language;
     }
@@ -80,32 +112,40 @@ public class SavedGame : object {
         return false;
     }
 
-    // public List<GlobalGameInfo.TodoItem> getTodoItems() {
-    //     return todoList;
-    // }
+    public List<GlobalGameInfo.TodoItem> getTodoItems() {
+        return todoList;
+    }
 
-    // public void setTodoItems(List<GlobalGameInfo.TodoItem> items) {
-    //     todoList = items;
-    // }
+    public void setTodoItems(List<GlobalGameInfo.TodoItem> items) {
+        todoList = items;
+    }
 
-    // public List<GlobalGameInfo.InfoItem> getInfoItems() {
-    //     return infoList;
-    // }
+    public List<GlobalGameInfo.InfoItem> getInfoItems() {
+        return infoList;
+    }
 
-    // public void setInfoItems(List<GlobalGameInfo.InfoItem> items) {
-    //     infoList = items;
-    // }
+    public void setInfoItems(List<GlobalGameInfo.InfoItem> items) {
+        infoList = items;
+    }
 
-    // public Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> getContactItems() {
-    //     return contactsList;
-    // }
+    public Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> getContactItems() {
+        return contactsList;
+    }
 
-    // public void setContactItems(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> items) {
-    //     contactsList = items;
-    // }
+    public void setContactItems(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> items) {
+        contactsList = items;
+    }
 
     public void setCharacterDone(string character) {
-        progress[character] = 1;
+        progress[character] = 2;
+    }
+
+    public void setTutorialFlag(string flag, bool value) {
+        tutorialFlags[flag] = value;
+    }
+
+    public bool getTutorialFlag(string flag) {
+        return tutorialFlags[flag];
     }
 
 }

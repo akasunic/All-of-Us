@@ -124,24 +124,25 @@ public class PCSetUp : MonoBehaviour
         // Change the language globally
         LangClass.setLanguage(GetLanguages(intLanguage));
 
+        // TODO consider moving some parts here to the SavingGame script
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
             // Add new player to saved data
-            Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+            Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
             if (currentData == null) {
                 currentData = new Dictionary<string, SavedGame>();
             }
             SavedGame newPlayer = new SavedGame(firstName, GetLanguages(intLanguage));
             GlobalGameInfo.savedGame = newPlayer;
-            currentData.Add(firstName, newPlayer);
+            currentData[firstName] = newPlayer;
             SaveSerial.SaveGame(currentData);
         } else {
-            Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+            Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
 
             SavedGame current = GlobalGameInfo.savedGame;
             current.setName(GlobalGameInfo.name);
             current.setLanguage(GlobalGameInfo.language);
             currentData.Remove(previousName);
-            currentData.Add(GlobalGameInfo.name, current);
+            currentData[GlobalGameInfo.name] = current;
             // Pronouns are not used currently in the game
             SaveSerial.SaveGame(currentData);
         }
@@ -156,9 +157,8 @@ public class PCSetUp : MonoBehaviour
     }
 
     private bool isTaken(string name) {
-        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        Dictionary<string, SavedGame> data = GlobalGameInfo.gameData;
         if (data == null) return false;
-        Debug.Log(name);
         foreach(KeyValuePair<string, SavedGame> pair in data) {
             Debug.Log("PAIR VALUE: " + pair.Value.getName());
             if (pair.Value.getName() == name) return true;
