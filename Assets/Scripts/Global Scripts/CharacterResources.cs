@@ -88,7 +88,7 @@ public class CharacterResources
             case CHARACTERS.ELISA:
                 return "Elisa";
             case CHARACTERS.LEE:
-                return "Lee";
+                return "Mrs. Lee";
             default:
                 return "Rashad";
         }

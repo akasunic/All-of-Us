@@ -148,11 +148,17 @@ public class DetailPageManager : MonoBehaviour
     }
 
     public void setInfo(GlobalGameInfo.InfoItem item){
-        Debug.Log("SETTING INFO");
       infoItem = item;
       text = "Day " + item.day;
       description = item.description;
-      questId = item.quest.questId;
+      
+      // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
+      // Thus, only update the questId if item.quest is nonnull, as then it will be a correct answer
+      if (item.quest != null)
+      {
+        questId = item.quest.questId;
+      }
+      
     }
 
     public void setText(string txt){
