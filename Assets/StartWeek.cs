@@ -82,7 +82,7 @@ public class StartWeek : MonoBehaviour
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 
-        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        Dictionary<string, SavedGame> data = GlobalGameInfo.gameData;
 
         Title.text = LangClass.getString("saved_games");
 
@@ -122,27 +122,6 @@ public class StartWeek : MonoBehaviour
 
     public void loadCompletedBarImage(GameObject savedGameItem, int week) {
         Image completedBar = savedGameItem.transform.Find("Completed Bar").GetComponent<Image>();
-
-        // switch (week) {
-        //     case 0:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed0");
-        //         break;
-        //     case 1:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed1");
-        //         break;
-        //     case 2:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed2");
-        //         break;
-        //     case 3:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed3");
-        //         break;
-        //     case 4:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed4");
-        //         break;
-        //     case 5:
-        //         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed5");
-        //         break;
-        // }
         completedBar.sprite = Resources.Load<Sprite>("Sprites/Completed" + week);
 
     }
@@ -158,29 +137,7 @@ public class StartWeek : MonoBehaviour
         Title.text = LangClass.getString("next_npc");
         currentGame = savedGame;
         
-        // TODO later move to SavingGame.cs as a load function
-        // Update global variables
-        GlobalGameInfo.SetPlayerName(savedGame.getName());
-        GlobalGameInfo.SetCurrentDay(savedGame.getDay());
-        GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
-        GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
-        
-        // Loading phone info
-        // GlobalGameInfo.todoList = savedGame.getTodoItems();
-        // GlobalGameInfo.infoList = savedGame.getInfoItems();
-        GlobalGameInfo.contactsList = savedGame.getContactItems();
-
-        // Loading tutorial flags
-        GlobalGameInfo.startWeekFlag = savedGame.getTutorialFlag("StartWeek");
-        GlobalGameInfo.dictionaryFlag = savedGame.getTutorialFlag("Dictionary");
-        GlobalGameInfo.mapFlag = savedGame.getTutorialFlag("Map");
-        GlobalGameInfo.todolistFlag = savedGame.getTutorialFlag("TodoList");
-        GlobalGameInfo.myjournalFlag = savedGame.getTutorialFlag("MyJournal");
-
-        GlobalGameInfo.language = savedGame.getLanguage();
-        GlobalGameInfo.savedGame = savedGame;
-        // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];
-        // TODO add pronouns later
+        SavingGame.LoadGameProgress(savedGame);
 
         // If player is in the middle of quest - go back to open quest
         if (savedGame.isInMiddleOFQuest()) {

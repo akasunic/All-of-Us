@@ -75,6 +75,8 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start() {
 
+        // SavingGame.SaveGameProgress();
+
         MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
         GoodMorningText.text = LangClass.getString("good_morning_message");
         
@@ -191,7 +193,6 @@ public class MapScript : MonoBehaviour
                 ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
             }
         }
-        // SavingGame.SaveGameProgress();
     }
 
     public void tutorialTaskClick() {

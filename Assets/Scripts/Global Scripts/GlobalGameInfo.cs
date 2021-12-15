@@ -47,6 +47,9 @@ public static class GlobalGameInfo
     private static readonly int MAX_ENGAGEMENT = 20;
     private static int engagement = 0;
 
+    // Data of all saved slots
+    public static Dictionary<string, SavedGame> gameData;
+
     //an enum for notifications
     public enum NOTIFICATION {
         INFO,
@@ -436,15 +439,15 @@ public static class GlobalGameInfo
         currentDay++;
         
         // Increase day in saved game object
-        Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
+        // Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
 
-        foreach(KeyValuePair<string, SavedGame> pair in currentData) {
-            if (pair.Key == GlobalGameInfo.name) {
-                pair.Value.incDay();
-                SaveSerial.SaveGame(currentData);
-                break;
-            }
-        }
+        // foreach(KeyValuePair<string, SavedGame> pair in currentData) {
+        //     if (pair.Key == GlobalGameInfo.name) {
+        //         pair.Value.incDay();
+        //         SaveSerial.SaveGame(currentData);
+        //         break;
+        //     }
+        // }
         if (currentDay > 4)
         {
             currentDay = 4;

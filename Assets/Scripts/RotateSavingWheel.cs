@@ -12,7 +12,6 @@ public class RotateSavingWheel : MonoBehaviour
     void Start()
     {
         secondsPassed = 0.0f;
-        
         // Saving the game progress
         SavingGame.SaveGameProgress();
 
