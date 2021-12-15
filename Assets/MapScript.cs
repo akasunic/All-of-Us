@@ -75,42 +75,39 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start() {
 
+        // SavingGame.SaveGameProgress();
+
         MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
         GoodMorningText.text = LangClass.getString("good_morning_message");
         
-        WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
-        WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
-        CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek());
+        WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
 
-        switch (GlobalGameInfo.GetCurrentDay() - 1) {
+        string day = "";
+        switch (GlobalGameInfo.GetCurrentDay()) {
             case 0:
-                ShortDayText.text = LangClass.getString("monday_short");
-                ShortDayTextPopup.text = LangClass.getString("monday_short");
-                CalendarShortDayTextPopup.text = LangClass.getString("monday_short");
+                day = LangClass.getString("monday_short");
                 break;
             case 1:
-                ShortDayText.text = LangClass.getString("tuesday_short");
-                ShortDayTextPopup.text = LangClass.getString("tuesday_short");
-                CalendarShortDayTextPopup.text = LangClass.getString("tuesday_short");
+                day = LangClass.getString("tuesday_short");
                 break;
             case 2:
-                ShortDayText.text = LangClass.getString("wednesday_short");
-                ShortDayTextPopup.text = LangClass.getString("wednesday_short");
-                CalendarShortDayTextPopup.text = LangClass.getString("wednesday_short");
+                day = LangClass.getString("wednesday_short");
                 break;
             case 3:
-                ShortDayText.text = LangClass.getString("thursday_short");
-                ShortDayTextPopup.text = LangClass.getString("thursday_short");
-                CalendarShortDayTextPopup.text = LangClass.getString("thursday_short");
+                day = LangClass.getString("thursday_short");
                 break;
             case 4:
-                ShortDayText.text = LangClass.getString("friday_short");
-                ShortDayTextPopup.text = LangClass.getString("friday_short");
-                CalendarShortDayTextPopup.text = LangClass.getString("friday_short");
+                day = LangClass.getString("friday_short");
                 break;
             default:
-            break;
+                break;
         }
+        ShortDayText.text = day;
+        ShortDayTextPopup.text = day;
+        CalendarShortDayTextPopup.text = day;
+
         CurrentTaskTitle.text = LangClass.getString("current_task");
         CurrentTask.text = GlobalGameInfo.GetCurrentTask();
         CurrentNPC.text = GlobalGameInfo.GetCurrentNPC();
@@ -196,8 +193,6 @@ public class MapScript : MonoBehaviour
                 ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
             }
         }
-
-
     }
 
     public void tutorialTaskClick() {

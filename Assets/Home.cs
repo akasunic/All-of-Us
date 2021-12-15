@@ -58,7 +58,7 @@ public class Home : MonoBehaviour {
         BlockPartyPreparationsText.text = LangClass.getString("block_party_preparations");
         BlockPartyPreparationsValue.text = ((GlobalGameInfo.GetCurrentDay() + 1) * 25).ToString() + "%";
         SucculentsPlantedText.text = LangClass.getString("succulents_planted");
-        SucculentsPlantedValue.text = Random.Range(1, 10).ToString();
+        SucculentsPlantedValue.text = Random.Range(2, 10).ToString();
         CommunityEngagementText.text = LangClass.getString("community_engagement");
         CommunityEngagementValue.text = ((GlobalGameInfo.GetCurrentWeek()) * 20 + (GlobalGameInfo.GetCurrentDay() + 1) * 5).ToString() + "%";
     }

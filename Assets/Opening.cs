@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
@@ -22,6 +23,10 @@ public class Opening : MonoBehaviour
         ContinueButton.text = LangClass.getString("continue");
         NewGameButton.text = LangClass.getString("new_game");
         TutorialButton.text = LangClass.getString("tutorial");
+
+        // Loading game data
+        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
+        GlobalGameInfo.gameData = data;
     }
 
 
