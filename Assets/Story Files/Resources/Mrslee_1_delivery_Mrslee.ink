@@ -13,32 +13,32 @@ VAR new_quest = ""
 
 Mrslee?Neutral " "
 
-* Mrs. Lee! Were you just in that workout class?
+* Mrs. Lee! Were you in the workout class that just let out?
   -> Chat1
 * Hey Mrs. Lee! How are you?
   -> QuestIntro
 
 ==Chat1==
-Mrslee?Smiling "Hi {player_name}. Good to see you. Yes, this is fitness class."
+Mrslee?Smiling "Hi {player_name}. Good to see you. Yes, this is my fitness class."
 
 + That is awesome. How was it?
   -> Chat2
 
 == Chat2 ==
-Mrslee?Neutral "I am feel stress. Very, very stress."
+Mrslee?Neutral "Good, but now I am feel stress. Very, very stress."
 
 + Is there anything that I can help you with?
-  -> QuestAcceptance
+  -> QuestIntro
 + I am really sorry to hear that. Do you want to talk about it?
   -> QuestIntro
 
 == QuestIntro ==
-Mrslee?Neutral "You know my grandson. Eddie? He coming back this weekend. I am excited! He's been away at school. I pick up medicine from pharmacy, and something happen."
+Mrslee?Neutral "You know my grandson. Eddie? He coming back this weekend. I am excited! He's been away at school. I pick up medicine from pharmacy, and something happen, and I stress."
 
-+ Aw, don't be so hard on yourself, please, Mrs. Lee...
++ Aw, you sound upset; tell me what happened...
   -> QuestDetails1
 + Of course I remember Eddie. He's been away at school for a year now if I'm remembering correctly? But, huh, can I help you with anything about it, Mrs. Lee?
-  -> QuestAcceptance
+  -> QuestDetails1
 
 == QuestDetails1 ==
 Mrslee?Neutral "The medicine I pick up doesn't have name that Eddie say! I was so embarrass to ask pharmacist."

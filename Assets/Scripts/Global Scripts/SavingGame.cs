@@ -38,6 +38,7 @@ public static class SavingGame : object {
 
         currentData[GlobalGameInfo.name] = current;
         // Pronouns are not used currently in the game
+
         SaveSerial.SaveGame(currentData);
 
     }
@@ -70,7 +71,7 @@ public static class SavingGame : object {
     public static void setNPCOfCurrentQuest(string NPC) {
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
-        current.setNPCOfCurrentQuest(NPC);
+        current.setNPCForWeek(NPC);
         currentData[GlobalGameInfo.name] = current;
         SaveSerial.SaveGame(currentData);
     }

@@ -141,7 +141,7 @@ public class StartWeek : MonoBehaviour
 
         // If player is in the middle of quest - go back to open quest
         if (savedGame.isInMiddleOFQuest()) {
-            this.goBackToOpenQuest(savedGame.getNPCOfCurrentQuest());
+            this.goBackToOpenQuest(savedGame.getNPCForWeek());
         }
 
         // Updating local variables

@@ -138,7 +138,7 @@ public class InkFileManager : MonoBehaviour {
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
         // a quest is already active
-        if (activeFileIdx != (-1, -1) || (GlobalGameInfo.GetCurrentNPC() != ""))
+        if (activeFileIdx != (-1, -1))
         {
             return false;
         }

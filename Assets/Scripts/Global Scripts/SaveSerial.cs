@@ -10,18 +10,22 @@ public static class SaveSerial : object {
     {
         BinaryFormatter bf = new BinaryFormatter(); 
 
+        Debug.Log("AAA");
         FileStream file = LoadGameFile();
+        Debug.Log("BBB");
         
         if (file == null) {
-            file = File.Create(Application.streamingAssetsPath 
-                    + "/SavedData.dat", 1);
+            using (file = File.Create(Application.streamingAssetsPath 
+                    + "/SavedData.dat", 1)) {
+        bf.Serialize(file, dataToSave);
+
+                    }
         }
 
         // FileStream file = File.Create(Application.streamingAssetsPath 
         //             + "/SavedData.dat"); 
-        bf.Serialize(file, dataToSave);
 
-        file.Close();
+        // file.Close();
 
         GlobalGameInfo.gameData = dataToSave;
 
@@ -35,17 +39,19 @@ public static class SaveSerial : object {
         {
             BinaryFormatter bf = new BinaryFormatter();
 
-            FileStream file = 
+            using (FileStream file = 
                     File.Open(Application.streamingAssetsPath
-                    + "/SavedData.dat", FileMode.Open);
+                    + "/SavedData.dat", FileMode.Open)) {
 
             Dictionary<string, SavedGame> data = (Dictionary<string, SavedGame>)bf.Deserialize(file);
+            return data;
+                    }
 
-            file.Close();
+
+            // file.Close();
 
             Debug.Log("Game data loaded!");
 
-            return data;
         } else {
             Debug.Log("There is no save data!");
             return null;
@@ -57,10 +63,12 @@ public static class SaveSerial : object {
         if (File.Exists(Application.streamingAssetsPath 
                     + "/SavedData.dat"))
         {
-            FileStream file = 
+            using (FileStream file = 
                     File.Open(Application.streamingAssetsPath
-                    + "/SavedData.dat", FileMode.Open);
+                    + "/SavedData.dat", FileMode.Open)) {
             return file;
+
+                    }
         } else {
             return null;
         }
