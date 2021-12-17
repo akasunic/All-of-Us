@@ -8,7 +8,6 @@ public class RotateSavingWheel : MonoBehaviour
     private float secondsPassed;
     // Start is called before the first frame update
 
-    private bool weekEndedFlag = false;
     void Start()
     {
         secondsPassed = 0.0f;
@@ -16,13 +15,10 @@ public class RotateSavingWheel : MonoBehaviour
         SavingGame.SaveGameProgress();
 
         StartCoroutine(RotateWheel());
-
-        if (GlobalGameInfo.GetCurrentDay() == 4) {
-            weekEndedFlag = true;
-        }
         
-        if (weekEndedFlag) {
-            GlobalGameInfo.weekEndedFlag = true;
+        if (GlobalGameInfo.weekEndedFlag) {
+            // TODO start end of week scene and from there activate the StartWeek Scene again
+            GlobalGameInfo.weekEndedFlag = false;
             SceneManager.LoadScene("StartWeek");
         } else {
             SceneManager.LoadScene("Basic2DMap");

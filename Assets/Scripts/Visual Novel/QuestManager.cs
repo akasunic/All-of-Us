@@ -9,6 +9,8 @@ using Fungus;
 /// <summary>
 /// Contains info for each quest
 /// </summary>
+
+[System.Serializable]
 public class Quest {
     public string questId; // used to identify quests behind the scenes
     public CharacterResources.CHARACTERS questGiver; // the NPC who assigned the quest

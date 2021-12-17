@@ -24,8 +24,6 @@ public static class GlobalGameInfo
     private static int currentDay = 0;
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
-    // CURRENT PROGRESS FOR PLAYER
-    private static Dictionary<string, int> currentProgress = new Dictionary<string, int>();
 
     // CURRENT NPC FOR THE WEEK (the name as string)
     private static string currentNPC = "";
@@ -166,6 +164,7 @@ public static class GlobalGameInfo
         }
     }
 
+    [System.Serializable]
     public class ChecklistItem
     {
         public string title;
@@ -396,14 +395,6 @@ public static class GlobalGameInfo
         currentWeek = week;
     }
 
-    public static Dictionary<string, int> GetCurrentProgress()
-    {
-        return currentProgress;
-    }
-
-    public static void SetCurrentProgress(Dictionary<string, int> progress) {
-        currentProgress = progress;
-    }
     public static string GetPlayerName()
     {
         return name;
@@ -439,22 +430,15 @@ public static class GlobalGameInfo
     public static void IncreaseDay()
     {
         currentDay++;
-        
-        // Increase day in saved game object
-        // Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
-
-        // foreach(KeyValuePair<string, SavedGame> pair in currentData) {
-        //     if (pair.Key == GlobalGameInfo.name) {
-        //         pair.Value.incDay();
-        //         SaveSerial.SaveGame(currentData);
-        //         break;
-        //     }
-        // }
-        if (currentDay > 4)
+    
+        // If week has ended
+        if (currentDay > 3)
         {
-            currentDay = 4;
+            currentDay = 0;
+            currentWeek++;
+            currentNPC = "";
+            weekEndedFlag = true;
         }
-        Debug.Log("Current Day: " + currentDay);
     }
 
     // call this function using GlobalGameInfo.GetEngagement()

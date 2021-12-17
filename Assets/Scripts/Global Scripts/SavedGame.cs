@@ -70,8 +70,9 @@ public class SavedGame : object {
     public void incDay() {
         day += 1;
         if (day > 3) {
-            this.incWeek();
             day = 0;
+            this.incWeek();
+            this.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
         }
     }
 

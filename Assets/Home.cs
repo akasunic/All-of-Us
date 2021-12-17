@@ -69,8 +69,7 @@ public class Home : MonoBehaviour {
             // reset daily quest progess for the next day
             InkFileManager.ResetDailyBools();
 
-            // Increase day by one
-            GlobalGameInfo.IncreaseDay();
+            // Increase day gets updated in the saving class
 
             // Go to saving scene
             SceneManager.LoadScene("Saving");

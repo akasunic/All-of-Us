@@ -333,7 +333,6 @@ public class InkFileManager : MonoBehaviour {
     /// Assets/Story Files/Resources</param>
     /// <returns>The primary speaking character for the .ink file</returns>
     private static CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
-        Debug.Log("FILENAME: " + fileName);
         string[] splitLine = fileName.Split('_');
         string[] splitSecondLine = splitLine[3].Split('.');
         return HelperFunctions.CharacterFromString(splitSecondLine[0]);
