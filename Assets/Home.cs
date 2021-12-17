@@ -34,7 +34,7 @@ public class Home : MonoBehaviour {
         LangClass.setLanguage(GlobalGameInfo.language);
 
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
-        DayText.text = LangClass.getString("wednesday");
+        DayText.text = GlobalGameInfo.GetCurrentDayAsString("long");
         CommunityManagerText.text = LangClass.getString("comm_manager");
         DaySummaryText.text = LangClass.getString("day_summary");
         GoToSleepText.text = LangClass.getString("go_to_sleep");
@@ -64,17 +64,12 @@ public class Home : MonoBehaviour {
     }
     
     public void goToSleep() {
-        // Only if PC has finished the 5 quests for the day
-        if (InkFileManager.CanAdvanceDay()) {
-            // reset daily quest progess for the next day
-            InkFileManager.ResetDailyBools();
+        // Increase day gets updated in the saving class below
 
-            // Increase day by one
-            GlobalGameInfo.IncreaseDay();
-
-            // Go to saving scene
-            SceneManager.LoadScene("Saving");
-        }
+        // Saving the game progress
+        SavingGame.SaveGameProgress();
+        // Go to saving scene
+        SceneManager.LoadScene("Saving");
     }
 
 }

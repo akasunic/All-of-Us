@@ -8,20 +8,22 @@ public static class SavingGame : object {
     // Function to Save Game Progress for current user
 
     public static void SaveGameProgress() {
-        Debug.Log("STARTING SAVE GAME PROGRESS");
         // *******************************************
         // ******* SAVING PROGRESS IN THE GAME *******
         // *******************************************
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
-        // Update and save day
+        // Update and save day (progress is updated within incDay() call)
+        Debug.Log("current day " + current.getDay());
+        Debug.Log("globalgameinfo day " + GlobalGameInfo.GetCurrentDay());
         current.incDay();
-        // Update and save progress
-        if (GlobalGameInfo.GetCurrentDay() == 4) {
-            current.setCharacterDone(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
-        }
+
+        GlobalGameInfo.IncreaseDay();
+        Debug.Log("current day after " + current.getDay());
+        Debug.Log("globalgameinfo day after " + GlobalGameInfo.GetCurrentDay());
+        
         // Save todolist
-        // current.setTodoItems(GlobalGameInfo.todoList);
+        current.setTodoItems(GlobalGameInfo.todoList);
         // Save my journal
         current.setInfoItems(GlobalGameInfo.infoList);
         // Save contacts
@@ -36,8 +38,15 @@ public static class SavingGame : object {
         current.setTutorialFlag("TodoList", GlobalGameInfo.todolistFlag);
         current.setTutorialFlag("MyJournal", GlobalGameInfo.myjournalFlag);
 
-        currentData[GlobalGameInfo.name] = current;
         // Pronouns are not used currently in the game
+
+        // Update current data before saving
+        currentData[GlobalGameInfo.name] = current;
+
+        // Updating the global variables in case playing continues
+        GlobalGameInfo.savedGame = current;
+        GlobalGameInfo.gameData = currentData;
+
         SaveSerial.SaveGame(currentData);
 
     }
@@ -47,10 +56,10 @@ public static class SavingGame : object {
         GlobalGameInfo.SetPlayerName(savedGame.getName());
         GlobalGameInfo.SetCurrentDay(savedGame.getDay());
         GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
-        GlobalGameInfo.SetCurrentProgress(savedGame.getProgress());
+        GlobalGameInfo.language = savedGame.getLanguage();
         
         // Loading phone info
-        // GlobalGameInfo.todoList = savedGame.getTodoItems();
+        GlobalGameInfo.todoList = savedGame.getTodoItems();
         GlobalGameInfo.infoList = savedGame.getInfoItems();
         GlobalGameInfo.contactsList = savedGame.getContactItems();
 
@@ -61,16 +70,15 @@ public static class SavingGame : object {
         GlobalGameInfo.todolistFlag = savedGame.getTutorialFlag("TodoList");
         GlobalGameInfo.myjournalFlag = savedGame.getTutorialFlag("MyJournal");
 
-        GlobalGameInfo.language = savedGame.getLanguage();
         GlobalGameInfo.savedGame = savedGame;
-        // GlobalGameInfo.languageInt = GlobalGameInfo.langDict[GlobalGameInfo.language];
         // TODO add pronouns later
     }
 
     public static void setNPCOfCurrentQuest(string NPC) {
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
-        current.setNPCOfCurrentQuest(NPC);
+        current.setNPCForWeek(NPC);
+        GlobalGameInfo.savedGame = current;
         currentData[GlobalGameInfo.name] = current;
         SaveSerial.SaveGame(currentData);
     }

@@ -64,7 +64,6 @@ public class StartWeek : MonoBehaviour
 
 
     public Lang LangClass = new Lang(false);
-    SavedGame currentGame;
     
     // Start is called before the first frame update
     void Start()
@@ -82,14 +81,12 @@ public class StartWeek : MonoBehaviour
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 
-        Dictionary<string, SavedGame> data = GlobalGameInfo.gameData;
-
         Title.text = LangClass.getString("saved_games");
 
         int y_location = 152;
         int gameNum = 1;
 
-        foreach(KeyValuePair<string, SavedGame> pair in data) {
+        foreach(KeyValuePair<string, SavedGame> pair in GlobalGameInfo.gameData) {
             GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(-330f, y_location, 0f), Quaternion.identity);
 
             UnityEngine.UI.Button btn = savedGameItem.GetComponent<Button>();
@@ -133,15 +130,15 @@ public class StartWeek : MonoBehaviour
 
     public void clickOnSavedGame(SavedGame savedGame) {
 
+        GlobalGameInfo.savedGame = savedGame;
         // Change view to selecting a profile
         Title.text = LangClass.getString("next_npc");
-        currentGame = savedGame;
-        
+        // Load game slot into Global Game Info
         SavingGame.LoadGameProgress(savedGame);
 
         // If player is in the middle of quest - go back to open quest
         if (savedGame.isInMiddleOFQuest()) {
-            this.goBackToOpenQuest(savedGame.getNPCOfCurrentQuest());
+            this.goBackToOpenQuest(savedGame.getNPCForWeek());
         }
 
         // Updating local variables

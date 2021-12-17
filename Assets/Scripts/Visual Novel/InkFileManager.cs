@@ -137,9 +137,7 @@ public class InkFileManager : MonoBehaviour {
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
         // a quest is already active
-        Debug.Log("CURRENT NPC: " + GlobalGameInfo.GetCurrentNPC());
-        Debug.Log("INPUT NPC: " + CharacterResources.GetName(character));
-        if (activeFileIdx != (-1, -1) || GlobalGameInfo.GetCurrentNPC() != character)
+        if (activeFileIdx != (-1, -1))
         {
             return false;
         }
@@ -334,7 +332,6 @@ public class InkFileManager : MonoBehaviour {
     /// Assets/Story Files/Resources</param>
     /// <returns>The primary speaking character for the .ink file</returns>
     private static CharacterResources.CHARACTERS GetSpeakerFromFile(string fileName) {
-        Debug.Log("FILENAME: " + fileName);
         string[] splitLine = fileName.Split('_');
         string[] splitSecondLine = splitLine[3].Split('.');
         return HelperFunctions.CharacterFromString(splitSecondLine[0]);
