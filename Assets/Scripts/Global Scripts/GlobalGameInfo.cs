@@ -47,6 +47,9 @@ public static class GlobalGameInfo
 
     // Data of all saved slots
     public static Dictionary<string, SavedGame> gameData;
+        
+    // Localization Feature
+    public static Lang LangClass = new Lang(false);
 
     //an enum for notifications
     public enum NOTIFICATION {
@@ -384,6 +387,54 @@ public static class GlobalGameInfo
     }
     public static void SetCurrentDay(int day) {
         currentDay = day;
+    }
+
+    // Type can be "short" for MON, TUE, etc. or "long" for "Monday", "Tuesday", etc.
+    public static string GetCurrentDayAsString(string dayType)
+    {
+        LangClass.setLanguage(GlobalGameInfo.language);
+
+        string day = "";
+        switch (currentDay) {
+            case 0:
+                if (dayType == "short") {
+                    day = LangClass.getString("monday_short");
+                } else {
+                    day = LangClass.getString("monday");
+                }
+                break;
+            case 1:
+                if (dayType == "short") {
+                    day = LangClass.getString("tuesday_short");
+                } else {
+                    day = LangClass.getString("tuesday");
+                }
+                break;
+            case 2:
+                if (dayType == "short") {
+                    day = LangClass.getString("wednesday_short");
+                } else {
+                    day = LangClass.getString("wednesday");
+                }
+                break;
+            case 3:
+                if (dayType == "short") {
+                    day = LangClass.getString("thursday_short");
+                } else {
+                    day = LangClass.getString("thursday");
+                }
+                break;
+            case 4:
+                if (dayType == "short") {
+                    day = LangClass.getString("friday_short");
+                } else {
+                    day = LangClass.getString("friday");
+                }
+                break;
+            default:
+                break;
+        }
+        return day;
     }
 
     public static int GetCurrentWeek()

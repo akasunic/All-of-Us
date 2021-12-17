@@ -82,26 +82,7 @@ public class MapScript : MonoBehaviour
         WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
 
-        string day = "";
-        switch (GlobalGameInfo.GetCurrentDay()) {
-            case 0:
-                day = LangClass.getString("monday_short");
-                break;
-            case 1:
-                day = LangClass.getString("tuesday_short");
-                break;
-            case 2:
-                day = LangClass.getString("wednesday_short");
-                break;
-            case 3:
-                day = LangClass.getString("thursday_short");
-                break;
-            case 4:
-                day = LangClass.getString("friday_short");
-                break;
-            default:
-                break;
-        }
+        string day = GlobalGameInfo.GetCurrentDayAsString("short");
         ShortDayText.text = day;
         ShortDayTextPopup.text = day;
         CalendarShortDayTextPopup.text = day;
