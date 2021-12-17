@@ -25,8 +25,7 @@ public class Opening : MonoBehaviour
         TutorialButton.text = LangClass.getString("tutorial");
 
         // Loading game data
-        Dictionary<string, SavedGame> data = SaveSerial.LoadGame();
-        GlobalGameInfo.gameData = data;
+        GlobalGameInfo.gameData = SaveSerial.LoadGame();
     }
 
 

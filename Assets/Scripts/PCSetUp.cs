@@ -130,19 +130,19 @@ public class PCSetUp : MonoBehaviour
             Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
             if (currentData == null) {
                 currentData = new Dictionary<string, SavedGame>();
+                GlobalGameInfo.gameData = currentData;
             }
             SavedGame newPlayer = new SavedGame(firstName, GetLanguages(intLanguage));
             GlobalGameInfo.savedGame = newPlayer;
-            currentData[firstName] = newPlayer;
+            currentData.Add(firstName, newPlayer);
             SaveSerial.SaveGame(currentData);
         } else {
             Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
-
             SavedGame current = GlobalGameInfo.savedGame;
             current.setName(GlobalGameInfo.name);
             current.setLanguage(GlobalGameInfo.language);
             currentData.Remove(previousName);
-            currentData[GlobalGameInfo.name] = current;
+            currentData.Add(GlobalGameInfo.name, current);
             // Pronouns are not used currently in the game
             SaveSerial.SaveGame(currentData);
         }
@@ -160,7 +160,6 @@ public class PCSetUp : MonoBehaviour
         Dictionary<string, SavedGame> data = GlobalGameInfo.gameData;
         if (data == null) return false;
         foreach(KeyValuePair<string, SavedGame> pair in data) {
-            Debug.Log("PAIR VALUE: " + pair.Value.getName());
             if (pair.Value.getName() == name) return true;
         }
         return false;

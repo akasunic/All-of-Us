@@ -1055,9 +1055,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 32a854cfaccd06245aff19e983c0897c, type: 3}
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 404910768}
+        m_MethodName: goToSleep
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1124,9 +1124,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 404910762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a854cfaccd06245aff19e983c0897c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c8c9e4fc55144ce09d7efc24b30d153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goToSleepButton: {fileID: 404910762}
+  WeekText: {fileID: 0}
+  DayText: {fileID: 0}
+  CommunityManagerText: {fileID: 0}
+  NameText: {fileID: 0}
+  DaySummaryText: {fileID: 0}
+  GoToSleepText: {fileID: 0}
+  blackOverlay: {fileID: 0}
+  NewJournalEntriesText: {fileID: 0}
+  NewJournalEntriesValue: {fileID: 0}
+  BlockPartyPreparationsText: {fileID: 0}
+  BlockPartyPreparationsValue: {fileID: 0}
+  SucculentsPlantedText: {fileID: 0}
+  SucculentsPlantedValue: {fileID: 0}
+  CommunityEngagementText: {fileID: 0}
+  CommunityEngagementValue: {fileID: 0}
 --- !u!1 &460872552
 GameObject:
   m_ObjectHideFlags: 0

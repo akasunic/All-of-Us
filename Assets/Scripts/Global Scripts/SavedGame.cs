@@ -70,8 +70,9 @@ public class SavedGame : object {
     public void incDay() {
         day += 1;
         if (day > 3) {
-            this.incWeek();
             day = 0;
+            this.incWeek();
+            this.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
         }
     }
 
@@ -82,14 +83,14 @@ public class SavedGame : object {
         return false;
     }
 
-    public string getNPCOfCurrentQuest() {
+    public string getNPCForWeek() {
         foreach(KeyValuePair<string, int> pair in progress) {
             if (pair.Value == 1) return pair.Key;
         }
         return "";
     }
 
-    public void setNPCOfCurrentQuest(string NPC) {
+    public void setNPCForWeek(string NPC) {
         progress[NPC] = 1;
     }
 

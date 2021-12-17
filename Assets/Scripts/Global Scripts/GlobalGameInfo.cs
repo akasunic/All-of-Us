@@ -24,8 +24,6 @@ public static class GlobalGameInfo
     private static int currentDay = 0;
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
-    // CURRENT PROGRESS FOR PLAYER
-    private static Dictionary<string, int> currentProgress = new Dictionary<string, int>();
 
     // CURRENT NPC FOR THE WEEK (the name as string)
     private static string currentNPC = "";
@@ -49,6 +47,9 @@ public static class GlobalGameInfo
 
     // Data of all saved slots
     public static Dictionary<string, SavedGame> gameData;
+        
+    // Localization Feature
+    public static Lang LangClass = new Lang(false);
 
     //an enum for notifications
     public enum NOTIFICATION {
@@ -166,6 +167,7 @@ public static class GlobalGameInfo
         }
     }
 
+    [System.Serializable]
     public class ChecklistItem
     {
         public string title;
@@ -387,6 +389,54 @@ public static class GlobalGameInfo
         currentDay = day;
     }
 
+    // Type can be "short" for MON, TUE, etc. or "long" for "Monday", "Tuesday", etc.
+    public static string GetCurrentDayAsString(string dayType)
+    {
+        LangClass.setLanguage(GlobalGameInfo.language);
+
+        string day = "";
+        switch (currentDay) {
+            case 0:
+                if (dayType == "short") {
+                    day = LangClass.getString("monday_short");
+                } else {
+                    day = LangClass.getString("monday");
+                }
+                break;
+            case 1:
+                if (dayType == "short") {
+                    day = LangClass.getString("tuesday_short");
+                } else {
+                    day = LangClass.getString("tuesday");
+                }
+                break;
+            case 2:
+                if (dayType == "short") {
+                    day = LangClass.getString("wednesday_short");
+                } else {
+                    day = LangClass.getString("wednesday");
+                }
+                break;
+            case 3:
+                if (dayType == "short") {
+                    day = LangClass.getString("thursday_short");
+                } else {
+                    day = LangClass.getString("thursday");
+                }
+                break;
+            case 4:
+                if (dayType == "short") {
+                    day = LangClass.getString("friday_short");
+                } else {
+                    day = LangClass.getString("friday");
+                }
+                break;
+            default:
+                break;
+        }
+        return day;
+    }
+
     public static int GetCurrentWeek()
     {
         return currentWeek;
@@ -396,14 +446,6 @@ public static class GlobalGameInfo
         currentWeek = week;
     }
 
-    public static Dictionary<string, int> GetCurrentProgress()
-    {
-        return currentProgress;
-    }
-
-    public static void SetCurrentProgress(Dictionary<string, int> progress) {
-        currentProgress = progress;
-    }
     public static string GetPlayerName()
     {
         return name;
@@ -439,22 +481,15 @@ public static class GlobalGameInfo
     public static void IncreaseDay()
     {
         currentDay++;
-        
-        // Increase day in saved game object
-        // Dictionary<string, SavedGame> currentData = SaveSerial.LoadGame();
-
-        // foreach(KeyValuePair<string, SavedGame> pair in currentData) {
-        //     if (pair.Key == GlobalGameInfo.name) {
-        //         pair.Value.incDay();
-        //         SaveSerial.SaveGame(currentData);
-        //         break;
-        //     }
-        // }
-        if (currentDay > 4)
+    
+        // If week has ended
+        if (currentDay > 3)
         {
-            currentDay = 4;
+            currentDay = 0;
+            currentWeek++;
+            currentNPC = "";
+            weekEndedFlag = true;
         }
-        Debug.Log("Current Day: " + currentDay);
     }
 
     // call this function using GlobalGameInfo.GetEngagement()

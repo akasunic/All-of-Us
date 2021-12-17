@@ -9430,8 +9430,8 @@ MonoBehaviour:
   pronounsDropDownLabel: {fileID: 1942646769}
   languageDropDownLabel: {fileID: 109335163}
   nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 1175897488}
-  languageDropDown: {fileID: 1833719007}
+  pronounsDropDown: {fileID: 0}
+  languageDropDown: {fileID: 0}
   backButton: {fileID: 66654038}
   NameError: {fileID: 299528523}
   NameErrorText: {fileID: 2099114439}
