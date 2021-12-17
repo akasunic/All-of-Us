@@ -28,7 +28,8 @@ public static class GlobalGameInfo
     private static Dictionary<string, int> currentProgress = new Dictionary<string, int>();
 
     // CURRENT NPC FOR THE WEEK (the name as string)
-    private static string currentNPC = "";
+
+    private static CharacterResources.CHARACTERS currentNPC;
 
     // CURRENT TASK FOR THE DAY (as string)
     private static string currentTask = "";
@@ -210,6 +211,7 @@ public static class GlobalGameInfo
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
+            Debug.Log("USING THIS DAY: " + day);
             this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
@@ -383,6 +385,26 @@ public static class GlobalGameInfo
     {
         return currentDay;
     }
+
+    public static string GetCurrentDayString()
+    {
+        switch (currentDay) 
+        {
+            case 0:
+                return "Monday";
+            case 1:
+                return "Tuesday";
+            case 2:
+                return "Wednesday";
+            case 3:
+                return "Thursday";
+            case 4:
+                return "Friday";
+            default:
+                return "NONE";
+        }
+
+    }
     public static void SetCurrentDay(int day) {
         currentDay = day;
     }
@@ -413,12 +435,12 @@ public static class GlobalGameInfo
         name = playerName;
     }
 
-    public static string GetCurrentNPC()
+    public static CharacterResources.CHARACTERS GetCurrentNPC()
     {
         return currentNPC;
     }
 
-    public static void SetCurrentNPC(string NPC) {
+    public static void SetCurrentNPC(CharacterResources.CHARACTERS NPC) {
         currentNPC = NPC;
     }
 

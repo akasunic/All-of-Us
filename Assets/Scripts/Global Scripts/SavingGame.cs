@@ -18,7 +18,7 @@ public static class SavingGame : object {
         current.incDay();
         // Update and save progress
         if (GlobalGameInfo.GetCurrentDay() == 4) {
-            current.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
+            current.setCharacterDone(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
         }
         // Save todolist
         // current.setTodoItems(GlobalGameInfo.todoList);

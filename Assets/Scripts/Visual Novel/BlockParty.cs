@@ -50,7 +50,6 @@ public class BlockParty : MonoBehaviour
     // Configures who shows up for the block party screen
     public void fillDetails(CharacterResources.CHARACTERS c)
     {
-        CharacterResources cr = new CharacterResources();
         switch(c)
         {
             case CharacterResources.CHARACTERS.CALINDAS:
@@ -84,7 +83,7 @@ public class BlockParty : MonoBehaviour
                 profilePic.sprite = lilaProfile;
                 break;
         }
-        nametagText.text = cr.GetName(c);
-        paragraphText.text = cr.GetName(c) + funText;
+        nametagText.text = CharacterResources.GetName(c);
+        paragraphText.text = CharacterResources.GetName(c) + funText;
     }
 }

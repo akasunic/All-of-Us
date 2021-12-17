@@ -80,7 +80,31 @@ public class AddToList : MonoBehaviour
             Transform characterPic = header.transform.Find("Character/CharacterPic");
             Transform daysPassed = header.transform.Find("DaysPassed");
             characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[i].character);
-            characterName.gameObject.GetComponent<Text>().text = cr.GetName(list[i].character).ToUpper();
+            characterName.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[i].character).ToUpper();
+
+            Transform weekText = header.transform.Find("WeekAndDay/WeekText");
+            Transform dayText = header.transform.Find("WeekAndDay/DayText");
+            // So that week 0 shows up as week 1 in the UI
+            weekText.gameObject.GetComponent<Text>().text = "Week " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
+            dayText.gameObject.GetComponent<Text>().text = GlobalGameInfo.GetCurrentDayString();
+
+            for (int j = 0; j < 5; j++)
+            {
+                Transform filled = header.transform.Find("DaysPassed/Filled" + j.ToString());
+                Transform unfilled = header.transform.Find("DaysPassed/Unfilled" + j.ToString());
+                if (j <= GlobalGameInfo.GetCurrentDay())
+                {
+                    filled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                    filled.gameObject.SetActive(true);
+                    unfilled.gameObject.SetActive(false);
+                }
+                else
+                {
+                    unfilled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                    filled.gameObject.SetActive(false);
+                    unfilled.gameObject.SetActive(true);
+                }
+            }
 
             // Create the todo item list;
             Transform newItemListParent = newTodoPerson.Find("TodoItemList");
@@ -127,7 +151,11 @@ public class AddToList : MonoBehaviour
         Transform questIcon = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/PersonIcon");
         Transform questChar = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/PersonText");
         questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[0].quest.questGiver);
-        questChar.gameObject.GetComponent<Text>().text = cr.GetName(list[0].quest.questGiver).ToUpper();
+        questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[0].quest.questGiver).ToUpper();
+
+        Transform questWeek = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/WeekText");
+        // So week 0 becomes week 1 in the UI
+        questWeek.gameObject.GetComponent<Text>().text = "WEEK " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
 
         // Figure out which notes are associated with which days (we have headers based on days of the week)
         Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();

@@ -204,7 +204,7 @@ public class StartWeek : MonoBehaviour
     }
     
     public void goBackToOpenQuest(string NPCOfCurrentQuest) {
-        GlobalGameInfo.SetCurrentNPC(NPCOfCurrentQuest);
+        GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(NPCOfCurrentQuest));
         GlobalGameInfo.gotalkFlag = true;
         SceneManager.LoadScene("Basic2DMap");
     }
@@ -215,7 +215,7 @@ public class StartWeek : MonoBehaviour
         StartWeekContainer.SetActive(true);
         StartWeekText1.text = LangClass.getString("startweek_text1") + " " + NPC + " " + LangClass.getString("startweek_text2");
         StartWeekText2.text = LangClass.getString("startweek_text3");
-        GlobalGameInfo.SetCurrentNPC(NPC);
+        GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(NPC));
         GlobalGameInfo.gotalkFlag = true;
         this.resetCharacterCards();
 
@@ -269,7 +269,7 @@ public class StartWeek : MonoBehaviour
     }
 
     public void GoToMapScene() {
-        SavingGame.setNPCOfCurrentQuest(GlobalGameInfo.GetCurrentNPC());
+        SavingGame.setNPCOfCurrentQuest(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
         // Go back to opening screen
         SceneManager.LoadScene("Basic2DMap");
     }

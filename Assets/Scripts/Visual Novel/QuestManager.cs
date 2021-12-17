@@ -150,6 +150,7 @@ public class QuestManager : MonoBehaviour
                 return;
         }
         Quest newQuest = new Quest();
+        
         newQuest.questId = questId;
         newQuest.questGiver = questGiver;
         newQuest.description = description;

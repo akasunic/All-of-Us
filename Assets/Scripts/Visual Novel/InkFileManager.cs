@@ -129,8 +129,7 @@ public class InkFileManager : MonoBehaviour {
 
     private static bool CanStartSubsequentQuest(CharacterResources.CHARACTERS character)
     {
-        CharacterResources cr = new CharacterResources();
-        return GlobalGameInfo.GetCurrentNPC() == cr.GetName(character);
+        return GlobalGameInfo.GetCurrentNPC() == character;
     }
     /// <summary>
     /// Returns true if you can start a quest for character
@@ -138,7 +137,9 @@ public class InkFileManager : MonoBehaviour {
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
         // a quest is already active
-        if (activeFileIdx != (-1, -1) || (GlobalGameInfo.GetCurrentNPC() != ""))
+        Debug.Log("CURRENT NPC: " + GlobalGameInfo.GetCurrentNPC());
+        Debug.Log("INPUT NPC: " + CharacterResources.GetName(character));
+        if (activeFileIdx != (-1, -1) || GlobalGameInfo.GetCurrentNPC() != character)
         {
             return false;
         }
@@ -206,7 +207,7 @@ public class InkFileManager : MonoBehaviour {
         if (activeFileIdx == (-1, -1))
         {
             // First one is a brand new quest, second one is the character is the current NPC, and we can start a new quest with them
-            return CanStartQuest(character) || CanStartSubsequentQuest(character);
+            return CanStartQuest(character);
         }
         else
         {
