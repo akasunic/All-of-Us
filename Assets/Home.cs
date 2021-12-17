@@ -64,16 +64,12 @@ public class Home : MonoBehaviour {
     }
     
     public void goToSleep() {
-        // Only if PC has finished the 5 quests for the day
-        if (InkFileManager.CanAdvanceDay()) {
-            // reset daily quest progess for the next day
-            InkFileManager.ResetDailyBools();
+        // Increase day gets updated in the saving class below
 
-            // Increase day gets updated in the saving class
-
-            // Go to saving scene
-            SceneManager.LoadScene("Saving");
-        }
+        // Saving the game progress
+        SavingGame.SaveGameProgress();
+        // Go to saving scene
+        SceneManager.LoadScene("Saving");
     }
 
 }
