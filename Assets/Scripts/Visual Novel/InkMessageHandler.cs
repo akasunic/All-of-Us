@@ -22,22 +22,24 @@ public class InkMessageHandler : MonoBehaviour
     public void AddNotification(string notifValue) {
 
         string[] notifInfo = notifValue.Split('_');
-
+        
         try {
             if (notifInfo.Length == 3) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2]);
+                    GlobalGameInfo.GetCurrentDay(), notifInfo[2]);
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
-                q.questGiver = HelperFunctions.CharacterFromString(notifInfo[0]);
+                // Quest giver should be the current NPC (who we have quests from)
+                // Debug.Log("CURRENT NPC: " + GlobalGameInfo.GetCurrentNPC());
+                q.questGiver = GlobalGameInfo.GetCurrentNPC();
                 q.description = notifInfo[2];
 
                 q.questId = ReadQuestTitle(notifInfo[3] + ".txt");
 
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    GlobalGameInfo.GetCurrentDay() + 1, notifInfo[2], q);
+                    GlobalGameInfo.GetCurrentDay(), notifInfo[2], q);
                 
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {
@@ -149,12 +151,17 @@ public class InkMessageHandler : MonoBehaviour
 
         // Setting the new quest title to be the "current NPC task"
         GlobalGameInfo.SetCurrentTask(line);
-        
+
         // Quest Giver
+        Debug.Log("LINE BEFORE: " + line);
         line = reader.ReadLine();
+        Debug.Log("LINE AFTER: " + line);
         q.questGiver = HelperFunctions.CharacterFromString(line);
         // Setting the new quest giver to be the "current NPC"
-        GlobalGameInfo.SetCurrentNPC(line);
+
+        GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(line));
+
+        Debug.Log("CREATING NEW QUEST WITH QUEST GIVER: " + CharacterResources.GetName(q.questGiver));
 
         // Health exp, should be a 0 or 1
         line = reader.ReadLine();

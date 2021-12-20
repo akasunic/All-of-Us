@@ -28,7 +28,8 @@ public static class GlobalGameInfo
     private static int currentWeek = 0;
 
     // CURRENT NPC FOR THE WEEK (the name as string)
-    private static string currentNPC = "";
+
+    private static CharacterResources.CHARACTERS currentNPC;
 
     // CURRENT TASK FOR THE DAY (as string)
     private static string currentTask = "";
@@ -128,6 +129,7 @@ public static class GlobalGameInfo
         public List<ChecklistItem> checklist;
         public CharacterResources.CHARACTERS character;
 
+        public int dayAssigned;
         public int completedItems;
         public bool showNotification;
 
@@ -135,18 +137,39 @@ public static class GlobalGameInfo
 
         public TodoItem(string title) {
             this.title = title;
+            this.dayAssigned = 0;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
             this.showNotification = true;
             this.complete = false;
         }
 
-        public TodoItem(string title, CharacterResources.CHARACTERS character) {
+        public TodoItem(string title, CharacterResources.CHARACTERS character, int dayAssigned) {
+            this.dayAssigned = dayAssigned;
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.character = character;
             this.completedItems = 0;
             this.showNotification = true;
+        }
+
+        public string GetDayAssignedAsString()
+        {
+            switch (dayAssigned)
+            {
+                case 0:
+                    return LangClass.getString("monday");
+                case 1:
+                    return LangClass.getString("tuesday");
+                case 2:
+                    return LangClass.getString("wednesday");
+                case 3:
+                    return LangClass.getString("thursday");
+                case 4:
+                    return LangClass.getString("friday");
+                default:
+                    return LangClass.getString("monday");
+            }
         }
 
         public ChecklistItem AddToChecklist(string c) {
@@ -214,6 +237,7 @@ public static class GlobalGameInfo
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
+            Debug.Log("USING THIS DAY: " + day);
             this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
@@ -344,7 +368,7 @@ public static class GlobalGameInfo
         string title, CharacterResources.CHARACTERS c)
     {
         Debug.Log("the notifiation callback should have happend");
-        GlobalGameInfo.todoList.Add(new TodoItem(title, c));
+        GlobalGameInfo.todoList.Add(new TodoItem(title, c, GetCurrentDay()));
         untaggedTodoObjects++;
         notificationCallback(NOTIFICATION.TODO);
 
@@ -387,6 +411,26 @@ public static class GlobalGameInfo
     public static int GetCurrentDay()
     {
         return currentDay;
+    }
+
+    public static string GetCurrentDayString()
+    {
+        switch (currentDay) 
+        {
+            case 0:
+                return "Monday";
+            case 1:
+                return "Tuesday";
+            case 2:
+                return "Wednesday";
+            case 3:
+                return "Thursday";
+            case 4:
+                return "Friday";
+            default:
+                return "NONE";
+        }
+
     }
     public static void SetCurrentDay(int day) {
         currentDay = day;
@@ -458,12 +502,12 @@ public static class GlobalGameInfo
         name = playerName;
     }
 
-    public static string GetCurrentNPC()
+    public static CharacterResources.CHARACTERS GetCurrentNPC()
     {
         return currentNPC;
     }
 
-    public static void SetCurrentNPC(string NPC) {
+    public static void SetCurrentNPC(CharacterResources.CHARACTERS NPC) {
         currentNPC = NPC;
     }
 
@@ -490,7 +534,7 @@ public static class GlobalGameInfo
         {
             currentDay = 0;
             currentWeek++;
-            // currentNPC = "";
+            currentNPC = CharacterResources.CHARACTERS.NONE;
             weekEndedFlag = true;
         }
     }

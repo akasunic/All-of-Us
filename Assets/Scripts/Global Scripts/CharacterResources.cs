@@ -12,7 +12,8 @@ public class CharacterResources
     LILA,
     CALINDAS,
     ELISA,
-    LEE
+    LEE,
+    NONE
   }
 
   public static Sprite rashadNeutral;
@@ -75,7 +76,27 @@ public class CharacterResources
                 return new Color(0.9921569f, 0.6313726f, 0.5686275f, 1.0f);
         }
     }
-   public string GetName(CHARACTERS c)
+
+    public static CHARACTERS GetCharacterFromString(string c)
+    {
+        switch (c)
+        {
+            case "Rashad":
+                return CHARACTERS.RASHAD;
+            case "Lila":
+                return CHARACTERS.LILA;
+            case "Mr. Calindas":
+                return CHARACTERS.CALINDAS;
+            case "Elisa":
+                return CHARACTERS.ELISA;
+            case "Mrs.Lee":
+                return CHARACTERS.LEE;
+            default:
+                return CHARACTERS.RASHAD;
+        }
+    }
+
+    public static string GetName(CHARACTERS c)
     {
         switch (c)
         {
@@ -84,7 +105,7 @@ public class CharacterResources
             case CHARACTERS.LILA:
                 return "Lila";
             case CHARACTERS.CALINDAS:
-                return "Calindas";
+                return "Mr. Calindas";
             case CHARACTERS.ELISA:
                 return "Elisa";
             case CHARACTERS.LEE:
