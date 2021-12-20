@@ -48,13 +48,8 @@ public class Home : MonoBehaviour {
 
         // Stats
         
-        // commEngageVal.GetComponent<UnityEngine.UI.Text>().text = (GlobalGameInfo.GetEngagement() * 5).ToString() + "%";
-        // questsCompletedVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetEngagement().ToString() + "/20";
-        // journalEntriesVal.GetComponent<UnityEngine.UI.Text>().text = TagManager.customTags.Count.ToString();
-        // customTagsVal.GetComponent<UnityEngine.UI.Text>().text  = GlobalGameInfo.infoList.Count.ToString();
-        // daysUntilBlockPartyVal.GetComponent<UnityEngine.UI.Text>().text = GlobalGameInfo.GetRemainDays().ToString();
         NewJournalEntriesText.text = LangClass.getString("new_journal_entries");
-        NewJournalEntriesValue.text = "5";
+        NewJournalEntriesValue.text = GlobalGameInfo.journalItemsLearnedTodayNum.ToString();
         BlockPartyPreparationsText.text = LangClass.getString("block_party_preparations");
         BlockPartyPreparationsValue.text = ((GlobalGameInfo.GetCurrentDay() + 1) * 25).ToString() + "%";
         SucculentsPlantedText.text = LangClass.getString("succulents_planted");
@@ -65,6 +60,9 @@ public class Home : MonoBehaviour {
     
     public void goToSleep() {
         // Increase day gets updated in the saving class below
+
+        // Reset number of journal items learned today
+        GlobalGameInfo.journalItemsLearnedTodayNum = 0;
 
         // Saving the game progress
         SavingGame.SaveGameProgress();

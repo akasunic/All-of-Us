@@ -14,9 +14,11 @@ public static class GlobalGameInfo
     public static bool myjournalFlag = false;
 
     // PLAYER INFORMATION
-    public static bool pcsetupCalled = false;
+    public static bool goToSelectProfileFlag = false;
     public static bool gotalkFlag = false;
     public static bool weekEndedFlag = false;
+    public static int journalItemsLearnedTodayNum = 0;
+    
     public static SavedGame savedGame;
 
     // CURRENT DAY (0 to 4)
@@ -393,6 +395,7 @@ public static class GlobalGameInfo
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
 
+        journalItemsLearnedTodayNum++;
         // Data collection
         DataCollection.LogEvent("Journal info added! Info: " + description + ", Character: " + character, "JOURNAL INFO");
     }

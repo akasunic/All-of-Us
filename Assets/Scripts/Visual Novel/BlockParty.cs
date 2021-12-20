@@ -1,11 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using System.Reflection;
+using System.Threading;
 public class BlockParty : MonoBehaviour
 {
 
+    public GameObject continueButton;
     public Sprite rashadProfile;
     public Sprite rashadPic1;
     public Sprite rashadPic2;
@@ -41,10 +45,13 @@ public class BlockParty : MonoBehaviour
 
     private string funText = " had so much fun at the block party this week! Are you ready for the next week?";
 
+
     // Start is called before the first frame update
    void Start()
     {
         fillDetails(CharacterResources.CHARACTERS.LILA);
+        // Resetting the current NPC only here in order to show the appropriate block party scene beforehand
+        GlobalGameInfo.SetCurrentNPC("");
     }
 
     // Configures who shows up for the block party screen
@@ -85,5 +92,12 @@ public class BlockParty : MonoBehaviour
         }
         nametagText.text = CharacterResources.GetName(c);
         paragraphText.text = CharacterResources.GetName(c) + funText;
+    }
+
+    public void onClickContinueButton() {
+        // Making sure to go directly to "Select profile" view without having to click on the saved game again
+        GlobalGameInfo.goToSelectProfileFlag = true;
+        
+        SceneManager.LoadScene("StartWeek");
     }
 }
