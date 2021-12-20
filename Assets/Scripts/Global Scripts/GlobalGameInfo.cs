@@ -127,6 +127,7 @@ public static class GlobalGameInfo
         public List<ChecklistItem> checklist;
         public CharacterResources.CHARACTERS character;
 
+        public int dayAssigned;
         public int completedItems;
         public bool showNotification;
 
@@ -134,18 +135,39 @@ public static class GlobalGameInfo
 
         public TodoItem(string title) {
             this.title = title;
+            this.dayAssigned = 0;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
             this.showNotification = true;
             this.complete = false;
         }
 
-        public TodoItem(string title, CharacterResources.CHARACTERS character) {
+        public TodoItem(string title, CharacterResources.CHARACTERS character, int dayAssigned) {
+            this.dayAssigned = dayAssigned;
             this.title = title;
             this.checklist = new List<ChecklistItem>();
             this.character = character;
             this.completedItems = 0;
             this.showNotification = true;
+        }
+
+        public string GetDayAssignedAsString()
+        {
+            switch (dayAssigned)
+            {
+                case 0:
+                    return LangClass.getString("monday");
+                case 1:
+                    return LangClass.getString("tuesday");
+                case 2:
+                    return LangClass.getString("wednesday");
+                case 3:
+                    return LangClass.getString("thursday");
+                case 4:
+                    return LangClass.getString("friday");
+                default:
+                    return LangClass.getString("monday");
+            }
         }
 
         public ChecklistItem AddToChecklist(string c) {
@@ -344,7 +366,7 @@ public static class GlobalGameInfo
         string title, CharacterResources.CHARACTERS c)
     {
         Debug.Log("the notifiation callback should have happend");
-        GlobalGameInfo.todoList.Add(new TodoItem(title, c));
+        GlobalGameInfo.todoList.Add(new TodoItem(title, c, GetCurrentDay()));
         untaggedTodoObjects++;
         notificationCallback(NOTIFICATION.TODO);
 

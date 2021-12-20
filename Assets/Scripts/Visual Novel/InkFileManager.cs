@@ -141,6 +141,8 @@ public class InkFileManager : MonoBehaviour {
         {
             return false;
         }
+        return character == GlobalGameInfo.GetCurrentNPC();
+        /*
         // have we already done their quest for the day?
         switch (character) {
             case CharacterResources.CHARACTERS.RASHAD:
@@ -155,6 +157,7 @@ public class InkFileManager : MonoBehaviour {
                 return !completedDailyLee;
         }
         return false;
+        */
     }
 
     // Basically the same as CanStartQuestion but we don't care if a question is currently active.

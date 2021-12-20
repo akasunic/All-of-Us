@@ -86,13 +86,13 @@ public class AddToList : MonoBehaviour
             Transform dayText = header.transform.Find("WeekAndDay/DayText");
             // So that week 0 shows up as week 1 in the UI
             weekText.gameObject.GetComponent<Text>().text = "Week " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
-            dayText.gameObject.GetComponent<Text>().text = GlobalGameInfo.GetCurrentDayString();
+            dayText.gameObject.GetComponent<Text>().text = list[i].GetDayAssignedAsString();
 
             for (int j = 0; j < 5; j++)
             {
                 Transform filled = header.transform.Find("DaysPassed/Filled" + j.ToString());
                 Transform unfilled = header.transform.Find("DaysPassed/Unfilled" + j.ToString());
-                if (j <= GlobalGameInfo.GetCurrentDay())
+                if (j <= list[i].dayAssigned)
                 {
                     filled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
                     filled.gameObject.SetActive(true);
@@ -137,6 +137,7 @@ public class AddToList : MonoBehaviour
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
         
         if(list.Count == 0){
+            this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements").gameObject.SetActive(false);
             return;
         }
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
