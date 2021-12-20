@@ -173,9 +173,6 @@ public class DetailPageManager : MonoBehaviour
           // DeselectItemInUI();
           FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
               HelperFunctions.StringFromCharacter(character), description);
-            // GetComponent<Image>().color = new Color(246f / 255f, 224f / 255f, 148f / 255f, 1f);
-
-            // Debug.Log(GetComponent<Image>().color);
 
             // Set the text to be red
             if (selectedItem != null)

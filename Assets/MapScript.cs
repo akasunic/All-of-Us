@@ -75,7 +75,8 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start() {
 
-        MeetNPCText.text = LangClass.getString("meet") + " " + (GlobalGameInfo.GetCurrentNPC());
+        MeetNPCText.text = LangClass.getString("meet") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
+
         GoodMorningText.text = LangClass.getString("good_morning_message");
         
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
@@ -89,13 +90,13 @@ public class MapScript : MonoBehaviour
 
         CurrentTaskTitle.text = LangClass.getString("current_task");
         CurrentTask.text = GlobalGameInfo.GetCurrentTask();
-        CurrentNPC.text = GlobalGameInfo.GetCurrentNPC();
+        CurrentNPC.text = CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
 
         BackButtonText.text = LangClass.getString("back");
         ExitButtonText.text = LangClass.getString("exit_game");
         NumDaysLeft.text = (4 - GlobalGameInfo.GetCurrentDay()).ToString();
         DaysLeftText.text = LangClass.getString("days_left");
-        ToBlockParty.text = LangClass.getString("to_block_party") + " " + GlobalGameInfo.GetCurrentNPC();
+        ToBlockParty.text = LangClass.getString("to_block_party") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
         
         PleaseNote.text = LangClass.getString("please_note");
         ProgressWontSave.text = LangClass.getString("progress_wont_save");
@@ -242,7 +243,7 @@ public class MapScript : MonoBehaviour
 
     public void GoTalk() {
         InkFileManager ifm = new InkFileManager();
-        ifm.TryLoadVNScene(GlobalGameInfo.GetCurrentNPC());
+        ifm.TryLoadVNScene(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
     }
 
     public void GoToOpeningScreen() {

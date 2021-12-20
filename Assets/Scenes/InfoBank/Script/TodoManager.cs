@@ -77,7 +77,6 @@ public class TodoManager : MonoBehaviour
         // If they are all completed already, update the arrow sprite to be the green checkmark
         completed = item.complete;
         if(completed){
-            backgroundImage.sprite = greenBackground;
             dropdownImage.gameObject.GetComponent<Image>().sprite = greenDropdown;
         }
 

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HoverInfoListLineItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler// required interface when using the OnPointerEnter method.
 {
+    public DetailPageManager dpm;
     //Do this when the cursor enters the rect area of this selectable UI object.
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,6 +21,7 @@ public class HoverInfoListLineItem : MonoBehaviour, IPointerEnterHandler, IPoint
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing")
         {
             MouseCursor.turnOnClickableObjectCursor(false);
+            dpm.SelectItemForQuest();
         }
     }
     public void OnPointerExit(PointerEventData eventData)

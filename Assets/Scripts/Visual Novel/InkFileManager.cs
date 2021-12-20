@@ -129,8 +129,7 @@ public class InkFileManager : MonoBehaviour {
 
     private static bool CanStartSubsequentQuest(CharacterResources.CHARACTERS character)
     {
-        CharacterResources cr = new CharacterResources();
-        return GlobalGameInfo.GetCurrentNPC() == cr.GetName(character);
+        return GlobalGameInfo.GetCurrentNPC() == character;
     }
     /// <summary>
     /// Returns true if you can start a quest for character
@@ -142,6 +141,8 @@ public class InkFileManager : MonoBehaviour {
         {
             return false;
         }
+        return character == GlobalGameInfo.GetCurrentNPC();
+        /*
         // have we already done their quest for the day?
         switch (character) {
             case CharacterResources.CHARACTERS.RASHAD:
@@ -156,6 +157,7 @@ public class InkFileManager : MonoBehaviour {
                 return !completedDailyLee;
         }
         return false;
+        */
     }
 
     // Basically the same as CanStartQuestion but we don't care if a question is currently active.
@@ -206,7 +208,7 @@ public class InkFileManager : MonoBehaviour {
         if (activeFileIdx == (-1, -1))
         {
             // First one is a brand new quest, second one is the character is the current NPC, and we can start a new quest with them
-            return CanStartQuest(character) || CanStartSubsequentQuest(character);
+            return CanStartQuest(character);
         }
         else
         {

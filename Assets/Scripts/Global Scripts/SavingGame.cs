@@ -17,6 +17,7 @@ public static class SavingGame : object {
         Debug.Log("current day " + current.getDay());
         Debug.Log("globalgameinfo day " + GlobalGameInfo.GetCurrentDay());
         current.incDay();
+
         GlobalGameInfo.IncreaseDay();
         Debug.Log("current day after " + current.getDay());
         Debug.Log("globalgameinfo day after " + GlobalGameInfo.GetCurrentDay());
@@ -73,7 +74,7 @@ public static class SavingGame : object {
         // TODO add pronouns later
     }
 
-    public static void setNPCOfCurrentQuest(string NPC) {
+    public static void setNPCOfCurrentQuest(CharacterResources.CHARACTERS NPC) {
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
         current.setNPCForWeek(NPC);
