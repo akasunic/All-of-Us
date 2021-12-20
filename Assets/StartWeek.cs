@@ -70,8 +70,8 @@ public class StartWeek : MonoBehaviour
     {
 
         // If arrived from PCSetup, go to select profile
-        if (GlobalGameInfo.pcsetupCalled) {
-            GlobalGameInfo.pcsetupCalled = false;
+        if (GlobalGameInfo.goToSelectProfileFlag) {
+            GlobalGameInfo.goToSelectProfileFlag = false;
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 

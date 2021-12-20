@@ -151,7 +151,7 @@ public class PCSetUp : MonoBehaviour
             SceneManager.LoadScene("Basic2DMap");
         } else {
             // Coming from PCsetup scene
-            GlobalGameInfo.pcsetupCalled = true;
+            GlobalGameInfo.goToSelectProfileFlag = true;
             SceneManager.LoadScene("StartWeek");
         }
     }

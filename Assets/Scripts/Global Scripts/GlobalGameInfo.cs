@@ -14,7 +14,7 @@ public static class GlobalGameInfo
     public static bool myjournalFlag = false;
 
     // PLAYER INFORMATION
-    public static bool pcsetupCalled = false;
+    public static bool goToSelectProfileFlag = false;
     public static bool gotalkFlag = false;
     public static bool weekEndedFlag = false;
     public static int journalItemsLearnedTodayNum = 0;
@@ -490,7 +490,7 @@ public static class GlobalGameInfo
         {
             currentDay = 0;
             currentWeek++;
-            currentNPC = "";
+            // currentNPC = "";
             weekEndedFlag = true;
         }
     }
