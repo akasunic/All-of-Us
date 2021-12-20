@@ -49,6 +49,7 @@ public class AddToList : MonoBehaviour
                 fillDictionaryList();
                 break;
             case "Info":
+                // This makes it newest goes up top
                 List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
                 list.Reverse();
                 fillInfoList(list);
@@ -68,8 +69,8 @@ public class AddToList : MonoBehaviour
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
         Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
         CharacterResources cr = new CharacterResources();
-
-        for (int i = 0; i < list.Count; i++) {
+        /// This makes it so newest goes up top, oldest is down below
+        for (int i = list.Count - 1; i >= 0; i--) {
             // Instantiate TodoPerson prefab
             Transform newTodoPerson = Instantiate(todoPersonPrefab, contentParent);
 
