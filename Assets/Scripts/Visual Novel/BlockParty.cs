@@ -49,9 +49,9 @@ public class BlockParty : MonoBehaviour
     // Start is called before the first frame update
    void Start()
     {
-        fillDetails(CharacterResources.CHARACTERS.LILA);
+        fillDetails(GlobalGameInfo.GetCurrentNPC());
         // Resetting the current NPC only here in order to show the appropriate block party scene beforehand
-        GlobalGameInfo.SetCurrentNPC("");
+        GlobalGameInfo.SetCurrentNPC(CharacterResources.CHARACTERS.NONE);
     }
 
     // Configures who shows up for the block party screen

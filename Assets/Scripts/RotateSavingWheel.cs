@@ -14,13 +14,7 @@ public class RotateSavingWheel : MonoBehaviour
 
         StartCoroutine(RotateWheel());
         
-        if (GlobalGameInfo.weekEndedFlag) {
-            // TODO start end of week scene and from there activate the StartWeek Scene again
-            GlobalGameInfo.weekEndedFlag = false;
-            SceneManager.LoadScene("BlockParty");
-        } else {
-            SceneManager.LoadScene("Basic2DMap");
-        }
+        SceneManager.LoadScene("Basic2DMap");
     }
     IEnumerator RotateWheel()
     {
