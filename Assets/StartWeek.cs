@@ -160,25 +160,25 @@ public class StartWeek : MonoBehaviour
             ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
         }
 
-        RashadCompleted.enabled = (savedGame.getProgress()["Rashad"] == 2);
-        Rashad0.SetActive(savedGame.getProgress()["Rashad"] == 0);
-        Rashad1.SetActive(savedGame.getProgress()["Rashad"] == 2);
+        RashadCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.RASHAD] == 2);
+        Rashad0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.RASHAD] == 0);
+        Rashad1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.RASHAD] == 2);
 
-        MrsLeeCompleted.enabled = (savedGame.getProgress()["Mrs. Lee"] == 2);
-        MrsLee0.SetActive(savedGame.getProgress()["Mrs. Lee"] == 0);
-        MrsLee1.SetActive(savedGame.getProgress()["Mrs. Lee"] == 2);
+        MrsLeeCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.LEE] == 2);
+        MrsLee0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.LEE] == 0);
+        MrsLee1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.LEE] == 2);
 
-        MrCalindasCompleted.enabled = (savedGame.getProgress()["Mr. Calindas"] == 2);
-        MrCalindas0.SetActive(savedGame.getProgress()["Mr. Calindas"] == 0);
-        MrCalindas1.SetActive(savedGame.getProgress()["Mr. Calindas"] == 2);
+        MrCalindasCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.CALINDAS] == 2);
+        MrCalindas0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.CALINDAS] == 0);
+        MrCalindas1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.CALINDAS] == 2);
 
-        LilaCompleted.enabled = (savedGame.getProgress()["Lila"] == 2);
-        Lila0.SetActive(savedGame.getProgress()["Lila"] == 0);
-        Lila1.SetActive(savedGame.getProgress()["Lila"] == 2);
+        LilaCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.LILA] == 2);
+        Lila0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.LILA] == 0);
+        Lila1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.LILA] == 2);
 
-        ElisaCompleted.enabled = (savedGame.getProgress()["Elisa"] == 2);
-        Elisa0.SetActive(savedGame.getProgress()["Elisa"] == 0);
-        Elisa1.SetActive(savedGame.getProgress()["Elisa"] == 2);
+        ElisaCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
+        Elisa0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 0);
+        Elisa1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
 
         LangClass.setLanguage(GlobalGameInfo.language);
 
@@ -200,8 +200,8 @@ public class StartWeek : MonoBehaviour
         MrsLeeCard.SetActive(false);
     }
     
-    public void goBackToOpenQuest(string NPCOfCurrentQuest) {
-        GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(NPCOfCurrentQuest));
+    public void goBackToOpenQuest(CharacterResources.CHARACTERS NPCOfCurrentQuest) {
+        GlobalGameInfo.SetCurrentNPC(NPCOfCurrentQuest);
         GlobalGameInfo.gotalkFlag = true;
         SceneManager.LoadScene("Basic2DMap");
     }
@@ -266,7 +266,7 @@ public class StartWeek : MonoBehaviour
     }
 
     public void GoToMapScene() {
-        SavingGame.setNPCOfCurrentQuest(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
+        SavingGame.setNPCOfCurrentQuest(GlobalGameInfo.GetCurrentNPC());
         // Go back to opening screen
         SceneManager.LoadScene("Basic2DMap");
     }

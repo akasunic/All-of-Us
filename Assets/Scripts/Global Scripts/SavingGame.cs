@@ -74,7 +74,7 @@ public static class SavingGame : object {
         // TODO add pronouns later
     }
 
-    public static void setNPCOfCurrentQuest(string NPC) {
+    public static void setNPCOfCurrentQuest(CharacterResources.CHARACTERS NPC) {
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
         current.setNPCForWeek(NPC);

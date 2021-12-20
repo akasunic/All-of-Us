@@ -509,7 +509,7 @@ public static class GlobalGameInfo
         {
             currentDay = 0;
             currentWeek++;
-            currentNPC = "";
+            currentNPC = CharacterResources.CHARACTERS.NONE;
             weekEndedFlag = true;
         }
     }

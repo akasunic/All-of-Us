@@ -12,7 +12,8 @@ public class CharacterResources
     LILA,
     CALINDAS,
     ELISA,
-    LEE
+    LEE,
+    NONE
   }
 
   public static Sprite rashadNeutral;
