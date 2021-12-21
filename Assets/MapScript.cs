@@ -75,6 +75,8 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start() {
 
+        Debug.Log("GET CURRENT NPC " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
+
         MeetNPCText.text = LangClass.getString("meet") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
 
         GoodMorningText.text = LangClass.getString("good_morning_message");
@@ -107,6 +109,8 @@ public class MapScript : MonoBehaviour
         MrCalindasImage.enabled = false;
         LilaImage.enabled = false;
         ElisaImage.enabled = false;
+
+        Debug.Log("CURRENT NPC " + CurrentNPC.text);
 
         switch (CurrentNPC.text) {
             case "Rashad":

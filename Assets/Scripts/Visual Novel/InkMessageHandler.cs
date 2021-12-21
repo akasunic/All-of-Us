@@ -159,8 +159,6 @@ public class InkMessageHandler : MonoBehaviour
         q.questGiver = HelperFunctions.CharacterFromString(line);
         // Setting the new quest giver to be the "current NPC"
 
-        GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(line));
-
         Debug.Log("CREATING NEW QUEST WITH QUEST GIVER: " + CharacterResources.GetName(q.questGiver));
 
         // Health exp, should be a 0 or 1

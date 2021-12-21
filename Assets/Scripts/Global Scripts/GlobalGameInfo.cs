@@ -27,8 +27,7 @@ public static class GlobalGameInfo
     // CURRENT WEEK (0 to 4)
     private static int currentWeek = 0;
 
-    // CURRENT NPC FOR THE WEEK (the name as string)
-
+    // CURRENT NPC FOR THE WEEK
     private static CharacterResources.CHARACTERS currentNPC;
 
     // CURRENT TASK FOR THE DAY (as string)
