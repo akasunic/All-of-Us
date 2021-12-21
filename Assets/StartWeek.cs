@@ -246,7 +246,7 @@ public class StartWeek : MonoBehaviour
                 CharacterCardTitle.text = LangClass.getString("mrcalindas_title");
                 CharacterCardDescription.text = LangClass.getString("mrcalindas_description");
                 break;
-            case "Mrs. Lee":
+            case "Mrs.Lee":
                 MrsLeeCard.SetActive(true);
                 CharacterCardName.text = LangClass.getString("mrslee_name");
                 CharacterCardAgePronouns.text = LangClass.getString("mrslee_age_pronouns");

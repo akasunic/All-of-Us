@@ -128,9 +128,7 @@ public class MapScript : MonoBehaviour
                 break;
         }
 
-        Debug.Log("WEEK ENDED FLAG VAL " + GlobalGameInfo.weekEndedFlag);
         if (GlobalGameInfo.weekEndedFlag) {
-            Debug.Log("ENTERED");
             GlobalGameInfo.weekEndedFlag = false;
             SceneManager.LoadScene("BlockParty");
         }

@@ -73,6 +73,12 @@ public class SavedGame : object {
             day = 0;
             this.incWeek();
             this.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
+            Debug.Log("SAVED GAME CLASS");
+            Debug.Log(progress[CharacterResources.CHARACTERS.LILA]);
+            Debug.Log(progress[CharacterResources.CHARACTERS.LEE]);
+            Debug.Log(progress[CharacterResources.CHARACTERS.CALINDAS]);
+            Debug.Log(progress[CharacterResources.CHARACTERS.ELISA]);
+            Debug.Log(progress[CharacterResources.CHARACTERS.RASHAD]);
         }
     }
 
@@ -92,6 +98,12 @@ public class SavedGame : object {
 
     public void setNPCForWeek(CharacterResources.CHARACTERS NPC) {
         progress[NPC] = 1;
+        Debug.Log("SAVED GAME CLASS 2");
+        Debug.Log(progress[CharacterResources.CHARACTERS.LILA]);
+        Debug.Log(progress[CharacterResources.CHARACTERS.LEE]);
+        Debug.Log(progress[CharacterResources.CHARACTERS.CALINDAS]);
+        Debug.Log(progress[CharacterResources.CHARACTERS.ELISA]);
+        Debug.Log(progress[CharacterResources.CHARACTERS.RASHAD]);
     }
 
     public string getLanguage() {
