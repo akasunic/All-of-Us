@@ -14,13 +14,9 @@ public static class SavingGame : object {
         Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
         SavedGame current = GlobalGameInfo.savedGame;
         // Update and save day (progress is updated within incDay() call)
-        Debug.Log("current day " + current.getDay());
-        Debug.Log("globalgameinfo day " + GlobalGameInfo.GetCurrentDay());
         current.incDay();
 
         GlobalGameInfo.IncreaseDay();
-        Debug.Log("current day after " + current.getDay());
-        Debug.Log("globalgameinfo day after " + GlobalGameInfo.GetCurrentDay());
         
         // Save todolist
         current.setTodoItems(GlobalGameInfo.todoList);
