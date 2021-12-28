@@ -55,8 +55,14 @@ public class Home : MonoBehaviour {
         SucculentsPlantedText.text = LangClass.getString("succulents_planted");
         SucculentsPlantedValue.text = Random.Range(2, 10).ToString();
         CommunityEngagementText.text = LangClass.getString("community_engagement");
-        CommunityEngagementValue.text = ((GlobalGameInfo.GetCurrentWeek()) * 20 + (GlobalGameInfo.GetCurrentDay() + 1) * 5).ToString() + "%";
+        int communityEngagementLevel = ((GlobalGameInfo.GetCurrentWeek()) * 20 + (GlobalGameInfo.GetCurrentDay() + 1) * 5);
+        CommunityEngagementValue.text = communityEngagementLevel.ToString() + "%";
+
+        if (communityEngagementLevel == 100) {
+            GlobalGameInfo.gameEndedFlag = true;
+        }
     }
+
     
     public void goToSleep() {
         // Increase day gets updated in the saving class below

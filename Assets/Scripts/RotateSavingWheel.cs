@@ -14,7 +14,12 @@ public class RotateSavingWheel : MonoBehaviour
 
         StartCoroutine(RotateWheel());
         
-        SceneManager.LoadScene("Basic2DMap");
+        if (GlobalGameInfo.gameEndedFlag == true) {
+            GlobalGameInfo.gameEndedFlag = false;
+            SceneManager.LoadScene("FinalScreen");
+        } else {
+            SceneManager.LoadScene("Basic2DMap");
+        }
     }
     IEnumerator RotateWheel()
     {

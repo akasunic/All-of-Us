@@ -17,6 +17,7 @@ public static class GlobalGameInfo
     public static bool goToSelectProfileFlag = false;
     public static bool gotalkFlag = false;
     public static bool weekEndedFlag = false;
+    public static bool gameEndedFlag = false;
     public static int journalItemsLearnedTodayNum = 0;
     
     public static SavedGame savedGame;
