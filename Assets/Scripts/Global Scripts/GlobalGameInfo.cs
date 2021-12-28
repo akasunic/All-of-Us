@@ -236,7 +236,6 @@ public static class GlobalGameInfo
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
             int day, string description, Quest quest) {
-            Debug.Log("USING THIS DAY: " + day);
             this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
@@ -391,6 +390,7 @@ public static class GlobalGameInfo
         // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
 
         GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
+
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
 

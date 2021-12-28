@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <words>
-  <string name ="test1">This is a description for test1This is a description for testThis is a description for test1This is a description for test1This is a description for test1This is a description for test1This is a description for test1This is a description for test11</string>
-  <string name ="test2">This is a description for testThis is a description for test1This is a description for test1This is a description for test1This is a description for test12</string>
-  <string name ="test3">This is a description for tesThis is a description for test1This is a description for test1This is a description for test1This is a description for test1t3</string>
-  <string name = "PLACEHOLDER1 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER2 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER3 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER4 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER5 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER6 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER7 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER8 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER9 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER10 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER11 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER12 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER13 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER14 ">PLACEHOLDER description</string>
-  <string name = "PLACEHOLDER15 ">PLACEHOLDER description</string>
+  <string name ="Test 1">Test 1 Definition. Terms will be added later</string>
+  <string name ="Test 2">Test 2 Definition. Terms will be added later</string>
+  <string name ="Test 3">Test 3 Definition. Terms will be added later</string>
  </words>
