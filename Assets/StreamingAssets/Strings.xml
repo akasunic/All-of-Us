@@ -3,9 +3,12 @@
 
     <English>
 
-        <string name="backstories_1">There’s so much to love about Bloomwood! I grew up here, but I lost my connection to the community when I went away to college. I’m back now, ready to help my neighborhood thrive.</string>
-        <string name="backstories_2">I am excited to start my new role as Community Manager. Everyone has a story, and I can’t wait to learn about each of my neighbors.</string>
-        <string name="backstories_3">My role is to build connections between neighbors, to help people find resources to answer their own questions, and to share the skills I learn. Hopefully we will all become healthier and more interconnected.</string>
+        <string name="backstories_1">There’s so much to love about Bloomwood! The neighborhood is full of caring, vibrant people and plentiful resources.
+
+As the new Community Manager, your role is to learn what your neighbors need, and help them find answers. Every neighbor has problems you can solve, and information, resources, or skills to contribute.
+        </string>
+        <string name="backstories_2">Explore Bloomwood and learn more about your neighbors. Spend a week with each neighbor, and their needs - and thereby your goals - will become clear.</string>
+        <string name="backstories_3"></string>
 
         <string name="ending_1">I’ve been talking so much about Bloomwood Spirit and getting this block party ready.  Today as we blocked off streets and inflated the giant bounce house, I wondered if all my efforts to help did the job. People have bigger issues. Health, money, family, school...did we make enough time? Share enough resources?</string>
         <string name="ending_2">Our Block Party is a connection between the old Bloomwood and the new Bloomwood. The smells of food and the whirring of the cotton candy machine all brought back memories. But could this bring the people?</string>

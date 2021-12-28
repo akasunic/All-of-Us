@@ -18,7 +18,6 @@ public class Backstories : MonoBehaviour
     {
         LangClass.setLanguage(GlobalGameInfo.language);
 
-
         Textfield.text = LangClass.getString("backstories_1");
         NextText.text = LangClass.getString("next");
     }
@@ -30,10 +29,10 @@ public class Backstories : MonoBehaviour
                 Textfield.text = LangClass.getString("backstories_2");
                 current_text_counter++;
                 break;
-            case 2:
-                Textfield.text = LangClass.getString("backstories_3");
-                current_text_counter++;
-                break;
+            // case 2:
+            //     Textfield.text = LangClass.getString("backstories_3");
+            //     current_text_counter++;
+            //     break;
             default:
                 SceneManager.LoadScene("PCSetup");
                 current_text_counter = 1;
