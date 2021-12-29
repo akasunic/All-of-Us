@@ -16,17 +16,17 @@ Mrslee?Smiling "{player_name}. Hi. Listen. I was looking for you. My headache we
   -> ReadyToSolve
 
 ==Chat1==
-Mrslee?Smiling "Yes, so you don't think I need the doctor anymore, don't you think?"
+Mrslee?Smiling "Yes, so you don't think I need the doctor anymore, you think?"
 
 * I think it's important to get your routine check up, Mrs Lee.
   -> Chat2
-* Can we talk about your headaches?
+* I think we should still talk about your headaches. Is that okay?
   -> ReadyToSolve
 
 ==Chat2==
-Mrslee?Neutral "I'm feeling good now because no headache, but when I think about doctors... I feel like, I feel like I'm gonna headache."
+Mrslee?Neutral "I'm feeling good now because no headache, but when I think about doctors... I feel like headache."
 
-* We can talk about it together
+* We can talk about it together; I'll help.
   -> ReadyToSolve
 
 ==ReadyToSolve==

@@ -74,9 +74,9 @@ Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. 
 ==QuestAcceptance==
 Mrslee?Smiling "I am thinking about this. My health is very important, too! How should I continue my good health practice?"
 
-* I'm going to think about it.
+* Let me think about it; I'll come back to you.
   -> Goodbye
-* I'll be back soon with some ideas.
+* I'll be back soon with some suggestions; I want to ask some people for their ideas.
   -> Goodbye
 
 //mrs lee is happy

@@ -68,7 +68,7 @@ Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of
 ~ notification = "Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2"
 # notification Rashad_Day 2_Mrs. Lee can ask Rashad for help scheduling her appointment_Mrslee2
 
-Rashad?Smiling "Heck yeah! If you're in the library, it is literally my job to help you. Need something? I got you."
+Rashad?Smiling "Heck yeah! If you're in the library, it is literally my job to help you. Need help with something? I got you."
 
 * You are the best Rashad, you don't even know!
   -> Goodbye

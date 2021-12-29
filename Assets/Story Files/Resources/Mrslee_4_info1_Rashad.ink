@@ -38,7 +38,7 @@ Rashad?Smiling "Yeah, let's make this quick I am organizing materials for the bi
   -> Explain1
 
 ==Explain1==
-Rashad?Smiling "Only if it's related to my kids or comics. I'm saving my mental energy so I can't do anything else, haha."
+Rashad?Smiling "Only if it's related to my kids or comics. I'm in low-power mode, so I can't think about much of anything else, haha."
 
 * It's kinda about your kids
   -> Explain2
@@ -48,7 +48,7 @@ Rashad?Smiling "Only if it's related to my kids or comics. I'm saving my mental 
 ==Explain2==
 Rashad?Smiling "Yeah, I got a minute. What's up?"
 
-* How do you track your families health?
+* How do you track your family's health?
   -> Suggestion1
 * How the heck are you kids? They never come by!
   -> Suggestion2
@@ -57,23 +57,21 @@ Rashad?Smiling "Yeah, I got a minute. What's up?"
 ~ notification = "Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4"
 # notification Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4
 
-Rashad?Smiling "I keep track of my whole families' health information in one folder. Actually it's bigger than a folder, but you get what I mean. All the stuff. All the symptoms. One place. Boom."
+Rashad?Smiling "I keep track of my whole families' health information in one folder. Actually it's bigger than a folder, but you get what I mean. All the records. All the symptoms and details. One place. Boom."
 
 * Hmm, maybe that could work
-  -> Suggestion2
+  -> Goodbye
 * Oh, absolutely, that's a great idea.
   -> Goodbye
 
 ==Suggestion2==
-~ notification = "Rashad_Day 4_Cheryl and the kids will be at the block party!"
-# notification Rashad_Day 4_Cheryl and the kids will be at the block party!
-
-Rashad?Smiling "Yeah, Cheryl and the kids will be at the block party. We can all say hi!"
+~ notification = "Rashad_Day 4_ Regular visits to your primary doctor can make it easier to get diagnosed if you have a problem_Mrslee4"
+Rashad?Smiling "Yeah, Cheryl and the kids will be at the block party. We can all say hi! They're all at well-kid visits today; teach them early to see their primary doctor at least once a year!"
 
 * What type of health maintenance does your family do?
   -> Suggestion1
-* I'm looking forward to it!
-  -> Goodbye
+* What do you do with the information you get at those visits?
+  -> Suggestion1
 
 ==Goodbye==
 Rashad?Smiling "Okay, next time I get to ask the questions, {player_name}, I gotta get back to organizing."

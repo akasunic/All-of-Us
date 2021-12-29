@@ -27,7 +27,7 @@ Mrslee?Smiling "Hey. {player_name}. Today I volunteer to work with the kids."
 ==Chat2==
 Mrslee?Smiling "Yah. You know the kids always making noise! Ha ha. I am relax now. Because of the kids, and their funny noise."
 
-* That is just about the sweetest thing I've heard all day.
+* It's sweet how you get along with the kids!
   -> QuestIntro
 * No headaches?
   -> QuestIntro
@@ -69,7 +69,7 @@ Mrslee?Neutral "I forget everything! My feeling.. my words."
 ==OptionalQuestDetails2==
 Mrslee?Neutral "Why I'm gonna go if nobody listen to me?"
 
-* I am always here to listen to you.
+* We can work on ways to make sure the doctor listens to you.
   -> QuestAcceptance
 * Let's think about this together
   -> QuestAcceptance

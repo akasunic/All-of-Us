@@ -11,7 +11,7 @@ VAR new_quest = ""
 
 Mrslee?Neutral "What's up?"
 
-* Hey Mrs. Lee. How did the medication go?
+* Hey Mrs. Lee. How did the pharmacy trip go?
   -> Chat1
 * Are you okay, Mrs. Lee?
   -> QuestIntro
@@ -19,13 +19,13 @@ Mrslee?Neutral "What's up?"
 ==Chat1==
 Mrslee?Smiling "It was right medication. I should be less concerning about him. That's what Eddie says."
 
-* Eddie wants you to look out for yourself, Mrs. Lee. You know he means well.
+* Eddie wants you to look out for yourself, too, Mrs. Lee. You know he means well.
   -> Chat2
 * Hmm. Mrs. Lee, is something troubling you?
   -> QuestIntro
 
 ==Chat2==
-Mrslee?Neutral "I know, {player_name}. I'm overwhelmed! Everything is harder these days alone and I just can't get rid of this headache. Again!!"
+Mrslee?Neutral "I know, {player_name}. I try, but I'm overwhelmed! Everything is harder these days alone and I just can't get rid of this headache. Again!!"
 
 * You've been having headaches?
   -> QuestIntro
@@ -67,13 +67,13 @@ Mrslee?Neutral "It's really fine. It's been like this for years and years. My mo
 ==OptionalQuestDetails2==
 Mrslee?Neutral "I am not sure. They come. They go. I am fine."
 
-* I trust you, Mrs. Lee, and I'm worried about you.
+* I trust you, Mrs. Lee, and I'm worried about you. Have you talked to Eddie about the headaches?
   -> QuestAcceptance
 * Let's think about this together
   -> QuestAcceptance
 
 ==QuestAcceptance==
-Mrslee?Smiling "I suppose Eddie would like if I went to the doctors for my headaches. I am nervous about the appointment and scheduling... that makes me feel, well, my head hurts thinking about it.
+Mrslee?Smiling "I suppose Eddie would like if I asked doctor. I feel nervous about the appointment and scheduling... that makes me, well, it makes me headache thinking about it.
 
 * I can definitely help you.
   -> Goodbye

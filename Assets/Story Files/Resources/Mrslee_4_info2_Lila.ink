@@ -58,7 +58,7 @@ Lila?Smiling "Y'know, my perception is that a little distance between them is he
 # notification Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4
 
 Lila?Smiling "Eddie's been learning a lot about exercise and his blood pressure, and his diet. He's been cooking, if you can believe it!"
-Lila?Smiling "Mrs. Lee could start the conversation to show that she's thinking about him, and she could write down his medical history over the last few months."
+Lila?Smiling "Between everything she learned by finding a doctor she can talk to, and everything he's doing to take better care of himself, I am hoping they have some in-depth conversations and start keeping notes; they might be useful to Eddie in the future."
 
 * {not Suggestion2} That's an important conversation to have
   -> Suggestion2
@@ -69,11 +69,11 @@ Lila?Smiling "Mrs. Lee could start the conversation to show that she's thinking 
 ~ notification = "Lila_Day 4_Lila could facilitate the health conversation between Mrs. Lee and Eddie"
 # notification Lila_Day 4_Lila could facilitate the health conversation between Mrs. Lee and Eddie
 
-Lila?Smiling "Yeah, I could go and facilitate a conversation about their health, but I don't think they really need me. They've grown so much in their ability to connect as a family."
+Lila?Smiling "Yeah, I could offer to facilitate a conversation, but I don't think they really need me. They've grown so much in their ability to connect as a family."
 
 * {not Suggestion1} Hmmm...
   -> Suggestion1
-* I think that's a good idea.
+* I think you're right!  Mrs. Lee knows she can ask for help if they need it.
   -> Goodbye
 
 ==Goodbye==

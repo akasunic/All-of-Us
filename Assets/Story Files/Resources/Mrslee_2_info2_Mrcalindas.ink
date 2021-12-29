@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Mrcalindas?Smiling "Just can't get enough of me, can you, {player_name}? Haha!"
+Mrcalindas?Smiling "Just can't get enough of this place, can you, {player_name}? Haha!"
 
 * You know it!
   -> Chat1
@@ -16,17 +16,17 @@ Mrcalindas?Smiling "Just can't get enough of me, can you, {player_name}? Haha!"
 ==Chat1==
 Mrcalindas?Smiling "I'm just playin'. You know you can stop by here anytime. Emergency or not."
 
-* Thanks, that's super kind of you. It is a 24 hour clinic after all!
+* Thanks! I like knowing that's an option. The clinic is 24 hours, right?
   -> Chat2
 * You're a people-person
   -> Explain1
 
 ==Chat2==
-Mrcalindas?Smiling "Yup, we are open 24 hours a day 7 days a week. You know--I'm here most every day!"
+Mrcalindas?Smiling "Yup, our doors are open around the clock, 7 days a week. I should know--I'm here most every day!"
 
-* You deserve a vacation
+* You know what? I think you deserve a vacation
   -> Chat3
-* I love walking through those doors, they're like the best automatic doors ever
+* I love walking through those doors. I always feel welcome and supported.
   -> Explain1
 
 ==Chat3==
@@ -38,7 +38,7 @@ Mrcalindas?Smiling "You and me both, {player_name}. But seriously, I love my job
   -> Explain1
 
 ==Explain1==
-Mrcalindas?Smiling "I know. I feel very grateful for every person I get to see walk in and out of those doors."
+Mrcalindas?Smiling "I'm glad! I feel very grateful for every person who walks in and out of those doors."
 
 * So it's the people for you!
   -> Explain2
@@ -46,11 +46,11 @@ Mrcalindas?Smiling "I know. I feel very grateful for every person I get to see w
   -> Explain2
 
 ==Explain2==
-Mrcalindas?Smiling "But I mean, lots has changed recently, like the online tools and resources, all in all it's an extremely useful tool. Just having it all set up was kind of a headache."
+Mrcalindas?Smiling "It's all about the people. We've made a lot of changes recently, like adding new online tools and resources. I like having new ways to help take care of people, but having it all set up was a real headache."
 
-* Speaking of which, are recurrent migraines something to be worried about?
+* Speaking of headaches, are recurrent migraines something to be worried about?
   -> Suggestion1
-* My friend is getting headaches all the time.
+* My friend is getting actual headaches all the time.
   -> Suggestion2
 
 ==Suggestion1==

@@ -8,9 +8,9 @@ VAR new_quest = ""
 ===intro===
 Lila?Smiling "Hey, {player_name}. Sit down and I'll be right there... I want to talk to you!
 
-* Okay, Lila
+* Sure thing, Lila
   -> Chat1
-* Preparing for the Block Party?
+* Is everything okay?
   -> Chat1
 
 ==Chat1==
@@ -36,43 +36,44 @@ Lila?Smiling "She trusts you, which is why I know she would be fine with us spea
   -> Explain1
 
 ==Explain1==
-Lila?Neutral "Yeah, she scheduled her appointment and i’m really proud of her for taking a proactive role in the relationship she has with her health. Her husband, you remember he was Dr Lee?"
+Lila?Neutral "Yeah, she scheduled her appointment and i’m really proud of her for taking a proactive role in her health. Do you remember her husband? He was Dr Lee?"
 
 * Yeah, she has told me a little bit about him.
   -> Explain2
-* I think so?
+* I think I vaguely remember him?
   -> Explain2
 
 ==Explain2==
 Lila?Neutral "He wasn’t very kind to her, and I think she suffered on the inside. She’s been kind of shocked since he passed… probably until the last few months with Eddie away at school."
 Lila?Neutral "She’s stepped up in her life, big time! And, wow, this past week since you’ve been talking and supporting her, {player_name}!"
-Lila?Neutral "I'm trying to think how we can make Mrs. Lee more comfortable with her appointment."
+Lila?Neutral "I've been trying to brainstorm ways we can make Mrs. Lee more comfortable with her appointment."
 
-* Yeah, what do you think?
+* Great idea! What were you thinking?
   -> Suggestion1
+  
 * She's seeeriously anxious
-  -> Suggestion2
+  -> Suggestion1
 
 ==Suggestion1==
 ~ notification = "Lila_Day 3_Lila can support Mrs. Lee by going to the appointment with her_Mrslee3"
 # notification Lila_Day 3_Lila can support Mrs. Lee by going to the appointment with her_Mrslee3
 
-Lila?Smiling "You can suggest that I will go to the appointment with her."
+Lila?Smiling "We could suggest that I will go to the appointment with her. She might not even know that having a friend along is an option."
 
-* Hmmm.
+* Hmmm. That might help... 
   -> Suggestion2
 * I think that's a good idea.
   -> Goodbye
 
 ==Suggestion2==
 ~ notification = "Lila_Day 3_Lila can write down Mrs. Lee's symptoms by assuming her problems"
-# notification Lila_Day 3_Lila can write down Mrs. Lee's symptoms by assuming her problems
+# notification Lila_Day 3_Lila can write down what she knows of Mrs. Lee's symptoms
 
-Lila?Neutral "I could even, like, write down what I think her symptoms are? To, like, take the pressure off?"
+Lila?Neutral "Also, I could, maybe, write down what I think her symptoms are? To, like, take the pressure off?"
 
-* Huh..
-  -> Suggestion1
-* Hmm
+* Huh..We should ask her what she thinks!
+  -> Goodbye
+* Hmm. I'll talk to her.
   -> Goodbye
 
 ==Goodbye==
