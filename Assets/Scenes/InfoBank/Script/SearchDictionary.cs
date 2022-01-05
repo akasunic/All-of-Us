@@ -59,7 +59,6 @@ public class SearchDictionary : MonoBehaviour
         }
         // This is to fix a bug where it believed the content object was not turned on
         contentObject.SetActive(true);
-        Debug.Log(numWords);
     }
 
     private GameObject getHighlightImageObject(GameObject go)

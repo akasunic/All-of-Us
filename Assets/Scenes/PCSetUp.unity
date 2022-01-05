@@ -9416,27 +9416,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179506471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56ca6b68e384432e98119938c9fb5f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 40470f7377c75467bb2d178fef192311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 211806039}
-  WelcomeTitle: {fileID: 706903910}
-  WelcomeText: {fileID: 2022160728}
-  NameText: {fileID: 1880341430}
-  PronounsText: {fileID: 1775591508}
-  LanguageText: {fileID: 414662878}
-  ContinueText: {fileID: 522261444}
-  InactiveContinueText: {fileID: 362686728}
-  pronounsDropDownLabel: {fileID: 1942646769}
-  languageDropDownLabel: {fileID: 109335163}
-  nameFieldPlaceholder: {fileID: 896049704}
-  pronounsDropDown: {fileID: 0}
-  languageDropDown: {fileID: 0}
-  backButton: {fileID: 66654038}
-  NameError: {fileID: 299528523}
-  NameErrorText: {fileID: 2099114439}
-  continueButton: {fileID: 1584470664}
-  inactiveContinueButton: {fileID: 1142785952}
+  pronounsDropDown: {fileID: 1175897488}
+  languageDropDown: {fileID: 1833719007}
 --- !u!1 &1184608107
 GameObject:
   m_ObjectHideFlags: 0

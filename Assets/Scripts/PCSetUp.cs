@@ -27,9 +27,7 @@ public class PCSetUp : MonoBehaviour
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
-    private int intPronouns = 0;
     private string pronouns;
-    private int intLanguage = 0;
     private string language;
     
     // Localization Feature
@@ -46,34 +44,31 @@ public class PCSetUp : MonoBehaviour
         LanguageText.text = LangClass.getString("language_field");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
 
-        // Control continue buttons
-        continueButton.gameObject.SetActive(false);
-        inactiveContinueButton.gameObject.SetActive(true);
-
-        // Setting dropdown lists
-        List<string> pronounsDropDownOptions = new List<string> { "", LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};
-        List<string> languageDropDownOptions = new List<string> { "", LangClass.getString("english"), LangClass.getString("spanish")};
-
-        pronounsDropDown.AddOptions(pronounsDropDownOptions);
-        languageDropDown.AddOptions(languageDropDownOptions);
+        // Setting dropdown lists' options is done in the script PCSetUpDropdowns
 
         string buttonText = "";
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
             buttonText = LangClass.getString("continue");
             WelcomeTitle.text = LangClass.getString("welcome_title");
             WelcomeText.text = LangClass.getString("welcome_text");
+
+            // Control continue buttons
+            continueButton.gameObject.SetActive(false);
+            inactiveContinueButton.gameObject.SetActive(true);
         } else {
+
             // Populate data from current settings
             firstName = GlobalGameInfo.name;
             nameInputField.text = firstName;
 
-            intPronouns = GlobalGameInfo.pronounsInt;
-            pronounsDropDown.value = intPronouns;
-
-            intLanguage = GlobalGameInfo.languageInt;
-            languageDropDown.value = intLanguage;
+            pronounsDropDown.value = GlobalGameInfo.pronounsInt;
+            languageDropDown.value = GlobalGameInfo.languageInt;
 
             buttonText = LangClass.getString("save");
+
+            // Control continue buttons
+            continueButton.gameObject.SetActive(true);
+            inactiveContinueButton.gameObject.SetActive(false);
         }
 
         ContinueText.text = buttonText;
@@ -84,11 +79,10 @@ public class PCSetUp : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        firstName = nameInputField.GetComponent<InputField>().text;
-        intPronouns = pronounsDropDown.value;
-        intLanguage = languageDropDown.value;
 
-        if (firstName != null && !firstName.Equals("") && intPronouns != 0 && intLanguage != 0) {
+        firstName = nameInputField.GetComponent<InputField>().text;
+
+        if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0) {
             continueButton.gameObject.SetActive(true);
             inactiveContinueButton.gameObject.SetActive(false);
         } else {
@@ -108,21 +102,23 @@ public class PCSetUp : MonoBehaviour
 
     public void Submit()
     {
-        if (isTaken(firstName)) {
+        string previousName = GlobalGameInfo.name;
+
+        if (SceneManager.GetActiveScene().name == "PCSetUp" && isTaken(firstName)
+        || previousName != firstName && isTaken(firstName)) {
             NameError.gameObject.SetActive(true);
             NameErrorText.text = LangClass.getString("name_taken");
             return;
         }
-        string previousName = GlobalGameInfo.name;
 
         GlobalGameInfo.name = firstName;
-        GlobalGameInfo.pronouns = GetPronouns(intPronouns);
-        GlobalGameInfo.language = GetLanguages(intLanguage);
+        GlobalGameInfo.pronouns = GetPronouns(pronounsDropDown.value);
+        GlobalGameInfo.language = GetLanguages(languageDropDown.value);
         GlobalGameInfo.pronounsInt = pronounsDropDown.value;
         GlobalGameInfo.languageInt = languageDropDown.value;
 
         // Change the language globally
-        LangClass.setLanguage(GetLanguages(intLanguage));
+        LangClass.setLanguage(GetLanguages(languageDropDown.value));
 
         // TODO consider moving some parts here to the SavingGame script
         if (SceneManager.GetActiveScene().name == "PCSetUp") {
@@ -132,27 +128,30 @@ public class PCSetUp : MonoBehaviour
                 currentData = new Dictionary<string, SavedGame>();
                 GlobalGameInfo.gameData = currentData;
             }
-            SavedGame newPlayer = new SavedGame(firstName, GetLanguages(intLanguage));
+            SavedGame newPlayer = new SavedGame(firstName);
             GlobalGameInfo.savedGame = newPlayer;
             currentData.Add(firstName, newPlayer);
             SaveSerial.SaveGame(currentData);
+            
+            // Coming from PCsetup scene
+            GlobalGameInfo.goToSelectProfileFlag = true;
+            SceneManager.LoadScene("StartWeek");
         } else {
             Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
             SavedGame current = GlobalGameInfo.savedGame;
             current.setName(GlobalGameInfo.name);
+            current.setPronouns(GlobalGameInfo.pronouns);
             current.setLanguage(GlobalGameInfo.language);
+            current.setPronounsInt(GlobalGameInfo.pronounsInt);
+            current.setLanguageInt(GlobalGameInfo.languageInt);
+
             currentData.Remove(previousName);
             currentData.Add(GlobalGameInfo.name, current);
             // Pronouns are not used currently in the game
             SaveSerial.SaveGame(currentData);
-        }
-        if (SceneManager.GetActiveScene().name != "PCSetUp") {
+
             // Coming from phone scene
             SceneManager.LoadScene("Basic2DMap");
-        } else {
-            // Coming from PCsetup scene
-            GlobalGameInfo.goToSelectProfileFlag = true;
-            SceneManager.LoadScene("StartWeek");
         }
     }
 

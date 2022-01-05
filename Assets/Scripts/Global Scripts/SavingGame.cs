@@ -51,7 +51,10 @@ public static class SavingGame : object {
         GlobalGameInfo.SetPlayerName(savedGame.getName());
         GlobalGameInfo.SetCurrentDay(savedGame.getDay());
         GlobalGameInfo.SetCurrentWeek(savedGame.getWeek());
+        GlobalGameInfo.pronouns = savedGame.getPronouns();
         GlobalGameInfo.language = savedGame.getLanguage();
+        GlobalGameInfo.pronounsInt = savedGame.getPronounsInt();
+        GlobalGameInfo.languageInt = savedGame.getLanguageInt();
         
         // Loading phone info
         GlobalGameInfo.todoList = savedGame.getTodoItems();
