@@ -67,25 +67,43 @@ As the new Community Manager, your role is to learn what your neighbors need, an
         <string name="next_npc">Where Do I Want to Start?</string>
 
         <string name="rashad_name">Rashad Williams</string>
+        <string name="rashad_first_name">Rashad</string>
         <string name="rashad_age_pronouns">42 years old | He/Him/His</string>
+        <string name="rashad_pronouns">He/Him/His</string>
+        <string name="rashad_age">42</string>
         <string name="rashad_title">Head Librarian, Bloomwood Library</string>
         <string name="rashad_description">Rashad was born in Bloomwood.  He moved back after getting his Master’s Degree in Library Science. He is married with 2 children (Wife Cheryl, children Octavia and Charles). He enjoys comic books, science fiction, and is an avid runner.</string>
+
         <string name="lila_name">Lila Morgan</string>
+        <string name="lila_first_name">Lila</string>
         <string name="lila_age_pronouns">26 years old | She/Her/Hers</string>
+        <string name="lila_pronouns">She/Her/Hers</string>
+        <string name="lila_age">26</string>
         <string name="lila_title">Head Start Teacher, Community Center</string>
         <string name="lila_description">Lila Morgan moved to town when she was 17; her mom worked with the Head Start program. After college, Lila returned to Bloomwood with her partner, Trisha. She is close with Mrs. Lee, and loves teaching her border collie, Charlie, tricks.</string>
+
         <string name="elisa_name">Elisa Ramirez</string>
+        <string name="elisa_first_name">Elisa</string>
         <string name="elisa_age_pronouns">19 years old | She/Her/Hers</string>
+        <string name="elisa_pronouns">She/Her/Hers</string>
+        <string name="elisa_age">19</string>
         <string name="elisa_title">College Student, Bloomwood Library</string>
         <string name="elisa_description">Elisa Ramirez grew up in Bloomwood, where her parents moved after leaving El Salvador. She will graduate this June with her Associate’s degree in Finance from Bloomwood College. Elisa loves reading, spending time with friends, physical activity, and the outdoors.</string>
+
         <string name="mrcalindas_name">Mr. Calindas</string>
         <string name="mrcalindas_age_pronouns">58 years old | He/Him/His</string>
+        <string name="mrcalindas_pronouns">He/Him/His</string>
+        <string name="mrcalindas_age">58</string>
         <string name="mrcalindas_title">Head Nurse, Bloomwood Health Clinic</string>
         <string name="mrcalindas_description">Mr. Calindas moved to Bloomwood 20 years ago, when his wife, Paz took a job teaching Biology at Bloomwood Highschool. Mr. Calidas likes  to unwind by running or cooking with his daughter, Jessica.</string>
+        
         <string name="mrslee_name">Mrs. Lee</string>
         <string name="mrslee_age_pronouns">65 years old | She/Her/Hers</string>
+        <string name="mrslee_pronouns">She/Her/Hers</string>
+        <string name="mrslee_age">65</string>
         <string name="mrslee_title">Elder, Community Center</string>
         <string name="mrslee_description">Mrs. Lee and her husband, Dr. Lee, emigrated from South Korea with their grandson Eddie. Together, they raised Eddie in Bloomwood. Since the recent passing of her husband, Mrs. Lee has become a regular at the fitness classes at the Community Center.</string>
+
 
         <string name="days_left">DAYS LEFT</string>
         <string name="to_block_party">to block party for</string>
