@@ -61,6 +61,8 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
     public GameObject Glow;
+    public GameObject HelpButton;
+    public TextMeshProUGUI HelpButtonText;
 
 
     public Lang LangClass = new Lang(false);
@@ -148,17 +150,12 @@ public class StartWeek : MonoBehaviour
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 
+        HelpButton.SetActive(true);
+        HelpButtonText.text = LangClass.getString("tutorial_help");
+
         // Tutorial
         if (!GlobalGameInfo.startWeekFlag) {
-            TutorialContainer.SetActive(true);
-            TutorialArrow.SetActive(true);
-            Glow.SetActive(true);
-            TutorialButton.enabled = true;
-
-            YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
-            WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
-            WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
-            ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
+            this.activateTutorial();
         }
 
         RashadCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.RASHAD] == 2);
@@ -183,6 +180,18 @@ public class StartWeek : MonoBehaviour
 
         LangClass.setLanguage(GlobalGameInfo.language);
 
+    }
+
+    public void activateTutorial() {
+        TutorialContainer.SetActive(true);
+        TutorialArrow.SetActive(true);
+        Glow.SetActive(true);
+        TutorialButton.enabled = true;
+
+        YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
+        WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
+        WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
+        ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
     }
 
     public void tutorialClick() {

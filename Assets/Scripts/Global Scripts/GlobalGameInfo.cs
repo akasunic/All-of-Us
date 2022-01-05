@@ -13,6 +13,8 @@ public static class GlobalGameInfo
     public static bool todolistFlag = false;
     public static bool myjournalFlag = false;
 
+    public static string selectedAppForTutorial = "";
+
     // PLAYER INFORMATION
     public static bool goToSelectProfileFlag = false;
     public static bool gotalkFlag = false;

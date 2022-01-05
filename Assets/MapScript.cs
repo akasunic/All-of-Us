@@ -66,6 +66,8 @@ public class MapScript : MonoBehaviour
     public TextMeshProUGUI ButtonTextPhone;
     public GameObject TaskGlow;
     public GameObject PhoneGlow;
+    public GameObject HelpButton;
+    public TextMeshProUGUI HelpButtonText;
 
     private float secondsPassed = 0.0f;
 
@@ -154,30 +156,37 @@ public class MapScript : MonoBehaviour
                     }
                 }
 
-                TutorialContainerTask.SetActive(true);
-                TutorialArrowTask.SetActive(true);
-                TaskGlow.SetActive(true);
-                TutorialButtonTask.enabled = true;
+                this.activateTutorial();
 
-                // Text for the task container
-                YellowTitleTask.text = LangClass.getString("task_map_yellowtitle");
-                WhiteTitleTask.text = LangClass.getString("task_map_whitetitle");
-                WhiteTextTask.text = LangClass.getString("task_map_whitetext");
-                ButtonTextTask.text = LangClass.getString("task_map_buttontext");
-
-                // Text for the neighbors container
-                YellowTitleNeighbors.text = LangClass.getString("neighbors_map_yellowtitle");
-                WhiteTitleNeighbors.text = LangClass.getString("neighbors_map_whitetitle");
-                WhiteTextNeighbors.text = LangClass.getString("neighbors_map_whitetext");
-                ButtonTextNeighbors.text = LangClass.getString("neighbors_map_buttontext");
-
-                // Text for the phone container
-                YellowTitlePhone.text = LangClass.getString("phone_map_yellowtitle");
-                WhiteTitlePhone.text = LangClass.getString("phone_map_whitetitle");
-                WhiteTextPhone.text = LangClass.getString("phone_map_whitetext");
-                ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
+                HelpButton.SetActive(true);
+                HelpButtonText.text = LangClass.getString("tutorial_help");
             }
         }
+    }
+
+    public void activateTutorial() {
+        TutorialContainerTask.SetActive(true);
+        TutorialArrowTask.SetActive(true);
+        TaskGlow.SetActive(true);
+        TutorialButtonTask.enabled = true;
+
+        // Text for the task container
+        YellowTitleTask.text = LangClass.getString("task_map_yellowtitle");
+        WhiteTitleTask.text = LangClass.getString("task_map_whitetitle");
+        WhiteTextTask.text = LangClass.getString("task_map_whitetext");
+        ButtonTextTask.text = LangClass.getString("task_map_buttontext");
+
+        // Text for the neighbors container
+        YellowTitleNeighbors.text = LangClass.getString("neighbors_map_yellowtitle");
+        WhiteTitleNeighbors.text = LangClass.getString("neighbors_map_whitetitle");
+        WhiteTextNeighbors.text = LangClass.getString("neighbors_map_whitetext");
+        ButtonTextNeighbors.text = LangClass.getString("neighbors_map_buttontext");
+
+        // Text for the phone container
+        YellowTitlePhone.text = LangClass.getString("phone_map_yellowtitle");
+        WhiteTitlePhone.text = LangClass.getString("phone_map_whitetitle");
+        WhiteTextPhone.text = LangClass.getString("phone_map_whitetext");
+        ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
     }
 
     public void tutorialTaskClick() {
