@@ -8805,7 +8805,6 @@ GameObject:
   - component: {fileID: 1142785954}
   - component: {fileID: 1142785953}
   - component: {fileID: 1142785952}
-  - component: {fileID: 1142785955}
   m_Layer: 5
   m_Name: Inactive Continue Button
   m_TagString: Untagged
@@ -8913,18 +8912,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142785950}
   m_CullTransparentMesh: 0
---- !u!114 &1142785955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142785950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1169944561
 GameObject:
   m_ObjectHideFlags: 0

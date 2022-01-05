@@ -243,7 +243,6 @@ public class MapScript : MonoBehaviour
         // Show calendar message
         CalendarMessage.SetActive(calendarIconPressed);
 
-
     }
 
     public void GoTalk() {
