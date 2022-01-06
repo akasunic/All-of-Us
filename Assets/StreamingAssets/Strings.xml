@@ -62,6 +62,7 @@ As the new Community Manager, your role is to learn what your neighbors need, an
         <string name="meet">Meet</string>
         <string name="good_morning_message">Good morning! Another beautiful week at Bloomwood. Ready to plan for a new Block Party?</string>
         <string name="completed">Completed</string>
+        <string name="saving_progress">Saving Progress...</string>
         
         <string name="saved_games">Saved Games</string>
         <string name="next_npc">Where Do I Want to Start?</string>

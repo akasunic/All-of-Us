@@ -3190,6 +3190,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -4228,6 +4229,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 1811440009}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -7527,6 +7529,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -8450,6 +8453,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -10821,7 +10825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Current Task Title
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
   m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
@@ -19133,6 +19137,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -20276,7 +20281,7 @@ PrefabInstance:
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_text
-      value: My Journal\nUpdated
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -20763,6 +20768,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -24451,6 +24457,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -24969,6 +24976,18 @@ RectTransform:
   m_AnchoredPosition: {x: -14, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1811440009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1508749746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814619772
 GameObject:
   m_ObjectHideFlags: 0
@@ -25796,6 +25815,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -28204,6 +28224,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}

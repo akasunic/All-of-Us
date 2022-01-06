@@ -12,6 +12,7 @@ public class StartWeek : MonoBehaviour
     static public List<GameObject> savedGamesUI;
     public GameObject prefabSavedGameItem;
     public GameObject BackButton;
+    public TextMeshProUGUI BackButtonText;
     public TextMeshProUGUI Title;
     public GameObject ScrollView;
     public string[][] savedGamesInfo = new string[6][];
@@ -84,6 +85,7 @@ public class StartWeek : MonoBehaviour
         }
 
         Title.text = LangClass.getString("saved_games");
+        BackButtonText.text = LangClass.getString("back");
 
         int y_location = 152;
         int gameNum = 1;

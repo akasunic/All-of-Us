@@ -27,6 +27,7 @@ public class MapScript : MonoBehaviour
     public TextMeshProUGUI ToBlockParty;
     public TextMeshProUGUI PleaseNote;
     public TextMeshProUGUI ProgressWontSave;
+    public TextMeshProUGUI MyJournalUpdated;
     public GameObject PhoneIcon;
     public GameObject CalendarIcon;
     public GameObject CalendarMessage;
@@ -84,6 +85,7 @@ public class MapScript : MonoBehaviour
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        MyJournalUpdated.text = LangClass.getString("journal_updated");
 
         string day = GlobalGameInfo.GetCurrentDayAsString("short");
         ShortDayText.text = day;
