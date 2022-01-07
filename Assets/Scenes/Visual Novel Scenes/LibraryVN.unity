@@ -594,6 +594,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 883614279548008293, guid: f80d7411ca085bc49ba42c52cee58723,
+        type: 3}
+      propertyPath: Tutorial
+      value: 
+      objectReference: {fileID: 1509163625}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f80d7411ca085bc49ba42c52cee58723, type: 3}
 --- !u!114 &237699669 stripped
@@ -643,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1146814489}
+  selectedFlowchart: {fileID: 708418953}
 --- !u!4 &392645906
 Transform:
   m_ObjectHideFlags: 1
@@ -749,6 +754,11 @@ PrefabInstance:
       objectReference: {fileID: 400864715}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
+      propertyPath: Tutorial
+      value: 
+      objectReference: {fileID: 1509163625}
+    - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
       propertyPath: nameTextContainer
       value: 
       objectReference: {fileID: 400864715}
@@ -773,6 +783,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 65ab316efc7214585adcde95894d3c77,
         type: 3}
+    - target: {fileID: 7257683682457077593, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: Tutorial
+      value: 
+      objectReference: {fileID: 1509163625}
     - target: {fileID: 7778418165282756481, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_IsActive
@@ -956,6 +971,7 @@ MonoBehaviour:
   WhiteTitle: {fileID: 733118004}
   WhiteText: {fileID: 121364826}
   ButtonText: {fileID: 2056439243}
+  DictionarySearchTermText: {fileID: 0}
   Glow: {fileID: 1238638951}
 --- !u!1001 &586195317
 PrefabInstance:
@@ -2695,6 +2711,7 @@ MonoBehaviour:
   WhiteTitle: {fileID: 733118004}
   WhiteText: {fileID: 121364826}
   ButtonText: {fileID: 2056439243}
+  DictionarySearchTermText: {fileID: 0}
   Glow: {fileID: 1238638951}
 --- !u!114 &804471848
 MonoBehaviour:
@@ -7143,7 +7160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bloomwood Library
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
   m_sharedMaterial: {fileID: 6403514172449940176, guid: 3947058b5dfdb40a7805bcff7c1e5c8a,
@@ -7822,6 +7839,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400864718}
     m_Modifications:
+    - target: {fileID: 5584704309393467169, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236676738389529954, guid: fb91dd1a42dfded4891afaae94301714,
         type: 3}
       propertyPath: m_Name
@@ -7931,6 +7953,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388716, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -54.62932
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388716, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -0.14749146
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388716, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -17.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388716, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.07377243
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388717, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388719, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388719, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388719, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236676738571388719, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb91dd1a42dfded4891afaae94301714, type: 3}

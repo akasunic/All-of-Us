@@ -2305,7 +2305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 639.3, y: 43.98}
+  m_AnchoredPosition: {x: 658.7, y: 25.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7236676738419997399
@@ -2408,6 +2408,7 @@ GameObject:
   - component: {fileID: 7236676738571388716}
   - component: {fileID: 7236676738571388718}
   - component: {fileID: 7236676738571388719}
+  - component: {fileID: 7859134739475412920}
   m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
@@ -2475,6 +2476,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Search a term...
+--- !u!114 &7859134739475412920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236676738571388717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1b5ec7b8e3048edac7c7eb084b72bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingName: {fileID: 0}
+  TutorialContainer: {fileID: 0}
+  TutorialArrow: {fileID: 0}
+  TutorialButton: {fileID: 0}
+  YellowTitle: {fileID: 0}
+  WhiteTitle: {fileID: 0}
+  WhiteText: {fileID: 0}
+  ButtonText: {fileID: 0}
+  DictionarySearchTermText: {fileID: 0}
+  Glow: {fileID: 0}
 --- !u!1 &7236676738613105625
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,8 +81,12 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject Glow;
     public GameObject HelpButton;
     public TextMeshProUGUI HelpButtonText;
+    
+    // More texts
     public float secondsPassed = 0.0f;
-
+    public TextMeshProUGUI BackButtonText;
+    public TextMeshProUGUI SectionName;
+    public TextMeshProUGUI NoJournalEntriesText;
     public Lang LangClass = new Lang(false);
 
     void Update(){
@@ -119,6 +123,9 @@ public class PhoneScreenManager : MonoBehaviour
         dictionaryBorder.SetActive(false);
 
         HelpButtonText.text = LangClass.getString("tutorial_help");
+        BackButtonText.text = LangClass.getString("back");
+        SectionName.text = LangClass.getString("home_screen");
+        NoJournalEntriesText.text = LangClass.getString("no_journal_entries");
 
         lastSelected = null;
         lastSelectedBorder = null;

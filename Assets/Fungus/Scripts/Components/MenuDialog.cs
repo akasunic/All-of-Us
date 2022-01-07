@@ -23,6 +23,7 @@ namespace Fungus
         protected Slider cachedSlider;
         private int nextOptionIndex;
 
+
         #region Public members
 
         /// <summary>
@@ -57,6 +58,7 @@ namespace Fungus
         /// </summary>
         public static MenuDialog GetMenuDialog()
         {
+
             if (ActiveMenuDialog == null)
             {
                 // Use first Menu Dialog found in the scene (if any)
@@ -85,6 +87,7 @@ namespace Fungus
 
         protected virtual void Awake()
         {
+
             Button[] optionButtons = GetComponentsInChildren<Button>();
             cachedButtons = optionButtons;
 

@@ -27,7 +27,7 @@ public class VN : MonoBehaviour
     void Start()
     {
         LangClass.setLanguage(GlobalGameInfo.language);
-        
+
         // buildingName.text = LangClass.getString("name_field");
 
         switch (SceneManager.GetActiveScene().name) {

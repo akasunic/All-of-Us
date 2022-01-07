@@ -27,6 +27,8 @@ As the new Community Manager, your role is to learn what your neighbors need, an
         <string name ="phone_todo_app">To-Do List</string>
         <string name ="phone_notes_app">My Journal</string>
         <string name ="phone_dictionary_app">Dictionary</string>
+        <string name ="home_screen">Home Screen</string>
+        <string name ="no_journal_entries">No journal entries yet!</string>
     
         <string name="day">DAY</string>
         <string name="week">Week</string>
@@ -63,6 +65,7 @@ As the new Community Manager, your role is to learn what your neighbors need, an
         <string name="good_morning_message">Good morning! Another beautiful week at Bloomwood. Ready to plan for a new Block Party?</string>
         <string name="completed">Completed</string>
         <string name="saving_progress">Saving Progress...</string>
+        <string name="search_term">Search a term...</string>
         
         <string name="saved_games">Saved Games</string>
         <string name="next_npc">Where Do I Want to Start?</string>

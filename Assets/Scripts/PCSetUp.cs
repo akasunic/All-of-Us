@@ -16,6 +16,7 @@ public class PCSetUp : MonoBehaviour
     public TextMeshProUGUI LanguageText;
     public TextMeshProUGUI ContinueText;
     public TextMeshProUGUI InactiveContinueText;
+    public TextMeshProUGUI BackButtonText;
     public Text pronounsDropDownLabel;
     public Text languageDropDownLabel;
     public Text nameFieldPlaceholder;
@@ -43,6 +44,7 @@ public class PCSetUp : MonoBehaviour
         PronounsText.text = LangClass.getString("pronouns_field");
         LanguageText.text = LangClass.getString("language_field");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
+        BackButtonText.text = LangClass.getString("back");
 
         // Setting dropdown lists' options is done in the script PCSetUpDropdowns
 

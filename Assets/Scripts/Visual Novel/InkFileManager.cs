@@ -67,6 +67,7 @@ public class InkFileManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
         _fc = GetComponent<Flowchart>();
         if (!GetVisualNovelComponents()) // if we couldn't find the VN components
             return;
@@ -83,7 +84,7 @@ public class InkFileManager : MonoBehaviour {
             narrativeDirector = FindObjectOfType<NarrativeDirector>();
         } catch {
             return false;
-        }
+        }        
         return (_fc && narrativeDirector);
     }
 
@@ -99,6 +100,7 @@ public class InkFileManager : MonoBehaviour {
 
         _fc.SetStringVariable("player_name", GlobalGameInfo.name);
         _fc.ExecuteBlock("On Variables Loaded");
+
     }
 
     public static void OnQuestCompleted(CharacterResources.CHARACTERS questGiver) {

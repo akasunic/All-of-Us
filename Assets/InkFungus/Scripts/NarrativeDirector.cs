@@ -259,6 +259,7 @@ namespace InkFungus
 
         void Start()
         {
+
             Character[] allCharacters = FindObjectsOfType<Character>();
             foreach (Character anyCharacter in allCharacters)
             {
