@@ -37,6 +37,7 @@ public class PCSetUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         LangClass.setLanguage(GlobalGameInfo.language);
 
         // Setting texts from Strings.xml
@@ -81,7 +82,6 @@ public class PCSetUp : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-
         firstName = nameInputField.GetComponent<InputField>().text;
 
         if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0) {

@@ -12237,8 +12237,8 @@ MonoBehaviour:
   ContinueText: {fileID: 522261444}
   InactiveContinueText: {fileID: 362686728}
   BackButtonText: {fileID: 1823190766}
-  pronounsDropDownLabel: {fileID: 0}
-  languageDropDownLabel: {fileID: 0}
+  pronounsDropDownLabel: {fileID: 1942646769}
+  languageDropDownLabel: {fileID: 109335163}
   nameFieldPlaceholder: {fileID: 896049704}
   pronounsDropDown: {fileID: 1175897488}
   languageDropDown: {fileID: 1833719007}
