@@ -25761,6 +25761,7 @@ GameObject:
   - component: {fileID: 1885034763}
   - component: {fileID: 1885034762}
   - component: {fileID: 1885034761}
+  - component: {fileID: 1885034764}
   - component: {fileID: 1885034760}
   m_Layer: 5
   m_Name: Exit Game Button
@@ -25798,68 +25799,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885034758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26222f1c28b0546d3bad8300af95ee50, type: 3}
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calendarIconPressed: 0
-  WeekText: {fileID: 0}
-  ShortDayText: {fileID: 0}
-  WeekTextPopup: {fileID: 0}
-  ShortDayTextPopup: {fileID: 0}
-  CalendarWeekTextPopup: {fileID: 0}
-  CalendarShortDayTextPopup: {fileID: 0}
-  MeetNPCText: {fileID: 0}
-  GoodMorningText: {fileID: 0}
-  CurrentTaskTitle: {fileID: 0}
-  CurrentTask: {fileID: 0}
-  CurrentNPC: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  ExitButtonText: {fileID: 0}
-  NumDaysLeft: {fileID: 0}
-  DaysLeftText: {fileID: 0}
-  ToBlockParty: {fileID: 0}
-  PleaseNote: {fileID: 0}
-  ProgressWontSave: {fileID: 0}
-  MyJournalUpdated: {fileID: 0}
-  PhoneIcon: {fileID: 0}
-  CalendarIcon: {fileID: 0}
-  CalendarMessage: {fileID: 0}
-  BackButton: {fileID: 0}
-  ExitGame: {fileID: 1885034758}
-  NPCAndTask: {fileID: 0}
-  GoTalkButton: {fileID: 0}
-  CalendarPopup: {fileID: 0}
-  RashadImage: {fileID: 0}
-  MrsLeeImage: {fileID: 0}
-  MrCalindasImage: {fileID: 0}
-  LilaImage: {fileID: 0}
-  ElisaImage: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainerTask: {fileID: 0}
-  TutorialArrowTask: {fileID: 0}
-  TutorialButtonTask: {fileID: 0}
-  YellowTitleTask: {fileID: 0}
-  WhiteTitleTask: {fileID: 0}
-  WhiteTextTask: {fileID: 0}
-  ButtonTextTask: {fileID: 0}
-  TutorialContainerNeighbors: {fileID: 0}
-  TutorialButtonNeighbors: {fileID: 0}
-  YellowTitleNeighbors: {fileID: 0}
-  WhiteTitleNeighbors: {fileID: 0}
-  WhiteTextNeighbors: {fileID: 0}
-  NeighborsImage: {fileID: 0}
-  ButtonTextNeighbors: {fileID: 0}
-  TutorialContainerPhone: {fileID: 0}
-  TutorialArrowPhone: {fileID: 0}
-  TutorialButtonPhone: {fileID: 0}
-  YellowTitlePhone: {fileID: 0}
-  WhiteTitlePhone: {fileID: 0}
-  WhiteTextPhone: {fileID: 0}
-  ButtonTextPhone: {fileID: 0}
-  TaskGlow: {fileID: 0}
-  PhoneGlow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &1885034761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25903,8 +25845,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885034760}
-        m_MethodName: GoToOpeningScreen
+      - m_Target: {fileID: 1885034764}
+        m_MethodName: OpenOpeningScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25951,6 +25893,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885034758}
   m_CullTransparentMesh: 0
+--- !u!114 &1885034764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885034758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f3f31b5688d4c248ea69d8f8fa8a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1893629799
 GameObject:
   m_ObjectHideFlags: 0

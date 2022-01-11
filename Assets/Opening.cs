@@ -32,6 +32,7 @@ public class Opening : MonoBehaviour
         if (GlobalGameInfo.gameData != null) {
             ContinueButton.SetActive(true);
         }
+
     }
 
 

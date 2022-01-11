@@ -258,6 +258,9 @@ public class MapScript : MonoBehaviour
 
     public void GoTalk() {
         InkFileManager ifm = new InkFileManager();
+        if (!GlobalGameInfo.gotalkFlag) {
+            ifm.setActiveFileIdx((-1, -1));
+        }
         ifm.TryLoadVNScene(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
     }
 

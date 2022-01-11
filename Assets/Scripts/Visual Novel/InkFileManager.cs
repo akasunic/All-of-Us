@@ -56,6 +56,10 @@ public class InkFileManager : MonoBehaviour {
     private static bool didAdd = false;
     public static string completedQuestString = null;
 
+    public void setActiveFileIdx((int, int) value) {
+        activeFileIdx = value;
+    }
+
     private void Awake() {
         if (!didAdd) {
             SceneManager.activeSceneChanged += OnSceneChanged;
@@ -138,11 +142,13 @@ public class InkFileManager : MonoBehaviour {
     /// </summary>
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
+
         // a quest is already active
         if (activeFileIdx != (-1, -1))
         {
             return false;
         }
+
         return character == GlobalGameInfo.GetCurrentNPC();
         /*
         // have we already done their quest for the day?
