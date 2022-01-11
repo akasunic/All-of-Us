@@ -207,20 +207,21 @@ Click on one of our Bloomwood Residents to learn more about them. You will spend
         <string name="task_map_buttontext">NEXT</string>
 
         <string name="neighbors_map_yellowtitle">What should I do?</string>
-        <string name="neighbors_map_whitetitle">Ask The Experts!</string>
-        <string name="neighbors_map_whitetext">On the map, you will see places where you can learn more. Each of your neighbors has specific expertise, and will be able to help with some of the questions you have. Talk to people around town for advice and ideas. 
+        <string name="neighbors_map_whitetitle">Meet Neighbors</string>
+        <string name="neighbors_map_whitetext">The map shows you all the important places around town. Hover over a location to see who is there right now. 
 
-Hover to see who is in each location right now, and click on the neighbor to start a conversation.</string>
+Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas.
+        </string>
         <string name="neighbors_map_buttontext">NEXT</string>
 
         <string name="phone_map_yellowtitle">What should I do?</string>
-        <string name="phone_map_whitetitle">Open your phone</string>
-        <string name="phone_map_whitetext">Click on your phone and look at your To-Do List, it will help you find out your next steps!</string>
+        <string name="phone_map_whitetitle">Jot It All Down</string>
+        <string name="phone_map_whitetext">Click on your phone to look at your To-Do List. This will help you figure out your next steps. </string>
         <string name="phone_map_buttontext">GOT IT</string>
 
         <string name="todolist_phone_yellowtitle">Tools and Resources</string>
-        <string name="todolist_phone_whitetitle">Check Your To-Do List</string>
-        <string name="todolist_phone_whitetext">To offer a solution to your neighbor, you will need to collect all the available data. The To-Do List on your phone will help you see what you’ve already learned, and what your next steps are.</string>
+        <string name="todolist_phone_whitetitle">To-do List</string>
+        <string name="todolist_phone_whitetext">You’ll be collecting solutions to problems your neighbors are facing. Collect all the available information to solve their dilemmas. Your To-Do List on your phone will help you keep track of what you’ve learned, and what your next steps might be.  </string>
         <string name="todolist_phone_buttontext">GOT IT</string>
 
         <string name="myjournals_phone_yellowtitle">Tools and Resources</string>
