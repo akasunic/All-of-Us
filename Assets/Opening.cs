@@ -7,25 +7,32 @@ using UnityEngine.SceneManagement;
 
 public class Opening : MonoBehaviour
 {
-    public TextMeshProUGUI ContinueButton;
+    public TextMeshProUGUI ContinueButtonText;
     public TextMeshProUGUI NewGameButton;
     public TextMeshProUGUI TutorialButton;
+    public GameObject ContinueButton;
 
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
 
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
         
-        ContinueButton.text = LangClass.getString("continue");
+        
+        ContinueButtonText.text = LangClass.getString("continue");
         NewGameButton.text = LangClass.getString("new_game");
         TutorialButton.text = LangClass.getString("tutorial");
 
         // Loading game data
         GlobalGameInfo.gameData = SaveSerial.LoadGame();
+
+        // Show continue button
+        if (GlobalGameInfo.gameData != null) {
+            ContinueButton.SetActive(true);
+        }
+
     }
 
 

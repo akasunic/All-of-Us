@@ -79,9 +79,15 @@ public class PhoneScreenManager : MonoBehaviour
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
     public GameObject Glow;
+    public GameObject HelpButton;
+    public TextMeshProUGUI HelpButtonText;
+    
+    // More texts
     public float secondsPassed = 0.0f;
-
-    public Lang LangClass = new Lang(false);
+    public TextMeshProUGUI BackButtonText;
+    public TextMeshProUGUI SectionName;
+    public TextMeshProUGUI NoJournalEntriesText;
+    public Lang LangClass = new Lang();
 
     void Update(){
       if (started && timer <= seconds) {
@@ -103,7 +109,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
@@ -115,6 +121,11 @@ public class PhoneScreenManager : MonoBehaviour
         contactsBorder.SetActive(false);
         settingsBorder.SetActive(false);
         dictionaryBorder.SetActive(false);
+
+        HelpButtonText.text = LangClass.getString("tutorial_help");
+        BackButtonText.text = LangClass.getString("back");
+        SectionName.text = LangClass.getString("home_screen");
+        NoJournalEntriesText.text = LangClass.getString("no_journal_entries");
 
         lastSelected = null;
         lastSelectedBorder = null;
@@ -214,62 +225,84 @@ public class PhoneScreenManager : MonoBehaviour
             case "messages":
                 go = messages;
                 border = messagesBorder;
+                HelpButton.SetActive(true);
+                GlobalGameInfo.selectedAppForTutorial = "todolist";
                 // Tutorial
                 if (!GlobalGameInfo.todolistFlag) {
-
-                    TutorialContainer.SetActive(true);
-                    TutorialArrow.SetActive(true);
-                    TutorialButton.enabled = true;
-                    Glow.SetActive(true);
-
-                    YellowTitle.text = LangClass.getString("todolist_phone_yellowtitle");
-                    WhiteTitle.text = LangClass.getString("todolist_phone_whitetitle");
-                    WhiteText.text = LangClass.getString("todolist_phone_whitetext");
-                    ButtonText.text = LangClass.getString("todolist_phone_buttontext");
-
-                    GlobalGameInfo.todolistFlag = true;
+                    this.activateTodoListTutorial();
                 }
                 break;
             case "notes":
                 go = notes;
                 border = notesBorder;
+                HelpButton.SetActive(true);
+                GlobalGameInfo.selectedAppForTutorial = "myjournal";
                 // Tutorial
                 if (!GlobalGameInfo.myjournalFlag) {
-
-                    TutorialContainer.SetActive(true);
-                    TutorialArrow.SetActive(true);
-                    TutorialButton.enabled = true;
-                    Glow.SetActive(true);
-
-                    YellowTitle.text = LangClass.getString("myjournals_phone_yellowtitle");
-                    WhiteTitle.text = LangClass.getString("myjournals_phone_whitetitle");
-                    WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
-                    ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
-
-                    GlobalGameInfo.myjournalFlag = true;
+                    this.activateMyJournalTutorial();
                 }
                 break;
             case "quest":
                 go = notes;
                 border = notesBorder;
+                HelpButton.SetActive(false);
                 break;
             case "contacts":
                 go = contacts;
                 border = contactsBorder;
+                HelpButton.SetActive(false);
                 break;
             case "settings":
                 go = settings;
                 border = settingsBorder;
+                HelpButton.SetActive(false);
                 break;
             case "dictionary":
                 go = dictionary;
                 border = dictionaryBorder;
+                HelpButton.SetActive(false);
                 break;
             case "back":
                 go = null;
                 border = null;
+                HelpButton.SetActive(false);
                 break;
         }
+    }
+
+    public void activateTutorial() {
+        if (GlobalGameInfo.selectedAppForTutorial == "todolist") {
+            this.activateTodoListTutorial();
+        } else if (GlobalGameInfo.selectedAppForTutorial == "myjournal") {
+            this.activateMyJournalTutorial();
+        }
+    }
+    public void activateTodoListTutorial() {
+        TutorialContainer.SetActive(true);
+        TutorialArrow.SetActive(true);
+        TutorialButton.enabled = true;
+        Glow.SetActive(true);
+
+        YellowTitle.text = LangClass.getString("todolist_phone_yellowtitle");
+        WhiteTitle.text = LangClass.getString("todolist_phone_whitetitle");
+        WhiteText.text = LangClass.getString("todolist_phone_whitetext");
+        ButtonText.text = LangClass.getString("todolist_phone_buttontext");
+
+        GlobalGameInfo.todolistFlag = true;
+    }
+
+    public void activateMyJournalTutorial() {
+        TutorialContainer.SetActive(true);
+        TutorialArrow.SetActive(true);
+        TutorialButton.enabled = true;
+        Glow.SetActive(true);
+
+        YellowTitle.text = LangClass.getString("myjournals_phone_yellowtitle");
+        WhiteTitle.text = LangClass.getString("myjournals_phone_whitetitle");
+        WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
+        ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
+
+        GlobalGameInfo.myjournalFlag = true;
     }
 
     public void tutorialClick() {

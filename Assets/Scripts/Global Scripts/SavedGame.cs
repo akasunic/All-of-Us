@@ -9,7 +9,10 @@ public class SavedGame : object {
     private string name;
     private int week;
     private int day;
+    private string pronouns;
     private string language;
+    private int pronounsInt;
+    private int languageInt;
 
     // Explanation on the progress variable:
     // 0 : Player has not started week of NPC
@@ -22,9 +25,13 @@ public class SavedGame : object {
 
     private Dictionary<string, bool> tutorialFlags;
 
-    public SavedGame(string playerName, string chosenLanguage) {
+    public SavedGame(string playerName) {
         name = playerName;
-        language = chosenLanguage;
+        pronouns = GlobalGameInfo.pronouns;
+        language = GlobalGameInfo.language;
+        pronounsInt = GlobalGameInfo.pronounsInt;
+        languageInt = GlobalGameInfo.languageInt;
+
         week = 0;
         day = 0;
         progress = new Dictionary<CharacterResources.CHARACTERS, int>();
@@ -106,12 +113,33 @@ public class SavedGame : object {
         Debug.Log(progress[CharacterResources.CHARACTERS.RASHAD]);
     }
 
+    public string getPronouns() {
+        return pronouns;
+    }
+
     public string getLanguage() {
         return language;
     }
 
+    public int getPronounsInt() {
+        return pronounsInt;
+    }
+
+    public int getLanguageInt() {
+        return languageInt;
+    }
+
+    public void setPronouns(string newPronouns) {
+        pronouns = newPronouns;
+    }
     public void setLanguage(string newLanguage) {
         language = newLanguage;
+    }
+    public void setPronounsInt(int newPronounsInt) {
+        pronounsInt = newPronounsInt;
+    }
+    public void setLanguageInt(int newLanguageInt) {
+        languageInt = newLanguageInt;
     }
 
     public Dictionary<CharacterResources.CHARACTERS, int> getProgress() {

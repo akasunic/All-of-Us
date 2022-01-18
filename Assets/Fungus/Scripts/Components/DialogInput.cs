@@ -50,6 +50,7 @@ namespace Fungus
 
         protected virtual void Awake()
         {
+
             writer = GetComponent<Writer>();
 
             CheckEventSystem();

@@ -27,6 +27,7 @@ public class MapScript : MonoBehaviour
     public TextMeshProUGUI ToBlockParty;
     public TextMeshProUGUI PleaseNote;
     public TextMeshProUGUI ProgressWontSave;
+    public TextMeshProUGUI MyJournalUpdated;
     public GameObject PhoneIcon;
     public GameObject CalendarIcon;
     public GameObject CalendarMessage;
@@ -66,11 +67,13 @@ public class MapScript : MonoBehaviour
     public TextMeshProUGUI ButtonTextPhone;
     public GameObject TaskGlow;
     public GameObject PhoneGlow;
+    public GameObject HelpButton;
+    public TextMeshProUGUI HelpButtonText;
 
     private float secondsPassed = 0.0f;
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     private IEnumerator Start() {
@@ -82,6 +85,7 @@ public class MapScript : MonoBehaviour
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         WeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         CalendarWeekTextPopup.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
+        MyJournalUpdated.text = LangClass.getString("journal_updated");
 
         string day = GlobalGameInfo.GetCurrentDayAsString("short");
         ShortDayText.text = day;
@@ -154,30 +158,37 @@ public class MapScript : MonoBehaviour
                     }
                 }
 
-                TutorialContainerTask.SetActive(true);
-                TutorialArrowTask.SetActive(true);
-                TaskGlow.SetActive(true);
-                TutorialButtonTask.enabled = true;
+                this.activateTutorial();
 
-                // Text for the task container
-                YellowTitleTask.text = LangClass.getString("task_map_yellowtitle");
-                WhiteTitleTask.text = LangClass.getString("task_map_whitetitle");
-                WhiteTextTask.text = LangClass.getString("task_map_whitetext");
-                ButtonTextTask.text = LangClass.getString("task_map_buttontext");
-
-                // Text for the neighbors container
-                YellowTitleNeighbors.text = LangClass.getString("neighbors_map_yellowtitle");
-                WhiteTitleNeighbors.text = LangClass.getString("neighbors_map_whitetitle");
-                WhiteTextNeighbors.text = LangClass.getString("neighbors_map_whitetext");
-                ButtonTextNeighbors.text = LangClass.getString("neighbors_map_buttontext");
-
-                // Text for the phone container
-                YellowTitlePhone.text = LangClass.getString("phone_map_yellowtitle");
-                WhiteTitlePhone.text = LangClass.getString("phone_map_whitetitle");
-                WhiteTextPhone.text = LangClass.getString("phone_map_whitetext");
-                ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
+                HelpButton.SetActive(true);
+                HelpButtonText.text = LangClass.getString("tutorial_help");
             }
         }
+    }
+
+    public void activateTutorial() {
+        TutorialContainerTask.SetActive(true);
+        TutorialArrowTask.SetActive(true);
+        TaskGlow.SetActive(true);
+        TutorialButtonTask.enabled = true;
+
+        // Text for the task container
+        YellowTitleTask.text = LangClass.getString("task_map_yellowtitle");
+        WhiteTitleTask.text = LangClass.getString("task_map_whitetitle");
+        WhiteTextTask.text = LangClass.getString("task_map_whitetext");
+        ButtonTextTask.text = LangClass.getString("task_map_buttontext");
+
+        // Text for the neighbors container
+        YellowTitleNeighbors.text = LangClass.getString("neighbors_map_yellowtitle");
+        WhiteTitleNeighbors.text = LangClass.getString("neighbors_map_whitetitle");
+        WhiteTextNeighbors.text = LangClass.getString("neighbors_map_whitetext");
+        ButtonTextNeighbors.text = LangClass.getString("neighbors_map_buttontext");
+
+        // Text for the phone container
+        YellowTitlePhone.text = LangClass.getString("phone_map_yellowtitle");
+        WhiteTitlePhone.text = LangClass.getString("phone_map_whitetitle");
+        WhiteTextPhone.text = LangClass.getString("phone_map_whitetext");
+        ButtonTextPhone.text = LangClass.getString("phone_map_buttontext");
     }
 
     public void tutorialTaskClick() {
@@ -243,11 +254,13 @@ public class MapScript : MonoBehaviour
         // Show calendar message
         CalendarMessage.SetActive(calendarIconPressed);
 
-
     }
 
     public void GoTalk() {
         InkFileManager ifm = new InkFileManager();
+        if (!GlobalGameInfo.gotalkFlag) {
+            ifm.setActiveFileIdx((-1, -1));
+        }
         ifm.TryLoadVNScene(CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()));
     }
 

@@ -40,4 +40,8 @@ public class SceneChangeDemoController : MonoBehaviour
     public void OpenVNScene(string character) {
 
     }
+
+    public void OpenOpeningScene() {
+        SceneManager.LoadScene("OpeningScene");
+    }
 }

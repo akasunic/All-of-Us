@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 1e77c9bd833ff47bdb31753153fb64cc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zilla Slab
+  fontNames:
+  - Zilla Slab
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f7cd8fa0974ac4c139f9a8ee9bf1e1a1, type: 3}
+  - {fileID: 12800000, guid: 25dd412253cc44b1faf1320572193710, type: 3}
+  - {fileID: 12800000, guid: d3b347344a9294a518b8d067478867e4, type: 3}
+  - {fileID: 12800000, guid: e96889b5612c54c55a7b5e6e76d73d6d, type: 3}
+  - {fileID: 12800000, guid: 9df530272b60641f8b8d59fd44d8b3da, type: 3}
+  - {fileID: 12800000, guid: 8b96c267651e842ac9040dc0fb683886, type: 3}
+  - {fileID: 12800000, guid: 4b49de97cec374f13a2cb0e881c8002b, type: 3}
+  - {fileID: 12800000, guid: 4cb397b7962c14ecf89b6d64db8464a8, type: 3}
+  - {fileID: 12800000, guid: 391b3d382881d4151b8db59a9243a8f6, type: 3}
+  - {fileID: 12800000, guid: 73426b09e6a4043608b53fdf906925ac, type: 3}
+  - {fileID: 12800000, guid: e0ce991aa892b47d4bd665af8d9f8f44, type: 3}
+  - {fileID: 12800000, guid: 3beb8e9a5b1884cf499be09d73c9cff9, type: 3}
+  - {fileID: 12800000, guid: 3d00291c5f78e4c8590b82f0cedbe7d2, type: 3}
+  - {fileID: 12800000, guid: 28929cedeb04a4f5fbe6d087c23c1704, type: 3}
+  - {fileID: 12800000, guid: 2795be3f099754aa186b248512cd4a28, type: 3}
+  - {fileID: 12800000, guid: 63f8185f5091f42228409f89c57beed2, type: 3}
+  - {fileID: 12800000, guid: f28e9b6fb50c14d9f99caa09e16a220b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

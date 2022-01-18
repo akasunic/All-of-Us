@@ -26,12 +26,12 @@ public class Home : MonoBehaviour {
     public TextMeshProUGUI CommunityEngagementValue;
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
 
     private void Start() {
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         DayText.text = GlobalGameInfo.GetCurrentDayAsString("long");

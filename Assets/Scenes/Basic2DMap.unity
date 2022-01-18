@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 56af1e2411a254e258f9aa5ee09a1383, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e692287c3b98646f598ffc82a46d3fe0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2215,8 +2215,6 @@ RectTransform:
   - {fileID: 783797672}
   - {fileID: 572248319}
   - {fileID: 367345664}
-  - {fileID: 1497762257}
-  - {fileID: 1490746585}
   - {fileID: 1639477492}
   m_Father: {fileID: 1087514139}
   m_RootOrder: 1
@@ -2627,7 +2625,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2691,7 +2689,7 @@ MonoBehaviour:
   m_margin: {x: -33.979553, y: -5.163208, z: -22.286682, w: -10.334747}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &186487719
@@ -3120,6 +3118,221 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244404545}
   m_CullTransparentMesh: 0
+--- !u!1 &246337815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246337816}
+  - component: {fileID: 246337821}
+  - component: {fileID: 246337820}
+  - component: {fileID: 246337819}
+  - component: {fileID: 246337818}
+  - component: {fileID: 246337817}
+  m_Layer: 5
+  m_Name: Help Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &246337816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1398964625}
+  m_Father: {fileID: 1510505320}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 444.91003, y: -342.69}
+  m_SizeDelta: {x: 77.69617, y: 32.69523}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &246337817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26222f1c28b0546d3bad8300af95ee50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calendarIconPressed: 0
+  WeekText: {fileID: 0}
+  ShortDayText: {fileID: 0}
+  WeekTextPopup: {fileID: 0}
+  ShortDayTextPopup: {fileID: 0}
+  CalendarWeekTextPopup: {fileID: 0}
+  CalendarShortDayTextPopup: {fileID: 0}
+  MeetNPCText: {fileID: 0}
+  GoodMorningText: {fileID: 0}
+  CurrentTaskTitle: {fileID: 0}
+  CurrentTask: {fileID: 0}
+  CurrentNPC: {fileID: 0}
+  BackButtonText: {fileID: 0}
+  ExitButtonText: {fileID: 0}
+  NumDaysLeft: {fileID: 0}
+  DaysLeftText: {fileID: 0}
+  ToBlockParty: {fileID: 0}
+  PleaseNote: {fileID: 0}
+  ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
+  PhoneIcon: {fileID: 0}
+  CalendarIcon: {fileID: 0}
+  CalendarMessage: {fileID: 0}
+  BackButton: {fileID: 0}
+  ExitGame: {fileID: 0}
+  NPCAndTask: {fileID: 0}
+  GoTalkButton: {fileID: 0}
+  CalendarPopup: {fileID: 0}
+  RashadImage: {fileID: 0}
+  MrsLeeImage: {fileID: 0}
+  MrCalindasImage: {fileID: 0}
+  LilaImage: {fileID: 0}
+  ElisaImage: {fileID: 0}
+  blackOverlay: {fileID: 0}
+  TutorialContainerTask: {fileID: 902842813}
+  TutorialArrowTask: {fileID: 374026479}
+  TutorialButtonTask: {fileID: 581900358}
+  YellowTitleTask: {fileID: 631851494}
+  WhiteTitleTask: {fileID: 2097960660}
+  WhiteTextTask: {fileID: 1394865278}
+  ButtonTextTask: {fileID: 176271309}
+  TutorialContainerNeighbors: {fileID: 2007376820}
+  TutorialButtonNeighbors: {fileID: 1558165556}
+  YellowTitleNeighbors: {fileID: 1606044758}
+  WhiteTitleNeighbors: {fileID: 1347010599}
+  WhiteTextNeighbors: {fileID: 917441539}
+  NeighborsImage: {fileID: 1384525863}
+  ButtonTextNeighbors: {fileID: 483864674}
+  TutorialContainerPhone: {fileID: 617101839}
+  TutorialArrowPhone: {fileID: 1632794700}
+  TutorialButtonPhone: {fileID: 649775385}
+  YellowTitlePhone: {fileID: 2051520526}
+  WhiteTitlePhone: {fileID: 1858819627}
+  WhiteTextPhone: {fileID: 1720343131}
+  ButtonTextPhone: {fileID: 1956383894}
+  TaskGlow: {fileID: 1683752349}
+  PhoneGlow: {fileID: 116342090}
+  HelpButton: {fileID: 246337815}
+  HelpButtonText: {fileID: 1398964626}
+--- !u!114 &246337818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &246337819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 246337820}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 246337817}
+        m_MethodName: activateTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &246337820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6e188f9ef1d854e3b9ed8cca65b2006a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &246337821
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246337815}
+  m_CullTransparentMesh: 0
 --- !u!1 &251728797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,7 +3657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eab556239a5d3455789cad1921ab7bc7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a20cc6c2e5cb467fba418041a19837d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4016,6 +4229,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 1811440009}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -4053,6 +4267,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 1956383894}
   TaskGlow: {fileID: 1683752349}
   PhoneGlow: {fileID: 116342090}
+  HelpButton: {fileID: 246337815}
+  HelpButtonText: {fileID: 1398964626}
 --- !u!1 &295407292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,7 +5195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a31227c945cb45739c980b109a5d515, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 646a082a84e644681b765164b0ea991e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5177,7 +5393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 61f0896daf693410ba5dea2f6c09fe36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 287ef8d0fbb19405aadee7e0e4a899c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6173,7 +6389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a1c83ed4a6444d73a44305a9e5ce911, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7313,6 +7529,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -7350,6 +7567,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 1683752349}
   PhoneGlow: {fileID: 0}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!114 &581900358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7423,7 +7642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a81bc16679f3447b88e7ede2fdb52460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01380ec00200b42cf8705948893cc9fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7841,7 +8060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9072fdd7e3754df984e9595e579f0da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0a4fd17b36da43919807825f8a6f8d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8234,6 +8453,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -8271,6 +8491,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 0}
   PhoneGlow: {fileID: 116342090}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!114 &649775385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8344,7 +8566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a81bc16679f3447b88e7ede2fdb52460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01380ec00200b42cf8705948893cc9fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10314,7 +10536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9072fdd7e3754df984e9595e579f0da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0a4fd17b36da43919807825f8a6f8d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10603,7 +10825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Current Task Title
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
   m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
@@ -12759,7 +12981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec85478b28e5b4ff38743085d734dffc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7d63d96caefc43278804ab04d0bcc84, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18365,7 +18587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f2e57226bbd442dfb6c9eb10c92eb8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 787c558c9712d47b8b179484017af2d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18517,6 +18739,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394865276}
   m_CullTransparentMesh: 0
+--- !u!1 &1398964624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398964625}
+  - component: {fileID: 1398964627}
+  - component: {fileID: 1398964626}
+  m_Layer: 5
+  m_Name: Help Button Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1398964625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398964624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 246337816}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10.2, y: -4.9701}
+  m_SizeDelta: {x: 33.708374, y: 18.133759}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1398964626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398964624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6dcfd87fd05cc418b8309c0c8e29c411, type: 2}
+  m_sharedMaterial: {fileID: -2536879518849845702, guid: 6dcfd87fd05cc418b8309c0c8e29c411,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14
+  m_fontSizeBase: 14
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -5.6466985, y: 0, z: -4.260193, w: 10.706848}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1398964627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398964624}
+  m_CullTransparentMesh: 0
 --- !u!1 &1408201961
 GameObject:
   m_ObjectHideFlags: 0
@@ -18574,7 +18930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a1c83ed4a6444d73a44305a9e5ce911, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18781,6 +19137,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -18818,6 +19175,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 0}
   PhoneGlow: {fileID: 0}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!114 &1419691954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18891,7 +19250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 61f0896daf693410ba5dea2f6c09fe36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 287ef8d0fbb19405aadee7e0e4a899c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19562,14 +19921,14 @@ RectTransform:
   m_GameObject: {fileID: 1490746584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.54062706, y: 1.5899216, z: 0.3600872}
+  m_LocalScale: {x: 0.13290745, y: 0.5346276, z: 0.47426435}
   m_Children: []
-  m_Father: {fileID: 167659223}
-  m_RootOrder: 5
+  m_Father: {fileID: 1592652008}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -466, y: 441.9}
+  m_AnchoredPosition: {x: -12.9, y: -45.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490746586
@@ -19693,14 +20052,14 @@ RectTransform:
   m_GameObject: {fileID: 1497762256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5221348, y: 1.5501736, z: 0.30864614}
+  m_LocalScale: {x: 0.12836131, y: 0.52126193, z: 0.4065123}
   m_Children: []
-  m_Father: {fileID: 167659223}
-  m_RootOrder: 4
+  m_Father: {fileID: 1592652008}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -277, y: 444}
+  m_AnchoredPosition: {x: 35.4, y: -38.66867}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497762258
@@ -19922,7 +20281,7 @@ PrefabInstance:
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_text
-      value: My Journal\nUpdated
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -19973,22 +20332,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 99437846674e1884d85c411b7158802d,
+      objectReference: {fileID: 21300000, guid: 91f4adf66d7aa47f894192493c2fa3ec,
         type: 3}
     - target: {fileID: 5885060088029501882, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5975825617858713872, guid: a27e3f7ab345a49bcb17231945f6502d,
+    - target: {fileID: 5972026642948939863, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5975825617858713872, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975825617858713872, guid: a27e3f7ab345a49bcb17231945f6502d,
+        type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 21.61
       objectReference: {fileID: 0}
     - target: {fileID: 6861777948896379087, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -20109,7 +20473,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8d05fe4162e854ef28c723ebe3a5c148,
+      objectReference: {fileID: 21300000, guid: c5220f2d017374e9c8070c8ce3de0b57,
         type: 3}
     - target: {fileID: 8307407355242500947, guid: a27e3f7ab345a49bcb17231945f6502d,
         type: 3}
@@ -20157,6 +20521,7 @@ RectTransform:
   - {fileID: 474293755}
   - {fileID: 1782759943}
   - {fileID: 1419691952}
+  - {fileID: 246337816}
   m_Father: {fileID: 285907474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20408,6 +20773,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -20445,6 +20811,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 0}
   PhoneGlow: {fileID: 116342090}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!114 &1558165555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20530,7 +20898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a81bc16679f3447b88e7ede2fdb52460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01380ec00200b42cf8705948893cc9fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20895,7 +21263,9 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.6444664, y: 1.5268536, z: 0.6131424}
-  m_Children: []
+  m_Children:
+  - {fileID: 1497762257}
+  - {fileID: 1490746585}
   m_Father: {fileID: 407489613}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21873,7 +22243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a31227c945cb45739c980b109a5d515, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 646a082a84e644681b765164b0ea991e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22096,7 +22466,7 @@ RectTransform:
   m_LocalScale: {x: 0.39880893, y: 1.5105675, z: 0.34211498}
   m_Children: []
   m_Father: {fileID: 167659223}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22724,7 +23094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 158d295e1e8c343d88826c236fb1df41, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39671d5a9c52540d58b5926786599c8b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23964,7 +24334,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0723f5cca8c434f57a5cb2245d1e45b1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
   m_sharedMaterial: {fileID: 3646310722991536229, guid: 0723f5cca8c434f57a5cb2245d1e45b1,
     type: 2}
   m_fontSharedMaterials: []
@@ -24029,7 +24399,7 @@ MonoBehaviour:
   m_margin: {x: -105.73187, y: 0, z: 0, w: -22.075867}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1777171553
@@ -24076,8 +24446,8 @@ MonoBehaviour:
   calendarIconPressed: 0
   WeekText: {fileID: 36692623}
   ShortDayText: {fileID: 565232576}
-  WeekTextPopup: {fileID: 0}
-  ShortDayTextPopup: {fileID: 0}
+  WeekTextPopup: {fileID: 60100202}
+  ShortDayTextPopup: {fileID: 1306971685}
   CalendarWeekTextPopup: {fileID: 0}
   CalendarShortDayTextPopup: {fileID: 0}
   MeetNPCText: {fileID: 0}
@@ -24092,6 +24462,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 8484716}
   PleaseNote: {fileID: 1923805128}
   ProgressWontSave: {fileID: 582038226}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 1257829164}
   CalendarIcon: {fileID: 1419691951}
   CalendarMessage: {fileID: 1807340487}
@@ -24129,6 +24500,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 0}
   PhoneGlow: {fileID: 0}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!114 &1782759940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24176,7 +24549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32be4c75d2c1f4453ab062dfc024e065, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f012e06d97c124e08bf09a44777881b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24284,7 +24657,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3947058b5dfdb40a7805bcff7c1e5c8a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24348,7 +24721,7 @@ MonoBehaviour:
   m_margin: {x: -37.745056, y: -15.774109, z: -18.950714, w: -29.816772}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1787102432
@@ -24608,6 +24981,18 @@ RectTransform:
   m_AnchoredPosition: {x: -14, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1811440009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2997469364318955302, guid: a27e3f7ab345a49bcb17231945f6502d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1508749746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814619772
 GameObject:
   m_ObjectHideFlags: 0
@@ -25376,6 +25761,7 @@ GameObject:
   - component: {fileID: 1885034763}
   - component: {fileID: 1885034762}
   - component: {fileID: 1885034761}
+  - component: {fileID: 1885034764}
   - component: {fileID: 1885034760}
   m_Layer: 5
   m_Name: Exit Game Button
@@ -25413,65 +25799,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885034758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26222f1c28b0546d3bad8300af95ee50, type: 3}
+  m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calendarIconPressed: 0
-  WeekText: {fileID: 0}
-  ShortDayText: {fileID: 0}
-  WeekTextPopup: {fileID: 0}
-  ShortDayTextPopup: {fileID: 0}
-  CalendarWeekTextPopup: {fileID: 0}
-  CalendarShortDayTextPopup: {fileID: 0}
-  MeetNPCText: {fileID: 0}
-  GoodMorningText: {fileID: 0}
-  CurrentTaskTitle: {fileID: 0}
-  CurrentTask: {fileID: 0}
-  CurrentNPC: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  ExitButtonText: {fileID: 0}
-  NumDaysLeft: {fileID: 0}
-  DaysLeftText: {fileID: 0}
-  ToBlockParty: {fileID: 0}
-  PleaseNote: {fileID: 0}
-  ProgressWontSave: {fileID: 0}
-  PhoneIcon: {fileID: 0}
-  CalendarIcon: {fileID: 0}
-  CalendarMessage: {fileID: 0}
-  BackButton: {fileID: 0}
-  ExitGame: {fileID: 1885034758}
-  NPCAndTask: {fileID: 0}
-  GoTalkButton: {fileID: 0}
-  CalendarPopup: {fileID: 0}
-  RashadImage: {fileID: 0}
-  MrsLeeImage: {fileID: 0}
-  MrCalindasImage: {fileID: 0}
-  LilaImage: {fileID: 0}
-  ElisaImage: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainerTask: {fileID: 0}
-  TutorialArrowTask: {fileID: 0}
-  TutorialButtonTask: {fileID: 0}
-  YellowTitleTask: {fileID: 0}
-  WhiteTitleTask: {fileID: 0}
-  WhiteTextTask: {fileID: 0}
-  ButtonTextTask: {fileID: 0}
-  TutorialContainerNeighbors: {fileID: 0}
-  TutorialButtonNeighbors: {fileID: 0}
-  YellowTitleNeighbors: {fileID: 0}
-  WhiteTitleNeighbors: {fileID: 0}
-  WhiteTextNeighbors: {fileID: 0}
-  NeighborsImage: {fileID: 0}
-  ButtonTextNeighbors: {fileID: 0}
-  TutorialContainerPhone: {fileID: 0}
-  TutorialArrowPhone: {fileID: 0}
-  TutorialButtonPhone: {fileID: 0}
-  YellowTitlePhone: {fileID: 0}
-  WhiteTitlePhone: {fileID: 0}
-  WhiteTextPhone: {fileID: 0}
-  ButtonTextPhone: {fileID: 0}
-  TaskGlow: {fileID: 0}
-  PhoneGlow: {fileID: 0}
 --- !u!114 &1885034761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25515,8 +25845,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885034760}
-        m_MethodName: GoToOpeningScreen
+      - m_Target: {fileID: 1885034764}
+        m_MethodName: OpenOpeningScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25563,6 +25893,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885034758}
   m_CullTransparentMesh: 0
+--- !u!114 &1885034764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885034758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f3f31b5688d4c248ea69d8f8fa8a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1893629799
 GameObject:
   m_ObjectHideFlags: 0
@@ -27063,7 +27405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 843663e8f0c114e9786ebd99bdb55572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3084a3c101ffd4c938d093dd79ac04e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27142,7 +27484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca84bf6225e5f3f468d073c8830e19c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f5561adc09d94d23a44fc382d1eca0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27780,7 +28122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: acc0ccec4218d48b4aa9e88df7edb381, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 446c5b4f863274bbf9666448e4d410bd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27841,6 +28183,7 @@ MonoBehaviour:
   ToBlockParty: {fileID: 0}
   PleaseNote: {fileID: 0}
   ProgressWontSave: {fileID: 0}
+  MyJournalUpdated: {fileID: 0}
   PhoneIcon: {fileID: 0}
   CalendarIcon: {fileID: 0}
   CalendarMessage: {fileID: 0}
@@ -27878,6 +28221,8 @@ MonoBehaviour:
   ButtonTextPhone: {fileID: 0}
   TaskGlow: {fileID: 0}
   PhoneGlow: {fileID: 0}
+  HelpButton: {fileID: 0}
+  HelpButtonText: {fileID: 0}
 --- !u!1 &2070193913
 GameObject:
   m_ObjectHideFlags: 0
@@ -29073,7 +29418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 588522fc042fb4bc09775372d1225cda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a1c83ed4a6444d73a44305a9e5ce911, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -29383,7 +29728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1dcfcf8d99f84389a15d84cb0a661be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd8c4b99b498f40ba8aaa3932118e80d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

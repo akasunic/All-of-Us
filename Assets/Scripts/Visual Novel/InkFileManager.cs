@@ -56,6 +56,10 @@ public class InkFileManager : MonoBehaviour {
     private static bool didAdd = false;
     public static string completedQuestString = null;
 
+    public void setActiveFileIdx((int, int) value) {
+        activeFileIdx = value;
+    }
+
     private void Awake() {
         if (!didAdd) {
             SceneManager.activeSceneChanged += OnSceneChanged;
@@ -67,6 +71,7 @@ public class InkFileManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
         _fc = GetComponent<Flowchart>();
         if (!GetVisualNovelComponents()) // if we couldn't find the VN components
             return;
@@ -83,7 +88,7 @@ public class InkFileManager : MonoBehaviour {
             narrativeDirector = FindObjectOfType<NarrativeDirector>();
         } catch {
             return false;
-        }
+        }        
         return (_fc && narrativeDirector);
     }
 
@@ -99,6 +104,7 @@ public class InkFileManager : MonoBehaviour {
 
         _fc.SetStringVariable("player_name", GlobalGameInfo.name);
         _fc.ExecuteBlock("On Variables Loaded");
+
     }
 
     public static void OnQuestCompleted(CharacterResources.CHARACTERS questGiver) {
@@ -136,11 +142,13 @@ public class InkFileManager : MonoBehaviour {
     /// </summary>
     /// <returns></returns>
     private static bool CanStartQuest(CharacterResources.CHARACTERS character) {
+
         // a quest is already active
         if (activeFileIdx != (-1, -1))
         {
             return false;
         }
+
         return character == GlobalGameInfo.GetCurrentNPC();
         /*
         // have we already done their quest for the day?

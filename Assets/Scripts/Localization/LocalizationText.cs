@@ -8,7 +8,7 @@ public class LocalizationText : MonoBehaviour
 
     public Text textComponent;
     public string key;
-    Lang lang = new Lang(false);
+    Lang lang = new Lang();
     // Start is called before the first frame update
     void Start()
     {

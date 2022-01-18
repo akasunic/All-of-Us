@@ -12,6 +12,7 @@ public class StartWeek : MonoBehaviour
     static public List<GameObject> savedGamesUI;
     public GameObject prefabSavedGameItem;
     public GameObject BackButton;
+    public TextMeshProUGUI BackButtonText;
     public TextMeshProUGUI Title;
     public GameObject ScrollView;
     public string[][] savedGamesInfo = new string[6][];
@@ -61,9 +62,11 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI WhiteText;
     public TextMeshProUGUI ButtonText;
     public GameObject Glow;
+    public GameObject HelpButton;
+    public TextMeshProUGUI HelpButtonText;
 
 
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
     
     // Start is called before the first frame update
     void Start()
@@ -82,6 +85,7 @@ public class StartWeek : MonoBehaviour
         }
 
         Title.text = LangClass.getString("saved_games");
+        BackButtonText.text = LangClass.getString("back");
 
         int y_location = 152;
         int gameNum = 1;
@@ -139,6 +143,7 @@ public class StartWeek : MonoBehaviour
         // If player is in the middle of quest - go back to open quest
         if (savedGame.isInMiddleOFQuest()) {
             this.goBackToOpenQuest(savedGame.getNPCForWeek());
+            return;
         }
 
         // Updating local variables
@@ -147,17 +152,12 @@ public class StartWeek : MonoBehaviour
         SelectProfile.SetActive(true);
         SelectProfileText.enabled = true;
 
+        HelpButton.SetActive(true);
+        HelpButtonText.text = LangClass.getString("tutorial_help");
+
         // Tutorial
         if (!GlobalGameInfo.startWeekFlag) {
-            TutorialContainer.SetActive(true);
-            TutorialArrow.SetActive(true);
-            Glow.SetActive(true);
-            TutorialButton.enabled = true;
-
-            YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
-            WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
-            WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
-            ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
+            this.activateTutorial();
         }
 
         RashadCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.RASHAD] == 2);
@@ -180,8 +180,20 @@ public class StartWeek : MonoBehaviour
         Elisa0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 0);
         Elisa1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
+    }
+
+    public void activateTutorial() {
+        TutorialContainer.SetActive(true);
+        TutorialArrow.SetActive(true);
+        Glow.SetActive(true);
+        TutorialButton.enabled = true;
+
+        YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
+        WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
+        WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
+        ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
     }
 
     public void tutorialClick() {

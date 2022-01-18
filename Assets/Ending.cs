@@ -11,7 +11,7 @@ public class Ending : MonoBehaviour
     private int current_text_counter = 1;
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     public TextMeshProUGUI NextText;
     public Text Textfield;
@@ -25,7 +25,7 @@ public class Ending : MonoBehaviour
 
     private void Start() {
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         Textfield.text = LangClass.getString("ending_1");
         NextText.text = LangClass.getString("next");

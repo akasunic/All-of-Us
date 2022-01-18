@@ -12,13 +12,13 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Xml;
- 
 using UnityEngine;
- 
+using UnityEngine.Networking;
+
 public class Lang
 {
-    private string currentLang = "English";
-    private string xml_path = Path.Combine(Application.streamingAssetsPath, "Strings.xml");
+    private string currentLang = GlobalGameInfo.language;
+    private string non_web_xml_path;
 
     private Hashtable Strings;
  
@@ -40,11 +40,22 @@ public class Lang
     */
 
     // Modified for Bloomwood Stories to use a default language and a pre-defined xml path for the web (currently not used for Bloomwood Stories)
-    public Lang ( bool web ) {
-        if (!web) {
+    public Lang () {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer) {
+            non_web_xml_path = Path.Combine(Application.streamingAssetsPath, "Strings.xml");
             setLanguage(currentLang);
         } else {
-            setLanguageWeb(xml_path, currentLang);
+            // setLanguageWeb(non_web_xml_path, currentLang);
+            var webrequest = UnityWebRequest.Get(Application.streamingAssetsPath + "Strings.xml");
+            webrequest.SendWebRequest();
+            var xml_doc = webrequest.downloadHandler.text;
+            Debug.Log(xml_doc[0]);
+            Debug.Log(xml_doc[1]);
+            Debug.Log(xml_doc[2]);
+            Debug.Log(xml_doc[3]);
+            Debug.Log(xml_doc[4]);
+            Debug.Log(xml_doc[5]);
+            setLanguageWeb(xml_doc, currentLang);
         }
     }
  
@@ -61,7 +72,7 @@ public class Lang
 
     // Modified for Bloomwood Stories to use a pre-defined xml path
     public void setLanguage ( string language ) {
-        var path = xml_path;
+        var path = non_web_xml_path;
         var xml = new XmlDocument();
         xml.Load(path);
      

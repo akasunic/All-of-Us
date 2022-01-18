@@ -32,6 +32,7 @@ namespace Fungus
         [Tooltip("TextAdapter will search for appropriate output on this GameObject if nameText is null")]
         [SerializeField] protected GameObject nameTextGO;
         protected TextAdapter nameTextAdapter = new TextAdapter();
+
         public virtual string NameText
         {
             get
@@ -101,6 +102,7 @@ namespace Fungus
 
 		protected virtual void Awake()
 		{
+
 			if (!activeSayDialogs.Contains(this))
 			{
 				activeSayDialogs.Add(this);

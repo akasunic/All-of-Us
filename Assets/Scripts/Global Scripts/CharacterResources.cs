@@ -36,7 +36,15 @@ public class CharacterResources
   public static Sprite leeTalking;
   public static Sprite leeSmall;
 
+  // Localization Feature
+  public static Lang LangClass = new Lang();
+
+  // public void Start()
+  // {
+  // }
   public CharacterResources(){
+    
+
     rashadNeutral = Resources.Load<Sprite>("rashad_neutral");
     rashadTalking = Resources.Load<Sprite>("rashad_talking");
     rashadSmall = Resources.Load<Sprite>("rashad_small");
@@ -151,19 +159,13 @@ public class CharacterResources
 
   public static GlobalGameInfo.CharacterItem Rashad(){
     GlobalGameInfo.CharacterItem rashad = new GlobalGameInfo.CharacterItem(
-      "Rashad Williams",
-      "Rashad",
-      "Rashad Williams was born and raised in Bloomwood, and moved back "
-      +"after getting his Master’s Degree in Library Science. He is married "
-      +"with 2 children (Wife Cheryl, children Octavia and Charles) and "
-      +"started out as the popular Young Adult Librarian for Bloomwood Library. "
-      +"Since being promoted to Head Librarian last year, he’s tried to make new programs "
-      +"available for the Bloomwood Community. He enjoys comic books, science fiction, "
-      +"and is an avid runner.",
-      "Head Librarian",
-      "Bloomwood Library",
-      "He/Him/His",
-      42,
+      LangClass.getString("rashad_name"),
+      LangClass.getString("rashad_first_name"),
+      LangClass.getString("rashad_description"),
+      LangClass.getString("rashad_title"),
+      "",
+      LangClass.getString("rashad_pronouns"),
+      int.Parse(LangClass.getString("rashad_age")),
       0f,
       0f,
       0f,
@@ -175,20 +177,13 @@ public class CharacterResources
 
   public static GlobalGameInfo.CharacterItem Lila(){
     GlobalGameInfo.CharacterItem lila = new GlobalGameInfo.CharacterItem(
-      "Lila Morgan",
-      "Lila",
-      "Lila Morgan grew up near Bloomwood, and moved to town when "
-      +"she was 17, where she worked with her mom at the Community Center, "
-      +"assisting her in her job as a Head Start teacher. After attending "
-      +"college at a state school nearby, Lila has recently returned to "
-      +"Bloomwood to take her mom’s position as she leaves to travel, and "
-      +"now lives in town with her partner Trisha. She is close with Mrs. Lee, "
-      +"and loves designing tattoos, teaching her border collie Charlie partner "
-      +"tricks, and long car rides with Trisha.",
-      "Head Start Teacher",
-      "Community Center",
-      "She/Her/Hers",
-      26,
+      LangClass.getString("lila_name"),
+      LangClass.getString("lila_first_name"),
+      LangClass.getString("lila_description"),
+      LangClass.getString("lila_title"),
+      "",
+      LangClass.getString("lila_pronouns"),
+      int.Parse(LangClass.getString("lila_age")),
       0f,
       0f,
       0f,
@@ -200,20 +195,13 @@ public class CharacterResources
 
   public static GlobalGameInfo.CharacterItem Calindas(){
     GlobalGameInfo.CharacterItem calindas = new GlobalGameInfo.CharacterItem(
-      "Mr. Calindas",
-      "Mr. Calindas",
-      "Giancarlo Calindas, is respectfully known as Mr. Calindas in "
-      +"the neighborhood. He moved into the neighborhood 20 years ago, "
-      +"when his wife, Paz took a job teaching Biology at Bloomwood Highschool. "
-      +"A second generation Filipino American, Mr. Calindas’ parents were "
-      +"farmworkers in Southern California, who brought him up with a strong sense "
-      +"of community. Mr. Calindas is the steward for his nurse’s union and likes "
-      +"to unwind by running. He cares deeply about the health and well-being of the "
-      +"neighborhood, and his daughter Jessica and his granddaughter, Brooklyn. ",
-      "Head Nurse",
-      "Bloomwood Health Clinic",
-      "He/Him/His",
-      58,
+      LangClass.getString("mrcalindas_name"),
+      LangClass.getString("mrcalindas_first_name"),
+      LangClass.getString("mrcalindas_description"),
+      LangClass.getString("mrcalindas_title"),
+      "",
+      LangClass.getString("mrcalindas_pronouns"),
+      int.Parse(LangClass.getString("mrcalindas_age")),
       0f,
       0f,
       0f,
@@ -224,21 +212,13 @@ public class CharacterResources
   }
   public static GlobalGameInfo.CharacterItem Elisa(){
     GlobalGameInfo.CharacterItem elisa = new GlobalGameInfo.CharacterItem(
-      "Elisa Ramirez",
-      "Elisa",
-      "Elisa Ramirez grew up in Bloomwood, where her parents moved after "
-      +"leaving El Salvador. She’s currently living with her family while "
-      +"attending Bloomwood College. She loves reading, spending time with "
-      +"friends, physical activity, and the outdoors. She is currently the "
-      +"VP of her school’s nature club, and an aspiring freeclimber. She’s "
-      +"almost done with her Associates degree at Bloomwood College, and is "
-      +"currently getting ready to complete her Bachelor’s at a university "
-      +"nearby. She’s studying business, and intends to become a financial "
-      +"advisor once she graduates.",
-      "College Student",
-      "Bloomwood Library",
-      "She/Her/Hers",
-      19,
+      LangClass.getString("elisa_name"),
+      LangClass.getString("elisa_first_name"),
+      LangClass.getString("elisa_description"),
+      LangClass.getString("elisa_title"),
+      "",
+      LangClass.getString("elisa_pronouns"),
+      int.Parse(LangClass.getString("elisa_age")),
       0f,
       0f,
       0f,
@@ -250,23 +230,13 @@ public class CharacterResources
 
   public static GlobalGameInfo.CharacterItem Lee(){
     GlobalGameInfo.CharacterItem lee = new GlobalGameInfo.CharacterItem(
-      "Mrs. Lee",
-      "Mrs. Lee",
-      "Mrs. Lee is an elder in Bloomwood where "
-      +"she has lived for the last 20 years. "
-      +"Mrs. Lee and her husband Dr. Lee emigrated "
-      +"from South Korea with their grandson Eddie. "
-      +"Together, they raised Eddie in Bloomwood, "
-      +"speaking a mix of English and Korean. "
-      +"After the recent passing of her husband, Mrs. Lee "
-      +"schedules regular video calls with her Korean friends "
-      +"and occasionally with Eddie, when he’s not in his university "
-      +"library. Mrs. Lee loves attending fitness classes at the "
-      +"Community Center and her favorite color is pink!",
-      "Elder",
-      "Community Center",
-      "She/Her/Hers",
-      65,
+      LangClass.getString("mrslee_name"),
+      LangClass.getString("mrslee_first_name"),
+      LangClass.getString("mrslee_description"),
+      LangClass.getString("mrslee_title"),
+      "",
+      LangClass.getString("mrslee_pronouns"),
+      int.Parse(LangClass.getString("mrslee_age")),
       0f,
       0f,
       0f,
