@@ -41,7 +41,7 @@ public class Lang
 
     // Modified for Bloomwood Stories to use a default language and a pre-defined xml path for the web (currently not used for Bloomwood Stories)
     public Lang () {
-        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer) {
+        if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.WindowsEditor) {
             non_web_xml_path = Path.Combine(Application.streamingAssetsPath, "Strings.xml");
             setLanguage(currentLang);
         } else {
@@ -49,12 +49,6 @@ public class Lang
             var webrequest = UnityWebRequest.Get(Application.streamingAssetsPath + "Strings.xml");
             webrequest.SendWebRequest();
             var xml_doc = webrequest.downloadHandler.text;
-            Debug.Log(xml_doc[0]);
-            Debug.Log(xml_doc[1]);
-            Debug.Log(xml_doc[2]);
-            Debug.Log(xml_doc[3]);
-            Debug.Log(xml_doc[4]);
-            Debug.Log(xml_doc[5]);
             setLanguageWeb(xml_doc, currentLang);
         }
     }
@@ -85,8 +79,6 @@ public class Lang
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
-            currentLang = language;
-
         } else {
             Debug.LogError("The specified language does not exist: " + language);
         }
@@ -106,9 +98,11 @@ public class Lang
     var LangClass : Lang = new Lang(wwwXML.text, currentLang)
     */
     public void setLanguageWeb ( string xmlText, string language) {
+        Debug.Log("GOT HERE");
+
         var xml = new XmlDocument();
-        xml.Load(new StringReader(xmlText));
-     
+        
+        xml.Load(new StringReader(xmlText));     
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
 
@@ -118,8 +112,6 @@ public class Lang
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
-            currentLang = language;
-
         } else {
             Debug.LogError("The specified language does not exist: " + language);
         }

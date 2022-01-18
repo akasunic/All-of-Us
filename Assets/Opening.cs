@@ -20,7 +20,6 @@ public class Opening : MonoBehaviour
     void Start()
     {
         
-        
         ContinueButtonText.text = LangClass.getString("continue");
         NewGameButton.text = LangClass.getString("new_game");
         TutorialButton.text = LangClass.getString("tutorial");
