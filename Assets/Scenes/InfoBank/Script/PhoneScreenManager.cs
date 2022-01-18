@@ -87,7 +87,7 @@ public class PhoneScreenManager : MonoBehaviour
     public TextMeshProUGUI BackButtonText;
     public TextMeshProUGUI SectionName;
     public TextMeshProUGUI NoJournalEntriesText;
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     void Update(){
       if (started && timer <= seconds) {
@@ -109,7 +109,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);

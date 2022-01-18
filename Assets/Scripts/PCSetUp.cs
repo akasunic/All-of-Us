@@ -32,13 +32,13 @@ public class PCSetUp : MonoBehaviour
     private string language;
     
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     void Start()
     {
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         // Setting texts from Strings.xml
         NameText.text = LangClass.getString("name_field");
@@ -131,6 +131,7 @@ public class PCSetUp : MonoBehaviour
                 GlobalGameInfo.gameData = currentData;
             }
             SavedGame newPlayer = new SavedGame(firstName);
+
             GlobalGameInfo.savedGame = newPlayer;
             currentData.Add(firstName, newPlayer);
             SaveSerial.SaveGame(currentData);

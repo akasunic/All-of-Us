@@ -54,7 +54,7 @@ public static class GlobalGameInfo
     public static Dictionary<string, SavedGame> gameData;
         
     // Localization Feature
-    public static Lang LangClass = new Lang(false);
+    public static Lang LangClass = new Lang();
 
     //an enum for notifications
     public enum NOTIFICATION {
@@ -441,7 +441,7 @@ public static class GlobalGameInfo
     // Type can be "short" for MON, TUE, etc. or "long" for "Monday", "Tuesday", etc.
     public static string GetCurrentDayAsString(string dayType)
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         string day = "";
         switch (currentDay) {

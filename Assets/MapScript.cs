@@ -73,7 +73,7 @@ public class MapScript : MonoBehaviour
     private float secondsPassed = 0.0f;
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     private IEnumerator Start() {

@@ -21,12 +21,12 @@ public class VN : MonoBehaviour
     public GameObject Glow;
     
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         // buildingName.text = LangClass.getString("name_field");
 

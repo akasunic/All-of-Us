@@ -19,13 +19,13 @@ public class EndOfQuest : MonoBehaviour
     public GameObject[] currentDays;
     public GameObject[] pastDays;
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     void Start()
     {
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
         
         if (questMap == null || questMap.Count == 0) {
             questMap = new Dictionary<string, Quest>();

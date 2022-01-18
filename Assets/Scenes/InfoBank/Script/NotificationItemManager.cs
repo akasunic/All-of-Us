@@ -19,7 +19,7 @@ public class NotificationItemManager : MonoBehaviour
     public GameObject updatedTextGameObject;
     public GameObject bubble;
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     public GlobalGameInfo.NOTIFICATION notificationType;
 
@@ -27,7 +27,7 @@ public class NotificationItemManager : MonoBehaviour
 
     void Start(){
 
-      LangClass.setLanguage(GlobalGameInfo.language);
+      
 
       GlobalGameInfo.setNotificationDelegate(setCounter);
       updateUIElements();

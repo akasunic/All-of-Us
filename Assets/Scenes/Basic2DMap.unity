@@ -24446,8 +24446,8 @@ MonoBehaviour:
   calendarIconPressed: 0
   WeekText: {fileID: 36692623}
   ShortDayText: {fileID: 565232576}
-  WeekTextPopup: {fileID: 0}
-  ShortDayTextPopup: {fileID: 0}
+  WeekTextPopup: {fileID: 60100202}
+  ShortDayTextPopup: {fileID: 1306971685}
   CalendarWeekTextPopup: {fileID: 0}
   CalendarShortDayTextPopup: {fileID: 0}
   MeetNPCText: {fileID: 0}

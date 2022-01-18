@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] lilaImages;
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
     private int stage;
     private Vector3 dialoguePosition;
 
@@ -24,7 +24,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
         
         stage = 0;
         dialoguePosition = dialogue.transform.position;

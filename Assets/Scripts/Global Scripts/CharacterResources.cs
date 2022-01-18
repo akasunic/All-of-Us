@@ -37,13 +37,13 @@ public class CharacterResources
   public static Sprite leeSmall;
 
   // Localization Feature
-  public static Lang LangClass = new Lang(false);
+  public static Lang LangClass = new Lang();
 
   // public void Start()
   // {
   // }
   public CharacterResources(){
-    LangClass.setLanguage(GlobalGameInfo.language);
+    
 
     rashadNeutral = Resources.Load<Sprite>("rashad_neutral");
     rashadTalking = Resources.Load<Sprite>("rashad_talking");

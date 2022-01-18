@@ -12,12 +12,12 @@ public class PCSetUpDropdowns : MonoBehaviour
     public Dropdown languageDropDown;
     
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
     // Start is called before the first frame update
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
         // Setting dropdown lists
         List<string> pronounsDropDownOptions = new List<string> { "", LangClass.getString("she_her"), LangClass.getString("he_his"), LangClass.getString("they_them")};

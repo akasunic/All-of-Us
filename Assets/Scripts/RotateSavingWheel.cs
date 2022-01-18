@@ -16,10 +16,10 @@ public class RotateSavingWheel : MonoBehaviour
     private float fadeSpeed = 75.0f;
     
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
         SavingText.text = LangClass.getString("saving_progress");
 
         secondsPassed = 0.0f;

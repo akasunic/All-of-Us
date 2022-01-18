@@ -66,7 +66,7 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI HelpButtonText;
 
 
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
     
     // Start is called before the first frame update
     void Start()
@@ -180,7 +180,7 @@ public class StartWeek : MonoBehaviour
         Elisa0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 0);
         Elisa1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
 
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
 
     }
 

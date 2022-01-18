@@ -14,12 +14,12 @@ public class Opening : MonoBehaviour
 
 
     // Localization Feature
-    public Lang LangClass = new Lang(false);
+    public Lang LangClass = new Lang();
 
 
     void Start()
     {
-        LangClass.setLanguage(GlobalGameInfo.language);
+        
         
         ContinueButtonText.text = LangClass.getString("continue");
         NewGameButton.text = LangClass.getString("new_game");
