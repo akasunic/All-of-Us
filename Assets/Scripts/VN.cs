@@ -23,10 +23,12 @@ public class VN : MonoBehaviour
     // Localization Feature
     public Lang LangClass = new Lang();
 
+    // Show Dialog only when tooltip complete
+    public List<GameObject> toggleComponents;
+
     // Start is called before the first frame update
     void Start()
     {
-        
 
         // buildingName.text = LangClass.getString("name_field");
 
@@ -54,7 +56,6 @@ public class VN : MonoBehaviour
             WhiteText.text = LangClass.getString("dictionary_vn_whitetext");
             ButtonText.text = LangClass.getString("dictionary_vn_buttontext");
         }
-
     }
 
     public void tutorialClick() {
@@ -64,11 +65,25 @@ public class VN : MonoBehaviour
         GlobalGameInfo.dictionaryFlag = true;
         Glow.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    // I tried to do it a different way so it isn't using update as this is wasteful, but issues kept popping up, like disappearing
+    // objects and objects not behaving as expected, so I am keeping it like this for the time being.
+    private void Update()
     {
-
+        if (!GlobalGameInfo.dictionaryFlag)
+        {
+            Debug.Log("SIZE" + toggleComponents.Count);
+            foreach (GameObject go in toggleComponents)
+            {
+                go.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject go in toggleComponents)
+            {
+                go.SetActive(true);
+            }
+        }
     }
-
 }
