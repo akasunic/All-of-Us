@@ -72,7 +72,6 @@ public class VN : MonoBehaviour
     {
         if (!GlobalGameInfo.dictionaryFlag)
         {
-            Debug.Log("SIZE" + toggleComponents.Count);
             foreach (GameObject go in toggleComponents)
             {
                 go.SetActive(false);
