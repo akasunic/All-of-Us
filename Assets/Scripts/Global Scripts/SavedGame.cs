@@ -21,7 +21,6 @@ public class SavedGame : object {
     private Dictionary<CharacterResources.CHARACTERS, int> progress;
     private List<GlobalGameInfo.TodoItem> todoList;
     private List<GlobalGameInfo.InfoItem> infoList;
-    private Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> contactsList;
 
     private Dictionary<string, bool> tutorialFlags;
 
@@ -37,7 +36,6 @@ public class SavedGame : object {
         progress = new Dictionary<CharacterResources.CHARACTERS, int>();
         todoList = new List<GlobalGameInfo.TodoItem>();
         infoList = new List<GlobalGameInfo.InfoItem>();
-        contactsList = new Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem>();
 
         progress.Add(CharacterResources.CHARACTERS.RASHAD, 0);
         progress.Add(CharacterResources.CHARACTERS.LEE, 0);
@@ -167,14 +165,6 @@ public class SavedGame : object {
 
     public void setInfoItems(List<GlobalGameInfo.InfoItem> items) {
         infoList = items;
-    }
-
-    public Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> getContactItems() {
-        return contactsList;
-    }
-
-    public void setContactItems(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> items) {
-        contactsList = items;
     }
 
     public void setCharacterDone(CharacterResources.CHARACTERS character) {

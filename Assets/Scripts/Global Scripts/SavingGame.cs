@@ -22,8 +22,6 @@ public static class SavingGame : object {
         current.setTodoItems(GlobalGameInfo.todoList);
         // Save my journal
         current.setInfoItems(GlobalGameInfo.infoList);
-        // Save contacts
-        current.setContactItems(GlobalGameInfo.contactsList);
         // Saving quests is automatic
 
         // Save tutorial flags
@@ -59,7 +57,6 @@ public static class SavingGame : object {
         // Loading phone info
         GlobalGameInfo.todoList = savedGame.getTodoItems();
         GlobalGameInfo.infoList = savedGame.getInfoItems();
-        GlobalGameInfo.contactsList = savedGame.getContactItems();
 
         // Loading tutorial flags
         GlobalGameInfo.startWeekFlag = savedGame.getTutorialFlag("StartWeek");
