@@ -14,6 +14,8 @@ public class MouseCursor : MonoBehaviour
     {
         defaultCursor = (Texture2D)Resources.Load("Sprites/default_cursor", typeof(Texture2D));
         clickableObjectCursor = (Texture2D)Resources.Load("Sprites/clickable_cursor", typeof(Texture2D));
+        //defaultCursor.Resize(defaultCursor.width / 2, defaultCursor.height / 2);
+        //clickableObjectCursor.Resize(clickableObjectCursor.width / 2, clickableObjectCursor.height / 2);
         currentCursor = defaultCursor;
     }
 

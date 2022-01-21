@@ -95,6 +95,7 @@
         <string name="elisa_description">Elisa Ramirez grew up in Bloomwood, where her parents moved after leaving El Salvador. She will graduate this June with her Associate’s degree in Finance from Bloomwood College. Elisa loves reading, spending time with friends, physical activity, and the outdoors.</string>
 
         <string name="mrcalindas_name">Mr. Calindas</string>
+        <string name="mrcalindas_first_name">Mr. Calindas</string>
         <string name="mrcalindas_age_pronouns">58 years old | He/Him/His</string>
         <string name="mrcalindas_pronouns">He/Him/His</string>
         <string name="mrcalindas_age">58</string>
@@ -102,6 +103,7 @@
         <string name="mrcalindas_description">Mr. Calindas moved to Bloomwood 20 years ago, when his wife, Paz took a job teaching Biology at Bloomwood Highschool. Mr. Calidas likes  to unwind by running or cooking with his daughter, Jessica.</string>
         
         <string name="mrslee_name">Mrs. Lee</string>
+        <string name="mrslee_first_name">Mrs. Lee</string>
         <string name="mrslee_age_pronouns">65 years old | She/Her/Hers</string>
         <string name="mrslee_pronouns">She/Her/Hers</string>
         <string name="mrslee_age">65</string>

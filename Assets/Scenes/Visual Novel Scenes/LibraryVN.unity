@@ -752,6 +752,11 @@ PrefabInstance:
       propertyPath: nameTextContainer
       value: 
       objectReference: {fileID: 400864715}
+    - target: {fileID: 464373319276694335, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: Tutorial
@@ -759,15 +764,35 @@ PrefabInstance:
       objectReference: {fileID: 1509163625}
     - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 749056595161965097, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
       propertyPath: nameTextContainer
       value: 
       objectReference: {fileID: 400864715}
+    - target: {fileID: 757811106110349453, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1421595297659837796, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 660
       objectReference: {fileID: 0}
+    - target: {fileID: 2094098722536282997, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3918973070073455866, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254912980343803459, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -776,6 +801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947600666555744641, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6828474475021315328, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
@@ -788,10 +818,20 @@ PrefabInstance:
       propertyPath: Tutorial
       value: 
       objectReference: {fileID: 1509163625}
+    - target: {fileID: 7257683682457077593, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7778418165282756481, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778977202911845164, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8921614020743169557, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
@@ -846,6 +886,18 @@ MonoBehaviour:
 --- !u!224 &400864718 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 222521558935691461, guid: 8fabe75eb30eba946af749d41214c5a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 400864713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &400864719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 757811106110349453, guid: 8fabe75eb30eba946af749d41214c5a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 400864713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &400864721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778977202911845164, guid: 8fabe75eb30eba946af749d41214c5a3,
     type: 3}
   m_PrefabInstance: {fileID: 400864713}
   m_PrefabAsset: {fileID: 0}
@@ -972,6 +1024,9 @@ MonoBehaviour:
   WhiteText: {fileID: 121364826}
   ButtonText: {fileID: 2056439243}
   Glow: {fileID: 1238638951}
+  toggleComponents:
+  - {fileID: 400864719}
+  - {fileID: 400864721}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1277,7 +1332,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 377
     y: 218
-    width: 199
+    width: 202
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1478,7 +1533,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 72
     y: 402
-    width: 103
+    width: 104.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1680,7 +1735,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 94
     y: 330
-    width: 104
+    width: 105.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1882,7 +1937,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 96
     y: 250
-    width: 104
+    width: 105.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2084,7 +2139,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 97
     y: 187
-    width: 103
+    width: 104.4
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2286,7 +2341,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 96
     y: 125
-    width: 102
+    width: 103.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2488,7 +2543,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 90
     y: 61
-    width: 104
+    width: 105.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2711,6 +2766,7 @@ MonoBehaviour:
   WhiteText: {fileID: 121364826}
   ButtonText: {fileID: 2056439243}
   Glow: {fileID: 1238638951}
+  toggleComponents: []
 --- !u!114 &804471848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7454,7 +7510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1826744238
 MonoBehaviour:
   m_ObjectHideFlags: 0

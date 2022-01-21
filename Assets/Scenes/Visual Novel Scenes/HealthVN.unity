@@ -1138,6 +1138,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 400864713}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &400864719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778977202911845164, guid: 8fabe75eb30eba946af749d41214c5a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 400864713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &400864720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 757811106110349453, guid: 8fabe75eb30eba946af749d41214c5a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 400864713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &504589051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1273,9 @@ MonoBehaviour:
   WhiteText: {fileID: 1254970752}
   ButtonText: {fileID: 1563409601}
   Glow: {fileID: 799303196}
+  toggleComponents:
+  - {fileID: 400864720}
+  - {fileID: 400864719}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5912,6 +5927,7 @@ MonoBehaviour:
   WhiteText: {fileID: 1254970752}
   ButtonText: {fileID: 1563409601}
   Glow: {fileID: 799303196}
+  toggleComponents: []
 --- !u!114 &1261417619
 MonoBehaviour:
   m_ObjectHideFlags: 0
