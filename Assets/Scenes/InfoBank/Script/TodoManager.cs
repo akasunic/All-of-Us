@@ -108,9 +108,4 @@ public class TodoManager : MonoBehaviour
             checklistItems.SetActive(true);
         }
     }
-
-    public void Update()
-    {
-        
-    }
 }

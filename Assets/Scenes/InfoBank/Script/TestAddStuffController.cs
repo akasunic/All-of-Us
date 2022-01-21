@@ -5,27 +5,6 @@ using UnityEngine;
 //a test script to add things to the globalgameinfo
 public class TestAddStuffController : MonoBehaviour
 {
-
-    public void AddRashad(){
-       GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
-    }
-
-    public void AddLila(){
-        GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
-    }
-
-    public void AddCalindas(){
-        GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
-    }
-
-    public void AddElisa(){
-        GlobalGameInfo.addNewItemToContactsList(CharacterResources.Elisa()); 
-    }
-
-    public void AddLee(){
-        GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee()); 
-    }
-
     public void AddRashadJournalDay1(){
         string des = "I'm looking for a part time worker in the YA section. Do you know anyone?";
         GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 1, des); 

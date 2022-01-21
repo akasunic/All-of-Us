@@ -402,6 +402,24 @@ public static class GlobalGameInfo
         DataCollection.LogEvent("Journal info added! Info: " + description + ", Character: " + character, "JOURNAL INFO");
     }
 
+    public static void initializeContactsList()
+    {
+        // If its not initialized yet, then add all the characters
+        if (GlobalGameInfo.contactsList.Count != 5)
+        {
+            CharacterItem lila = CharacterResources.Lila();
+            CharacterItem rashad = CharacterResources.Rashad();
+            CharacterItem elisa = CharacterResources.Elisa();
+            CharacterItem calindas = CharacterResources.Calindas();
+            CharacterItem lee = CharacterResources.Lee();
+            GlobalGameInfo.contactsList.Add(lila.identifier, lila);
+            GlobalGameInfo.contactsList.Add(rashad.identifier, rashad);
+            GlobalGameInfo.contactsList.Add(elisa.identifier, elisa);
+            GlobalGameInfo.contactsList.Add(calindas.identifier, calindas);
+            GlobalGameInfo.contactsList.Add(lee.identifier, lee);
+        }
+    }
+
     public static void addNewItemToContactsList(CharacterItem c) {
         if(!GlobalGameInfo.contactsList.ContainsKey(c.identifier))
         {

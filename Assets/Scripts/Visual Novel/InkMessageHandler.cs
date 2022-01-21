@@ -90,24 +90,7 @@ public class InkMessageHandler : MonoBehaviour
     public void AddContact() {
         string contactString = _fc.GetStringVariable("new_contact");
         contactString = contactString.ToLower();
-
-        switch (HelperFunctions.CharacterFromString(contactString)) {
-            case CharacterResources.CHARACTERS.RASHAD:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
-                break;
-            case CharacterResources.CHARACTERS.LILA:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
-                break;
-            case CharacterResources.CHARACTERS.CALINDAS:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
-                break;
-            case CharacterResources.CHARACTERS.ELISA:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Elisa());
-                break;
-            case CharacterResources.CHARACTERS.LEE:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee());
-                break;
-        }
+        GlobalGameInfo.initializeContactsList();
     }
 
     /// <summary>

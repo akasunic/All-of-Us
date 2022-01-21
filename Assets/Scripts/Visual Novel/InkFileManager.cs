@@ -252,27 +252,9 @@ public class InkFileManager : MonoBehaviour {
     public void TryLoadVNScene(string person) {
         CharacterResources.CHARACTERS character =
             HelperFunctions.CharacterFromString(person);
-
-        // Add to contacts list (hacky fix for opening scene not adding characters to contacts list)
-        switch(character)
-        {
-            case CharacterResources.CHARACTERS.RASHAD:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Rashad());
-                break;
-            case CharacterResources.CHARACTERS.ELISA:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Elisa());
-                break;
-            case CharacterResources.CHARACTERS.CALINDAS:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Calindas());
-                break;
-            case CharacterResources.CHARACTERS.LILA:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lila());
-                break;
-            case CharacterResources.CHARACTERS.LEE:
-                GlobalGameInfo.addNewItemToContactsList(CharacterResources.Lee());
-                break;
-        }
-
+        
+        GlobalGameInfo.initializeContactsList();
+       
         // try start a new quest
         if (CanStartQuest(character)) {
             activeFileIdx = (GlobalGameInfo.GetCurrentDay(), 0);
