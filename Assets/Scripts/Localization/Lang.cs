@@ -49,7 +49,7 @@ public class Lang
             var webrequest = UnityWebRequest.Get(Path.Combine(Application.streamingAssetsPath, "Strings.xml"));
             webrequest.SendWebRequest();
             var xml_doc = webrequest.downloadHandler.text;
-            setLanguageWeb(contents, currentLang);
+            setLanguageWeb(xml_doc, currentLang);
         }
     }
  
