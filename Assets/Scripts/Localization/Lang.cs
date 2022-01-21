@@ -46,10 +46,10 @@ public class Lang
             setLanguage(currentLang);
         } else {
             // setLanguageWeb(non_web_xml_path, currentLang);
-            var webrequest = UnityWebRequest.Get(Application.streamingAssetsPath + "Strings.xml");
+            var webrequest = UnityWebRequest.Get(Path.Combine(Application.streamingAssetsPath, "Strings.xml"));
             webrequest.SendWebRequest();
             var xml_doc = webrequest.downloadHandler.text;
-            setLanguageWeb(xml_doc, currentLang);
+            setLanguageWeb(contents, currentLang);
         }
     }
  
@@ -98,10 +98,7 @@ public class Lang
     var LangClass : Lang = new Lang(wwwXML.text, currentLang)
     */
     public void setLanguageWeb ( string xmlText, string language) {
-        Debug.Log("GOT HERE");
-
         var xml = new XmlDocument();
-        
         xml.Load(new StringReader(xmlText));     
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];

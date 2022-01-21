@@ -5,7 +5,7 @@
 
         <string name="backstories_1">There’s so much to love about Bloomwood! The neighborhood is full of caring, vibrant people and plentiful resources.
 
-As the new Community Manager, your role is to learn what your neighbors need, and help them find answers. Every neighbor has problems you can solve, and information, resources, or skills to contribute.
+        As the new Community Manager, your role is to learn what your neighbors need, and help them find answers. Every neighbor has problems you can solve, and information, resources, or skills to contribute.
         </string>
         <string name="backstories_2">Explore Bloomwood and learn more about your neighbors. Spend a week with each neighbor, and their needs - and thereby your goals - will become clear.</string>
         <string name="backstories_3"></string>
@@ -193,7 +193,7 @@ As the new Community Manager, your role is to learn what your neighbors need, an
         <string name="tutorial_startweek_whitetitle">Who should I chat with first?</string>
         <string name="tutorial_startweek_whitetext_1">Welcome, </string>
         <string name="tutorial_startweek_whitetext_2">, New Community Manager! 
-Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems.</string>
+        Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems.</string>
         <string name="tutorial_startweek_buttontext">GOT IT</string>
 
         <string name="dictionary_vn_yellowtitle">Tools and Resources</string>
@@ -210,7 +210,7 @@ Click on one of our Bloomwood Residents to learn more about them. You will spend
         <string name="neighbors_map_whitetitle">Meet Neighbors</string>
         <string name="neighbors_map_whitetext">The map shows you all the important places around town. Hover over a location to see who is there right now. 
 
-Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas.
+        Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas.
         </string>
         <string name="neighbors_map_buttontext">NEXT</string>
 
@@ -227,7 +227,7 @@ Click on a neighbor to start a conversation. Each neighbor has specific expertis
         <string name="myjournals_phone_yellowtitle">Tools and Resources</string>
         <string name="myjournals_phone_whitetitle">My Journal</string>
         <string name="myjournals_phone_whitetext">Each conversation you have provides information that might help your neighbors. Useful facts are saved in your journal.
-You can also see what you’ve learned already for other neighbors.</string>
+        You can also see what you’ve learned already for other neighbors.</string>
         <string name="myjournals_phone_buttontext">GOT IT</string>
 
         <string name="tutorial_help">Help</string>
