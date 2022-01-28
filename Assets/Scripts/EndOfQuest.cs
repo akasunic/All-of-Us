@@ -25,8 +25,6 @@ public class EndOfQuest : MonoBehaviour
     void Start()
     {
 
-        
-        
         if (questMap == null || questMap.Count == 0) {
             questMap = new Dictionary<string, Quest>();
             BuildQuestMap();
@@ -117,6 +115,7 @@ public class EndOfQuest : MonoBehaviour
     public void CloseEndOfQuest()
     {
         // endOfQuest.SetActive(false);
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene("Home");
 
     }

@@ -215,7 +215,8 @@ public class StartWeek : MonoBehaviour
     public void goBackToOpenQuest(CharacterResources.CHARACTERS NPCOfCurrentQuest) {
         GlobalGameInfo.SetCurrentNPC(NPCOfCurrentQuest);
         GlobalGameInfo.gotalkFlag = true;
-        SceneManager.LoadScene("Basic2DMap");
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
+        SceneManager.LoadScene("Map");
     }
 
     public void selectNPC(string NPC) {
@@ -279,8 +280,9 @@ public class StartWeek : MonoBehaviour
 
     public void GoToMapScene() {
         SavingGame.setNPCOfCurrentQuest(GlobalGameInfo.GetCurrentNPC());
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
         // Go back to opening screen
-        SceneManager.LoadScene("Basic2DMap");
+        SceneManager.LoadScene("Map");
     }
 
     public void GoToPCSetupScene() {

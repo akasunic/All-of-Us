@@ -154,7 +154,7 @@ public class PCSetUp : MonoBehaviour
             SaveSerial.SaveGame(currentData);
 
             // Coming from phone scene
-            SceneManager.LoadScene("Basic2DMap");
+            SceneManager.LoadScene("Map");
         }
     }
 
