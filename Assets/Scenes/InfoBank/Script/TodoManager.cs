@@ -42,6 +42,9 @@ public class TodoManager : MonoBehaviour
     private Transform dropdownTransformDone = null;
     private string todoTitle = null;
 
+    private Color transparentText = new Color(0, 0, 0, 0.5f);
+    private Color nonTransparentText = new Color(0, 0, 0, 1.0f);
+
 
     void Awake(){
       cr = new CharacterResources();
@@ -83,16 +86,18 @@ public class TodoManager : MonoBehaviour
         // Should not be open by default
         checklistItems.SetActive(false);
 
-        // Used for toggleChecklist
-        checklistTransform = this.transform.Find("checklist");
-        dropdownTransformArrow = this.transform.Find("Header/dropdown/dropdownArrow");
-        dropdownTransformDone = this.transform.Find("Header/dropdown/dropdownDone");
-
         // When creating this todoitem, if its the current task, then have it open when the phone screen opens
         if (todoTitle == GlobalGameInfo.GetCurrentTask())
         {
             opened = true;
             checklistItems.SetActive(true);
+            textChild.gameObject.GetComponent<TextMeshProUGUI>().color = nonTransparentText;
+        }
+        else
+        {
+            dropdownTransformDone = this.transform.Find("Header/dropdown/dropdownDone");
+            dropdownTransformDone.gameObject.SetActive(true);
+            textChild.gameObject.GetComponent<TextMeshProUGUI>().color = transparentText;
         }
     }
 

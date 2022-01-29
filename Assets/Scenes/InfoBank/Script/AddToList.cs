@@ -69,57 +69,69 @@ public class AddToList : MonoBehaviour
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
         Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
         CharacterResources cr = new CharacterResources();
+
+        // Create the list of lists. Each index represents the todo lists for a week
+        List<List<GlobalGameInfo.TodoItem>> byWeek = new List<List<GlobalGameInfo.TodoItem>>();
+        for (int i = 0; i < GlobalGameInfo.numWeeks; i++)
+        {
+            byWeek.Add(new List<GlobalGameInfo.TodoItem>());
+        }
+        // Sort the input list by the week they were assigned
+        for (int i = 0; i < list.Count; i++)
+        {
+            byWeek[list[i].weekAssigned].Add(list[i]);
+        }
+
         /// This makes it so newest goes up top, oldest is down below
         for (int i = list.Count - 1; i >= 0; i--) {
-            // Instantiate TodoPerson prefab
-            Transform newTodoPerson = Instantiate(todoPersonPrefab, contentParent);
-
-            // Update a person's header
-            Transform header = newTodoPerson.Find("Header");
-            header.gameObject.SetActive(true);
-            Transform characterName = header.transform.Find("Character/CharacterName");
-            Transform characterPic = header.transform.Find("Character/CharacterPic");
-            Transform daysPassed = header.transform.Find("DaysPassed");
-            characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[i].character);
-            characterName.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[i].character).ToUpper();
-
-            Transform weekText = header.transform.Find("WeekAndDay/WeekText");
-            Transform dayText = header.transform.Find("WeekAndDay/DayText");
-            // So that week 0 shows up as week 1 in the UI
-            weekText.gameObject.GetComponent<Text>().text = "Week " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
-            dayText.gameObject.GetComponent<Text>().text = list[i].GetDayAssignedAsString();
-
-            for (int j = 0; j < 5; j++)
+            List<GlobalGameInfo.TodoItem> weekList = byWeek[i];
+            // Again, the latest items are at the end of the list, so we go backwards to create them first
+            if (weekList.Count > 0)
             {
-                Transform filled = header.transform.Find("DaysPassed/Filled" + j.ToString());
-                Transform unfilled = header.transform.Find("DaysPassed/Unfilled" + j.ToString());
-                if (j <= list[i].dayAssigned)
-                {
-                    filled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
-                    filled.gameObject.SetActive(true);
-                    unfilled.gameObject.SetActive(false);
-                }
-                else
-                {
-                    unfilled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
-                    filled.gameObject.SetActive(false);
-                    unfilled.gameObject.SetActive(true);
-                }
-            }
+                // Instantiate TodoPerson prefab
+                Transform newTodoPerson = Instantiate(todoPersonPrefab, contentParent);
 
-            // Create the todo item list;
-            Transform newItemListParent = newTodoPerson.Find("TodoItemList");
-            Transform newItem = Instantiate(listItemPrefab, newItemListParent);
-            newItem.GetComponent<TodoManager>().setDetails(list[i]);
+                // Update a person's header
+                Transform header = newTodoPerson.Find("Header");
+                header.gameObject.SetActive(true);
+                Transform characterName = header.transform.Find("Character/CharacterName");
+                Transform characterPic = header.transform.Find("Character/CharacterPic");
+                Transform daysPassed = header.transform.Find("DaysPassed");
+                characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[i].character);
+                characterName.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[i].character).ToUpper();
 
-            // This was done for testing purposes. Remove in actual game
-            /*
-            Transform newItem2 = Instantiate(listItemPrefab, newItemListParent);
-            newItem2.GetComponent<TodoManager>().setDetails(list[i]);
-            */
-            foreach (Transform child in daysPassed)
-            {
-                child.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                Transform weekText = header.transform.Find("WeekAndDay/WeekText");
+                // Transform dayText = header.transform.Find("WeekAndDay/DayText");
+                // So that week 0 shows up as week 1 in the UI
+                weekText.gameObject.GetComponent<Text>().text = "Week " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
+                // dayText.gameObject.GetComponent<Text>().text = list[i].GetDayAssignedAsString();
+
+                for (int j = 0; j < 5; j++)
+                {
+                    Transform filled = header.transform.Find("DaysPassed/Filled" + j.ToString());
+                    Transform unfilled = header.transform.Find("DaysPassed/Unfilled" + j.ToString());
+                    if (j <= list[i].dayAssigned)
+                    {
+                        filled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                        filled.gameObject.SetActive(true);
+                        unfilled.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        unfilled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                        filled.gameObject.SetActive(false);
+                        unfilled.gameObject.SetActive(true);
+                    }
+                }
+                
+
+                for (int j = weekList.Count - 1; j >= 0; j--)
+                {
+                    // Create the todo item list;
+                    Transform newItemListParent = newTodoPerson.Find("TodoItemList");
+                    Transform newItem = Instantiate(listItemPrefab, newItemListParent);
+                    newItem.GetComponent<TodoManager>().setDetails(weekList[j]);
+                }
             }
         }
     }
