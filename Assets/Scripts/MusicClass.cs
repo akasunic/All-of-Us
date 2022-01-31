@@ -11,9 +11,6 @@
  
      public void PlayMusic()
      {
-        //  if (_audioSource.isPlaying) {
-        //     return;
-        //  }
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
         if (objs.Length > 1) {
             return;

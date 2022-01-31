@@ -46,7 +46,7 @@ public class Lang
             setLanguage(currentLang);
         } else {
             // setLanguageWeb(non_web_xml_path, currentLang);
-            var webrequest = UnityWebRequest.Get(Path.Combine(Application.streamingAssetsPath, "Strings.xml"));
+            var webrequest = UnityWebRequest.Get("file:///Users/galcmu/Desktop/BSBPWeb/StreamingAssets/Strings.xml");
             webrequest.SendWebRequest();
             var xml_doc = webrequest.downloadHandler.text;
             setLanguageWeb(xml_doc, currentLang);
