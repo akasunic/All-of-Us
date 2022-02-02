@@ -42,6 +42,7 @@ public static class HelperFunctions
     }
 
     public static string StringFromCharacter(CharacterResources.CHARACTERS character) {
+        Debug.Log("CHARACTER GAL: " + character);
         switch (character) {
             case CharacterResources.CHARACTERS.RASHAD:
                 return "Rashad";

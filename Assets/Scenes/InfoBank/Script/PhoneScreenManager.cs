@@ -392,6 +392,8 @@ public class PhoneScreenManager : MonoBehaviour
         _txt.color = Color.black;
         string imgString = character.ToLower() + "_small";
 
+        Debug.Log("IMG STRING" + imgString);
+
         Image questSolverImg = selectedQuest.Find("Quest Solver").GetComponent<Image>();
         questSolverImg.sprite = Resources.Load<Sprite>(imgString);
         questSolverImg.color = new Color(255, 255, 255, 255);
