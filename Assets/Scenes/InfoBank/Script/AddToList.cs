@@ -150,7 +150,7 @@ public class AddToList : MonoBehaviour
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
         
         if(list.Count == 0){
-            this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements").gameObject.SetActive(false);
+            this.gameObject.transform.Find("TopElements").gameObject.SetActive(false);
             return;
         }
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
@@ -162,15 +162,15 @@ public class AddToList : MonoBehaviour
 
         // Assign the quest giver at the top (this should change depending on the week/quest?)
         // Im not actually sure if the top thing we want is the quest giver? i just put it as such for now
-        Transform questIcon = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/PersonIcon");
-        Transform questChar = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/PersonText");
+        Transform questIcon = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonIcon");
+        Transform questChar = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonText");
         
         // Added this condition because otherwise for some items that have quest==null it won't show anything in the journal app
         if (list[0].quest != null) {
             questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[0].quest.questGiver);
             questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[0].quest.questGiver).ToUpper();
         }
-        Transform questWeek = this.gameObject.transform.Find("Scroll View/Viewport/Content/TopElements/WeekAndPersonHeader/WeekText");
+        Transform questWeek = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/WeekText");
         // So week 0 becomes week 1 in the UI
         questWeek.gameObject.GetComponent<Text>().text = "WEEK " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
 
