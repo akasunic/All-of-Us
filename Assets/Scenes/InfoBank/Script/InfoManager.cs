@@ -34,9 +34,10 @@ public class InfoManager : MonoBehaviour
         }
 
         // Set the notes header name, pic and background color corresponding to the person
-        Transform charName = this.transform.Find("Header/PersonText");
-        Transform charPic = this.transform.Find("Header/PersonIcon");
         Transform charBackground = this.transform.Find("Header/HeaderBackground");
+        Transform charName = charBackground.Find("PersonText");
+        Transform charPic = charBackground.Find("PersonIcon");
+        
         charPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(items[0].characterEnum);
         charName.gameObject.GetComponent<Text>().text = characterName.ToUpper();
         charBackground.gameObject.GetComponent<Image>().color = cr.GetColor(items[0].characterEnum);

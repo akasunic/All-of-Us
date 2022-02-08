@@ -19,6 +19,26 @@ public class Quest {
     public bool incTime; // increase the giver's time stat?
     public bool incTech; // increase the giver's tech stat?
     public bool incResources; // increase the giver's resources stat?
+
+
+    public static bool questsAreEqual(Quest q1, Quest q2)
+    {
+        if (q1 == null && q2 == null)
+        {
+            return true;
+        }
+        if (q1 == null || q2 == null)
+        {
+            return false;
+        }
+        if (string.Equals(q1.questId, q2.questId) && q1.questGiver == q2.questGiver && string.Equals(q1.description, q2.description)
+            && q1.incHealth == q2.incHealth && q1.incTime == q2.incTime && q1.incTech == q2.incTech 
+            && q1.incResources == q2.incResources)
+        {
+            return true;
+        }
+        return false;
+    }
 }
 
 /// <summary>
