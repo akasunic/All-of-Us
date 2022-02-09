@@ -14,7 +14,7 @@ public class VisualNovelTooltipBlockingImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!updated && GlobalGameInfo.dictionaryFlag)
+        if (!updated)
         {
             updated = true;
             this.transform.gameObject.SetActive(false);

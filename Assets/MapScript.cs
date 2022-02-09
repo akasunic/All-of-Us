@@ -78,6 +78,9 @@ public class MapScript : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start() {
 
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+
         MeetNPCText.text = LangClass.getString("meet") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
 
         GoodMorningText.text = LangClass.getString("good_morning_message");
@@ -266,6 +269,7 @@ public class MapScript : MonoBehaviour
 
     public void GoToOpeningScreen() {
         // Go back to opening screen
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene("OpeningScene");
     }
 

@@ -63,7 +63,7 @@ public class TutorialManager : MonoBehaviour
 
     public void EndTutorial()
     {
-        SceneManager.LoadScene("Basic2DMap");
+        SceneManager.LoadScene("Map");
     }
 
     public void ActivateLila()

@@ -31,7 +31,7 @@ public class Home : MonoBehaviour {
 
     private void Start() {
 
-        
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
 
         WeekText.text = LangClass.getString("week") + " " + (GlobalGameInfo.GetCurrentWeek() + 1);
         DayText.text = GlobalGameInfo.GetCurrentDayAsString("long");

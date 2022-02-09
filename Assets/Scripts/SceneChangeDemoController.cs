@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneChangeDemoController : MonoBehaviour
 {
     // used for back button
-    private static string previousScene = "Basic2DMap";
+    private static string previousScene = "Map";
 
     public void OpenInfoBank()
     {
@@ -19,7 +19,8 @@ public class SceneChangeDemoController : MonoBehaviour
     {
         // GameManager.Instance.IncreaseProgress(5);
         previousScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Basic2DMap");
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
+        SceneManager.LoadScene("Map");
     }
 
     public void LoadPreviousScene() {
@@ -29,6 +30,7 @@ public class SceneChangeDemoController : MonoBehaviour
     public static void LoadPreviousSceneStatic() {
         string temp = previousScene;
         previousScene = SceneManager.GetActiveScene().name;
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene(temp);
     }
 
@@ -42,6 +44,7 @@ public class SceneChangeDemoController : MonoBehaviour
     }
 
     public void OpenOpeningScene() {
+        Destroy (GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene("OpeningScene");
     }
 }

@@ -154,7 +154,7 @@ public class PCSetUp : MonoBehaviour
             SaveSerial.SaveGame(currentData);
 
             // Coming from phone scene
-            SceneManager.LoadScene("Basic2DMap");
+            SceneManager.LoadScene("Map");
         }
     }
 
@@ -162,7 +162,7 @@ public class PCSetUp : MonoBehaviour
         Dictionary<string, SavedGame> data = GlobalGameInfo.gameData;
         if (data == null) return false;
         foreach(KeyValuePair<string, SavedGame> pair in data) {
-            if (pair.Value.getName() == name) return true;
+            if (pair.Value.getName().Equals(name)) return true;
         }
         return false;
     }

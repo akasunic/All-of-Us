@@ -16,8 +16,6 @@ public class Backstories : MonoBehaviour
 
     void Start()
     {
-        
-
         Textfield.text = LangClass.getString("backstories_1");
         NextText.text = LangClass.getString("next");
     }

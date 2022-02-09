@@ -172,7 +172,7 @@ public class DetailPageManager : MonoBehaviour
           // highlight the item in the UI
           // DeselectItemInUI();
           FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
-              HelperFunctions.StringFromCharacter(character), description);
+              HelperFunctions.StringFromCharacter(infoItem.characterEnum), description);
 
             // Set the text to be red
             if (selectedItem != null)

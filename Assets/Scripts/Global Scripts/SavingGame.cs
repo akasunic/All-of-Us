@@ -22,13 +22,12 @@ public static class SavingGame : object {
         current.setTodoItems(GlobalGameInfo.todoList);
         // Save my journal
         current.setInfoItems(GlobalGameInfo.infoList);
-        // Save contacts
-        current.setContactItems(GlobalGameInfo.contactsList);
         // Saving quests is automatic
 
         // Save tutorial flags
         current.setTutorialFlag("StartWeek", GlobalGameInfo.startWeekFlag);
         current.setTutorialFlag("Dictionary", GlobalGameInfo.dictionaryFlag);
+        current.setTutorialFlag("Speed", GlobalGameInfo.speedFlag);
         current.setTutorialFlag("Map", GlobalGameInfo.mapFlag);
         current.setTutorialFlag("TodoList", GlobalGameInfo.todolistFlag);
         current.setTutorialFlag("MyJournal", GlobalGameInfo.myjournalFlag);
@@ -59,11 +58,11 @@ public static class SavingGame : object {
         // Loading phone info
         GlobalGameInfo.todoList = savedGame.getTodoItems();
         GlobalGameInfo.infoList = savedGame.getInfoItems();
-        GlobalGameInfo.contactsList = savedGame.getContactItems();
 
         // Loading tutorial flags
         GlobalGameInfo.startWeekFlag = savedGame.getTutorialFlag("StartWeek");
         GlobalGameInfo.dictionaryFlag = savedGame.getTutorialFlag("Dictionary");
+        GlobalGameInfo.speedFlag = savedGame.getTutorialFlag("Speed");
         GlobalGameInfo.mapFlag = savedGame.getTutorialFlag("Map");
         GlobalGameInfo.todolistFlag = savedGame.getTutorialFlag("TodoList");
         GlobalGameInfo.myjournalFlag = savedGame.getTutorialFlag("MyJournal");
