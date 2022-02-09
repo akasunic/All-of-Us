@@ -47,6 +47,7 @@ public class SavedGame : object {
 
         tutorialFlags.Add("StartWeek", false);
         tutorialFlags.Add("Dictionary", false);
+        tutorialFlags.Add("Speed", false);
         tutorialFlags.Add("Map", false);
         tutorialFlags.Add("TodoList", false);
         tutorialFlags.Add("MyJournal", false);

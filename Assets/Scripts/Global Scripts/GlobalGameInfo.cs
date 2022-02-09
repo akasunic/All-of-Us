@@ -9,6 +9,7 @@ public static class GlobalGameInfo
     // Tutorial Flags
     public static bool startWeekFlag = false;
     public static bool dictionaryFlag = false;
+    public static bool speedFlag = false;
     public static bool mapFlag = false;
     public static bool todolistFlag = false;
     public static bool myjournalFlag = false;

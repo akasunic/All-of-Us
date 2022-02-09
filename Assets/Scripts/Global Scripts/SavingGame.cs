@@ -27,6 +27,7 @@ public static class SavingGame : object {
         // Save tutorial flags
         current.setTutorialFlag("StartWeek", GlobalGameInfo.startWeekFlag);
         current.setTutorialFlag("Dictionary", GlobalGameInfo.dictionaryFlag);
+        current.setTutorialFlag("Speed", GlobalGameInfo.speedFlag);
         current.setTutorialFlag("Map", GlobalGameInfo.mapFlag);
         current.setTutorialFlag("TodoList", GlobalGameInfo.todolistFlag);
         current.setTutorialFlag("MyJournal", GlobalGameInfo.myjournalFlag);
@@ -61,6 +62,7 @@ public static class SavingGame : object {
         // Loading tutorial flags
         GlobalGameInfo.startWeekFlag = savedGame.getTutorialFlag("StartWeek");
         GlobalGameInfo.dictionaryFlag = savedGame.getTutorialFlag("Dictionary");
+        GlobalGameInfo.speedFlag = savedGame.getTutorialFlag("Speed");
         GlobalGameInfo.mapFlag = savedGame.getTutorialFlag("Map");
         GlobalGameInfo.todolistFlag = savedGame.getTutorialFlag("TodoList");
         GlobalGameInfo.myjournalFlag = savedGame.getTutorialFlag("MyJournal");

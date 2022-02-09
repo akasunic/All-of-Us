@@ -11,14 +11,22 @@ public class VN : MonoBehaviour
     public TextMeshProUGUI buildingName;
 
     // Tutorial components
-    public GameObject TutorialContainer;
-    public GameObject TutorialArrow;
-    public Button TutorialButton;
-    public TextMeshProUGUI YellowTitle;
-    public TextMeshProUGUI WhiteTitle;
-    public TextMeshProUGUI WhiteText;
-    public TextMeshProUGUI ButtonText;
-    public GameObject Glow;
+    public GameObject TutorialContainerDictionary;
+    public GameObject TutorialArrowDictionary;
+    public Button TutorialButtonDictionary;
+    public TextMeshProUGUI YellowTitleDictionary;
+    public TextMeshProUGUI WhiteTitleDictionary;
+    public TextMeshProUGUI WhiteTextDictionary;
+    public TextMeshProUGUI ButtonTextDictionary;
+    public GameObject DictionaryGlow;
+    public GameObject TutorialContainerSpeed;
+    public Button TutorialButtonSpeed;
+    public TextMeshProUGUI YellowTitleSpeed;
+    public TextMeshProUGUI WhiteTitleSpeed;
+    public TextMeshProUGUI WhiteTextSpeed;
+    public TextMeshProUGUI ButtonTextSpeed;
+    public GameObject SpeedImage;
+    public GameObject SpeedGlow;
     
     // Localization Feature
     public Lang LangClass = new Lang();
@@ -48,31 +56,48 @@ public class VN : MonoBehaviour
 
         // Tutorial
         if (!GlobalGameInfo.dictionaryFlag) {
-            TutorialContainer.SetActive(true);
-            TutorialArrow.SetActive(true);
-            TutorialButton.enabled = true;
-            Glow.SetActive(true);
+            TutorialContainerDictionary.SetActive(true);
+            TutorialArrowDictionary.SetActive(true);
+            TutorialButtonDictionary.enabled = true;
+            DictionaryGlow.SetActive(true);
 
-            YellowTitle.text = LangClass.getString("dictionary_vn_yellowtitle");
-            WhiteTitle.text = LangClass.getString("dictionary_vn_whitetitle");
-            WhiteText.text = LangClass.getString("dictionary_vn_whitetext");
-            ButtonText.text = LangClass.getString("dictionary_vn_buttontext");
+            YellowTitleDictionary.text = LangClass.getString("dictionary_vn_yellowtitle");
+            WhiteTitleDictionary.text = LangClass.getString("dictionary_vn_whitetitle");
+            WhiteTextDictionary.text = LangClass.getString("dictionary_vn_whitetext_1") + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()) + LangClass.getString("dictionary_vn_whitetext_2");
+            ButtonTextDictionary.text = LangClass.getString("dictionary_vn_buttontext");
+
+            YellowTitleSpeed.text = LangClass.getString("speed_vn_yellowtitle");
+            WhiteTitleSpeed.text = LangClass.getString("speed_vn_whitetitle");
+            WhiteTextSpeed.text = LangClass.getString("speed_vn_whitetext");
+            ButtonTextSpeed.text = LangClass.getString("speed_vn_buttontext");
         }
     }
 
-    public void tutorialClick() {
-        TutorialContainer.SetActive(false);
-        TutorialArrow.SetActive(false);
-        TutorialButton.enabled = false;
+    public void tutorialDictionaryClick() {
+        TutorialContainerDictionary.SetActive(false);
+        TutorialArrowDictionary.SetActive(false);
+        TutorialButtonDictionary.enabled = false;
+        DictionaryGlow.SetActive(false);
         GlobalGameInfo.dictionaryFlag = true;
-        Glow.SetActive(false);
+
+        TutorialContainerSpeed.SetActive(true);
+        TutorialButtonSpeed.enabled = true;
+        SpeedImage.SetActive(true);
+        SpeedGlow.SetActive(true);
+    }
+    public void tutorialSpeedClick() {
+        TutorialContainerSpeed.SetActive(false);
+        TutorialButtonSpeed.enabled = false;
+        SpeedImage.SetActive(false);
+        SpeedGlow.SetActive(false);
+        GlobalGameInfo.speedFlag = true;
     }
     
     // I tried to do it a different way so it isn't using update as this is wasteful, but issues kept popping up, like disappearing
     // objects and objects not behaving as expected, so I am keeping it like this for the time being.
     private void Update()
     {
-        if (!GlobalGameInfo.dictionaryFlag)
+        if (!GlobalGameInfo.speedFlag)
         {
             foreach (GameObject go in toggleComponents)
             {
