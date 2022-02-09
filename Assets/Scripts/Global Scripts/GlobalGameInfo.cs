@@ -25,6 +25,8 @@ public static class GlobalGameInfo
     
     public static SavedGame savedGame;
 
+    // Total of 5 weeks
+    public const int numWeeks = 5;
     // CURRENT DAY (0 to 4)
     // 0 is Monday and 4 is Friday
     private static int currentDay = 0;
@@ -132,6 +134,7 @@ public static class GlobalGameInfo
         public List<ChecklistItem> checklist;
         public CharacterResources.CHARACTERS character;
 
+        public int weekAssigned;
         public int dayAssigned;
         public int completedItems;
         public bool showNotification;
@@ -140,6 +143,7 @@ public static class GlobalGameInfo
 
         public TodoItem(string title) {
             this.title = title;
+            this.weekAssigned = 0;
             this.dayAssigned = 0;
             this.checklist = new List<ChecklistItem>();
             this.completedItems = 0;
@@ -147,7 +151,8 @@ public static class GlobalGameInfo
             this.complete = false;
         }
 
-        public TodoItem(string title, CharacterResources.CHARACTERS character, int dayAssigned) {
+        public TodoItem(string title, CharacterResources.CHARACTERS character, int dayAssigned, int weekAssigned) {
+            this.weekAssigned = weekAssigned;
             this.dayAssigned = dayAssigned;
             this.title = title;
             this.checklist = new List<ChecklistItem>();
@@ -370,7 +375,7 @@ public static class GlobalGameInfo
         string title, CharacterResources.CHARACTERS c)
     {
         Debug.Log("the notifiation callback should have happend");
-        GlobalGameInfo.todoList.Add(new TodoItem(title, c, GetCurrentDay()));
+        GlobalGameInfo.todoList.Add(new TodoItem(title, c, GetCurrentDay(), GetCurrentWeek()));
         untaggedTodoObjects++;
         notificationCallback(NOTIFICATION.TODO);
 

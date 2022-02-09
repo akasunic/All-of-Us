@@ -1994,6 +1994,7 @@ MonoBehaviour:
   toggleComponents:
   - {fileID: 400864725}
   - {fileID: 400864722}
+  - {fileID: 237699670}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
