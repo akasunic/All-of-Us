@@ -40,8 +40,6 @@ public class VN : MonoBehaviour
         Destroy (GameObject.FindGameObjectWithTag("Music"));
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
 
-        // buildingName.text = LangClass.getString("name_field");
-
         switch (SceneManager.GetActiveScene().name) {
             case ("CommunityVN"):
                 buildingName.text = LangClass.getString("community_center");
@@ -74,6 +72,7 @@ public class VN : MonoBehaviour
     }
 
     public void tutorialDictionaryClick() {
+
         TutorialContainerDictionary.SetActive(false);
         TutorialArrowDictionary.SetActive(false);
         TutorialButtonDictionary.enabled = false;
