@@ -13,6 +13,7 @@ public class InfoManager : MonoBehaviour
     private static Transform lastItem = null;
 
     public Transform infoListLineItem;
+    public Transform infoListLineDivider;
 
     GameObject phone;
     GameObject phoneContainer;
@@ -44,16 +45,17 @@ public class InfoManager : MonoBehaviour
         
         // Create the individual notes
         Transform go = this.gameObject.transform.Find("InfoList");
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < 2 * items.Count - 1; i++)
         {
-            Transform newItem = Instantiate(infoListLineItem, go);
-            bool isLast = false;
-            if (i == items.Count - 1)
+            if (i % 2 == 0)
             {
-                isLast = true;
+                Transform newItem = Instantiate(infoListLineItem, go);
+                newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
             }
-            newItem.GetComponent<InfoListLineManager>().setInfo(items[i], isLast);
-
+            else
+            {
+                Transform newItem = Instantiate(infoListLineDivider, go);
+            }
         }
     }
 
