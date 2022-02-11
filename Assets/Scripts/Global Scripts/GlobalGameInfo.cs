@@ -389,6 +389,7 @@ public static class GlobalGameInfo
         return t.AddToChecklist(checklistitem);
     }
 
+
     public static void addNewItemToInfoList(
         string character,
         CharacterResources.CHARACTERS characterEnum,
@@ -396,10 +397,18 @@ public static class GlobalGameInfo
         string description,
         Quest quest = null)
     {
+        foreach (InfoItem i in GlobalGameInfo.infoList)
+        {
+            // If we are adding an already existing item with the same data, don't add this new item
+            if (string.Equals(character, i.character) && characterEnum == i.characterEnum && day == i.day && 
+                string.Equals(description, i.description) && Quest.questsAreEqual(quest, i.quest))
+            {
+                return;
+            }
+        }
+
         // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
-
         GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
-
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
 

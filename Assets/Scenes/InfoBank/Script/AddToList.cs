@@ -148,9 +148,9 @@ public class AddToList : MonoBehaviour
     }
 
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
-        
+        Transform topElementsTransform = this.gameObject.transform.Find("Info List Top Elements");
         if(list.Count == 0){
-            this.gameObject.transform.Find("TopElements").gameObject.SetActive(false);
+            topElementsTransform.gameObject.SetActive(false);
             return;
         }
         Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
@@ -159,18 +159,25 @@ public class AddToList : MonoBehaviour
 
 
         CharacterResources cr = new CharacterResources();
-
+        
         // Assign the quest giver at the top (this should change depending on the week/quest?)
         // Im not actually sure if the top thing we want is the quest giver? i just put it as such for now
-        Transform questIcon = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonIcon");
-        Transform questChar = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonText");
-        
+        Transform questIcon = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonIcon");
+        Transform questChar = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonText");
+
+        // Only valid choices to be clicked have the quest attribute nonnull. This might not be the first list item so we go through
+        // the list items until we find one where the quest attribute is nonnull to extract the information about who gave the
+        // quest. At least one item will be like this (we need to have at least one correct answer)
         // Added this condition because otherwise for some items that have quest==null it won't show anything in the journal app
-        if (list[0].quest != null) {
-            questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[0].quest.questGiver);
-            questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[0].quest.questGiver).ToUpper();
+        foreach (GlobalGameInfo.InfoItem i in list)
+        {
+            if (i.quest != null)
+            {
+                questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(i.quest.questGiver);
+                questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(i.quest.questGiver).ToUpper();
+            }
         }
-        Transform questWeek = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/WeekText");
+        Transform questWeek = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/WeekText");
         // So week 0 becomes week 1 in the UI
         questWeek.gameObject.GetComponent<Text>().text = "WEEK " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
 
@@ -178,7 +185,7 @@ public class AddToList : MonoBehaviour
         Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
         for (int i = 0; i < list.Count; i++)
         {
-
+            Debug.Log(list[i].description);
             string day = getStringRep(list[i].day);
             if (!dict.ContainsKey(day))
             {
@@ -198,10 +205,11 @@ public class AddToList : MonoBehaviour
             // Find which notes belong to which characters
             Dictionary<string, List<GlobalGameInfo.InfoItem>> chars = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
             Transform itemsList = newContainer.Find("InfoItemsList");
-            
+            Debug.Log(elem.Value.Count);  
             for (int i = 0; i < elem.Value.Count; i++)
             {
                 GlobalGameInfo.InfoItem item = elem.Value[i];
+                Debug.Log(item.description);
                 string character = item.character;
                 if (!chars.ContainsKey(character))
                 {

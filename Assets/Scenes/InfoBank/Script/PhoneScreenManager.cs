@@ -10,13 +10,13 @@ using TMPro;
 public class PhoneScreenManager : MonoBehaviour
 {
     public GameObject detailContainer;
-    public GameObject messages;
+    public GameObject todo;
     public GameObject notes;
     public GameObject contacts;
     public GameObject settings;
     public GameObject dictionary;
 
-    public GameObject messagesBorder;
+    public GameObject todoBorder;
     public GameObject notesBorder;
     public GameObject contactsBorder;
     public GameObject settingsBorder;
@@ -111,12 +111,12 @@ public class PhoneScreenManager : MonoBehaviour
     {
         
 
-        messages.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
+        todo.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         settings.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         dictionary.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
-        messagesBorder.SetActive(false);
+        todoBorder.SetActive(false);
         notesBorder.SetActive(false);
         contactsBorder.SetActive(false);
         settingsBorder.SetActive(false);
@@ -196,7 +196,7 @@ public class PhoneScreenManager : MonoBehaviour
             lastSelectedBorder.SetActive(false);
         }
 
-        if(lastSelected == messages){
+        if(lastSelected == todo){
             GlobalGameInfo.SeeAllTodoItems();
         }
 
@@ -208,7 +208,7 @@ public class PhoneScreenManager : MonoBehaviour
             border.SetActive(true);
             lastSelectedBorder = border;
         }
-        // For the Notes/journal app only, update that we have seen all the bullet points (if there are any once now)
+        // Clear notifications for notes/todo apps once we switch to that page
         if(type.ToLower() == "notes")
         {
             for (int i = 0; i < GlobalGameInfo.infoList.Count; i++)
@@ -216,15 +216,32 @@ public class PhoneScreenManager : MonoBehaviour
                 GlobalGameInfo.infoList[i].timesViewed++;
             }
             notesNotificationBubble.SetActive(false);
+            int numNotifications = GlobalGameInfo.getNotificationNumber(GlobalGameInfo.NOTIFICATION.INFO);
+            for (int i = 0; i < numNotifications; i++)
+            {
+                GlobalGameInfo.decreaseUntaggedInfoObjects();
+            }
+        }
+        else if (type.ToLower() == "todo")
+        {
+            GlobalGameInfo.SeeAllTodoItems();
+            /*
+            int numNotifications = GlobalGameInfo.getNotificationNumber(GlobalGameInfo.NOTIFICATION.TODO);
+            Debug.Log(numNotifications);
+            for (int i = 0; i < numNotifications; i++)
+            {
+                GlobalGameInfo.decreaseUntaggedTodoObjects();
+            }
+            */
         }
     }
 
     private void getGameObject(string type, ref GameObject go, ref GameObject border){
 
         switch (type.ToLower()){
-            case "messages":
-                go = messages;
-                border = messagesBorder;
+            case "todo":
+                go = todo;
+                border = todoBorder;
                 HelpButton.SetActive(true);
                 GlobalGameInfo.selectedAppForTutorial = "todolist";
                 // Tutorial
@@ -314,7 +331,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     private string getSectionName(string type){
         switch (type.ToLower()){
-            case "messages":
+            case "todo":
                 return "To-Do List";
             case "notes":
                 return "My Journal";
@@ -334,7 +351,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     private Sprite getSectionIcon(string type){
         switch (type.ToLower()){
-            case "messages":
+            case "todo":
                 return todoIcon;
             case "notes":
                 return journalIcon;
