@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class MapScript : MonoBehaviour
 {
 
-    public bool calendarIconPressed = false;
+    private static bool calendarIconPressed = false;
     public TextMeshProUGUI WeekText;
     public TextMeshProUGUI ShortDayText;
     public TextMeshProUGUI WeekTextPopup;
@@ -77,7 +77,6 @@ public class MapScript : MonoBehaviour
 
     // Start is called before the first frame update
     private IEnumerator Start() {
-
         Destroy (GameObject.FindGameObjectWithTag("Music"));
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
 
@@ -229,7 +228,7 @@ public class MapScript : MonoBehaviour
     {
         // Update calendar pressed flag
         calendarIconPressed = !calendarIconPressed;
-
+    
         // Remove phone icon
         PhoneIcon.SetActive(!calendarIconPressed);
 
@@ -256,7 +255,6 @@ public class MapScript : MonoBehaviour
         
         // Show calendar message
         CalendarMessage.SetActive(calendarIconPressed);
-
     }
 
     public void GoTalk() {

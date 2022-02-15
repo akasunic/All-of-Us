@@ -231,6 +231,7 @@ public static class GlobalGameInfo
         public bool showNotification;
         public readonly Quest quest;
         public int timesViewed;
+        public int week;
 
         // public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
         //     this.timesViewed = 0;
@@ -244,7 +245,7 @@ public static class GlobalGameInfo
         // }
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
-            int day, string description, Quest quest) {
+            int day, string description, Quest quest, int week) {
             this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
@@ -254,6 +255,7 @@ public static class GlobalGameInfo
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
             this.showNotification = true;
             this.quest = quest;
+            this.week = week;
         }
     }
 
@@ -394,8 +396,9 @@ public static class GlobalGameInfo
         string character,
         CharacterResources.CHARACTERS characterEnum,
         int day,
-        string description,
-        Quest quest = null)
+        string description, int week,
+        Quest quest = null
+        ) 
     {
         foreach (InfoItem i in GlobalGameInfo.infoList)
         {
@@ -408,7 +411,7 @@ public static class GlobalGameInfo
         }
 
         // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
-        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
+        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest, week));
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
 

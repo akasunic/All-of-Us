@@ -27,7 +27,7 @@ public class InkMessageHandler : MonoBehaviour
             if (notifInfo.Length == 3) {
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    GlobalGameInfo.GetCurrentDay(), notifInfo[2]);
+                    GlobalGameInfo.GetCurrentDay(), notifInfo[2], GlobalGameInfo.GetCurrentWeek());
             } else if (notifInfo.Length == 4) {
                 Quest q = new Quest();
                 // Quest giver should be the current NPC (who we have quests from)
@@ -39,7 +39,7 @@ public class InkMessageHandler : MonoBehaviour
 
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
-                    GlobalGameInfo.GetCurrentDay(), notifInfo[2], q);
+                    GlobalGameInfo.GetCurrentDay(), notifInfo[2], GlobalGameInfo.GetCurrentWeek(), q);
                 
                 // QuestManager.AddQuest(notifInfo[3]);
             } else {

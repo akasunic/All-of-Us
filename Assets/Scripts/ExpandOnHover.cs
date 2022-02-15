@@ -7,6 +7,7 @@ public class ExpandOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     private Vector3 oldScale;
     private bool animating;
+    private bool enlarged = false;
 
 
     private void AnimateScale(Vector3 initialScale, Vector3 endScale)
@@ -15,7 +16,7 @@ public class ExpandOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!animating)
+        if (!animating && !enlarged)
         {
             animating = true;
             oldScale = this.transform.localScale;
@@ -24,20 +25,28 @@ public class ExpandOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             Vector3 endScale = new Vector3(newX, newY, oldScale.z);
             AnimateScale(oldScale, endScale);
             animating = false;
+            enlarged = true;
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Do nothing on click, other scripts do this already
+        if (enlarged)
+        {
+            animating = true;
+            AnimateScale(this.transform.localScale, oldScale);
+            enlarged = false;
+            animating = false;
+        }
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if(!animating)
+        if(!animating && enlarged)
         {
             animating = true;
             AnimateScale(this.transform.localScale, oldScale);
             animating = false;
+            enlarged = false;
         }
     }
 }
