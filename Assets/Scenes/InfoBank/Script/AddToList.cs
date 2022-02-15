@@ -7,6 +7,7 @@ using TMPro;
 //fills the page with the list items from GlobalGameInfo
 public class AddToList : MonoBehaviour
 {
+    private int numWeeksInJournal = 1;
     private int currentDisplayWeek = 0;
     public Transform todoPersonPrefab;
     public Transform listItemPrefab;
@@ -15,18 +16,29 @@ public class AddToList : MonoBehaviour
 
     public void decrementCurrentDisplayWeek()
     {
-        currentDisplayWeek = (currentDisplayWeek + 1) % (GlobalGameInfo.GetCurrentWeek() + 1);
+        if (currentDisplayWeek == 0)
+        {
+            currentDisplayWeek = numWeeksInJournal - 1;
+        }
+        else
+        {
+            currentDisplayWeek = currentDisplayWeek - 1;
+        }
         List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
         list.Reverse();
         fillInfoList(list);
+        Debug.Log("AFTER CHANGE DISPLAY: " + currentDisplayWeek);
+        Debug.Log("AFTER CHANGE WEEKS: " + numWeeksInJournal);
     }
 
     public void incrementCurrentDisplayWeek()
     {
-        currentDisplayWeek = (currentDisplayWeek - 1) % (GlobalGameInfo.GetCurrentWeek() + 1);
+        currentDisplayWeek = (currentDisplayWeek + 1) % (numWeeksInJournal);
         List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
         list.Reverse();
         fillInfoList(list);
+        Debug.Log("AFTER CHANGE DISPLAY: " + currentDisplayWeek);
+        Debug.Log("AFTER CHANGE WEEKS: " + numWeeksInJournal);
     }
     private string getStringRep(int i)
     {
@@ -198,7 +210,30 @@ public class AddToList : MonoBehaviour
         Transform questIcon = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonIcon");
         Transform questChar = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonText");
 
-        if (GlobalGameInfo.GetCurrentWeek() == 0)
+        
+
+        // Only valid choices to be clicked have the quest attribute nonnull. This might not be the first list item so we go through
+        // the list items until we find one where the quest attribute is nonnull to extract the information about who gave the
+        // quest. At least one item will be like this (we need to have at least one correct answer)
+        // Added this condition because otherwise for some items that have quest==null it won't show anything in the journal app
+        Dictionary<int, CharacterResources.CHARACTERS> iconsWeekDict = new Dictionary<int, CharacterResources.CHARACTERS>();
+        int numWeeksSeen = 0;
+        foreach (GlobalGameInfo.InfoItem i in list)
+        {
+            if (i.quest != null && !iconsWeekDict.ContainsKey(i.week))
+            {
+                Debug.Log("WEEK: " + i.week);
+                Debug.Log("QUEST GIVER: " + i.quest.questGiver);
+                iconsWeekDict.Add(i.week, i.quest.questGiver);
+                numWeeksSeen++;
+                Debug.Log("NUM WEEKS SEEN: " + numWeeksSeen);
+            }
+        }
+
+        numWeeksInJournal = numWeeksSeen;
+
+        Debug.Log("NUM WEEKS IN JOURNAL: " + numWeeksInJournal);
+        if (numWeeksInJournal == 1)
         {
             topElementsTransform.Find("LeftArrow").gameObject.SetActive(false);
             topElementsTransform.Find("RightArrow").gameObject.SetActive(false);
@@ -213,19 +248,7 @@ public class AddToList : MonoBehaviour
             topElementsTransform.Find("RightArrowEmpty").gameObject.SetActive(false);
         }
 
-        // Only valid choices to be clicked have the quest attribute nonnull. This might not be the first list item so we go through
-        // the list items until we find one where the quest attribute is nonnull to extract the information about who gave the
-        // quest. At least one item will be like this (we need to have at least one correct answer)
-        // Added this condition because otherwise for some items that have quest==null it won't show anything in the journal app
-        Dictionary<int, CharacterResources.CHARACTERS> iconsWeekDict = new Dictionary<int, CharacterResources.CHARACTERS>();
-        foreach (GlobalGameInfo.InfoItem i in list)
-        {
-            if (i.quest != null && !iconsWeekDict.ContainsKey(i.week))
-            {
-                iconsWeekDict.Add(i.week, i.quest.questGiver);
-            }
-        }
-
+        Debug.Log("BEFORE ACCESS CURRENT DISPLAY WEEK: " + currentDisplayWeek);
         questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(iconsWeekDict[currentDisplayWeek]);
         questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(iconsWeekDict[currentDisplayWeek]).ToUpper();
 
@@ -260,11 +283,9 @@ public class AddToList : MonoBehaviour
             // Find which notes belong to which characters
             Dictionary<string, List<GlobalGameInfo.InfoItem>> chars = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
             Transform itemsList = newContainer.Find("InfoItemsList");
-            Debug.Log(elem.Value.Count);  
             for (int i = 0; i < elem.Value.Count; i++)
             {
                 GlobalGameInfo.InfoItem item = elem.Value[i];
-                Debug.Log(item.description);
                 string character = item.character;
                 if (!chars.ContainsKey(character))
                 {
