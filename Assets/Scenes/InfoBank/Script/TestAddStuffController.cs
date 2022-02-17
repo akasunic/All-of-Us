@@ -7,22 +7,22 @@ public class TestAddStuffController : MonoBehaviour
 {
     public void AddRashadJournalDay1(){
         string des = "I'm looking for a part time worker in the YA section. Do you know anyone?";
-        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 1, des); 
+        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 1, des, 0); 
     }
     
     public void AddRashadJournalDay2(){
         string des = "We're looking someone with experience working with children, someone hwo knows how to reshelve books, and has a knowledge of current YA lit. Oh, and they have to have good computer skills.";
-        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 2, des); 
+        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 2, des, 0); 
     }
 
     public void AddRashadJournalDay3(){
         string des = "Looking for someone to teach children part-time.";
-        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 3, des); 
+        GlobalGameInfo.addNewItemToInfoList("Rashad", CharacterResources.CHARACTERS.RASHAD, 3, des, 0); 
     }
 
     public void AddLilaJournalDay2(){
         string des = "This is Lato. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo vestibulum, feugiat nibh adipiscing.";
-        GlobalGameInfo.addNewItemToInfoList("Lila", CharacterResources.CHARACTERS.LILA, 2, des); 
+        GlobalGameInfo.addNewItemToInfoList("Lila", CharacterResources.CHARACTERS.LILA, 2, des, 0); 
     }
 
     public void AddRashadTodo(){
