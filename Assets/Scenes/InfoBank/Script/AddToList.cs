@@ -11,6 +11,7 @@ public class AddToList : MonoBehaviour
     public Transform todoPersonPrefab;
     public Transform listItemPrefab;
     public Transform infoListItemPrefab;
+    public Transform infoListItemResearchPrefab;
     public string whichList = "Dialog";
 
     private string getStringRep(int i)
@@ -214,8 +215,13 @@ public class AddToList : MonoBehaviour
             foreach (KeyValuePair<string, List<GlobalGameInfo.InfoItem>> character in chars)
             {
                 // Add all notes of people
-                Transform newItem = Instantiate(infoListItemPrefab, itemsList);
-                newItem.GetComponent<InfoManager>().setDetails(character.Key, character.Value);
+                if (GlobalGameInfo.researchInt <= 1) {
+                    Transform newItem = Instantiate(infoListItemPrefab, itemsList);
+                    newItem.GetComponent<InfoManager>().setDetails(character.Key, character.Value);
+                } else {
+                    Transform newItem = Instantiate(infoListItemResearchPrefab, itemsList);
+                    newItem.GetComponent<InfoManager>().setDetails(character.Key, character.Value);
+                }
             }
             
         }

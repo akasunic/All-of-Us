@@ -25,8 +25,8 @@ public static class GlobalGameInfo
     
     public static SavedGame savedGame;
 
-    // Research version
-    public static int researchInt = 0;
+    // Research version: 1=regular, 2=version1, 3=version2
+    public static int researchInt = 2;
     // Total of 5 weeks
     public const int numWeeks = 5;
     // CURRENT DAY (0 to 4)

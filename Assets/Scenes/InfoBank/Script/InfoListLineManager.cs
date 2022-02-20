@@ -9,6 +9,7 @@ public class InfoListLineManager : MonoBehaviour
     private GlobalGameInfo.InfoItem item;
     private bool isLast;
     private bool buttonToggledOn = true;
+    CharacterResources cr;
     public void setInfo(GlobalGameInfo.InfoItem item, bool isLast)
     {
         this.item = item;
@@ -17,23 +18,32 @@ public class InfoListLineManager : MonoBehaviour
         GetComponent<DetailPageManager>().setInfo(item);
 
         this.transform.Find("Content/Text").GetComponent<Text>().text = item.description;
-        // If its the last note, we don't want to the divider
-        if(isLast)
+        // If its the last note, we don't want the divider
+        if(isLast && GlobalGameInfo.researchInt <= 1)
         {
             this.transform.Find("Divider").gameObject.SetActive(false);
         }
         // If we have already viewed it before, don't have the red circle next to the line
         // Will only be 1, the first time we click the notes/journal app
-        if (item.timesViewed != 1)
+        if (item.timesViewed != 1 && GlobalGameInfo.researchInt <= 1)
         {
             this.transform.Find("Content/Image").gameObject.SetActive(false);
+        }
+
+        if (GlobalGameInfo.researchInt > 1) {
+            Debug.Log("CONTENT NPC IMAGE 0: " + this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite);
+            Debug.Log("CONTENT NPC IMAGE 1: " + this.transform.Find("Content/NPCImage").GetComponent<Image>());
+            Debug.Log("CONTENT NPC IMAGE 2: " + this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>());
+            Debug.Log("CONTENT NPC IMAGE 3: " + this.transform.Find("Content/NPCImage").GetComponent<Image>().sprite);
+            Debug.Log("CONTENT NPC IMAGE 4: " + this.transform.Find("Content/NPCImage").gameObject.sprite);
+            this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
         }
     }
 
     void Update()
     {
         // Will only be 1, the first time we click the notes/journal app
-        if (item != null && item.timesViewed != 1 && buttonToggledOn)
+        if (item != null && item.timesViewed != 1 && buttonToggledOn && GlobalGameInfo.researchInt <= 1)
         {
             this.transform.Find("Content/Image").gameObject.SetActive(false);
             buttonToggledOn = false;
