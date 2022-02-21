@@ -9,13 +9,13 @@ public class InfoListLineManager : MonoBehaviour
     private GlobalGameInfo.InfoItem item;
     private bool isLast;
     private bool buttonToggledOn = true;
-    CharacterResources cr;
     public void setInfo(GlobalGameInfo.InfoItem item, bool isLast)
     {
         this.item = item;
         this.isLast = isLast;
         // Update the detail page manager
         GetComponent<DetailPageManager>().setInfo(item);
+        CharacterResources cr = new CharacterResources();
 
         this.transform.Find("Content/Text").GetComponent<Text>().text = item.description;
         // If its the last note, we don't want the divider
@@ -31,10 +31,7 @@ public class InfoListLineManager : MonoBehaviour
         }
 
         if (GlobalGameInfo.researchInt > 1) {
-            Debug.Log("CONTENT NPC IMAGE 1: " + this.transform.Find("Content/NPCImage").GetComponent<Image>());
-            Debug.Log("CONTENT NPC IMAGE 2: " + this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>());
-
-            // this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
+            this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
         }
     }
 

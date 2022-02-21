@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResearchQuestion : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ResearchQuestion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (true) { // TODO change to turnin scene
+        if (SceneManager.GetActiveScene().name == "Research Turnin") {
             selectButton.SetActive(true);
         }
 
