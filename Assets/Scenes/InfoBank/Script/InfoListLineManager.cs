@@ -31,12 +31,10 @@ public class InfoListLineManager : MonoBehaviour
         }
 
         if (GlobalGameInfo.researchInt > 1) {
-            Debug.Log("CONTENT NPC IMAGE 0: " + this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite);
             Debug.Log("CONTENT NPC IMAGE 1: " + this.transform.Find("Content/NPCImage").GetComponent<Image>());
             Debug.Log("CONTENT NPC IMAGE 2: " + this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>());
-            Debug.Log("CONTENT NPC IMAGE 3: " + this.transform.Find("Content/NPCImage").GetComponent<Image>().sprite);
-            Debug.Log("CONTENT NPC IMAGE 4: " + this.transform.Find("Content/NPCImage").gameObject.sprite);
-            this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
+
+            // this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
         }
     }
 
