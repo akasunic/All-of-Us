@@ -20,11 +20,9 @@ public class PCSetUp : MonoBehaviour
     public TextMeshProUGUI BackButtonText;
     public Text pronounsDropDownLabel;
     public Text languageDropDownLabel;
-    public Text researchDropDownLabel;
     public Text nameFieldPlaceholder;
     public Dropdown pronounsDropDown;
     public Dropdown languageDropDown;
-    public Dropdown researchDropDown;
     public GameObject backButton;
     public Image NameError;
     public TextMeshProUGUI NameErrorText;
@@ -45,7 +43,6 @@ public class PCSetUp : MonoBehaviour
         NameText.text = LangClass.getString("name_field");
         PronounsText.text = LangClass.getString("pronouns_field");
         LanguageText.text = LangClass.getString("language_field");
-        ResearchText.text = "Research";
         nameFieldPlaceholder.text = LangClass.getString("first_name");
         BackButtonText.text = LangClass.getString("back");
 
@@ -68,7 +65,6 @@ public class PCSetUp : MonoBehaviour
 
             pronounsDropDown.value = GlobalGameInfo.pronounsInt;
             languageDropDown.value = GlobalGameInfo.languageInt;
-            researchDropDown.value = GlobalGameInfo.researchInt;
 
             buttonText = LangClass.getString("save");
 
@@ -87,7 +83,7 @@ public class PCSetUp : MonoBehaviour
     {
         firstName = nameInputField.GetComponent<InputField>().text;
 
-        if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0 && researchDropDown.value != 0) {
+        if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0) {
             continueButton.gameObject.SetActive(true);
             inactiveContinueButton.gameObject.SetActive(false);
         } else {
@@ -121,7 +117,7 @@ public class PCSetUp : MonoBehaviour
         GlobalGameInfo.language = GetLanguages(languageDropDown.value);
         GlobalGameInfo.pronounsInt = pronounsDropDown.value;
         GlobalGameInfo.languageInt = languageDropDown.value;
-        GlobalGameInfo.researchInt = researchDropDown.value;
+        GlobalGameInfo.researchInt = 2; // Set the research version
 
         // Change the language globally
         LangClass.setLanguage(GetLanguages(languageDropDown.value));
