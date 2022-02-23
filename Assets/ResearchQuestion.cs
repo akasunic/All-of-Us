@@ -15,7 +15,7 @@ public class ResearchQuestion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Research Turnin") {
+        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
             selectButton.SetActive(true);
         }
 

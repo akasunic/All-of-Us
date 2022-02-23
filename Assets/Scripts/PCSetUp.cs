@@ -14,10 +14,12 @@ public class PCSetUp : MonoBehaviour
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI PronounsText;
     public TextMeshProUGUI LanguageText;
-    public TextMeshProUGUI ResearchText;
     public TextMeshProUGUI ContinueText;
     public TextMeshProUGUI InactiveContinueText;
     public TextMeshProUGUI BackButtonText;
+    public InputField codeInputField;
+    public TextMeshProUGUI codeText;
+    public Text codeFieldPlaceholder;
     public Text pronounsDropDownLabel;
     public Text languageDropDownLabel;
     public Text nameFieldPlaceholder;
@@ -29,6 +31,7 @@ public class PCSetUp : MonoBehaviour
     public Button continueButton;
     public Button inactiveContinueButton;
     private string firstName = "";
+    private string playerCode = "";
     private string pronouns;
     private string language;
     
@@ -41,6 +44,7 @@ public class PCSetUp : MonoBehaviour
 
         // Setting texts from Strings.xml
         NameText.text = LangClass.getString("name_field");
+        codeText.text = LangClass.getString("code_field");
         PronounsText.text = LangClass.getString("pronouns_field");
         LanguageText.text = LangClass.getString("language_field");
         nameFieldPlaceholder.text = LangClass.getString("first_name");
@@ -61,7 +65,9 @@ public class PCSetUp : MonoBehaviour
 
             // Populate data from current settings
             firstName = GlobalGameInfo.name;
+            playerCode = GlobalGameInfo.playerCode;
             nameInputField.text = firstName;
+            codeInputField.text = playerCode;
 
             pronounsDropDown.value = GlobalGameInfo.pronounsInt;
             languageDropDown.value = GlobalGameInfo.languageInt;
@@ -82,8 +88,9 @@ public class PCSetUp : MonoBehaviour
     public void Update()
     {
         firstName = nameInputField.GetComponent<InputField>().text;
+        playerCode = codeInputField.GetComponent<InputField>().text;
 
-        if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0) {
+        if (firstName != null && !firstName.Equals("") && pronounsDropDown.value != 0 && languageDropDown.value != 0 && playerCode != null) {
             continueButton.gameObject.SetActive(true);
             inactiveContinueButton.gameObject.SetActive(false);
         } else {
@@ -113,11 +120,11 @@ public class PCSetUp : MonoBehaviour
         }
 
         GlobalGameInfo.name = firstName;
+        GlobalGameInfo.playerCode = playerCode;
         GlobalGameInfo.pronouns = GetPronouns(pronounsDropDown.value);
         GlobalGameInfo.language = GetLanguages(languageDropDown.value);
         GlobalGameInfo.pronounsInt = pronounsDropDown.value;
         GlobalGameInfo.languageInt = languageDropDown.value;
-        GlobalGameInfo.researchInt = 2; // Set the research version
 
         // Change the language globally
         LangClass.setLanguage(GetLanguages(languageDropDown.value));

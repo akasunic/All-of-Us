@@ -121,6 +121,7 @@
 
         <string name="pc_setup_title">Who are you?</string>
         <string name="name_field">Name</string>
+        <string name="code_field">Code</string>
         <string name="pronouns_field">Pronouns</string>
         <string name="language_field">Language</string>
         <string name="she_her">She/Her</string>

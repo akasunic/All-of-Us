@@ -35,17 +35,25 @@ public class InfoManager : MonoBehaviour
         }
 
         // Set the notes header name, pic and background color corresponding to the person
-        // Transform charName = this.transform.Find("Header/PersonText");
-        // Transform charPic = this.transform.Find("Header/PersonIcon");
-        // Transform charBackground = this.transform.Find("Header/HeaderBackground");
-        // charPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(items[0].characterEnum);
-        // charName.gameObject.GetComponent<Text>().text = characterName.ToUpper();
-        // charBackground.gameObject.GetComponent<Image>().color = cr.GetColor(items[0].characterEnum);
+        if (GlobalGameInfo.researchInt <= 1) {
+            Transform charName = this.transform.Find("Header/PersonText");
+            Transform charPic = this.transform.Find("Header/PersonIcon");
+            Transform charBackground = this.transform.Find("Header/HeaderBackground");
+            charPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(items[0].characterEnum);
+            charName.gameObject.GetComponent<Text>().text = characterName.ToUpper();
+            charBackground.gameObject.GetComponent<Image>().color = cr.GetColor(items[0].characterEnum);
+        }
         
         Transform go = this.gameObject.transform.Find("InfoList");
+
+        Transform newItem;
         for (int i = 0; i < items.Count; i++)
         {
-            Transform newItem = Instantiate(ResearchQuestion, go);
+            if (GlobalGameInfo.researchInt <= 1) {
+                newItem = Instantiate(infoListLineItem, go);
+            } else {
+                newItem = Instantiate(ResearchQuestion, go);
+            }
             bool isLast = false;
             if (i == items.Count - 1)
             {

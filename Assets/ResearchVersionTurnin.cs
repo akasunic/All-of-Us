@@ -9,6 +9,7 @@ public class ResearchVersionTurnin : MonoBehaviour
     public GameObject MrsLeeProfile;
     public GameObject MrsLeeImage;
     public GameObject MrsLeeQuestion;
+    public GameObject UIContainer;
     public Button viewProfileButton;
     public TextMeshProUGUI ButtonText;
     public bool showingProfile;
@@ -31,12 +32,16 @@ public class ResearchVersionTurnin : MonoBehaviour
             MrsLeeProfile.SetActive(true);
             ButtonText.text = "Back To Solving";
             showingProfile = !showingProfile;
+
+            UIContainer.SetActive(false);
         } else {
             MrsLeeImage.SetActive(true);
             MrsLeeQuestion.SetActive(true);
             MrsLeeProfile.SetActive(false);
             ButtonText.text = "View Mrs. Lee's Profile";
             showingProfile = !showingProfile;
+            
+            UIContainer.SetActive(true);
         }
     }
 }
