@@ -8,20 +8,38 @@ public class ResearchQuestion : MonoBehaviour
 {
 
     public GameObject selectButton;
-    public GameObject learningFirstOption;
-    public GameObject capabilityFirstOption;
-
+    public Toggle learningFirstOption;
+    public Toggle learningSecondOption;
+    public Toggle learningThirdOption;
+    public Toggle capabilityFirstOption;
+    public Toggle capabilitySecondOption;
+    public Toggle capabilityThirdOption;
+    public ToggleGroup learningToggleGroup;
+    public ToggleGroup capabilityToggleGroup;
+    public Text journalItemText;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
-            selectButton.SetActive(true);
-        }
+        if (GlobalGameInfo.researchVersion == 3) {
+            // Disabling the toggles so users cannot change the toggles
+            learningFirstOption.enabled = false;
+            learningSecondOption.enabled = false;
+            learningThirdOption.enabled = false;
+            capabilityFirstOption.enabled = false;
+            capabilitySecondOption.enabled = false;
+            capabilityThirdOption.enabled = false;
 
-        if (GlobalGameInfo.researchInt == 3) {
+            // Hard coded part just for the research version:
+            // Setting the options according to a pre-defined selection
             learningFirstOption.GetComponent<Toggle>().isOn = true;
             capabilityFirstOption.GetComponent<Toggle>().isOn = true;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
+            if (GlobalGameInfo.researchVersion == 3 || GlobalGameInfo.researchVersion == 2 && GlobalGameInfo.allResearchQuestionsAnswered) {
+                selectButton.SetActive(true);
+            }
         }
 
     }
@@ -31,4 +49,13 @@ public class ResearchQuestion : MonoBehaviour
     {
         
     }
+
+    void RecordAnswerSelection(bool newValue) {
+        // Recording journal item answers to the cloud
+        Debug.Log("User code: " + GlobalGameInfo.playerCode);
+        Debug.Log("Journal Item: " + journalItemText);
+        Debug.Log("Answer selected: " + newValue);
+        // DataCollection.LogEvent("User code: " + GlobalGameInfo.playerCode + ", Journal Item: " + journalItemText + ", Answer selected: " + , "RESEARCH ANSWER CHANGED");
+    }
+
 }

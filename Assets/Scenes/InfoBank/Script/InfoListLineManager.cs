@@ -19,18 +19,18 @@ public class InfoListLineManager : MonoBehaviour
 
         this.transform.Find("Content/Text").GetComponent<Text>().text = item.description;
         // If its the last note, we don't want the divider
-        if(isLast && GlobalGameInfo.researchInt <= 1)
+        if(isLast && GlobalGameInfo.researchVersion <= 1)
         {
             this.transform.Find("Divider").gameObject.SetActive(false);
         }
         // If we have already viewed it before, don't have the red circle next to the line
         // Will only be 1, the first time we click the notes/journal app
-        if (item.timesViewed != 1 && GlobalGameInfo.researchInt <= 1)
+        if (item.timesViewed != 1 && GlobalGameInfo.researchVersion <= 1)
         {
             this.transform.Find("Content/Image").gameObject.SetActive(false);
         }
 
-        if (GlobalGameInfo.researchInt > 1) {
+        if (GlobalGameInfo.researchVersion > 1) {
             this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
         }
     }
@@ -38,7 +38,7 @@ public class InfoListLineManager : MonoBehaviour
     void Update()
     {
         // Will only be 1, the first time we click the notes/journal app
-        if (item != null && item.timesViewed != 1 && buttonToggledOn && GlobalGameInfo.researchInt <= 1)
+        if (item != null && item.timesViewed != 1 && buttonToggledOn && GlobalGameInfo.researchVersion <= 1)
         {
             this.transform.Find("Content/Image").gameObject.SetActive(false);
             buttonToggledOn = false;

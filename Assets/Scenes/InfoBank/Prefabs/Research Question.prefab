@@ -3282,8 +3282,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectButton: {fileID: 4970372689452266795}
-  learningFirstOption: {fileID: 7250403007519778173}
-  capabilityFirstOption: {fileID: 396543835105353496}
+  learningFirstOption: {fileID: 6409494030980847282}
+  learningSecondOption: {fileID: 2443600990033432022}
+  learningThirdOption: {fileID: 4417334298794536601}
+  capabilityFirstOption: {fileID: 118534699055921693}
+  capabilitySecondOption: {fileID: 4363107970260786497}
+  capabilityThirdOption: {fileID: 437197522231182558}
+  learningToggleGroup: {fileID: 7835187075819973972}
+  capabilityToggleGroup: {fileID: 3342651114196269249}
+  journalItemText: {fileID: 241853977845412247}
 --- !u!1 &7859117953903014755
 GameObject:
   m_ObjectHideFlags: 0
