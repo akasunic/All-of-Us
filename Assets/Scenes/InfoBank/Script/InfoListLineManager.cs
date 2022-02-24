@@ -9,6 +9,13 @@ public class InfoListLineManager : MonoBehaviour
     private GlobalGameInfo.InfoItem item;
     private bool isLast;
     private bool buttonToggledOn = true;
+    // Research version toggles
+    public Toggle learningToggle0;
+    public Toggle learningToggle1;
+    public Toggle learningToggle2;
+    public Toggle capabilityToggle0;
+    public Toggle capabilityToggle1;
+    public Toggle capabilityToggle2;
     public void setInfo(GlobalGameInfo.InfoItem item, bool isLast)
     {
         this.item = item;
@@ -31,9 +38,42 @@ public class InfoListLineManager : MonoBehaviour
         }
 
         if (GlobalGameInfo.researchVersion > 1) {
+            // Setting the NPCImage in the new research journal item
             this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
-        }
+
+            // Loading the answers into the component
+            switch (item.researchLearning) {
+                case 0:
+                    learningToggle0.GetComponent<Toggle>().isOn = true;
+                    break;
+                case 1:
+                    learningToggle1.GetComponent<Toggle>().isOn = true;      
+                    break;
+                case 2:
+                    learningToggle2.GetComponent<Toggle>().isOn = true;
+                    break;
+                default:
+                    break;
+            }
+            switch (item.researchCapability) {
+                case 0:
+                    capabilityToggle0.GetComponent<Toggle>().isOn = true;
+                    break;            
+                case 1:
+                    capabilityToggle1.GetComponent<Toggle>().isOn = true;            
+                    break;            
+                case 2:
+                    capabilityToggle2.GetComponent<Toggle>().isOn = true;
+                    break;            
+                default:
+                    break;   
+            }  
+        }  
     }
+
+    public void updateToggleSelection() {
+        
+    }     
 
     void Update()
     {
