@@ -37,11 +37,12 @@ public class InfoListLineManager : MonoBehaviour
             this.transform.Find("Content/Image").gameObject.SetActive(false);
         }
 
+        // In research version only
         if (GlobalGameInfo.researchVersion > 1) {
             // Setting the NPCImage in the new research journal item
             this.transform.Find("Content/NPCImage").gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(item.characterEnum);
 
-            // Loading the answers into the component
+            // Loading the answers into the components
             switch (item.researchLearning) {
                 case 0:
                     learningToggle0.GetComponent<Toggle>().isOn = true;
@@ -70,10 +71,6 @@ public class InfoListLineManager : MonoBehaviour
             }  
         }  
     }
-
-    public void updateToggleSelection() {
-        
-    }     
 
     void Update()
     {
