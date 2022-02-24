@@ -237,8 +237,8 @@ public static class GlobalGameInfo
         public bool showNotification;
         public readonly Quest quest;
         public int timesViewed;
-        public int researchLearning;
-        public int researchCapability;
+        public int researchLearning = -1;
+        public int researchCapability = -1;
 
         // public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
         //     this.timesViewed = 0;
