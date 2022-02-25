@@ -50,12 +50,4 @@ public class ResearchQuestion : MonoBehaviour
         
     }
 
-    void RecordAnswerSelection(bool newValue) {
-        // Recording journal item answers to the cloud
-        Debug.Log("User code: " + GlobalGameInfo.playerCode);
-        Debug.Log("Journal Item: " + journalItemText);
-        Debug.Log("Answer selected: " + newValue);
-        // DataCollection.LogEvent("User code: " + GlobalGameInfo.playerCode + ", Journal Item: " + journalItemText + ", Answer selected: " + , "RESEARCH ANSWER CHANGED");
-    }
-
 }

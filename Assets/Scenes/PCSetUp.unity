@@ -12738,9 +12738,9 @@ MonoBehaviour:
   ContinueText: {fileID: 522261444}
   InactiveContinueText: {fileID: 362686728}
   BackButtonText: {fileID: 1823190766}
-  codeInputField: {fileID: 0}
-  codeText: {fileID: 0}
-  codeFieldPlaceholder: {fileID: 0}
+  codeInputField: {fileID: 1187987817}
+  codeText: {fileID: 2071893477}
+  codeFieldPlaceholder: {fileID: 906682947}
   pronounsDropDownLabel: {fileID: 1942646769}
   languageDropDownLabel: {fileID: 109335163}
   nameFieldPlaceholder: {fileID: 896049704}

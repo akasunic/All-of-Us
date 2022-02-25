@@ -37,14 +37,20 @@ public class ResearchToggle : MonoBehaviour
             for (int i = 0; i < GlobalGameInfo.infoList.Count; i++)
             {
                 if (GlobalGameInfo.infoList[i].description == itemText.text) {
+                    // Updating the value and saving it
                     if (toggle.transform.parent.name == "Learning") {
                         GlobalGameInfo.infoList[i].researchLearning = newValue;
                     } else if (toggle.transform.parent.name == "Capability") {
                         GlobalGameInfo.infoList[i].researchCapability = newValue;
                     }
+                    // Recording the new value to the cloud
+                    DataCollection.LogEvent("RECORDING RESEARCH DATA. User code: " + GlobalGameInfo.playerCode + ", Journal Item: " + itemText.text + ", Category: " + toggle.transform.parent.name + ", Answer selected: " + newValue, "RESEARCH ANSWER CHANGED");
+                    
                     break;
                 }
             }
         }
     }
 }
+
+
