@@ -54,4 +54,7 @@ public class ResearchQuestion : MonoBehaviour
         }
     }
 
+    void onClickSelectButton() {
+    }
+
 }

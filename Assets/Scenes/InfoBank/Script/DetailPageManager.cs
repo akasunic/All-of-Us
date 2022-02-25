@@ -168,7 +168,7 @@ public class DetailPageManager : MonoBehaviour
     }
 
     public void SelectItemForQuest() {
-        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing" || SceneManager.GetActiveScene().name == "Research Turnin") {
+        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
           // highlight the item in the UI
           // DeselectItemInUI();
           FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,

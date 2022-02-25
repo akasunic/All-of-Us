@@ -37,7 +37,7 @@ public class ResearchToggle : MonoBehaviour
                     } else if (toggle.transform.parent.name == "Capability") {
                         GlobalGameInfo.infoList[i].researchCapability = newValue;
                     }
-                    // Recording the new value to the cloud
+                    // Data Collection - Recording the new value to the cloud
                     DataCollection.LogEvent("RECORDING RESEARCH DATA. User code: " + GlobalGameInfo.playerCode + ", Quest Number: " + GlobalGameInfo.GetCurrentDay() + ", Journal Item: " + itemText.text + ", Category: " + toggle.transform.parent.name + ", Answer selected: " + newValue, "RESEARCH ANSWER CHANGED");
 
                     this.updateNumResearchQuestionsAnswered();

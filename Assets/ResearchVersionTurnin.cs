@@ -12,6 +12,7 @@ public class ResearchVersionTurnin : MonoBehaviour
     public GameObject MrsLeeInstructions;
     public GameObject UIContainer;
     public Button viewProfileButton;
+    public Button continueButton;
     public TextMeshProUGUI ButtonText;
     public bool showingProfile;
 
@@ -37,6 +38,7 @@ public class ResearchVersionTurnin : MonoBehaviour
             showingProfile = !showingProfile;
 
             UIContainer.SetActive(false);
+            continueButton.gameObject.SetActive(false);
         } else {
             MrsLeeImage.SetActive(true);
             MrsLeeQuestion.SetActive(true);
@@ -45,6 +47,7 @@ public class ResearchVersionTurnin : MonoBehaviour
             showingProfile = !showingProfile;
             
             UIContainer.SetActive(true);
+            continueButton.gameObject.SetActive(true);
         }
     }
 }

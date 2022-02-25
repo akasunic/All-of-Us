@@ -26,7 +26,7 @@ public static class GlobalGameInfo
     public static SavedGame savedGame;
 
     // Research version: 1=regular, 2=version1, 3=version2
-    public static int researchVersion = 2;
+    public static int researchVersion = 3;
     // Code for the research version purposes
     public static string playerCode = "";
     // A flag to determine whether or not to show the "Select" button for the journal items
