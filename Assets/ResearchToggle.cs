@@ -7,12 +7,6 @@ public class ResearchToggle : MonoBehaviour
 {
 
     public Text itemText;
-    // public Toggle learningToggle0;
-    // public Toggle learningToggle1;
-    // public Toggle learningToggle2;
-    // public Toggle capabilityToggle0;
-    // public Toggle capabilityToggle1;
-    // public Toggle capabilityToggle2;
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +38,26 @@ public class ResearchToggle : MonoBehaviour
                         GlobalGameInfo.infoList[i].researchCapability = newValue;
                     }
                     // Recording the new value to the cloud
-                    DataCollection.LogEvent("RECORDING RESEARCH DATA. User code: " + GlobalGameInfo.playerCode + ", Journal Item: " + itemText.text + ", Category: " + toggle.transform.parent.name + ", Answer selected: " + newValue, "RESEARCH ANSWER CHANGED");
-                    
+                    DataCollection.LogEvent("RECORDING RESEARCH DATA. User code: " + GlobalGameInfo.playerCode + ", Quest Number: " + GlobalGameInfo.GetCurrentDay() + ", Journal Item: " + itemText.text + ", Category: " + toggle.transform.parent.name + ", Answer selected: " + newValue, "RESEARCH ANSWER CHANGED");
+
+                    this.updateNumResearchQuestionsAnswered();
+
                     break;
                 }
             }
         }
+    }
+
+    public void updateNumResearchQuestionsAnswered() {
+        for (int i = 0; i < GlobalGameInfo.infoList.Count; i++)
+        {
+            if (GlobalGameInfo.infoList[i].researchLearning < 0 ||
+                GlobalGameInfo.infoList[i].researchCapability < 0) {
+                return;
+            }
+        }
+        // All research questions (items) have been answered
+        GlobalGameInfo.allResearchQuestionsAnswered = true;
     }
 }
 

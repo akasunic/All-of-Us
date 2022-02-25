@@ -47,7 +47,11 @@ public class ResearchQuestion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing" &&
+            GlobalGameInfo.researchVersion == 2 &&
+            GlobalGameInfo.allResearchQuestionsAnswered) {
+            selectButton.SetActive(true);
+        }
     }
 
 }
