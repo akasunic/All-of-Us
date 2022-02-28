@@ -419,7 +419,10 @@ public class PhoneScreenManager : MonoBehaviour
         // This is such a hacky way to do it but i'm just writing it so that it works with 
         // the current set up of how quest submission is done. There are definitely better ways
         // of doing this but I don't want to break anything with this task yet.
-        QuestManager.submittedQuest.optionNumber = optionNumber;
+        if (QuestManager.submittedQuest != null)
+        {
+            QuestManager.submittedQuest.optionNumber = optionNumber;
+        }
         // Data collection
         DataCollection.LogEvent("Quest answer selected! Quest title: " + questId + ", Character: " + character + ", answer selected: " + description, "QUEST ANSWER SELECTED");
     }

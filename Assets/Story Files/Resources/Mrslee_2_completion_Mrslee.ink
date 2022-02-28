@@ -41,10 +41,33 @@ Mrslee?Neutral "What should I do?"
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good.
-  -> GoodSolution
+* They picked Option1
+  -> Option1
+* They picked Option2
+  -> Option2
+* They picked Option3
+  -> Option3
+* They picked Option4
+  -> Option4
 * They picked a solution marked bad.
   -> BadSolution
+
+==Option1==
+Mrslee?Smiling "OPTION 1 PICKED"
+* I picked OPTION 1. Nice! -> SolvedGoodbye
+
+==Option2==
+Mrslee?Smiling "OPTION 2 PICKED"
+* I picked OPTION 2. Nice! -> SolvedGoodbye
+
+==Option3==
+Mrslee?Smiling "OPTION 3 PICKED"
+* I picked OPTION 3. Nice! -> SolvedGoodbye
+
+==Option4==
+Mrslee?Smiling "OPTION 4 PICKED"
+* I picked OPTION 4. Nice! -> SolvedGoodbye
+
 
 ==GoodSolution==
 Mrslee?Smiling "OK. You're right! I will do before I get another headache."

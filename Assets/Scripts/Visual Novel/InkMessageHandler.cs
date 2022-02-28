@@ -17,10 +17,17 @@ public class InkMessageHandler : MonoBehaviour
     }
 
 
-    // Currently, the option number is the last number on the 4th element of a notifValue
+    // Currently, the option number is the last number on the 4th element of a notifValue, separated by a dash '-'
     private int GetOptionNumber(string personAndOption)
     {
-        return int.Parse(personAndOption[personAndOption.Length - 1].ToString());    
+        string[] questId = personAndOption.Split('-');
+        return int.Parse(questId[questId.Length - 1]);    
+    }
+
+    private string GetQuestId(string personAndOption)
+    {
+        string[] questId = personAndOption.Split('-');
+        return questId[0];
     }
     /// <summary>
     /// Adds a new notifcation to the notifications list
@@ -41,10 +48,8 @@ public class InkMessageHandler : MonoBehaviour
                 q.questGiver = GlobalGameInfo.GetCurrentNPC();
                 q.description = notifInfo[2];
 
-                q.questId = ReadQuestTitle(notifInfo[3] + ".txt");
+                q.questId = ReadQuestTitle(GetQuestId(notifInfo[3]) + ".txt");
                 q.optionNumber = GetOptionNumber(notifInfo[3]);
-                Debug.Log("TEXT: " + notifInfo[3]);
-                Debug.Log("NUMBER: " + GetOptionNumber(notifInfo[3]));
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     GlobalGameInfo.GetCurrentDay(), notifInfo[2], GlobalGameInfo.GetCurrentWeek(), q);

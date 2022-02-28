@@ -66,8 +66,8 @@ Mrcalindas?Smiling "It's probably nothing but we want to keep an eye on symptoms
   -> Goodbye
 
 ==Suggestion2==
-~ notification = "Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2"
-# notification Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2
+~ notification = "Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2-3"
+# notification Mrcalindas_Day 2_Mrs. Lee should track her headaches before making her appointment_Mrslee2-3
 
 Mrcalindas?Smiling "I see. Well tell your friend to make an appointment."
 Mrcalindas?Smiling "And it would be really good if they could track their symptoms and how often the headaches are happening, just so the doc can get a complete understanding of their situation."

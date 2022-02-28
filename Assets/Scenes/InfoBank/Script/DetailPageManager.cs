@@ -22,7 +22,7 @@ public class DetailPageManager : MonoBehaviour
 
     private Color defaultColor = new Color(0.1960f, 0.1960f, 0.196f);
     private Color selectedColor = Color.red;
-
+    private static DetailPageManager selectedItem = null;
     private Transform overlayItem = null;
 
     private GlobalGameInfo.InfoItem infoItem;
@@ -171,9 +171,7 @@ public class DetailPageManager : MonoBehaviour
 
     public void SelectItemForQuest() {
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
-          // highlight the item in the UI
-          // DeselectItemInUI();
-          FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
+            FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
               HelperFunctions.StringFromCharacter(infoItem.characterEnum), description, optionNumber);
 
             // Set the text to be red
@@ -186,7 +184,7 @@ public class DetailPageManager : MonoBehaviour
         }    
     }
 
-    private static DetailPageManager selectedItem;
+    
     private void DeselectItemInUI() {
         if (selectedItem == null)
             return;

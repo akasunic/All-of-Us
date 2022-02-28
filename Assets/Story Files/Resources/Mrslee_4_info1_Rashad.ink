@@ -54,8 +54,8 @@ Rashad?Smiling "Yeah, I got a minute. What's up?"
   -> Suggestion2
 
 ==Suggestion1==
-~ notification = "Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4"
-# notification Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4
+~ notification = "Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4-2"
+# notification Rashad_Day 4_Mrs Lee can keep track of her and Eddie's health information in a journal_Mrslee4-2
 
 Rashad?Smiling "I keep track of my whole families' health information in one folder. Actually it's bigger than a folder, but you get what I mean. All the records. All the symptoms and details. One place. Boom."
 
