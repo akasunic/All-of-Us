@@ -192,6 +192,7 @@ public class QuestManager : MonoBehaviour
         // be different
         try {
             foreach (Quest q in activeQuests) {
+                Debug.Log("Q QUESTID: " + q.questId + " QUEST QUESTID: " + quest.questId);
                 if (q.questId == quest.questId) {
                     _status = SubmitStatus.correct;
                     submittedQuest = quest;
