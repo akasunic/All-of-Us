@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 //Connects to app buttons, turns the relevant pages on and off
 //also handles the starting animation
@@ -109,7 +110,6 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
-        
 
         todo.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
@@ -395,18 +395,26 @@ public class PhoneScreenManager : MonoBehaviour
 
     public void SelectQuestAnswer(string questId, string character, string description) {
         Debug.Log("Item selected that solves quest " + questId);
+        Debug.Log("QUEST PANEL " + questPanel);
+        Debug.Log("QUEST PANEL 2" + !questPanel.activeInHierarchy);
         // preview text hard-coded for now
         if (questPanel == null || !questPanel.activeInHierarchy)
             return;
+        Debug.Log("1111111111");
         Transform questMenuContainer = questPanel.transform.GetChild(0);
+        Debug.Log("2222222222");
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
+        Debug.Log("3333333333");
 
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
         _txt.text = description;
+        Debug.Log("4444444444");
         Vector3 txtPos = _txt.rectTransform.anchoredPosition;
         txtPos.y = 28;
+        Debug.Log("5555555555");
         _txt.rectTransform.anchoredPosition = txtPos;
         _txt.color = Color.black;
+        Debug.Log("6666666666");
         string imgString = character.ToLower() + "_small";
 
         Debug.Log("IMG STRING" + imgString);

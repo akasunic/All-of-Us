@@ -44,14 +44,6 @@ public class Opening : MonoBehaviour
         SceneManager.LoadScene("Backstories");
     }
 
-    public void onTutorialClick() {
-
-        //set a session id if not there yet
-
-        // ResetGame.startGame();
-        // SceneManager.LoadScene("Tutorial");
-    }
-
     public void onContinueClick() {
 
         SceneManager.LoadScene("StartWeek");

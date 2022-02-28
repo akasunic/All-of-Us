@@ -25,6 +25,12 @@ public static class GlobalGameInfo
     
     public static SavedGame savedGame;
 
+    // Research version: 1=regular, 2=version1, 3=version2
+    public static int researchVersion = 3;
+    // Code for the research version purposes
+    public static string playerCode = "";
+    // A flag to determine whether or not to show the "Select" button for the journal items
+    public static bool allResearchQuestionsAnswered = false;
     // Total of 5 weeks
     public const int numWeeks = 5;
     // CURRENT DAY (0 to 4)
@@ -231,6 +237,8 @@ public static class GlobalGameInfo
         public bool showNotification;
         public readonly Quest quest;
         public int timesViewed;
+        public int researchLearning = -1;
+        public int researchCapability = -1;
         public int week;
 
         // public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {

@@ -13,7 +13,7 @@ public class InfoManager : MonoBehaviour
     private static Transform lastItem = null;
 
     public Transform infoListLineItem;
-    public Transform infoListLineDivider;
+    public Transform ResearchQuestion;
 
     GameObject phone;
     GameObject phoneContainer;
@@ -35,19 +35,27 @@ public class InfoManager : MonoBehaviour
         }
 
         // Set the notes header name, pic and background color corresponding to the person
-        Transform charBackground = this.transform.Find("Header/HeaderBackground");
-        Transform charName = charBackground.Find("PersonText");
-        Transform charPic = charBackground.Find("PersonIcon");
+        if (GlobalGameInfo.researchVersion <= 1) {
+            Transform charName = this.transform.Find("Header/PersonText");
+            Transform charPic = this.transform.Find("Header/PersonIcon");
+            Transform charBackground = this.transform.Find("Header/HeaderBackground");
+            charPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(items[0].characterEnum);
+            charName.gameObject.GetComponent<Text>().text = characterName.ToUpper();
+            charBackground.gameObject.GetComponent<Image>().color = cr.GetColor(items[0].characterEnum);
+        }
         
-        charPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(items[0].characterEnum);
-        charName.gameObject.GetComponent<Text>().text = characterName.ToUpper();
-        charBackground.gameObject.GetComponent<Image>().color = cr.GetColor(items[0].characterEnum);
-        
-        // Create the individual notes
         Transform go = this.gameObject.transform.Find("InfoList");
-        for (int i = 0; i < 2 * items.Count - 1; i++)
+
+        Transform newItem;
+        for (int i = 0; i < items.Count; i++)
         {
-            if (i % 2 == 0)
+            if (GlobalGameInfo.researchVersion <= 1) {
+                newItem = Instantiate(infoListLineItem, go);
+            } else {
+                newItem = Instantiate(ResearchQuestion, go);
+            }
+            bool isLast = false;
+            if (i == items.Count - 1)
             {
                 Transform newItem = Instantiate(infoListLineItem, go);
                 newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
