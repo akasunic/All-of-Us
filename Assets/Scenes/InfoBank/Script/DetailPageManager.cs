@@ -27,6 +27,7 @@ public class DetailPageManager : MonoBehaviour
 
     private GlobalGameInfo.InfoItem infoItem;
 
+    public int optionNumber = 0;
     [HideInInspector]
     public string questId = "";
     [HideInInspector]
@@ -156,7 +157,8 @@ public class DetailPageManager : MonoBehaviour
       // Thus, only update the questId if item.quest is nonnull, as then it will be a correct answer
       if (item.quest != null)
       {
-        questId = item.quest.questId;
+            questId = item.quest.questId;
+            optionNumber = item.quest.optionNumber;
       }
       
     }
@@ -172,7 +174,7 @@ public class DetailPageManager : MonoBehaviour
           // highlight the item in the UI
           // DeselectItemInUI();
           FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
-              HelperFunctions.StringFromCharacter(infoItem.characterEnum), description);
+              HelperFunctions.StringFromCharacter(infoItem.characterEnum), description, optionNumber);
 
             // Set the text to be red
             if (selectedItem != null)

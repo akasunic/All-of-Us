@@ -16,6 +16,12 @@ public class InkMessageHandler : MonoBehaviour
         _fc = GetComponent<Flowchart>();
     }
 
+
+    // Currently, the option number is the last number on the 4th element of a notifValue
+    private int GetOptionNumber(string personAndOption)
+    {
+        return int.Parse(personAndOption[personAndOption.Length - 1].ToString());    
+    }
     /// <summary>
     /// Adds a new notifcation to the notifications list
     /// </summary>
@@ -36,7 +42,9 @@ public class InkMessageHandler : MonoBehaviour
                 q.description = notifInfo[2];
 
                 q.questId = ReadQuestTitle(notifInfo[3] + ".txt");
-
+                q.optionNumber = GetOptionNumber(notifInfo[3]);
+                Debug.Log("TEXT: " + notifInfo[3]);
+                Debug.Log("NUMBER: " + GetOptionNumber(notifInfo[3]));
                 GlobalGameInfo.addNewItemToInfoList(notifInfo[0],
                     HelperFunctions.CharacterFromString(notifInfo[0]),
                     GlobalGameInfo.GetCurrentDay(), notifInfo[2], GlobalGameInfo.GetCurrentWeek(), q);

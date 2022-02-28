@@ -393,7 +393,7 @@ public class PhoneScreenManager : MonoBehaviour
 
     // private static DetailPageManager selectedQuestObj = null; // work in progress
 
-    public void SelectQuestAnswer(string questId, string character, string description) {
+    public void SelectQuestAnswer(string questId, string character, string description, int optionNumber) {
         Debug.Log("Item selected that solves quest " + questId);
         // preview text hard-coded for now
         if (questPanel == null || !questPanel.activeInHierarchy)
@@ -416,7 +416,10 @@ public class PhoneScreenManager : MonoBehaviour
         questSolverImg.color = new Color(255, 255, 255, 255);
 
         QuestManager.submittedQuest = QuestManager.FindQuestById(questId);
-
+        // This is such a hacky way to do it but i'm just writing it so that it works with 
+        // the current set up of how quest submission is done. There are definitely better ways
+        // of doing this but I don't want to break anything with this task yet.
+        QuestManager.submittedQuest.optionNumber = optionNumber;
         // Data collection
         DataCollection.LogEvent("Quest answer selected! Quest title: " + questId + ", Character: " + character + ", answer selected: " + description, "QUEST ANSWER SELECTED");
     }

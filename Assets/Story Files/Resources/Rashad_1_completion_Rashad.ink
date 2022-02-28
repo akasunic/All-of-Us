@@ -53,8 +53,33 @@ Rashad?Smiling "That's great. We've been looking for someone to fill that positi
 ==PuzzleInterface==
 # turnin
 
-* -> GoodSolution
+* -> Option1
+* -> Option2
+* -> Option3
+* -> Option4
 * -> BadSolution
+
+==Option1==
+Rashad?Smiling "OPTION1 SELECTED TEST"
+
+* I guess the test works!
+  -> SolvedGoodbye
+
+==Option2==
+Rashad?Smiling "OPTION1 SELECTED TEST"
+* I guess the test works!
+  -> SolvedGoodbye
+
+
+==Option3==
+Rashad?Smiling "OPTION1 SELECTED TEST"
+* I guess the test works!
+  -> SolvedGoodbye
+
+==Option4==
+Rashad?Smiling "OPTION1 SELECTED TEST"
+* I guess the test works!
+  -> SolvedGoodbye
 
 ==GoodSolution==
 Rashad?Smiling "Elisa <i>would</i> be a great fit! I do know her. She's really outdoorsy right? She studies here all the time. I'm glad you encouraged her to apply. She'll be an asset here."
