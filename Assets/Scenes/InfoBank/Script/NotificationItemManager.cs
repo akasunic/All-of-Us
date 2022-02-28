@@ -58,7 +58,7 @@ public class NotificationItemManager : MonoBehaviour
           updatedText.text = LangClass.getString("todo_updated");
         }   
       }
-
+      
       int untagged = GlobalGameInfo.getNotificationNumber(notificationType);
       
       if(untagged == 0){
@@ -69,8 +69,9 @@ public class NotificationItemManager : MonoBehaviour
         if(bubble != null){
           bubble.SetActive(true);
         }
-        text.text = untagged.ToString();
+        // This for a change where the numbers aren't supposed to show.
+        // To redisplay numbers, just set the text to the value of untagged and renable
+        text.gameObject.SetActive(false);
       }
-
     }
 }

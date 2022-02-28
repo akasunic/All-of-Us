@@ -1664,7 +1664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 294.25604}
+  m_AnchoredPosition: {x: -30, y: 294.25464}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -7697,7 +7697,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.88999254
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7765,7 +7765,6 @@ GameObject:
   - component: {fileID: 2030261524}
   - component: {fileID: 2030261526}
   - component: {fileID: 2030261525}
-  - component: {fileID: 2030261527}
   - component: {fileID: 2030261529}
   - component: {fileID: 2030261528}
   m_Layer: 5
@@ -7940,18 +7939,6 @@ MonoBehaviour:
             m_StringArgument: Rashad
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &2030261527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030261519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf2b3956f4ed4e8cb909dce8c608459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2030261528
 MonoBehaviour:
   m_ObjectHideFlags: 0

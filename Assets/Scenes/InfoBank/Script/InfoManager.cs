@@ -57,10 +57,13 @@ public class InfoManager : MonoBehaviour
             bool isLast = false;
             if (i == items.Count - 1)
             {
-                isLast = true;
+                Transform newItem = Instantiate(infoListLineItem, go);
+                newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
             }
-            newItem.GetComponent<InfoListLineManager>().setInfo(items[i], isLast);
-
+            else
+            {
+                Transform newItem = Instantiate(infoListLineDivider, go);
+            }
         }
     }
 

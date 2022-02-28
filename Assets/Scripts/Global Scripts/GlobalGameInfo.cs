@@ -239,6 +239,7 @@ public static class GlobalGameInfo
         public int timesViewed;
         public int researchLearning = -1;
         public int researchCapability = -1;
+        public int week;
 
         // public InfoItem(string character, CharacterResources.CHARACTERS characterEnum, int day, string description) {
         //     this.timesViewed = 0;
@@ -252,7 +253,7 @@ public static class GlobalGameInfo
         // }
 
         public InfoItem(string character, CharacterResources.CHARACTERS characterEnum,
-            int day, string description, Quest quest) {
+            int day, string description, Quest quest, int week) {
             this.timesViewed = 0;
             this.character = character;
             this.characterEnum = characterEnum;
@@ -262,6 +263,7 @@ public static class GlobalGameInfo
             this.tagIdentifier = unhashedKey.GetHashCode().ToString();
             this.showNotification = true;
             this.quest = quest;
+            this.week = week;
         }
     }
 
@@ -397,17 +399,27 @@ public static class GlobalGameInfo
         return t.AddToChecklist(checklistitem);
     }
 
+
     public static void addNewItemToInfoList(
         string character,
         CharacterResources.CHARACTERS characterEnum,
         int day,
-        string description,
-        Quest quest = null)
+        string description, int week,
+        Quest quest = null
+        ) 
     {
+        foreach (InfoItem i in GlobalGameInfo.infoList)
+        {
+            // If we are adding an already existing item with the same data, don't add this new item
+            if (string.Equals(character, i.character) && characterEnum == i.characterEnum && day == i.day && 
+                string.Equals(description, i.description) && Quest.questsAreEqual(quest, i.quest))
+            {
+                return;
+            }
+        }
+
         // It seems like that for wrong answers, quest will be null. For correct quest answers, quest will be nonnull.
-
-        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest));
-
+        GlobalGameInfo.infoList.Add(new InfoItem(character, characterEnum, day, description, quest, week));
         untaggedInfoObjects++;
         notificationCallback(NOTIFICATION.INFO);
 

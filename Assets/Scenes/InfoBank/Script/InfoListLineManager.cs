@@ -7,7 +7,6 @@ using TMPro;
 public class InfoListLineManager : MonoBehaviour
 {
     private GlobalGameInfo.InfoItem item;
-    private bool isLast;
     private bool buttonToggledOn = true;
     // Research version toggles
     public Toggle learningToggle0;
@@ -19,7 +18,6 @@ public class InfoListLineManager : MonoBehaviour
     public void setInfo(GlobalGameInfo.InfoItem item, bool isLast)
     {
         this.item = item;
-        this.isLast = isLast;
         // Update the detail page manager
         GetComponent<DetailPageManager>().setInfo(item);
         CharacterResources cr = new CharacterResources();

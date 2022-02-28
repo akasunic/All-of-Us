@@ -75,3 +75,6 @@ crashlytics-build.properties
 
 # OS files
 .DS_Store*
+
+# Saving files
+*.dat

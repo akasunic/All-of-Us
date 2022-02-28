@@ -7,13 +7,40 @@ using TMPro;
 //fills the page with the list items from GlobalGameInfo
 public class AddToList : MonoBehaviour
 {
-
+    private int numWeeksInJournal = 1;
+    private int currentDisplayWeek = 0;
     public Transform todoPersonPrefab;
     public Transform listItemPrefab;
     public Transform infoListItemPrefab;
     public Transform infoListItemResearchPrefab;
     public string whichList = "Dialog";
 
+    public void decrementCurrentDisplayWeek()
+    {
+        if (currentDisplayWeek == 0)
+        {
+            currentDisplayWeek = numWeeksInJournal - 1;
+        }
+        else
+        {
+            currentDisplayWeek = currentDisplayWeek - 1;
+        }
+        List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
+        list.Reverse();
+        fillInfoList(list);
+        Debug.Log("AFTER CHANGE DISPLAY: " + currentDisplayWeek);
+        Debug.Log("AFTER CHANGE WEEKS: " + numWeeksInJournal);
+    }
+
+    public void incrementCurrentDisplayWeek()
+    {
+        currentDisplayWeek = (currentDisplayWeek + 1) % (numWeeksInJournal);
+        List<GlobalGameInfo.InfoItem> list = new List<GlobalGameInfo.InfoItem>(GlobalGameInfo.infoList);
+        list.Reverse();
+        fillInfoList(list);
+        Debug.Log("AFTER CHANGE DISPLAY: " + currentDisplayWeek);
+        Debug.Log("AFTER CHANGE WEEKS: " + numWeeksInJournal);
+    }
     private string getStringRep(int i)
     {
         switch(i)
@@ -63,15 +90,20 @@ public class AddToList : MonoBehaviour
             return;
         }
 
-        // Added another element to test the todo list expanding feature. Only used for testing
-        // list.Add(list[0]);
+        Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+
+        // Code from here: https://forum.unity.com/threads/deleting-all-chidlren-of-an-object.92827/ 
+        // Deletes all children of the content object.
+        List<GameObject> children = new List<GameObject>();
+        foreach (Transform child in contentParent) children.Add(child.gameObject);
+        children.ForEach(child => Destroy(child));
 
         // Destory placeholder saying no todo list
-        Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
-        Transform contentParent = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+        // Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
         CharacterResources cr = new CharacterResources();
 
         // Create the list of lists. Each index represents the todo lists for a week
+        Dictionary<int, CharacterResources.CHARACTERS> weekDict = new Dictionary<int, CharacterResources.CHARACTERS>();
         List<List<GlobalGameInfo.TodoItem>> byWeek = new List<List<GlobalGameInfo.TodoItem>>();
         for (int i = 0; i < GlobalGameInfo.numWeeks; i++)
         {
@@ -81,14 +113,18 @@ public class AddToList : MonoBehaviour
         for (int i = 0; i < list.Count; i++)
         {
             byWeek[list[i].weekAssigned].Add(list[i]);
+            if (!weekDict.ContainsKey(list[i].weekAssigned)) {
+                weekDict.Add(list[i].weekAssigned, list[i].character);
+            }
         }
 
         /// This makes it so newest goes up top, oldest is down below
-        for (int i = list.Count - 1; i >= 0; i--) {
+        for (int i = GlobalGameInfo.numWeeks - 1; i >= 0; i--) {
             List<GlobalGameInfo.TodoItem> weekList = byWeek[i];
             // Again, the latest items are at the end of the list, so we go backwards to create them first
             if (weekList.Count > 0)
             {
+                
                 // Instantiate TodoPerson prefab
                 Transform newTodoPerson = Instantiate(todoPersonPrefab, contentParent);
 
@@ -98,28 +134,28 @@ public class AddToList : MonoBehaviour
                 Transform characterName = header.transform.Find("Character/CharacterName");
                 Transform characterPic = header.transform.Find("Character/CharacterPic");
                 Transform daysPassed = header.transform.Find("DaysPassed");
-                characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[i].character);
-                characterName.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[i].character).ToUpper();
+                characterPic.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(weekDict[i]);
+                characterName.gameObject.GetComponent<Text>().text = CharacterResources.GetName(weekDict[i]).ToUpper();
 
                 Transform weekText = header.transform.Find("WeekAndDay/WeekText");
                 // Transform dayText = header.transform.Find("WeekAndDay/DayText");
                 // So that week 0 shows up as week 1 in the UI
-                weekText.gameObject.GetComponent<Text>().text = "Week " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
+                weekText.gameObject.GetComponent<Text>().text = "Week " + (i + 1).ToString();
                 // dayText.gameObject.GetComponent<Text>().text = list[i].GetDayAssignedAsString();
 
                 for (int j = 0; j < 5; j++)
                 {
                     Transform filled = header.transform.Find("DaysPassed/Filled" + j.ToString());
                     Transform unfilled = header.transform.Find("DaysPassed/Unfilled" + j.ToString());
-                    if (j <= list[i].dayAssigned)
+                    if (j <= i)
                     {
-                        filled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                        filled.gameObject.GetComponent<Image>().color = cr.GetColor(weekDict[i]);
                         filled.gameObject.SetActive(true);
                         unfilled.gameObject.SetActive(false);
                     }
                     else
                     {
-                        unfilled.gameObject.GetComponent<Image>().color = cr.GetColor(list[i].character);
+                        unfilled.gameObject.GetComponent<Image>().color = cr.GetColor(weekDict[i]);
                         filled.gameObject.SetActive(false);
                         unfilled.gameObject.SetActive(true);
                     }
@@ -149,43 +185,92 @@ public class AddToList : MonoBehaviour
     }
 
     private void fillInfoList(List<GlobalGameInfo.InfoItem> list){
-        
+        Transform topElementsTransform = this.gameObject.transform.Find("Info List Top Elements");
         if(list.Count == 0){
-            this.gameObject.transform.Find("TopElements").gameObject.SetActive(false);
+            topElementsTransform.gameObject.SetActive(false);
             return;
         }
-        Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
-        
+
+       
+       
+
         Transform content = this.gameObject.transform.Find("Scroll View/Viewport/Content");
+
+        // Code from here: https://forum.unity.com/threads/deleting-all-chidlren-of-an-object.92827/ 
+        // Deletes all children of the content object.
+        List<GameObject> children = new List<GameObject>();
+        foreach (Transform child in content) children.Add(child.gameObject);
+        children.ForEach(child => Destroy(child));
+
 
 
         CharacterResources cr = new CharacterResources();
-
+        
         // Assign the quest giver at the top (this should change depending on the week/quest?)
         // Im not actually sure if the top thing we want is the quest giver? i just put it as such for now
-        Transform questIcon = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonIcon");
-        Transform questChar = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/PersonText");
+        Transform questIcon = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonIcon");
+        Transform questChar = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonText");
+
         
+
+        // Only valid choices to be clicked have the quest attribute nonnull. This might not be the first list item so we go through
+        // the list items until we find one where the quest attribute is nonnull to extract the information about who gave the
+        // quest. At least one item will be like this (we need to have at least one correct answer)
         // Added this condition because otherwise for some items that have quest==null it won't show anything in the journal app
-        if (list[0].quest != null) {
-            questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(list[0].quest.questGiver);
-            questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(list[0].quest.questGiver).ToUpper();
+        Dictionary<int, CharacterResources.CHARACTERS> iconsWeekDict = new Dictionary<int, CharacterResources.CHARACTERS>();
+        int numWeeksSeen = 0;
+        foreach (GlobalGameInfo.InfoItem i in list)
+        {
+            if (i.quest != null && !iconsWeekDict.ContainsKey(i.week))
+            {
+                Debug.Log("WEEK: " + i.week);
+                Debug.Log("QUEST GIVER: " + i.quest.questGiver);
+                iconsWeekDict.Add(i.week, i.quest.questGiver);
+                numWeeksSeen++;
+                Debug.Log("NUM WEEKS SEEN: " + numWeeksSeen);
+            }
         }
-        Transform questWeek = this.gameObject.transform.Find("TopElements/WeekAndPersonHeader/WeekText");
+
+        numWeeksInJournal = numWeeksSeen;
+
+        Debug.Log("NUM WEEKS IN JOURNAL: " + numWeeksInJournal);
+        if (numWeeksInJournal == 1)
+        {
+            topElementsTransform.Find("LeftArrow").gameObject.SetActive(false);
+            topElementsTransform.Find("RightArrow").gameObject.SetActive(false);
+            topElementsTransform.Find("LeftArrowEmpty").gameObject.SetActive(true);
+            topElementsTransform.Find("RightArrowEmpty").gameObject.SetActive(true);
+        }
+        else
+        {
+            topElementsTransform.Find("LeftArrow").gameObject.SetActive(true);
+            topElementsTransform.Find("RightArrow").gameObject.SetActive(true);
+            topElementsTransform.Find("LeftArrowEmpty").gameObject.SetActive(false);
+            topElementsTransform.Find("RightArrowEmpty").gameObject.SetActive(false);
+        }
+
+        Debug.Log("BEFORE ACCESS CURRENT DISPLAY WEEK: " + currentDisplayWeek);
+        questIcon.gameObject.GetComponent<Image>().sprite = cr.GetSmallIcon(iconsWeekDict[currentDisplayWeek]);
+        questChar.gameObject.GetComponent<Text>().text = CharacterResources.GetName(iconsWeekDict[currentDisplayWeek]).ToUpper();
+
+
+        Transform questWeek = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/WeekText");
         // So week 0 becomes week 1 in the UI
-        questWeek.gameObject.GetComponent<Text>().text = "WEEK " + (GlobalGameInfo.GetCurrentWeek() + 1).ToString();
+        questWeek.gameObject.GetComponent<Text>().text = "WEEK " + (currentDisplayWeek + 1).ToString();
 
         // Figure out which notes are associated with which days (we have headers based on days of the week)
         Dictionary<string, List<GlobalGameInfo.InfoItem>> dict = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
         for (int i = 0; i < list.Count; i++)
         {
-
-            string day = getStringRep(list[i].day);
-            if (!dict.ContainsKey(day))
+            if (list[i].week == currentDisplayWeek)
             {
-                dict.Add(day, new List<GlobalGameInfo.InfoItem>());
+                string day = getStringRep(list[i].day);
+                if (!dict.ContainsKey(day))
+                {
+                    dict.Add(day, new List<GlobalGameInfo.InfoItem>());
+                }
+                dict[day].Add(list[i]);
             }
-            dict[day].Add(list[i]);
         }
 
         // loop over each day
@@ -199,7 +284,6 @@ public class AddToList : MonoBehaviour
             // Find which notes belong to which characters
             Dictionary<string, List<GlobalGameInfo.InfoItem>> chars = new Dictionary<string, List<GlobalGameInfo.InfoItem>>();
             Transform itemsList = newContainer.Find("InfoItemsList");
-            
             for (int i = 0; i < elem.Value.Count; i++)
             {
                 GlobalGameInfo.InfoItem item = elem.Value[i];
