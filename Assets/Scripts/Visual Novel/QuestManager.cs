@@ -19,6 +19,7 @@ public class Quest {
     public bool incTime; // increase the giver's time stat?
     public bool incTech; // increase the giver's tech stat?
     public bool incResources; // increase the giver's resources stat?
+    public int optionNumber; // 0 indicates no option number given. Possible numbers are 1,2,3,4 (for the research version) 
 
 
     public static bool questsAreEqual(Quest q1, Quest q2)
@@ -58,6 +59,8 @@ public class QuestManager : MonoBehaviour
     /// </summary>
     public Flowchart redeem_fc;
 
+    public static int _optionNumber = 0;
+    
     public static QuestManager instance;
 
     /// <summary>
@@ -94,9 +97,10 @@ public class QuestManager : MonoBehaviour
                 case SubmitStatus.correct:
                     RemoveQuest(submittedQuest);
                     _status = SubmitStatus.not_submitted;
+                    redeem_fc.SetIntegerVariable("optionNumber", _optionNumber);
                     redeem_fc.SetBooleanVariable("wasQuestSubmitted", true);
                     redeem_fc.SetBooleanVariable("wasSubmitCorrect", true);
-
+                    Debug.Log("Option Number: " + _optionNumber);
                     InkFileManager.OnQuestCompleted(submittedQuest.questGiver);
                     IncreaseExpValues(submittedQuest);
                     InkFileManager.completedQuestString = submittedQuest.questId;
@@ -215,6 +219,7 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Q QUESTID: " + q.questId + " QUEST QUESTID: " + quest.questId);
                 if (q.questId == quest.questId) {
                     _status = SubmitStatus.correct;
+                    _optionNumber = q.optionNumber;
                     submittedQuest = quest;
                     break;
                 }

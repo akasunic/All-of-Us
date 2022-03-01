@@ -54,8 +54,8 @@ Lila?Smiling "Y'know, my perception is that a little distance between them is he
   -> Suggestion2
 
 ==Suggestion1==
-~ notification = "Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4"
-# notification Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4
+~ notification = "Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4-4"
+# notification Lila_Day 4_Mrs. Lee can talk with Eddie about their recent health experiences._Mrslee4-4
 
 Lila?Smiling "Eddie's been learning a lot about exercise and his blood pressure, and his diet. He's been cooking, if you can believe it!"
 Lila?Smiling "Between everything she learned by finding a doctor she can talk to, and everything he's doing to take better care of himself, I am hoping they have some in-depth conversations and start keeping notes; they might be useful to Eddie in the future."

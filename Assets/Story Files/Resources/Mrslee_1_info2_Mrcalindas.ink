@@ -56,8 +56,8 @@ Mrcalindas?Neutral "With the right medications, lifestyle changes, and at-home m
   -> Explain2
 
 ==Explain2==
-~ notification = "Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1"
-# notification Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1
+~ notification = "Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1-2"
+# notification Mrcalindas_Day 1_Drug information portal can be used to look up medications_Mrslee1-2
 
 Mrcalindas?Smiling "Actually, I got a minute. We have several secure online resources. Look at this one - it's a drug information portal, where you can look up medications."
 Mrcalindas?Smiling "And this one is a site for reading up on different health conditions - like high blood pressure. You can access them from here, or your home computer."
