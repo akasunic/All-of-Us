@@ -203,14 +203,12 @@ public class AddToList : MonoBehaviour
         children.ForEach(child => Destroy(child));
 
 
-
         CharacterResources cr = new CharacterResources();
         
         // Assign the quest giver at the top (this should change depending on the week/quest?)
         // Im not actually sure if the top thing we want is the quest giver? i just put it as such for now
         Transform questIcon = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonIcon");
         Transform questChar = topElementsTransform.Find("WeekAndPersonHeader/WeekAndPersonBackground/PersonText");
-
         
 
         // Only valid choices to be clicked have the quest attribute nonnull. This might not be the first list item so we go through

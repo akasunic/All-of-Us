@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -110,7 +110,6 @@ public class PhoneScreenManager : MonoBehaviour
 
     void Start()
     {
-
         todo.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         notes.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         contacts.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
@@ -400,20 +399,15 @@ public class PhoneScreenManager : MonoBehaviour
         // preview text hard-coded for now
         if (questPanel == null || !questPanel.activeInHierarchy)
             return;
-        Debug.Log("1111111111");
         Transform questMenuContainer = questPanel.transform.GetChild(0);
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
-        Debug.Log("3333333333");
 
         TextMeshProUGUI _txt = selectedQuest.GetComponentInChildren<TextMeshProUGUI>();
         _txt.text = description;
-        Debug.Log("4444444444");
         Vector3 txtPos = _txt.rectTransform.anchoredPosition;
         txtPos.y = 28;
-        Debug.Log("5555555555");
         _txt.rectTransform.anchoredPosition = txtPos;
         _txt.color = Color.black;
-        Debug.Log("6666666666");
         string imgString = character.ToLower() + "_small";
 
         Debug.Log("IMG STRING" + imgString);

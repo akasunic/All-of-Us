@@ -54,16 +54,17 @@ public class InfoManager : MonoBehaviour
             } else {
                 newItem = Instantiate(ResearchQuestion, go);
             }
-            bool isLast = false;
-            if (i == items.Count - 1)
-            {
-                Transform newItem = Instantiate(infoListLineItem, go);
-                newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
-            }
-            else
-            {
-                Transform newItem = Instantiate(infoListLineDivider, go);
-            }
+            newItem.GetComponent<InfoListLineManager>().setInfo(items[i], i == items.Count - 1);
+            // bool isLast = false;
+            // if (i == items.Count - 1)
+            // {
+            //     // Transform newItem = Instantiate(infoListLineItem, go);
+            //     newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
+            // }
+            // else
+            // {
+            //     newItem = Instantiate(infoListLineDivider, go);
+            // }
         }
     }
 

@@ -7710,12 +7710,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detailContainer: {fileID: 1293973425}
-  messages: {fileID: 6727028849673039923}
+  todo: {fileID: 6727028849673039923}
   notes: {fileID: 1195107063}
   contacts: {fileID: 1195798615}
   settings: {fileID: 1115129633}
   dictionary: {fileID: 1553549515}
-  messagesBorder: {fileID: 1607855250}
+  todoBorder: {fileID: 1607855250}
   notesBorder: {fileID: 1414504675}
   contactsBorder: {fileID: 1963114345}
   settingsBorder: {fileID: 1439009590}
@@ -13029,8 +13029,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 345558610}
   m_HandleRect: {fileID: 345558609}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
