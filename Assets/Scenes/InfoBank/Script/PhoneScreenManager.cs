@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -402,7 +402,6 @@ public class PhoneScreenManager : MonoBehaviour
             return;
         Debug.Log("1111111111");
         Transform questMenuContainer = questPanel.transform.GetChild(0);
-        Debug.Log("2222222222");
         Transform selectedQuest = questMenuContainer.Find("Selected Quest Background");
         Debug.Log("3333333333");
 
