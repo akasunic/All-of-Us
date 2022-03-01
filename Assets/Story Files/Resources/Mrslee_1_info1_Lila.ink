@@ -69,7 +69,7 @@ Lila?Neutral "I say these things to her all the time, but maybe it's time for a 
   -> Goodbye
 
 ==Suggestion2==
-~ notification = "Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1-11"
+~ notification = "Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1-1"
 # notification Lila_Day 1_Lila can go to the pharmacy with Mrs. Lee._Mrslee1-1
 
 Lila?Smiling "That's easy enough! If going with her helps Mrs. Lee feel more confident, I'm in. I love that lady."
