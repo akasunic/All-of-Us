@@ -42,13 +42,35 @@ Mrslee?Smiling "What do I do about my health and good future health?"
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good.
-  -> GoodSolution
+* They picked Option1
+  -> Option1
+* They picked Option2
+  -> Option2
+* They picked Option3
+  -> Option3
+* They picked Option4
+  -> Option4
 * They picked a solution marked bad.
   -> BadSolution
 
-//info: mrs lee can write down history of her and Eddie
-//info: mrs lee can discuss health history with eddie
+==Option1==
+Mrslee?Smiling "OPTION 1 PICKED"
+* I picked OPTION 1. Nice! -> SolvedGoodbye
+
+==Option2==
+Mrslee?Smiling "OPTION 2 PICKED"
+* I picked OPTION 2. Nice! -> SolvedGoodbye
+
+==Option3==
+Mrslee?Smiling "OPTION 3 PICKED"
+* I picked OPTION 3. Nice! -> SolvedGoodbye
+
+==Option4==
+Mrslee?Smiling "OPTION 4 PICKED"
+* I picked OPTION 4. Nice! -> SolvedGoodbye
+
+
+
 ==GoodSolution==
 Mrslee?Smiling "YES! I feel energy to do this."
 

@@ -42,8 +42,8 @@ Elisa?Smiling "I am totally fine talking about this. You scared me for a second!
   -> Suggestion2
 
 ==Suggestion1==
-~ notification = "Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3"
-# notification Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3
+~ notification = "Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3-1"
+# notification Elisa_Day 3_Mrs. Lee can write down her questions or symptoms before her appointment_Mrslee3-1
 
 Elisa?Smiling "Actually it is a good idea, but they write down any questions or symptoms to bring up to the doctor."
 
