@@ -177,6 +177,8 @@ public class PCSetUp : MonoBehaviour
                 return LangClass.getString("he_his");
             case 3:
                 return LangClass.getString("they_them");
+            case 4:
+                return LangClass.getString("other");
             default:
                 return null;
         }
