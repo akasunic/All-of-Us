@@ -126,6 +126,7 @@
         <string name="she_her">She/Her</string>
         <string name="he_his">He/His</string>
         <string name="they_them">They/Them</string>
+        <string name="other">Other</string>
         <string name="first_name">First Name</string>
         <string name="choose_one">Choose One</string>
         <string name="welcome_title">Welcome to Bloomwood</string>
