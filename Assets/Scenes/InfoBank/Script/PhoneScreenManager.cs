@@ -191,19 +191,19 @@ public class PhoneScreenManager : MonoBehaviour
         if(lastSelected != null){
             lastSelected.GetComponent<RectTransform>().localScale = new Vector3(0f, 1f, 1f);
         }
-        if(lastSelectedBorder != null){
+        if(lastSelectedBorder != null) {
             lastSelectedBorder.SetActive(false);
         }
 
-        if(lastSelected == todo){
+        if(lastSelected == todo) {
             GlobalGameInfo.SeeAllTodoItems();
         }
 
-        if(go != null){
+        if(go != null) {
             go.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
             lastSelected = go;
         }
-        if(border != null){
+        if(border != null) {
             border.SetActive(true);
             lastSelectedBorder = border;
         }
@@ -394,8 +394,6 @@ public class PhoneScreenManager : MonoBehaviour
 
     public void SelectQuestAnswer(string questId, string character, string description, int optionNumber) {
         Debug.Log("Item selected that solves quest " + questId);
-        Debug.Log("QUEST PANEL " + questPanel);
-        Debug.Log("QUEST PANEL 2" + !questPanel.activeInHierarchy);
         // preview text hard-coded for now
         if (questPanel == null || !questPanel.activeInHierarchy)
             return;
@@ -409,8 +407,6 @@ public class PhoneScreenManager : MonoBehaviour
         _txt.rectTransform.anchoredPosition = txtPos;
         _txt.color = Color.black;
         string imgString = character.ToLower() + "_small";
-
-        Debug.Log("IMG STRING" + imgString);
 
         Image questSolverImg = selectedQuest.Find("Quest Solver").GetComponent<Image>();
         questSolverImg.sprite = Resources.Load<Sprite>(imgString);
