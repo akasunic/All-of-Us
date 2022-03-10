@@ -1474,8 +1474,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 651990398}
   m_HandleRect: {fileID: 651990397}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.5
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12540,7 +12540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bfcfa47cd084607b13c2907227635f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  todoPersonPrefab: {fileID: 0}
+  todoPersonPrefab: {fileID: 7057201077633590890, guid: f14f6d4c81bd79847bca410c286ec90c,
+    type: 3}
   listItemPrefab: {fileID: 7751141566266584329, guid: f0ec79a50168845648e775e6581ca2ac,
     type: 3}
   infoListItemPrefab: {fileID: 8016197110009607290, guid: c2ea61563350d464ebe604217def4e38,
