@@ -82,6 +82,7 @@ public class PhoneScreenManager : MonoBehaviour
     public GameObject Glow;
     public GameObject HelpButton;
     public TextMeshProUGUI HelpButtonText;
+    private string selectedAppForTutorial = "";
     
     // More texts
     public float secondsPassed = 0.0f;
@@ -242,7 +243,7 @@ public class PhoneScreenManager : MonoBehaviour
                 go = todo;
                 border = todoBorder;
                 HelpButton.SetActive(true);
-                GlobalGameInfo.selectedAppForTutorial = "todolist";
+                selectedAppForTutorial = "todolist";
                 // Tutorial
                 if (!GlobalGameInfo.todolistFlag) {
                     this.activateTodoListTutorial();
@@ -252,7 +253,7 @@ public class PhoneScreenManager : MonoBehaviour
                 go = notes;
                 border = notesBorder;
                 HelpButton.SetActive(true);
-                GlobalGameInfo.selectedAppForTutorial = "myjournal";
+                selectedAppForTutorial = "myjournal";
                 // Tutorial
                 if (!GlobalGameInfo.myjournalFlag) {
                     this.activateMyJournalTutorial();
@@ -287,9 +288,9 @@ public class PhoneScreenManager : MonoBehaviour
     }
 
     public void activateTutorial() {
-        if (GlobalGameInfo.selectedAppForTutorial == "todolist") {
+        if (selectedAppForTutorial == "todolist") {
             this.activateTodoListTutorial();
-        } else if (GlobalGameInfo.selectedAppForTutorial == "myjournal") {
+        } else if (selectedAppForTutorial == "myjournal") {
             this.activateMyJournalTutorial();
         }
     }
