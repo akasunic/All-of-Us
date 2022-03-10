@@ -47,8 +47,8 @@ Rashad?Smiling "Sure, I'm game. What's up?"
   -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Rashad_Day 4_Mrs Lee can keep a folder with all her health information_Mrslee4-2"
-# notification Rashad_Day 4_Mrs Lee can keep a folder with all her health information_Mrslee4-2
+~ notification = "Rashad_Day 4_Mrs. Lee can keep a folder with all her health information_Mrslee4-2"
+# notification Rashad_Day 4_Mrs. Lee can keep a folder with all her health information_Mrslee4-2
 
 Rashad?Smiling "This is one of the things we talk about in the health workshop! So many people don't know what to keep, or how to keep it. I suggest keeping everything in one place."
 Rashad?Smiling "Lab results, appointment records, all the various notes."
@@ -60,8 +60,8 @@ Rashad?Smiling "I keep track of my whole families' health information in one fol
   -> Suggestion2
 
 ==Suggestion2==
-~ notification = "Rashad_Day 4_Mrs Lee can work with Eddie to setup a system for sharing health information onlinel_Mrslee4-1"
-# notification Rashad_Day 4_Mrs Lee can work with Eddie to setup a system for sharing health information online_Mrslee4-1
+~ notification = "Rashad_Day 4_Mrs. Lee can work with Eddie to setup a system for sharing health information online_Mrslee4-1"
+# notification Rashad_Day 4_Mrs. Lee can work with Eddie to setup a system for sharing health information online_Mrslee4-1
 
 Rashad?Smiling "Oh! I like having this stuff on paper, where I can touch it. Some people set up a shared online folder. I can show you some examples."
 Rashad?Smiling "It's much easier to collaborate in a shared document. You just have to get everyone on board, and figure out how to scan things in."

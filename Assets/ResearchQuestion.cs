@@ -32,6 +32,97 @@ public class ResearchQuestion : MonoBehaviour
 
             // Hard coded part just for the research version:
             // Setting the options according to a pre-defined selection
+            switch (journalItemText.text) {
+                // Quest 1
+                // 1-1
+                case "Mrs. Lee could ask Lila to pick up the prescription for her":
+                    learningSecondOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;
+                    break;
+                // 1-2
+                case "Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;
+                    break;
+                // 1-3
+                case "Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;
+                    break;
+                 // 1-4
+                case "Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication":
+                    learningThirdOption.GetComponent<Toggle>().isOn = true;
+                    capabilitySecondOption.GetComponent<Toggle>().isOn = true;
+                    break;
+
+                // Quest 2
+                // 2-1
+                case "Mrs. Lee can go to the health programming workshop at the library and ask for help":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                    
+                    break;
+                // 2-2
+                case "Mrs. Lee can ask Rashad to schedule her appointment":
+                    learningThirdOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 2-3
+                case "Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    // .GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 2-4
+                 case "Mrs. Lee could go to Urgent Care to see someone about her headaches":
+                    learningSecondOption.GetComponent<Toggle>().isOn = true;
+                    capabilitySecondOption.GetComponent<Toggle>().isOn = true;                     
+                    break;
+                    
+                // Quest 3
+                // 3-1
+                case "Mrs. Lee could call Eddie and practice her questions with him":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                    
+                    break;
+                // 3-2
+                case "Mrs. Lee could ask Mrs. Lee to go to her doctor appointment":
+                    learningThirdOption.GetComponent<Toggle>().isOn = true;
+                    capabilitySecondOption.GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 3-3
+                case "Mrs. Lee can create a list of questions and symptoms to take to her appointment with her":
+                    // .GetComponent<Toggle>().isOn = true;
+                    // .GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 3-4
+                 case "Mrs. Lee could ask someone to be on the phone with her during the appointment":
+                    learningThirdOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;            
+                    break;
+
+                // Quest 4
+                // 4-1
+                case "Mrs. Lee can work with Eddie to setup a system for sharing health information online":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityThirdOption.GetComponent<Toggle>().isOn = true;                    
+                    break;
+                // 4-2
+                case "Mrs. Lee can keep a folder with all her health information":
+                    learningThirdOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 4-3
+                case "Mrs. Lee should talk to Eddie about family health history":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                      
+                    break;
+                // 4-4
+                 case "Mrs. Lee can develop the habit of scheduling the next checkup while she's in the office":
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityThirdOption.GetComponent<Toggle>().isOn = true;
+                    break;
+
+            }
+
             learningFirstOption.GetComponent<Toggle>().isOn = true;
             capabilityFirstOption.GetComponent<Toggle>().isOn = true;
         }

@@ -67,7 +67,7 @@ Rashad?Smiling "Tonight is... the health programming workshop. Actually a lot of
   -> Suggestion2
 
 ==Suggestion2==
-~ notification = "Rashad_Day 2_Mrs. Lee can ask Rashad to schedule  her appointment_Mrslee2-2"
+~ notification = "Rashad_Day 2_Mrs. Lee can ask Rashad to schedule her appointment_Mrslee2-2"
 # notification Rashad_Day 2_Mrs. Lee can ask Rashad to schedule her appointment_Mrslee2-2
 
 Rashad?Smiling "If you're in the library, it is literally my job to help you. Need help with something? I got you."

@@ -56,8 +56,8 @@ Mrcalindas?Smiling "Headaches - whether they're migraines or something else - ca
   -> Suggestion1
   
 ==Suggestion1==
-~ notification = "Mrcalindas_Day 2_Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches._Mrslee2-3"
-# notification Mrcalindas_Day 2_Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches._Mrslee2-3
+~ notification = "Mrcalindas_Day 2_Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches_Mrslee2-3"
+# notification Mrcalindas_Day 2_Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches_Mrslee2-3
 
 Mrcalindas?Neutral "It's not uncommon for people to feel uncomfortable going to the doctor. Maybe their parents didn't have the habit or maybe something happened that makes it uncomfortable." 
 Mrcalindas?Smiling "Trust me, I get it. Who wants to get poked and prodded and told to eat fewer sweets?"
@@ -70,7 +70,7 @@ That's a great idea. What if the headaches get worse before then?
 ->Suggestion2
 
 ==Suggestion2==
-~ notification = "Mrcalindas_Day 2_Mrs. Lee could go to Urgent Care to see someone about her headaches._Mrslee2-4"
+~ notification = "Mrcalindas_Day 2_Mrs. Lee could go to Urgent Care to see someone about her headaches_Mrslee2-4"
 # notification Mrcalindas_Day 2_Mrs. Lee should could go to Urgent Care to see someone about her headaches_Mrslee2-4
 
 Mrcalindas?Neutral "Sometimes, people end up in the Emergency Room, or coming into Urgent Care at the clinic because their symptoms get so bad they can't be managed at home."
