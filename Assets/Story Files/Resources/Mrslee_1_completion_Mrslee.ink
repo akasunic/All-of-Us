@@ -43,18 +43,20 @@ Mrslee?Neutral "What do you think?"
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+* They picked a solution marked as bad.
+  -> BadSolution
   
-==Solution1==
-Mrs. Lee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm. Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
-Mrs. Lee?Neutral "Lila can help if I feel embarrass about my English."
+==Option1==
+MrsLee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm. Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
+MrsLee?Neutral "Lila can help if I feel embarrass about my English."
 
 * That’s a good idea, Mrs. Lee. Sometimes it’s hard to speak up and ask questions.
 -> Followup1 
@@ -62,20 +64,20 @@ Mrs. Lee?Neutral "Lila can help if I feel embarrass about my English."
 -> Followup1
 
 ==Followup1==
-Mrs. Lee?Neutral "I want to be brave and ask good questions. Lila can help me practice, then next time, I know enough."
-Mrs. Lee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
+MrsLee?Neutral "I want to be brave and ask good questions. Lila can help me practice, then next time, I know enough."
+MrsLee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
 
 * I'm here to support you!
     -> END
   
-==Solution2==
-Mrs. Lee?Neutral “No thank you, {player_name}. I want to solve the problem myself.”
-Mrs. Lee?Neutral “Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions.”
+==Option2==
+MrsLee?Neutral "No thank you, {player_name}. I want to solve the problem myself."
+MrsLee?Neutral "Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
 
 * I'll come back to help!
   ->TempGoodbye
   
-==Solution3==
+==Option3==
   
 Mrslee?Neutral "I feel stress, {player_name}. I learn in library workshop that sometimes websites lie. I don't know enough to trust a web search about Eddie's medicine."  
 
@@ -83,8 +85,8 @@ Mrslee?Neutral "I feel stress, {player_name}. I learn in library workshop that s
   ->TempGoodbye
 
   
-==Solution4==
-Mrs. Lee?Smiling “I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?”
+==Option4==
+MrsLee?Smiling "I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?"
 
 * Exactly! You can print out the information sheet and take it with you.
 -> Followup2 
@@ -92,9 +94,8 @@ Mrs. Lee?Smiling “I know that the drug can be named lisinopril. If I look it u
 -> Followup2
 
 ==Followup2==
-* Mrs. Lee?Neutral “Rashad help me print things at the library sometimes. I will ask him for help at the next health workshop.”
-* Mrs. Lee?Smiling “I feel less stress knowing I can take a printout to show the pharmacist.”
-
+MrsLee?Neutral "Rashad help me print things at the library sometimes. I will ask him for help at the next health workshop."
+MrsLee?Smiling "I feel less stress knowing I can take a printout to show the pharmacist."
 
 * It sounds like you're ready for this! 
  -> END
