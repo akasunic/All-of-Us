@@ -31,6 +31,8 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
 
     private bool canTalkToAtLeastOneCharacter()
     {
+        return true;
+        /*
         // Check how many characters are clickable
         for (int i = 0; i < characters.Count; i++)
         {
@@ -42,6 +44,7 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
             }
         }
         return false;
+        */
     }
 
     //Do this when the cursor enters the rect area of this selectable UI object and the building has characters you can talk to
