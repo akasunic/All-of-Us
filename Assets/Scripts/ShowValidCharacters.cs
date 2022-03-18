@@ -21,6 +21,7 @@ public class ShowValidCharacters : MonoBehaviour
 
     private void OnEnable()
     {
+        /*
         int clickableCharacters = 0;
         GameObject clickableCharacter = null;
         // Check how many characters are clickable
@@ -57,5 +58,6 @@ public class ShowValidCharacters : MonoBehaviour
                 imageComponent.SetNativeSize();
             }
         }
+        */
     }
 }
