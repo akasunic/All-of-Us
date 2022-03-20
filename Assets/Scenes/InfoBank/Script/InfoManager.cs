@@ -12,6 +12,7 @@ public class InfoManager : MonoBehaviour
 {
     private static Transform lastItem = null;
 
+    public Transform infoListLineDivider;
     public Transform infoListLineItem;
     public Transform ResearchQuestion;
 
@@ -54,7 +55,11 @@ public class InfoManager : MonoBehaviour
             } else {
                 newItem = Instantiate(ResearchQuestion, go);
             }
-            newItem.GetComponent<InfoListLineManager>().setInfo(items[i], i == items.Count - 1);
+            newItem.GetComponent<InfoListLineManager>().setInfo(items[i]);
+            if (i != items.Count - 1)
+            {
+                Instantiate(infoListLineDivider, go);
+            }
         }
     }
 
