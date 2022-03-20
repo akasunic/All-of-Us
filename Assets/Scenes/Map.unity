@@ -3827,7 +3827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 253414140}
   suppressBlockAutoSelect: 0
-  targetButton: {fileID: 969519139}
+  targetButton: {fileID: 0}
 --- !u!114 &253414174
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4660,8 +4660,6 @@ GameObject:
   - component: {fileID: 295476111}
   - component: {fileID: 295476110}
   - component: {fileID: 295476109}
-  - component: {fileID: 295476108}
-  - component: {fileID: 295476113}
   m_Layer: 5
   m_Name: Building Townhouse
   m_TagString: Untagged
@@ -4689,18 +4687,6 @@ RectTransform:
   m_AnchoredPosition: {x: -283, y: -301}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &295476108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295476106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e729e866720c49ad7d09e3bc526cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &295476109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,18 +4778,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295476106}
   m_CullTransparentMesh: 0
---- !u!114 &295476113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295476106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1474e12026dd243729dc34797ad160b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &296055796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,9 +6772,7 @@ GameObject:
   - component: {fileID: 505961546}
   - component: {fileID: 505961545}
   - component: {fileID: 505961544}
-  - component: {fileID: 505961543}
   - component: {fileID: 505961547}
-  - component: {fileID: 505961548}
   m_Layer: 5
   m_Name: Building Community Center
   m_TagString: Untagged
@@ -6829,18 +6801,6 @@ RectTransform:
   m_AnchoredPosition: {x: -289, y: -56}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &505961543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505961541}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e729e866720c49ad7d09e3bc526cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &505961544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6942,18 +6902,6 @@ MonoBehaviour:
   calendarMessage: {fileID: 1807340487}
   calendarPopup: {fileID: 1733356763}
   isViewable: 1
---- !u!114 &505961548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505961541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &526026977
 GameObject:
   m_ObjectHideFlags: 0
@@ -12563,9 +12511,7 @@ GameObject:
   - component: {fileID: 959099457}
   - component: {fileID: 959099456}
   - component: {fileID: 959099455}
-  - component: {fileID: 959099454}
   - component: {fileID: 959099458}
-  - component: {fileID: 959099459}
   m_Layer: 5
   m_Name: Building Health Center
   m_TagString: Untagged
@@ -12594,18 +12540,6 @@ RectTransform:
   m_AnchoredPosition: {x: 317, y: -17}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &959099454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959099452}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e729e866720c49ad7d09e3bc526cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &959099455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12706,18 +12640,6 @@ MonoBehaviour:
   calendarMessage: {fileID: 1807340487}
   calendarPopup: {fileID: 1733356763}
   isViewable: 1
---- !u!114 &959099459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959099452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &969519136
 GameObject:
   m_ObjectHideFlags: 0
@@ -12730,9 +12652,7 @@ GameObject:
   - component: {fileID: 969519141}
   - component: {fileID: 969519140}
   - component: {fileID: 969519139}
-  - component: {fileID: 969519138}
   - component: {fileID: 969519142}
-  - component: {fileID: 969519143}
   m_Layer: 5
   m_Name: Building Library
   m_TagString: Untagged
@@ -12761,18 +12681,6 @@ RectTransform:
   m_AnchoredPosition: {x: 74, y: 139}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &969519138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969519136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8e729e866720c49ad7d09e3bc526cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &969519139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12874,18 +12782,6 @@ MonoBehaviour:
   calendarMessage: {fileID: 1807340487}
   calendarPopup: {fileID: 1733356763}
   isViewable: 1
---- !u!114 &969519143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969519136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a733f16268e14aa0a2c74da264e7fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &993174105
 GameObject:
   m_ObjectHideFlags: 0
@@ -20716,7 +20612,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1425449114}
   - component: {fileID: 1425449116}
-  - component: {fileID: 1425449117}
   m_Layer: 5
   m_Name: Community Center Click Container
   m_TagString: Untagged
@@ -20755,24 +20650,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425449113}
   m_CullTransparentMesh: 0
---- !u!114 &1425449117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425449113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 765804140}
-  - {fileID: 223347656}
-  imageObject: {fileID: 1201553711}
-  singleBubble: {fileID: 21300000, guid: b9eb7e67e45fb3340ae108cb22d6f5b0, type: 3}
-  singleNPCXposition: 136
 --- !u!1 &1429891382
 GameObject:
   m_ObjectHideFlags: 0
@@ -23473,7 +23350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1610277973}
   - component: {fileID: 1610277974}
-  - component: {fileID: 1610277975}
   m_Layer: 5
   m_Name: Hospital Click Container
   m_TagString: Untagged
@@ -23511,23 +23387,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610277972}
   m_CullTransparentMesh: 0
---- !u!114 &1610277975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610277972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 1408853287}
-  imageObject: {fileID: 694090776}
-  singleBubble: {fileID: 21300000, guid: 34e74f322f2ed914595098554d9c8a60, type: 3}
-  singleNPCXposition: 0
 --- !u!1 &1617774700
 GameObject:
   m_ObjectHideFlags: 1
@@ -31857,7 +31716,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3179130030197155637}
   - component: {fileID: 5396786624123752646}
-  - component: {fileID: 8657637586658780541}
   m_Layer: 5
   m_Name: Library Click Container
   m_TagString: Untagged
@@ -31865,24 +31723,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &8657637586658780541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8657637586658780540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58427d6b1ed50554a94f7f56580b63b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 1265054088399377630}
-  - {fileID: 6661675301049132699}
-  imageObject: {fileID: 1693337641}
-  singleBubble: {fileID: 21300000, guid: b9eb7e67e45fb3340ae108cb22d6f5b0, type: 3}
-  singleNPCXposition: 40
 --- !u!224 &8817009324822665356
 RectTransform:
   m_ObjectHideFlags: 0
