@@ -122,9 +122,6 @@ public class ResearchQuestion : MonoBehaviour
                     break;
 
             }
-
-            learningFirstOption.GetComponent<Toggle>().isOn = true;
-            capabilityFirstOption.GetComponent<Toggle>().isOn = true;
         }
 
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {

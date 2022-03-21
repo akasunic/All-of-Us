@@ -50,7 +50,9 @@ Mrslee?Neutral "OK. What should I do?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-  
+* They picked a solution marked as bad.
+  -> BadSolution
+
 ==Option1==
 MrsLee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he asked me to talk sometimes. I know he worry, so this is a good idea.."
 
@@ -99,4 +101,8 @@ Mrslee?Smiling "{player_name}. Thank you. This way, no stress."
 Mrslee?Neutral "OK. I will wait."
 
 * No worries, Mrs. Lee. I'll be back.
+  -> END
+
+==BadSolution==
+
   -> END

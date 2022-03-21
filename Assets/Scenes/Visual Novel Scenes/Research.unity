@@ -1854,7 +1854,7 @@ MonoBehaviour:
   MrsLeeInstructions: {fileID: 1264325598}
   UIContainer: {fileID: 2078287360}
   viewProfileButton: {fileID: 252445387}
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 1267706181}
   ButtonText: {fileID: 99778454}
   showingProfile: 0
 --- !u!114 &252445391
@@ -5955,7 +5955,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 32553160}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.5
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

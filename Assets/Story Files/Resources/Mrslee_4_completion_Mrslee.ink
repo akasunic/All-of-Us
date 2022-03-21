@@ -50,6 +50,8 @@ Mrslee?Smiling "What do I do about my health and good future health?"
   -> Option3
 * They picked Option 4. 
   -> Option4
+* They picked a solution marked as bad.
+  -> BadSolution
   
 ==Option1==
 MrsLee?Smiling "Eddie and I already using video calls to talk more. And he asking more questions about Dr. Lee. I want him to know everything I know."
@@ -97,4 +99,8 @@ Mrslee?Neutral "I understand... I will continue to think about my health. And I 
 Mrslee?Neutral "I feel excite to hear your suggestion!"
 
 * Give me a bit, Mrs Lee
+  -> END
+
+==BadSolution==
+
   -> END

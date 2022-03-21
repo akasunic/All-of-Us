@@ -19,6 +19,7 @@ public class ResearchVersionTurnin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        continueButton.gameObject.SetActive(false);
         if (GlobalGameInfo.researchVersion == 2) {
             MrsLeeInstructions.SetActive(true);
         }
@@ -27,6 +28,9 @@ public class ResearchVersionTurnin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GlobalGameInfo.allResearchQuestionsAnswered) {
+            continueButton.gameObject.SetActive(true);
+        }
     }
 
     public void onViewProfileButtonClick() {

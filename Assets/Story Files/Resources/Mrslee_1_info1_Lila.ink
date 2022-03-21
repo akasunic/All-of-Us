@@ -17,9 +17,6 @@ Lila?Smiling "Hey, {player_name}!! How are you?"
   -> Chat1
 
 ==Chat1==
-~ notification = "Lila_Day 1_Mrs. Lee has new volunteer position at the Community Center!"
-# notification Lila_Day 1_Mrs. Lee has new volunteer position at the Community Center!"
-
 Lila?Smiling "Well you always know where to find me; five days a week. Four seasons a year!"
 Lila?Smiling "Oh! I even helped Mrs Lee get a volunteering position here."
 
@@ -76,7 +73,7 @@ Lila?Smiling "Have her stop by and give me the information, if that would help. 
 
 ==Suggestion2==
 ~ notification = "Lila_Day 1_Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions_Mrslee1-2"
-# notification Lila_Day 1_Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions._Mrslee1-2
+# notification Lila_Day 1_Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions_Mrslee1-2
 
 Lila?Smiling "Maybe she needs some in-person support; in that case, I'm happy to go with her. She can do this, but I can be her cheerleader!"
 

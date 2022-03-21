@@ -48,7 +48,9 @@ Mrslee?Neutral "What should I do?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-
+* They picked a solution marked as bad.
+  -> BadSolution
+  
 ==Option1==
 MrsLee?Smiling "Thank you, {player_name}. I feel good about going to the library program. They help me with my email one time. I know Rashad will take good care of me."
 MrsLee?Smiling "He say I am very good with technology; maybe scheduling over the internet will be easier than trying to understand on the phone. I feel less stress.."
@@ -92,4 +94,8 @@ Mrslee?Smiling "{player_name}. Thank you for encouraging. I will do."
 Mrslee?Neutral "{player_name}, OK!"
 
 * I'll come back.
+  -> END
+
+==BadSolution==
+
   -> END

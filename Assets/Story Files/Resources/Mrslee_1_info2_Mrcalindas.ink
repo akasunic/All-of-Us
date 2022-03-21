@@ -42,11 +42,6 @@ Mrcalindas?Neutral "Yes it's just so tragic that he passed. Heart attacks are no
   -> Explain1
 
 ==Explain1==
-~ notification = "Mrcalindas_Day 1_At-home monitoring machines can be used for monitoring blood pressure"
-# notification Mrcalindas_Day 1_At-home monitoring machines can be used for monitoring blood pressure
-~ notification = "Mrcalindas_Day 1_High blood pressure can lead to heart attacks"
-# notification Mrcalindas_Day 1_High blood pressure can lead to heart attacks
-
 Mrcalindas?Neutral "Yeah, high blood pressure, y'know. It can contribute to a fatal heart attack if you don't keep it in check."
 Mrcalindas?Neutral "With the right medications, lifestyle changes, and at-home monitoring machines, you really can improve your outcome."
 Mrcalindas?Neutral "I wish he'd done more to understand his condition. I'm sure Mrs. Lee feels the same."
@@ -69,7 +64,7 @@ That sounds a little risky; how would she know if the website she picked was acc
 ==Explain3==
 
 ~ notification = "Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource_Mrslee1-3"
-# notification Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resrouce _Mrslee1-3
+# notification Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource_Mrslee1-3
 
 Mrcalindas?Smiling "Great question. Lucky for us, there are several secure online resources that have been created just for this purpose. 
 Mrcalindas?Smiling Look at this one - it's a drug information portal, where you can look up medications. They work with doctors to make sure the information is useful and accurate."
