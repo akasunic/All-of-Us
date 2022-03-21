@@ -133,19 +133,10 @@ public class DetailPageManager : MonoBehaviour
     public void updateBubble(){
       Debug.Log(text);
       Debug.Log(infoItem);
-      //Debug.Log(TagManager.GetTags(infoItem.tagIdentifier));
 
       if(infoItem == null){
         return;
       }
-      /*
-      if(TagManager.GetTags(infoItem.tagIdentifier).Count > 0){
-        Transform redbubble = HelperFunctions.FindChildByRecursion(transform, "redbubble");
-        if(redbubble != null){
-          redbubble.gameObject.SetActive(false);
-        }
-      }
-      */
     }
 
     public void setInfo(GlobalGameInfo.InfoItem item){

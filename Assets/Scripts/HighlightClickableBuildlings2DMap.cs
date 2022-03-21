@@ -13,10 +13,7 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
     public GameObject calendarMessage;
     public GameObject calendarPopup;
  
-    private Sprite oldSprite;
     private int imageItemOldSiblingIndex;
-
-    
 
     //other scrips can change this
     public bool isViewable = true;
@@ -32,7 +29,10 @@ public class HighlightClickableBuildlings2DMap : MonoBehaviour, IPointerEnterHan
     private bool canTalkToAtLeastOneCharacter()
     {
         return true;
+        
         /*
+        This code commented out due to reverting back to the design where every character is
+        always shown on the map (even if not clickable)
         // Check how many characters are clickable
         for (int i = 0; i < characters.Count; i++)
         {
