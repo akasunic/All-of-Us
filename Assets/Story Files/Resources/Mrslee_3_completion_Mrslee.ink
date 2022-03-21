@@ -42,47 +42,47 @@ Mrslee?Neutral "OK. What should I do?"
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
   
-==Solution1==
-MrsLee?Smiling “Did you know Eddie like to Facetime? Last time he was home, he asked me to talk sometimes. I know he worry, so this is a good idea..”
+==Option1==
+MrsLee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he asked me to talk sometimes. I know he worry, so this is a good idea.."
 
 * Sharing your health information might be helpful for him, too! 
 ->Followup31
 
 ==Followup31==
-MrsLee?Smiling “He ask good questions, and if I write down answers, I feel less stress about forgetting when I talk to doctor. I feel proud of how smart and helpful Eddie is.” 
+MrsLee?Smiling "He ask good questions, and if I write down answers, I feel less stress about forgetting when I talk to doctor. I feel proud of how smart and helpful Eddie is."
 
 ->END
 
-==Solution2==
-MrsLee?Neutral “Lila is very helpful, but her life very busy. If she go to this appointment, what about next appointment. Dr. Lee always take care of everything, and now look! So stress!” 
+==Option2==
+MrsLee?Neutral "Lila is very helpful, but her life very busy. If she go to this appointment, what about next appointment. Dr. Lee always take care of everything, and now look! So stress!"
 
 * I think you can do it, Mrs. Lee. I’ll be back with a better suggestion!
 -> TempGoodbye
 
-==Solution3==
-MrsLee?Smiling “Write down when I feel headache. Write down how bad? I can do that. Thinking about headache make me feel headache, but you say doctor might help.” 
-MrsLee?Smiling “Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it feel less stress.
+==Option3==
+MrsLee?Smiling "Write down when I feel headache. Write down how bad? I can do that. Thinking about headache make me feel headache, but you say doctor might help."
+MrsLee?Smiling "Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it feel less stress."
 
 * Do you feel like you need more guidance on what to write down?
 -> Followup32
 
 ==Followup32==
-MrsLee?Smiling “I visit Heatlh Clinic and Mr. Calindas gave me pamphlet. It had questions doctor might ask. I will try to answer those questions in my journal, so I have good information to share.”
+MrsLee?Smiling "I visit Heatlh Clinic and Mr. Calindas gave me pamphlet. It had questions doctor might ask. I will try to answer those questions in my journal, so I have good information to share."
 
 * Oh! Mr. Calindas and his pamphlets are so helpful!
 -> END
 
-==Solution4
-MrsLee?Neutral “Use my phone, and talk to doctor, and wear hospital gown? That sounds even MORE headache. I’m sorry, but I don’t think that help my headache.” 
+==Option4==
+MrsLee?Neutral "Use my phone, and talk to doctor, and wear hospital gown? That sounds even MORE headache. I’m sorry, but I don’t think that help my headache."
 
 * Oh, Mrs. Lee! You’re right. That sounds hard. I’ll be back.
 -> END

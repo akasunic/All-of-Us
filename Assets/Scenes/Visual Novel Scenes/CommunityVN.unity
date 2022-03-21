@@ -1107,6 +1107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8371d2b2fe14a9ca0a9465140027de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &237699670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 883614279723489344, guid: f80d7411ca085bc49ba42c52cee58723,
+    type: 3}
+  m_PrefabInstance: {fileID: 237699668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286510079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,7 +2012,7 @@ MonoBehaviour:
   toggleComponents:
   - {fileID: 400864725}
   - {fileID: 400864722}
-  - {fileID: 0}
+  - {fileID: 237699670}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4901,7 +4907,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 135
+  itemId: 162
   blockName: Option4
   description: 
   eventHandler: {fileID: 0}
@@ -5227,7 +5233,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 135
+  itemId: 163
   blockName: Option3
   description: 
   eventHandler: {fileID: 0}
@@ -6329,7 +6335,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 135
+  itemId: 161
   blockName: Option2
   description: 
   eventHandler: {fileID: 0}

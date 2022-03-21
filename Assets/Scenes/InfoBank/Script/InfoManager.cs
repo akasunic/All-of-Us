@@ -12,6 +12,7 @@ public class InfoManager : MonoBehaviour
 {
     private static Transform lastItem = null;
 
+    public Transform infoListLineDivider;
     public Transform infoListLineItem;
     public Transform ResearchQuestion;
 
@@ -54,17 +55,11 @@ public class InfoManager : MonoBehaviour
             } else {
                 newItem = Instantiate(ResearchQuestion, go);
             }
-            newItem.GetComponent<InfoListLineManager>().setInfo(items[i], i == items.Count - 1);
-            // bool isLast = false;
-            // if (i == items.Count - 1)
-            // {
-            //     // Transform newItem = Instantiate(infoListLineItem, go);
-            //     newItem.GetComponent<InfoListLineManager>().setInfo(items[i / 2]);
-            // }
-            // else
-            // {
-            //     newItem = Instantiate(infoListLineDivider, go);
-            // }
+            newItem.GetComponent<InfoListLineManager>().setInfo(items[i]);
+            if (i != items.Count - 1)
+            {
+                Instantiate(infoListLineDivider, go);
+            }
         }
     }
 

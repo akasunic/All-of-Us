@@ -57,8 +57,8 @@ Mrcalindas?Neutral "I wish he'd done more to understand his condition. I'm sure 
   -> Explain2
 
 ==Explain2==
-~ notification = "Mrcalindas_Day 1_ Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication_Mrslee1-4"
-# notification Mrcalindas_Day 1_ Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication_Mrslee1-4
+~ notification = "Mrcalindas_Day 1_Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication_Mrslee1-4"
+# notification Mrcalindas_Day 1_Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication_Mrslee1-4
 
 Mrcalindas?Smiling "Actually, I got a minute. Let me show you a couple of things."
 Mrcalindas?Neutral "Some people just start with a visit to Google. They enter the drug name, and find some information that way. That's a good start, but we have better options." 
@@ -69,7 +69,7 @@ That sounds a little risky; how would she know if the website she picked was acc
 ==Explain3==
 
 ~ notification = "Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource_Mrslee1-3"
-# notification Mrcalindas_Day 1_ Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resrouce _Mrslee1-3
+# notification Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resrouce _Mrslee1-3
 
 Mrcalindas?Smiling "Great question. Lucky for us, there are several secure online resources that have been created just for this purpose. 
 Mrcalindas?Smiling Look at this one - it's a drug information portal, where you can look up medications. They work with doctors to make sure the information is useful and accurate."

@@ -40,8 +40,8 @@ Mrslee?Smiling "You know. Eddie's very important to me and I talk about him a lo
 
 ==QuestDetails1==
 Mrslee?Smiling "I ask question about his blood pressure. You know, it's very funny!"
-
 Mrslee?Smiling "I ask so many question about his Eddie, and the doctor remind me to ask about ME!"
+
 * What about the headaches?
   -> QuestDetails2
 * That IS funny! Did you learn anything new?
