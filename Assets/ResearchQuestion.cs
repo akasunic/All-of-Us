@@ -69,7 +69,7 @@ public class ResearchQuestion : MonoBehaviour
                 // 2-3
                 case "Mrs. Lee should make an appointment to meet a new primary care doctor and ask the new doctor about her headaches":
                     learningFirstOption.GetComponent<Toggle>().isOn = true;
-                    // .GetComponent<Toggle>().isOn = true;                      
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                      
                     break;
                 // 2-4
                  case "Mrs. Lee could go to Urgent Care to see someone about her headaches":
@@ -90,8 +90,8 @@ public class ResearchQuestion : MonoBehaviour
                     break;
                 // 3-3
                 case "Mrs. Lee can create a list of questions and symptoms to take to her appointment with her":
-                    // .GetComponent<Toggle>().isOn = true;
-                    // .GetComponent<Toggle>().isOn = true;                      
+                    learningFirstOption.GetComponent<Toggle>().isOn = true;
+                    capabilityFirstOption.GetComponent<Toggle>().isOn = true;                      
                     break;
                 // 3-4
                  case "Mrs. Lee could ask someone to be on the phone with her during the appointment":
