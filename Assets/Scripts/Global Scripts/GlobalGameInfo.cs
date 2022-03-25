@@ -60,9 +60,6 @@ public static class GlobalGameInfo
 
     // Data of all saved slots
     public static Dictionary<string, SavedGame> gameData;
-        
-    // Localization Feature
-    public static Lang LangClass = new Lang();
 
     //an enum for notifications
     public enum NOTIFICATION {
@@ -171,17 +168,17 @@ public static class GlobalGameInfo
             switch (dayAssigned)
             {
                 case 0:
-                    return LangClass.getString("monday");
+                    return GameStrings.getString("monday");
                 case 1:
-                    return LangClass.getString("tuesday");
+                    return GameStrings.getString("tuesday");
                 case 2:
-                    return LangClass.getString("wednesday");
+                    return GameStrings.getString("wednesday");
                 case 3:
-                    return LangClass.getString("thursday");
+                    return GameStrings.getString("thursday");
                 case 4:
-                    return LangClass.getString("friday");
+                    return GameStrings.getString("friday");
                 default:
-                    return LangClass.getString("monday");
+                    return GameStrings.getString("monday");
             }
         }
 
@@ -490,37 +487,37 @@ public static class GlobalGameInfo
         switch (currentDay) {
             case 0:
                 if (dayType == "short") {
-                    day = LangClass.getString("monday_short");
+                    day = GameStrings.getString("monday_short");
                 } else {
-                    day = LangClass.getString("monday");
+                    day = GameStrings.getString("monday");
                 }
                 break;
             case 1:
                 if (dayType == "short") {
-                    day = LangClass.getString("tuesday_short");
+                    day = GameStrings.getString("tuesday_short");
                 } else {
-                    day = LangClass.getString("tuesday");
+                    day = GameStrings.getString("tuesday");
                 }
                 break;
             case 2:
                 if (dayType == "short") {
-                    day = LangClass.getString("wednesday_short");
+                    day = GameStrings.getString("wednesday_short");
                 } else {
-                    day = LangClass.getString("wednesday");
+                    day = GameStrings.getString("wednesday");
                 }
                 break;
             case 3:
                 if (dayType == "short") {
-                    day = LangClass.getString("thursday_short");
+                    day = GameStrings.getString("thursday_short");
                 } else {
-                    day = LangClass.getString("thursday");
+                    day = GameStrings.getString("thursday");
                 }
                 break;
             case 4:
                 if (dayType == "short") {
-                    day = LangClass.getString("friday_short");
+                    day = GameStrings.getString("friday_short");
                 } else {
-                    day = LangClass.getString("friday");
+                    day = GameStrings.getString("friday");
                 }
                 break;
             default:

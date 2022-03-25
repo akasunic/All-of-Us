@@ -89,7 +89,6 @@ public class PhoneScreenManager : MonoBehaviour
     public TextMeshProUGUI BackButtonText;
     public TextMeshProUGUI SectionName;
     public TextMeshProUGUI NoJournalEntriesText;
-    public Lang LangClass = new Lang();
 
     void Update(){
       if (started && timer <= seconds) {
@@ -122,10 +121,10 @@ public class PhoneScreenManager : MonoBehaviour
         settingsBorder.SetActive(false);
         dictionaryBorder.SetActive(false);
 
-        HelpButtonText.text = LangClass.getString("tutorial_help");
-        BackButtonText.text = LangClass.getString("back");
-        SectionName.text = LangClass.getString("home_screen");
-        NoJournalEntriesText.text = LangClass.getString("no_journal_entries");
+        HelpButtonText.text = GameStrings.getString("tutorial_help");
+        BackButtonText.text = GameStrings.getString("back");
+        SectionName.text = GameStrings.getString("home_screen");
+        NoJournalEntriesText.text = GameStrings.getString("no_journal_entries");
 
         lastSelected = null;
         lastSelectedBorder = null;
@@ -300,10 +299,10 @@ public class PhoneScreenManager : MonoBehaviour
         TutorialButton.enabled = true;
         Glow.SetActive(true);
 
-        YellowTitle.text = LangClass.getString("todolist_phone_yellowtitle");
-        WhiteTitle.text = LangClass.getString("todolist_phone_whitetitle");
-        WhiteText.text = LangClass.getString("todolist_phone_whitetext");
-        ButtonText.text = LangClass.getString("todolist_phone_buttontext");
+        YellowTitle.text = GameStrings.getString("todolist_phone_yellowtitle");
+        WhiteTitle.text = GameStrings.getString("todolist_phone_whitetitle");
+        WhiteText.text = GameStrings.getString("todolist_phone_whitetext");
+        ButtonText.text = GameStrings.getString("todolist_phone_buttontext");
 
         GlobalGameInfo.todolistFlag = true;
     }
@@ -314,10 +313,10 @@ public class PhoneScreenManager : MonoBehaviour
         TutorialButton.enabled = true;
         Glow.SetActive(true);
 
-        YellowTitle.text = LangClass.getString("myjournals_phone_yellowtitle");
-        WhiteTitle.text = LangClass.getString("myjournals_phone_whitetitle");
-        WhiteText.text = LangClass.getString("myjournals_phone_whitetext");
-        ButtonText.text = LangClass.getString("myjournals_phone_buttontext");
+        YellowTitle.text = GameStrings.getString("myjournals_phone_yellowtitle");
+        WhiteTitle.text = GameStrings.getString("myjournals_phone_whitetitle");
+        WhiteText.text = GameStrings.getString("myjournals_phone_whitetext");
+        ButtonText.text = GameStrings.getString("myjournals_phone_buttontext");
 
         GlobalGameInfo.myjournalFlag = true;
     }
