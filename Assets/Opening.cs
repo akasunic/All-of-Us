@@ -12,18 +12,14 @@ public class Opening : MonoBehaviour
     public TextMeshProUGUI TutorialButton;
     public GameObject ContinueButton;
 
-    // Localization Feature
-    public Lang LangClass = new Lang();
-
-
     void Start()
     {
 
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
         
-        ContinueButtonText.text = LangClass.getString("continue");
-        NewGameButton.text = LangClass.getString("new_game");
-        TutorialButton.text = LangClass.getString("tutorial");
+        ContinueButtonText.text = GameStrings.getString("continue");
+        NewGameButton.text = GameStrings.getString("new_game");
+        TutorialButton.text = GameStrings.getString("tutorial");
 
         // Loading game data
         GlobalGameInfo.gameData = SaveSerial.LoadGame();
