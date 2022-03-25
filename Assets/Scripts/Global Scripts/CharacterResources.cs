@@ -36,12 +36,6 @@ public class CharacterResources
   public static Sprite leeTalking;
   public static Sprite leeSmall;
 
-  // Localization Feature
-  // public static Lang LangClass = new Lang();
-
-  // public void Start()
-  // {
-  // }
   public CharacterResources(){
     
 
