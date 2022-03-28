@@ -9,10 +9,12 @@ public static class GameStrings {
     {
         {"English", new Dictionary<string, string>
             {
+                // Backstories
                 {"backstories_1", "There’s so much to love about Bloomwood! The neighborhood is full of caring, vibrant people and plentiful resources. \n\n As the new Community Manager, your role is to learn what your neighbors need, and help them find answers. Every neighbor has problems you can solve, and information, resources, or skills to contribute."},
                 {"backstories_2", "Explore Bloomwood and learn more about your neighbors. Spend a week with each neighbor, and their needs - and thereby your goals - will become clear."},
                 {"backstories_3", ""},
 
+                // Ending
                 {"ending_1", "I’ve been talking so much about Bloomwood Spirit and getting this block party ready.  Today as we blocked off streets and inflated the giant bounce house, I wondered if all my efforts to help did the job. People have bigger issues. Health, money, family, school...did we make enough time? Share enough resources?"},
                 {"ending_2", "Our Block Party is a connection between the old Bloomwood and the new Bloomwood. The smells of food and the whirring of the cotton candy machine all brought back memories. But could this bring the people?"},
                 {"ending_3", "Just as I began to worry, Mr. Calindas arrived to set up the Healthcare tent. He patted me on the back before he went to instruct volunteer nurses on how to work with the community. “Paz and Jessica are showing up soon! Don’t worry!”"},
@@ -23,6 +25,7 @@ public static class GameStrings {
                 {"ending_8", "We spent the whole day laughing, playing, and celebrating. Mr. Calindas was right. I didn’t need to worry. As music filled the neighborhood and the bounce house shook, I looked at my neighbors. We needed this. I needed this. We could be here, because we all helped each other. Bloomwood spirit has never been about the buildings, or the grants, or the businesses that rush in."},
                 {"ending_9", "It’s always been the people."},
                 
+                // Phone scene
                 {"journal_updated", "MyJournal Updated"},
                 {"todo_updated", "MyTodo Updated"},
                 {"phone_settings_app", "Settings"},
@@ -33,6 +36,7 @@ public static class GameStrings {
                 {"home_screen", "Home Screen"},
                 {"no_journal_entries", "No journal entries yet!"},
             
+                // Days and Weeks
                 {"day", "DAY"},
                 {"week", "Week"},
                 {"monday", "Monday"},
@@ -51,6 +55,7 @@ public static class GameStrings {
                 {"saturday_short", "SAT"},
                 {"sunday_short", "SUN"},
 
+                // Menus, Buttons, and Map
                 {"comm_manager", "Community Manager"},
                 {"day_summary", "Day Summary"},
                 {"continue", "CONTINUE"},
@@ -66,13 +71,14 @@ public static class GameStrings {
                 {"current_task", "Current Task"},
                 {"meet", "Meet"},
                 {"good_morning_message", "Good morning! Another beautiful week at Bloomwood. Ready to plan for a new Block Party?"},
-                {"completed", "Completed"},
-                {"saving_progress", "Saving Progress..."},
                 {"search_term", "Search a term..."},
                 
+                // Saved Games
                 {"saved_games", "Saved Games"},
                 {"next_npc", "Where Do I Want to Start?"},
+                {"completed", "Completed"},
 
+                // NPC info
                 {"rashad_name", "Rashad Williams"},
                 {"rashad_first_name", "Rashad"},
                 {"rashad_age_pronouns", "42 years old | He/Him/His"},
@@ -113,15 +119,12 @@ public static class GameStrings {
                 {"mrslee_title", "Elder, Community Center"},
                 {"mrslee_description", "Mrs. Lee and her husband, Dr. Lee, emigrated from South Korea with their grandson Eddie. Together, they raised Eddie in Bloomwood. Since the recent passing of her husband, Mrs. Lee has become a regular at the fitness classes at the Community Center."},
 
-
-                {"days_left", "DAYS LEFT"},
-                {"to_block_party", "to block party for"},
+                // Saving game
                 {"please_note", "Please Note!"},
                 {"progress_wont_save", "Unfortunately, your progress made in the current task will not be saved."},
-                
-                {"english", "English"},
-                {"spanish", "Spanish"},
+                {"saving_progress", "Saving Progress..."},
 
+                // PC Setup
                 {"pc_setup_title", "Who are you?"},
                 {"name_field", "Name"},
                 {"code_field", "Code"},
@@ -136,20 +139,31 @@ public static class GameStrings {
                 {"welcome_title", "Welcome to Bloomwood"},
                 {"welcome_text", "Congratulations! Before you start your new role as our Community Manager, tell us a little bit about yourself"},
                 {"name_taken", "Name is taken"},
+                
+                // Languages
+                {"english", "English"},
+                {"spanish", "Spanish"},
 
+                // Buildings
                 {"home", "Home"},
                 {"community_center", "Bloomwood Community Center"},
                 {"health_clinic", "Bloomwood Health Clinic"},
                 {"library", "Bloomwood Library"},
 
+                // Home scene
                 {"new_journal_entries", "New Journal Entries"},
                 {"block_party_preparations", "Block Party Preparations"},
                 {"succulents_planted", "Succulents Planted"},
                 {"community_engagement", "Community Engagement"},
 
+                // Start week
                 {"startweek_text1", "Are you ready to start the week and help"},
                 {"startweek_text2", "solve some problems?"},
                 {"startweek_text3", "If not, you can select a different neighbor!"},
+
+                // End of quest
+                {"days_left", "DAYS LEFT"},
+                {"to_block_party", "to block party for"},
 
                 {"end_of_quest_rashad_1_title", "A Little Help from Your Friends"},
                 {"end_of_quest_rashad_1_desc", "You found a library assistant in the YA section! Check in with Rashad and see how he’s doing."},
@@ -196,6 +210,7 @@ public static class GameStrings {
                 {"end_of_quest_elisa_4_title", "Find out more info on diabetes"},
                 {"end_of_quest_elisa_4_desc", "You helped Elisa and her Mom with diabetes information. Great work this week!"},
                 
+                // Tutorial
                 {"tutorial_startweek_yellowtitle", "What should I do?"},
                 {"tutorial_startweek_whitetitle", "Who should I chat with first?"},
                 {"tutorial_startweek_whitetext_1", "Welcome, "},
