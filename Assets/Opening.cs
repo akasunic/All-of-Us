@@ -9,7 +9,6 @@ public class Opening : MonoBehaviour
 {
     public TextMeshProUGUI ContinueButtonText;
     public TextMeshProUGUI NewGameButton;
-    public TextMeshProUGUI TutorialButton;
     public GameObject ContinueButton;
 
     void Start()
@@ -19,7 +18,6 @@ public class Opening : MonoBehaviour
         
         ContinueButtonText.text = GameStrings.getString("continue");
         NewGameButton.text = GameStrings.getString("new_game");
-        TutorialButton.text = GameStrings.getString("tutorial");
 
         // Loading game data
         GlobalGameInfo.gameData = SaveSerial.LoadGame();
