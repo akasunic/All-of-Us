@@ -26,7 +26,7 @@ public class DetailPageManager : MonoBehaviour
     private Transform overlayItem = null;
 
     private GlobalGameInfo.InfoItem infoItem;
-
+    private string turninSceneName = "Quest Turnin Testing";
     public int optionNumber = 0;
     [HideInInspector]
     public string questId = "";
@@ -161,7 +161,7 @@ public class DetailPageManager : MonoBehaviour
     }
 
     public void SelectItemForQuest() {
-        if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
+        if (SceneManager.GetActiveScene().name == turninSceneName) {
             FindObjectOfType<PhoneScreenManager>().SelectQuestAnswer(questId,
               HelperFunctions.StringFromCharacter(infoItem.characterEnum), description, optionNumber);
 

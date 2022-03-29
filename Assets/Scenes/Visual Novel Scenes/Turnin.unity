@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 554569706}
   - component: {fileID: 554569708}
   - component: {fileID: 554569707}
+  - component: {fileID: 554569709}
   m_Layer: 5
   m_Name: OptionB
   m_TagString: Untagged
@@ -665,6 +666,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554569705}
   m_CullTransparentMesh: 0
+--- !u!114 &554569709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554569705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735a0d3ee5111c4ab22af0dcc9c2560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 1575667979}
+  optionNum: 1
+  option: {fileID: 554569707}
 --- !u!1 &559242262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1231,7 @@ GameObject:
   - component: {fileID: 676718342}
   - component: {fileID: 676718344}
   - component: {fileID: 676718343}
+  - component: {fileID: 676718345}
   m_Layer: 5
   m_Name: OptionA
   m_TagString: Untagged
@@ -1281,6 +1298,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676718341}
   m_CullTransparentMesh: 0
+--- !u!114 &676718345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676718341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735a0d3ee5111c4ab22af0dcc9c2560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 1575667979}
+  optionNum: 0
+  option: {fileID: 676718343}
 --- !u!1 &690063478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1546,7 @@ GameObject:
   - component: {fileID: 853970895}
   - component: {fileID: 853970897}
   - component: {fileID: 853970896}
+  - component: {fileID: 853970898}
   m_Layer: 5
   m_Name: OptionC
   m_TagString: Untagged
@@ -1580,6 +1613,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853970894}
   m_CullTransparentMesh: 0
+--- !u!114 &853970898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853970894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735a0d3ee5111c4ab22af0dcc9c2560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 1575667979}
+  optionNum: 2
+  option: {fileID: 853970896}
 --- !u!1 &916430434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,8 +1662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -45.9, y: -20}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 264.53, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &916430436
 MonoBehaviour:
@@ -1637,19 +1685,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9df530272b60641f8b8d59fd44d8b3da, type: 3}
+    m_Font: {fileID: 12800000, guid: f0f34f46b4a16420fa43a112ecf09cbc, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Quest title contents
+  m_Text: Choose the information you'd like to share
 --- !u!222 &916430437
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2198,7 +2246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8862745, g: 1, b: 0.8666667, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2593,6 +2641,7 @@ GameObject:
   - component: {fileID: 1524287913}
   - component: {fileID: 1524287915}
   - component: {fileID: 1524287914}
+  - component: {fileID: 1524287916}
   m_Layer: 5
   m_Name: OptionD
   m_TagString: Untagged
@@ -2659,6 +2708,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524287912}
   m_CullTransparentMesh: 0
+--- !u!114 &1524287916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524287912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3735a0d3ee5111c4ab22af0dcc9c2560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 1575667979}
+  optionNum: 3
+  option: {fileID: 1524287914}
 --- !u!1 &1557126965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,7 +2892,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1560670348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1575667979}
+        m_MethodName: onClickContinueButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1560670348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575667978}
   - component: {fileID: 1575667979}
+  - component: {fileID: 1575667980}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2909,6 +2985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41ce1c58c1348d48b7171d8a140b59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  continueButton: {fileID: 1560670348}
+  continueArrow: {fileID: 1557126967}
   continueClickable: {fileID: 21300000, guid: 446c5b4f863274bbf9666448e4d410bd, type: 3}
   continueUnclickable: {fileID: 21300000, guid: 16e267140fc10814da9b8437d05e66fb,
     type: 3}
@@ -2927,17 +3005,29 @@ MonoBehaviour:
   calindasAnswer: {fileID: 21300000, guid: ba49e67e25422a844a7b4cca07fe6fcc, type: 3}
   lilaGiver: {fileID: 21300000, guid: b0124ba15a31c4c12ba4103a9685381f, type: 3}
   lilaAnswer: {fileID: 21300000, guid: 3b1abf570dcace64ba1104a71c003e3c, type: 3}
-  giverPerson: {fileID: 0}
-  giverName: {fileID: 0}
-  questTitle: {fileID: 0}
-  option1: {fileID: 0}
-  option2: {fileID: 0}
-  option3: {fileID: 0}
-  option4: {fileID: 0}
-  option1Character: {fileID: 0}
-  option2Character: {fileID: 0}
-  option3Character: {fileID: 0}
-  option4Character: {fileID: 0}
+  giverPerson: {fileID: 690063480}
+  giverName: {fileID: 1519412216}
+  submitOptionText: {fileID: 916430436}
+  option1: {fileID: 1229699514}
+  option2: {fileID: 1187752881}
+  option3: {fileID: 591995512}
+  option4: {fileID: 628030584}
+  option1Character: {fileID: 2072485263}
+  option2Character: {fileID: 705210923}
+  option3Character: {fileID: 263940291}
+  option4Character: {fileID: 818781205}
+--- !u!114 &1575667980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575667977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234a1560dfb4ddb47a44acfde619d3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619311854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +3249,6 @@ GameObject:
   - component: {fileID: 1689248394}
   - component: {fileID: 1689248393}
   - component: {fileID: 1689248392}
-  - component: {fileID: 1689248391}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -3188,45 +3277,6 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 0}
   m_SizeDelta: {x: 120.4, y: 45.326385}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1689248391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689248389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eadb7394ed64d34880126c3cd13e81c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  continueButton: {fileID: 1689248389}
-  rashadProfile: {fileID: 0}
-  rashadPic1: {fileID: 0}
-  rashadPic2: {fileID: 0}
-  rashadPic3: {fileID: 0}
-  elisaProfile: {fileID: 0}
-  elisaPic1: {fileID: 0}
-  elisaPic2: {fileID: 0}
-  elisaPic3: {fileID: 0}
-  msleeProfile: {fileID: 0}
-  msleePic1: {fileID: 0}
-  msleePic2: {fileID: 0}
-  msleePic3: {fileID: 0}
-  calindasProfile: {fileID: 0}
-  calindasPic1: {fileID: 0}
-  calindasPic2: {fileID: 0}
-  calindasPic3: {fileID: 0}
-  lilaProfile: {fileID: 0}
-  lilaPic1: {fileID: 0}
-  lilaPic2: {fileID: 0}
-  lilaPic3: {fileID: 0}
-  pic1: {fileID: 0}
-  pic2: {fileID: 0}
-  pic3: {fileID: 0}
-  profilePic: {fileID: 0}
-  nametagText: {fileID: 0}
-  paragraphText: {fileID: 0}
 --- !u!114 &1689248392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,18 +3331,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1689248394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1689248391}
-        m_MethodName: onClickContinueButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LoadSaveScreen
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1689248394
 MonoBehaviour:
   m_ObjectHideFlags: 0

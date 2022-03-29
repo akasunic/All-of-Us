@@ -2269,6 +2269,9 @@ MonoBehaviour:
   ContinueText: {fileID: 525097826}
   InactiveContinueText: {fileID: 1073513605}
   BackButtonText: {fileID: 0}
+  codeInputField: {fileID: 0}
+  codeText: {fileID: 0}
+  codeFieldPlaceholder: {fileID: 0}
   pronounsDropDownLabel: {fileID: 1097101228}
   languageDropDownLabel: {fileID: 628488987}
   nameFieldPlaceholder: {fileID: 418625416}
@@ -5959,6 +5962,7 @@ MonoBehaviour:
   listItemPrefab: {fileID: 1829950178707904974, guid: 7eb0ca7189597480d9b32e35a1164403,
     type: 3}
   infoListItemPrefab: {fileID: 0}
+  infoListItemResearchPrefab: {fileID: 0}
   whichList: Contacts
 --- !u!114 &953528882
 MonoBehaviour:
@@ -7735,12 +7739,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detailContainer: {fileID: 1293973425}
-  messages: {fileID: 6727028849673039923}
+  todo: {fileID: 0}
   notes: {fileID: 1195107063}
   contacts: {fileID: 1195798615}
   settings: {fileID: 1115129633}
   dictionary: {fileID: 1553549515}
-  messagesBorder: {fileID: 1607855250}
+  todoBorder: {fileID: 0}
   notesBorder: {fileID: 1414504675}
   contactsBorder: {fileID: 1963114345}
   settingsBorder: {fileID: 1439009590}
@@ -8376,7 +8380,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 67707283}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.5
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10612,6 +10616,7 @@ MonoBehaviour:
     type: 3}
   infoListItemPrefab: {fileID: 8016197110009607290, guid: c2ea61563350d464ebe604217def4e38,
     type: 3}
+  infoListItemResearchPrefab: {fileID: 0}
   whichList: Info
 --- !u!114 &1660853507
 MonoBehaviour:
@@ -11765,6 +11770,9 @@ MonoBehaviour:
   ContinueText: {fileID: 525097826}
   InactiveContinueText: {fileID: 1073513605}
   BackButtonText: {fileID: 0}
+  codeInputField: {fileID: 0}
+  codeText: {fileID: 0}
+  codeFieldPlaceholder: {fileID: 0}
   pronounsDropDownLabel: {fileID: 1097101228}
   languageDropDownLabel: {fileID: 628488987}
   nameFieldPlaceholder: {fileID: 418625416}
@@ -14367,6 +14375,7 @@ MonoBehaviour:
   listItemPrefab: {fileID: 7751141566266584329, guid: f0ec79a50168845648e775e6581ca2ac,
     type: 3}
   infoListItemPrefab: {fileID: 0}
+  infoListItemResearchPrefab: {fileID: 0}
   whichList: Info
 --- !u!224 &4093996274034674201
 RectTransform:
@@ -15510,4 +15519,5 @@ MonoBehaviour:
   listItemPrefab: {fileID: 2410521005090410589, guid: 222e3e318bc89404280010682cd9cd45,
     type: 3}
   infoListItemPrefab: {fileID: 0}
+  infoListItemResearchPrefab: {fileID: 0}
   whichList: Dialog
