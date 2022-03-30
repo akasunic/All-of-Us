@@ -4879,7 +4879,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1146814488
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4905,11 +4905,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 852.05457, y: -17.231083}
+  scrollPos: {x: 550.31726, y: -22.412647}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 0.66628206
+  zoom: 0.6062821
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -4917,9 +4917,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1146814550}
+  - {fileID: 1146814533}
   selectedCommands:
-  - {fileID: 1146814552}
+  - {fileID: 1146814544}
   variables:
   - {fileID: 1146814531}
   - {fileID: 1146814536}
@@ -4940,7 +4940,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &1146814490
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4971,7 +4971,7 @@ MonoBehaviour:
     stringVal: intro
 --- !u!114 &1146814492
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5006,7 +5006,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -0.8208618
     y: -33.24292
-    width: 94.42563
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5054,7 +5054,7 @@ MonoBehaviour:
     stringVal: Option4
 --- !u!114 &1146814496
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5297,7 +5297,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1146814497
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5332,7 +5332,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -114.1973
     y: -28.740318
-    width: 94.42563
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5488,7 +5488,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 148.93216
     y: 30.288816
-    width: 165.2665
+    width: 120.839485
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5574,7 +5574,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &1146814510
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5901,7 +5901,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 467.96567
     y: 229.60464
-    width: 94.42563
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6252,7 +6252,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &1146814518
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6287,7 +6287,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 481.11005
     y: 100.42578
-    width: 99.22839
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6434,7 +6434,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -229.69711
     y: -34.92702
-    width: 93.22493
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6564,7 +6564,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 669.0634
     y: 143.20885
-    width: 186.87897
+    width: 143.27129
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6619,7 +6619,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 505.51675
     y: 336.59
-    width: 138.85126
+    width: 98.407684
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6698,7 +6698,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 711.94495
     y: 225.14409
-    width: 140.05194
+    width: 101.04672
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6817,7 +6817,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 165.1583
     y: 199.32428
-    width: 138.85126
+    width: 97.088165
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6890,7 +6890,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Quest Turnin Testing
+          m_StringArgument: Turnin
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -6951,7 +6951,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -123.540405
     y: 287.43478
-    width: 134.0485
+    width: 93.129616
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6979,7 +6979,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -242.9136
     y: 128.82089
-    width: 125.64364
+    width: 86.53203
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7266,7 +7266,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0.124240875
     y: 197.17534
-    width: 128.04501
+    width: 87.85154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7927,7 +7927,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 683.50665
     y: 343.16333
-    width: 128.04501
+    width: 90.49058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7956,7 +7956,7 @@ MonoBehaviour:
   message: ink new_quest
 --- !u!114 &1146814566
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8213,7 +8213,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -337.14563
     y: -29.58664
-    width: 92.02425
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8261,7 +8261,7 @@ MonoBehaviour:
     stringVal: Option1
 --- !u!114 &1146814570
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
