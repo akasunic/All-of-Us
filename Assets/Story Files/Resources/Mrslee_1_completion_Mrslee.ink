@@ -55,8 +55,8 @@ Mrslee?Neutral "What do you think?"
   -> BadSolution
   
 ==Option1==
-MrsLee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm. Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
-MrsLee?Neutral "Lila can help if I feel embarrass about my English."
+Mrslee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm. Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
+Mrslee?Neutral "Lila can help if I feel embarrass about my English."
 
 * That’s a good idea, Mrs. Lee. Sometimes it’s hard to speak up and ask questions.
 -> Followup1 
@@ -64,15 +64,15 @@ MrsLee?Neutral "Lila can help if I feel embarrass about my English."
 -> Followup1
 
 ==Followup1==
-MrsLee?Neutral "I want to be brave and ask good questions. Lila can help me practice, then next time, I know enough."
-MrsLee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
+Mrslee?Neutral "I want to be brave and ask good questions. Lila can help me practice, then next time, I know enough."
+Mrslee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
 
 * I'm here to support you!
     -> END
   
 ==Option2==
-MrsLee?Neutral "No thank you, {player_name}. I want to solve the problem myself."
-MrsLee?Neutral "Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
+Mrslee?Neutral "No thank you, {player_name}. I want to solve the problem myself."
+Mrslee?Neutral "Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
 
 * I'll come back to help!
   ->TempGoodbye
@@ -86,7 +86,7 @@ Mrslee?Neutral "I feel stress, {player_name}. I learn in library workshop that s
 
   
 ==Option4==
-MrsLee?Smiling "I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?"
+Mrslee?Smiling "I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?"
 
 * Exactly! You can print out the information sheet and take it with you.
 -> Followup2 
@@ -94,8 +94,8 @@ MrsLee?Smiling "I know that the drug can be named lisinopril. If I look it up in
 -> Followup2
 
 ==Followup2==
-MrsLee?Neutral "Rashad help me print things at the library sometimes. I will ask him for help at the next health workshop."
-MrsLee?Smiling "I feel less stress knowing I can take a printout to show the pharmacist."
+Mrslee?Neutral "Rashad help me print things at the library sometimes. I will ask him for help at the next health workshop."
+Mrslee?Smiling "I feel less stress knowing I can take a printout to show the pharmacist."
 
 * It sounds like you're ready for this! 
  -> END
