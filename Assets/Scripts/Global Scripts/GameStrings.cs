@@ -194,11 +194,11 @@ public static class GameStrings {
 
                 {"end_of_quest_lee_1_title", "Help Mrs. Lee Feel Confident Picking up Eddie's Prescription"},
                 {"end_of_quest_lee_1_desc", "You helped Mrs. Lee figure out the correct prescription for her grandson, Eddie. Check in with her, and see how she’s doing."},
-                {"end_of_quest_lee_2_title", "Empower Mrs. Lee to schedule a doctor’s appointment"},
+                {"end_of_quest_lee_2_title", "Empower Mrs. Lee to Schedule a Doctor's Appointment"},
                 {"end_of_quest_lee_2_desc", "You encouraged Mrs. Lee to seek treatment for her headaches! Check in on her and see if she needs anything else."},
-                {"end_of_quest_lee_3_title", "Help Mrs. Lee prepare for her doctor's appointment"},
+                {"end_of_quest_lee_3_title", "Help Mrs. Lee Prepare for Her Doctor's Appointment"},
                 {"end_of_quest_lee_3_desc", "Mrs. Lee is prepared for her doctor’s appointment! You should check in with her to see how she’s doing."},
-                {"end_of_quest_lee_4_title", "Encourage Mrs. Lee to continue her health journey"},
+                {"end_of_quest_lee_4_title", "Encourage Mrs. Lee to Continue Her Health Journey"},
                 {"end_of_quest_lee_4_desc", "Mrs. Lee is feeling in charge of her health! Great work this week!"},
 
                 {"end_of_quest_elisa_1_title", "Find out more info on career fairs"},
