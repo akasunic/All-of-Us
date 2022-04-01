@@ -21,7 +21,7 @@ public class DetailPageManager : MonoBehaviour
     private static GlobalGameInfo.InfoItem openedInfoItem;
 
     private Color defaultColor = new Color(0.1960f, 0.1960f, 0.196f);
-    private Color selectedColor = Color.red;
+    private Color selectedColor = Color.blue;
     private static DetailPageManager selectedItem = null;
     private Transform overlayItem = null;
 
