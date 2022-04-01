@@ -70,7 +70,7 @@ public static class GameStrings {
                 {"go_to_sleep", "GO TO SLEEP"},
                 {"current_task", "Current Task"},
                 {"meet", "Meet"},
-                {"good_morning_message", "Good morning! Another beautiful week at Bloomwood. Ready to plan for a new Block Party?"},
+                {"good_morning_message", "Good morning! Another beautiful day in Bloomwood."},
                 {"search_term", "Search a term..."},
                 
                 // Saved Games
@@ -234,13 +234,13 @@ public static class GameStrings {
                 {"task_map_buttontext", "NEXT"},
 
                 {"neighbors_map_yellowtitle", "What should I do?"},
-                {"neighbors_map_whitetitle", "Meet Neighbors"},
+                {"neighbors_map_whitetitle", "Talk to your Neighbors"},
                 {"neighbors_map_whitetext", "The map shows you all the important places around town. Hover over a location to see who is there right now. \n Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas."},
                 {"neighbors_map_buttontext", "NEXT"},
 
                 {"phone_map_yellowtitle", "What should I do?"},
                 {"phone_map_whitetitle", "Jot It All Down"},
-                {"phone_map_whitetext", "Click on your phone to look at your To-Do List. This will help you figure out your next steps. "},
+                {"phone_map_whitetext", "Click on your phone to see what you have learned and check your To-Do List. This will help you figure out your next steps."},
                 {"phone_map_buttontext", "GOT IT"},
 
                 {"todolist_phone_yellowtitle", "Tools and Resources"},

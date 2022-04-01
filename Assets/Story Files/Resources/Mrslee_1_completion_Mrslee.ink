@@ -74,8 +74,8 @@ Mrslee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
 Mrslee?Neutral "No thank you, {player_name}. I want to solve the problem myself."
 Mrslee?Neutral "Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
 
-* I'll come back to help!
-  ->TempGoodbye
+* Ok, let me try again
+  ->PuzzleInterface
   
 ==Option3==
   
@@ -83,7 +83,6 @@ Mrslee?Neutral "I feel stress, {player_name}. I learn in library workshop that s
 
 * I'll come back to help!
   ->TempGoodbye
-
   
 ==Option4==
 Mrslee?Smiling "I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?"
