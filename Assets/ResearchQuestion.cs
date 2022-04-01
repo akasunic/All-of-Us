@@ -21,7 +21,7 @@ public class ResearchQuestion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GlobalGameInfo.researchVersion == 3) {
+        if (GlobalGameInfo.researchVersion == 2) {
             // Disabling the toggles so users cannot change the toggles
             learningFirstOption.enabled = false;
             learningSecondOption.enabled = false;
@@ -125,7 +125,7 @@ public class ResearchQuestion : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing") {
-            if (GlobalGameInfo.researchVersion == 3 || GlobalGameInfo.researchVersion == 2 && GlobalGameInfo.allResearchQuestionsAnswered) {
+            if (GlobalGameInfo.researchVersion == 2 || GlobalGameInfo.researchVersion == 1 && GlobalGameInfo.allResearchQuestionsAnswered) {
                 selectButton.SetActive(true);
             }
         }
@@ -136,7 +136,7 @@ public class ResearchQuestion : MonoBehaviour
     void Update()
     {
         if (SceneManager.GetActiveScene().name == "Quest Turnin Testing" &&
-            GlobalGameInfo.researchVersion == 2 &&
+            GlobalGameInfo.researchVersion == 1 &&
             GlobalGameInfo.allResearchQuestionsAnswered) {
             selectButton.SetActive(true);
         }

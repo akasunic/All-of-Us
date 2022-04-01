@@ -36,7 +36,7 @@ public class InfoManager : MonoBehaviour
         }
 
         // Set the notes header name, pic and background color corresponding to the person
-        if (GlobalGameInfo.researchVersion <= 1) {
+        if (GlobalGameInfo.researchVersion <= 0) {
             Transform charName = this.transform.Find("Header/PersonText");
             Transform charPic = this.transform.Find("Header/PersonIcon");
             Transform charBackground = this.transform.Find("Header/HeaderBackground");
@@ -50,7 +50,7 @@ public class InfoManager : MonoBehaviour
         Transform newItem;
         for (int i = 0; i < items.Count; i++)
         {
-            if (GlobalGameInfo.researchVersion <= 1) {
+            if (GlobalGameInfo.researchVersion <= 0) {
                 newItem = Instantiate(infoListLineItem, go);
             } else {
                 newItem = Instantiate(ResearchQuestion, go);

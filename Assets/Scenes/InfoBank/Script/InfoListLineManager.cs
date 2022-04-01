@@ -25,7 +25,7 @@ public class InfoListLineManager : MonoBehaviour
         this.transform.Find("Content/Text").GetComponent<Text>().text = item.description;
         
         // Non research version
-        if (GlobalGameInfo.researchVersion == 1)
+        if (GlobalGameInfo.researchVersion == 0)
         {
              // If we have already viewed it before, don't have the red circle next to the line
             // Will only be 1, the first time we click the notes/journal app
@@ -72,7 +72,7 @@ public class InfoListLineManager : MonoBehaviour
     void Update()
     {
         // Will only be 1, the first time we click the notes/journal app
-        if (item != null && item.timesViewed != 1 && buttonToggledOn && GlobalGameInfo.researchVersion <= 1)
+        if (item != null && item.timesViewed != 1 && buttonToggledOn && GlobalGameInfo.researchVersion <= 0)
         {
             this.transform.Find("Content/Image").gameObject.SetActive(false);
             buttonToggledOn = false;

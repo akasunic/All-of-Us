@@ -289,7 +289,7 @@ public class AddToList : MonoBehaviour
             foreach (KeyValuePair<string, List<GlobalGameInfo.InfoItem>> character in chars)
             {
                 // Add all notes of people
-                if (GlobalGameInfo.researchVersion <= 1) {
+                if (GlobalGameInfo.researchVersion <= 0) {
                     Transform newItem = Instantiate(infoListItemPrefab, itemsList);
                     newItem.GetComponent<InfoManager>().setDetails(character.Key, character.Value);
                 } else {
