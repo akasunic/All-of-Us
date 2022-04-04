@@ -55,14 +55,12 @@ Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into he
 
 * It's so nice to hear you pump her up like this.
   -> Suggestion1
-* Would you feel comfortable going with her to the pharmacy?
-  -> Suggestion2
   
 ==Suggestion1==
 ~ notification = "Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1"
 # notification Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1
 
-Lila?Neutral "I say these things to her all the time, but maybe it's time for a big pep talk. 
+Lila?Neutral "I know this is her prescription anxiety acting up."
 Lila?Smiling "I need to pick up a prescription for Trisha tonight; can I pick up Eddie's prescription up for Mrs. Lee? 
 Lila?Smiling "Have her stop by and give me the information, if that would help. "
 

@@ -45,7 +45,7 @@ Elisa?Smiling "I used to help with all my folks' appointments, until their Engli
   
 ==Suggestion1==
 ~ notification = "Elisa_Day 3_Mrs. Lee could ask someone to be on the phone with her during the appointment_Mrslee3-4"
-# notification = Elisa_Day 3_Mrs. Lee could ask someone to be on the phone with her during the appointment_MrsLee3-4
+# notification Elisa_Day 3_Mrs. Lee could ask someone to be on the phone with her during the appointment_Mrslee3-4
 
 Elisa?Smiling "When my mom is worried about an appointment these days, and I can't be there in person, she'll get one of us on speakerphone."
 Elisa?Smiling "Honestly, she doesn't need it much anymore, but having one of us available to ask questions makes it less stressful for her."

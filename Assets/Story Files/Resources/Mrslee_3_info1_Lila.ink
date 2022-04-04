@@ -54,8 +54,8 @@ Lila?Neutral "I've been trying to brainstorm ways we can make Mrs. Lee more comf
   -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Lila_Day 3_Mrs. Lee could ask Mrs. Lee to go to her doctor appointment_Mrslee3-2"
-# notification Lila_Day 3_Mrs. Lee could ask Lila to go to her doctor appointment_Mrslee3-2"
+~ notification = "Lila_Day 3_Mrs. Lee could ask Lila to go to her doctor appointment_Mrslee3-2"
+# notification Lila_Day 3_Mrs. Lee could ask Lila to go to her doctor appointment_Mrslee3-2
 
 Lila?Smiling "We could suggest that I will go to the appointment with her. She might not even know that having a friend along is an option."
 
