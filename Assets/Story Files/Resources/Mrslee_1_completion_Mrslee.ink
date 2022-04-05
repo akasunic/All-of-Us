@@ -55,7 +55,8 @@ Mrslee?Neutral "What do you think?"
   -> BadSolution
   
 ==Option2==
-Mrslee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm. Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
+Mrslee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm."
+Mrslee?Smiling "Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
 Mrslee?Neutral "Lila can help if I feel embarrass about my English."
 
 * That’s a good idea, Mrs. Lee. Sometimes it’s hard to speak up and ask questions.

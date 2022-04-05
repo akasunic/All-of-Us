@@ -59,7 +59,7 @@ Elisa?Smiling "Honestly, she doesn't need it much anymore, but having one of us 
 ~ notification = "Elisa_Day 3_Mrs. Lee can create a list of questions and symptoms to take to her appointment with her_Mrslee3-3"
 # notification Elisa_Day 3_Mrs. Lee can create a list of questions and symptoms to take to her appointment with her_Mrslee3-3
 
-Elisa?Smiling "Well, one of the things we've all learned to do is to write down allllll our questions ahead of time"
+Elisa?Smiling "Well, one of the things we've all learned to do is to write down allllll our questions ahead of time."
 Elisa?Smiling "We help "the patient" make a big list of symptoms they want to mention, and sometimes we'll remember something Mom forgot. 
 Elisa?Smiling "When it's your appointment, it's easy to forget all the little details."
 Elisa?Smiling "Having it in writing makes it feel more real, too, when the doctor asks. You don't need to remember how many times you've been itchy; you just have to look at your notebook."
