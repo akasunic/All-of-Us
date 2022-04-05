@@ -84,7 +84,7 @@ public class StartWeek : MonoBehaviour
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
         }
 
-        Title.text = LangClass.getString("saved_games");
+        Title.text = LangClass.getString("start_week");
         BackButtonText.text = LangClass.getString("back");
 
         int y_location = 152;
