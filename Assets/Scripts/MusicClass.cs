@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
- 
+using UnityEngine.SceneManagement;
+
  public class MusicClass : MonoBehaviour
  {
      private AudioSource _audioSource;
@@ -15,7 +16,7 @@
         if (objs.Length > 1) {
             return;
         }
-         _audioSource.Play();
+        _audioSource.Play();
          
      }
  
