@@ -75,7 +75,7 @@ public static class GameStrings {
                 
                 // Saved Games
                 {"saved_games", "Saved Games"},
-                {"chat_with", "Who should I chat with?"},
+                {"chat_with", "Please pick someone to help during this week!"},
                 {"completed", "Completed"},
 
                 // NPC info
