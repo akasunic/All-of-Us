@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 21464695}
   - component: {fileID: 21464696}
   - component: {fileID: 21464698}
-  - component: {fileID: 21464697}
   - component: {fileID: 21464700}
   - component: {fileID: 21464699}
   m_Layer: 5
@@ -225,63 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d977ae18d1ca38e4bb56eb134626664b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &21464697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21464691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 1260188725}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 1881587402}
-  StartWeekText2: {fileID: 695574931}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 21464691}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 1210712824}
-  RashadCard: {fileID: 328736589}
-  LilaCard: {fileID: 1309659178}
-  MrCalindasCard: {fileID: 1937844507}
-  MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &21464698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +241,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 21464697}
+        - m_Target: {fileID: 180832474}
           m_MethodName: selectNPC
           m_Mode: 5
           m_Arguments:
@@ -618,10 +560,6 @@ MonoBehaviour:
   LilaCard: {fileID: 1309659178}
   MrCalindasCard: {fileID: 1937844507}
   MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
   blackOverlay: {fileID: 208305728}
   TutorialContainer: {fileID: 561344071}
   TutorialArrow: {fileID: 485864856}
@@ -999,7 +937,6 @@ GameObject:
   - component: {fileID: 315804692}
   - component: {fileID: 315804693}
   - component: {fileID: 315804695}
-  - component: {fileID: 315804694}
   - component: {fileID: 315804697}
   - component: {fileID: 315804696}
   m_Layer: 5
@@ -1089,63 +1026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d977ae18d1ca38e4bb56eb134626664b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &315804694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315804688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 1260188725}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 1881587402}
-  StartWeekText2: {fileID: 695574931}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 315804688}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 1210712824}
-  RashadCard: {fileID: 328736589}
-  LilaCard: {fileID: 1309659178}
-  MrCalindasCard: {fileID: 1937844507}
-  MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &315804695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,7 +1043,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 315804694}
+        - m_Target: {fileID: 180832474}
           m_MethodName: selectNPC
           m_Mode: 5
           m_Arguments:
@@ -1664,7 +1544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 294.24945}
+  m_AnchoredPosition: {x: -30, y: 294.25604}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -2486,10 +2366,6 @@ MonoBehaviour:
   LilaCard: {fileID: 0}
   MrCalindasCard: {fileID: 0}
   MrsLeeCard: {fileID: 0}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
   blackOverlay: {fileID: 0}
   TutorialContainer: {fileID: 0}
   TutorialArrow: {fileID: 0}
@@ -2749,7 +2625,6 @@ GameObject:
   - component: {fileID: 977901880}
   - component: {fileID: 977901879}
   - component: {fileID: 977901878}
-  - component: {fileID: 977901881}
   - component: {fileID: 977901882}
   - component: {fileID: 977901884}
   - component: {fileID: 977901883}
@@ -2823,7 +2698,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 977901881}
+      - m_Target: {fileID: 180832474}
         m_MethodName: tutorialClick
         m_Mode: 1
         m_Arguments:
@@ -2871,63 +2746,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977901876}
   m_CullTransparentMesh: 0
---- !u!114 &977901881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977901876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 0}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 0}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 0}
-  StartWeekText2: {fileID: 0}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 0}
-  RashadCard: {fileID: 0}
-  LilaCard: {fileID: 0}
-  MrCalindasCard: {fileID: 0}
-  MrsLeeCard: {fileID: 0}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 561344071}
-  TutorialArrow: {fileID: 485864856}
-  TutorialButton: {fileID: 977901878}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 1465606908}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &977901882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,7 +3148,6 @@ GameObject:
   - component: {fileID: 1061816443}
   - component: {fileID: 1061816444}
   - component: {fileID: 1061816446}
-  - component: {fileID: 1061816445}
   - component: {fileID: 1061816448}
   - component: {fileID: 1061816447}
   m_Layer: 5
@@ -3420,63 +3237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d977ae18d1ca38e4bb56eb134626664b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1061816445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061816439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 1260188725}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 1881587402}
-  StartWeekText2: {fileID: 695574931}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 1061816439}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 1210712824}
-  RashadCard: {fileID: 328736589}
-  LilaCard: {fileID: 1309659178}
-  MrCalindasCard: {fileID: 1937844507}
-  MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &1061816446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3254,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1061816445}
+        - m_Target: {fileID: 180832474}
           m_MethodName: selectNPC
           m_Mode: 5
           m_Arguments:
@@ -5238,7 +4998,6 @@ GameObject:
   - component: {fileID: 1544254107}
   - component: {fileID: 1544254108}
   - component: {fileID: 1544254110}
-  - component: {fileID: 1544254109}
   - component: {fileID: 1544254112}
   - component: {fileID: 1544254111}
   m_Layer: 5
@@ -5328,63 +5087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d977ae18d1ca38e4bb56eb134626664b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1544254109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544254103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 1260188725}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 1881587402}
-  StartWeekText2: {fileID: 695574931}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 1544254103}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 1210712824}
-  RashadCard: {fileID: 328736589}
-  LilaCard: {fileID: 1309659178}
-  MrCalindasCard: {fileID: 1937844507}
-  MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &1544254110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5402,7 +5104,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1544254109}
+        - m_Target: {fileID: 180832474}
           m_MethodName: selectNPC
           m_Mode: 5
           m_Arguments:
@@ -5534,7 +5236,6 @@ GameObject:
   - component: {fileID: 1573668417}
   - component: {fileID: 1573668416}
   - component: {fileID: 1573668414}
-  - component: {fileID: 1573668415}
   - component: {fileID: 1573668420}
   - component: {fileID: 1573668419}
   m_Layer: 5
@@ -5576,63 +5277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e0b7b1d1957d34c8899395e88a6e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1573668415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573668412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 1573668412}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 0}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 0}
-  StartWeekText2: {fileID: 0}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 0}
-  RashadCard: {fileID: 0}
-  LilaCard: {fileID: 0}
-  MrCalindasCard: {fileID: 0}
-  MrsLeeCard: {fileID: 0}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &1573668416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5650,7 +5294,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1573668415}
+        - m_Target: {fileID: 180832474}
           m_MethodName: GoToOpeningScreen
           m_Mode: 1
           m_Arguments:
@@ -6115,7 +5759,6 @@ GameObject:
   - component: {fileID: 1663235243}
   - component: {fileID: 1663235242}
   - component: {fileID: 1663235241}
-  - component: {fileID: 1663235240}
   - component: {fileID: 1663235246}
   - component: {fileID: 1663235245}
   m_Layer: 5
@@ -6145,63 +5788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 452.50003, y: -347.5}
   m_SizeDelta: {x: 77.69617, y: 32.69523}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1663235240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663235238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 0}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 0}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 0}
-  StartWeekText2: {fileID: 0}
-  Rashad0: {fileID: 0}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 0}
-  RashadCard: {fileID: 0}
-  LilaCard: {fileID: 0}
-  MrCalindasCard: {fileID: 0}
-  MrsLeeCard: {fileID: 0}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 561344071}
-  TutorialArrow: {fileID: 485864856}
-  TutorialButton: {fileID: 977901878}
-  YellowTitle: {fileID: 1299710351}
-  WhiteTitle: {fileID: 1046484848}
-  WhiteText: {fileID: 2017037678}
-  ButtonText: {fileID: 1301571795}
-  Glow: {fileID: 1465606908}
-  HelpButton: {fileID: 1663235238}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &1663235241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6257,7 +5843,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663235240}
+      - m_Target: {fileID: 180832474}
         m_MethodName: activateTutorial
         m_Mode: 1
         m_Arguments:
@@ -7709,8 +7295,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1843045361}
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.8864119
+  m_Value: 0
+  m_Size: 0.99998105
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7777,7 +7363,6 @@ GameObject:
   - component: {fileID: 2030261523}
   - component: {fileID: 2030261524}
   - component: {fileID: 2030261526}
-  - component: {fileID: 2030261525}
   - component: {fileID: 2030261529}
   - component: {fileID: 2030261528}
   m_Layer: 5
@@ -7867,63 +7452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d977ae18d1ca38e4bb56eb134626664b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2030261525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030261519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1aa870b304841bdb071498bb0a5c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSavedGameItem: {fileID: 0}
-  BackButton: {fileID: 0}
-  BackButtonText: {fileID: 0}
-  Title: {fileID: 746744051}
-  ScrollView: {fileID: 0}
-  SelectProfile: {fileID: 0}
-  StartWeekContainer: {fileID: 1260188725}
-  SelectProfileText: {fileID: 0}
-  StartWeekText1: {fileID: 1881587402}
-  StartWeekText2: {fileID: 695574931}
-  Rashad0: {fileID: 2030261519}
-  Rashad1: {fileID: 0}
-  RashadCompleted: {fileID: 0}
-  Lila0: {fileID: 0}
-  Lila1: {fileID: 0}
-  LilaCompleted: {fileID: 0}
-  Elisa0: {fileID: 0}
-  Elisa1: {fileID: 0}
-  ElisaCompleted: {fileID: 0}
-  MrCalindas0: {fileID: 0}
-  MrCalindas1: {fileID: 0}
-  MrCalindasCompleted: {fileID: 0}
-  MrsLee0: {fileID: 0}
-  MrsLee1: {fileID: 0}
-  MrsLeeCompleted: {fileID: 0}
-  ElisaCard: {fileID: 1210712824}
-  RashadCard: {fileID: 328736589}
-  LilaCard: {fileID: 1309659178}
-  MrCalindasCard: {fileID: 1937844507}
-  MrsLeeCard: {fileID: 771542331}
-  CharacterCardName: {fileID: 0}
-  CharacterCardAgePronouns: {fileID: 0}
-  CharacterCardTitle: {fileID: 0}
-  CharacterCardDescription: {fileID: 0}
-  blackOverlay: {fileID: 0}
-  TutorialContainer: {fileID: 0}
-  TutorialArrow: {fileID: 0}
-  TutorialButton: {fileID: 0}
-  YellowTitle: {fileID: 0}
-  WhiteTitle: {fileID: 0}
-  WhiteText: {fileID: 0}
-  ButtonText: {fileID: 0}
-  Glow: {fileID: 0}
-  HelpButton: {fileID: 0}
-  HelpButtonText: {fileID: 0}
 --- !u!114 &2030261526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,7 +7469,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2030261525}
+        - m_Target: {fileID: 180832474}
           m_MethodName: selectNPC
           m_Mode: 5
           m_Arguments:
