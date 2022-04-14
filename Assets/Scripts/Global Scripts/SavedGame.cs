@@ -79,12 +79,6 @@ public class SavedGame : object {
             day = 0;
             this.incWeek();
             this.setCharacterDone(GlobalGameInfo.GetCurrentNPC());
-            Debug.Log("SAVED GAME CLASS");
-            Debug.Log(progress[CharacterResources.CHARACTERS.LILA]);
-            Debug.Log(progress[CharacterResources.CHARACTERS.LEE]);
-            Debug.Log(progress[CharacterResources.CHARACTERS.CALINDAS]);
-            Debug.Log(progress[CharacterResources.CHARACTERS.ELISA]);
-            Debug.Log(progress[CharacterResources.CHARACTERS.RASHAD]);
         }
     }
 
