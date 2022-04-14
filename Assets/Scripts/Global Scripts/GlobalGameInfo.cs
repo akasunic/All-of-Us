@@ -26,8 +26,6 @@ public static class GlobalGameInfo
 
     // Research version: 0=regular, 1=version1, 2=version2
     public static int researchVersion = 0;
-    // Code for the research version purposes
-    public static string playerCode = "";
     // A flag to determine whether or not to show the "Select" button for the journal items
     public static bool allResearchQuestionsAnswered = false;
     // Total of 5 weeks

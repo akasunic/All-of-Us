@@ -46,9 +46,6 @@ public class ResearchVersionTurnin : MonoBehaviour
             UIContainer.SetActive(false);
             continueButton.gameObject.SetActive(false);
 
-            // Data Collection - Recording that the player has clicked on the profile button - to the cloud
-            DataCollection.LogEvent("RECORDING RESEARCH DATA. User code: " + GlobalGameInfo.playerCode + ", Quest Number: " + GlobalGameInfo.GetCurrentDay(), "Clicked On Mrs. Lee's Profile Button.");
-
         } else {
             MrsLeeImage.SetActive(true);
             MrsLeeQuestion.SetActive(true);

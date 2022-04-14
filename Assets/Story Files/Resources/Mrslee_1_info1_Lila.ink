@@ -45,8 +45,6 @@ Lila?Smiling "Yeah! We were neighbors growing up. We did the whole "walking to s
 Lila?Smiling "Ohh yes! I haven't seen her yet this morning, I've been so busy running around. I usually see her before her aerobics class."
 Lila?Smiling "She's really been coming out of her shell recently... being around other people definitely helps. She's okay, right?"
 
-* She's trying really hard to help Eddie, but she's stressed out.
-  -> Explain2
 * She needs some encouragement speaking up for herself at the pharmacy. 
   -> Explain2
 
@@ -60,8 +58,8 @@ Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into he
 ~ notification = "Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1"
 # notification Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1
 
-Lila?Neutral "I know this is her prescription anxiety acting up." 
-Lila?Smiling "I need to pick up a prescription for Trisha tonight; can I pick up Eddie's prescription up for Mrs. Lee?"
+Lila?Neutral "I know this is her medical anxiety acting up."
+Lila?Smiling "I need to pick up a prescription for Trisha tonight; can I pick up Eddie's prescription up for Mrs. Lee? 
 Lila?Smiling "Have her stop by and give me the information, if that would help. "
 
 * I'm not sure she would be comfortable with that... maybe a pep talk instead?
