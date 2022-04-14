@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 50857805}
   - component: {fileID: 50857801}
   - component: {fileID: 50857800}
-  - component: {fileID: 50857799}
   - component: {fileID: 50857802}
   m_Layer: 5
   m_Name: Tutorial Button
@@ -336,36 +335,6 @@ RectTransform:
   m_AnchoredPosition: {x: -90.2, y: -113.9}
   m_SizeDelta: {x: 99.16124, y: 37.806442}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &50857799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50857797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1b5ec7b8e3048edac7c7eb084b72bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: {fileID: 1649427292}
-  TutorialContainerDictionary: {fileID: 1232714479}
-  TutorialArrowDictionary: {fileID: 236747287}
-  TutorialButtonDictionary: {fileID: 50857805}
-  YellowTitleDictionary: {fileID: 93472808}
-  WhiteTitleDictionary: {fileID: 1633870934}
-  WhiteTextDictionary: {fileID: 801260341}
-  ButtonTextDictionary: {fileID: 340251410}
-  DictionaryGlow: {fileID: 486817400}
-  TutorialContainerSpeed: {fileID: 2072782507}
-  TutorialButtonSpeed: {fileID: 261820909}
-  YellowTitleSpeed: {fileID: 1609713401}
-  WhiteTitleSpeed: {fileID: 2008254325}
-  WhiteTextSpeed: {fileID: 781682023}
-  ButtonTextSpeed: {fileID: 1851242790}
-  SpeedImage: {fileID: 1833646899}
-  SpeedGlow: {fileID: 811039674}
-  toggleComponents: []
 --- !u!114 &50857800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +535,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 50857799}
+      - m_Target: {fileID: 504589056}
         m_MethodName: tutorialDictionaryClick
         m_Mode: 1
         m_Arguments:
@@ -1160,7 +1129,6 @@ GameObject:
   - component: {fileID: 261820908}
   - component: {fileID: 261820907}
   - component: {fileID: 261820906}
-  - component: {fileID: 261820905}
   m_Layer: 5
   m_Name: Tutorial Button
   m_TagString: Untagged
@@ -1188,36 +1156,6 @@ RectTransform:
   m_AnchoredPosition: {x: -189, y: -186}
   m_SizeDelta: {x: 99.16124, y: 37.806442}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &261820905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261820903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1b5ec7b8e3048edac7c7eb084b72bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingName: {fileID: 1649427292}
-  TutorialContainerDictionary: {fileID: 1232714479}
-  TutorialArrowDictionary: {fileID: 236747287}
-  TutorialButtonDictionary: {fileID: 50857805}
-  YellowTitleDictionary: {fileID: 93472808}
-  WhiteTitleDictionary: {fileID: 1633870934}
-  WhiteTextDictionary: {fileID: 801260341}
-  ButtonTextDictionary: {fileID: 340251410}
-  DictionaryGlow: {fileID: 486817400}
-  TutorialContainerSpeed: {fileID: 2072782507}
-  TutorialButtonSpeed: {fileID: 261820909}
-  YellowTitleSpeed: {fileID: 1609713401}
-  WhiteTitleSpeed: {fileID: 2008254325}
-  WhiteTextSpeed: {fileID: 781682023}
-  ButtonTextSpeed: {fileID: 1851242790}
-  SpeedImage: {fileID: 1833646899}
-  SpeedGlow: {fileID: 811039674}
-  toggleComponents: []
 --- !u!114 &261820906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,7 +1319,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 261820905}
+      - m_Target: {fileID: 504589056}
         m_MethodName: tutorialSpeedClick
         m_Mode: 1
         m_Arguments:
