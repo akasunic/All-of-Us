@@ -4222,7 +4222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AlignmentTest
+  m_Text: ToDo List
 --- !u!222 &482950833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4698,7 +4698,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 872794241}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999818
+  m_Size: 0.94610584
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4804,9 +4804,6 @@ MonoBehaviour:
   ContinueText: {fileID: 85013559}
   InactiveContinueText: {fileID: 274692955}
   BackButtonText: {fileID: 335594430}
-  codeInputField: {fileID: 146854537}
-  codeText: {fileID: 1967329345}
-  codeFieldPlaceholder: {fileID: 85825651}
   pronounsDropDownLabel: {fileID: 1754754793}
   languageDropDownLabel: {fileID: 2052819509}
   nameFieldPlaceholder: {fileID: 1311408409}
@@ -5074,9 +5071,6 @@ MonoBehaviour:
   ContinueText: {fileID: 85013559}
   InactiveContinueText: {fileID: 274692955}
   BackButtonText: {fileID: 335594430}
-  codeInputField: {fileID: 146854537}
-  codeText: {fileID: 1967329345}
-  codeFieldPlaceholder: {fileID: 85825651}
   pronounsDropDownLabel: {fileID: 1754754793}
   languageDropDownLabel: {fileID: 2052819509}
   nameFieldPlaceholder: {fileID: 1311408409}
@@ -5512,7 +5506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AlignmentTest
+  m_Text: Dictionary
 --- !u!222 &663803350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5797,8 +5791,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1812541902}
   m_HandleRect: {fileID: 1812541901}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.9999868
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7047,8 +7041,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368687712}
   m_HandleRect: {fileID: 368687711}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.9999869
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7586,8 +7580,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1914277554}
   m_HandleRect: {fileID: 1914277553}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9229,7 +9223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000011960147}
+  m_AnchoredPosition: {x: 0, y: 0.00095384906}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1281262038
@@ -10439,7 +10433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AlignmentTest
+  m_Text: Contacts
 --- !u!222 &1372027237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11719,7 +11713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AlignmentTest
+  m_Text: Settings
 --- !u!222 &1643948067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13811,7 +13805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AlignmentTest
+  m_Text: My Journal
 --- !u!222 &1913586841
 CanvasRenderer:
   m_ObjectHideFlags: 0
