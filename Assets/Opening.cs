@@ -36,7 +36,7 @@ public class Opening : MonoBehaviour
         //set a session id if not there yet
         ResetGame.startGame();
 
-        SceneManager.LoadScene("Backstories");
+        SceneManager.LoadScene("BackstoriesAnimation");
     }
 
     public void onContinueClick() {
