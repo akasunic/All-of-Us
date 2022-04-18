@@ -101,11 +101,10 @@ public class InkFileManager : MonoBehaviour {
     }
 
     private void OnSceneChanged(Scene prev, Scene next) {
-        EndOfQuest eoq = null;
-        if ((eoq = FindObjectOfType<EndOfQuest>()) &&
-            completedQuestString != null && completedQuestString != "") {
+        if (completedQuestString != null && completedQuestString != "") {
             eoq.EndQuest(completedQuestString);
             completedQuestString = null;
+            SceneManager.LoadScene("EndOfQuest");
         }
         if (!GetVisualNovelComponents())
             return;
@@ -266,9 +265,7 @@ public class InkFileManager : MonoBehaviour {
 
 
     public void TryGoHome() {
-        // if (CanAdvanceDay()) {
-            SceneManager.LoadScene("Home");
-        // }
+        SceneManager.LoadScene("Home");
     }
 
     public void TryLoadVNScene(string person) {
