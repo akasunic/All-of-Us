@@ -41,54 +41,81 @@ Rashad?Neutral "That's great to hear, {player_name}. I've really been going thro
 ==PuzzleInterface==
 # turnin
 
-* They picked Option 1. 
-  -> Option1
-* They picked Option 2. 
-  -> Option2
-* They picked Option 3.
-  -> Option3
-* They picked Option 4. 
-  -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+* They picked Solution 1. 
+  -> Solution1
+* They picked Solution 2. 
+  -> Solution2
+* They picked Solution 3.
+  -> Solution3
+* They picked Solution 4. 
+  -> Solution4
+  
+  ==Solution1==
+Rashad?Smiling “Yes, good idea Text”
 
-==GoodSolution==
-Rashad?Neutral "Wow, {player_name}. I think I underestimated just how <i>serious</i> this is. Thank you so much for taking the time to piece together all of this information."
-Rashad?Neutral "I haven't tried therapy, but I definitely see the value in having a Black therapist, someone who looks like me and truly understands the struggle of being a black man. 
-Rashad?Neutral “And I have been looking to get into running again... I really appreciate this."
+Rashad?Neutral “expansion” 
 
-* Before I forget, here’s a therapist rec from Lila! I got your back!
+Player Response
+-> Followup1 
+Alternate Player Response
+-> Followup1
+
+==Followup1==
+Rashad?Neutral “Reiterate learning”
+
+Rashad?Smiling “expand on reiteration” 
+
+
+* I'm here to support you!
+    -> END
+  
+  
+  ==Solution2==
+Rashad?Neutral “Decline Answer”
+
+Rashad?Neutral “Explain Decline”
+
+I'll come back to help!
+  ->TempGoodbye
+  
+  ==Solution3==
+  
+Rashad?Neutral "Decline answer"  
+
+I'll come back to help!
+  ->TempGoodbye
+
+  
+  
+  ==Solution4==
+Rashad?Smiling “Accept answer”
+
+Player Response
+-> Followup2 
+Alternate Player Response
+-> Followup2
+
+==Followup2==
+Rashad?Neutral “Reinforce learning”
+
+Rashad?Smiling “continue learning”
+
+
+* It sounds like you're ready for this! 
   -> SolvedGoodbye
-* That’s what friends are for. Also, here's a therapist rec, from Lila.
-  -> SolvedGoodbye
 
+//do all of the other possible info types fall here?
 
-==BadSolution==
-Rashad?Neutral "I'm not so sure...This just sounds stressful and more like a bandaid rather than an actual solution . Did you find out anything else?"
-
-* Hold on, I have some more information.
-  -> PuzzleInterface
-* Ugh, you’re right. Let me look at my notes again and get back to you.
-  -> TempGoodbye
 
 ==SolvedGoodbye==
-Rashad?Smiling "I'm really happy I trusted you with this, {player_name}. I'm going to head out to get back to work, but I'll definitely follow up on this rec from Lila ASAP and hit up Mr. Calindas for some running tips."
-Rashad?Smiling "You take care, okay? And keep your glitter out of my books. See ya!"
 
-* Hah! Only if you remember to follow up on those resources!
--> END
-* I’m gonna go home and take care of this glitter situation. Take care!
--> END
+  -> END
 
 ==TempGoodbye==
-Rashad?Neutral "That's understandable. It's a tough situation to navigate. I'll be here, when you're ready."
+Rashad?Neutral "Okay, come back soon!"
 
-* Ok, see you later!
+* No worries, Rashad. I will.
   -> END
-* Thanks, man. I'll be right back.
-  -> END
-
-
 
 
 

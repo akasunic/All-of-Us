@@ -36,60 +36,85 @@ Rashad?Neutral "Oh, I didn't know you would find out what I needed this quickly.
   -> PuzzleInterface
 * Give me a second. I want to make sure my information is correct.
   -> TempGoodbye
-  
+
 ==PuzzleInterface==
 # turnin
 
-* They picked Option 1. 
-  -> Option1
-* They picked Option 2. 
-  -> Option2
-* They picked Option 3.
-  -> Option3
-* They picked Option 4. 
-  -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+* They picked Solution 1. 
+  -> Solution1
+* They picked Solution 2. 
+  -> Solution2
+* They picked Solution 3.
+  -> Solution3
+* They picked Solution 4. 
+  -> Solution4
+  
+  ==Solution1==
+Rashad?Smiling “Yes, good idea Text”
+
+Rashad?Neutral “expansion” 
+
+Player Response
+-> Followup1 
+Alternate Player Response
+-> Followup1
+
+==Followup1==
+Rashad?Neutral “Reiterate learning”
+
+Rashad?Smiling “expand on reiteration” 
 
 
+* I'm here to support you!
+    -> END
+  
+  
+  ==Solution2==
+Rashad?Neutral “Decline Answer”
 
-==GoodSolution==
-Rashad?Smiling "Wow, this is really good to know. This makes me a LOT less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
+Rashad?Neutral “Explain Decline”
 
-* Thanks for trusting me. Oh, and there's a running club you should look into.
+I'll come back to help!
+  ->TempGoodbye
+  
+  ==Solution3==
+  
+Rashad?Neutral "Decline answer"  
+
+I'll come back to help!
+  ->TempGoodbye
+
+  
+  
+  ==Solution4==
+Rashad?Smiling “Accept answer”
+
+Player Response
+-> Followup2 
+Alternate Player Response
+-> Followup2
+
+==Followup2==
+Rashad?Neutral “Reinforce learning”
+
+Rashad?Smiling “continue learning”
+
+
+* It sounds like you're ready for this! 
   -> SolvedGoodbye
-* Glad I could help, Rashad!
- -> SolvedGoodbye
 
-==BadSolution==
-Rashad?Neutral "Hmm, okay. This is kind of helpful but I still don't quite know what to expect..."
-
-* Wait a second. Let me try that again.
-  -> PuzzleInterface
-* Actually, I need to check my notes. I may have some more information.
-  -> TempGoodbye
+//do all of the other possible info types fall here?
 
 
 ==SolvedGoodbye==
-Rashad?Smiling "Oh yeah! At 2pm on Saturdays at the Community Center with Mr. Calindas, right? Running could definitely help with my stress. I'll talk to him."
-Rashad?Smiling "Thank you so much for helping out, again. I'm actually going to go give Lila's suggestion a ring. See you soon, {player_name}."
 
-*  Good luck, Rashad. See you soon!
-  -> END
-* Looking forward to the bookmobile! Whoo! See you!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Okay. Look, I know it's not an easy ask. I just need a bit more information. See you soon."
+Rashad?Neutral "Okay, come back soon!"
 
-* Okay, I'll catch you soon.
+* No worries, Rashad. I will.
   -> END
-* I got you, I'll be back soon.
-  -> END
-
-
-
-
 
 
 

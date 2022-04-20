@@ -43,52 +43,81 @@ Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful, and Mrs
 ==PuzzleInterface==
 # turnin
 
-* They picked Option 1. 
-  -> Option1
-* They picked Option 2. 
-  -> Option2
-* They picked Option 3.
-  -> Option3
-* They picked Option 4. 
-  -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+* They picked Solution 1. 
+  -> Solution1
+* They picked Solution 2. 
+  -> Solution2
+* They picked Solution 3.
+  -> Solution3
+* They picked Solution 4. 
+  -> Solution4
+  
+  ==Solution1==
+Rashad?Smiling “Yes, good idea Text”
+
+Rashad?Neutral “expansion” 
+
+Player Response
+-> Followup1 
+Alternate Player Response
+-> Followup1
+
+==Followup1==
+Rashad?Neutral “Reiterate learning”
+
+Rashad?Smiling “expand on reiteration” 
 
 
-==GoodSolution==
-Rashad?Smiling "Wow. This is dope. I knew both teens and seniors could benefit from this, but I didn't know how much. Thank you so much for looking into this, {player_name}."
+* I'm here to support you!
+    -> END
+  
+  
+  ==Solution2==
+Rashad?Neutral “Decline Answer”
 
-* Always happy to help, Rashad. Let me know if you need anything else!
--> SolvedGoodbye
-* I knew talking to Mrs. Lee and Elisa was the right move.
--> SolvedGoodbye
+Rashad?Neutral “Explain Decline”
 
-==BadSolution==
-Rashad?Neutral "Um, that's not exactly what I was looking for. Was there anything else that they shared? I want to know how it benefits seniors and teens."
+I'll come back to help!
+  ->TempGoodbye
+  
+  ==Solution3==
+  
+Rashad?Neutral "Decline answer"  
 
-* Hmm. Give me a sec, let me try that again.
--> PuzzleInterface
-* Yeah, good point. Let me take a look at my notes again and circle back.
--> TempGoodbye
+I'll come back to help!
+  ->TempGoodbye
+
+  
+  
+  ==Solution4==
+Rashad?Smiling “Accept answer”
+
+Player Response
+-> Followup2 
+Alternate Player Response
+-> Followup2
+
+==Followup2==
+Rashad?Neutral “Reinforce learning”
+
+Rashad?Smiling “continue learning”
+
+
+* It sounds like you're ready for this! 
+  -> SolvedGoodbye
+
+//do all of the other possible info types fall here?
+
 
 ==SolvedGoodbye==
-Rashad?Smiling "I'm gonna shoot some emails over to Elisa and Mrs. Lee right now to see if they’d be interested in talking through some ideas. And to see if any of their friends would be willing to sign up!"
-Rashad?Smiling "Even if they can’t participate, at least I can reach out to get their insight. Thanks for helping me figure out this stuff, {player_name}."
-Rashad?Smiling "You’ve been such a huge help this week. See you!"
 
-*  See you later, Rashad!
--> END
-* I'll see you soon. Happy to help.
--> END
+  -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Sounds like a plan. I'll go run a quick errand, catch you later?"
+Rashad?Neutral "Okay, come back soon!"
 
-* Ok, I'll be back when I know more. See you soon! 
--> END
-* Okay, I'll be back. See you! 
--> END
-
+* No worries, Rashad. I will.
+  -> END
 
 
 
