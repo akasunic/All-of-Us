@@ -6,59 +6,72 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I got the bookmobile to come. So we'll be able to give out library cards and give away free books. I am really excited about it. Free books! Cheers for accessibility!" 
+Rashad?Smiling "Hey {player_name}! Good news, I was able to set up a bookmobile in the community center so we’ll be able to give away free books to the community. I am really excited about free books!”
 
-* {not TempGoodbye} That's amazing, Rashad! I'm excited, too!
+
+* {not TempGoodbye} That's amazing, Rashad! I love this energy.
   -> Chat1
-* {not TempGoodbye} That's so cool Rashad! hey, I think I have some information for you.
+* That's so cool, Rashad! Hey, I think I have some helpful information for you.
   -> ReadyToSolve
-* {TempGoodbye} Wow! I am really excited about this. I also think you'll be excited by what I found for you.
-  -> ReadyToSolve
+
 
 ==Chat1==
-Rashad?Smiling "I am really happy you asked us. We have a lot of work to do, but I love it. I feel like this is exactly what we needed. The library, me..." 
+Rashad?Neutral "I am really happy about it. It’s the little things that keep me going! " 
 
-* Rashad, seriously. This is great news. It sounds like maybe your stress levels went down.
+* You’re so humble. There’s nothing <i>little</i> about that. You’re amazing!
   -> Chat2
-* Speaking of you, I have some answers for you.
+* Speaking of, I have some information for you!
   -> ReadyToSolve
 
 ==Chat2==
-Rashad?Neutral "Well, just a little bit. Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
+Rashad?Neutral "Hah, you’re too kind!. Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
 
-* Hey, I wanted to make the time. Now, I do have some information for you, if you're ready.
+*  I made the time because you matter! Here's what I have..
   -> ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Neutral "Oh, I didn't know you would find out what I needed this soon. You worked really fast, {player_name}. Thank you. What did you find out?"
+Rashad?Neutral "Oh, I didn't know you would find out what I needed this quickly. You work really fast, {player_name}. I should’ve reached out to you sooner! Thanks for your help! What did you find?
 
 * Here’s what I have…
   -> PuzzleInterface
-* Actually, give me a second. I want to make sure my information is correct.
+* Give me a second. I want to make sure my information is correct.
   -> TempGoodbye
-
+  
 ==PuzzleInterface==
 # turnin
 
-* -> GoodSolution
-* -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+* They picked a solution marked as bad.
+  -> BadSolution
+
+
 
 ==GoodSolution==
-Rashad?Smiling "That good to know. This makes me a lot less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
+Rashad?Smiling "Wow, this is really good to know. This makes me a LOT less nervous. Starting therapy is a big deal, and I'm glad I can trust you with this."
 
-* Thanks for trusting me. Oh, and there's a running club you should look into. 2pm on Saturdays at the Community Center with Mr. Calindas!
+* Thanks for trusting me. Oh, and there's a running club you should look into.
   -> SolvedGoodbye
+* Glad I could help, Rashad!
+ -> SolvedGoodbye
 
 ==BadSolution==
-Rashad?Neutral "Hmm, okay. I still don't quite know what to expect..."
+Rashad?Neutral "Hmm, okay. This is kind of helpful but I still don't quite know what to expect..."
 
 * Wait a second. Let me try that again.
   -> PuzzleInterface
 * Actually, I need to check my notes. I may have some more information.
   -> TempGoodbye
 
+
 ==SolvedGoodbye==
-Rashad?Smiling "Oh yeah! Running could definitely help with my stress. I'll talk to him."
+Rashad?Smiling "Oh yeah! At 2pm on Saturdays at the Community Center with Mr. Calindas, right? Running could definitely help with my stress. I'll talk to him."
 Rashad?Smiling "Thank you so much for helping out, again. I'm actually going to go give Lila's suggestion a ring. See you soon, {player_name}."
 
 *  Good luck, Rashad. See you soon!
@@ -73,3 +86,15 @@ Rashad?Neutral "Okay. Look, I know it's not an easy ask. I just need a bit more 
   -> END
 * I got you, I'll be back soon.
   -> END
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,94 +6,111 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Lila?Neutral "Hey {player_name}! How are you feeling today?" 
+Lila?Smiling "Hey {player_name}! It’s been so long. What’s new with you?" 
 
-* Hi Lila! I'm doing well! I could use some- is that glitter?
+* Hi Lila! Is that glitter on your face?
   -> Chat1
-* Hey Lila! ...are you covered in glitter?
+* Hey Lila! Not much ...are you... You're covered in glitter!
   -> Chat1
 
 ==Chat1==
-Lila?Smiling "The pre-school life is the life of one covered perpetually in glitter, yes. I'm one with the sparkle, now."
+Lila?Smiling "The preschool life is a life perpetually covered in glitter, yes. I'm one with the sparkle, now."
+
+Lila?Smiling "I don't even notice any more unless someone reacts like I'm covered in slime."
 
 * Well, I only know one thing about glitter...it travels. Should I be afraid?
   -> Chat2
-* That sounds delightful. Hey, can I ask your help with something?
-  -> Explain1
+
 
 ==Chat2==
-Lila?Smiling "Well, you know this glitter will get all over you despite the fact we haven't hugged. I'd just accept it now if I were you. Besides, art is a great way to destress."
+Lila?Smiling "Well, I wouldn’t be surprised if you somehow got glitter on your clothes despite the fact we haven't hugged. I'd just accept it now if I were you. Besides, art is a great way to destress."
 
-* Really? I didn't know that. I thought glitter was the bane of all existence.
+* Is that right? I thought glitter was the bane of all existence.
   -> Chat3
-* Actually speaking of stress, I could use some advice.
+* Actually speaking of stress, I could use your help.
   -> Explain1
+
+
 
 ==Chat3==
 Lila?Smiling "Well, glitter does get everywhere, but yes I teach the children to use art to express themselves."
-Lila?Smiling "It's so important to keep stress levels down. Especially people of color or other marginalized identities."
+Lila?Smiling "Having a hobby - like making art - is helpful for managing stress. and it's important to keep stress levels down to stay healthy. Especially for people of color or other marginalized identities."
 
-* That's really wonderful, maybe you can help me with some advice for a friend.
+* Wait, so glitter ... is stress reduction. Who knew? 
   -> Explain1
 * Really? Maybe you can help me with some advice about stress?
   -> Explain1
+  
 
 ==Explain1==
-Lila?Smiling "Sure! Stress can be really difficult to handle. I suffer from a lot of stress, and you'd be surprised how it can hurt your health."
+Lila?Neutral "Sure! Stress can be really difficult to handle. I manage from a lot of stress, and you'd be surprised how it can hurt your health."
 
-* Well, that's just it. My friend may be experiencing racial stress.
+Lila?Neutral "If I don't stay on top of things, I end up grinding my teeth at night. I have a mouth guard now, but only after I cracked a tooth. No fun!"
+
+* Actually, one of my friends is experiencing racial stress.
   -> Explain2
-* Is there such a thing as racial stress? I'm beginning to worry about a friend.
+* I'm beginning to worry about a friend who is dealing with racial stress.
   -> Explain2
 
 ==Explain2==
-Lila?Neutral "If your friend is a person of color, they aren't imagining it. Racial stress is real, and can actually cause post traumatic stress."
-Lila?Neutral "It can harm your heart, and lead to other health issues. It's serious." 
+Lila?Neutral "If your friend is a person of color, they aren't imagining it. Racial stress is real, and can actually cause a condition called post-traumatic stress disorder, or PTSD."
 
-* Do you have any suggestions for them?
+Lila?Neutral "PTSD can harm your heart, and lead to other health issues. It's serious. I'm glad they're talking to you, and that you might be able to help them." 
+
+* Wow, that sounds terrible. What should I be suggesting?
   -> Suggestion1
-* That does sound serious. What can we do for them?
-  -> Suggestion2
 
+~ notification = "Lila_Day 2_Find self-care activites to integrate into your daily life_Rashad2-3"
+# notification Lila_Day 1_Find self-care activites to integrate into your daily life_Rashad2-3
 ==Suggestion1==
+Lila?Smiling "Well, your friend should definitely seek professional help if they can. They shouldn’t go through this sort of thing alone.”
 
-~ notification = "Lila_Day 2_Racial stress is real, and serious_Rashad2"
-# notification Lila_Day 2_Racial stress is real, and serious_Rashad2
-~ notification = "Lila_Day 2_Self care activities can help with stress"
-# notification Lila_Day 2_Self care activities can help with stress
+Lila?Smiling “'Self-care' became a buzzword of sorts, but it's a real thing. Your friend should really take stock of the ways they can engage in meaningful self-care." 
 
-Lila?Smiling "Well, your friend should talk to a professional if they can, and try to do self care activities they enjoy. They shouldn't be afraid to rest. Racial stress is serious and real." 
+Lila?Smiling "Take time to smell the roses, and all that. Art, music, movement. It all plays a part. Real self-care goes beyond bubble baths and oat milk lattes, though those have their place too."
 
-* {not Suggestion2} Is that all? Is there anything they can do?
+Lila?Neutral "Also, they shouldn't be afraid to sleep more than usual. Racial stress is serious and can really take a toll on our bodies." 
+
+* Is there else anything they can do?
   -> Suggestion2
-* That's sounds like good advice, thanks!
-  -> Goodbye
 
+~ notification = "Lila_Day 2_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4"
+# notification Lila_Day 1_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4
 ==Suggestion2==
+Lila?Neutral "If I'm being honest, I think most people of color I know could benefit from culturally competent therapy."
 
-~ notification = "Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2"
-# notification Lila_Day 2_Racial stress can lead to race based traumatic stress syndrome; RBTS_Rashad2
-~ notification = "Lila_Day 2_RBTS can lead to mental health issues_Rashad2"
-# notification Lila_Day 2_RBTS can lead to mental health issues_Rashad2
-~ notification = "Lila_Day 2_Microagressions and sustained collective trauma can harm mental health_Rashad2"
-# notification Lila_Day 2_Microagressions and sustained collective trauma can harm mental health_Rashad2
-~ notification = "Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2"
-# notification Lila_Day 2_See a therapist that understands RBTS preferably from their cultural background_Rashad2
+Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to serious physical and mental harm, trust me. These types of encounters create a condition called race-based traumatic stress syndrome, or RBTS. I've attended therapy for it."
 
-Lila?Neutral "It's important that your friend see a mental health professional from their cultural background."
-Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to mental health issues, trust me. It's called race based traumatic stress syndrome. RBTS. I've attended therapy for it, and really should continue to."
+Lila?Neutral "Some people really struggle with overcoming the stigma around mental health care. I get it, but also? That's why I think it's important to find someone who shares at least part of your background and experience."
 
-* {not Suggestion1} That's very helpful, Lila. Do you know any other tips?
-  -> Suggestion1
+
 * That's wonderful advice, Lila. Thank you so much.
   -> Goodbye
 
+
 ==Goodbye==
 
-Lila?Smiling "Happy to help, {player_name}. I have the name of some therapists who specialize in racial stress, so if your friend needs a recommendation let me know okay?"
+Lila?Smiling "Happy to help, {player_name}. I know some therapists who specialize in racial stress, so if your friend needs a recommendation let me know okay?"
 Lila?Smiling "Now, I'm going to head off and attempt to get deglittered. See ya!"
 
 * Thanks so much, Lila! See you soon!
   ->END
 * Bye Lila! Good luck with the glitter.
   ->END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

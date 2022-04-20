@@ -5,81 +5,99 @@ VAR new_quest = ""
 
 -> intro
 
-===intro===
-~ new_contact = "Elisa"
-# new_contact
+==intro==
 
-Elisa?Smiling "Hi {player_name}, it's good to see you! How's your day going?"
+Elisa?Smiling "Hi {player_name}, it's so nice to see you! How's your day going?"
 
-* It's going pretty great. Still trying to get this block party started. How are you?
-  -> Chat1
-* It's good to see you too! I've been pretty well, you?
-  -> Chat1
+* Pretty great! How are you, Elisa? 
+ -> Chat1
+* It's nice to see you too! I've been pretty good. How about yourself? 
+-> Chat1
 
 ==Chat1==
-Elisa?Smiling "I'm well! I have a lot on my plate getting ready for school still. There's a lot of paperwork to get in order, you know?"
+Elisa?Smiling "I'm well! I have a lot going on. So many of moving pieces to get in order before the next school year, you know?"
 
-*That sounds pretty stressful.
-  -> Chat2
-*That's a lot. Is there anything I can do to help?
-  -> Explain1
+Elisa?Smiling "The transition from Bloomwood Community College to a state school is exciting, but stressful too! What's new with you?"
+
+* It sounds like you have a lot on your plate. 
+-> Chat2
+* I totally get it. Hey, there's something I wanted to ask you.  
+-> Explain1
 
 ==Chat2==
-Elisa?Neutral "It is, a bit, honestly. I still have to figure out where to get money for my books. Ugh, I could use a part time job."
+Elisa?Smiling "I need to figure out a way to pay for these textbooks. School can be so expensive! Maybe I can get a part-time job, but I'm not sure where."
 
- *Well, I may have a solution to that, if you wanna hear it?
-  -> Explain1
- *I happened to have stumbled upon something that might be able to help...
-  -> Explain1
+Elisa?Smiling "Ugh. I'll figure it out."
 
+* I'm sorry to hear that, Elisa. School is already stressful enough.
+-> Chat3
+* I may have a solution to that if you're interested?  
+-> Explain1
+
+==Chat3==
+Elisa?Smiling "It's okay, I still have a few weeks to come up with a plan. So I don't have to enter panic mode just yet!"
+
+Elisa?Smiling "I'm nothing if not resourceful. Some combination of patience and persistence will get me there, right?"
+
+* Actually, I think I might have a solution for you! 
+-> Explain1
 
 ==Explain1==
-Elisa?Neutral "...Okay? What is it?"
+Elisa?Neutral "What's up? I'm all ears."
 
- *There's a part time job opening at the library I think you'd be amazing for.
-  -> Explain2
+* There's a part-time job opening at the library. I think you'd be a perfect fit!  -> Explain2
+The library is looking for an extra set of hands in the YA section. Interested?  -> Explain2
 
 ==Explain2==
-Elisa?Smiling "Perfect for me? Really? I love the library. Can you tell me more?" 
+Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables, or worse... I spent a summer as an assistant for a dog groomer. It was pretty filthy, but maybe I'm biased since I'm a cat person. I was starting to think I'd have to go back to that."
 
-*They're looking for a part time library assistant in the YA section to reshelve books. You can apply through the hiring section on the library's website.
-  -> Suggestion1
-*The library is hiring a part time worker in the YA section to reshelve books.
-  -> Suggestion2
+Elisa?Smiling "I love the library, and I really like Rashad. I'd love to learn more."
+
+* I'm pretty sure Rashad posted a job listing; you can look it up on the library's website!
+-> Suggestion1
+
+~ notification = "Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1"
+# notification Elisa_Day 1_Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1
 
 ==Suggestion1==
-~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1-1"
-# notification Elisa_Day 1_She loves YA Literature_Rashad1-2
-~ notification = "Elisa_Day 1_She spends a lot of time already"
-# notification Elisa_Day 1_She spends a lot of time already
+Elisa?Smiling "Do they hire students? My school schedule is pretty hectic, but I'll definitely apply. Plus, I love YA fiction." 
 
-Elisa?Smiling "Do you know if it would be good for a student? I will definitely apply, I love YA literature. I spend all my time there already."
+Elisa?Smiling "I might need some help polishing my resume before I apply. Is that something the library offers a workshop in?"
 
-* {not Suggestion2} Yes! It would be. Did you have any other questions?
-  -> Suggestion2
-* Yes! It would be. You can apply through the library's website.
-  -> Goodbye
+* I think a student is exactly what Rashad is looking for.
+-> Suggestion2
+* I'm happy to look over your resume before you apply!
+ ->Suggestion2
+
+~ notification = "Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Elisa1-2"
+# notification Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Elisa1-2
 
 ==Suggestion2==
-~ notification = "Elisa_Day 1_You will write her a reference_Rashad1-2"
-# notification Elisa_Day 1_You will write her a reference_Rashad1-2
-~ notification = "Elisa_Day 1_She will use the website to apply_Rashad1-3"
-# notification Elisa_Day 1_She will use the website to apply_Rashad1-3
-~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1-4"
-# notification Elisa_Day 1_Elisa will apply to the job_Rashad1-4
+Elisa?Smiling "That sounds perfect. This sounds like a great way to build up experience, too. All my college admissions paperwork is done, but I feel like this serves two purposes. It will help me pay for text books, <i>and</i> it'll look great on my resume!" 
 
-Elisa?Smiling "Do you know if I need a reference or how to apply?"
+Elisa?Smiling "I'm usually free Monday afternoon and on weekends; I hope that's enough to be helpful. How do I apply for the position?" 
 
-* {not Suggestion1} Yes, I can write you a reference and you can apply on the library website. Any other questions?
-  -> Suggestion1
-* I can write you a reference, and you can apply on the website. That's it!
-  -> Goodbye
+* That's great to hear! You can apply through the library's website. 
+-> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "This sounds great, {player_name} I can totally do this. Thanks so much, I really needed to get a part time job,"
-Elisa?Smiling "and I was worried about searching and trying to do everything else I have to do. I've got to head to a club meeting, but I'll catch you soon!
+Elisa?Smiling "That sounds awesome, {player_name}! I can definitely pull this off. Thanks so much, I really could use the extra cash," 
+Elisa?Smiling "and the process doesn't seem like a hassle. I've got to head to a study session, but I'll see you later!"
 
-* Catch you soon!
-  ->END
-* You'll be awesome! I'll see you soon!
-  ->END
+
+* You'll knock it out of the park! Send me that resume when you're ready! 
+->END
+* I can't think of a better candidate! You'll be great! 
+->END
+==== END ====
+END
+   -> END
+
+
+
+
+
+
+
+
+

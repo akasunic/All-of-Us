@@ -3,147 +3,101 @@ VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
 
+
 -> intro
 
-===intro===
-~ new_quest = "Elisa3.txt"
-# new_quest
+==intro==
 
-Elisa?Smiling "Oh, hey {player_name}!"
+Elisa?Neutral "Hey, {player_name}! What's up?"
 
-*Hi Elisa! 
-    ->Q31
-*Hey Elisa! How've you been?
-    ->Q32
-    
-===Q31===
+* Oh, you know. Sky. Treetops. My mood. How about you?
+-> Chat1
+* Hi, Elisa! Nothing interesting here. What's up with you?
+-> QuestIntro
 
-Elisa?Smiling "What brings you to the library? Still working on stuff for the block party?"
+==Chat1==
+Elisa?Smiling "I was hoping I could run something past you." 
 
-*Yeah, there’s lots of details we're still working out... did you think about that succulent booth job?
-    ->blockPartyQ3
-*Nah, I was just in the neighborhood!
-    ->Neighborhood
+Elisa?Neutral "My little brother was just assessed for ADHD - Attenion Deficit Hyperactivity Disorder. Do you know anything about it?"
 
-===Q32===
+Elisa?Neutral "My folks have it in their head that this means the school thinks he's a troublemaker, and they're worried they've done something wrong."
 
-Elisa?Neutral "I've been ok! We got a lot of new members for the nature club from that scavenger hunt, and some friends and I are going to go rock climbing next weekend."
-Elisa?Neutral "I don't know, I still feel kinda down, though."
+* Oh, that's not at all what an ADHD diagnosis means! 
+-> Chat2
+* An assessment means he's on the track towards getting new tools for success...
+-> Chat2
 
-*Oh really? What's wrong?
-    ->Q34
-*I get that. Sometimes a "good week" doesn't always feel so good. 
-    ->Q35
+==Chat2==
+Elisa?Neutral "I think they know that, but it's hard for them not to worry. They've made so many sacrifices, and lost so much for us to have the best chances in life."
 
-===blockPartyQ3===
+Elisa?Neutral "hashtag first generation concerns, right? Gotta live up to everything that got us here."
 
-Elisa?Neutral "Oh, right! I'm still thinking about it. I'm still feeling pretty stressed between school, and looking after my siblings, and working on all this transfer stuff..."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really understand, even though they try."
+Elisa?Neutral "The paperwork the school sent home was very general; there's a meeting next week, and I want to help them understand." 
 
-*Hmm... have you tried talking to anyone else about it?
-    ->talkWithOthers
-*Really? Why's that?
-    ->firstGenGap
+Elisa?Smiling "I don't want to say this to them yet, but a lot of the things they look for in an assessment feel very familiar."
 
-===Neighborhood===
+* Familiar how?
+ ->Chat3
+Let me go ask some questions and I'll come back with more insight!
+-> QuestIntro
 
-Elisa?Smiling "Oh please, when are you not in the neighborhood? "Bloomwood spirit" never seems to take a holiday these days!"
+==Chat3==
+Elisa?Smiling "I knew I could bring this up with you, and you wouldn't panic. Thank you, {player_name}."
 
-*Alright, alright, point taken. Anyways, how are things with you?
-    ->Q32
-*Holiday? I've got a block party to plan! A holiday can wait!
-    ->preBlockPartyQ3
-    
-===preBlockPartyQ3===
+Elisa?Smiling "Just saying it out loud makes me feel better. I sort of wonder if I don't have ADHD too; the paperwork says it runs in families." 
 
-Elisa?Neutral "Fair enough! I'm still thinking about the succulent booth, by the way. Sorry I haven't gotten back to you. It's just- I've got a lot on my plate still."
+-> QuestIntro
 
-*What's up?
-    ->BlockPartyQ3alt
-*Still stressed out, huh?
-    ->BlockPartyQ3alt2
-    
-===preBlockPartyQ3alt===
+==QuestIntro==
+Elisa?Smiling "I guess I have two questions, really."
 
-Elisa?Neutral "Hey, speaking of, I haven't forgotten about your succulent booth. I'm definitely still thinking about it, it's just- I've got a lot on my plate still."
+Elisa?Neutral "How do I support my brother as much as possible, but also, the whole thing makes me wonder if I should do an assessment."
 
-*What's up?
-    ->BlockPartyQ3alt
-*Still stressed out, huh?
-    ->BlockPartyQ3alt2
-    
-==BlockPartyQ3alt===
+Elisa?Neutral "With it running in families, and some of the material hitting pretty close to home. I feel like knowing more about ADHD, in general, would help me make sense of everything."
 
-Elisa?Neutral "I don't know, it's like, I've been able to check things off my to-do list, but I'm still feeling pretty stressed between school, looking after my siblings, and working on all this transfer stuff."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really get where I'm coming from."
 
-*Hmm... have you tried talking to anyone else about it?
-    ->talkWithOthers
-*Really? Why's that?
-    ->firstGenGap
+* That sounds smart, Elisa. Is there anything else I should know?
+-> QuestDetails1
+* I think I can find answers. Let me do some asking!
+-> QuestAcceptance
 
-===BlockPartyQ3alt2===
+==QuestDetails1==
 
-Elisa?Neutral "Yeah. I mean, I'm glad I've been able to check things off my to-do list, but I'm still feeling pretty stressed between school, looking after my siblings, and working on all this transfer stuff."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really get where I'm coming from."
+Elisa?Neutral "Obviously, I don't want to say anything about possibly getting an assessment of my own to my folks until I have my head on straight. They're already worried about so much." 
 
-*Hmm... have you tried talking to anyone else about it?
-    ->talkWithOthers
-*Really? Why's that?
-    ->firstGenGap
+* I got it, Elisa! I'll be discrete.
+-> QuestAcceptance
 
-===Q34===
 
-Elisa?Neutral "I know I've been checking things off my to-do list, but I'm still feeling pretty stressed between school, and looking after my siblings, and working on all this transfer stuff..."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really get where I'm coming from."
+==QuestAcceptance==
+Elisa?Smiling "Oh, {player_name}. I trust you. Thank you so much."
 
-*Hmm... have you tried talking to anyone else about it?
-    ->talkWithOthers
-*Really? Why's that?
-    ->firstGenGap
+* Anytime, Elisa! I'm on the case! 
+-> Goodbye
 
-===Q35===
 
-Elisa?Neutral "Really? I'm glad it's not just me."
-Elisa?Neutral "Yeah... I mean, it's been great to check things off the to-do list, but I'm still feeling pretty stressed between school, looking after my siblings, and working on all this transfer stuff."
-Elisa?Neutral "I've tried talking to my Nature Club friends about it, but they don't really get where I'm coming from."
+==Goodbye==
+Elisa?Smiling "I know you are. "
 
-*Hmm... have you tried talking to anyone else about it?
-    ->talkWithOthers
-*Really? Why's that?
-    ->firstGenGap
+* I'll be back soon.
+->END
 
-===talkWithOthers===
 
-Elisa?Neutral "No, not really. My parents and I don't really talk about stress or stuff like that, and my siblings are kinda too young to get it."
-Elisa?Neutral "I wish I had someone who's been through this kinda stuff that I could talk to."
+==== END ====
+END
+   -> END
 
-*Maybe I could help you find someone?
-    ->acceptQ3
-*You know what? I'll keep my eye out for you.
-    ->acceptQ3alt
 
-===firstGenGap===
 
-Elisa?Neutral "I mean, they get the school stuff, but they don't have the same family stress as I do."
-Elisa?Neutral "Mostly they just change the subject, or say not to worry about it too much. I wish I had someone I could really talk to about it."
 
-*Maybe I could help you find someone?
-    ->acceptQ3
-*You know what? I'll keep my eye out for you.
-    ->acceptQ3alt
 
-===acceptQ3===
 
-Elisa?Smiling "If you're willing to look around for me, that'd be a big help!"
-Elisa?Smiling "I have no idea where to find anyone, but if you can find someone who's been through something similar, I'd love to get their advice. Let me know what you find!"
 
-*See you!
-    ->END
 
-===acceptQ3alt===
 
-Elisa?Smiling "Aw thank you so much! Yeah, if you can find me anyone who's been through something similar, I'd love to talk to them about it. Let me know what you find!"
 
-*See you!
-    ->END
+
+
+
+
+

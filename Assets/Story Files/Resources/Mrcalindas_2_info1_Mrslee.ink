@@ -18,9 +18,9 @@ Mrslee?Smiling "Hello {player_name}. How you today?"
 
 Mrslee?Smiling "Me? Oh! That is very nice." 
 
-* Well, it's true. You're always trying to keep fit and engaged. It's really great to talk with you. 
+* Well, it's true. You're such a fitness inspiration. It's really great to talk with you. 
   -> Chat2
-* Well, it's true. You're always trying to keep fit and engaged...in fact maybe you could help me with something?
+* Well, it's true. You're always trying to keep active...in fact maybe you could help me with something?
   -> Explain1
 
 ==Chat2==
@@ -37,45 +37,47 @@ Mrslee?Smiling "I really enjoy these class, happy to help. What your question?"
 
 * Mr. Calindas' mother is moving to Bloomwood, and she needs great activities.
   -> Explain2
-* Mr. Calindas' mother is moving here, and I think this might be a fun activity for her.
+* Mr. Calindas' mother is moving here, and I was wondering if you could tell me what you get from aerobics.
   -> Explain2
 
 ==Explain2==
 Mrslee?Smiling "She move here? Live with Giancarlo? That is nice. Aerobic activity very good for mind and body." 
 
+Mrslee?Smiling "I read that exercise fights depression. And dementia. Getting older is hard. Exercise help."
+
 * Are they? Can you tell me more about that?
   -> Suggestion1
 * Can you tell me more about the benefits of exercise for seniors?
-  -> Suggestion2
+  -> Suggestion1
 
 ==Suggestion1==
 
-~ notification = "Mrslee_Day 2_Talk to a doctor before you start a physical routine"
-# notification Mrslee_Day 2_Talk to a doctor before you start a physical routine
-~ notification = "Mrslee_Day 2_You can sign up for classes online or in person"
-# notification Mrslee_Day 2_You can sign up for classes online or in person
+~ notification = "Mrslee_Day 2_The community center offers a variety of classes that might suit Mother Calindas_Mrcalindas2-1"
+# notification Mrslee_Day 2_The community center offers a variety of classes that might suit Mother Calindas_Mrcalindas2-1 
 
-Mrslee?Smiling "Well, I think she need to talk to doctor before start new physical activity. She maybe know that. Sign up on computer or at Community Center front desk." 
+Mrslee?Smiling "Well, they say she need to talk to doctor before start new physical activity. I guess Giancarlo know that already. 
 
-* {not Suggestion2} That sounds great, do you know anything else about the health or social benefits?
+Mrslee?Smiling "Maybe Giancarlo can bring her here. We can help pick right class for her comfort. Swimming, aerobics, tai chi. The Community Center offers little of everything." 
+
+* That sounds great! What about the social benefits?
   -> Suggestion2
-* This is perfect information, Mrs. Lee. Thank you so much for your time!
-  -> Goodbye
+
 
 ==Suggestion2==
 
-~ notification = "Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2"
-# notification Mrslee_Day 2_Exercise Improves Social Wellness_Mrcalindas2
-~ notification = "Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2"
-# notification Mrslee_Day 2_Seniors can stay active using aerobic classes_Mrcalindas2
-~ notification = "Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2"
-# notification Mrslee_Day 2_Staying active can improve your strength and balance_Mrcalindas2
+~ notification = "Mrslee_Day 2_Group exercise classes offer social physical, and mental benefits_Mrcalindas2-2"
+# notification Mrslee_Day 2_Group exercise classes offer social physical, and mental benefits_Mrcalindas2-2 
+
 
 Mrslee?Smiling "Oh, yes! For elder, group exercise very social. Lot of friend in my class."
-Mrslee?Smiling "I stay fit, strength give me independence! It help me feel strong and my balance good. I love it!"
 
-* {not Suggestion1} That sounds amazing! Is there anything else I should know?
-  -> Suggestion1
+Mrslee?Smiling "When I lose Dr. Lee, Eddie feel stress. Worry that I would be all alone, and sad." 
+
+Mrslee?Smiling "Exercise class give me many good things. So many friends. So many people to care."
+
+Mrslee?Smiling "I stay fit, I have strength. It give me so much feeling of independence! It help me feel strong and my balance good. I love it!"
+
+
 * This is perfect information Mrs. Lee. Thank you so much for your time!
   -> Goodbye
 

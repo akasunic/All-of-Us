@@ -1,3 +1,4 @@
+
 VAR player_name = ""
 VAR notification = ""
 VAR new_contact = ""
@@ -9,85 +10,81 @@ VAR new_quest = ""
 ~ new_quest = "Rashad2.txt"
 # new_quest
 
-Rashad?Smiling "Hey {player_name}! It's good to see you! I was hoping you'd stop by the library today."
+Rashad?Smiling "Hey {player_name}! It’s been a minute! How’s it going? I was hoping I’d run into you today."
 
 * Hey! The library abolished fines, friend, so...
   ->Chat1
-* Uh, oh. What did I do?
-  -> QuestIntro
+* What’s up? I always worry when a conversation starts like that.
+  ->Chat1
+
 
 ==Chat1==
-Rashad?Smiling "Now, you know what, hah! Nobody is coming after you for that 'How to Draw' book you took out in 2000. I wanted to thank you. I finally got some sleep last night."
+Rashad?Smiling "You’re good. Hah! Everyone forgot about that 'How to Draw' book you took out in 2000. I wanted to thank you. I finally got a good night’s rest. I haven’t had one of those in a while"
 
-* Wait, you've been losing sleep?
+* You've been losing sleep? What’s going on?
   ->Chat2 
-* What did I do?
-  -> QuestIntro
+
 
 ==Chat2==
-Rashad?Neutral "A lot of it, actually. The night before the board meetings I'm usually so stressed I can't sleep. But anyway, I wanted to thank you!"
+Rashad?Smiling "Yeah, my sleep schedule is pretty messed up. I get so anxious the night before the board meetings. I can't sleep because I’m too busy tossing and turning and playing fake scenarios in my head. But anyway, I wanted to thank you!"
 
 * Thank <i>me</i> for what?
   -> QuestIntro
 
 ==QuestIntro==
-Rashad?Smiling "You got the library board to actually listen to me for once! They are really excited by the block party. Thanks for asking us to participate."
+Rashad?Neutral "You got the library board to actually listen to me for a change!  Thanks for suggesting the bookmobile!"
 
 * Wait, they don't usually listen to you?
   -> QuestDetails1
-* That's great news, but I'm worried about your stress, Rashad.
-  -> QuestAcceptance
+
 
 ==QuestDetails1==
-Rashad?Neutral "Look, between us?"
-Rashad?Neutral "They don't like half of the programs I suggest because they say it's <i>off-brand</i> for the new vision of Bloomwood Library. It's frustrating, and makes me tired and angry."
+Rashad?Neutral "Keep this between us, but they don't like half of the programs I suggest because they say it's <i>off-brand</i> for the new vision of Bloomwood Library."
+Rashad?Neutral "It's frustrating when they criticize my ideas. I’m just tired and angry."
 
-* That sounds really terrible Rashad. Is there anything I can do?
+* I’m sorry you’re dealing with this, Rashad. Is there anything I can do?
   -> QuestDetails2
-* Off-brand? No wonder you're tired and stressed.
+* That's terrible. No wonder you're tired and stressed.
   -> OptionalQuestDetails1
-* I can see why you'd be tired and angry.
-  ->OptionalQuestDetails2
+
 
 ==OptionalQuestDetails1==
 Rashad?Neutral "Right? I read about something called racial stress, and between us? I think it's what's happening."
-Rashad?Neutral "The microagresssions from some board members make me feel powerless. Lately I've just been down, you know? I love this library."
+Rashad?Neutral "The microagresssions from some board members make me feel powerless. Lately I've just been down, you know? I love this library, but sometimes I wonder if it’s even worth sticking around anymore if I constantly have to deal with this."
 
-* I know you do! Is there anything I can do?
+* The library wouldn't be the same without you. Is there anything I can do?
   -> QuestDetails2
-* They shouldn't be making you feel like this, Rashad. Can I help you?
+* They shouldn't be treating you this way, Rashad. What can I do to help?
   -> QuestAcceptance
+  
 
 ==QuestDetails2==
-Rashad?Neutral "Besides telling that one board member to stop being surprised I'm "articulate"? Ugh. I really wish I knew how to handle their comments."
+Rashad?Neutral "Besides telling that one board member to stop being surprised I'm "articulate"? Ugh. I really wish I knew how to navigate this type of energy."
 
-* Wow. That sounds really out of line, you're the Head Librarian!
+* Wow. That waaayyyy out of line, you're the Head Librarian!
   -> OptionalQuestDetails2
-* They shouldn't be making you feel like this, Rashad. Can I help you?
+* This is unacceptable treatment, Rashad. How can I support you?
   -> QuestAcceptance
 
 ==OptionalQuestDetails2==
-Rashad?Neutral "Sometimes I question if they are being racist, and think maybe it's my fault."
+Rashad?Neutral "Sometimes I question if they are being racist, or if I’m just being overly sensitive."
 Rashad?Neutral "I spend a lot of time worrying about being perfect, and you know that can be really exhausting. I lose a lot of sleep."
 
-* You shouldn't be losing any sleep. Can I help in any way?
+* No job is worth this much stress, Rashad. Can I help in any way?
   -> QuestAcceptance
-* They shouldn't be making you feel like this, Rashad. Can I help you?
-  -> QuestAcceptance
+
 
 ==QuestAcceptance==
-Rashad?Smiling "You're a really good friend, {player_name}. The board has really been stressing me out."
-Rashad?Smiling "If you can find me some more information on how to handle this and my stress, I would be really grateful. I'm exhausted." 
+Rashad?Smiling "You're a really good friend, {player_name}. The board has really been trying my patience."
+Rashad?Smiling "If you can do me a solid and look for some more information on how to deal with microaggressions and my stress, that would really help me out. I'm at my limit." 
 
-* Well, let me talk to some folks about resources, and I'll get back to you okay?
+* Let me poke around and see what I can find. I'll get back to you soon, okay?
   -> Goodbye
-* I got you, Rashad. You deserve to be treated better, friend.
-  -> Goodbye
+
 
 ==Goodbye==
-Rashad?Smiling "Thanks for always trying to keep us healthy, {player_name} I really appreciate this. Take care, okay?"
+Rashad?Smiling "Thanks for listening to me vent and helping me out, {player_name}. I really appreciate this. Take care of yourself, okay?"
 
 * Take care, Rashad.
   ->END
-* Take care. I'll get on this now.
-  ->END
+

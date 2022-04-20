@@ -7,90 +7,95 @@ VAR new_quest = ""
 
 == intro ==
 
-Mrslee?Neutral "Hello {player_name}! Do you know if a lot of young people at the block party this weekend? My grandson visit!"
+Mrslee?Neutral "Hello {player_name}! How you been? I’m excited to see Eddie but weekends are too short."
 
-* Hi Mrs. Lee. Actually, yes. Elisa is running a succulent booth, and the whole neighborhood is coming out.
-  -> Chat1
-* It's good to see you Mrs. Lee. There will be plenty of things for you and Eddie to do together.
-  -> Chat1
+* Ugh, tell me about it!
+-> Chat1
+* I'm sure Eddie will be so happy to see you!
+-> Chat1
 
 ==Chat1==
-Mrslee?Smiling "Oh, good. I want to make sure there thing for him to do. I do not want him to be so bored with me."
+Mrslee?Smiling "I'm happy Eddie is coming but I want to make sure there thing for him to do. I do not want him to be so bored with me."
 
-* Oh, Mrs. Lee he won't be bored with you. You're plenty exciting. Plus, you could teach him a lot.
-  -> Chat2
-* Oh, Mrs. Lee he won't be bored with you. You're plenty exciting. You know what? I could use your help.
-  -> Explain1
+* Oh, Mrs. Lee I doubt that. There’s a lot he can learn from you.
+-> Chat2
+* But you're so much fun, Mrs. Lee. That reminds me, I might need your help.
+-> Explain1
 
 ==Chat2==
-Mrslee?Smiling "Well, this is true. I look forward to spend time with Eddie because he know everything going on."
-Mrslee?Smiling "Plus, I teach him little thing no one else know. Cooking with him is fun."
+Mrslee?Smiling "You’re right. I like to spend time with Eddie because he know everything going on."
+Mrslee?Smiling "And I teach him something no one else know. When we cook together we laugh a lot."
 
-*You cook together? That sounds really sweet.
-  -> Chat3
-*You know what Mrs. Lee? Just hearing you say this makes me think you'd be perfect for something.
-  -> Explain1
+*You cook together? That sounds really wholesome and sweet.
+-> Chat3
+* Hearing you talk about this makes me think you'd be perfect for something.
+-> Explain1
 
 ==Chat3==
-Mrslee?Smiling "Yes! I teach you how to cook too, but Mr. Calindas say you hopeless in kitchen."
-Mrslee?Smiling "But you probably learn more than you think. Eddie started with bag rice noodle, but eventually he learned my handmade Jap Chae and vegetable."
+Mrslee?Smiling "Yes all the time, I can give you lesson some time, but Mr. Calindas say you are very bad in kitchen."
+Mrslee?Smiling "You learn faster than you think. Eddie started with bag rice noodle, now he make handmade Jap Chae and vegetable."
 
-*Well, I may not be a great cook, but I do know people, and I think you may be perfect for something.
-  -> Explain1
-*I may not be the best cook, but I do think I know a great teacher when I see one. Maybe you can help me out with something, Mrs. Lee?
-  -> Explain1
+* Oh! More cooking lessons. I"m in. I do have a related question, though.
+-> Explain1
+* I’m a terrible cook but..Can I ask you for something?
+-> Explain1
 
 ==Explain1==
 Mrslee?Neutral "Oh? I can help." 
 
-*Rashad wants to link seniors like you, and teens. I'd like to know what seniors may enjoy.
-  -> Explain2
-*Rashad thinks it would be a great idea to link seniors and teens together and want to know more about what seniors could want.
-  -> Explain2
+* Rashad is working on a new program to connect community elders and young people.
+-> Explain2
+* What do you get out of connecting with the youth? Rashad's working on a thing.
+-> Explain2
 
 ==Explain2==
-Mrslee?Neutral "Really nice, {player_name}. Spend time with Eddie really make me happy. There so many little activity children do not learn. I am very helpful with this."
-Mrslee?Neutral "I have more time, so I can learn thing he curious about and give him more information. I have so much time on my hands."
+Mrslee?Smiling "That sound really nice, {player_name}. When Eddie spend time with me - I feel happy. There so many little activity children never learn. I am very helpful with this."
 
-*That's what I was thinking. What do you think seniors may need?
-  -> Suggestion1
-*Well, you and Eddie have such a great relationship. How does that help you?
-  -> Suggestion2
+Mrslee?Neutral "They never tell me how lonely it is to get older. Or maybe I never listen. I have so much time on my hands."
+
+Mrslee?Smiling "In some ways, that is good. I help Lila with kids at the community center. Many young parents rely on other adults to help."
+
+* That’s a good point. What do you think seniors may need?
+-> Suggestion1
+* Well, you and Eddie have such a great relationship. How does that help you?
+-> Suggestion1
+
+~ notification = "Mrslee_Day 4_Social connections support better cognitive and mental health_Rashad4-3"
+# notification Mrslee_Day 4_Social connections support better cognitive and mental health_Rashad4-3
 
 ==Suggestion1==
-~ notification = "Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands"
-# notification Mrslee_Day 4_Seniors only need someone to talk to and perhaps do errands
-~ notification = "Mrslee_Day 4_Teens can learn how it feels to get old"
-# notification Mrslee_Day 4_Teens can learn how it feels to get old
-~ notification = "Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4"
-# notification Mrslee_Day 4_Seniors can feel a sense of purpose_Rashad4
+Mrslee?Smiling "Seniors need someone to talk to. A purpose. And maybe someone to do some errand. Eddie learn about Korea when we are together. We talk, we laugh... "
 
-Mrslee?Smiling "Seniors need someone to talk to and maybe do some errand. We talk, we laugh...Eddie learn about Korea when we are together. "
-Mrslee?Smiling "It makes me feel so good to see how he grow. He know more about what it like to be old, and I have someone to talk to. A purpose."
+Mrslee?Smiling "It makes me feel so good to see how he grow. I can introduce you to my friends at the community center to learn more. "
 
-* {not Suggestion2} Wow. A sense of purpose. What else happens?
-  -> Suggestion2
-* That's great to hear, Mrs. Lee.
-  -> Goodbye
+Mrslee?Neutral "Some of my fitness class friends ... borrow ... Eddie sometimes because they have no young people to help move this box or that trunk. He love to help."
+
+* Wow. A sense of purpose. What else happens? 
+-> Suggestion2
+
+* Eddie helps other seniors too? Maybe Rashad really is onto something!
+ -> Suggestion2
+
+ ~ notification = "Mrslee_Day 4_Intergenerational connections provide benefits for the entire community_Rashad4-4"
+# notification Mrslee_Day 4_Intergenerational connections provide benefits for the entire community_Rashad4-4
 
 ==Suggestion2==
+Mrslee?Smiling "Rashad has good idea. Eddie teach me how to do thing on computer and phone, I teach Eddie life. Good for mind. We teach each other, important."
+Mrslee?Smiling "Life is hard. Connecting to help each other make it easier. Give teen resources and experience. Give seniors purpose and happiness. Maybe make things easier on parents in the bargain." 
 
-~ notification = "Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4"
-# notification Mrslee_Day 4_Seniors can help relieve anxiety about aging_Rashad4
+Mrslee?Smiling "When I was little girl, we had all adults. Aunts. Uncles. Grandparents. Everyone was close. Now, everybody very busy."
 
-Mrslee?Smiling "Rashad has good idea. Eddie teach me how to do thing on computer and phone, I teach Eddie life."
-Mrslee?Smiling "Being close to elder give young people world perspective, show them age is good thing, and not to be anxious."
-Mrslee?Smiling "Good for mind. We teach each other, important."
+Mrslee?Smiling "When program ready, I tell my friends. We post flyer on bulletin board at Community Center."
 
-* {not Suggestion1} This sounds really great, Mrs. Lee. Do you have anything else?
-  -> Suggestion1
-* Thank you so much for talking to me about this, Mrs. Lee. I think I learned a lot.
-  -> Goodbye
+* That would be fantastic, Mrs. Lee.
+-> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling "I so happy I help, {player_name}. I go to exercise class now, but you say Rashad, I happy to help. See you!"
+Mrslee?Smiling "Happy I help, {player_name}. I go to exercise class now, but you say Rashad, I happy to help. See you!"
 
-* Goodbye Mrs. Lee! Have a blast in there.
-  ->END
-* Thanks so much for your help, Mrs. Lee. Have the best time dancing. See you!
-  ->END
+* Goodbye Mrs. Lee! Hope you have a good workout.
+->END
+
+
+
+

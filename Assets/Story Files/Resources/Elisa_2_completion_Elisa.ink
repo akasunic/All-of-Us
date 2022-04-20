@@ -7,52 +7,81 @@ VAR new_quest = ""
 
 ===intro===
 
-Elisa?Smiling "Oh, hey {player_name}!"
+Elisa?Smiling "Hey, {player_name}!"
 
-*Hey Elisa! 
-    -> casual
-*Oh hey- I found out more info on that immunization stuff you were talking about.
-    -> PuzzleInterface
-    
-===casual===
+* {not TempGoodbye} Hey! Whatcha up to? -> Chat1
+* {not TempGoodbye} Hi! I found out some info on the diabetes stuff you were talking about.
+  -> ReadyToSolve
+* {TempGoodbye} Hi! So, I asked around about health info for your mom, is now a good time?
+  -> ReadyToSolve
 
-Elisa?Neutral "Ugh, I tried to ask around about the vaccination stuff but no one knows what I should do. How about you? Did you find anything?"
+==Chat1==
 
-*Yes! 
-    -> PuzzleInterface
-*No, not yet.
-    ->backToExplore
-    
-===PuzzleInterface===
+Elisa?Neutral "Oh, just getting some homework done for class tomorrow."
+
+* Ooh what class? Anything exciting?
+  -> Chat2
+* Gotcha. By the way, I found some info for your mom if you've got a minute.
+  -> ReadyToSolve
+
+==Chat2==
+
+Elisa?Neutral "Right now I'm working on a report for my Financial Analysis class! It's my favorite class so far."
+
+* Awesome! Hey, I found out more info for you on diabetes if you wanna talk about it.
+  -> ReadyToSolve
+* Well, I'm glad it's exciting to someone! Haha, anyway, I think I found some good info for you on diabetes.
+  -> ReadyToSolve
+
+==ReadyToSolve==
+
+Elisa?Neutral "Oh, that's great! What'd you find out?"
+
+* Here’s what I have…
+  -> PuzzleInterface
+* Wait... let me ask around a little more.
+  -> TempGoodbye
+
+==PuzzleInterface==
 # turnin
 
-*So... (puzzle interface opens and player inserts helpful info)
-    -> GoodSolution
-*So... (puzzle interface opens and player inserts unhelpful info)
-    -> BadSolution
-    
-===BadSolution===
+* They picked a solution marked good.
+  -> GoodSolution
+* They picked a solution marked bad.
+  -> BadSolution
 
-Elisa?Neutral "I see... you didn't happen to find out anything else, did you?"
+==GoodSolution==
 
-*Yes!
-    ->PuzzleInterface
-*No, sorry.
-    ->backToExplore
-    
-===backToExplore===
+Elisa?Smiling "Thanks so much, {player_name}! I'll go talk to my mom, she should be home by now. Seriously, thanks for all your help."
 
-Elisa?Neutral "Gotcha. Well, if you find any more info for me, definitely let me know!"
+* You're welcome!
+  -> SolvedGoodbye
+* Any time, Elisa.
+  -> SolvedGoodbye
 
-*Will do!
-    -> END
-*Alright, see you later then!
-    -> END
-    
-===GoodSolution===
+==BadSolution==
 
-Elisa?Smiling "Got it! Thanks, {player_name}, you're a life saver. Actually, I should be able to head down to the office today and figure out what vaccines I'm missing before the forms are due."
-Elisa?Smiling "I should run over there before they close- see you later!"
+Elisa?Neutral "Hmm, did you find any other information? I'm not sure if that's enough to convince my mom to go to the doctor."
 
-*See you! 
-    -> END
+* Try again?
+  -> PuzzleInterface
+* Wait... let me ask around a little more.
+  -> TempGoodbye
+
+==SolvedGoodbye==
+
+Elisa?Smiling "And hey- I thought about it more, and I think I should be able to come help out with the block party! Anyway, I should get going. Bye {player_name}!"
+
+* That's amazing! Bye Elisa!
+  -> END
+* Thanks so much! See you around, Elisa.
+  -> END
+
+==TempGoodbye==
+
+Elisa?Neutral "Oh ok, no worries! See you soon then."
+
+* See ya!
+  -> END
+* Bye, be right back!
+  -> END

@@ -7,13 +7,41 @@ VAR new_quest = ""
 
 ===intro===
 
-Elisa?Smiling "Oh hey, {player_name}! Did you find any info for me?"
+Elisa?Smiling "Hey, {player_name}!"
+
+* {not TempGoodbye} Hey! Whatcha up to? -> Chat1
+* {not TempGoodbye} Hi! I found out some info on the diabetes stuff you were talking about.
+  -> ReadyToSolve
+* {TempGoodbye} Hi! So, I asked around about health info for your mom, is now a good time?
+  -> ReadyToSolve
+
+==Chat1==
+
+Elisa?Neutral "Oh, just getting some homework done for class tomorrow."
+
+* Ooh what class? Anything exciting?
+  -> Chat2
+* Gotcha. By the way, I found some info for your mom if you've got a minute.
+  -> ReadyToSolve
+
+==Chat2==
+
+Elisa?Neutral "Right now I'm working on a report for my Financial Analysis class! It's my favorite class so far."
+
+* Awesome! Hey, I found out more info for you on diabetes if you wanna talk about it.
+  -> ReadyToSolve
+* Well, I'm glad it's exciting to someone! Haha, anyway, I think I found some good info for you on diabetes.
+  -> ReadyToSolve
+
+==ReadyToSolve==
+
+Elisa?Neutral "Oh, that's great! What'd you find out?"
 
 * Here’s what I have…
   -> PuzzleInterface
-* I don't think so
-  -> thanksForTrying
-    
+* Wait... let me ask around a little more.
+  -> TempGoodbye
+
 ==PuzzleInterface==
 # turnin
 
@@ -22,41 +50,38 @@ Elisa?Smiling "Oh hey, {player_name}! Did you find any info for me?"
 * They picked a solution marked bad.
   -> BadSolution
 
-    
-===BadSolution===
+==GoodSolution==
 
-Elisa?Neutral "Thanks for asking around, but I'm still not quite sure what to do. Do you have any more info for me?"
+Elisa?Smiling "Thanks so much, {player_name}! I'll go talk to my mom, she should be home by now. Seriously, thanks for all your help."
 
-* Let me try again
+* You're welcome!
+  -> SolvedGoodbye
+* Any time, Elisa.
+  -> SolvedGoodbye
+
+==BadSolution==
+
+Elisa?Neutral "Hmm, did you find any other information? I'm not sure if that's enough to convince my mom to go to the doctor."
+
+* Try again?
   -> PuzzleInterface
-* No sorry, that's all I could find out.
-  ->thanksForTrying
-    
-===thanksForTrying===
+* Wait... let me ask around a little more.
+  -> TempGoodbye
 
-Elisa?Neutral "Oh, well thanks for trying at least! I guess I'll keep looking around online to see if I can find anything... let me know if you find anything else, ok?"
+==SolvedGoodbye==
 
-*Will do!
-    ->END
-    
-===GoodSolution===
+Elisa?Smiling "And hey- I thought about it more, and I think I should be able to come help out with the block party! Anyway, I should get going. Bye {player_name}!"
 
-Elisa?Smiling "Thanks {player_name}! Come to think of it, there are a few Nature Club members I know who graduated last year that were first generation students as well."
-Elisa?Smiling "I'll see if I can catch up with them, and ask them for some advice."
+* That's amazing! Bye Elisa!
+  -> END
+* Thanks so much! See you around, Elisa.
+  -> END
 
-*Sounds great, Elisa!
-    ->thanks2
-    
-===thanks2===
+==TempGoodbye==
 
-Elisa?Neutral "As far as school resources, I'm not sure what they offer. I think I'm gonna walk over to the student center and see what I can find. Thanks again, {player_name}!"
+Elisa?Neutral "Oh ok, no worries! See you soon then."
 
-*You're welcome! Good luck at the student center!
-    ->seeYou
-    
-===seeYou===
-
-Elisa?Smiling "Thanks, I'll see you later then!"
-
-*See ya!
-    ->END
+* See ya!
+  -> END
+* Bye, be right back!
+  -> END

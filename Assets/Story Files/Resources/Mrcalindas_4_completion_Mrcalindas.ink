@@ -9,34 +9,34 @@ VAR new_quest = ""
 
 Mrcalindas?Smiling "Hello {player_name}! I bet you didn't expect to see me here."
 
-* {not TempGoodbye} Hi. Mr. Calindas, I actually love seeing you out and about. How are you?
+* Hi. Mr. Calindas, I actually love seeing you out and about. How are you?
   -> Chat1
-* {not TempGoodbye} Hi. Mr. Calindas, I actually love seeing you. Oh, I think I may have some ideas for you.
-  -> ReadyToSolve
-* {TempGoodbye} Mr. Calindas, I actually love seeing you out and about. Oh, I have some great news for Brooklyn.
-  -> ReadyToSolve
+* Hi. Mr. Calindas. I didn't think you existed outside of the clinic! Since you're here, I think I may have some ideas for you.
+  -> Chat1
+
 
 ==Chat1==
 
-Mrcalindas?Smiling "I'm actually waiting for my mother to finish her first aerobics class with Mrs. Lee. So, I'm feeling pretty good. How is the block party coming along?"
+Mrcalindas?Smiling "I'm actually waiting for my mother to finish her first aerobics class with Mrs. Lee. So, I'm feeling pretty good. 
 
-* Well, I think it's going really great now. We made some new changes to make the party feel more inclusive.
+Mrcalindas?Smiling "It's really feeling like Bloomwood is a great place for my whole family. Assuming you have some ideas for Brooklyn, that is..." 
+
+* Well, I think you're going to be happy. Brooklyn too!
   -> Chat2
-* It's going really great now. We made some new changes to make the party feel more inclusive. Speaking of which, do you have a moment?
+* I'm excited to share what I learned! 
   -> ReadyToSolve
 
 ==Chat2==
 
-Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying to make a plan for the day. Has there been some changes? Or did you have some ideas for activities..."
+Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying to make a plan for Brooklyn's time here. I'm looking forward to settling some of her anxiety."
 
-* Well, I found out some neat things, and came up with a plan.
+* Both the library and the community center have activities, and they taught me a lot about what to look for in activities. 
   -> ReadyToSolve
-* I talked to Lila and Rashad, and they gave me great advice on how best to make the Block Party fun and inclusive.
-  -> ReadyToSolve
+
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Oh? We would enjoy knowing how to prepare for the day. What are some suggestions of activities at the Block Party Brooklyn may enjoy? How can we prepare?"
+Mrcalindas?Neutral "Oh? Rashad and Lila are both very thoughtful. I would like to know what they think."
 
 * Here’s what I have…
   -> PuzzleInterface

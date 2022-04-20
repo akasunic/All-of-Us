@@ -9,42 +9,52 @@ VAR new_quest = ""
 ~ new_quest = "Mrcalindas4.txt"
 # new_quest
 
-Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. My granddaughter Brooklyn is coming for the Block Party and she drew a picture of all the things she wants to do." 
+Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. My granddaughter Brooklyn is coming to visit and she drew a picture of all the things she wants to do in Bloomwood." 
 
 * Hello Mr. Calindas, this looks so sweet. Wait. Is that a unicorn?
   -> Chat1
-* Hey Mr. Calindas! This is so cute, how old is Brooklyn now?
-  -> QuestIntro
+
 
 ==Chat1==
 
-Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't exist. She loves animals so much and knows so many little facts about them. This is Jessica's oldest, you know." 
+Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't exist. She loves animals and knows many little facts about them. This is Jessica's oldest, you know." 
 
 * Oh, yes! She's gotten so big. I'm really excited to see her. I sadly don't have a unicorn up my sleeve, though. Hah.
   -> Chat2
-* Oh, yes! She's gotten so big. How old is she now?
+  
+  * Hey Mr. Calindas! This is so cute, how old is Brooklyn now?
   -> QuestIntro
+
 
 ==Chat2==
 
-Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her attending the Block Party. It could be a little loud for her..." 
+Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her visit. It's exciting, but she's autistic, and changes to her routine can be hard." 
 
 * Oh, really? How old is Brooklyn now? -> QuestIntro
 
+* My cousin is autistic, and he really thrives with routine and predictability. -> QuestIntro
+
 ==QuestIntro==
 
-Mrcalindas?Neutral "Brooklyn is 9, now. She's autistic, and so sometimes big events or theme parks can be overwhelming."
-Mrcalindas?Neutral "Jessica was nervous about bringing her to the Block party, because she's very sensitive to sounds. Do you know if there's any support for children like Brooklyn?" 
+Mrcalindas?Neutral "Brooklyn is 9, now. She's such a determined little girl; now that we know that autism is why she struggles with some things, we have better tools for her."
+
+Mrcalindas?Neutral "Jessica is nervous about her staying with us for a whole week, but she has a work commitment, and I think we are a better childcare option than hiring someone.
+
+Mrcalindas?Smiling  "Brooklyn and my mother are best buddies. I think it will be good for both of them. Maybe not for my nerves - who knows what trouble they're going to cause!"
+
+Mrcalindas?Neutral "I would love to know what resources exist in Bloomwood to help us make her feel comfortable and welcome."
+
 
 * Hmm. Possibly, can you tell me more about what Brooklyn needs?
   -> QuestDetails1
-* I'm not sure, but I can find out!
-  -> QuestAcceptance
+
 
 ==QuestDetails1==
 
-Mrcalindas?Neutral "Of course. Before we can bring Brooklyn to the Block Party we need to know that it's going to be a space where we can feel supported."
-Mrcalindas?Neutral "If you have any tips on how we can prepare her for the Block Party, we'd be grateful." 
+Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that she needs understanding adults who know how to respond to her sensory needs. She knows she's different; what I want is to make sure she doesn't feel badly for that."
+
+Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be accessible to people with different disabilities."
+
 
 * I would love to help with that. Can you be specific about some of the needs Brooklyn has?
   -> QuestDetails2
@@ -52,22 +62,20 @@ Mrcalindas?Neutral "If you have any tips on how we can prepare her for the Block
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrcalindas?Neutral "Oh yes. Sometimes the sounds of everything can make her ears hurt. Also, if there's a lot to do, sometimes she can feel very overstimulated."
-Mrcalindas?Neutral "Our whole family is going to be there, but Jessica doesn't want to feel like Brooklyn is being left out...so any activities we can do together would help us prepare." 
+Mrcalindas?Neutral "Oh yes. Sometimes the sounds of everything can make her ears hurt. Also, if there's a lot going on and no way to step back, sometimes she can feel very overstimulated."
+Mrcalindas?Neutral "Knowing more about the possible activities can help us prepare." 
 
-* Brooklyn is such a great kid. I really want her at the Block Party, so I'll see what I can find out!
+* Brooklyn is such a great kid. I really want her to feel at home in Bloomwood, so I'll see what I can find out!
   -> QuestAcceptance
-* Okay, I think I can try and find some tips!.
-  -> QuestAcceptance
+
 
 ==QuestAcceptance==
-Mrcalindas?Smiling "Thank you so much {player_name}. If you could give us some information on activities so we can prepare, and make sure there are some options for her, we'd appreciate it."
+Mrcalindas?Smiling "Thank you so much {player_name}. I appreciate you helping me plan ahead."
 Mrcalindas?Smiling "Don't worry, I don't expect unicorns." 
 
-* Well, I can't promise a real unicorn, but I can promise that the Block Party is supposed to be for everyone.
+* Well, I can't promise a real unicorn, but I can promise that I'll do what I can.
   -> Goodbye
-* I cannot commit to a unicorn, but I can commit to trying to make sure you're all supported..
-  -> Goodbye
+
 
 ==Goodbye==
 Mrcalindas?Smiling "We can always count on you to do your best, {player_name}. Anything you can find for us, will help us out a lot. Okay, I am going to head back to work. Enjoy the sunshine!" 
