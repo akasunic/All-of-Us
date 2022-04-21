@@ -277,7 +277,7 @@ public class AddToList : MonoBehaviour
             for (int i = 0; i < elem.Value.Count; i++)
             {
                 GlobalGameInfo.InfoItem item = elem.Value[i];
-                string character = item.character;
+                string character = CharacterResources.GetName(item.characterEnum);
                 if (!chars.ContainsKey(character))
                 {
                     chars.Add(character, new List<GlobalGameInfo.InfoItem>());
