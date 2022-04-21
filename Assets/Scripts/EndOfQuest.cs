@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndOfQuest : MonoBehaviour
 {
     [SerializeField]
+    public GameObject Background;
     public GameObject TalkBubble;
     public GameObject[] NPCImages;
     // Stickers
@@ -23,6 +24,7 @@ public class EndOfQuest : MonoBehaviour
     // Polaroids
     public GameObject[] NPCPolaroids1;
     public GameObject[] NPCPolaroids2;
+    // Other elements
     public TextMeshProUGUI DaySummary;
     public TextMeshProUGUI Mon;
     public TextMeshProUGUI Tue;
@@ -61,10 +63,10 @@ public class EndOfQuest : MonoBehaviour
         }
 
         // set character and picture
-        for (int i = 0; i < pictures.Length; i++)
-        {
-            NPCImages[i].SetActive(false);
-        }
+        // for (int i = 0; i < pictures.Length; i++)
+        // {
+        //     NPCImages[i].SetActive(false);
+        // }
 
 
         switch (GlobalGameInfo.GetCurrentNPC()) {
@@ -77,15 +79,19 @@ public class EndOfQuest : MonoBehaviour
                     case 0:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 1:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 2:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 3:
                         Sticker1.text = GameStrings.getString("");
-                        Sticker2.text = GameStrings.getString("");                                            
+                        Sticker2.text = GameStrings.getString("");
+                        break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.LILA:
@@ -97,15 +103,19 @@ public class EndOfQuest : MonoBehaviour
                     case 0:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 1:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 2:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 3:
                         Sticker1.text = GameStrings.getString("");
-                        Sticker2.text = GameStrings.getString("");                                            
+                        Sticker2.text = GameStrings.getString("");
+                        break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.CALINDAS:
@@ -117,15 +127,19 @@ public class EndOfQuest : MonoBehaviour
                     case 0:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 1:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 2:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;                                            
                     case 3:
                         Sticker1.text = GameStrings.getString("");
-                        Sticker2.text = GameStrings.getString("");                                            
+                        Sticker2.text = GameStrings.getString("");
+                        break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.LEE:
@@ -137,15 +151,19 @@ public class EndOfQuest : MonoBehaviour
                     case 0:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 1:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 2:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 3:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");                                            
+                        break;
                 }
                 break;
             case CharacterResources.CHARACTERS.ELISA:
@@ -157,21 +175,26 @@ public class EndOfQuest : MonoBehaviour
                     case 0:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 1:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 2:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");
+                        break;
                     case 3:
                         Sticker1.text = GameStrings.getString("");
                         Sticker2.text = GameStrings.getString("");                                            
+                        break;
                 }
                 break;
             default:
                 throw new System.Exception("Cannot find Character. Check EndOfQuest.cs");
         }
 
+        var questTitle = GlobalGameInfo.GetCurrentTask();
         GlobalGameInfo.FinishTask(questTitle);
         // Data collection
         DataCollection.LogEvent("Quest Completed! Title: " + questTitle + ", Character: " + GlobalGameInfo.GetCurrentNPC(), "QUEST COMPLETION");
