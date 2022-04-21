@@ -60,7 +60,6 @@ public class StartWeek : MonoBehaviour
     public TextMeshProUGUI HelpButtonText;
 
 
-    public Lang LangClass = new Lang();
     
     // Start is called before the first frame update
     void Start()
@@ -144,7 +143,7 @@ public class StartWeek : MonoBehaviour
         SelectProfileText.enabled = true;
 
         HelpButton.SetActive(true);
-        HelpButtonText.text = LangClass.getString("tutorial_help");
+        HelpButtonText.text = GameStrings.getString("tutorial_help");
 
         // Tutorial
         if (!GlobalGameInfo.startWeekFlag) {
@@ -178,10 +177,10 @@ public class StartWeek : MonoBehaviour
         Glow.SetActive(true);
         TutorialButton.enabled = true;
 
-        YellowTitle.text = LangClass.getString("tutorial_startweek_yellowtitle");
-        WhiteTitle.text = LangClass.getString("tutorial_startweek_whitetitle");
-        WhiteText.text = LangClass.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + LangClass.getString("tutorial_startweek_whitetext_2");
-        ButtonText.text = LangClass.getString("tutorial_startweek_buttontext");
+        YellowTitle.text = GameStrings.getString("tutorial_startweek_yellowtitle");
+        WhiteTitle.text = GameStrings.getString("tutorial_startweek_whitetitle");
+        WhiteText.text = GameStrings.getString("tutorial_startweek_whitetext_1") + GlobalGameInfo.name + GameStrings.getString("tutorial_startweek_whitetext_2");
+        ButtonText.text = GameStrings.getString("tutorial_startweek_buttontext");
     }
 
     public void tutorialClick() {
@@ -211,8 +210,8 @@ public class StartWeek : MonoBehaviour
 
         // Show NPC's character card
         StartWeekContainer.SetActive(true);
-        StartWeekText1.text = LangClass.getString("startweek_text1") + " " + NPC + " " + LangClass.getString("startweek_text2");
-        StartWeekText2.text = LangClass.getString("startweek_text3");
+        StartWeekText1.text = GameStrings.getString("startweek_text1") + " " + NPC + " " + GameStrings.getString("startweek_text2");
+        StartWeekText2.text = GameStrings.getString("startweek_text3");
         GlobalGameInfo.SetCurrentNPC(CharacterResources.GetCharacterFromString(NPC));
         GlobalGameInfo.gotalkFlag = true;
         this.resetCharacterCards();
