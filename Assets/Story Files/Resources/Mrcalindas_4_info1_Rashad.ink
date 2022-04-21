@@ -9,7 +9,7 @@ VAR new_quest = ""
 
 Rashad?Neutral "Hey {player_name} what's up? How are you feeling?" 
 
-* Hey Rashad! I'm doing well, I'm thinking a lot about kids in the community. What are you up to?
+* Hey Rashad! I'm doing well, I'm thinking a lot about kids in the community. You?
   -> Chat1
 * I'm alright. Always thinking ten things at once. What are you up to?
   -> Chat1
@@ -37,7 +37,7 @@ Rashad?Neutral "Really? What makes you say that?"
 
 Rashad?Smiling "I'm actually really happy you're thinking about this. A lot of children can have a rough time without proper support. We see it at the library all the time."
 
-Rashad?Neutral "Some families can feel embarrassed about their children's behavior, which is rough. Libraries expect kids to make noise and mess, and sometimes to have a hard time with things. We're prepared."
+Rashad?Neutral "Some families can feel embarrassed about their children's behavior, which is tough on everyone. Libraries expect kids to make noise and mess, and sometimes to have a hard time with things. We're prepared."
 
 Rashad?Neutral "Children with sensory issues can have a great time doing normal social activities if we set them up for success." 
 
@@ -58,6 +58,8 @@ Rashad?Neutral "Children with sensory issues can have a great time doing normal 
 Rashad?Smiling "Inclusive activities take into account that little people have big needs. We don't schedule over mealtime. We keep our events short enough to hold their attention span." 
 
 Rashad?Smiling "If the kids are young enough to nap, we offer morning sessions and afternoon sessions so parents can pick the time best suited for their situation." 
+
+Rashad?Smiling "Like I said, we expect noise and mess. I think some people still think of libraries as silent and stuffy. They don't know that we understand kids, and want them to participate in our programs."
 
 * Rashad, you're brilliant. I've never met a lunch meeting I liked.
 -> Suggestion2
@@ -85,7 +87,7 @@ Rashad?Smiling "One thing you can do is make sure that any activities have clear
 # notification Rashad_Day 4_A separate quiet and calm space can help children who need a sensory break_Mrcalindas4-2 
 
 
-Rashad?Smiling "This sounds silly for a library, but you'd be surprised how often it comes up. We offer quiet spaces."
+Rashad?Smiling "This sounds silly for a library, but you'd be surprised how often it comes up. We offer quiet spaces that are near the activity, but not in the middle of things."
 
 Rashad?Smiling "Sometimes an activity is just too stimulating. I don't always know what's going to be hard for a specific kid, so my job is to provide the pressure valve if they need it."
 
@@ -102,5 +104,4 @@ Rashad?Smiling "Families need this support, and it's not that hard to give it to
 
 * Take care, Rashad!
   ->END
-* Catch you later, man! Thanks for the help!
-  ->END
+

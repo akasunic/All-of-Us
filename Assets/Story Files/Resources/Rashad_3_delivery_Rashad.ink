@@ -22,7 +22,7 @@ Rashad?Smiling "Hah! Lila wasn’t kidding when she told you that stuff <i>trave
 -> QuestIntro
 
 ==Chat2==
-Rashad?Smiling "I always thought a disco ball would be a great addition to Bloomwood, thanks for making that dream come true. Hah!"  
+Rashad?Smiling "I always thought a disco ball would be a great addition to Bloomwood. Thanks for making that dream come true. Hah!"  
 Rashad?Smiling "Anyway, is there something I can do for you?"
 
 * Just checking in. How have you been? How's your sleep routine?
@@ -30,7 +30,7 @@ Rashad?Smiling "Anyway, is there something I can do for you?"
 
 ==QuestIntro==
 Rashad?Neutral "I have been sleeping better, actually. I met with my doctor and he recommended that I get into running again."
-Rashad?Neutral "He also mentioned that seeing a Black therapist is the right move, but I'm still on the fence about it. Do you think you could help?" 
+Rashad?Neutral "He also reiterated that seeing a Black therapist is the right move, but I'm still on the fence about it. Do you think you could help?" 
 
 * Absolutely! People I trust say good things. What are your concerns?
 -> QuestDetails1
@@ -38,7 +38,7 @@ Rashad?Neutral "He also mentioned that seeing a Black therapist is the right mov
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "My doctor agrees that seeing a Black therapist who understands racial stress personally and professionally is important, and I have this rec from Lila, but I'm still unsure."
+Rashad?Neutral "My doctor agrees that seeing a therapist who understands racial stress personally and professionally is important, and I have this rec from Lila, but I'm still unsure."
 Rashad?Neutral "I don't know how to determine which therapist is right for me. Can you help me with more information?" 
 
 * I can try. Did your doctor mention anything else?

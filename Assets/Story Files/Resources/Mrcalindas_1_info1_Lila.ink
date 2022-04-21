@@ -18,7 +18,7 @@ Lila?Smiling "Hey {player_name}! How are you feeling today?"
 
 ==Chat1==
 
-Lila?Smiling "I do! It's naptime for the kids, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try and get outside pretty frequently." 
+Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try and get outside pretty frequently." 
  
 * I'm glad naptime is built in so you get a minute to relax.
   -> Chat2

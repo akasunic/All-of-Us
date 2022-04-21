@@ -74,17 +74,18 @@ Mrcalindas?Neutral "Sometimes replacing lost records requires a little detective
 
 ==Suggestion1==
 
-~ notification = "Mrcalindas_Day 2_Try to keep all of your medical records in a safe place_Elisa2-3"
-# notification Mrcalindas_Day 2_Try to keep all of your medical records in a safe place_Elisa2-3 
+~ notification = "Mrcalindas_Day 2_Some jobs might require specific immunizations for your safety_Elisa2-3"
+# notification Mrcalindas_Day 2_Some jobs might require specific immunizations for your safety_Elisa2-3
 
 
 Mrcalindas?Neutral "There are many reasons medical records get lost. Immigration, adoption or foster care. Doctors' practices close. House fires, even."
 
 Mrcalindas?Smiling "I always recommend that people do their best to keep records in a safe place, but when that doesn't work, we improvise. Or we do the best we can without those records."
 
-Mrcalindas?Smiling "Sometimes that means repeating tests, or getting repeat vaccines." 
+Mrcalindas?Neutral "Vaccination records are important for a variety of reasons. Some jobs require certain immunizations for your own safety. It's not just schools."
 
-* Repeat vaccines? Like, booster shots? 
+
+* So if you've lost your records, does that mean you can't work those jobs?
   -> Suggestion2
 
 
@@ -94,7 +95,7 @@ Mrcalindas?Smiling "Sometimes that means repeating tests, or getting repeat vacc
 # notification Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases, proving that you are protected._Elisa2-4 
 
 
-Mrcalindas?Smiling "Not exactly. There are two options for recreating lost immuniation records - a blood test to check for immunity, or just getting the vaccine again." 
+Mrcalindas?Smiling "Not at all. There are two options for recreating lost immuniation records - a blood test to check for immunity, or just getting the vaccine again." 
 
 Mrcalindas?Neutral "Depending on her insurance, it might be less expensive just to repeat the vaccine. There's very little risk involved - a few side effects, like feeling run down for a day or maybe a little fever." 
 

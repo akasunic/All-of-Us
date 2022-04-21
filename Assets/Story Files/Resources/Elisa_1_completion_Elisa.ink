@@ -9,11 +9,10 @@ VAR new_quest = ""
 
 Elisa?Smiling "Hey, {player_name}!"
 
-* {not TempGoodbye} Hey! Whatcha up to? -> Chat1
-* {not TempGoodbye} Hi! I found out some info on the diabetes stuff you were talking about.
+* Hey! Whatcha up to? -> Chat1
+* Hi! I found out some info on the diabetes stuff you were talking about.
   -> ReadyToSolve
-* {TempGoodbye} Hi! So, I asked around about health info for your mom, is now a good time?
-  -> ReadyToSolve
+
 
 ==Chat1==
 
@@ -45,43 +44,65 @@ Elisa?Neutral "Oh, that's great! What'd you find out?"
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good.
-  -> GoodSolution
-* They picked a solution marked bad.
-  -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
+==Option1==
+Elisa?Neutral “I feel like the answer to everything is “diet and exercise. That might be true, but it doesn’t feel very actionable. You know?”
+ 
+Elisa?Neutral “I was hoping for something more in-depth.”
+ 
+Let me see what else I can suggest, Elisa.
+  ->TempGoodbye
 
-Elisa?Smiling "Thanks so much, {player_name}! I'll go talk to my mom, she should be home by now. Seriously, thanks for all your help."
 
-* You're welcome!
+  
+==Option2==
+# correct
+Elisa?Smiling “Thank you, {player_name}. It sounds like a lot, but I feel like this gives me a starting point for all the topics to ask about.”
+
+Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this out for my folks before the appointment." 
+  
+* I feel like you’ve got this under control!
+	-> SolvedGoodbye
+
+  
+ ==Option3==
+ # correct
+Elisa?Smiling “The library is such a useful resource; my abuela loved the cookbook section.”
+
+Elisa?Smiling “I will look at the calendar to see if there are workshops coming up that might help my mom feel like she’s in this with other people.”
+  
+* I feel like you’ve got this under control!
+	-> SolvedGoodbye
+
+==Option4==
+Elisa?Neutral “What does that even mean? I feel overwhelmed by how much I don’t understand.”
+ 
+Elisa?Neutral “I was hoping for something more in-depth.”
+ 
+Let me see what else I can suggest, Elisa.
+  ->TempGoodbye
+
+
+* It sounds like you're ready for this! 
   -> SolvedGoodbye
-* Any time, Elisa.
-  -> SolvedGoodbye
 
-==BadSolution==
-
-Elisa?Neutral "Hmm, did you find any other information? I'm not sure if that's enough to convince my mom to go to the doctor."
-
-* Try again?
-  -> PuzzleInterface
-* Wait... let me ask around a little more.
-  -> TempGoodbye
 
 ==SolvedGoodbye==
 
-Elisa?Smiling "And hey- I thought about it more, and I think I should be able to come help out with the block party! Anyway, I should get going. Bye {player_name}!"
-
-* That's amazing! Bye Elisa!
-  -> END
-* Thanks so much! See you around, Elisa.
   -> END
 
 ==TempGoodbye==
+Elisa?Neutral "Okay, come back soon!"
 
-Elisa?Neutral "Oh ok, no worries! See you soon then."
+* No worries, Elisa. I will.
+  -> PuzzleInterface
 
-* See ya!
-  -> END
-* Bye, be right back!
-  -> END

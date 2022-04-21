@@ -11,7 +11,7 @@ Rashad?Smiling "Hey hey, {player_name} it's nice to see you again. How's it goin
 
 * I'm fine as long as you don’t ask about the glitter.
   -> Chat1
-* {not TempGoodbye} I’m doing alright! I found some resources for you.
+* I’m doing alright! I found some resources for you.
   -> ReadyToSolve
 
 
@@ -41,82 +41,60 @@ Rashad?Neutral "That's great to hear, {player_name}. I've really been going thro
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
   
-  ==Solution1==
-Rashad?Smiling “Yes, good idea Text”
 
-Rashad?Neutral “expansion” 
+==Option1==
 
-Player Response
--> Followup1 
-Alternate Player Response
--> Followup1
+Rashad?Neutral “Melatonin, huh? I don’t know… that sounds too easy.”
 
-==Followup1==
-Rashad?Neutral “Reiterate learning”
-
-Rashad?Smiling “expand on reiteration” 
-
-
-* I'm here to support you!
-    -> END
-  
-  
-  ==Solution2==
-Rashad?Neutral “Decline Answer”
-
-Rashad?Neutral “Explain Decline”
-
-I'll come back to help!
-  ->TempGoodbye
-  
-  ==Solution3==
-  
-Rashad?Neutral "Decline answer"  
-
-I'll come back to help!
+OK. Let me go check my notes. Hold tight!
   ->TempGoodbye
 
+
+==Option2==
+# correct
+
+Rashad?Smiling “Well, you didn’t say you’d bring me easy answers. Stress is a really big deal, and can negatively impact many aspects of my well-being, so of course managing it can take many forms.”
+
+Rashad?Smiling "I think I have a lot to chew on.”
   
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+
+Rashad?Neutral “It feels like self-care is a drop in the bucket compared to what I’m experiencing. Will that really make a difference?”
+ 
+Hold tight! I’ll be right back.
+  ->TempGoodbye
+
+==Option4==
+# correct
+
+Rashad?Smiling “What you’re saying makes sense. I’m not sure where to start, but having someone objective to talk to certainly couldn’t hurt.”
+
   
-  ==Solution4==
-Rashad?Smiling “Accept answer”
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
 
-Player Response
--> Followup2 
-Alternate Player Response
--> Followup2
-
-==Followup2==
-Rashad?Neutral “Reinforce learning”
-
-Rashad?Smiling “continue learning”
-
-
-* It sounds like you're ready for this! 
-  -> SolvedGoodbye
-
-//do all of the other possible info types fall here?
 
 
 ==SolvedGoodbye==
+Rashad?Smiling “Hey, thanks, {player_name}. I appreciate you helping me out like this.” 
 
+My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Okay, come back soon!"
+Rashad?Neutral "You know I’ll be here when you get back.”
 
-* No worries, Rashad. I will.
-  -> END
-
-
-
-
+* I know you will! Sit tight!
+  -> PuzzleInterface

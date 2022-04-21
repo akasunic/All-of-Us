@@ -9,7 +9,7 @@ VAR new_quest = ""
 
 Lila?Smiling "Hey {player_name}! Getting a few more books out? Aren't you at the limit by now?" 
 
-* Hi Lila! I'm definitely over the 10 book limit, but I'm looking activities for kids, so I'm going to ask Rashad for mercy.
+* Hi Lila! I'm definitely over the 10 book limit, but I'm researching activities for kids, so I'm going to ask Rashad for mercy.
   -> Chat1
 * You <i>know</i>I'm over the limit. But like you, I'm trying to find some cool things for kids to do.
   -> Chat1
@@ -48,13 +48,12 @@ Lila?Neutral "That's really valid. Children with autism or ADHD can sometimes fe
 * I think so too. What do you suggest?
   -> Suggestion1
 * I think so too. Do you have any tips?
-  -> Suggestion2
+  -> Suggestion1
 
 ==Suggestion1==
 
 ~ notification = "Lila_Day 4_A calm sensory activity can help all children to regulate their emotions_Mrcalindas4-3"
 # notification Lila_Day 4_A calm sensory activity can help all children to regulate their emotions_Mrcalindas4-3 
-
 
 
 Lila?Smiling "Well, if they're visiting, the Community Center hosts quiet play hours - caretakers can bring children over to play with legos, or participate in low-key guided activities." 
@@ -65,8 +64,7 @@ Lila?Smiling "I like that it gives me a chance to teach caretakers tricks about 
 
 * I never thought about it like that. Do you have any other ideas?
   -> Suggestion2
-* Wow Lila, you always know just how to handle things like this. Thank you!
-  -> Goodbye
+
 
 ==Suggestion2==
 
@@ -80,6 +78,7 @@ Lila?Smiling "Also, we can all avoid making children feel bad about themselves f
 
 Lila?Smiling "Kids are going to be kids. We prepare for the noise and the mess, and make space for them to engage in ways that feel good for them." 
 
+Lila?Smiling "I always have that one kid who would rather rearrange the play food than join the group, and that's okay. If they are content and safe, I assume they're listening and getting something from the activity anyway."
 
 * Oh! It's great you already thought of this. Thanks Lila!
   -> Goodbye

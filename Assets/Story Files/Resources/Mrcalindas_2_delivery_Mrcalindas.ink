@@ -26,14 +26,14 @@ Mrcalindas?Smiling "I'm so happy to hear it! Everyone is buzzing about how helpf
   -> QuestIntro
 
 ==Chat2==
-Mrcalindas?Smiling "Well, that's good. The neighborhood is starting to feel more connected. I think everyone feels really good about where Bloomwood is heading." 
+Mrcalindas?Smiling "Well, that's good. The neighborhood is benefitting from your help. I think everyone feels really good about where Bloomwood is heading." 
 
 * That's so nice to hear, Mr. Calindas. Oh, before I forget, what did you need to ask me?
   -> QuestIntro
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to postpone our next cooking lesson? My mother has moved in with us, and I want her to feel settled."
+Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to postpone our next cooking lesson. My mother has moved in with us, and I want her to feel settled."
 
 Mrcalindas?Neutral "It might be a while before our next lesson. I need to figure out how to make this transition as comfortable as possible for her." 
 
@@ -54,14 +54,14 @@ Mrcalindas?Neutral "Well, she is a very feisty 72 year old lady. She's very used
 ==QuestDetails2==
 
 Mrcalindas?Neutral "My mother is leaving behind many of her friends so it would be nice to find her good people her own age to talk to."
-Mrcalindas?Neutral "I want her mind to stay sharp, and since she's been a bit depressed I'm worried. I don't know the first place to look for any of that, and I didn't have a lot of time to prepare." 
+Mrcalindas?Neutral "I want her mind to stay sharp, and since she's been a bit depressed, I'm worried. I don't know the first place to look for any of that, and I didn't have a lot of time to prepare." 
 
 * Hmm. I think I can help with that. Do you want me to look for you?
   -> QuestAcceptance
 
 ==QuestAcceptance==
 Mrcalindas?Smiling "That would save me so much time, {player_name}."
-Mrcalindas?Smiling "Also, I would love to learn more about the resources there are to keep her fit and active! Thank you so much for helping and understanding." 
+Mrcalindas?Smiling "Also, I would love to learn more about the resources there are to make it easy for her to stay fit and active! Thank you so much for helping and understanding." 
 
 * It would be my pleasure to welcome her to the neighborhood. I'll be back with some ideas.
   -> Goodbye

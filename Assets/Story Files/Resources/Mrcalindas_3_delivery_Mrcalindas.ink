@@ -49,13 +49,15 @@ Mrcalindas?Neutral "A lot of the courses for seniors are in English. She speaks 
 
 Mrcalindas?Neutral "Well, she's mostly looking to learn how to check her health records, and use search engines, and maybe how to email or video chat with her sister in the Philippines." 
 
+Mrcalindas?Neutral "I'd also love any general suggestions for making it easier for her to navigate the internet.Tools and resources of any sort."
+
 * Hmm. So general tech awareness? I think that's doable.
   -> QuestAcceptance
 * I bet you there's a program at the Community Center or Library.
   -> QuestAcceptance
 
 ==QuestAcceptance==
-Mrcalindas?Smiling "I am willing to pay if it costs money, of course. I would teach her myself, but Lucy and I don't have a lot of time and patience."
+Mrcalindas?Smiling "I am willing to pay if it costs money, of course. I would teach her myself, but that would not be good for any one's blood pressure."
 
 Mrcalindas?Smiling "I am my mother's son, I guess. I want to be able to teach her, and I think she wishes she could learn from me. But that's not who either of us is."
 

@@ -18,9 +18,9 @@ Mrslee?Smiling "Hello {player_name}. How you today?"
 
 Mrslee?Smiling "Me? Oh! That is very nice." 
 
-* Well, it's true. You're such a fitness inspiration. It's really great to talk with you. 
+* Well, it's true. You're such a fitness inspiration. It's always great to talk with you. 
   -> Chat2
-* Well, it's true. You're always trying to keep active...in fact maybe you could help me with something?
+* Well, it's true. You're always so active...in fact maybe you could help me with something?
   -> Explain1
 
 ==Chat2==
@@ -28,12 +28,12 @@ Mrslee?Smiling "Oh, {player_name} so kind. My aerobic class make me feel energy!
 
 * Well, I actually want to ask some questions about your classes.
   -> Explain1
-* That's actually, great to hear. I actually am looking for some information about classes.
+* That's great to hear! I  am looking for some information about classes.
   -> Explain1
 
 ==Explain1==
 
-Mrslee?Smiling "I really enjoy these class, happy to help. What your question?"
+Mrslee?Smiling "I really enjoy these classes. What your question?"
 
 * Mr. Calindas' mother is moving to Bloomwood, and she needs great activities.
   -> Explain2
@@ -45,9 +45,9 @@ Mrslee?Smiling "She move here? Live with Giancarlo? That is nice. Aerobic activi
 
 Mrslee?Smiling "I read that exercise fights depression. And dementia. Getting older is hard. Exercise help."
 
-* Are they? Can you tell me more about that?
+* How would one get started?
   -> Suggestion1
-* Can you tell me more about the benefits of exercise for seniors?
+* What do you suggest as a first step?
   -> Suggestion1
 
 ==Suggestion1==
@@ -55,9 +55,10 @@ Mrslee?Smiling "I read that exercise fights depression. And dementia. Getting ol
 ~ notification = "Mrslee_Day 2_The community center offers a variety of classes that might suit Mother Calindas_Mrcalindas2-1"
 # notification Mrslee_Day 2_The community center offers a variety of classes that might suit Mother Calindas_Mrcalindas2-1 
 
-Mrslee?Smiling "Well, they say she need to talk to doctor before start new physical activity. I guess Giancarlo know that already. 
+Mrslee?Smiling "Well, they say she need to talk to doctor before starting new physical activity. I guess Giancarlo know that already."
 
-Mrslee?Smiling "Maybe Giancarlo can bring her here. We can help pick right class for her comfort. Swimming, aerobics, tai chi. The Community Center offers little of everything." 
+Mrslee?Smiling "Maybe Giancarlo can bring her here. We can help pick right class for her comfort. Swimming, aerobics, tai chi. The Community Center offer little of everything." 
+
 
 * That sounds great! What about the social benefits?
   -> Suggestion2
@@ -73,7 +74,7 @@ Mrslee?Smiling "Oh, yes! For elder, group exercise very social. Lot of friend in
 
 Mrslee?Smiling "When I lose Dr. Lee, Eddie feel stress. Worry that I would be all alone, and sad." 
 
-Mrslee?Smiling "Exercise class give me many good things. So many friends. So many people to care."
+Mrslee?Smiling "Exercise class give me many good things. So many friends. So many people to care. I see happy faces every day."
 
 Mrslee?Smiling "I stay fit, I have strength. It give me so much feeling of independence! It help me feel strong and my balance good. I love it!"
 

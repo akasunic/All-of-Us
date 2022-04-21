@@ -10,21 +10,21 @@ VAR new_quest = ""
 
 Rashad?Smiling "Hey, {player_name}! How you been? Excited to hear what you've been up to."
 
-* {not TempGoodbye} Just doing what I can to keep the community happy!
+* Just doing what I can to keep the community happy!
 -> Chat1
-* {TempGoodbye} I met up with Elisa and Mrs. Lee. I have some ideas for your new initiative.
+* I met up with Elisa and Mrs. Lee. I have some ideas for your new initiative.
 -> ReadyToSolve
 
 ==Chat1==
 Rashad?Neutral "I don't know what we'd do without you. Before you got here, I feel like a lot of your duties fell on my shoulders."
 
-* I'm not surprised, you do so much for the community.
+* I'm not surprised; you do so much for the community.
 -> Chat2
 * It must've been tough. Also, I do have that information you asked for!
 -> ReadyToSolve
 
 ==Chat2==
-Rashad?Neutral "You have information for the initiative? Spill the tea.”
+Rashad?Neutral "You have information for the initiative? Spill it!”
 
 
 * Elisa and Mrs. Lee shared a lot of helpful tips. Here's what I learned.
@@ -39,85 +39,64 @@ Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful, and Mrs
 -> PuzzleInterface
 * Hold on. I want to make sure what they said is captured correctly.
 -> TempGoodbye
-
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
   
-  ==Solution1==
-Rashad?Smiling “Yes, good idea Text”
 
-Rashad?Neutral “expansion” 
+==Option1==
 
-Player Response
--> Followup1 
-Alternate Player Response
--> Followup1
+Rashad?Neutral “Did you learn anything more specific?”
 
-==Followup1==
-Rashad?Neutral “Reiterate learning”
-
-Rashad?Smiling “expand on reiteration” 
-
-
-* I'm here to support you!
-    -> END
-  
-  
-  ==Solution2==
-Rashad?Neutral “Decline Answer”
-
-Rashad?Neutral “Explain Decline”
-
-I'll come back to help!
-  ->TempGoodbye
-  
-  ==Solution3==
-  
-Rashad?Neutral "Decline answer"  
-
-I'll come back to help!
+Let me check my notes; I’ll be right back.
   ->TempGoodbye
 
+
+==Option2==
+# correct
+Rashad?Smiling “I’m glad to hear that Elisa’s experience agrees with my gut. I’ve been reading about the benefits of intergenerational support, and it seems like a win all around.” 
+
+Rashad?Smiling "My grandma could tell you stories about teaching me to sew on a button; thankfully she got to me before I met Cheryl. I might still be single!”
   
+* I’m happy to help further; just tell me how! 
+	-> SolvedGoodbye
+
+==Option3==
+
+Rashad?Neutral “That’s helpful; did you discover anything more detailed?”
+ 
+Hold tight! I’ll be right back.
+  ->TempGoodbye
+
+==Option4==
+#correct
+
+Rashad?Smiling “One of the things that got this rattling around in my head again was Mrs. Lee and her role at the Community Center. She just lights up when she talks about the class – and not like a disco ball.”
+
+Rashad?Smiling “If it’s good for her, and it’s good for Lila’s class, it must be useful for other people too, right?” 
+
   
-  ==Solution4==
-Rashad?Smiling “Accept answer”
+* I’m happy to help further; just tell me how!
+	-> SolvedGoodbye
 
-Player Response
--> Followup2 
-Alternate Player Response
--> Followup2
-
-==Followup2==
-Rashad?Neutral “Reinforce learning”
-
-Rashad?Smiling “continue learning”
-
-
-* It sounds like you're ready for this! 
-  -> SolvedGoodbye
-
-//do all of the other possible info types fall here?
 
 
 ==SolvedGoodbye==
+Rashad?Smiling “You got it, {player_name}. I feel like this is going to be good. For all of us.” 
 
+My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Okay, come back soon!"
+Rashad?Neutral "If I’m not at the circulation desk, I’ll be in my office.”
 
-* No worries, Rashad. I will.
-  -> END
-
-
-
+* I’ll find you!
+  -> PuzzleInterface

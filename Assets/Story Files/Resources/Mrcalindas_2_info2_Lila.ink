@@ -9,7 +9,7 @@ VAR new_quest = ""
 
 Lila?Smiling "Hey {player_name}! It's great to run into you." 
 
-* Lila! Great timing! I stopped in on my way to find you; I was needed to return these books before Rashad gets after me!
+* Lila! Great timing! I stopped in on my way to find you; I need to return these books before Rashad gets after me!
   -> Chat1
 * Hey Lila! It's good to see you. Looks like you've got quite a stack of books there.
   -> Chat1
@@ -59,7 +59,7 @@ Lila?Smiling "Not just that, but volunteering can also increase mental cognition
 
 * Wow. I think we all wish we were as sharp as Mrs. Lee!
   -> Suggestion2
-* This is so good to know. I knew I should have come to you.
+* This is so good to know. I knew I should chat with you.
    -> Suggestion2
 
 ==Suggestion2==
@@ -69,15 +69,18 @@ Lila?Smiling "Not just that, but volunteering can also increase mental cognition
 
 
 Lila?Smiling "Well, I mentioned depression; isolation and loneliness are real issues for seniors, especially after losing a spouse. That's one thing volunteering can help with."
-Lila?Smiling "There's so many different volunteering activities available. It just depends on what they like, and what makes them feel good." 
+
+Lila?Smiling "One of the things that keeps Mrs. Lee sharp is that she has things to look forward to, and people to do them with. Volunteering is part of that!
+
+Lila?Smiling "There's so many different volunteering activities available. It just depends on what a person likes, and what makes them feel good." 
 
 
-*  This is so good to know. I knew I should have come to you.
+*  This is valuable perspective. Thank you, Lila!
   -> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Well, you know I'm happy to help. If you know any seniors looking for an opportunity the library and the community center are great places to start."
-Lila?Smiling "Don't be afraid to spread the word. I'm going to check these out. Catch you soon, {player_name}!"
+Lila?Smiling "Well, you know I'm happy to help. If you know any seniors looking for an opportunity, the library and the community center are great places to start."
+Lila?Smiling "Don't be afraid to spread the word. I'm going to check these books out and get back. Catch you soon, {player_name}!"
 
 * Thanks Lila, have an awesome day!
   ->END

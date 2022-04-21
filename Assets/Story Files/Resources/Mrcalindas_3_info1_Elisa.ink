@@ -16,11 +16,11 @@ Elisa?Smiling "Hey {player_name}! Hitting the books? Or are you tutoring someone
 
 ==Chat1==
 
-Elisa?Smiling "Hah. You're usually able to keep everything together, right? How are things going?" 
+Elisa?Smiling "Hah. You usually keep everything together, right? How are things going?" 
 
 * It's going pretty well! I do have a possible question, if you're not too busy to chat?
   -> Chat2
-* I popped by to ask Rashad something, but you might be able to help.
+* I try! I popped by to ask Rashad something, but you might be able to help.
   -> Explain1
 
 ==Chat2==
@@ -37,7 +37,7 @@ Elisa?Smiling "I even got to hang out with my folks over coffee this morning. So
 
 ==Chat3==
 
-Elisa?Smiling "I'm the eldest; I think I'm spiritually obligated to coffee and pastry with my mom as often as SHE is willing to slow down and sit a few.." 
+Elisa?Smiling "I'm the eldest; I think I'm spiritually obligated to coffee and pastry with my mom as often as SHE is willing to slow down and sit a few..." 
 
 * So you get it from somewhere. I'm not surprised. I have a parent question for you.
   -> Explain1
@@ -45,7 +45,7 @@ Elisa?Smiling "I'm the eldest; I think I'm spiritually obligated to coffee and p
 ==Explain1==
 Elisa?Smiling "Is it about how to get your parents to slow down and take it easy, instead of rebuilding the shed or planting ten different vegetables in the garden? or something else?"
 
-* Oh, no it's about technology. Definitely compare parent notes with Mr. Calindas, though.
+* Oh, no. It's about technology. Definitely compare parent notes with Mr. Calindas, though.
   -> Explain2
 * Definitely NOT vegetables. I've got a tech question.
   -> Explain2
@@ -53,7 +53,7 @@ Elisa?Smiling "Is it about how to get your parents to slow down and take it easy
 ==Explain2==
 
 Elisa?Neutral "A tech question? And you didn't just look it up? Or watch a video?" 
-* It's not for me, it's for Mother Calindas. She needs some help with technology.
+* It's not for me; it's for Mother Calindas. She needs some help with technology.
   -> Suggestion1
   
 * Oh no, I'm looking for some senior tech classes in Spanish or Tagalog. Mother Calindas needs some hands-on help. Do you know anything?
@@ -79,7 +79,7 @@ Elisa?Smiling "Turns out I prefer the text on my phone as big as it'll go too, e
 ~ notification = "Elisa_Day 3_Elisa is willing to teach Mother Calindas some basic tech in Spanish_Mrcalindas3-2"
 # notification Elisa_Day 3_Elisa is willing to teach Mother Calindas some basic tech in Spanish_Mrcalindas3-2 
 
-Elisa?Smiling "Oh, yeah. The internet can be really overwhelming for seniors. If you want you can have Mr. Calindas email me and I can help her here at the library."
+Elisa?Smiling "Oh, yeah. The internet can be really overwhelming for seniors. Mr. Calindas can email me and I can help her here at the library."
 Elisa?Smiling "Like a tutor. We can do it all in Spanish too. Or I can practice tech terms in English with her."
 
 * You're so generous, Elisa! I'll have Mr. Calindas email you.

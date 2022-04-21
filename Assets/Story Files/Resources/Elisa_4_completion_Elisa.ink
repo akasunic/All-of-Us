@@ -7,81 +7,98 @@ VAR new_quest = ""
 
 ===intro===
 
-Elisa?Smiling "Hey, {player_name}!"
+Elisa?Smiling "Hi, {player_name}!”
 
-* {not TempGoodbye} Hey! Whatcha up to? -> Chat1
-* {not TempGoodbye} Hi! I found out some info on the diabetes stuff you were talking about.
-  -> ReadyToSolve
-* {TempGoodbye} Hi! So, I asked around about health info for your mom, is now a good time?
+* Anything else exciting happen today, Elisa?  
+  ->Chat1
+* Hi! Do you have time to chat? I come with suggestions!
   -> ReadyToSolve
 
 ==Chat1==
 
-Elisa?Neutral "Oh, just getting some homework done for class tomorrow."
+Elisa?Smiling “Anything more interesting than my mother changing the rules on me? Not one single thing.” 
 
-* Ooh what class? Anything exciting?
+* What’s one more big change, right?
   -> Chat2
-* Gotcha. By the way, I found some info for your mom if you've got a minute.
+* Are you ready to hear my suggestions?
   -> ReadyToSolve
 
 ==Chat2==
 
-Elisa?Neutral "Right now I'm working on a report for my Financial Analysis class! It's my favorite class so far."
+Elisa?Smiling “I guess so! It’s like ripping a bandaid off – everything’s already in chaos, so let’s just get it all over at once.”  
 
-* Awesome! Hey, I found out more info for you on diabetes if you wanna talk about it.
+* You’ve always said your parents were adaptable. They’re just proving it!
   -> ReadyToSolve
-* Well, I'm glad it's exciting to someone! Haha, anyway, I think I found some good info for you on diabetes.
+* I have suggestions for you. 
   -> ReadyToSolve
 
 ==ReadyToSolve==
 
-Elisa?Neutral "Oh, that's great! What'd you find out?"
+Elisa?Smiling “Great. I’m ready to hear them.”
+
+Elisa?Smiling “Also, {player_name}, thank you.” 
 
 * Here’s what I have…
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye
 
+
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good.
-  -> GoodSolution
-* They picked a solution marked bad.
-  -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
+==Option1==
 
-Elisa?Smiling "Thanks so much, {player_name}! I'll go talk to my mom, she should be home by now. Seriously, thanks for all your help."
+Elisa?Neutral “Then why do they call it an annual? I guess that’s useful to know, but I don’t feel like I’m any more prepared. Did you learn anything else?”
+ 
 
-* You're welcome!
-  -> SolvedGoodbye
-* Any time, Elisa.
-  -> SolvedGoodbye
+Let me see what else I can find, Elisa.
+  ->TempGoodbye
 
-==BadSolution==
+==Option2==
+# correct
+Elisa?Smiling “I knew there were a lot of options, but it sounds like there’s even more than just a choice between the pill or the shots. Thank you for this.”
 
-Elisa?Neutral "Hmm, did you find any other information? I'm not sure if that's enough to convince my mom to go to the doctor."
+Elisa?Smiling "I don’t have a lot of experience asking questions about sex, but I guess if I treat it like questions about medicine, it might be easier.”
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
 
-* Try again?
-  -> PuzzleInterface
-* Wait... let me ask around a little more.
-  -> TempGoodbye
+==Option3==
+# correct
+
+Elisa?Smiling “That never would have occurred to any of us. My parents are careful around potential authority figures, obviously. But this makes a lot of sense.”
+
+Elisa?Smiling "I wonder if the doctor might have a suggestion at my appointment. I can’t be the only patient with old-fashioned but trying hard parents.”
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option4==
+Elisa?Smiling “I think that’s an interesting suggestion, but I feel like I need more data..”
+ 
+Let me see what else I can find, Elisa.
+  ->TempGoodbye
+
 
 ==SolvedGoodbye==
+Elisa?Smiling “I really appreciate your help. I want to show my mom that I appreciate her work by meeting her where she is.” 
 
-Elisa?Smiling "And hey- I thought about it more, and I think I should be able to come help out with the block party! Anyway, I should get going. Bye {player_name}!"
-
-* That's amazing! Bye Elisa!
-  -> END
-* Thanks so much! See you around, Elisa.
+My pleasure, Elisa!
   -> END
 
 ==TempGoodbye==
+Elisa?Neutral "Okay, come back soon!"
 
-Elisa?Neutral "Oh ok, no worries! See you soon then."
-
-* See ya!
-  -> END
-* Bye, be right back!
-  -> END
+* No worries, Elisa. I will.
+  -> PuzzleInterface

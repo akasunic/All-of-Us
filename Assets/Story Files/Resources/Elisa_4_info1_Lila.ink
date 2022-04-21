@@ -46,34 +46,31 @@ Lila?Smiling "I bet you came in on a mission, though. You always have great ques
 
 Lila?Neutral "Alright. What’s today’s mission, friend?." 
 
-* I’m helping a friend who has their first Planned Parenthood appointment next week.
+* I’m helping a friend who has an appointment at the clinic to discuss birth control.
   -> Suggestion1
 
 ==Suggestion1==
 ~ notification = "Lila_Day 4_Current guidelines recommend a pelvic exam and pap smear every 3 years unless there is reason for more frequent screenings_Elisa4-1"
 # notification Lila_Day 4_Current guidelines recommend a pelvic exam and pap smear every 3 years unless there is reason for more frequent screenings_Elisa4-1 
 
-Planned Parenthood is a safe, judgment free place to obtain reproductive and sexual health care for people of all genders.
 
-Lila?Neutral "Oh, that’s big I feel like Planned Parenthood is such a positive thing for the community!”!"
+Lila?Neutral "Oh, that’s big! I feel like the clinic offering judgment free support for everybody's reproductive health is such a positive thing for the community!”
 
-Lila?Smiling "I use Planned Parenthood for my gynecological checkups. They offer reproductive and sexual health care for people of all genders, not just women.”  
+Lila?Smiling "They offer reproductive and sexual health care for people of all genders, not just women.”  
 
-Lila?Smiling “I’ve been to Planned Parenthood for testing for Sexually Transmitted Infections – or STIs, for breast cancer screenings, for birth control. I even went with a guy friend who had a vasectomy done and needed a ride home.”
+Lila?Smiling “I’ve seen my gyn at the clinic for testing for Sexually Transmitted Infections – or STIs, for breast cancer screenings, for birth control. I even went with a guy friend who had a vasectomy done and needed a ride home.”
 
-Lila?Neutral "My doctor recommends a pelvic exam and a pap smear every 3 years, unless there’s a reason for more frequent screening. Is  … are they looking for birth control options too?”
+Lila?Neutral "My doctor recommends a pelvic exam and a pap smear every 3 years, unless there’s a reason for more frequent screening."
+
+Lila?Neutral "Do they know what sort of birth control they are asking about?"
 
 * Oh! Her. She’s probably not sure. How do you decide that? 
   -> Suggestion2
-* I don’t know that she has anyone to talk this through with, so I bet she’s a little unsure on that.
+* I think she’s a little unsure on that.
   -> Suggestion2
 
 
 ==Suggestion2==
-
-~ notification = "Lila_Day 4_Ask your doctor for a rundown of all the potential options for birth control, including potential side effects and other possible pros and cons_Elisa4-2"
-# notification Lila_Day 4_Ask your doctor for a rundown of all the potential options for birth control, including potential side effects and other possible pros and cons_Elisa4-2 
-
 
 Lila?Neutral "Birth control options are deeply personal. Your friend should be honest with the doctor about their sexual activity to date, their plans, their fears.” 
 
@@ -89,9 +86,14 @@ Lila?Neutral “I tried a low-dose pill first, because they helped my mom with m
 
 ==Suggestion3==
 
+~ notification = "Lila_Day 4_Ask your doctor for a rundown of all the potential options for birth control, including potential side effects and other possible pros and cons_Elisa4-2"
+# notification Lila_Day 4_Ask your doctor for a rundown of all the potential options for birth control, including potential side effects and other possible pros and cons_Elisa4-2 
+
+Lila?Smiling "I needed a hormonal solution because my periods were just terrible. There's no chance Trisha and I will end up accidentally pregnant, but I needed to understand all of my choices."
+
 Lila?Neutral “I recommend asking for a rundown of all the possible options. Then, decide what to try first with the advice of your doctor. Be prepared to try different options if the first one doesn’t work for whatever reason.”
 
-Lila?Smiling “Birth control comes in all varieties – everything from barrier protection – condoms, for example,, which only come out when it matters, to long-term solutions like an IUD – in intra-uterine device, which is inserted once and lasts up to 7 years.”
+Lila?Smiling “Birth control comes in all varieties – everything from barrier protection – condoms, for example,, which only come out when it matters, to long-term solutions like an IUD – an intra-uterine device, which is inserted once and lasts up to 7 years.”
 
 Lila?Smiling “Taking control of your reproductive choices means being clear-headed about what you want and partnering with your doctor to make the choices that are best for you and your potential future family.” 
 

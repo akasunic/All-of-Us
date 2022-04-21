@@ -15,7 +15,7 @@ Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank 
 
 ==Chat1==
 Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming intake interview."
-Rashad?Smiling "The recommendation gave me the push I needed. Also, I was thinking about talking to HR about how the board has been treating me."
+Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I needed. Also, I was thinking about talking to HR about how the board has been treating me."
 
 * Wow, Rashad. How can I support you? 
 -> Chat2
@@ -30,7 +30,7 @@ Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to 
 -> QuestIntro
 
 ==QuestIntro==
-Rashad?Neutral "When I pitched the initiative to the board, I highlighted the shifting demographics, but I want to hold space at the library for an intergenerational dialogue. "
+Rashad?Neutral "When I pitched the initiative to the board, I highlighted the shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue. "
 Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together.”
 
 * An intergenerational dialogue? How would that work? 
@@ -39,9 +39,10 @@ Rashad?Neutral "The library is like a second home to our seniors and young peopl
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "Hear me out…Remember how we used to help out the Pribishes all the time? Making sure their lawn was mowed, and just checking in? I pitched a program that's just like that."
+Rashad?Neutral "Hear me out…Remember how we used to help out when Bloomwood Mutual Aid was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
+Rashad?Neutral "Making sure their lawn got mowed, and just checking in? I pitched a program that's just like that."
 
-Rashad?Neutral "Many seniors struggle to use apps for medical care and appointments. I was thinking we could pair teens and seniors to overcome some of those tech roadblocks"
+Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments. I was thinking we could pair teens and seniors to overcome some of those tech roadblocks"
 
 * Wow, I bet the teens get to pick up some pretty cool skills. 
 -> OptionalQuestDetails1
@@ -58,10 +59,10 @@ Rashad?Neutral "We can send out a survey to match them up based on their interes
 
 ==QuestDetails2==
 Rashad?Neutral "There's a lot they can learn from each other, and we can offer this as a volunteer opportunity. 
-Rashad?Neutral "It looks good on a college application, and it allows seniors to socialize with the youth."
+Rashad?Neutral "It looks good on a college application, and it allows seniors to socialize with 'the youth.'"
 
 * It looks good on a resume but even better on the community. Everyone wins!
--> QuestAcceptance
+-> OptionalQuestDetails2
 * Sounds like a win-win situation! How can I help? 
 -> QuestAcceptance
 
@@ -76,8 +77,8 @@ Rashad?Neutral "Teens could help seniors decipher their health needs, and senior
 
 ==QuestAcceptance==
 Rashad?Smiling "Now that I think about it, I do have something you can do."
-Rashad?Smiling "Before I create a survey, I need to know a bit more about what teens and seniors could learn from each other. I definitely want to get some input from teens and seniors before we roll out the program."
-Rashad?Smiling "Maybe find out more about senior mental health, and what teens feel like they need or want to learn?"
+Rashad?Smiling "Before I create a survey, I need to know a bit more about what teens and seniors could learn from each other. I definitely want to get some input before we roll out the program."
+Rashad?Smiling "Maybe find out more about what our elders might benefit from and what teens feel like they need or want to learn?"
 
 
 * Sure! I know exactly who to ask about this. 
@@ -86,7 +87,7 @@ Rashad?Smiling "Maybe find out more about senior mental health, and what teens f
 
 ==Goodbye==
 Rashad?Smiling "You’re the best, {player_name}! Thanks for all your help with this, I knew I could count on you."
-Rashad?Smiling "I feel like my vision for the library is finally coming true. Take care, okay?"
+Rashad?Smiling "I feel like my vision for the library is coming together. Take care, okay?"
 
 *Take care Rashad! I'm so excited for you.
   ->END

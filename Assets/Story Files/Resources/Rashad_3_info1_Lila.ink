@@ -51,7 +51,7 @@ Lila?Neutral "Of course! What do you need?"
 
 
 ==Explain2==
-Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be a bit of a pain if you haven't done it before. Especially if you're looking for a Black therapist."
+Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be a bit of a pain if you haven't done it before. Especially if you're looking for a Black therapist - which I was."
 
 Lila?Neutral "The same racism that keeps us out of other medical professions come into play for therapists too. When you add in the historic stigmas against mental healthcare in black communities, it creates a situation that perpetuates itself." 
 
@@ -66,7 +66,7 @@ Lila?Neutral "With patience, though, I've had luck in the past."
 # notification Rahad_Day 3_Not all therapists accept every insurance plan. Check to confirm that a therapist accepts your plan before setting up an appointment_Lila3-1
 ==Suggestion1==
 
-Lila?Smiling "The hardest thing to wrap my head around was that a therapist is like a doctor. You tell them things so they can help you be well. This isn't picking a friend; it's picking a...
+Lila?Smiling "The hardest thing to wrap my head around was that a therapist is like a doctor. You tell them things so they can help you be well. This isn't picking a friend; it's picking a..."
 Lila?Smiling "Well, it's like picking a service professional, or a contractor." 
 
 Lila?Smiling "You can also do a little research yourself and look at some of the Black therapists in the area with online tools, and to see what's out there. Oh, and you should make sure they accept your insurance."

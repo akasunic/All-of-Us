@@ -6,10 +6,10 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I was able to set up a bookmobile in the community center so we’ll be able to give away free books to the community. I am really excited about free books!”
+Rashad?Smiling "Hey {player_name}! Good news, I was able to arrange for a bookmobile to visit the Community Center so we’ll be able to give away free books. I am always excited about free books!”
 
 
-* {not TempGoodbye} That's amazing, Rashad! I love this energy.
+* That's amazing, Rashad! I love this energy.
   -> Chat1
 * That's so cool, Rashad! Hey, I think I have some helpful information for you.
   -> ReadyToSolve
@@ -36,90 +36,62 @@ Rashad?Neutral "Oh, I didn't know you would find out what I needed this quickly.
   -> PuzzleInterface
 * Give me a second. I want to make sure my information is correct.
   -> TempGoodbye
-
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
   
-  ==Solution1==
-Rashad?Smiling “Yes, good idea Text”
 
-Rashad?Neutral “expansion” 
+==Option1==
 
-Player Response
--> Followup1 
-Alternate Player Response
--> Followup1
+Rashad?Neutral “It figures that insurance would be a pain; did you come up with anything else?”
 
-==Followup1==
-Rashad?Neutral “Reiterate learning”
-
-Rashad?Smiling “expand on reiteration” 
-
-
-* I'm here to support you!
-    -> END
-  
-  
-  ==Solution2==
-Rashad?Neutral “Decline Answer”
-
-Rashad?Neutral “Explain Decline”
-
-I'll come back to help!
-  ->TempGoodbye
-  
-  ==Solution3==
-  
-Rashad?Neutral "Decline answer"  
-
-I'll come back to help!
+Hold tight! I’ll be right back.
   ->TempGoodbye
 
+
+==Option2==
+# correct
+
+Rashad?Smiling “Oh, it figures that this information is available online. I guess I was so overwhelmed by the idea that I never thought to look.”
+
+Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a dentist who could handle kids who bite, but I never thought to look for Black therapists. It figures right?”
   
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+
+Rashad?Neutral “Teletherapy, huh? I might explore that once I find someone. Did you come up with any information on the process of narrowing down my options?”
+ 
+Hold tight! I’ll be right back.
+  ->TempGoodbye
+
+==Option4==
+# correct
+Rashad?Smiling “Okay. I’m following. I didn’t know there were different types of therapy – I thought it all involved a doctor in a sweater vest and a patient on a couch. Or someone with a pocket watch … I guess I’ve watched too much television.”
+
   
-  ==Solution4==
-Rashad?Smiling “Accept answer”
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
 
-Player Response
--> Followup2 
-Alternate Player Response
--> Followup2
-
-==Followup2==
-Rashad?Neutral “Reinforce learning”
-
-Rashad?Smiling “continue learning”
-
-
-* It sounds like you're ready for this! 
-  -> SolvedGoodbye
-
-//do all of the other possible info types fall here?
 
 
 ==SolvedGoodbye==
+Rashad?Smiling “I feel like the search for a Black therapist feels a little more approachable now. Thank you, {player_name}.” 
 
+My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Okay, come back soon!"
+Rashad?Neutral "You know I’ll be here when you get back.”
 
-* No worries, Rashad. I will.
-  -> END
-
-
-
-
-
-
-
-
+* I know you will! Sit tight!
+  -> PuzzleInterface

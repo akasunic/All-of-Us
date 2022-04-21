@@ -13,7 +13,7 @@ Rashad?Smiling "Hey, {player_name}! I was hoping I'd run into you! Any leads on 
 -> Chat1
 
 ==Chat1==
-Rashad?Neutral "I can't remember the last time I had a lunch break. As we expand programming, my free time shrinks just as fast! For this? I'll make time!"
+Rashad?Neutral "Time? For this, I’ll make time! I can't remember the last time I had a lunch break. As we expand programming, my free time shrinks just as fast!"
 
 * I saw Elisa and Mrs. Lee, who may be able to help. Here's what I have. 
 -> ReadyToSolve
@@ -27,81 +27,65 @@ Rashad?Neutral "Wow, that amazing news. Elisa’s knowledge of YA lit would be i
 * Actually, let me check my notes again.  
 -> TempGoodbye
 
+
 ==PuzzleInterface==
 # turnin
 
-* They picked Solution 1. 
-  -> Solution1
-* They picked Solution 2. 
-  -> Solution2
-* They picked Solution 3.
-  -> Solution3
-* They picked Solution 4. 
-  -> Solution4
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
   
-  ==Solution1==
-Rashad?Smiling “Yes, good idea Text”
 
-Rashad?Neutral “expansion” 
+==Option1==
+# correct
+Rashad?Smiling “Thank you, {player_name}. I think Elisa would be a great fit. She already knows her way around the library.”
 
-Player Response
--> Followup1 
-Alternate Player Response
--> Followup1
+Rashad?Neutral “I’m excited to keep the funds in the community - hiring one of our own makes me feel really good about this!” 
 
-==Followup1==
-Rashad?Neutral “Reiterate learning”
+I think it’s great that you always think in terms of what’s good for Bloomwood, Rashad! 
 
-Rashad?Smiling “expand on reiteration” 
+-> SolvedGoodbye
 
 
-* I'm here to support you!
-    -> END
-  
-  
-  ==Solution2==
-Rashad?Neutral “Decline Answer”
+==Option2==
 
-Rashad?Neutral “Explain Decline”
+Rashad?Neutral “Oh. That’s a good point, but I wonder if she’s the right person for this..”
 
-I'll come back to help!
-  ->TempGoodbye
-  
-  ==Solution3==
-  
-Rashad?Neutral "Decline answer"  
-
-I'll come back to help!
+Hmm. Let me see what else I have. Hold tight!
   ->TempGoodbye
 
+==Option3==
+
+Rashad?Neutral “I appreciate her help! Did you come up with anything else?"
+ 
+Let me get back to you. Hold tight! 
+  ->TempGoodbye
+
+==Option4==
+#correct
+
+Rashad?Smiling “You know, {player_name}, I know that, but I’m not sure I would have connected it. The library has a website, of course, but we could be using the technologies we teach people to use more effectively.”
+
+Rashad?Smiling "I appreciate that our community members are willing to help us up our game.”
   
-  
-  ==Solution4==
-Rashad?Smiling “Accept answer”
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
 
-Player Response
--> Followup2 
-Alternate Player Response
--> Followup2
-
-==Followup2==
-Rashad?Neutral “Reinforce learning”
-
-Rashad?Smiling “continue learning”
-
-
-* It sounds like you're ready for this! 
-  -> SolvedGoodbye
-
-//do all of the other possible info types fall here?
 
 
 ==SolvedGoodbye==
+Rashad?Smiling “{player_name}, you really made my day. I might get that vacation yet!” 
 
+My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "Okay, come back soon!"
+Rashad?Neutral "Okay,  I’ll be here!
 
-* No worries, Rashad. I will.
-  -> END
+* I know you will! Sit tight!
+  -> PuzzleInterface

@@ -9,12 +9,11 @@ VAR new_quest = ""
 
 Mrcalindas?Smiling "Back already? What did you do, run around the neighborhood?" 
 
-* {not TempGoodbye} Maybe I did, maybe I slowly walked while eating all the ensaymadas.
+*  Maybe I did. Or maybe I slowly walked while eating all the ensaymadas.
     -> Chat1
-* {not TempGoodbye} I definitely did. Ensaymadas are my motivator. Ready to find out what I learned? 
+* I definitely did. Ensaymadas are my motivator. Ready to find out what I learned?
     -> ReadyToSolve
-* {TempGoodbye} Maybe, I did sir. Maybe, I did. Ready to find out what I learned?
-    -> ReadyToSolve
+
 
 ==Chat1==
 
@@ -27,8 +26,8 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more and not waste so much time creating a useful experience for the community."
-Mrcalindas?Neutral "So what programs should we focus on at the health tent to get the community onboard?""  
+Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more. I want to waste as little time as possible creating a useful experience for the community."
+Mrcalindas?Neutral "So what programs should we focus on at the health tent to get the community onboard?"  
 
 *  Here’s what I have…
     -> PuzzleInterface
@@ -38,43 +37,58 @@ Mrcalindas?Neutral "So what programs should we focus on at the health tent to ge
 ==PuzzleInterface==
 # turnin
 
-* -> GoodSolution
-* -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-// * Our community is diverse, and needs different types of support. ESL speakers need information about programs and materials in different languages. Also, LGBTQIA people and people of color face health stigma and need a place where they aren't judged. For programs, people in the community could use reminders about basic hygiene and how it impacts community health. More information about mental health services is useful for anyone, and free wellbeing classes and parenting classes can also be helpful. Oh! And transportation vouchers if you haven't talked about it.   -> GoodSolution
-// * Our community is diverse, and needs different types of support. Parents could use parenting classes, and maybe transportation vouchers. Free well being classes, and mental health help could also be useful. Oh! And transportation vouchers if you haven't talked about it. -> BadSolution
+==Option1==
 
-==GoodSolution==
+Mrcalindas?Neutral “Hmm. I feel like that’s just one facet of what the community needs. Did you get any other insight?"
+ 
+Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
 
-Mrcalindas?Smiling "That all makes a lot of sense. I feel like I know exactly what needs to be front and center at our booth."
-Mrcalindas?Smiling "You really saved me a lot of time there. You do good work, {player_name}. Lucy will call you about making ensaymadas, okay?"
+==Option2==
+# correct
+Mrcalindas?Smiling “We have been trying to increase the amount of support we provide to LGBTQAI+ community members. I think this is a great suggestion.”
 
-* WHOO! I mean, "Thanks Mr. Calindas. I really appreciate you for this!"
-    -> SolvedGoodbye
-* I'm looking forward to it. Thanks Mr. Calindas. I really appreciate you for this!
-    -> SolvedGoodbye
+Mrcalindas?Smiling “We could do a better job of communicating the ways we provide support for those neighbors, from reproductive health to gender-affirming health care, and support groups.” 
 
-==BadSolution==
+Mrcalindas?Smiling “That’s a good catch, {player_name}.”
 
-Mrcalindas?Neutral "Hmm. Is that it? maybe you want to check your notes again?" 
+* Lila was full of great suggestions. I’m glad you send me to talk to her.
+	-> SolvedGoodbye
 
-* Hmm, you're right. Let me see if I can try that one more time.
-    -> PuzzleInterface
-*  Hmm, you're right. Let me take a look at my notes and get back to you?
-    -> TempGoodbye
+==Option3==
+#correct
+Mrcalindas?Smiling “It is very important to me that we destigmatize mental health care. Taking care of your mind is as important as taking care of your body.”
+
+Mrcalindas?Smiling "I appreciate this feedback from Rashad. I’ll think about how we can expand our offerings.”
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option4==
+Mrcalindas?Neutral “All of our programs are focused on that goal. Did you come up with anything more specific?”
+ 
+Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
+
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "Well, I appreciate you for always doing good things for everyone here in Bloomwood. I'll see you around!" 
+Mrcalindas?Smiling “{player_name}, you really made my job easier. Thank you for doing this research. I’m going to work writing this up now.” 
 
-* Tell Mrs. Calindas I said hi! See you soon!
- -> END
-*  I'll be back, you know it. I know it... So, see you soon!
- -> END
+My pleasure, Mr. Calindas!
+  -> END
 
 ==TempGoodbye==
-Mrcalindas?Neutral "Those ensaymadas are on the line, {player_name} so I have no problems with you coming back. See you soon."
+Mrcalindas?Neutral "Okay, come back soon!"
 
-* Ok, see you later!
- -> END
-* I'll be right back! The secrets of ensaymada will one day be mine!
- -> END
+* No worries, Mr. Calindas. I will.
+  -> PuzzleInterface

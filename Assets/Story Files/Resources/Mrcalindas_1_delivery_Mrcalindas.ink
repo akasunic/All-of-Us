@@ -11,7 +11,7 @@ VAR new_quest = ""
 ~ new_contact = "Mrcalindas"
 # new_contact
 
-Mrcalindas?Smiling  "{player_name}! Come here, I have something for you from Lucy. She worried you don't eat breakfast and sent me with extra ensaymada for you. I knew you'd come in eventually!" 
+Mrcalindas?Smiling  "{player_name}! Come here, I have something for you from Lucy. She worries that maybe you don't eat breakfast and sent me with extra ensaymada for you. I knew you'd come in eventually!" 
 
 * What? Really? Mrs. Calindas always knows the way to my heart: food.
   -> Chat1
@@ -19,7 +19,7 @@ Mrcalindas?Smiling  "{player_name}! Come here, I have something for you from Luc
   -> QuestIntro
 
 ==Chat1==
-Mrcalindas?Smiling "Well, you know since we started teaching you to cook, she's become worried that you aren't eating outside of the lessons."
+Mrcalindas?Smiling "Well, you know since we started teaching you to cook, she's become concerned that you aren't eating outside of the lessons."
 Mrcalindas?Smiling "I know you eat, but still- they're good with your coffee." 
 
 * Thank you so much for bringing me these. They are my absolute favorite.
@@ -38,7 +38,7 @@ Mrcalindas?Smiling "It means so much to us that you're here to help Bloomwood."
 
 Mrcalindas?Neutral "Oh? This is a reversal! Let me think for a moment."
 Mrcalindas?Neutral "We are working on adding some initatives to provide better support for the community; budget time is coming up, and I want to make sure we're thinking about the right things." 
-Mrcalindas?Smiling "I was thinking maybe you could put your ear to the ground and tell me what people think?" 
+Mrcalindas?Smiling "Maybe you could put your ear to the ground and tell me what people think?" 
 
 * Oh that's great! How can I help you?
   -> QuestDetails1
@@ -46,9 +46,9 @@ Mrcalindas?Smiling "I was thinking maybe you could put your ear to the ground an
   -> OptionalQuestDetails1
 
 ==QuestDetails1==
-Mrcalindas?Neutral "I don't have a lot of extra time to pull community feedback together, so I need to make sure we are giving the community what it needs."
-Mrcalindas?Neutral "I want to know what the community is really concerned about health-wise."
-Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know what the community really needs. I want people to trust the Bloomwood Clinic."
+Mrcalindas?Neutral "I don't have a lot of extra time to pull together community feedback, but I really want to make sure we are giving the community what it needs."
+Mrcalindas?Neutral "I want to know what the community is actually concerned about health-wise."
+Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know what the community values. I want people to trust the Bloomwood Clinic."
 
 * That's really thoughtful, Mr. Calindas. Building and maintain community trust is so important.
   -> QuestDetails2
@@ -66,8 +66,8 @@ Mrcalindas?Neutral "It's important to keep that spirit alive by listening to wha
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrcalindas?Neutral "Yes, they should. Many people don't trust healthcare for valid reasons."
-Mrcalindas?Neutral "However, if we want people to trust us with their health, we need to be respectful of their needs. And I trust you to help me with this." 
+Mrcalindas?Neutral "Many people don't trust healthcare for valid reasons."
+Mrcalindas?Neutral "If we want people to trust us with their health, we need to be respectful of their needs. And I trust you to help me with this." 
 
 * Let's work together. I can help you with whatever you need.
   -> QuestAcceptance
@@ -75,7 +75,7 @@ Mrcalindas?Neutral "However, if we want people to trust us with their health, we
 
 ==QuestAcceptance==
 Mrcalindas?Smiling "Excellent. Can you talk to Lila and ask her what the parents and children of Bloomwood are concerned about?"
-Mrcalindas?Smiling "And can you ask Rashad what older people and students may need? I want to know what programs I should focus on." 
+Mrcalindas?Smiling "And can you ask Rashad what older people and students may need? That will help me know what programs I should focus on." 
 
 * Great. I can do that!
   -> Goodbye
