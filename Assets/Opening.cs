@@ -14,6 +14,7 @@ public class Opening : MonoBehaviour
     void Start()
     {
 
+        Debug.Log(Application.persistentDataPath);
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
         
         ContinueButtonText.text = GameStrings.getString("continue");
@@ -35,7 +36,7 @@ public class Opening : MonoBehaviour
         //set a session id if not there yet
         ResetGame.startGame();
 
-        SceneManager.LoadScene("Backstories");
+        SceneManager.LoadScene("BackstoriesAnimation");
     }
 
     public void onContinueClick() {

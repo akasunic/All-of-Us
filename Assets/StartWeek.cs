@@ -45,12 +45,6 @@ public class StartWeek : MonoBehaviour
     public GameObject LilaCard;
     public GameObject MrCalindasCard;
     public GameObject MrsLeeCard;
-
-    public TextMeshProUGUI CharacterCardName;
-    public TextMeshProUGUI CharacterCardAgePronouns;
-    public TextMeshProUGUI CharacterCardTitle;
-    public TextMeshProUGUI CharacterCardDescription;
-
     public GameObject blackOverlay;
     
     // Tutorial components
@@ -71,53 +65,56 @@ public class StartWeek : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BackButtonText.text = GameStrings.getString("back");
+        if (SelectProfile.active) {
+            Title.text = GameStrings.getString("chat_with");
+        } else {
+            Title.text = GameStrings.getString("saved_games");
+        }
 
-        // If arrived from PCSetup, go to select profile
         if (GlobalGameInfo.goToSelectProfileFlag) {
+        // If arrived from PCSetup, go to select profile
             GlobalGameInfo.goToSelectProfileFlag = false;
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
-        }
 
+        } else if (GlobalGameInfo.weekEndedFlag) {
         // If arrived from ending a week in the game, go to select profile
-        if (GlobalGameInfo.weekEndedFlag) {
             GlobalGameInfo.weekEndedFlag = false;
             this.clickOnSavedGame(GlobalGameInfo.savedGame);
-        }
 
-        Title.text = LangClass.getString("start_week");
-        BackButtonText.text = LangClass.getString("back");
+        } else {
+            int y_location = 152;
+            int gameNum = 1;
 
-        int y_location = 152;
-        int gameNum = 1;
+            foreach(KeyValuePair<string, SavedGame> pair in GlobalGameInfo.gameData) {
+                GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(-330f, y_location, 0f), Quaternion.identity);
 
-        foreach(KeyValuePair<string, SavedGame> pair in GlobalGameInfo.gameData) {
-            GameObject savedGameItem = Instantiate(prefabSavedGameItem, new Vector3(-330f, y_location, 0f), Quaternion.identity);
+                UnityEngine.UI.Button btn = savedGameItem.GetComponent<Button>();
 
-            UnityEngine.UI.Button btn = savedGameItem.GetComponent<Button>();
+                if (savedGameItem != null) {
 
-            if (savedGameItem != null) {
+                    btn.onClick.AddListener(delegate{clickOnSavedGame(pair.Value);});
+                    
+                    savedGameItem.transform.SetParent (GameObject.FindGameObjectWithTag("Content").transform, false);
+                    
+                    TextMeshProUGUI playerText = savedGameItem.transform.Find("Player").GetComponent<TextMeshProUGUI>();
+                    playerText.text = "Player: " + pair.Value.getName();
 
-                btn.onClick.AddListener(delegate{clickOnSavedGame(pair.Value);});
-                
-                savedGameItem.transform.SetParent (GameObject.FindGameObjectWithTag("Content").transform, false);
-                
-                TextMeshProUGUI playerText = savedGameItem.transform.Find("Player").GetComponent<TextMeshProUGUI>();
-                playerText.text = "Player: " + pair.Value.getName();
+                    TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
+                    weekAndDay.text = "Week " + (pair.Value.getWeek() + 1) + ", Day " + (pair.Value.getDay() + 1);
+                    
+                    TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
+                    numberText.text = gameNum.ToString();
 
-                TextMeshProUGUI weekAndDay = savedGameItem.transform.Find("Week and Day").GetComponent<TextMeshProUGUI>();
-                weekAndDay.text = "Week " + (pair.Value.getWeek() + 1) + ", Day " + (pair.Value.getDay() + 1);
-                
-                TextMeshProUGUI numberText = savedGameItem.transform.Find("Number Text").GetComponent<TextMeshProUGUI>();
-                numberText.text = gameNum.ToString();
+                    TextMeshProUGUI completedText = savedGameItem.transform.Find("Completed Text").GetComponent<TextMeshProUGUI>();
+                    completedText.text = (pair.Value.getWeek()) + "/5 " + GameStrings.getString("completed");
 
-                TextMeshProUGUI completedText = savedGameItem.transform.Find("Completed Text").GetComponent<TextMeshProUGUI>();
-                completedText.text = (pair.Value.getWeek()) + "/5 " + LangClass.getString("completed");
+                    this.loadCompletedBarImage(savedGameItem, pair.Value.getWeek());
+                }
 
-                this.loadCompletedBarImage(savedGameItem, pair.Value.getWeek());
+                y_location -= 135;
+                gameNum++;
             }
-
-            y_location -= 135;
-            gameNum++;
         }
     }
 
@@ -127,16 +124,9 @@ public class StartWeek : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void clickOnSavedGame(SavedGame savedGame) {
 
         GlobalGameInfo.savedGame = savedGame;
-        // Change view to selecting a profile
-        Title.text = LangClass.getString("next_npc");
         // Load game slot into Global Game Info
         SavingGame.LoadGameProgress(savedGame);
 
@@ -150,6 +140,7 @@ public class StartWeek : MonoBehaviour
         ScrollView.SetActive(false);
         blackOverlay.SetActive(true);
         SelectProfile.SetActive(true);
+        Title.text = GameStrings.getString("chat_with");
         SelectProfileText.enabled = true;
 
         HelpButton.SetActive(true);
@@ -179,9 +170,6 @@ public class StartWeek : MonoBehaviour
         ElisaCompleted.enabled = (savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
         Elisa0.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 0);
         Elisa1.SetActive(savedGame.getProgress()[CharacterResources.CHARACTERS.ELISA] == 2);
-
-        
-
     }
 
     public void activateTutorial() {
@@ -233,38 +221,18 @@ public class StartWeek : MonoBehaviour
         switch (NPC) {
             case "Rashad":
                 RashadCard.SetActive(true);
-                CharacterCardName.text = LangClass.getString("rashad_name");
-                CharacterCardAgePronouns.text = LangClass.getString("rashad_age_pronouns");
-                CharacterCardTitle.text = LangClass.getString("rashad_title");
-                CharacterCardDescription.text = LangClass.getString("rashad_description");
                 break;
             case "Lila":
                 LilaCard.SetActive(true);
-                CharacterCardName.text = LangClass.getString("lila_name");
-                CharacterCardAgePronouns.text = LangClass.getString("lila_age_pronouns");
-                CharacterCardTitle.text = LangClass.getString("lila_title");
-                CharacterCardDescription.text = LangClass.getString("lila_description");
                 break;
             case "Elisa":
                 ElisaCard.SetActive(true);
-                CharacterCardName.text = LangClass.getString("elisa_name");
-                CharacterCardAgePronouns.text = LangClass.getString("elisa_age_pronouns");
-                CharacterCardTitle.text = LangClass.getString("elisa_title");
-                CharacterCardDescription.text = LangClass.getString("elisa_description");
                 break;
             case "Mr. Calindas":
                 MrCalindasCard.SetActive(true);
-                CharacterCardName.text = LangClass.getString("mrcalindas_name");
-                CharacterCardAgePronouns.text = LangClass.getString("mrcalindas_age_pronouns");
-                CharacterCardTitle.text = LangClass.getString("mrcalindas_title");
-                CharacterCardDescription.text = LangClass.getString("mrcalindas_description");
                 break;
             case "Mrs.Lee":
                 MrsLeeCard.SetActive(true);
-                CharacterCardName.text = LangClass.getString("mrslee_name");
-                CharacterCardAgePronouns.text = LangClass.getString("mrslee_age_pronouns");
-                CharacterCardTitle.text = LangClass.getString("mrslee_title");
-                CharacterCardDescription.text = LangClass.getString("mrslee_description");
                 break;
             default:
                 break;

@@ -48,8 +48,8 @@ Elisa?Smiling "Perfect for me? Really? I love the library. Can you tell me more?
   -> Suggestion2
 
 ==Suggestion1==
-~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1"
-# notification Elisa_Day 1_She loves YA Literature_Rashad1
+~ notification = "Elisa_Day 1_She loves YA Literature_Rashad1-1"
+# notification Elisa_Day 1_She loves YA Literature_Rashad1-2
 ~ notification = "Elisa_Day 1_She spends a lot of time already"
 # notification Elisa_Day 1_She spends a lot of time already
 
@@ -61,12 +61,12 @@ Elisa?Smiling "Do you know if it would be good for a student? I will definitely 
   -> Goodbye
 
 ==Suggestion2==
-~ notification = "Elisa_Day 1_You will write her a reference_Rashad1"
-# notification Elisa_Day 1_You will write her a reference_Rashad1
-~ notification = "Elisa_Day 1_She will use the website to apply_Rashad1"
-# notification Elisa_Day 1_She will use the website to apply_Rashad1
-~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1"
-# notification Elisa_Day 1_Elisa will apply to the job_Rashad1
+~ notification = "Elisa_Day 1_You will write her a reference_Rashad1-2"
+# notification Elisa_Day 1_You will write her a reference_Rashad1-2
+~ notification = "Elisa_Day 1_She will use the website to apply_Rashad1-3"
+# notification Elisa_Day 1_She will use the website to apply_Rashad1-3
+~ notification = "Elisa_Day 1_Elisa will apply to the job_Rashad1-4"
+# notification Elisa_Day 1_Elisa will apply to the job_Rashad1-4
 
 Elisa?Smiling "Do you know if I need a reference or how to apply?"
 

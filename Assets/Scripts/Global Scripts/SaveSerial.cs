@@ -11,15 +11,15 @@ public static class SaveSerial : object {
         BinaryFormatter bf = new BinaryFormatter(); 
         // FileStream file = LoadGameFile();
         FileStream file = null;
-        if (File.Exists(Application.streamingAssetsPath 
+        if (File.Exists(Application.persistentDataPath 
                     + "/SavedData.dat"))
         {
-            using (file = File.Open(Application.streamingAssetsPath
+            using (file = File.Open(Application.persistentDataPath
                     + "/SavedData.dat", FileMode.Open)) {
                         bf.Serialize(file, dataToSave);
                     }
         } else {
-            using (file = File.Create(Application.streamingAssetsPath 
+            using (file = File.Create(Application.persistentDataPath 
                 + "/SavedData.dat", 1)) {
                     bf.Serialize(file, dataToSave);
                 }
@@ -30,12 +30,12 @@ public static class SaveSerial : object {
 
     public static Dictionary<string, SavedGame> LoadGame()
     {
-        if (File.Exists(Application.streamingAssetsPath 
+        if (File.Exists(Application.persistentDataPath 
                     + "/SavedData.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             using (FileStream file = 
-                    File.Open(Application.streamingAssetsPath
+                    File.Open(Application.persistentDataPath
                     + "/SavedData.dat", FileMode.Open)) {
                         Dictionary<string, SavedGame> data = (Dictionary<string, SavedGame>)bf.Deserialize(file);
                         return data;

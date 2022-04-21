@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Mrslee?Smiling "Great morning, {player_name}!"
+Mrslee?Smiling "Great day, {player_name}!"
 
 * {not TempGoodbye} Great to see you too!
   -> Chat1
@@ -54,6 +54,7 @@ Mrslee?Neutral "OK. What should I do?"
   -> BadSolution
 
 ==Option1==
+# correct
 Mrslee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he asked me to talk sometimes. I know he worry, so this is a good idea.."
 
 * Sharing your health information might be helpful for him, too! 
@@ -68,9 +69,10 @@ Mrslee?Smiling "He ask good questions, and if I write down answers, I feel less 
 Mrslee?Neutral "Lila is very helpful, but her life very busy. If she go to this appointment, what about next appointment. Dr. Lee always take care of everything, and now look! So stress!"
 
 * I think you can do it, Mrs. Lee. I’ll be back with a better suggestion!
--> TempGoodbye
+-> PuzzleInterface
 
 ==Option3==
+# correct
 Mrslee?Smiling "Write down when I feel headache. Write down how bad? I can do that. Thinking about headache make me feel headache, but you say doctor might help."
 Mrslee?Smiling "Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it feel less stress."
 
@@ -87,7 +89,7 @@ Mrslee?Smiling "I visit Heatlh Clinic and Mr. Calindas gave me pamphlet. It had 
 Mrslee?Neutral "Use my phone, and talk to doctor, and wear hospital gown? That sounds even MORE headache. I’m sorry, but I don’t think that help my headache."
 
 * Oh, Mrs. Lee! You’re right. That sounds hard. I’ll be back.
--> END
+-> PuzzleInterface
 
 ==SolvedGoodbye==
 Mrslee?Smiling "{player_name}. Thank you. This way, no stress."
@@ -104,5 +106,7 @@ Mrslee?Neutral "OK. I will wait."
   -> END
 
 ==BadSolution==
+Mrslee?Neutral “Thank you, {player_name}.”
 
++ No problem!
   -> END

@@ -52,6 +52,7 @@ Mrslee?Neutral "What should I do?"
   -> BadSolution
   
 ==Option1==
+# correct
 Mrslee?Smiling "Thank you, {player_name}. I feel good about going to the library program. They help me with my email one time. I know Rashad will take good care of me."
 Mrslee?Smiling "He say I am very good with technology; maybe scheduling over the internet will be easier than trying to understand on the phone. I feel less stress.."
 
@@ -63,9 +64,10 @@ Mrslee?Neutral "Rashad is very helpful, but I still feel stress."
 Mrslee?Neutral "I need appointments in the future, and maybe Rashad is busy?. What if he can’t help me next time? No thank you."
 
 * Let me see what else I can suggest, Mrs. Lee.
-  ->TempGoodbye
+  ->PuzzleInterface
   
 ==Option3==
+# correct
 Mrslee?Neutral "That feel so stress. Not just headache, but talk about everything? I feel scared that maybe the doctor will talk more than he listen."
 
 * If you don’t like the first doctor you see, we can help you try someone else. 
@@ -81,7 +83,7 @@ Mrslee?Smiling "You help so much already. I try this, but might need more help l
 Mrslee?Neutral "That feel like more stress! Eddie say Urgent Care is different doctor every time. Too much trouble."
 
 * I understand, Mrs. Lee. Let’s find you a less stressful solution.
-  ->TempGoodbye
+  ->PuzzleInterface
   
 
 ==SolvedGoodbye==
@@ -97,5 +99,7 @@ Mrslee?Neutral "{player_name}, OK!"
   -> END
 
 ==BadSolution==
+Mrslee?Neutral “Thank you, {player_name}.”
 
++ No problem!
   -> END

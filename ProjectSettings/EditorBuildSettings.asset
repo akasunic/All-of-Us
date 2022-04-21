@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OpeningScene.unity
     guid: 88b77323daa514e46a3b46c954e3637b
   - enabled: 1
+    path: Assets/Scenes/BackstoriesAnimation.unity
+    guid: eaa864bca2f801e4682c8068251a2c50
+  - enabled: 1
     path: Assets/Scenes/PCSetUp.unity
     guid: ddc129a5965cd45a880b2965c79384ac
   - enabled: 1
@@ -50,7 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartWeek.unity
     guid: 3af52b76c926e4001a5faf64bbab3e80
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BlockParty.unity
     guid: 3cc3dc8184fff9f489a16e222db17264
   - enabled: 1
