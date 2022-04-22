@@ -56,7 +56,7 @@ public class EndOfQuest : MonoBehaviour
         ButtonText.text = GameStrings.getString("continue");
         
         TalkBubble.SetActive(true);
-        TalkBubbleText.SetActive(true);
+        // TalkBubbleText.SetActive(true);
 
         Week.text = GameStrings.getString("week_all_caps");
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
@@ -220,38 +220,31 @@ public class EndOfQuest : MonoBehaviour
         DataCollection.LogEvent("Quest Completed! Title: " + questTitle + ", Character: " + GlobalGameInfo.GetCurrentNPC(), "QUEST COMPLETION");
     }
 
-    void Continue()
+    public void ButtonClick()
     {
-        TalkBubble.SetActive(false);
-        TalkBubbleText.SetActive(false);
+        if (ButtonText.text != GameStrings.getString("finish_day")) {
+            TalkBubble.SetActive(false);
+            // TalkBubbleText.SetActive(false);
 
-        TalkBubble2.SetActive(true);
-        TalkBubbleText2.SetActive(true);
+            TalkBubble2.SetActive(true);
+            // TalkBubbleText2.SetActive(true);
 
-        Sticker1.SetActive(false);
-        Sticker2.SetActive(false);
+            // Sticker1.SetActive(false);
+            // Sticker2.SetActive(false);
 
-        ButtonText.text = GameStrings.getString("finish_day");
-    }
+            ButtonText.text = GameStrings.getString("finish_day");
+        } else {
+            // Increase day gets updated in the saving class below
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+            // Reset number of journal items learned today
+            GlobalGameInfo.journalItemsLearnedTodayNum = 0;
 
+            // Saving the game progress
+            SavingGame.SaveGameProgress();
 
-    public void goToSavingGame() {
-        // Increase day gets updated in the saving class below
-
-        // Reset number of journal items learned today
-        GlobalGameInfo.journalItemsLearnedTodayNum = 0;
-
-        // Saving the game progress
-        SavingGame.SaveGameProgress();
-
-        // Go to saving scene
-        SceneManager.LoadScene("Saving");
+            // Go to saving scene
+            SceneManager.LoadScene("Saving");
+        }
     }
 
 }
