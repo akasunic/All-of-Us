@@ -56,29 +56,29 @@ Mrcalindas?Smiling "That's so sweet of you, {player_name}. Can you tell me what 
 
 ==Option1==
 
-Mrcalindas?Neutral “Hmm. Did you come up with anything more specific?”
+Mrcalindas?Neutral "Hmm. Did you come up with anything more specific?"
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 ==Option2==
 # correct
-Mrcalindas?Smiling “Oh, good. Knowing that there are options that will support her entire well-being really matters to me. .”
+Mrcalindas?Smiling "Oh, good. Knowing that there are options that will support her entire well-being really matters to me. ."
 
-Mrcalindas?Smiling “I worry about her having an active social life and feeling physically well enough to enjoy it.” 
+Mrcalindas?Smiling "I worry about her having an active social life and feeling physically well enough to enjoy it." 
 
 * I think it’s great that you’re spending so much energy thinking about this. 
 	-> SolvedGoodbye
 
 ==Option3==
-Mrcalindas?Neutral “I cannot imagine my mother agreeing to a cat or a dog so soon after moving. While I wish Lucy would agree to a cat, now isn’t the time to add a new complication -and a new housemate!”
+Mrcalindas?Neutral "I cannot imagine my mother agreeing to a cat or a dog so soon after moving. While I wish Lucy would agree to a cat, now isn’t the time to add a new complication -and a new housemate!"
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 ==Option4==
 # correct
-Mrcalindas?Smiling “I see how very important her role is to Mrs. Lee. I think my mother would find volunteering very satisfying, especially if we found something where her strengths of cooking, sewing, and organizing people came into play.”
+Mrcalindas?Smiling "I see how very important her role is to Mrs. Lee. I think my mother would find volunteering very satisfying, especially if we found something where her strengths of cooking, sewing, and organizing people came into play."
 
   
 * If you need other support, please don’t hesitate to ask. 
@@ -86,9 +86,9 @@ Mrcalindas?Smiling “I see how very important her role is to Mrs. Lee. I think 
 
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling “{player_name}, this really helps. I know she’s tough, and we will make the most of this change, but knowing that there are opportunities in Bloomwood for her to feel engaged takes some pressure off..” 
+Mrcalindas?Smiling "{player_name}, this really helps. I know she’s tough, and we will make the most of this change, but knowing that there are opportunities in Bloomwood for her to feel engaged takes some pressure off.." 
 
-My pleasure, Mr. Calindas!
+* My pleasure, Mr. Calindas!
   -> END
 
 ==TempGoodbye==

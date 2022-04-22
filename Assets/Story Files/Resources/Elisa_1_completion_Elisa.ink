@@ -55,18 +55,18 @@ Elisa?Neutral "Oh, that's great! What'd you find out?"
   
 
 ==Option1==
-Elisa?Neutral “I feel like the answer to everything is “diet and exercise. That might be true, but it doesn’t feel very actionable. You know?”
+Elisa?Neutral "I feel like the answer to everything is "diet and exercise. That might be true, but it doesn’t feel very actionable. You know?"
  
-Elisa?Neutral “I was hoping for something more in-depth.”
+Elisa?Neutral "I was hoping for something more in-depth."
  
-Let me see what else I can suggest, Elisa.
+* Let me see what else I can suggest, Elisa.
   ->TempGoodbye
-
 
   
 ==Option2==
 # correct
-Elisa?Smiling “Thank you, {player_name}. It sounds like a lot, but I feel like this gives me a starting point for all the topics to ask about.”
+
+Elisa?Smiling "Thank you, {player_name}. It sounds like a lot, but I feel like this gives me a starting point for all the topics to ask about."
 
 Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this out for my folks before the appointment." 
   
@@ -74,30 +74,29 @@ Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this ou
 	-> SolvedGoodbye
 
   
- ==Option3==
- # correct
-Elisa?Smiling “The library is such a useful resource; my abuela loved the cookbook section.”
+==Option3==
+# correct
 
-Elisa?Smiling “I will look at the calendar to see if there are workshops coming up that might help my mom feel like she’s in this with other people.”
+Elisa?Smiling "The library is such a useful resource; my abuela loved the cookbook section."
+
+Elisa?Smiling "I will look at the calendar to see if there are workshops coming up that might help my mom feel like she’s in this with other people."
   
 * I feel like you’ve got this under control!
 	-> SolvedGoodbye
 
 ==Option4==
-Elisa?Neutral “What does that even mean? I feel overwhelmed by how much I don’t understand.”
+Elisa?Neutral "What does that even mean? I feel overwhelmed by how much I don’t understand."
  
-Elisa?Neutral “I was hoping for something more in-depth.”
+Elisa?Neutral "I was hoping for something more in-depth."
  
-Let me see what else I can suggest, Elisa.
+* Let me see what else I can suggest, Elisa.
   ->TempGoodbye
-
 
 * It sounds like you're ready for this! 
   -> SolvedGoodbye
 
 
 ==SolvedGoodbye==
-
   -> END
 
 ==TempGoodbye==

@@ -33,7 +33,7 @@ Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some o
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Oh, that is good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. I would hate for her to give up.”
+Mrcalindas?Neutral "Oh, that is good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. I would hate for her to give up."
 
 * Here’s what I have…
   -> PuzzleInterface
@@ -55,16 +55,16 @@ Mrcalindas?Neutral "Oh, that is good to hear. My mother wants to be able to call
 
 ==Option1==
 
-Mrcalindas?Neutral “Hmm. Did you come up with anything more specific? I feel like this only addresses a tiny part of the problem.”
+Mrcalindas?Neutral "Hmm. Did you come up with anything more specific? I feel like this only addresses a tiny part of the problem."
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 ==Option2==
 # correct
-Mrcalindas?Smiling “I will email Elisa right away! You know there are studies about intergenerational support being very healthy for both elders and for young people .”
+Mrcalindas?Smiling "I will email Elisa right away! You know there are studies about intergenerational support being very healthy for both elders and for young people ."
 
-Mrcalindas?Smiling “I am happy to pay Elisa a fair rate for her help and to ply her with an excessive number of sweets.”
+Mrcalindas?Smiling "I am happy to pay Elisa a fair rate for her help and to ply her with an excessive number of sweets."
 
 * Hah! Is Elisa about to become my hookup for ensaymadas?
 	-> SolvedGoodbye
@@ -72,9 +72,9 @@ Mrcalindas?Smiling “I am happy to pay Elisa a fair rate for her help and to pl
 ==Option3==
 # correct
 
-Mrcalindas?Smiling “These are the things I am most worried about – my mother wants to be able to do her own banking, but so much happens online. She wants to manage her own health care, which requires access to the online portal.” 
+Mrcalindas?Smiling "These are the things I am most worried about – my mother wants to be able to do her own banking, but so much happens online. She wants to manage her own health care, which requires access to the online portal." 
 
-Mrcalindas?Smiling “I am glad to know that the library has resources to make this possible for her. Maybe we can even entice her with the promise of recipe websites.” 
+Mrcalindas?Smiling "I am glad to know that the library has resources to make this possible for her. Maybe we can even entice her with the promise of recipe websites." 
 
   
 * The library offers so many valuable resources! 
@@ -82,16 +82,16 @@ Mrcalindas?Smiling “I am glad to know that the library has resources to make t
 
 
 ==Option4==
-Mrcalindas?Neutral “I feel like this is part of the picture, but did you learn anything else?”
+Mrcalindas?Neutral "I feel like this is part of the picture, but did you learn anything else?"
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling “Good work, {player_name}! I feel like I am better prepared to help my mother by connecting her with resources that will help her navigate the internet without me.”  
+Mrcalindas?Smiling "Good work, {player_name}! I feel like I am better prepared to help my mother by connecting her with resources that will help her navigate the internet without me."  
 
-My pleasure, Mr. Calindas!
+* My pleasure, Mr. Calindas!
   -> END
 
 ==TempGoodbye==

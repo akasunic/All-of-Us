@@ -43,9 +43,9 @@ Rashad?Neutral "Wow, that amazing news. Elisa’s knowledge of YA lit would be i
 
 ==Option1==
 # correct
-Rashad?Smiling “Thank you, {player_name}. I think Elisa would be a great fit. She already knows her way around the library.”
+Rashad?Smiling "Thank you, {player_name}. I think Elisa would be a great fit. She already knows her way around the library."
 
-Rashad?Neutral “I’m excited to keep the funds in the community - hiring one of our own makes me feel really good about this!” 
+Rashad?Neutral "I’m excited to keep the funds in the community - hiring one of our own makes me feel really good about this!" 
 
 I think it’s great that you always think in terms of what’s good for Bloomwood, Rashad! 
 
@@ -54,14 +54,14 @@ I think it’s great that you always think in terms of what’s good for Bloomwo
 
 ==Option2==
 
-Rashad?Neutral “Oh. That’s a good point, but I wonder if she’s the right person for this..”
+Rashad?Neutral "Oh. That’s a good point, but I wonder if she’s the right person for this.."
 
 Hmm. Let me see what else I have. Hold tight!
   ->TempGoodbye
 
 ==Option3==
 
-Rashad?Neutral “I appreciate her help! Did you come up with anything else?"
+Rashad?Neutral "I appreciate her help! Did you come up with anything else?"
  
 Let me get back to you. Hold tight! 
   ->TempGoodbye
@@ -69,9 +69,9 @@ Let me get back to you. Hold tight!
 ==Option4==
 #correct
 
-Rashad?Smiling “You know, {player_name}, I know that, but I’m not sure I would have connected it. The library has a website, of course, but we could be using the technologies we teach people to use more effectively.”
+Rashad?Smiling "You know, {player_name}, I know that, but I’m not sure I would have connected it. The library has a website, of course, but we could be using the technologies we teach people to use more effectively."
 
-Rashad?Smiling "I appreciate that our community members are willing to help us up our game.”
+Rashad?Smiling "I appreciate that our community members are willing to help us up our game."
   
 * If you need other support, please don’t hesitate to ask. 
 	-> SolvedGoodbye
@@ -79,7 +79,7 @@ Rashad?Smiling "I appreciate that our community members are willing to help us u
 
 
 ==SolvedGoodbye==
-Rashad?Smiling “{player_name}, you really made my day. I might get that vacation yet!” 
+Rashad?Smiling "{player_name}, you really made my day. I might get that vacation yet!" 
 
 My pleasure, Rashad!
   -> END

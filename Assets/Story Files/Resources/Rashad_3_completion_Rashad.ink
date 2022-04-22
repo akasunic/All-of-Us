@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I was able to arrange for a bookmobile to visit the Community Center so we’ll be able to give away free books. I am always excited about free books!”
+Rashad?Smiling "Hey {player_name}! Good news, I was able to arrange for a bookmobile to visit the Community Center so we’ll be able to give away free books. I am always excited about free books!"
 
 
 * That's amazing, Rashad! I love this energy.
@@ -51,7 +51,7 @@ Rashad?Neutral "Oh, I didn't know you would find out what I needed this quickly.
 
 ==Option1==
 
-Rashad?Neutral “It figures that insurance would be a pain; did you come up with anything else?”
+Rashad?Neutral "It figures that insurance would be a pain; did you come up with anything else?"
 
 Hold tight! I’ll be right back.
   ->TempGoodbye
@@ -60,23 +60,23 @@ Hold tight! I’ll be right back.
 ==Option2==
 # correct
 
-Rashad?Smiling “Oh, it figures that this information is available online. I guess I was so overwhelmed by the idea that I never thought to look.”
+Rashad?Smiling "Oh, it figures that this information is available online. I guess I was so overwhelmed by the idea that I never thought to look."
 
-Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a dentist who could handle kids who bite, but I never thought to look for Black therapists. It figures right?”
+Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a dentist who could handle kids who bite, but I never thought to look for Black therapists. It figures right?"
   
 * If you need other support, please don’t hesitate to ask. 
 	-> SolvedGoodbye
 
 ==Option3==
 
-Rashad?Neutral “Teletherapy, huh? I might explore that once I find someone. Did you come up with any information on the process of narrowing down my options?”
+Rashad?Neutral "Teletherapy, huh? I might explore that once I find someone. Did you come up with any information on the process of narrowing down my options?"
  
 Hold tight! I’ll be right back.
   ->TempGoodbye
 
 ==Option4==
 # correct
-Rashad?Smiling “Okay. I’m following. I didn’t know there were different types of therapy – I thought it all involved a doctor in a sweater vest and a patient on a couch. Or someone with a pocket watch … I guess I’ve watched too much television.”
+Rashad?Smiling "Okay. I’m following. I didn’t know there were different types of therapy – I thought it all involved a doctor in a sweater vest and a patient on a couch. Or someone with a pocket watch … I guess I’ve watched too much television."
 
   
 * If you need other support, please don’t hesitate to ask. 
@@ -85,13 +85,13 @@ Rashad?Smiling “Okay. I’m following. I didn’t know there were different ty
 
 
 ==SolvedGoodbye==
-Rashad?Smiling “I feel like the search for a Black therapist feels a little more approachable now. Thank you, {player_name}.” 
+Rashad?Smiling "I feel like the search for a Black therapist feels a little more approachable now. Thank you, {player_name}." 
 
 My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "You know I’ll be here when you get back.”
+Rashad?Neutral "You know I’ll be here when you get back."
 
 * I know you will! Sit tight!
   -> PuzzleInterface

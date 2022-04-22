@@ -24,7 +24,7 @@ Elisa?Neutral "Paperwork. My life is a never-ending stream of paperwork. Nobody 
 
 ==Chat2==
 
-Elisa?Neutral "I’ve moved on from the roommate form to my emergency contact form. At least this one’s short.”  
+Elisa?Neutral "I’ve moved on from the roommate form to my emergency contact form. At least this one’s short."  
 
 * That sounds … thrilling. If you’re ready to talk about immunizations, I’m ready.
   -> ReadyToSolve
@@ -55,7 +55,7 @@ Elisa?Neutral "Oh, that's great! What'd you find out?"
   
 
 ==Option1==
-Elisa?Neutral “I’ve checked all of those locations, and it didn’t show up. Is there anything else you can suggest?”
+Elisa?Neutral "I’ve checked all of those locations, and it didn’t show up. Is there anything else you can suggest?"
  
  
 Let me see what else I can find, Elisa.
@@ -65,7 +65,8 @@ Let me see what else I can find, Elisa.
   
 ==Option2==
 # correct
-Elisa?Smiling “I don’t know why I didn’t think of calling Bloomwood Community College; of course I had to submit these same records to them.”
+
+Elisa?Smiling "I don’t know why I didn’t think of calling Bloomwood Community College; of course I had to submit these same records to them."
 
 Elisa?Smiling "Maybe I lost them when we did my admissions paperwork the first time!" 
   
@@ -74,26 +75,26 @@ Elisa?Smiling "Maybe I lost them when we did my admissions paperwork the first t
 
   
  ==Option3==
-Elisa?Neutral “I haven’t applied for any jobs recently, so I know I didn’t leave my vaccination records with a possible employer. What else did you learn?”
- 
- 
-Let me see what else I can find, Elisa.
+Elisa?Neutral "I haven’t applied for any jobs recently, so I know I didn’t leave my vaccination records with a possible employer. What else did you learn?"
+
+* Let me see what else I can find, Elisa.
   ->TempGoodbye
 
 ==Option4==
 # correct
-Elisa?Smiling “Oh! So, bloodwork or a few extra shots, and this could be resolved? That’s a load off my mind, {player_name}.” 
 
-Elisa?Smiling “I just need to check the school website for the complete list of required vaccines. Thank you so much!”
+Elisa?Smiling "Oh! So, bloodwork or a few extra shots, and this could be resolved? That’s a load off my mind, {player_name}." 
+
+Elisa?Smiling "I just need to check the school website for the complete list of required vaccines. Thank you so much!"
  
 * I’m happy to help, Elisa!  
 	-> SolvedGoodbye
 
 
 ==SolvedGoodbye==
-Elisa?Smiling “Thanks, {player_name}. All this paperwork has me off my game. I appreciate the help!”
+Elisa?Smiling "Thanks, {player_name}. All this paperwork has me off my game. I appreciate the help!"
 
-My pleasure, Elisa!
+* My pleasure, Elisa!
   -> END
 
 ==TempGoodbye==

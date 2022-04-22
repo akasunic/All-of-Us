@@ -63,9 +63,9 @@ Lila?Neutral "PTSD can harm your heart, and lead to other health issues. It's se
 ~ notification = "Lila_Day 2_Find self-care activites to integrate into your daily life_Rashad2-3"
 # notification Lila_Day 1_Find self-care activites to integrate into your daily life_Rashad2-3
 ==Suggestion1==
-Lila?Smiling "Well, your friend should definitely seek professional help if they can. They shouldn’t go through this sort of thing alone.”
+Lila?Smiling "Well, your friend should definitely seek professional help if they can. They shouldn’t go through this sort of thing alone."
 
-Lila?Smiling “'Self-care' became a buzzword of sorts, but it's a real thing. Your friend should really take stock of the ways they can engage in meaningful self-care." 
+Lila?Smiling "'Self-care' became a buzzword of sorts, but it's a real thing. Your friend should really take stock of the ways they can engage in meaningful self-care." 
 
 Lila?Smiling "Take time to smell the roses, and all that. Art, music, movement. It all plays a part. Real self-care goes beyond bubble baths and oat milk lattes, though those have their place too."
 

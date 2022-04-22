@@ -53,7 +53,7 @@ Rashad?Neutral "That's great to hear, {player_name}. I've really been going thro
 
 ==Option1==
 
-Rashad?Neutral “Melatonin, huh? I don’t know… that sounds too easy.”
+Rashad?Neutral "Melatonin, huh? I don’t know… that sounds too easy."
 
 OK. Let me go check my notes. Hold tight!
   ->TempGoodbye
@@ -62,16 +62,16 @@ OK. Let me go check my notes. Hold tight!
 ==Option2==
 # correct
 
-Rashad?Smiling “Well, you didn’t say you’d bring me easy answers. Stress is a really big deal, and can negatively impact many aspects of my well-being, so of course managing it can take many forms.”
+Rashad?Smiling "Well, you didn’t say you’d bring me easy answers. Stress is a really big deal, and can negatively impact many aspects of my well-being, so of course managing it can take many forms."
 
-Rashad?Smiling "I think I have a lot to chew on.”
+Rashad?Smiling "I think I have a lot to chew on."
   
 * If you need other support, please don’t hesitate to ask. 
 	-> SolvedGoodbye
 
 ==Option3==
 
-Rashad?Neutral “It feels like self-care is a drop in the bucket compared to what I’m experiencing. Will that really make a difference?”
+Rashad?Neutral "It feels like self-care is a drop in the bucket compared to what I’m experiencing. Will that really make a difference?"
  
 Hold tight! I’ll be right back.
   ->TempGoodbye
@@ -79,7 +79,7 @@ Hold tight! I’ll be right back.
 ==Option4==
 # correct
 
-Rashad?Smiling “What you’re saying makes sense. I’m not sure where to start, but having someone objective to talk to certainly couldn’t hurt.”
+Rashad?Smiling "What you’re saying makes sense. I’m not sure where to start, but having someone objective to talk to certainly couldn’t hurt."
 
   
 * If you need other support, please don’t hesitate to ask. 
@@ -88,13 +88,13 @@ Rashad?Smiling “What you’re saying makes sense. I’m not sure where to star
 
 
 ==SolvedGoodbye==
-Rashad?Smiling “Hey, thanks, {player_name}. I appreciate you helping me out like this.” 
+Rashad?Smiling "Hey, thanks, {player_name}. I appreciate you helping me out like this." 
 
 My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "You know I’ll be here when you get back.”
+Rashad?Neutral "You know I’ll be here when you get back."
 
 * I know you will! Sit tight!
   -> PuzzleInterface

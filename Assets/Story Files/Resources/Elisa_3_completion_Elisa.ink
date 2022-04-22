@@ -24,7 +24,7 @@ Elisa?Neutral "Ugh. I feel like I’m being pulled in 10 different directions, a
 
 ==Chat2==
 
-Elisa?Neutral "Some days are better than others. Today, I’m really struggling to concentrate.”  
+Elisa?Neutral "Some days are better than others. Today, I’m really struggling to concentrate."  
 
 * Honestly, I think that makes the ADHD information I found for you more important.
   -> ReadyToSolve
@@ -33,7 +33,7 @@ Elisa?Neutral "Some days are better than others. Today, I’m really struggling 
 
 ==ReadyToSolve==
 
-Elisa?Neutral "A distraction – even a serious one – sounds great. What have you got?”
+Elisa?Neutral "A distraction – even a serious one – sounds great. What have you got?"
 
 * Here’s what I have…
   -> PuzzleInterface
@@ -56,7 +56,8 @@ Elisa?Neutral "A distraction – even a serious one – sounds great. What have 
 
 ==Option1==
 # correct
-Elisa?Smiling “I don’t think it would have occurred to me except that it came up for my sibling. Now that I’m looking for it, though, I do feel like some things take a lot of extra work.”
+
+Elisa?Smiling "I don’t think it would have occurred to me except that it came up for my sibling. Now that I’m looking for it, though, I do feel like some things take a lot of extra work."
 
 Elisa?Smiling "My family has always prioritized school work, so I’ve always put a lot of energy there. But with all the health things going on, and upheaval around transferring, I think I should look into this more." 
   
@@ -64,34 +65,32 @@ Elisa?Smiling "My family has always prioritized school work, so I’ve always pu
 	-> SolvedGoodbye
 
 
-  
 ==Option2==
-Elisa?Neutral “I’m afraid that I’ll be told that everyone daydreams. Or worse, that if I just get my head out of the clouds, I’ll be fine. What else did you learn?”
- 
- 
-Let me see what else I can find, Elisa.
+Elisa?Neutral "I’m afraid that I’ll be told that everyone daydreams. Or worse, that if I just get my head out of the clouds, I’ll be fine. What else did you learn?"
+
+* Let me see what else I can find, Elisa.
   ->TempGoodbye
 
   
  ==Option3==
-Elisa?Neutral “Oh. That’s interesting, but I don’t think it helps me now. Did you learn anything else?”
+Elisa?Neutral "Oh. That’s interesting, but I don’t think it helps me now. Did you learn anything else?"
  
- 
-Let me see what else I can find, Elisa.
+* Let me see what else I can find, Elisa.
   ->TempGoodbye
 
 ==Option4==
 # correct
-Elisa?Smiling “It’s a relief that there are many things that might help. It sounds like I have a lot of questions to ask, but that feels like a start.”
- 
+
+Elisa?Smiling "It’s a relief that there are many things that might help. It sounds like I have a lot of questions to ask, but that feels like a start."
+
 * I’m happy to help, Elisa!  
 	-> SolvedGoodbye
 
 
 ==SolvedGoodbye==
-Elisa?Smiling “I can’t thank you enough for the support; I feel like this is something worth following up on.” 
+Elisa?Smiling "I can’t thank you enough for the support; I feel like this is something worth following up on." 
 
-My pleasure, Elisa!
+* My pleasure, Elisa!
   -> END
 
 ==TempGoodbye==

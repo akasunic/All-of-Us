@@ -49,42 +49,42 @@ Mrcalindas?Neutral "So what programs should we focus on at the health tent to ge
 
 ==Option1==
 
-Mrcalindas?Neutral “Hmm. I feel like that’s just one facet of what the community needs. Did you get any other insight?"
+Mrcalindas?Neutral "Hmm. I feel like that’s just one facet of what the community needs. Did you get any other insight?"
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 ==Option2==
 # correct
-Mrcalindas?Smiling “We have been trying to increase the amount of support we provide to LGBTQAI+ community members. I think this is a great suggestion.”
+Mrcalindas?Smiling "We have been trying to increase the amount of support we provide to LGBTQAI+ community members. I think this is a great suggestion."
 
-Mrcalindas?Smiling “We could do a better job of communicating the ways we provide support for those neighbors, from reproductive health to gender-affirming health care, and support groups.” 
+Mrcalindas?Smiling "We could do a better job of communicating the ways we provide support for those neighbors, from reproductive health to gender-affirming health care, and support groups." 
 
-Mrcalindas?Smiling “That’s a good catch, {player_name}.”
+Mrcalindas?Smiling "That’s a good catch, {player_name}."
 
 * Lila was full of great suggestions. I’m glad you send me to talk to her.
 	-> SolvedGoodbye
 
 ==Option3==
 #correct
-Mrcalindas?Smiling “It is very important to me that we destigmatize mental health care. Taking care of your mind is as important as taking care of your body.”
+Mrcalindas?Smiling "It is very important to me that we destigmatize mental health care. Taking care of your mind is as important as taking care of your body."
 
-Mrcalindas?Smiling "I appreciate this feedback from Rashad. I’ll think about how we can expand our offerings.”
+Mrcalindas?Smiling "I appreciate this feedback from Rashad. I’ll think about how we can expand our offerings."
   
 * If you need other support, please don’t hesitate to ask. 
 	-> SolvedGoodbye
 
 ==Option4==
-Mrcalindas?Neutral “All of our programs are focused on that goal. Did you come up with anything more specific?”
+Mrcalindas?Neutral "All of our programs are focused on that goal. Did you come up with anything more specific?"
  
-Let me see what else I can find, Mr. Calindas.
+* Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling “{player_name}, you really made my job easier. Thank you for doing this research. I’m going to work writing this up now.” 
+Mrcalindas?Smiling "{player_name}, you really made my job easier. Thank you for doing this research. I’m going to work writing this up now." 
 
-My pleasure, Mr. Calindas!
+* My pleasure, Mr. Calindas!
   -> END
 
 ==TempGoodbye==

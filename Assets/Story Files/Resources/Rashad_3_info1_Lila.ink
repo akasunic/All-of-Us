@@ -27,7 +27,7 @@ Lila?Smiling "I asked about noise in the library and all he did was laugh."
 
 ==Chat2==
 Lila?Smiling "Right? I couldn’t help but laugh when I saw him creeping on me like I was up to no good with a glitter agenda, but sometimes I worry that Rashad is way too stressed."
-Lila?Smiling “He cracks jokes, and whatnot, but you can just tell that he’s burned out and I feel awful.”
+Lila?Smiling "He cracks jokes, and whatnot, but you can just tell that he’s burned out and I feel awful."
 
 * And with all of that stress, he still manages to put a smile on our faces.
   -> Chat3
@@ -84,11 +84,11 @@ Lila?Smiling "You can also do a little research yourself and look at some of the
 
 ==Suggestion2==
 
-Lila?Smiling "When I looked for a Black therapist, I used an online tool to search in our area. The tool allows you to filter options based on therapy method, insurance, or cost. Also, sometimes they include other information, like religious background, if their practice is faith-influenced.”
+Lila?Smiling "When I looked for a Black therapist, I used an online tool to search in our area. The tool allows you to filter options based on therapy method, insurance, or cost. Also, sometimes they include other information, like religious background, if their practice is faith-influenced."
 
-Lila?Smiling "I'm pretty sure Rashad's benefits through the library cover mental health care. In other circumstances, it might matter that some therapists charge based on a sliding scale, meaning the cost of the session is based on your income to make it affordable.”
+Lila?Smiling "I'm pretty sure Rashad's benefits through the library cover mental health care. In other circumstances, it might matter that some therapists charge based on a sliding scale, meaning the cost of the session is based on your income to make it affordable."
 
-Lila?Smiling “When I called, we set up an intake appointment to get to know each other. I asked questions about race-based stress to know that she was actually prepared to help me."
+Lila?Smiling "When I called, we set up an intake appointment to get to know each other. I asked questions about race-based stress to know that she was actually prepared to help me."
 
 Lila?Neutral "Honestly, I did a bunch of reading and knew some stuff from my mom, so I was able to ask about different types of therapy. I wrote down questions because I knew I'd be nervous, but a good therapist knows this isn't easy."
 

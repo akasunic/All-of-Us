@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ==intro==
 
-Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank you for your help this week. You’re a real one.”
+Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank you for your help this week. You’re a real one."
 
 * That’s what friends are for! How'd it go, if you don’t mind me asking? 
 -> Chat1
@@ -31,7 +31,7 @@ Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to 
 
 ==QuestIntro==
 Rashad?Neutral "When I pitched the initiative to the board, I highlighted the shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue. "
-Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together.”
+Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together."
 
 * An intergenerational dialogue? How would that work? 
 -> QuestDetails1

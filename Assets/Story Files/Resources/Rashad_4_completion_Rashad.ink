@@ -24,7 +24,7 @@ Rashad?Neutral "I don't know what we'd do without you. Before you got here, I fe
 -> ReadyToSolve
 
 ==Chat2==
-Rashad?Neutral "You have information for the initiative? Spill it!”
+Rashad?Neutral "You have information for the initiative? Spill it!"
 
 
 * Elisa and Mrs. Lee shared a lot of helpful tips. Here's what I learned.
@@ -54,7 +54,7 @@ Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful, and Mrs
 
 ==Option1==
 
-Rashad?Neutral “Did you learn anything more specific?”
+Rashad?Neutral "Did you learn anything more specific?"
 
 Let me check my notes; I’ll be right back.
   ->TempGoodbye
@@ -62,16 +62,16 @@ Let me check my notes; I’ll be right back.
 
 ==Option2==
 # correct
-Rashad?Smiling “I’m glad to hear that Elisa’s experience agrees with my gut. I’ve been reading about the benefits of intergenerational support, and it seems like a win all around.” 
+Rashad?Smiling "I’m glad to hear that Elisa’s experience agrees with my gut. I’ve been reading about the benefits of intergenerational support, and it seems like a win all around." 
 
-Rashad?Smiling "My grandma could tell you stories about teaching me to sew on a button; thankfully she got to me before I met Cheryl. I might still be single!”
+Rashad?Smiling "My grandma could tell you stories about teaching me to sew on a button; thankfully she got to me before I met Cheryl. I might still be single!"
   
 * I’m happy to help further; just tell me how! 
 	-> SolvedGoodbye
 
 ==Option3==
 
-Rashad?Neutral “That’s helpful; did you discover anything more detailed?”
+Rashad?Neutral "That’s helpful; did you discover anything more detailed?"
  
 Hold tight! I’ll be right back.
   ->TempGoodbye
@@ -79,9 +79,9 @@ Hold tight! I’ll be right back.
 ==Option4==
 #correct
 
-Rashad?Smiling “One of the things that got this rattling around in my head again was Mrs. Lee and her role at the Community Center. She just lights up when she talks about the class – and not like a disco ball.”
+Rashad?Smiling "One of the things that got this rattling around in my head again was Mrs. Lee and her role at the Community Center. She just lights up when she talks about the class – and not like a disco ball."
 
-Rashad?Smiling “If it’s good for her, and it’s good for Lila’s class, it must be useful for other people too, right?” 
+Rashad?Smiling "If it’s good for her, and it’s good for Lila’s class, it must be useful for other people too, right?" 
 
   
 * I’m happy to help further; just tell me how!
@@ -90,13 +90,13 @@ Rashad?Smiling “If it’s good for her, and it’s good for Lila’s class, it
 
 
 ==SolvedGoodbye==
-Rashad?Smiling “You got it, {player_name}. I feel like this is going to be good. For all of us.” 
+Rashad?Smiling "You got it, {player_name}. I feel like this is going to be good. For all of us." 
 
 My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "If I’m not at the circulation desk, I’ll be in my office.”
+Rashad?Neutral "If I’m not at the circulation desk, I’ll be in my office."
 
 * I’ll find you!
   -> PuzzleInterface

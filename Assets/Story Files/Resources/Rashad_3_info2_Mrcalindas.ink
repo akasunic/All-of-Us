@@ -88,7 +88,7 @@ Mrcalindas?Neutral "Since covid, we've seen a lot of advances around telehealth 
 
 Mrcalindas?Smiling "Tell them teletherapy is a great place to start if you are uneasy about the idea of therapy." 
 
-Mrcalindas?Smiling “Try to be careful about your surroundings and make sure you have a place to attend the session where no one can hear you, so you can speak freely."
+Mrcalindas?Smiling "Try to be careful about your surroundings and make sure you have a place to attend the session where no one can hear you, so you can speak freely."
 
 Mrcalindas?Smiling "When I switched over to teletherapy at the beginning of covid, I treated myself to a really nice pair of headphones with a microphone. It was a splurge, but I felt like it made the whole teletherapy experience about taking good care of myself."
 
@@ -100,7 +100,7 @@ Mrcalindas?Smiling "When I switched over to teletherapy at the beginning of covi
 
 ==Suggestion2==
 
-Mrcalindas?Smiling “Your friend might be comforted to know that therapists have strict professional codes of conduct. They have an obligation to keep anything you communicate to them private."
+Mrcalindas?Smiling "Your friend might be comforted to know that therapists have strict professional codes of conduct. They have an obligation to keep anything you communicate to them private."
 
 Mrcalindas?Smiling "You can talk to your therapist about anything, though it might take time to build up a level of trust."
 

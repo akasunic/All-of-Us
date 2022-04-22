@@ -35,7 +35,7 @@ Elisa?Smiling "It’s a relaxing activity that makes me remember my abuela, and 
 -> Explain1
 
 ==Chat3==
-Elisa?Smiling "I really miss my abuela, I learned so much from her. I remember when I taught her how to use her first iPhone. Tech duty with the grandparents, you know how it is. Her first selfie was fire, honestly.”
+Elisa?Smiling "I really miss my abuela, I learned so much from her. I remember when I taught her how to use her first iPhone. Tech duty with the grandparents, you know how it is. Her first selfie was fire, honestly."
 
 
 * Speaking of selfies, Elisa, I think you might be the person I need. 

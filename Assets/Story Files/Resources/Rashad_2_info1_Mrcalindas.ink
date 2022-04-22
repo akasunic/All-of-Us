@@ -77,7 +77,7 @@ Mrcalindas?Smiling "Combining mindfulness activities like meditation and a gentl
 
 Mrcalindas?Neutral "Stress can really have a negative effect on overall quality of life. I cannot recommend therapy strongly enough. I understand the stigmas around mental healthcare, but there are some really compassionate, expert practitioners right here in Bloomwood. Your friend should consider giving one of them a chance."
 
-Mrcalindas?Smiling "Seeing a therapist really changed the game for me. If your friend wants a recommendation, I'm happy to suggest some people.”
+Mrcalindas?Smiling "Seeing a therapist really changed the game for me. If your friend wants a recommendation, I'm happy to suggest some people."
 
 Mrcalindas?Smiling "It's hard to remember when we're in the thick of it, but each of us is a complete picture. Taking care of our mental health enables us to support and take care of our physical health. And the other way around."
 

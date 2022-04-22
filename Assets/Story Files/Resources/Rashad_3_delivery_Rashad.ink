@@ -48,8 +48,8 @@ Rashad?Neutral "I don't know how to determine which therapist is right for me. C
 
 
 ==OptionalQuestDetails1==
-Rashad?Neutral "Yeah, of course. It's my first time asking for help so I kind of feel like a fish out of water. Plus, the library has been super slammed, so who knows if I even have the time for this.”
-Rashad?Neutral “At the same time, I know I need to prioritize my mental health. It’s just hard to find someone who <i>gets it</i>, if you catch my drift. On top of that, my schedule is pretty hectic so flexibility is a must.”
+Rashad?Neutral "Yeah, of course. It's my first time asking for help so I kind of feel like a fish out of water. Plus, the library has been super slammed, so who knows if I even have the time for this."
+Rashad?Neutral "At the same time, I know I need to prioritize my mental health. It’s just hard to find someone who <i>gets it</i>, if you catch my drift. On top of that, my schedule is pretty hectic so flexibility is a must."
 
 * I totally get it. What else do you need from me?
 -> QuestDetails2
