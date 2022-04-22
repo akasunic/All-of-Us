@@ -167,6 +167,18 @@ public static class GameStrings {
                 {"days_left", "DAYS LEFT!"},
                 {"day_left", "DAY LEFT!"},
                 {"to_block_party", "to block party for"},
+                {"finish_day", "FINISH THE DAY"},
+
+                {"talk_bubble_rashad_1", ""},
+                {"talk_bubble_rashad_2", ""},
+                {"talk_bubble_lee_1", ""},
+                {"talk_bubble_lee_2", ""},
+                {"talk_bubble_calindas_1", ""},
+                {"talk_bubble_calindas_2", ""},
+                {"talk_bubble_lila_1", ""},
+                {"talk_bubble_lila_2", ""},
+                {"talk_bubble_elisa_1", ""},
+                {"talk_bubble_elisa_2", ""},
 
                 {"end_of_quest_rashad_1_sticker1", ""},
                 {"end_of_quest_rashad_1_sticker2", ""},

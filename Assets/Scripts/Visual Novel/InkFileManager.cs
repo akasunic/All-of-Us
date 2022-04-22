@@ -102,7 +102,6 @@ public class InkFileManager : MonoBehaviour {
 
     private void OnSceneChanged(Scene prev, Scene next) {
         if (completedQuestString != null && completedQuestString != "") {
-            eoq.EndQuest(completedQuestString);
             completedQuestString = null;
             SceneManager.LoadScene("EndOfQuest");
         }
@@ -111,7 +110,6 @@ public class InkFileManager : MonoBehaviour {
 
         _fc.SetStringVariable("player_name", GlobalGameInfo.name);
         _fc.ExecuteBlock("On Variables Loaded");
-
     }
 
     public static void OnQuestCompleted(CharacterResources.CHARACTERS questGiver) {
