@@ -87,8 +87,8 @@ Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lo
 
 ==Suggestion2==
 
-~ notification = "Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4-4"
-# notification Rashad_Day 4_Treating diabetes has to do with regulating blood sugar levels_Elisa4-4
+~ notification = "Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4"
+# notification Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4
 
 Rashad?Smiling "It has to do with the pancreas, I think. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
 

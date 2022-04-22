@@ -94,7 +94,6 @@ Mrcalindas?Smiling "To summarize, though, eat small portions, make sure you do s
 Mrcalindas?Smiling "Well, it's fairly simple. Other than looking after your diet and exercising regularly, you'd be monitoring your blood sugar levels at home via a blood glucose meter."
 Mrcalindas?Smiling "How often you have to monitor those levels depends person-to-person, but it's usually once a day."
 Mrcalindas?Smiling "Otherwise, treatment can include oral medications or insulin therapy via injections."
-
 Mrcalindas?Smiling "Find a doctor - an endocrinologist - you feel comfortable with. They will be your partner in navigating those choices."
 
 
