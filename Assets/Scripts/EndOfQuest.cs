@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,22 @@ using UnityEngine.SceneManagement;
 public class EndOfQuest : MonoBehaviour
 {
     [SerializeField]
-    public GameObject Background;
     public GameObject TalkBubble;
+    public TextMeshProUGUI TalkBubbleText;
     public GameObject TalkBubble2;
-    public GameObject[] NPCImages;
+    public TextMeshProUGUI TalkBubble2Text;
+    public Image Background;
+    public Image TabBar;
+    public Image NPC;
+    public Sprite[] NPCImages;
+
+    public Sprite[] TabBarImages;
+
+    // Background Images
+    public Sprite libraryBackground;
+    public Sprite communityCenterBackground;
+    public Sprite healthCenterBackground;
+
     // Stickers
     public GameObject[] NPCStickersLee1;
     public GameObject[] NPCStickersLee2;
@@ -33,13 +46,11 @@ public class EndOfQuest : MonoBehaviour
     public TextMeshProUGUI Thu;
     public TextMeshProUGUI Party;
     public TextMeshProUGUI ButtonText;
-    public TextMeshProUGUI Sticker1;
-    public TextMeshProUGUI Sticker2;
-    public TextMeshProUGUI TalkBubbleText;
-    public TextMeshProUGUI TalkBubble2Text;
+    public TextMeshProUGUI Sticker1Text;
+    public TextMeshProUGUI Sticker2Text;
     public TextMeshProUGUI Week;
     public TextMeshProUGUI DayNumber;
-    public TextMeshProUGUI DayText;
+    public TextMeshProUGUI DaysLeftText;
 
 
     // Start is called before the first frame update
@@ -54,159 +65,166 @@ public class EndOfQuest : MonoBehaviour
         Thu.text = GameStrings.getString("thursday_short");
         Party.text = GameStrings.getString("party");
         ButtonText.text = GameStrings.getString("continue");
+
+        TabBar.sprite = TabBarImages[GlobalGameInfo.GetCurrentDay()];
         
         TalkBubble.SetActive(true);
-        // TalkBubbleText.SetActive(true);
+        TalkBubbleText.enabled = true;
 
         Week.text = GameStrings.getString("week_all_caps");
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
-        DayText.text = GameStrings.getString("days_left");
+        DaysLeftText.text = GameStrings.getString("days_left");
 
         if (GlobalGameInfo.GetRemainDays() <= 1)
         {
-            DayText.text = GameStrings.getString("day_left");
+            DaysLeftText.text = GameStrings.getString("day_left");
         }
-
-        // set character and picture
-        // for (int i = 0; i < pictures.Length; i++)
-        // {
-        //     NPCImages[i].SetActive(false);
-        // }
-
 
         switch (GlobalGameInfo.GetCurrentNPC()) {
             case CharacterResources.CHARACTERS.RASHAD:
                 
-                NPCImages[0].SetActive(true);
+                NPC.sprite = NPCImages[0];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_rashad_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_rashad_2");
                 NPCStickersRashad1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
                 NPCStickersRashad2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Background.sprite = libraryBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
-                        Sticker1.text = GameStrings.getString("end_of_quest_rashad_1_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_rashad_1_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_rashad_1_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_rashad_1_sticker2");
                         break;                                            
                     case 1:
-                        Sticker1.text = GameStrings.getString("end_of_quest_rashad_2_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_rashad_2_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_rashad_2_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_rashad_2_sticker2");
                         break;                                            
                     case 2:
-                        Sticker1.text = GameStrings.getString("end_of_quest_rashad_3_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_rashad_3_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_rashad_3_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_rashad_3_sticker2");
                         break;                                            
                     case 3:
-                        Sticker1.text = GameStrings.getString("end_of_quest_rashad_4_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_rashad_4_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_rashad_4_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_rashad_4_sticker2");
                         break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.LILA:
 
-                NPCImages[1].SetActive(true);
+                NPC.sprite = NPCImages[1];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_lila_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_lila_2");
                 NPCStickersLila1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
                 NPCStickersLila2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Background.sprite = communityCenterBackground;
                 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lila_1_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lila_1_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lila_1_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lila_1_sticker2");
                         break;                                            
                     case 1:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lila_2_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lila_2_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lila_2_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lila_2_sticker2");
                         break;                                            
                     case 2:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lila_3_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lila_3_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lila_3_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lila_3_sticker2");
                         break;                                            
                     case 3:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lila_4_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lila_4_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lila_4_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lila_4_sticker2");
                         break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.CALINDAS:
 
-                NPCImages[2].SetActive(true);
+                NPC.sprite = NPCImages[2];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_calindas_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_calindas_2");
                 NPCStickersCalindas1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
                 NPCStickersCalindas2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Background.sprite = healthCenterBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
-                        Sticker1.text = GameStrings.getString("end_of_quest_calindas_1_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_calindas_1_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_calindas_1_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_calindas_1_sticker2");
                         break;                                            
                     case 1:
-                        Sticker1.text = GameStrings.getString("end_of_quest_calindas_2_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_calindas_2_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_calindas_2_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_calindas_2_sticker2");
                         break;                                            
                     case 2:
-                        Sticker1.text = GameStrings.getString("end_of_quest_calindas_3_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_calindas_3_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_calindas_3_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_calindas_3_sticker2");
                         break;                                            
                     case 3:
-                        Sticker1.text = GameStrings.getString("end_of_quest_calindas_4_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_calindas_4_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_calindas_4_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_calindas_4_sticker2");
                         break;                                            
                 }
                 break;
             case CharacterResources.CHARACTERS.LEE:
 
-                NPCImages[3].SetActive(true);
+                Debug.Log("AAAAAA");
+                NPC.sprite = NPCImages[3];
+                Debug.Log("BBBBBB");
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_lee_1");
+                Debug.Log("CCCCCC");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_lee_2");
+                Debug.Log("DDDDDDD");
                 NPCStickersLee1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Debug.Log("EEEEEE");
                 NPCStickersLee2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Debug.Log("FFFFFF");
+                Background.sprite = communityCenterBackground;
+                Debug.Log("GGGGGG");
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lee_1_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lee_1_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lee_1_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lee_1_sticker2");
                         break;
                     case 1:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lee_2_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lee_2_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lee_2_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lee_2_sticker2");
                         break;
                     case 2:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lee_3_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lee_3_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lee_3_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lee_3_sticker2");
                         break;
                     case 3:
-                        Sticker1.text = GameStrings.getString("end_of_quest_lee_4_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_lee_4_sticker2");                                            
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_lee_4_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_lee_4_sticker2");                                            
                         break;
                 }
                 break;
             case CharacterResources.CHARACTERS.ELISA:
             
-                NPCImages[4].SetActive(true);
+                NPC.sprite = NPCImages[4];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_elisa_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_elisa_2");
                 NPCStickersElisa1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
                 NPCStickersElisa2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                Background.sprite = libraryBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
-                        Sticker1.text = GameStrings.getString("end_of_quest_elisa_1_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_elisa_1_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_elisa_1_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_elisa_1_sticker2");
                         break;
                     case 1:
-                        Sticker1.text = GameStrings.getString("end_of_quest_elisa_2_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_elisa_2_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_elisa_2_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_elisa_2_sticker2");
                         break;
                     case 2:
-                        Sticker1.text = GameStrings.getString("end_of_quest_elisa_3_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_elisa_3_sticker2");
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_elisa_3_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_elisa_3_sticker2");
                         break;
                     case 3:
-                        Sticker1.text = GameStrings.getString("end_of_quest_elisa_4_sticker1");
-                        Sticker2.text = GameStrings.getString("end_of_quest_elisa_4_sticker2");                                            
+                        Sticker1Text.text = GameStrings.getString("end_of_quest_elisa_4_sticker1");
+                        Sticker2Text.text = GameStrings.getString("end_of_quest_elisa_4_sticker2");                                            
                         break;
                 }
                 break;
@@ -224,13 +242,13 @@ public class EndOfQuest : MonoBehaviour
     {
         if (ButtonText.text != GameStrings.getString("finish_day")) {
             TalkBubble.SetActive(false);
-            // TalkBubbleText.SetActive(false);
+            TalkBubbleText.enabled = false;
 
             TalkBubble2.SetActive(true);
-            // TalkBubbleText2.SetActive(true);
+            TalkBubble2Text.enabled = true;
 
-            // Sticker1.SetActive(false);
-            // Sticker2.SetActive(false);
+            Sticker1Text.enabled = false;
+            Sticker2Text.enabled = false;
 
             ButtonText.text = GameStrings.getString("finish_day");
         } else {
