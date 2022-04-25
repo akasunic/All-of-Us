@@ -7,6 +7,8 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
+~ new_quest = "Elisa4.txt"
+# new_quest
 
 Elisa?Smiling "Oh, {player_name}. I'm so glad to see you. Wait until you hear this!"
 
