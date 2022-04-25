@@ -16,6 +16,7 @@ public class Turnin : MonoBehaviour
     public Sprite continueClickable;
     public Sprite continueUnclickable;
 
+    public Image background;
     public Sprite libraryBackground;
     public Sprite communityCenterBackground;
     public Sprite healthCenterBackground;
@@ -78,18 +79,23 @@ public class Turnin : MonoBehaviour
         {   
             case CharacterResources.CHARACTERS.CALINDAS:
                 giverPerson.sprite = calindasGiver;
+                background.sprite = healthCenterBackground;
                 break;
             case CharacterResources.CHARACTERS.RASHAD:
                 giverPerson.sprite = rashadGiver;
+                background.sprite = libraryBackground;
                 break;
             case CharacterResources.CHARACTERS.LEE:
                 giverPerson.sprite = msleeGiver;
+                background.sprite = communityCenterBackground;
                 break;
             case CharacterResources.CHARACTERS.LILA:
                 giverPerson.sprite = lilaGiver;
+                background.sprite = communityCenterBackground;
                 break;
             case CharacterResources.CHARACTERS.ELISA:
                 giverPerson.sprite = elisaGiver;
+                background.sprite = libraryBackground;
                 break;
         }
         giverName.text = CharacterResources.GetName(c);
