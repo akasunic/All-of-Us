@@ -49,7 +49,7 @@ public class RotateSavingWheel : MonoBehaviour
         // Navigate to the next scene
         if (GlobalGameInfo.gameEndedFlag == true) {
             GlobalGameInfo.gameEndedFlag = false;
-            SceneManager.LoadScene("FinalScreen");
+            SceneManager.LoadScene("EndingAnimation");
         } else {
             SceneManager.LoadScene("Map");
         }
