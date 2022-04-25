@@ -167,19 +167,12 @@ public class EndOfQuest : MonoBehaviour
                 break;
             case CharacterResources.CHARACTERS.LEE:
 
-                Debug.Log("AAAAAA");
                 NPC.sprite = NPCImages[3];
-                Debug.Log("BBBBBB");
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_lee_1");
-                Debug.Log("CCCCCC");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_lee_2");
-                Debug.Log("DDDDDDD");
                 NPCStickersLee1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                Debug.Log("EEEEEE");
                 NPCStickersLee2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                Debug.Log("FFFFFF");
                 Background.sprite = communityCenterBackground;
-                Debug.Log("GGGGGG");
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
                     case 0:
