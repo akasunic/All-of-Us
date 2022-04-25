@@ -106,7 +106,7 @@ Mrslee?Neutral "Okay, come back soon!"
   -> END
 
 ==BadSolution==
-Mrslee?Neutral “Thank you, {player_name}.”
+Mrslee?Neutral "Thank you, {player_name}."
 
 + No problem!
   -> END

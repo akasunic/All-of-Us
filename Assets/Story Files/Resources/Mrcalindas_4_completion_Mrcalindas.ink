@@ -9,82 +9,99 @@ VAR new_quest = ""
 
 Mrcalindas?Smiling "Hello {player_name}! I bet you didn't expect to see me here."
 
-* {not TempGoodbye} Hi. Mr. Calindas, I actually love seeing you out and about. How are you?
+* Hi. Mr. Calindas, I actually love seeing you out and about. How are you?
   -> Chat1
-* {not TempGoodbye} Hi. Mr. Calindas, I actually love seeing you. Oh, I think I may have some ideas for you.
-  -> ReadyToSolve
-* {TempGoodbye} Mr. Calindas, I actually love seeing you out and about. Oh, I have some great news for Brooklyn.
-  -> ReadyToSolve
+* Hi. Mr. Calindas. I didn't think you existed outside of the clinic! Since you're here, I think I may have some ideas for you.
+  -> Chat1
+
 
 ==Chat1==
 
-Mrcalindas?Smiling "I'm actually waiting for my mother to finish her first aerobics class with Mrs. Lee. So, I'm feeling pretty good. How is the block party coming along?"
+Mrcalindas?Smiling "I'm actually waiting for my mother to finish her first aerobics class with Mrs. Lee. So, I'm feeling pretty good."
 
-* Well, I think it's going really great now. We made some new changes to make the party feel more inclusive.
+Mrcalindas?Smiling "It's really feeling like Bloomwood is a great place for my whole family. Did you have ideas for Brooklyn? 
+
+* Well, I think you're going to be happy. Brooklyn too!
   -> Chat2
-* It's going really great now. We made some new changes to make the party feel more inclusive. Speaking of which, do you have a moment?
+* I'm excited to share what I learned! 
   -> ReadyToSolve
 
 ==Chat2==
 
-Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying to make a plan for the day. Has there been some changes? Or did you have some ideas for activities..."
+Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying to make a plan for Brooklyn's time here. I'm looking forward to settling some of her anxiety."
 
-* Well, I found out some neat things, and came up with a plan.
+* Both the library and the community center have activities, and they taught me a lot about what to look for when choosing an activity. 
   -> ReadyToSolve
-* I talked to Lila and Rashad, and they gave me great advice on how best to make the Block Party fun and inclusive.
-  -> ReadyToSolve
+
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Oh? We would enjoy knowing how to prepare for the day. What are some suggestions of activities at the Block Party Brooklyn may enjoy? How can we prepare?"
+Mrcalindas?Neutral "Oh? Rashad and Lila are both very thoughtful. I would like to know what they think."
 
 * Here’s what I have…
   -> PuzzleInterface
 * Actually, before I commit, let me check my journal again.
   -> TempGoodbye
 
+
 ==PuzzleInterface==
 # turnin
 
-*  -> GoodSolution
-*  -> BadSolution
-// * Well, since some children may get overstimulated we have a few quiet areas where she can relax with a book or draw if she needs a break. Lila is making sensory slime bags with the children which is a calming but fun activity for all children. We're also goign to make sure there's a map with all the activities so you can plan your day. And if she does get upset, that's okay. We know she's just processing things differently, not misbehaving. -> GoodSolution
-// * We wnat to have a sensory activity, and some other areas. We're going to label all the activites with pictures so she can find them. This way we can set up expectations for her, so she knows what do to. We're going to label everything.-> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
+==Option1==
+# correct
+Mrcalindas?Smiling "This makes a lot of sense. An over-tired child is never going to get as much out of an activity as a well-rested child. And a hungry person is often a cranky person."
 
-Mrcalindas?Smiling "Oh, wow {player_name} this is a lot of good news. We don't want Brooklyn to feel singled out, so making all of the activities open to all children will make everyone feel good."
-Mrcalindas?Smiling "We can sit down and plan how best to support everyone that day, now."
+Mrcalindas?Smiling "It seems like the things you take into account for autistic children are similar to the things you keep in mind with other children, if you’re savvy to their ways."
 
-* Awesome! I know it's no unicorn, but I do hope she'll have a great time.
-  -> SolvedGoodbye
-* Brooklyn is a part of our community, and I'm happy you brought this up with me. I do hope she has a great time.
-  -> SolvedGoodbye
+* Maybe, but a little more thoughtfully and with more attention to planning for an exit strategy if things go wrong.
+	-> SolvedGoodbye
 
-==BadSolution==
 
-Mrcalindas?Neutral "Ah. I see. Well, at least everything will be well labeled. I don't know how we are going to help her if she feels overstimulated, though."
-Mrcalindas?Neutral "Wish there was something we could do about that when we notice it happening."
+==Option2==
 
-* Wait, I think we can do more. Let me try that again.
-  -> PuzzleInterface
-* You're right, Mr. Calindas. There's more I can think of. I'll get right back to you.
-  -> TempGoodbye
+Mrcalindas?Neutral "Hmm. Did you come up with anything more specific?"
+ 
+Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
+
+==Option3==
+
+Mrcalindas?Neutral "I feel like this is part of the picture, but did you learn anything else?"
+ 
+Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
+
+
+==Option4==
+# correct
+
+Mrcalindas?Smiling "I am comforted to know that there are places in Bloomwood that are prepared to support Brooklyn." 
+
+Mrcalindas?Smiling "Maybe she and my mother will both come out with me to playtime at the Community Center, or possibly to story time at the Library. I think they would both enjoy either." 
+
+  
+* I think Brooklyn is going to have an excellent week, Mr. Calindas! 
+	-> SolvedGoodbye
+
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "I'll tell Brooklyn and Jessica the good news. In the meantime, I'm going to pick up my Mom now."
-Mrcalindas?Smiling "I'm pretty sure if I leave her any longer she will end up with another volunteering project! I'll see you at the Block Party!" 
+Mrcalindas?Smiling "Thank you, {player_name}. I appreciate all of your help. I know Jessica will too." 
 
-* I'm looking forward to it. Give everyone my love! Bye!
-  -> END
-* I am not surprised Mother Calindas is as busy as you are. Tell everyone hello for me!
+I learned a lot today, Mr. Calindas. Thank you! 
   -> END
 
 ==TempGoodbye==
+Mrcalindas?Neutral "I’ll be here when you come back."
 
-Mrcalindas?Neutral "I understand. This isn't easy to just come up with. Let me know if you have anything. I'm going to go in and meet Mom. See you soon." 
-
-* Don't worry, I'll be back soon.
-  -> END
-* It really isn't. I just want to make sure everything is right. See you soon!!
-  -> END
+* Hold tight! I’ll be right back.
+  -> PuzzleInterface

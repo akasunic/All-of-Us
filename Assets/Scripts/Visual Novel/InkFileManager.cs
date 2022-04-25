@@ -398,7 +398,7 @@ public class InkFileManager : MonoBehaviour {
 
     private static readonly string[] rashadQuest1Files = {
         "Rashad_1_delivery_Rashad.ink", "Rashad_1_info1_Elisa.ink",
-        "Rashad_1_completion_Rashad.ink" };
+        "Rashad_1_info2_Mrslee.ink", "Rashad_1_completion_Rashad.ink" };
     private static readonly string[] rashadQuest2Files = {
         "Rashad_2_delivery_Rashad.ink", "Rashad_2_info1_Mrcalindas.ink",
         "Rashad_2_info2_Lila.ink", "Rashad_2_completion_Rashad.ink" };
@@ -427,17 +427,17 @@ public class InkFileManager : MonoBehaviour {
         calindasQuest2Files, calindasQuest3Files, calindasQuest4Files};
 
     private static readonly string[] elisaQuest1Files = {
-        "Elisa_1_delivery_Elisa.ink", "Elisa_1_info1_Rashad.ink",
-        "Elisa_1_info2_Lila.ink", "Elisa_1_completion_Elisa.ink" };
+        "Elisa_1_delivery_Elisa.ink", "Elisa_1_info1_Mrcalindas.ink",
+        "Elisa_1_info2_Rashad.ink", "Elisa_1_completion_Elisa.ink" };
     private static readonly string[] elisaQuest2Files = {
-        "Elisa_2_delivery_Elisa.ink", "Elisa_2_info1_Mrcalindas.ink",
-        "Elisa_2_completion_Elisa.ink" };
+        "Elisa_2_delivery_Elisa.ink", "Elisa_2_info1_Mrslee.ink",
+        "Elisa_2_info2_Mrcalindas.ink", "Elisa_2_completion_Elisa.ink" };
     private static readonly string[] elisaQuest3Files = {
         "Elisa_3_delivery_Elisa.ink", "Elisa_3_info1_Lila.ink",
-        "Elisa_3_info2_Mrcalindas.ink", "Elisa_3_completion_Elisa.ink" };
+        "Elisa_3_info2_Rashad.ink", "Elisa_3_completion_Elisa.ink" };
     private static readonly string[] elisaQuest4Files = {
-        "Elisa_4_delivery_Elisa.ink", "Elisa_4_info1_Mrcalindas.ink",
-        "Elisa_4_info2_Rashad.ink", "Elisa_4_completion_Elisa.ink" };
+        "Elisa_4_delivery_Elisa.ink", "Elisa_4_info1_Lila.ink",
+        "Elisa_4_info2_Mrslee.ink", "Elisa_4_completion_Elisa.ink" };
     private static readonly string[][] elisaQuests = { elisaQuest1Files,
         elisaQuest2Files, elisaQuest3Files, elisaQuest4Files};
 

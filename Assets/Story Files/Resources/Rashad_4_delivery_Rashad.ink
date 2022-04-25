@@ -5,89 +5,103 @@ VAR new_quest = ""
 
 -> intro
 
-===intro===
-~ new_quest = "Rashad4.txt"
-# new_quest
+==intro==
 
-Rashad?Smiling "Hey, {player_name}! I'm glad you stopped by. I just wanted to thank you for helping me out this week. I was able to get a lot done because of you."
+Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank you for your help this week. You’re a real one."
 
-* Hey Rashad! Thanks, man. We're friends, so it's the least I can do. How did everything work out?
-  -> Chat1
-* Hey Rashad! It's no trouble, really. We all need to help each other. Bloomwood Spirit, right?
-  -> QuestIntro
+* That’s what friends are for! How'd it go, if you don’t mind me asking? 
+-> Chat1
+
 
 ==Chat1==
+Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming intake interview."
+Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I needed. Also, I was thinking about talking to HR about how the board has been treating me."
 
-Rashad?Smiling "Yeah, but still. I was really nervous about therapy, and I feel prepared for my intake interview."
-Rashad?Smiling "The recommendation was just what I needed. I might talk to HR about how the board treats me."
-
-* Really? Do you need any support?
-  -> Chat2
-*  That sounds great, Rashad. You do so much for the community. Bloomwood spirit, man. You've got it.
-  -> QuestIntro
+* Wow, Rashad. How can I support you? 
+-> Chat2
+* I’m proud of you, Rashad. I’m sorry you have to deal with this. 
+-> Chat2
 
 ==Chat2==
-Rashad?Smiling "Nah, I'm good. I'm going to ask one of my allies on the board to help me. If it continues, I'm prepared to go to HR. But wait, that's not what I was going to say."
-Rashad?Smiling "The Board approved an initiative I wanted to talk to you about. You're always talking about making sure the neighborhood has connections. Bloomwood spirit, right?" 
+Rashad?Smiling "It’s all good. I plan on asking one of my allies on the board to support me. If this behavior continues, I'm ready to take this to HR."
+Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to talk to you about. You’re always making sure everyone in Bloomwood has the right support and connections." 
 
-* Yes! You know I am all about that Bloomwood spirit. Which sounds corny, but it's important!
-  -> QuestIntro
+* Absolutely. That's what I'm here for!
+-> QuestIntro
 
 ==QuestIntro==
-Rashad?Smiling "Hey now. Bloomwood spirit, was- is a thing."
-Rashad?Smiling "I explained the changing demographics to the board when I pitched on this, but I want to get an intergenerational dialogue going at the library. "
-Rashad?Smiling "A lot of our seniors and young people frequent the library, and I'd like to bring them together."
+Rashad?Neutral "When I pitched the initiative to the board, I highlighted the shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue. "
+Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together."
 
-* Intergenerational dialogue? I'm all for that. Tell me more.
-  -> QuestDetails1
-* That sounds great! Is there anything I can help with?
-  -> QuestAcceptance
+* An intergenerational dialogue? How would that work? 
+-> QuestDetails1
+* That sounds fantastic! How can I help? 
+-> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Smiling "Okay, so remember how we used to help out the Pribishes all the time? Making sure their lawn was mowed, and just checking in? I pitched a program that's just like that."
-Rashad?Smiling "With all these apps for medical care and appointments, I was thinking we could pair teens and seniors."
-Rashad?Smiling "Except instead of mowing lawns, they exchange knowledge. That way the teens could speak to mentors and help them with deciphering their health needs, since it seems to be a common problem. What do you think?"
+Rashad?Neutral "Hear me out…Remember how we used to help out when Bloomwood Mutual Aid was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
+Rashad?Neutral "Making sure their lawn got mowed, and just checking in? I pitched a program that's just like that."
 
-* This is interesting. What do the teens learn?
-  -> QuestDetails2
-* Ooo, please tell me the teens get neat skills, like cooking. I could have used that...
-  -> OptionalQuestDetails1
-* That sounds great! Is there anything I can help with?.
-  -> QuestAcceptance
+Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments. I was thinking we could pair teens and seniors to overcome some of those tech roadblocks"
+
+* Wow, I bet the teens get to pick up some pretty cool skills. 
+-> OptionalQuestDetails1
+* That’s awesome. Can I help with anything? 
+-> QuestAcceptance
 
 ==OptionalQuestDetails1==
-Rashad?Neutral "You really could have. Mr. Calindas told me you couldn't boil water. Literally. Anyway, yes. They can match up their interests and choose each other."
-Rashad?Neutral "So, each teen and senior matches themselves up. Remember how hard it was during the pandemic for some of our seniors whose families are out of the neighborhood?"
+Rashad?Neutral "We can send out a survey to match them up based on their interests and what they’re looking to learn."
 
-* I do remember. That was really tough, but we pulled through.
-  -> QuestDetails2
-* I do remember. That was really tough. So what can I do?
-  -> QuestAcceptance
+* That sounds fantastic! 
+-> QuestDetails2
+* That’s a great idea! So what can I do to help? 
+-> QuestAcceptance
 
 ==QuestDetails2==
-Rashad?Neutral "We did pull through, but think about all the young people who know about stuff that seniors just don't. And seniors who can pass down valuable knowledge."
-Rashad?Neutral "There's a lot they can teach each other, and we can offer this as a volunteer opportunity, which looks good for college applications, and gives social time to the seniors."
+Rashad?Neutral "There's a lot they can learn from each other, and we can offer this as a volunteer opportunity. 
+Rashad?Neutral "It looks good on a college application, and it allows seniors to socialize with 'the youth.'"
 
-* Well, you're right. Mrs. Pribish taught me how to bake bread. Which oddly, is the only thing I can't burn. How can I help?
-  -> QuestAcceptance
-* It would look great on a resume, but it would be stellar for the community. How can I help?
-  -> QuestAcceptance
+* It looks good on a resume but even better on the community. Everyone wins!
+-> OptionalQuestDetails2
+* Sounds like a win-win situation! How can I help? 
+-> QuestAcceptance
+
+==OptionalQuestDetails2==
+Rashad?Neutral "It would be a mutually beneficial relationship." 
+Rashad?Neutral "Teens could help seniors decipher their health needs, and seniors can share their life-long lessons with their mentees. What do you think?"
+
+* I have a great feeling about this program. How can I help? 
+-> QuestAcceptance
+* This program is gonna be epic! What can I do to help?
+-> QuestAcceptance
 
 ==QuestAcceptance==
-Rashad?Smiling "You know I'm happy you asked about that, because I do have something you can do."
-Rashad?Smiling "To get the ball rolling, I need to know a bit more about what teens and seniors could want from each other. I don't want to just put a program out there with no input."
-Rashad?Smiling "Maybe find out more about senior mental health, and what teens feel like they need or want to learn?"
+Rashad?Smiling "Now that I think about it, I do have something you can do."
+Rashad?Smiling "Before I create a survey, I need to know a bit more about what teens and seniors could learn from each other. I definitely want to get some input before we roll out the program."
+Rashad?Smiling "Maybe find out more about what our elders might benefit from and what teens feel like they need or want to learn?"
 
-* Sure! I know exactly who to ask about this. I'll see if I can bring you some information.
-  -> Goodbye
-* This sounds like a great idea, Rashad. I'll ask around!
-  -> Goodbye
+
+* Sure! I know exactly who to ask about this. 
+-> Goodbye
+
 
 ==Goodbye==
-Rashad?Smiling "Thank you so much, {player_name}. Thanks for helping with this. I knew you'd be the right person for this one."
-Rashad?Smiling "I feel like my vision for the library is finally coming true. Take care, okay?"
+Rashad?Smiling "You’re the best, {player_name}! Thanks for all your help with this, I knew I could count on you."
+Rashad?Smiling "I feel like my vision for the library is coming together. Take care, okay?"
 
-* Take care, Rashad. I'll be back.
+*Take care Rashad! I'm so excited for you.
   ->END
-* Bye Rashad! I'm so excited for you, this is going to go great.
-  ->END
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+
 VAR player_name = ""
 VAR notification = ""
 VAR new_contact = ""
@@ -6,75 +7,94 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey hey, {player_name} it's good to see you. How's it going?"
+Rashad?Smiling "Hey hey, {player_name} it's nice to see you again. How's it going?"
 
-* {not TempGoodbye} I'm doing well, despite finding glitter everywhere from simply setting foot in Lila's classroom.
+* I'm fine as long as you don’t ask about the glitter.
   -> Chat1
-* {not TempGoodbye} I've really been thinking about you. I found some resources for you.
+* I’m doing alright! I found some resources for you.
   -> ReadyToSolve
-* {TempGoodbye} Hey! I'm well. I hope you've been getting some rest. I think I have some information for you.
-  -> ReadyToSolve
+
 
 ==Chat1==
-Rashad?Smiling "Glitter? You better not get it in a book. That's why we have a whole separate activity room. That stuff <i>travels</i>."
+Rashad?Neutral "Okay, I won’t ask about the glitter. All that I ask is please don’t get it in the books. That stuff <i>travels</i>, but I’m sure you know that, clearly. Okay, I’ll stop talking now."
 
-* It does! Lila did warn me.
+* Trust me, I know. In Lila’s defense, she did warn me.
   -> Chat2
-* It really does. I asked Lila for some advice, and now...
+* True! Also, I asked Lila and Mr. Calindas for advice, here’s what I have…
   -> ReadyToSolve
+
 
 ==Chat2==
-Rashad?Neutral "Well, you'd help me sleep better if you made sure to wash your hands before picking out a book. Unless you're going to the YA section, then have at it. Heh."
+Rashad?Neutral "Well, you'd help me sleep better if you made sure to wash your hands before picking out a book. Unless you're going to the YA section, of course, then have at it. Hah!"
 
-* Speaking of sleeping, I got some information about stress for you.
-  -> ReadyToSolve
-* I'll be sure to wash my hands. In the meantime, I have that information you asked for.
+* Fine, I'll wash my hands. In the meantime, I have that info you asked for.
   -> ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Neutral "That's great, {player_name}. I've really been struggling, and I knew you'd have some great ideas."
+Rashad?Neutral "That's great to hear, {player_name}. I've really been going through it, but I knew I could count on you to come through with some great ideas."
 
 * Excellent! Let's talk about it.
   -> PuzzleInterface
-* Actually, you know what? I think I need some more time.
+* On second thought, I think I might need some more time.
   -> TempGoodbye
 
 ==PuzzleInterface==
 # turnin
 
-*  -> GoodSolution
-*  -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
-Rashad?Neutral "Wow, {player_name}. This <i>is</i> serious. Thank you so much for taking the time to find this out."
-Rashad?Neutral "I haven't tried therapy, and a Black therapist could be really helpful to talk with, you know? And I have been looking to get into running again... I really appreciate this."
+==Option1==
 
-* Oh, and here is a therapist reference from Lila! Anything you need, I got you.
-  -> SolvedGoodbye
-* Friends help friends, Rashad. I care about you. Here's a therapist rec, from Lila. Let me know if you need anything else.
-  -> SolvedGoodbye
+Rashad?Neutral "Melatonin, huh? I don’t know… that sounds too easy."
 
-==BadSolution==
-Rashad?Neutral "I'm not so sure...This just sounds stressful."
+OK. Let me go check my notes. Hold tight!
+  ->TempGoodbye
 
-* Hmm, wait, I have some more information.
-  -> PuzzleInterface
-* Actually, let me look at my notes again and get back to you. I can find some better information.
-  -> TempGoodbye
+
+==Option2==
+# correct
+
+Rashad?Smiling "Well, you didn’t say you’d bring me easy answers. Stress is a really big deal, and can negatively impact many aspects of my well-being, so of course managing it can take many forms."
+
+Rashad?Smiling "I think I have a lot to chew on."
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+
+Rashad?Neutral "It feels like self-care is a drop in the bucket compared to what I’m experiencing. Will that really make a difference?"
+ 
+Hold tight! I’ll be right back.
+  ->TempGoodbye
+
+==Option4==
+# correct
+
+Rashad?Smiling "What you’re saying makes sense. I’m not sure where to start, but having someone objective to talk to certainly couldn’t hurt."
+
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+
 
 ==SolvedGoodbye==
-Rashad?Smiling "Thanks! I'm really happy I trusted you with this, {player_name}. I'm going to head out to get some work done, but I'll follow up on these resources."
-Rashad?Smiling "You take care, okay? No glitter outside the YA section. Heh. Take care!"
+Rashad?Smiling "Hey, thanks, {player_name}. I appreciate you helping me out like this." 
 
-* Always happy to have your back. Which is now covered in glitter. Take care!
-  -> END
-* You take care of yourself friend, I'll remember to keep the glitter restrained, take care!
+My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==
-Rashad?Neutral "That's understandable. It's a tough situation. I'll be here, when you're ready."
+Rashad?Neutral "You know I’ll be here when you get back."
 
-* Ok, see you later!
-  -> END
-* Thanks, man. I'll be right back.
-  -> END
+* I know you will! Sit tight!
+  -> PuzzleInterface

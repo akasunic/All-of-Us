@@ -7,54 +7,117 @@ VAR new_quest = ""
 
 ===intro===
 
-Lila?Smiling "Hi {player_name}! What's up?"
+Lila?Smiling "Ah! {player_name}, do you mind holding this ladder so I can finish hanging up the childrens’ projects?"
 
-+My friend Elisa is really stressed out and I'm trying to get her some help. Do you know any former first-gen students she could talk to?
-    -> Lilamentor
+* Lila! You’re supposed to wait until someone’s holding the ladder to climb up!
+  -> Chat1
+* Looks like I got here just in time!
+  -> Chat1
 
-===Lilamentor===
+==Chat1==
 
-~ notification = "Lila_Day 3_Someone brand new might not be the best mentor"
-# notification Lila_Day 3_Someone brand new might not be the best mentor
-~ notification = "Lila_Day 3_Reach out to upperclassmen and former students for help_Elisa3"
-# notification Lila_Day 3_Reach out to upperclassmen and former students for help_Elisa3
+Lila?Smiling "Yeah, yeah. I got impatient – Mrs. Lee was going to help, but one of the parents is running late, so Mrs. Lee is with two of the kids outside."
 
-Lila?Neutral "Hmm, I don't know anyone off the top of my head, but I can keep an eye out for you. Elisa could reach out to any first-gen upperclassmen or former students that she knows."
-Lila?Neutral "It'll also probably be more comfortable for Elisa to connect with them than it would be to meet someone brand new."
+Lila?Smiling "I just want to make sure everyone’s planets are up so they can feel proud of them tomorrow morning." 
 
-+I'll let her know!
-    -> institutionalConnections
-    
-===institutionalConnections===
+* Planets? Oh, now I see it!  
+  -> Chat2
+* Oh, hey! These are pretty cool! Hey, can I ask a question about ADHD? 
+  -> Explain1
 
-~ notification = "Lila_Day 3_Reach out to teachers and make use of school programs_Elisa3"
-# notification Lila_Day 3_Reach out to teachers and make use of school programs_Elisa3
-~ notification = "Lila_Day 3_Colleges don't always have programs to help first-gen students"
-# notification Lila_Day 3_Colleges don't always have programs to help first-gen students
+==Chat2==
 
-Lila?Smiling "You can also tell her that she could reach out to any first generation teachers she knows at her school for advice. I'm sure they'd love to help her."
-Lila?Smiling "Or, if nothing else, sometimes colleges actually have specific programs to help first-gen students form a community- do you know if they have that?"
+Lila?Smiling "Everyone was supposed to illustrate their own little world full of the things they like best. As you can see, each of the children has their own idea of what the world should look like."
 
-+I'm not sure, but I can ask Elisa.
-    -> segueOut
+Lila?Smiling "So many cats, baby brothers, and unicorns. Also, look. Books, Mrs. Lee, and the library." 
 
-===segueOut===
 
-~ notification = "Lila_Day 3_Getting connected with your community can help reduce stress_Elisa3"
-# notification Lila_Day 3_Getting connected with your community can help reduce stress_Elisa3
-~ notification = "Lila_Day 3_Try to get support in whatever way you can"
-# notification Lila_Day 3_Try to get support in whatever way you can
+* Hey, Lila, these are pretty cool! For paper plates and markers, at least.
+  -> Chat3
+* I would love to pick your brain about ADHD, if you have a moment.
+  -> Explain1
 
-Lila?Smiling "Awesome! Yeah, the big thing is just for Elisa to get some more support in whatever way she can."
-Lila?Smiling "Whether it's a mentor or using school resources,"
-Lila?Smiling "having a place where she can feel connected to the community and like she's not alone in her stress will go a long way to improve her mental health."
+==Chat3==
 
-+Thanks Lila! 
-    ->bye
-    
-===bye===
+Lila?Smiling "Sadly, I’ll have to tell Mr. Calindas that the health clinic didn’t make the cut; everyone said that’s where you go for shots, and that’s not a big hit with the preschool crowd.."
 
-Lila?Smiling "No problem! Good luck with the mentor-finding!"
+Lila?Smiling "Thanks. I think I’m done now. What can I do for you?"
 
-+See ya!
-    ->END
+* You work with kids who have ADHD, right?
+  -> Explain1
+
+
+==Explain1==
+
+Lila?Neutral "ADHD is more common than most people would guess, though it doesn’t come up often in preschool; the official estimate is something like 2.5% of the world’s population has it."
+
+Lila?Neutral "ADHD stands for Attention Deficit/Hyperactivity Disorder." 
+
+Lila?Neutral "When I was a kid, everyone thought ADHD was the kid who couldn’t sit down, kept clownin’ even when it got him in trouble. The kid who never turned in homework and didn’t finish his classwork." 
+
+Lila?Smiling "We know more now. More people who could benefit from treatment are being diagnosed, because we’ve developed a more nuanced understanding of the disorder."
+
+* You said "him" … is this something that primarily affects young men?
+ -> Explain2
+* A more nuanced understanding? Tell me more! 
+  -> Suggestion1
+
+==Explain2==
+
+Lila?Smiling "That’s what we used to think. The whole "boys will be boys" way of thinking. But like I said, we’ve developed a more nuanced understanding, and more girls and women are getting access to treatment too!"
+
+Lila?Neutral "Trisha was diagnosed last year; you can’t imagine how much she wishes she’d been diagnosed younger. There was a lot of self-doubt that could have been eliminated if she’d known what she was dealing with.."
+
+* What does ADHD actually look like, if not "boys will be boys?"
+  -> Suggestion1
+* Tell me more about the nuance, please! 
+  -> Suggestion1
+
+==Suggestion1==
+
+~ notification = "Lila_Day 3_The key to determining whether to pursue ADHD assessment or not is to ask is this trait interfering with this person’s success?_Elisa3-1"
+# notification Lila_Day 3_The key to determining whether to pursue ADHD assessment or not is to ask is this trait interfering with this person’s success?_Elisa3-1 
+
+
+Lila?Neutral "Well, we know now that ADHD has three different manifestations. There’s the "classic" hyperactive  or impulsive type, there’s inattentive type, and there’s mixed – someone who manifests aspects of both." 
+
+Lila?Neutral "One of the things Trisha didn’t know until recently is that young women who are labeled "chatterboxes" or "social butterflies" might actually be demonstrating hyperactivity."
+
+Lila?Neutral "It’s not good for anyone when a behavior that gets in the way of learning or feeling comfortable in your skin gets chalked up to being just one aspect of a specific gender!" 
+
+Lila?Neutral "Calling hyperactivity a "boy" trait meant a lot of girls got overlooked and struggled unnecessarily. Calling girls "social butterflies" undercut the seriousness of their struggles to regulate their attention." 
+
+Lila?Smiling "The real key to identifying someone with hyperactive/impulsive ADHD relies in identifying that they are unable to self-regulate their impulsiveness, and it is an obstacle to their success." 
+
+* That’s hyperactive type – what about inattentive type? 
+  -> Suggestion2
+
+
+==Suggestion2==
+
+~ notification = "Lila_Day 3_Distractedness is a trait that might lead someone to being assessed for ADHD_Elisa3-2"
+# notification Lila_Day 3_Distractedness is a trait that might lead someone to being assessed for ADHD_Elisa3-2 
+
+
+Lila?Smiling "Again, the key to whether or not to pursue assessment is to ask ‘is this trait interfering with this person’s success?’" 
+
+Lila?Smiling "Inattentive type ADHD manifests as an inability to properly regulate attention to keep track of things – remember what I said about social butterflies?"
+
+Lila?Smiling "Think about the brilliant, but distracted, mad scientist – that’s one character type that might be based off someone with inattentive-type ADHD. The sort who burns his toast and can only find one shoe because he’s thinking about something else entirely." 
+
+Lila?Smiling "But the other side of that coin is the daydreamer who can’t find her keys. Or the student who regularly gets scolded for not "applying" themselves."
+
+Lila?Neutral "Distracted kids who can’t keep their attention in one place should be observed. If their distractedness is tripping them up, as a teacher, I’d suggest assessment." 
+
+
+
+* This is such a good starting point. Thank you, Lila! 
+  -> Goodbye
+
+==Goodbye==
+
+Lila?Smiling "And thank you for helping me hang the planets, {player_name}."
+
+* Stay off ladders without a spotter! Bye, Lila!
+  ->END
+

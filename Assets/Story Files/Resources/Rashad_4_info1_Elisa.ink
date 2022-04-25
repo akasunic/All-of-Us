@@ -1,3 +1,4 @@
+
 VAR player_name = ""
 VAR notification = ""
 VAR new_contact = ""
@@ -7,93 +8,102 @@ VAR new_quest = ""
 
 ==intro==
 
-Elisa?Smiling "Hey {player_name}! How are you? Come to check up on my plans for the succulent planting station? If not, I'm going to tell you anyway."
 
-* Hi, Elisa it's good to see you too. Sure, tell me about the succulent station of doom, I'm all ears.
-  -> Chat1
-* Hi Elisa! It's good to see you. I'm not surprised you're this amped about the succulent station. 
-  -> Chat1
+Elisa?Smiling "Hi {player_name}! How have you been? Are you curious to hear how my succulent plants are doing? If not, I'm going to tell you anyway."
+
+* Hey Elisa! I’m doing well. Tell me about the succulents. 
+-> Chat1
+* It's nice to see you! Wait. Succulents? Is this a self-care thing?
+-> Chat1
 
 ==Chat1==
-Elisa?Smiling "I am so excited about it! My grandma loved houseplants, so I love gardening. It's soooo relaxing, and you can give your plants cute names, and put them in tiny cute pots."
-Elisa?Smiling "If you can't have pets, plants are great company."
+Elisa?Smiling "My late grandma loved houseplants, so her love for gardening rubbed off on me. It's so therapeutic, and you can give your plants cute names.
+Elisa?Smiling "I can't have pets, so plants <i>are</i> my self-care alternative! Mom gardens outside; I garden on my window sill so they can go to school with me." 
 
-*Wow. So, taking care of plants can be stress relieving? I didn't know that.
-  -> Chat2
-*Plants can do that? Wait, Elisa, you may be the person I need.
-  -> Explain1
+* Wow, that sounds super relaxing!
+-> Chat2
+*That sounds lovely. Wait, Elisa, there’s actually something I wanted to ask you
+-> Explain1
 
 ==Chat2==
-Elisa?Smiling "Yes! Doing activities like this is a great stress buster. We had a stress reliever fair during finals this year, and I spent hours making a terrarium."
-Elisa?Smiling "It made me miss my grandma, a lot, but I just loved spending time doing it. We're going to make terrariums at the Block Party."
+Elisa?Smiling "I know, right? Caring for plants is a great stress buster. This year, we had a stress reliever fair during finals week and I spent hours making a terrarium - it was perfect."
+Elisa?Smiling "It’s a relaxing activity that makes me remember my abuela, and the fun times we shared. She loved making terrariums." 
 
-* Ooo. That sounds really fun, Elisa. Your passion for nature is really great to see.
-  -> Chat3
-* Elisa, you just gave me an idea. I think you may be the person I need.
-  -> Explain1
+* Your passion is really great to see, and your grandma would be so proud! 
+-> Chat3
+* That’s lovely! On another note, I need your help.
+-> Explain1
 
 ==Chat3==
-Elisa?Smiling "I really miss hanging out with my abuela, I learned so much from her. I mean, I had to do tech duty, too. Her first selfie though? It was fire, honestly. The lighting? So. Good."
+Elisa?Smiling "I really miss my abuela, I learned so much from her. I remember when I taught her how to use her first iPhone. Tech duty with the grandparents, you know how it is. Her first selfie was fire, honestly."
 
-* Selfies? You managed a selfie? Elisa, I think you could have what I'm looking for.
-  -> Explain1
-* If you could get a selfie to happen, then I think you may be the perfect person to help me think through something.
-  -> Explain1
+
+* Speaking of selfies, Elisa, I think you might be the person I need. 
+-> Explain1
+
 
 ==Explain1==
-Elisa?Neutral "Oh? How can I help?"
+Elisa?Neutral "Oh? How can I help?"  
 
-* Rashad is looking to start a new initiative to help build bonds between teens and seniors and I want to get teens on board.
-  -> Explain2
-* Well, I'm trying to figure out how to help Rashad connect students and seniors.
-  -> Explain2
+* There's a new initiative at the library to connect seniors and teens. 
+-> Explain2
+* I'm trying to help Rashad connect students and seniors for a new program. 
+-> Explain2
 
 ==Explain2==
-Elisa?Smiling "That sounds like a great idea. My schedule is pretty full, but I know a lot about what teens can get from a relationship with seniors. I'd love to help."
+Elisa?Neutral "That sounds like a cool way to get seniors and teens to learn from each other. My schedule is kinda hectic, so I may not be able to volunteer."
+Elisa?Neutral "If Rashad is looking for input, I can share what teens are generally interested in if you think that would be helpful?"
 
-* Awesome. I'll take anything you know.
-  -> Suggestion1
-* I knew you were perfect for this, Elisa! Can you tell me what can teens gain from relationships this?
-  -> Suggestion2
+* Awesome. That would be super valuable!  
+-> Suggestion1
 
+It might also be helpful to hear about a relationship you've had with an elder.
+-> Suggestion1
+
+
+~ notification = "Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1"
+
+# notification Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1
 ==Suggestion1==
+Elisa?Smiling "I honestly learned a lot about my culture and heritage from my abuela, plus I think socializing with her was good for her mental health in a way."
 
-~ notification = "Elisa_Day 4_Teens can help teach older people how to use new technology_Rashad4"
-# notification Elisa_Day 4_Teens can help teach older people how to use new technology_Rashad4
-~ notification = "Elisa_Day 4_Talking to other can improve senior cognitive health_Rashad4"
-# notification Elisa_Day 4_Talking to other can improve senior cognitive health_Rashad4
-~ notification = "Elisa_Day 4_Teens can learn random skills"
-# notification Elisa_Day 4_Teens can learn random skills
+Elisa?Smiling "My abuela always supported me when I needed her most, and that was so good for me. I learned a lot about how to cope from her; she was just so gentle and resilient, despite everything she lived through."
 
-Elisa?Smiling "Well, older people often have problems with tech, so we can help with that. Like, I helped my abuelita with her medical appointments."
-Elisa?Smiling "The doctor said it really helped my grandma's cognitive skills to have someone to talk to. Plus, I really started to understand her more. She also taught me so many random skills."
+Elisa?Smiling "It’s also nice to have someone besides your parents to lean on for support. Plus, we taught each other a lot of interesting skills. My pupusas would not be what they are today, without her."
 
-* Elisa, that sounds wonderful. Can you tell me more about what you learned?
-  -> Suggestion2
-* That got me right in the heart, Elisa. What a great way to build a bond.
-  -> Goodbye
+* Oh, Elisa! I'm so glad you had that bond!
+-> Suggestion2
+* Other than connecting with her amazing grandkid, how did she benefit?
+ ->Suggestion2
+
+~ notification = "Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2"
+
+# notification Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2
 
 ==Suggestion2==
-~ notification = "Elisa_Day 4_Seniors can share culture and preserve heritage_Rashad4"
-# notification Elisa_Day 4_Seniors can share culture and preserve heritage_Rashad4
-~ notification = "Elisa_Day 4_Having people other than parents to talk to is helpful_Rashad4"
-# notification Elisa_Day 4_Having people other than parents to talk to is helpful_Rashad4
-~ notification = "Elisa_Day 4_Teens can learn how to make pupusas"
-# notification Elisa_Day 4_Teens can learn how to make pupusas
 
-Elisa?Smiling "I honestly learned a lot about our culture and heritage, but besides that? Hanging out with seniors is great for mental health because it fosters positive relationships."
-Elisa?Smiling "My abuelita always supported me when I needed her, and that was so good for my mental health."
-Elisa?Smiling "Like, just having someone besides your parents to ask questions to, or get help is so useful. Plus, we taught each other a lot. My pupusas would not be what they are today, without her."
+Elisa?Smiling "I think it's important to remember that elders and teens are both ... I dunno. Vulnerable? My parents are out in the world making ends meet and holding the household together. We were like bookends banding together for mutual support." 
 
-* {not Suggestion1} Really? That sounds amazing. Is there anything else? -> Suggestion1
-* Elisa, this info is perfect. I knew you'd have some great ideas.
-  -> Goodbye
+Elisa?Smiling "My abuela admitted to me that she felt like the world was passing by so fast she was going to get left behind. I was able to help her combat that, and she made me feel like the smartest chica ever." 
+
+Elisa?Smiling "She really valued her independence, so helping her with technology really gave her a sense of agency. Plus, I could tell she was happy to spend time with me, and taught me so many random skills."
+
+
+* You’re pulling my heartstrings, Elisa. What a great way to build a bond.
+-> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "I know I'm really busy, but tell Rashad that I could help with this at work if he wants."
-Elisa?Smiling "I would love to be able to connect with another senior. I miss my grandparents and this sounds great. Okay, I need to go pick up a tray of fresh baby cacti for the party. See you!"
+Elisa?Smiling "I know I'm pretty swamped, but tell Rashad that I could help with this at work if he wants."
+Elisa?Smiling "This program sounds super promising. I really miss my abuelita and I would love to be able to connect with another senior. I’m sure other teens feel the same. I’ve gotta go pick up a tray of fresh baby cacti. Catch you later!"
 
-* Don't prick yourself. I'll catch you soon, okay?
-  ->END
-* Thanks for being so helpful, Elisa. See you soon!
-  ->END
+* Be careful with that cacti! See you soon. 
+->END
+* Thanks for your help, Elisa. I'll catch you later! 
+->END
+
+
+
+
+
+
+

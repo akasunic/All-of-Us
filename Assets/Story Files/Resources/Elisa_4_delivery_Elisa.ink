@@ -3,103 +3,94 @@ VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
 
+
 -> intro
 
-===intro===
+==intro==
 ~ new_quest = "Elisa4.txt"
 # new_quest
 
-Elisa?Smiling "Oh, hey {player_name}!"
+Elisa?Smiling "Oh, {player_name}. I'm so glad to see you. Wait until you hear this!"
 
-* Hey Elisa! Oh, how's the mentor search going?
-  -> Chat1
-* Sooo, you got any plans coming up? Maybe something related to succulents?
-  -> QuestIntro
+* Are you okay, Elisa? 
+-> Chat1
+* Oh, this sounds juicy. I'm listening.
+-> QuestIntro
 
 ==Chat1==
+Elisa?Smiling "First, let me set the stage. We're at the breakfast table - my folks, my siblings, me. I'm marking up a paper that's due tomorrow." 
 
-Elisa?Smiling "It's going great! I talked to my friend who was on the Nature Club board last year- we're gonna sit down and have coffee later today!"
+Elisa?Smiling "My siblings are trading memes with Mama. She's holding her own, which is still funny as anything to all of us." 
 
-* That's great to hear!
-  -> Chat2
-* Nice! So, have you given any more thought to the block party coming up?
-  -> QuestIntro
+* Right. Your mom's going to give Mrs. Lee a run for her money soon enough!
+-> Chat2
+* Ok... I can't guess what comes next.
+-> Chat2
 
 ==Chat2==
+Elisa?Neutral "So, eventually it's time for everyone else to head off to school. I'm not paying a lot of attention - it's just a noisy morning with missing shoes and fieldtrip slips."
 
- Elisa?Smiling "Yeah, I'm really excited. Thanks again for helping me out with that."
+Elisa?Neutral "Suddenly, it's just Mama, me, and this heavy silence. I'd say a pregnant pause, but that's too on the nose." 
 
-* No problem! Also, I've been meaning to ask- what did you decide about the block party?
-  -> QuestIntro
+* The parental pause. Oh no! What was on her mind?
+-> QuestIntro
 
 ==QuestIntro==
+Elisa?Smiling "I swear, I wasn't at all prepared for this." 
 
-Elisa?Neutral "I'm not sure if I can make it. I might need to stay back and look after my mom... honestly, I'm kinda worried about her."
-Elisa?Neutral "She's been eating a lot more than usual, and drinking a lot more fluids too. I'm worried that she might have diabetes, but I'm not sure."
+Elisa?Neutral "Turns out someone sent Mama a tumblr post or something about "Ten Things I Wish I'd Known About Reproductive Health" or something. And it's in her head.
 
-* Huh... what makes you think it's diabetes?
-  -> QuestDetails1
-* You know what? Let me do some digging, maybe I can find out some more info on diabetes for you and your mom.
-  -> QuestAcceptance
+Elisa?Neutral "So, she suddenly says "I called the clinic and made an appointment for you for next week to talk about birth control. You don't have to keep it, but I think you should. I should have done this with you before now."" 
+
+* Just like that? 
+-> QuestDetails1
+* It sounds like this is out of character for her? 
+-> QuestDetails1
 
 ==QuestDetails1==
+Elisa?Smiling "When I tell you that my mom has worked hard to be more open than her parents, I'm underselling it. She tries so hard." 
 
-Elisa?Neutral "Well, my uncle on my mom's side has diabetes, and I think it might be genetic."
-Elisa?Neutral "But I don't know, I could be wrong. That's just the first thing my mind went to."
+Elisa?Smiling "But "the talk" was a book about periods on the end of my bed on my tenth birthday. And a "if you do, mija, make sure you love him." She's not ... big on sex talk."
 
-* Would you want to take your mom to the doctor?
-  -> QuestDetails2
-* What type of diabetes does your uncle have?
-  -> OptionalQuestDetails1
-* You know what? I'll ask around for you, and see if I can't find anything out about diabetes.
-  -> QuestAcceptance
+Elisa?Smiling "I figured I'd see student health when I got to school, but ... I feel like this is a chance to help her help my siblings."
 
-==OptionalQuestDetails1==
+* And maybe get closer to your mom, too! 
+-> QuestAcceptance
 
-Elisa?Neutral "I think it's type 2. I haven't seen him in a while, though... I should really call him up and see how he's doing."
-
-* Well, if it is diabetes, would your mom be willing to go to a doctor?
-  -> QuestDetails2
-* Accept the quest.
-  -> QuestAcceptance
-
-==QuestDetails2==
-
-Elisa?Neutral "I think I'd want to take her to the doctor, but I don't know if she'd want to go. Right now she's pretty dismissive that there's even anything wrong."
-Elisa?Neutral "I feel like if I knew what tests the doctor would run then I could convince her to go, but I'm not sure what that all would be like."
-
-* How long did you say her symptoms have been going on?
-  -> OptionalQuestDetails2
-* That sounds like something I could find out! Why don't I ask around for ya?
-  -> QuestAcceptance
-
-==OptionalQuestDetails2==
-
-Elisa?Neutral "Honestly, I'm not sure. My mom was working late nights at the office last month, so I don't really know when it started."
-Elisa?Neutral "I first noticed the eating and drinking thing about a week ago."
-
-* Got it! Let me see what I can find out for you.
-  -> QuestAcceptance
-* Don't even worry about it- I'm on the case.
-  -> QuestAcceptance
 
 ==QuestAcceptance==
+Elisa?Smiling "That would be nice, but I don't know what I don't know."
 
-Elisa?Smiling "That'd be great, {player_name}! Yeah, if you could find out what the testing process is like for diabetes and what treatments there are, that'd really help me out a lot."
-Elisa?Smiling "I want to make sure she has the care she needs as soon as possible if this is what's happening."
+Elisa?Smiling "I was hoping your network would have some suggestions." 
 
-* Can do!
-  -> Goodbye
-* I'll get right on it!
-  -> Goodbye
+Elisa?Smiling "Both about what I need to know going into this appointment, and how to encourage my mom to keep tackling these things head-on." 
+
+* I'm so glad you trust me! And I'm glad your mom is being so awesome.
+-> Goodbye
+
 
 ==Goodbye==
+Elisa?Smiling "She's pretty great, but I definitely feel better having some backup on this.
 
-Elisa?Smiling "Awesome, see you later {player_name}!"
+* Haha! It's my pleasure to help. Bye Elisa! 
+->END
 
-* Bye Elisa!
-  ->END
-* See ya!
-  ->END
+
+==== END ====
+END
+   -> END
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

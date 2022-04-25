@@ -8,34 +8,32 @@ VAR new_quest = ""
 ==intro==
 Mrcalindas?Smiling "Oh, {player_name}! It's good to see you here. I was just picking up some books for the grandkids. How are you?" 
 
-* {not TempGoodbye} Hello Mr. Calindas, I'm great. Did you pick up anything good?
+* Hello Mr. Calindas, I'm great. Did you pick up anything good?
   -> Chat1
-* {not TempGoodbye} Hey Mr. Calindas! I'm glad I ran into you. I just finished talking to Rashad and Elisa.
-  -> ReadyToSolve
-* {TempGoodbye} Hey Mr. Calindas! I'm glad I ran into you. I have some information on tech classes. 
+* Hey Mr. Calindas! I'm glad I ran into you. I just finished talking to Rashad and Elisa.
   -> ReadyToSolve
 
 ==Chat1==
 
 Mrcalindas?Smiling "Oh, just some classics. I did find a book about cooking pancit, so maybe Lucy and my Mother can read it and maybe cook with the kids this weekend." 
 
-* That sounds really fun. I would totally volunteer to taste test.
+* That sounds really fun. I volunteer to taste test – I love any and all noodles!
   -> Chat2
-* That's a great idea, and sounds like so much fun. Hey, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
+* Hey, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
   -> ReadyToSolve
 
 ==Chat2==
 
-Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some next door. Maybe you want to borrow this after us!" 
+Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some over. Maybe you want to borrow this after us!" 
 
-* If it has an easy-to-follow recipe, I'm there. Oh, before I forget, I'm glad I ran into you. I just finished talking to Rashad and Elisa.
+* If it has an easy-to-follow recipe, I'm there. I'm glad I ran into you. I just finished talking to Rashad and Elisa.
   -> ReadyToSolve
-* Well, if it has a recipe I'm there. I'm glad I ran into you, though. I have some information on tech classes.
+* Absolutely! First, though. I have some information on tech classes.
   -> ReadyToSolve
 
 ==ReadyToSolve==
 
-Mrcalindas?Neutral "Oh, that's good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. Plus, she wants to be very independent, and I support that. I'm looking for some tech classes or tutoring for my mother in Tagalog or Spanish. Did you find some?" 
+Mrcalindas?Neutral "Oh, that is good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. I would hate for her to give up."
 
 * Here’s what I have…
   -> PuzzleInterface
@@ -45,44 +43,59 @@ Mrcalindas?Neutral "Oh, that's good to hear. My mother wants to be able to call 
 ==PuzzleInterface==
 # turnin
 
-*  -> GoodSolution
-*  -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-// * Seniors can find the internet overwhelming. However, the library has bilingual tech classes in Tagalog and Spanish. They're small but they aren't tailored to seniors. You can sign up at the front desk. If you email ELisa she can tutor Mother Calindas.-> GoodSolution
-// *  Seniors can find the internet and new tech overwhelming. Providing accessible devices with large fonts can help seniors to see. -> BadSolution
+==Option1==
 
-==GoodSolution==
+Mrcalindas?Neutral "Hmm. Did you come up with anything more specific? I feel like this only addresses a tiny part of the problem."
+ 
+* Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
 
-Mrcalindas?Smiling "Oh just at the front desk? Well, I'll see if there's any spaces open and if not, I'll email Elisa."
-Mrcalindas?Smiling "My Mother is going to be so excited. It's always nice to have her around. Thanks you for finding this for me, {player_name}. See you soon, okay?"
+==Option2==
+# correct
+Mrcalindas?Smiling "I will email Elisa right away! You know there are studies about intergenerational support being very healthy for both elders and for young people ."
 
-* My pleasure, Mr. Calindas. Let me know if anything else comes up okay? I'll catch you later!
-  -> SolvedGoodbye
-* Anything for Mother Calindas. I'm happy she's settling in. Let me know if you need anything else, okay? See you soon!
-  -> SolvedGoodbye
+Mrcalindas?Smiling "I am happy to pay Elisa a fair rate for her help and to ply her with an excessive number of sweets."
 
-==BadSolution==
+* Hah! Is Elisa about to become my hookup for ensaymadas?
+	-> SolvedGoodbye
 
-Mrcalindas?Neutral "Hmm. Well, we know it's overwhelming. That's why we asked about programs. We could make sure she turns up the font, though... Thank you I guess?" 
+==Option3==
+# correct
 
-* Wait a second, let me try that again.
-  -> PuzzleInterface
-* Hmm. Let me check my notes again. I think I may have some more information.
-  -> TempGoodbye
+Mrcalindas?Smiling "These are the things I am most worried about – my mother wants to be able to do her own banking, but so much happens online. She wants to manage her own health care, which requires access to the online portal." 
+
+Mrcalindas?Smiling "I am glad to know that the library has resources to make this possible for her. Maybe we can even entice her with the promise of recipe websites." 
+
+  
+* The library offers so many valuable resources! 
+	-> SolvedGoodbye
+
+
+==Option4==
+Mrcalindas?Neutral "I feel like this is part of the picture, but did you learn anything else?"
+ 
+* Let me see what else I can find, Mr. Calindas.
+  ->TempGoodbye
+
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "I will!"
+Mrcalindas?Smiling "Good work, {player_name}! I feel like I am better prepared to help my mother by connecting her with resources that will help her navigate the internet without me."  
 
-* Goodbye!
-  -> END
-* See you!
+* My pleasure, Mr. Calindas!
   -> END
 
 ==TempGoodbye==
+Mrcalindas?Neutral "Okay, come back soon!"
 
-Mrcalindas?Neutral "It's fine. Find me when you have some things to tell me, okay? I'm going to check these out." 
-
-* Ok, I'll be right back.
-  -> END
-* Don't worry, I'll be back.
-  -> END
+* No worries, Mr. Calindas. I will.
+  -> PuzzleInterface

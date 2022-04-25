@@ -7,73 +7,102 @@ VAR new_quest = ""
 
 ===intro===
 
-Elisa?Smiling "Oh hey! How'd it go, did you find any info for me?"
+Elisa?Smiling "Hey, {player_name}!"
 
-+ Here’s what I have…
+* Hey! Whatcha up to? -> Chat1
+* Hi! I found out some info on the diabetes stuff you were talking about.
+  -> ReadyToSolve
+
+
+==Chat1==
+
+Elisa?Neutral "Oh, just getting some homework done for class tomorrow."
+
+* Ooh what class? Anything exciting?
+  -> Chat2
+* Gotcha. By the way, I found some info for your mom if you've got a minute.
+  -> ReadyToSolve
+
+==Chat2==
+
+Elisa?Neutral "Right now I'm working on a report for my Financial Analysis class! It's my favorite class so far."
+
+* Awesome! Hey, I found out more info for you on diabetes if you wanna talk about it.
+  -> ReadyToSolve
+* Well, I'm glad it's exciting to someone! Haha, anyway, I think I found some good info for you on diabetes.
+  -> ReadyToSolve
+
+==ReadyToSolve==
+
+Elisa?Neutral "Oh, that's great! What'd you find out?"
+
+* Here’s what I have...
   -> PuzzleInterface
+* Wait... let me ask around a little more.
+  -> TempGoodbye
 
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good. -> GoodSolution
-* They picked a solution marked bad. -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
+
+==Option1==
+Elisa?Neutral "I feel like the answer to everything is diet and exercise. That might be true, but it doesn’t feel very actionable. You know?"
+ 
+Elisa?Neutral "I was hoping for something more in-depth."
+ 
+* Let me see what else I can suggest, Elisa.
+  ->TempGoodbye
+
+  
+==Option2==
+# correct
+
+Elisa?Smiling "Thank you, {player_name}. It sounds like a lot, but I feel like this gives me a starting point for all the topics to ask about."
+
+Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this out for my folks before the appointment." 
+  
+* I feel like you’ve got this under control!
+	-> SolvedGoodbye
+
+  
+==Option3==
+# correct
+
+Elisa?Smiling "The library is such a useful resource; my abuela loved the cookbook section."
+
+Elisa?Smiling "I will look at the calendar to see if there are workshops coming up that might help my mom feel like she’s in this with other people."
+  
+* I feel like you’ve got this under control!
+	-> SolvedGoodbye
+
+==Option4==
+Elisa?Neutral "What does that even mean? I feel overwhelmed by how much I don’t understand."
+ 
+Elisa?Neutral "I was hoping for something more in-depth."
+ 
+* Let me see what else I can suggest, Elisa.
+  ->TempGoodbye
 
 
-===BadSolution===
+==SolvedGoodbye==
 
-Elisa?Neutral "I don't know, I'm still not clear on what I'm supposed to do. Do you have any more info?"
+Elisa?Smiling "I appreciate the help! You saved me a lot of time."
 
-+ Yeah, one sec.
-  ->PuzzleInterface
-+ No, sorry.
-  -> circleBack
-
-===circleBack===
-
-Elisa?Smiling "No worries. Let me know if you find anything later!"
-->END
-
-===GoodSolution===
-
-Elisa?Smiling "Oh wow! Thanks so much {player_name}, I'm glad I asked you for help- I'm gonna go to the library computers now and print out some resumes. I owe you one!"
-
-+ It's no problem! 
-  -> noProblem
-+ So, how about it? Do you think you can work the block party?
-  -> BParty
-
-===noProblem===
-
-Elisa?Smiling "You're the best. Also, I'll think about the block party- I've got to sort out all this career fair stuff first though, I better get my resume ready to go!"
-
-
-+ Ok, take care! 
-  -> bye
-+ Alright, be sure to let me know what you decide.
-  -> bye2
-    
-===BParty===
-
-Elisa?Smiling "Oh right, I almost forgot! Hmmm - well I'll definitely think about it. I do have to take care of some things first with the career fair and everything. I'll keep you posted, though!"
-
-+ Ok, take care! 
-  -> bye
-+ Alright, be sure to let me know what you decide.
-  -> bye2
-
-
-===bye===
-
-Elisa?Smiling "Yeah, you too! See you around!"
-
-+ Leave the library
+* It sounds like you're ready for this! 
   -> END
 
+==TempGoodbye==
+Elisa?Neutral "Okay, come back soon!"
 
-===bye2===
+* No worries, Elisa. I will.
+  -> PuzzleInterface
 
-Elisa?Smiling "I will, I will, for sure. See you around!"
-
-
-+ Leave the library
-  ->END
