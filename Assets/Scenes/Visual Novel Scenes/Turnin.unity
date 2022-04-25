@@ -3003,6 +3003,7 @@ MonoBehaviour:
   continueClickable: {fileID: 21300000, guid: 446c5b4f863274bbf9666448e4d410bd, type: 3}
   continueUnclickable: {fileID: 21300000, guid: 16e267140fc10814da9b8437d05e66fb,
     type: 3}
+  background: {fileID: 1522413522}
   libraryBackground: {fileID: 21300000, guid: 3db38e2d3627e48c3b643afc51b72e64, type: 3}
   communityCenterBackground: {fileID: 21300000, guid: 167dd77a644434f5798fe08b6ada4d68,
     type: 3}

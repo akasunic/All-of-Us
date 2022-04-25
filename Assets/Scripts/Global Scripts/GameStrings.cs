@@ -225,7 +225,8 @@ public static class GameStrings {
 
                 {"speed_vn_yellowtitle", "What should I do?"},
                 {"speed_vn_whitetitle", "Wanna speed up?"},
-                {"speed_vn_whitetext", "You’re about to have your first conversation with Mrs. Lee. To start chatting, click inside the white box. Select a response to keep the dialogue going!"},
+                {"speed_vn_whitetext_1", "You’re about to have your first conversation with "},
+                {"speed_vn_whitetext_2", ". To start chatting, click inside the white box. Select a response to keep the dialogue going!"},
                 {"speed_vn_buttontext", "GOT IT"},
 
                 {"task_map_yellowtitle", "What Next?"},

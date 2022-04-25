@@ -63,7 +63,7 @@ public class VN : MonoBehaviour
 
             YellowTitleSpeed.text = GameStrings.getString("speed_vn_yellowtitle");
             WhiteTitleSpeed.text = GameStrings.getString("speed_vn_whitetitle");
-            WhiteTextSpeed.text = GameStrings.getString("speed_vn_whitetext");
+            WhiteTextSpeed.text = GameStrings.getString("speed_vn_whitetext_1") + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()) + GameStrings.getString("speed_vn_whitetext_2");
             ButtonTextSpeed.text = GameStrings.getString("speed_vn_buttontext");
         }
     }
