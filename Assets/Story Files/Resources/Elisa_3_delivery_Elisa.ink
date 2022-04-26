@@ -72,7 +72,7 @@ Elisa?Neutral "Obviously, I don't want to say anything about possibly getting an
 
 
 ==QuestAcceptance==
-Elisa?Smiling "Oh, {player_name}. I trust you. Thank you so much."
+Elisa?Smiling "I trust you. Thank you so much."
 
 * Anytime, Elisa! I'm on the case! 
 -> Goodbye

@@ -16,7 +16,7 @@ Mrslee?Smiling "{player_name}! Happy to see you!"
 
 ==Chat1==
 
-Mrslee?Smiling "Giancarlo say he stop cooking while his mother settle in. Do you want to join Eddie and I for a cooking lesson? He learn Ethiopian food from his roommate."
+Mrslee?Smiling "Giancarlo say he stop cooking lessons while his mother settle in. Do you want to join Eddie and I? He learn Ethiopian food from his roommate."
 
 Mrslee?Smiling "We make misir wat. Red lentil stew. He pick up injera on his way home – that is bread you use to eat wat. He invite Lila and Trisha too."
 
@@ -66,7 +66,7 @@ Mrslee?Neutral "I try hard to listen, no judgment. And when it feel hard, I say 
 Mrslee?Neutral "Eddie and I work as a team to learn together, I guess. It take practice." 
 
 * Mrs. Lee! That’s so sweet. 
- -> Explain2
+ -> Explain3
 * What would you tell a young person trying to talk about hard topics with family?
   -> Suggestion1
 
@@ -85,12 +85,11 @@ Mrslee?Smiling "I still feel nervous when he bring up girls. But he ask me about
 ~ notification = "Mrslee_Day 4_Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem_Elisa4-3"
 # notification Mrslee_Day 4_Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem_Elisa4-3 
 
-Family counseling can help caretakers and children learn skills to communicate better, even about hard topics.
+Mrslee?Neutral "Eddie’s school recommended a grief counselor when Dr. Lee died. It was so sudden, and Eddie was so sad."
 
-Mrslee?Neutral "Eddie’s school recommended a grief counselor when Dr. Lee died. It was so sudden, and Eddie was so sad. For a while, we went together. The counselor gave us a lot of tools to use." 
+Mrslee?Neutral "For a while, we went together. The counselor gave us a lot of tools to use." 
 
 Mrslee?Neutral "I thought family counseling was for bad kids. Sometimes, family counseling is to learn new skills! I never knew." 
-
 
 * What is one thing you learned in family counseling? 
   -> Suggestion2
@@ -104,11 +103,15 @@ Mrslee?Neutral "I thought family counseling was for bad kids. Sometimes, family 
 
 Mrslee?Smiling "One of the things I got from the counselor was that caretakers need community. All by myself, I am only me. But with friends, I am stronger for Eddie."
 
-Mrslee?Smiling "I start small. At first, I call Nicole – Lila’s mom. And I say "Nicole. Kids are hard." She laugh and laugh."  
+Mrslee?Smiling "I start small. At first, I call Nicole – Lila’s mom. And I say "Nicole. Kids are hard." 
+
+Mrslee?Smiling "She laugh and laugh."  
 
 Mrslee?Smiling "What was I saying that was new? When she stop laughing, we talk. She give me words for the hard things Eddie needed to know." 
 
-Mrslee?Smiling "She also send me to the library to check out whole list of books. Eddie used to write questions and leave them on post-it notes inside the cover. I would write answers, in both English and Korean."
+Mrslee?Smiling "She also send me to the library to check out whole list of books." 
+
+Mrslee?Smiling "Eddie used to write questions and leave them on post-it notes inside the cover. I would write answers, in both English and Korean."
 
 Mrslee?Smiling "Sometimes talking is hard, but writing is easier. Now we use email instead." 
 

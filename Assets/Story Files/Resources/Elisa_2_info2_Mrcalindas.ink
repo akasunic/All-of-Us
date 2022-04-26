@@ -16,7 +16,7 @@ Mrcalindas?Smiling "Ah, {player_name}! I was just talking about you. How are you
 
 ==Chat1==
 
-Mrcalindas?Smiling "You see, a colleague was telling me how much he worries that his kids hate to cook I was explaining to them that if you can learn, they can learn." 
+Mrcalindas?Smiling "You see, a colleague was telling me how much he worries that his kids hate to cook. I was explaining to them that if you can learn, they can learn." 
 
 * I... well, thanks? I think? 
   -> Chat2
@@ -31,14 +31,14 @@ Mrcalindas?Smiling "At least while they're at school and have access to the dini
 
 Mrcalindas?Smiling "I reassured him that it's normal for kids to have different interests, and I'm happy to help when someone decides to explore cooking or running."
 
-* I still can't tell a rutabaga from a parsnip, Mr. Calindas.
+* I still can't tell a squash from a gourd, Mr. Calindas.
   -> Chat3
 * Helping with college paperwork is why I'm here. Can we talk medical records?
   -> Explain1
 
 ==Chat3==
 
-Mrcalindas?Smiling "Next time I make roasted root vegetables, you can come to the store with me and I'll even show you what a turnip looks like. You know, they're all delicious roasted."
+Mrcalindas?Smiling "Next time I make roasted winter squash, you can come to the store with me and I'll even show you what the different types looks like. You know, they're all delicious roasted."
 
 Mrcalindas?Smiling "I suspect that isn't why you're here, though."
 
@@ -91,17 +91,19 @@ Mrcalindas?Neutral "Vaccination records are important for a variety of reasons. 
 
 ==Suggestion2==
 
-~ notification = "Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases, proving that you are protected._Elisa2-4"
-# notification Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases, proving that you are protected._Elisa2-4 
+~ notification = "Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases_Elisa2-4"
+# notification Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases_Elisa2-4 
 
 
 Mrcalindas?Smiling "Not at all. There are two options for recreating lost immuniation records - a blood test to check for immunity, or just getting the vaccine again." 
 
 Mrcalindas?Neutral "Depending on her insurance, it might be less expensive just to repeat the vaccine. There's very little risk involved - a few side effects, like feeling run down for a day or maybe a little fever." 
 
-Mrcalindas?Smiling "The clinic offers access to reduced price vaccines; once she knows which ones she needs, we can figure out what's covered by insurance, and what she would need to cover out of pocket."
+Mrcalindas?Smiling "The clinic offers access to reduced price vaccines; once she knows which ones she needs, we can figure out what's covered by insurance."
 
-Mrcalindas?Smiling "She could also try a pharmacy- I would tell her to research the pharmacy before she goes, but in general, getting a vaccine from a pharmacist can be an affordable option."
+Mrcalindas?Smiling "She could also try a pharmacy for vaccines she needs to pay for out of pocket." 
+
+Mrcalindas?Smiling "I would recommend researching first, but in general, getting a vaccine from a pharmacist can be an affordable option."
 
 
 * This has been really helpful, thank you Mr. Calindas!

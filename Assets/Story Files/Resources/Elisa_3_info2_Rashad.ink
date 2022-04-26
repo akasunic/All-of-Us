@@ -34,7 +34,7 @@ Rashad?Smiling "I’m having so much fun watching the kids learn things; sure, p
 
 * Rashad, this is all so wholesome! 
   -> Chat3
-* Brains – and learning – are just so cool! I have a brain-related ADHD question…
+* Brains – and learning – are so cool! I have a brain-related ADHD question…
   -> Explain1
 
 ==Chat3==
@@ -55,7 +55,7 @@ Rashad?Neutral "It runs in my family, so my mom knew what to look for. When I kn
 
 Rashad?Smiling "Then, as homework became more of a thing, and I was terrible about doing and turning in homework, without a lot of support, she really pushed the school for assessment."
 
-"We spent a lot of time finding the right tools and treatment for me." 
+Rashad?Smiling "We spent a lot of time finding the right tools and treatment for me." 
 
 * Wait. You have ADHD? But you have a Master’s Degree, Rashad!
  -> Explain2
@@ -64,7 +64,9 @@ Rashad?Smiling "Then, as homework became more of a thing, and I was terrible abo
 
 ==Explain2==
 
-Rashad?Smiling "You seem shocked. I guess this doesn’t come up very often, does it? ADHD doesn’t mean you can’t be a good student. It just means your path is going to be a little different from that of someone without ADHD."  
+Rashad?Smiling "You seem shocked. I guess this doesn’t come up very often, does it? ADHD doesn’t mean you can’t be a good student." 
+
+Rashad?Smiling "It just means your path is going to be a little different from that of someone without ADHD."  
 
 Rashad?Neutral "The fact is that there’s a lot of cool things that go along with having what they call a "neurodivergent" brain. Like my ability to hyperfocus – I can get lost in a project for days if I let myself."
 
@@ -83,7 +85,9 @@ Rashad?Neutral "I have what’s called mixed-type ADHD. That basically means tha
 
 Rashad?Smiling "Ask me how many times my lunchbox ended up in lost and found because I finished lunch and it just … disappeared from my mind." 
 
- Rashad?Smiling "The sorts of treatments that work for an individual might change over time, so the first thing I tell anyone who asks me is to stay flexible, and always be learning. What works today might not work in a month."
+ Rashad?Smiling "The sorts of treatments that work for an individual might change over time, so the first thing I tell anyone who asks me is to stay flexible, and always be learning."
+ 
+ Rashad?Smiling "What works today might not work in a month."
 
 * Do you mind telling me a little bit about the treatment path you’ve taken? 
   -> Suggestion2
@@ -110,14 +114,14 @@ Rashad?Neutral "Stimulants are a little different. A brain with ADHD doesn’t r
 
 ==Suggestion3==
 
-
-Rashad?Smiling "I feel like a lot of mental wellness toolkits start with the same basics. Exercise, therapy, good sleep practices, a balanced diet. Everything starts from taking care of your body and builds from there." 
+Rashad?Smiling "I feel like a lot of mental wellness toolkits start with the same basics. Exercise, therapy, good sleep practices, a balanced diet." 
 
 Rashad?Smiling "Mindfulness – being aware of what’s going on with you and how you impact your surroundings is a big one in the ADHD toolkit." 
 
-Rashad?Neutral "I really recommend ADHD specific counseling – behavioral therapies really help people learn how to work with their brain, not against it. Learning that ADHD isn’t about "why don’t you try harder?" or "If you only applied yourself…" and IS about accepting the differences can really affect self-esteem and long-term outcomes."
+Rashad?Neutral "I really recommend ADHD specific counseling – behavioral therapies really help people learn how to work with their brain, not against it."
+Rashad?Neutral "ADHD isn’t about "just try harder" or "If you only applied yourself" and IS about accepting the differences.That can really affect self-esteem and long-term outcomes."
 
-Rashad?Smiling "Treat ADHD like one aspect of you as a whole person, but remember that it affects the whole you. Build a team and a toolkit that supports your best efforts to be your best self." 
+Rashad?Smiling "ADHD is one aspect of a whole person, but remember that it affects the whole you. Build a team and a toolkit that supports your best efforts to be your best self." 
 
 * Rashad, I really appreciate you sharing!
   -> Goodbye

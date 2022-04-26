@@ -9,7 +9,8 @@ VAR new_quest = ""
 
 Elisa?Smiling "Hey, {player_name}!"
 
-* Hey! Whatcha up to? -> Chat1
+* Hey! Whatcha up to? 
+  -> Chat1
 * Hi! So, I asked around about health info for your mom, is now a good time?
   -> ReadyToSolve
 

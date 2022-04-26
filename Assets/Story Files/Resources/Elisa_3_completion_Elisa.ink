@@ -9,7 +9,8 @@ VAR new_quest = ""
 
 Elisa?Smiling "Hey, {player_name}! How’re you?"
 
-* Hey, Elisa! How’s your day going?-> Chat1
+* Hey, Elisa! How’s your day going?
+ -> Chat1
 * Hi! Is now a good time to go over the information I have about ADHD?
   -> ReadyToSolve
 
@@ -57,16 +58,16 @@ Elisa?Neutral "A distraction – even a serious one – sounds great. What have 
 ==Option1==
 # correct
 
-Elisa?Smiling "I don’t think it would have occurred to me except that it came up for my sibling. Now that I’m looking for it, though, I do feel like some things take a lot of extra work."
+Elisa?Smiling "I don’t think it would have occurred to me except that it came up for my sibling."
 
-Elisa?Smiling "My family has always prioritized school work, so I’ve always put a lot of energy there. But with all the health things going on, and upheaval around transferring, I think I should look into this more." 
+Elisa?Smiling "Now that I’m looking for it, though, I do feel like some things take a lot of extra work. If I can build better tools..."
   
 * If you need other support, please don’t hesitate to ask. 
 	-> SolvedGoodbye
 
 
 ==Option2==
-Elisa?Neutral "I’m afraid that I’ll be told that everyone daydreams. Or worse, that if I just get my head out of the clouds, I’ll be fine. What else did you learn?"
+Elisa?Neutral "I’m afraid that I’ll be told that everyone daydreams. Or worse, if I just get my head out of the clouds, I’ll be fine. What else did you learn?"
 
 * Let me see what else I can find, Elisa.
   ->TempGoodbye

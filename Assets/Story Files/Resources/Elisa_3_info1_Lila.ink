@@ -27,19 +27,19 @@ Lila?Smiling "I just want to make sure everyone’s planets are up so they can f
 
 ==Chat2==
 
-Lila?Smiling "Everyone was supposed to illustrate their own little world full of the things they like best. As you can see, each of the children has their own idea of what the world should look like."
+Lila?Smiling "Everyone made their own little world full of the things they like best. As you can see, each of the children has their own idea of what the world should be."
 
 Lila?Smiling "So many cats, baby brothers, and unicorns. Also, look. Books, Mrs. Lee, and the library." 
 
 
-* Hey, Lila, these are pretty cool! For paper plates and markers, at least.
+* Hey, Lila, these are pretty cool! 
   -> Chat3
 * I would love to pick your brain about ADHD, if you have a moment.
   -> Explain1
 
 ==Chat3==
 
-Lila?Smiling "Sadly, I’ll have to tell Mr. Calindas that the health clinic didn’t make the cut; everyone said that’s where you go for shots, and that’s not a big hit with the preschool crowd.."
+Lila?Smiling "Sadly, I’ll have to tell Mr. Calindas that the Clinic didn’t make the cut; everyone said that’s where you go for shots, and that’s not a big hit with the preschool crowd.."
 
 Lila?Smiling "Thanks. I think I’m done now. What can I do for you?"
 
@@ -53,7 +53,7 @@ Lila?Neutral "ADHD is more common than most people would guess, though it doesn�
 
 Lila?Neutral "ADHD stands for Attention Deficit/Hyperactivity Disorder." 
 
-Lila?Neutral "When I was a kid, everyone thought ADHD was the kid who couldn’t sit down, kept clownin’ even when it got him in trouble. The kid who never turned in homework and didn’t finish his classwork." 
+Lila?Neutral "When I was a kid, everyone thought ADHD was the kid who couldn’t sit down, kept clownin’ even when it got him in trouble." 
 
 Lila?Smiling "We know more now. More people who could benefit from treatment are being diagnosed, because we’ve developed a more nuanced understanding of the disorder."
 
@@ -64,9 +64,13 @@ Lila?Smiling "We know more now. More people who could benefit from treatment are
 
 ==Explain2==
 
-Lila?Smiling "That’s what we used to think. The whole "boys will be boys" way of thinking. But like I said, we’ve developed a more nuanced understanding, and more girls and women are getting access to treatment too!"
+Lila?Smiling "That’s what we used to think. The whole "boys will be boys" way of thinking. like I said, we’ve developed a more nuanced understanding."
 
-Lila?Neutral "Trisha was diagnosed last year; you can’t imagine how much she wishes she’d been diagnosed younger. There was a lot of self-doubt that could have been eliminated if she’d known what she was dealing with.."
+Lila?Smiling "More girls and women are getting access to treatment too!"
+
+Lila?Neutral "Trisha was diagnosed last year; you can’t imagine how much she wishes she’d been diagnosed younger."
+
+Lila?Neutral "There was a lot of self-doubt that could have been eliminated if she’d known what she was dealing with.."
 
 * What does ADHD actually look like, if not "boys will be boys?"
   -> Suggestion1
@@ -79,15 +83,19 @@ Lila?Neutral "Trisha was diagnosed last year; you can’t imagine how much she w
 # notification Lila_Day 3_The key to determining whether to pursue ADHD assessment or not is to ask is this trait interfering with this person’s success?_Elisa3-1 
 
 
-Lila?Neutral "Well, we know now that ADHD has three different manifestations. There’s the "classic" hyperactive  or impulsive type, there’s inattentive type, and there’s mixed – someone who manifests aspects of both." 
+Lila?Neutral "Well, we know now that ADHD has three different manifestations. There’s the "classic" hyperactive  or impulsive type, there’s inattentive type."
+
+Lila?Neutral "Then there’s mixed – someone who manifests aspects of both." 
 
 Lila?Neutral "One of the things Trisha didn’t know until recently is that young women who are labeled "chatterboxes" or "social butterflies" might actually be demonstrating hyperactivity."
 
 Lila?Neutral "It’s not good for anyone when a behavior that gets in the way of learning or feeling comfortable in your skin gets chalked up to being just one aspect of a specific gender!" 
 
-Lila?Neutral "Calling hyperactivity a "boy" trait meant a lot of girls got overlooked and struggled unnecessarily. Calling girls "social butterflies" undercut the seriousness of their struggles to regulate their attention." 
+Lila?Neutral "Calling hyperactivity a "boy" trait meant a lot of girls got overlooked and struggled unnecessarily."
 
-Lila?Smiling "The real key to identifying someone with hyperactive/impulsive ADHD relies in identifying that they are unable to self-regulate their impulsiveness, and it is an obstacle to their success." 
+Lila?Neutral "Calling girls "social butterflies" undercut the seriousness of their struggles to regulate their attention." 
+
+Lila?Smiling "The key to identifying someone with hyperactive ADHD relies in seeing that they are unable to self-regulate their impulsiveness, and it is an obstacle to their success." 
 
 * That’s hyperactive type – what about inattentive type? 
   -> Suggestion2
@@ -103,12 +111,12 @@ Lila?Smiling "Again, the key to whether or not to pursue assessment is to ask �
 
 Lila?Smiling "Inattentive type ADHD manifests as an inability to properly regulate attention to keep track of things – remember what I said about social butterflies?"
 
-Lila?Smiling "Think about the brilliant, but distracted, mad scientist – that’s one character type that might be based off someone with inattentive-type ADHD. The sort who burns his toast and can only find one shoe because he’s thinking about something else entirely." 
+Lila?Smiling "Think about the brilliant, but distracted, mad scientist – that’s one character type that might be based off someone with inattentive-type ADHD."
+Lila?Smiling "The sort who burns his toast and can only find one shoe because he’s thinking about something else entirely." 
 
-Lila?Smiling "But the other side of that coin is the daydreamer who can’t find her keys. Or the student who regularly gets scolded for not "applying" themselves."
+Lila?Smiling "The other side of that coin is the daydreamer who can’t find her keys. Or who regularly gets scolded for not "applying" themselves."
 
 Lila?Neutral "Distracted kids who can’t keep their attention in one place should be observed. If their distractedness is tripping them up, as a teacher, I’d suggest assessment." 
-
 
 
 * This is such a good starting point. Thank you, Lila! 
