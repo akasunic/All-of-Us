@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4fa4845a5a2714d0a87770a996c8d349, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b3dd28a3bb831641b0c0a5345d2884d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1544,7 +1544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 294.25604}
+  m_AnchoredPosition: {x: -30, y: 294.256}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &439348223
@@ -2141,7 +2141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f04178b868ae4a7da9f407d4e6e07b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04e6040fbc8d693478eea719d139bc55, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3900,7 +3900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89becfe31c4a44da38e256f65383f79c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 112fc58828cd563488e25d786c64d4ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4563,7 +4563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c10ec5684b7604d2fb092317a571489e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42a644d781502cc4eac049c11de19cb6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6694,7 +6694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54169a98716be4b518d300c32f29de1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f694654d4fb6ef245a49bc581c14c6e8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7241,8 +7241,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1843045361}
   m_HandleRect: {fileID: 1843045360}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.9995112
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
