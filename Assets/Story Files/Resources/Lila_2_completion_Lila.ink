@@ -6,80 +6,94 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "Hey {player_name}! What's up!"
-
-* {not TempGoodbye} Long day! But all is well. How are you?
-    -> Chat1
-* {not TempGoodbye} Not too much, but I found some information that might be helpful for you per our earlier conversation. Do you want to talk about it now?
-    Lila?Neutral "Yes! "
-    -> ReadyToSolve
-* {TempGoodbye} Hi! I talked to Rashad and Mr. Calindas again, and I think I have more information.
-    -> ReadyToSolve
+Lila?Smiling "Hey{player_name}!"
+* Hi there Lila! What’s up?
+-> Chat1
+* Hey, I asked for some health advice and I think I learned some helpful stuff for you!
+-> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "Busy as usual. The kids were fun today though, we did a new drawing activity and they were really creative with it."
-
-* I always forget how creative kids are.
-    -> Chat2
-* That sounds like fun. By the way, I did find some information about what we talked about earlier if you want to hear it.
-    Lila?Neutral "Definitely. "
-    -> ReadyToSolve
+Lila?Smiling "Not much. I was just about to call Eddie. We’ve been trying to catch up more lately which has been really nice."
+* That's great! are you ready to hear what I found for you?
+-> ReadyToSolve
+* That does sound nice. Is he back in town!
+-> Chat2 
 
 ==Chat2==
-Lila?Neutral "It is really fascinating. Hey, did you find anything today about that thing we talked about earlier?"
-
-* Oh yes!
-    -> ReadyToSolve
-* Yes I did, are you ready to hear about it?
-    Lila?Neutral "Yes! "
-    -> ReadyToSolve
-
+Lila?Smiling "He is! Just for the weekend. I think I’m gonna ask him out to dinner with Trisha and I."
+* That’s super sweet!  I think I found some solutions for you.
+-> ReadyToSolve
 
 ==ReadyToSolve==
-Lila?Neutral "Thank you so much. I know already that this will help a lot with my stress surrounding this topic."
+Lila?Smiling "Oh that’s great! What’d you find out?"
+* Here’s what I have so far...
+-> PuzzleInterface
+* Wait, let me see if I can ask around a bit more.
+-> TempGoodbye
 
-* Of course! I hope it does.
-    -> PuzzleInterface
-* I think I may need more information. I'll be back soon though!
-    -> TempGoodbye
 
-// info solve:  Rashad shared that his mom had some concerning markers in her blood test, she found out she has metabolic syndrome which is more prevalent for Black women. She now manages her symptoms with regular blood tests. 
-// info solve: Mr. Calindas shared that genetic testing is a good way to substitute and add to family history information. He sent me a specific link: medlineplus.gov/genetics. I'll forward it over to you. He also said blood tests are really good for finding symptoms you might not feel.
 ==PuzzleInterface==
 # turnin
 
-* good solution chosen
-    -> GoodSolution
-* bad solution chosen
-    -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
-Lila?Smiling "I haven't heard of that. I’ll give it a try."
+==Option1==
+Lila?Neutral "That might be a good starting point, but I dont' think it actually gets me where I need to be."
 
-* Perfect. I hope it helps with what you’re experiencing, and gives you some confidence and peace of mind.
-    -> SolvedGoodbye
+* Let me see what else I have in my notes. Hold on.
+  ->TempGoodbye
 
+==Option2==
+# correct
 
-==BadSolution==
-Lila?Neutral "Hmm. Maybe. I don’t know if that makes me feel better about this situation specifically. Thanks for the tip though!"
+Lila?Smiling "Oh! I really appreciate Rashad connecting me with existing networks."
 
-* Let me see if there's anything else that would help.
-    -> PuzzleInterface
-* Maybe I can find more information from Rashad or Mr. Calindas. I'll go ask them again.
-    -> TempGoodbye
+Lila?Smiling "I feel like I lost some of my connections when my mom retired; I guess that's part of what I'm missing."
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+# correct
+
+Lila?Smiling "The reminder to use the resources easily available to me is actually oddly helpful."
+
+Lila?Smiling "I am feeling so overwhelmed that starting with a simple internet search to see what other people have already compiled never occurred to me. "
+
+Lila?Smiling "Trisha and I joke that her answer is to go google and my answer is to ignore the problem until someone else needs me to solve it."
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+	
+  
+==Option4==
+
+Lila?Neutral "I would feel really awkward just walking in and picking up printed materials. I don't feel like that helps much."
+ 
+* Let me see what else I can find, Lila.
+  ->TempGoodbye
+
 
 ==SolvedGoodbye==
-Lila?Smiling "All these recommendations make me feel much more confident about the information I'm getting. I know my mom would be happy I'm listening to community members. I’ll look at the resource you gave me, and schedule an appointment afterwards. Can't be too careful."
+Lila?Smiling "I feel like I would know what to do if someone else were asking my questions. Since this is my problem, it feels too big to tackle."
 
-* Exactly! See you, Lila!
-    -> END
-* Glad I could help, bye Lila!
-    -> END
+Lila?Smiling "I really appreciate you helping me work through it. " 
+
+* I'm happy to help!
+  -> END
+
 
 ==TempGoodbye==
-Lila?Neutral "No problem, take your time!"
+Lila?Neutral "Take your time!"
+* I’ll be back around!
+-> END
 
-* Thanks, Lila!
-    -> END
-* Will do!
-    -> END
+* See ya!
+-> END

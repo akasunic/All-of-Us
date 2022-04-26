@@ -77,7 +77,7 @@ Mrslee?Neutral "Some of my fitness class friends ... borrow ... Eddie sometimes 
  -> Suggestion2
 
 ==Suggestion2==
- ~ notification = "Mrslee_Day 4_Intergenerational connections provide benefits for the entire community_Rashad4-4"
+~ notification = "Mrslee_Day 4_Intergenerational connections provide benefits for the entire community_Rashad4-4"
 # notification Mrslee_Day 4_Intergenerational connections provide benefits for the entire community_Rashad4-4
 
 Mrslee?Smiling "Rashad has good idea. Eddie teach me how to do thing on computer and phone, I teach Eddie life. Good for mind. We teach each other, important."

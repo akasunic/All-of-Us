@@ -6,74 +6,93 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "Hi {player_name}!"
-
-* {not TempGoodbye} Hi Lila! What are you up to?
-    -> Chat1
-* {not TempGoodbye} Hello Lila! I have some new resources for you.
-    -> ReadyToSolve
-* {TempGoodbye} I'm back! 
-    -> ReadyToSolve
+Lila?Smiling "{player_name}! What’s the story, morning glory?"
+* Oh you the usual- enjoying the breeze, smelling the roses!
+-> Chat1
+* Hey! I asked around a little bit for you!
+-> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "I was just emailing the speaker for Saturday back. I'm starting to get really excited about this group! I've been thinking about it for so many years."
-
-* It's going to be such a good resource for the LGBTQ+ community. Many kudos!
-    -> Chat2
-* I have some information on what we talked about this morning, so solving this won't take years for you!
-    -> ReadyToSolve
+Lila?Smiling "Hey, I love to hear that you’re taking it easy."
+Lila?Smiling "Speaking of roses, I recently started to garden a little bit in my freetime and it is sooo relaxing."
+* That’s awesome, Lila! Hey, I have some things to tell you!
+-> ReadyToSolve
+* Woah! That’s so cool- Flowers? Veggies? Any home-made salads I can taste test?
+-> Chat2 
 
 ==Chat2==
-Lila?Neutral "Thanks! I was thinking about it yesterday, and I think I'm also going to learn a lot about myself, you know? Mentoring goes both ways, especially in this kind of situation."
+Lila?Smiling "Haha! Not just yet, everything is still just budding and a little new, but I’m loving getting to cultivate a little space in the backyard."
+Lila?Smiling "Charlie still isn’t on his best doggy behavior so he sometimes just jumps around in the mud so we have to give him a bubble bath or two, but hey that’s puppies for ya."
+Lila?Smiling "It’s still worth it."
+* By the way, I think I found some intel for you that may be useful.
+-> ReadyToSolve
 
-* It does. If you want, I have some information about what we talked about this morning.
-    -> ReadyToSolve
-
-// solve info: Mrs. Lee is willing to talk about her experiences as a woman related to her health.
-// solve info: Mr. Calindas knows a younger gynecologist who specializes in PCOS. She works at the clinic with him, so she's close by.
 ==ReadyToSolve==
-Lila?Neutral "That was fast! Did you find anything?"
+Lila?Smiling "Oh my goodness! Thank you, what did you find out?"
+* Let me tell you all about it!
+-> PuzzleInterface
+* Hold on.. Let me go think a bit more.
+-> TempGoodbye
 
-* I found that there's a lot of people looking out for you!
-    -> PuzzleInterface
-* Let me go check on something first.
-    -> TempGoodbye
 
 ==PuzzleInterface==
 # turnin
 
-* good solution chosen
-    -> GoodSolution
-* bad solution chosen
-    -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
-Lila?Smiling "I think this will make me a lot more confident going into this issue. Thanks {player_name}!"
+==Option1==
+Lila?Neutral "I don't think just showing up to an event is going to help; my problem is putting myself out there."
 
-* So, are you feeling better about this now? 
-    Lila "Yep! "
-    -> SolvedGoodbye
+* Hold on. Let me think...
+  ->TempGoodbye
 
-==BadSolution==
-Lila?Neutral "Maybe, I'll think about it. I was hoping to feel more prepared on my own, and have a doctor specialized in the area we talked about, PCOS."
+==Option2==
+# correct
 
-* That's true, I think I heard something else about that.
-    -> PuzzleInterface
-* Let me get back to you on that. I'll go check again.
-    -> TempGoodbye
+Lila?Smiling "Having a common purpose might help!"
+
+Lila?Smiling "I guess it makes sense that if volunteering is a good way to connect, getting together for other common purpose might work."
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+# correct
+
+Lila?Smiling "So look closest to home for the connections that might give me what I need. I wonder if any of the other teachers at the Community Center needs support."
+
+Lila?Smiling "I'm willing to give it a shot, at least to start."
+
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+	
+  
+==Option4==
+Lila?Neutral "If I had someone to tag along for these things, I might not have a problem. I don't think that gets me there."
+ 
+* Hold on. Let me think...
+  ->TempGoodbye
+
 
 ==SolvedGoodbye==
-Lila?Smiling "It feels good to know I have places I can turn for this. I'll talk to Mrs. Lee later today, and look up the contact Mr. Calindas gave you. I'm crossing off my whole list of health concerns in one week! Wow! Thanks so much, {player_name}."
+Lila?Smiling "Thank you, {player_name}. I feel like making friends has just gotten harder as I've gotten older. I appreciate the advice."
 
-* There is always support when you look for it, promise! I'll see you around, Lila.
-    -> END
-* Of course! Bye, Lila!
-    -> END
+* I'm happy to help!
+  -> END
+
 
 ==TempGoodbye==
-Lila?Neutral "No problem, let me know!"
+Lila?Neutral "Take your time."
+* I’ll be back!
+-> END
 
-* Be right back!
-    -> END
-* Will do!
-    -> END
+* See ya!
+-> END

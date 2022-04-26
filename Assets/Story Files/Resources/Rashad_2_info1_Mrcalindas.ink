@@ -47,44 +47,37 @@ Mrcalindas?Neutral "Stress is a silent killer. It’s a lot more serious than pe
 
 
 ==Explain2==
+~ notification = "Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad2-1"
+# notification Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad2-1
+
 Mrcalindas?Neutral "That’s not surprising. Stress can really impact sleep and that's not good at all. Your friend should take this up with his doctor as soon as possible. If not handled properly, stress can strain your heart."
-
 Mrcalindas?Neutral "Your whole body gets in on the action when your sleep is poor. Insomnia affects white blood cell counts, cognition, and resting heart rate." 
-
 Mrcalindas?Neutral. Stress is inevitable, but we have to manage it, or it'll tear us up. This is why I run! It’s an amazing exercise for your cardiovascular health." 
 
 * Wow, that sounds very intense.
   -> Suggestion1
 
-~ notification = "Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad1-1"
-# notification Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad1-1
 ==Suggestion1==
+~ notification = "Mrcalindas_Day 2_A multi-focus approach might be necessary for managing stress and reducing its impact on quality of life_Rashad2-2"
+# notification Mrcalindas_Day 2_A multi-focus approach might be necessary for managing stress and reducing its impact on quality of life_Rashad2-2
+
 Mrcalindas?Smiling "He should start with a small dose of melatonin. It helps you to sleep when taken before bed, but make sure your friend checks with a doctor first before taking it."
-
 Mrcalindas?Smiling "I mentioned running, but any exercise he finds pleasurable will do the trick. Dancing or bicycling, or even gardening will help. The secret is to be in motion." 
-
 Mrcalindas?Smiling "Combining mindfulness activities like meditation and a gentle practice like yoga or tai chi really help some people. Your friend can try that as well." 
 
 *That all sounds great, but it all feels too simple.
   -> Suggestion2
-
 *Okay, okay. I'm following all of this. What else? 
   -> Suggestion2
 
-~ notification = "Mrcalindas_Day 2_A multi-focus approach might be necessary for managing stress and reducing its impact on quality of life_Rashad2-2"
-# notification Mrcalindas_Day 1_A multi-focus approach might be necessary for managing stress and reducing its impact on quality of life_Rashad2-2
 ==Suggestion2==
 
 Mrcalindas?Neutral "Stress can really have a negative effect on overall quality of life. I cannot recommend therapy strongly enough. I understand the stigmas around mental healthcare, but there are some really compassionate, expert practitioners right here in Bloomwood. Your friend should consider giving one of them a chance."
-
 Mrcalindas?Smiling "Seeing a therapist really changed the game for me. If your friend wants a recommendation, I'm happy to suggest some people."
-
 Mrcalindas?Smiling "It's hard to remember when we're in the thick of it, but each of us is a complete picture. Taking care of our mental health enables us to support and take care of our physical health. And the other way around."
-
 
 * Thank you so much for your help on this, Mr. Calindas!
   -> Goodbye
-
 
 ==Goodbye==
 Mrcalindas?Smiling "Happy to help, {player_name}. Let your friend know that they're welcome to join the running club. I'm going to go back to work, you take care okay?"

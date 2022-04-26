@@ -6,6 +6,9 @@ VAR new_quest = ""
 -> intro
 
 ===intro===
+~ new_quest = "Rashad3.txt"
+# new_quest
+
 Rashad?Smiling "Well if it isn't my favorite glitter-wielding community organizer. What's up??
 
 * Just when I think I’ve gotten rid of it all, I find a speck on my clothes. 

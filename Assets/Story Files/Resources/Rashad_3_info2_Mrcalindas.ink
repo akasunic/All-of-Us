@@ -28,39 +28,34 @@ Mrcalindas?Neutral "Kidding aside, what's up? You have my undivided attention."
 
 ==Explain1==
 
+~ notification = "Mrcalindas_Day 3_Different therapists provide different types of treatment; ask questions to make informed decisions_Rashad3-3"
+# notification Mrcalindas_Day 3_Different therapists provide different types of treatment; ask questions to make informed decisions_Rashad3-3"
+
 Mrcalindas?Neutral "This is a good question." 
-
-
 Mrcalindas?Neutral "One of the things people don't understand when they start the process of finding a therapist is that there are many different TYPES of therapy. Different therapists use different approaches." 
- 
- Mrcalindas?Neutral "Most people think of psychotherapy when they imagine what therapy might be like. The "tell me about your childhood" portrayal we see on TV. That's one option, but there are many others." 
- 
- Mrcalindas?Neutral "Cognitive Behavioral Therapy, or CBT, and Dialectical Behavioral Therapy, or DBT, both focus on giving you tool kits for engaging with your emotions and changing your reactions and patterns." 
- 
- Mrcalindas?Neutral "Other options include group therapy, biofeedback and mindfulness practices. There are many tools out there to be explored."
- 
- Mrcalindas?Neutral "Some practitioners combine different schools of thought, so I suggest asking questions. And understand that not every therapeutic dynamic is a good fit. If something isn't working, try someone else." 
+Mrcalindas?Neutral "Most people think of psychotherapy when they imagine what therapy might be like. The "tell me about your childhood" portrayal we see on TV. That's one option, but there are many others." 
+Mrcalindas?Neutral "Cognitive Behavioral Therapy, or CBT, and Dialectical Behavioral Therapy, or DBT, both focus on giving you tool kits for engaging with your emotions and changing your reactions and patterns." 
+Mrcalindas?Neutral "Other options include group therapy, biofeedback and mindfulness practices. There are many tools out there to be explored."
+Mrcalindas?Neutral "Some practitioners combine different schools of thought, so I suggest asking questions. And understand that not every therapeutic dynamic is a good fit. If something isn't working, try someone else." 
  
  * Oh! This is all very useful! What else should they think about? 
   -> Explain2
   
-  * OK, I'm following, but how do they get started?
+ * OK, I'm following, but how do they get started?
  -> Explain2
  
- ~ notification = "Mrcalindas_Day 3_Different therapists provide different types of treatment; ask questions to make informed decisions_Rashad3-3"
-
-# notification Mrcalindas_Day 3_Different therapists provide different types of treatment; ask questions to make informed decisions_Rashad3-3"
  
  ==Explain2==
  
-  Mrcalindas?Neutral "I recommend your friend read up a little bit online before their first appointment. 
-  
-  Mrcalindas?Neutral "It might sound over-simplified, but before my first appointment, I literally printed out a list I found online by searching "what questions should I ask a therapist?" There are many good resources out there."
+Mrcalindas?Neutral "I recommend your friend read up a little bit online before their first appointment. 
+Mrcalindas?Neutral "It might sound over-simplified, but before my first appointment, I literally printed out a list I found online by searching "what questions should I ask a therapist?" There are many good resources out there."
 
  *I did some research and some therapists list 'teletherapy.' What is that?
  ->Explain3
  
 ==Explain3==
+~ notification = "Mrcalindas_Day 3_Telehealath options might make therapy easier to schedule_Rashad3-4"
+# notification Mrcalindas_Day 3_Telehealath options might make therapy easier to schedule_Rashad3-4
 
 Mrcalindas?Neutral "Oh, yes. Teletherapy is great for people who need flexibility. You can talk to your therapist using a computer or a phone, which is relatively new!"
 
@@ -70,9 +65,6 @@ Mrcalindas?Smiling "You use a specialized video chat application that's secure. 
   -> Explain4
 
 
-~ notification = "Mrcalindas_Day 3_Telehealath options might make therapy easier to schedule_Rashad3-4"
-
-# notification Mrcalindas_Day 3_Telehealath options might make therapy easier to schedule_Rashad3-4
 
 ==Explain4==
 Mrcalindas?Neutral "Teletherapy can be just as great as in-person, sometimes in different ways. It can be a good way for people new to therapy to dip their toes in, especially if they have a hectic schedule" 

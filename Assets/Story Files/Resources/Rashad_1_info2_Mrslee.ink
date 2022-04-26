@@ -25,9 +25,7 @@ Mrslee?Smiling "I feel okay! I have some trouble sleeping, so I’m looking for 
 
 ==Chat2==
 Mrslee?Smiling "I will be okay, don’t worry. Eddie suggested physical activity; then he suggest I ask Lila. I already take fitness classes, so she show me this list of classes that teach meditation and mindfulness exercises."
-
 Mrslee?Smiling "Eddie say maybe I need to make my brain tired too!"
-
 
 * Eddie sounds like he knows what he's talking about.
 -> Chat3
@@ -52,6 +50,9 @@ Mrslee?Neutral "Sure, what is it?"
 -> Explain2
 
 ==Explain2==
+~ notification = "Mrslee_Day 1_Mrs. Lee can ask her friends if their grandchildren want to apply_Rashad1-3"
+# notification Mrslee_Day 1_Mrs. Lee can ask her friends if their grandchildren want to apply_Rashad1-3
+
 Mrslee?Neutral "Wow, I have no idea Rashad need help like this. I know lot of friends with grandchildren looking for work. What is the job?"
 
 * They're hiring a part-time worker in the young adult section.
@@ -59,19 +60,16 @@ Mrslee?Neutral "Wow, I have no idea Rashad need help like this. I know lot of fr
 * Rashad is looking for a library assistant to help reshelve books. 
 -> Suggestion1
 
-~ notification = "Mrslee_Day 1_Mrs. Lee can ask her friends if their grandchildren want to apply_Rashad1-3"
-# notification Mrslee_Day 1_Mrs. Lee could call Eddie and practice her questions with him_Rashad1-3
 ==Suggestion1==
-Mrslee?Smiling "I met Rashad when he work as the children librarian! Now he hire a new person to help in that department."
+~ notification = "Mrslee_Day 1_Asking friends of the library to share the job posting on social media might increase the number of candidates_Rashad1-4"
+# notification Mrslee_Day 1_Asking friends of the library to share the job posting on social media might increase the number of candidates_Rashad1-4
 
+Mrslee?Smiling "I met Rashad when he work as the children librarian! Now he hire a new person to help in that department."
 Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We could post flyer on bulletin board in the Community Center."
 
 * That would be great! Thank you so much. Did you have any other questions?
 -> Suggestion2
 
-
-~ notification = "Rashad_Day 1_Asking friends of the library to share on social media might increase the number of candidates_Mrslee1-4"
-# notification Rashad_Day 1_Asking friends of the library to share the job posting on social media might increase the number of candidates_Mrslee1-4
 ==Suggestion2==
 Mrslee?Smiling "Anything to help out Rashad. When Eddie needed a summer job, Rashad showed him how to use the internet to apply. Lots of jobs get posted online now."
 
@@ -91,10 +89,6 @@ Mrslee?Smiling "I will pass along the message to friends. See you soon."
 ->END
 * You’re the best! See you soon!  
 ->END
-
-==== END ====
-END
-   -> END
 
 
 

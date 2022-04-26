@@ -37,10 +37,8 @@ Elisa?Smiling "It’s a relaxing activity that makes me remember my abuela, and 
 ==Chat3==
 Elisa?Smiling "I really miss my abuela, I learned so much from her. I remember when I taught her how to use her first iPhone. Tech duty with the grandparents, you know how it is. Her first selfie was fire, honestly."
 
-
 * Speaking of selfies, Elisa, I think you might be the person I need. 
 -> Explain1
-
 
 ==Explain1==
 Elisa?Neutral "Oh? How can I help?"  
@@ -51,20 +49,21 @@ Elisa?Neutral "Oh? How can I help?"
 -> Explain2
 
 ==Explain2==
+~ notification = "Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1"
+# notification Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1
+
 Elisa?Neutral "That sounds like a cool way to get seniors and teens to learn from each other. My schedule is kinda hectic, so I may not be able to volunteer."
 Elisa?Neutral "If Rashad is looking for input, I can share what teens are generally interested in if you think that would be helpful?"
 
 * Awesome. That would be super valuable!  
 -> Suggestion1
-
-It might also be helpful to hear about a relationship you've had with an elder.
+* It might also be helpful to hear about a relationship you've had with an elder.
 -> Suggestion1
 
-
-~ notification = "Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1"
-
-# notification Elisa_Day 4_Teens and seniors can learn from each other_Rashad4-1
 ==Suggestion1==
+~ notification = "Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2"
+# notification Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2
+
 Elisa?Smiling "I honestly learned a lot about my culture and heritage from my abuela, plus I think socializing with her was good for her mental health in a way."
 
 Elisa?Smiling "My abuela always supported me when I needed her most, and that was so good for me. I learned a lot about how to cope from her; she was just so gentle and resilient, despite everything she lived through."
@@ -75,10 +74,6 @@ Elisa?Smiling "It’s also nice to have someone besides your parents to lean on 
 -> Suggestion2
 * Other than connecting with her amazing grandkid, how did she benefit?
  ->Suggestion2
-
-~ notification = "Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2"
-
-# notification Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2
 
 ==Suggestion2==
 

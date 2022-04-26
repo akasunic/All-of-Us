@@ -7,6 +7,8 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
+~ new_quest = "Rashad1.txt"
+# new_quest
 
 Rashad?Smiling "Hey {player_name}! How's it going?"
 
@@ -16,8 +18,7 @@ Rashad?Smiling "Hey {player_name}! How's it going?"
 -> QuestIntro
 
 ==Chat1==
-Rashad?Neutral "I've been trying to kickstart some new programs, but the paperwork never ends. It kinda feels like I'm stuck in quicksand. 
-
+Rashad?Neutral "I've been trying to kickstart some new programs, but the paperwork never ends. It kinda feels like I'm stuck in quicksand."
 Rashad?Neutral "I don't mean to complain, but this week, it all feels pretty overwhelming."
 
 * Yikes. That sounds awful, Rashad. 
@@ -59,7 +60,6 @@ Rashad?Neutral "If I wasn't swimming in admin work, I'd probably have a chance t
 
 ==QuestDetails2==
 Rashad?Neutral "This role would be part-time, maybe two or three shifts a week. The person will need to learn the young adult section, so they can help reshelve books and run the help desk."
-
 Rashad?Neutral "Also, I'd love someone who could take over storytime on Saturdays. We have one session in the morning and one in the afternoon to support as many families as possible." 
 
 * Sounds good.  Is there anything else I should keep in mind? 

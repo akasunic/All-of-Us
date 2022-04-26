@@ -53,6 +53,9 @@ Lila?Neutral "If I don't stay on top of things, I end up grinding my teeth at ni
   -> Explain2
 
 ==Explain2==
+~ notification = "Lila_Day 2_Find self-care activites to integrate into your daily life_Rashad2-3"
+# notification Lila_Day 2_Find self-care activites to integrate into your daily life_Rashad2-3
+
 Lila?Neutral "If your friend is a person of color, they aren't imagining it. Racial stress is real, and can actually cause a condition called post-traumatic stress disorder, or PTSD."
 
 Lila?Neutral "PTSD can harm your heart, and lead to other health issues. It's serious. I'm glad they're talking to you, and that you might be able to help them." 
@@ -60,9 +63,10 @@ Lila?Neutral "PTSD can harm your heart, and lead to other health issues. It's se
 * Wow, that sounds terrible. What should I be suggesting?
   -> Suggestion1
 
-~ notification = "Lila_Day 2_Find self-care activites to integrate into your daily life_Rashad2-3"
-# notification Lila_Day 1_Find self-care activites to integrate into your daily life_Rashad2-3
 ==Suggestion1==
+~ notification = "Lila_Day 2_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4"
+# notification Lila_Day 2_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4
+
 Lila?Smiling "Well, your friend should definitely seek professional help if they can. They shouldn’t go through this sort of thing alone."
 
 Lila?Smiling "'Self-care' became a buzzword of sorts, but it's a real thing. Your friend should really take stock of the ways they can engage in meaningful self-care." 
@@ -74,8 +78,6 @@ Lila?Neutral "Also, they shouldn't be afraid to sleep more than usual. Racial st
 * Is there else anything they can do?
   -> Suggestion2
 
-~ notification = "Lila_Day 2_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4"
-# notification Lila_Day 1_Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life_Rashad2-4
 ==Suggestion2==
 Lila?Neutral "If I'm being honest, I think most people of color I know could benefit from culturally competent therapy."
 

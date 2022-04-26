@@ -11,118 +11,101 @@ VAR new_quest = ""
 ~ new_contact = "Lila"
 # new_contact
 
-Lila?Smiling "Hi {player_name}! How are you doing today?"
+Lila?Smiling "Hey {player_name}! How are you doing today?"
+* Hi Lila! I'm doing well, just enjoying the good weather. What are you up to?
+-> Chat1
+* Hi Lila! What are you up to today?
+-> Chat1
 
-+ I'm doing well Lila, how are you? What are you working on? 
-    -> project
-+ Not too bad, working hard on the upcoming block party. How about you?
-    Lila?Neutral "Oh, the block party! I haven't heard too much about it yet. "
-    -> project
+== Chat1 ==
+Lila?Smiling "Hey {player_name}! Me too, actually! I’m enjoying some downtime and getting some knitting done. I’ve been pretty busy lately working on a new project so I’m trying to take it easy when I can and do something relaxing."
 
-=== project ===
-Lila?Smiling "I'm doing pretty well, spring is definitely my favorite season, even though it makes the kids crazy."
-Lila?Smiling "They're outside with Mrs. Lee right now, which means I have some personal time. I'm actually setting up the kick off event for a new club at the community center."
+* It’s good to take a break. What are you knitting?
+-> Chat2
+* What’s been keeping you so busy?
+->QuestDescription
 
-+ That sounds really interesting! What's the event? 
-    Lila?Neutral "Well, for background, "
-    -> eventdescription
-+ What's the new club?
-    -> eventdescription
+== Chat2 ==
+Lila?Smiling "I’m making a hat for Mrs.Lee! I never made one before, so I'm learning as I go."
+Lila?Smiling "It’s cold in the mornings when she comes to her exercise class. I thought this would be nice, especially in the pink she loves so much." 
+Lila?Smiling? "This seems like a good stopping place, though. I'm about halfway. I should probably get back to work; I have a lot of things to sort out."
 
-== eventdescription ==
-Lila?Smiling "I'm starting an LGBTQ+ Mentoring Group for LGBTQ+ youth in our community."
-Lila?Smiling "When I was younger, I wished I could have had something like this,"
-Lila?Smiling "and after working with my friend Eddie when we were younger on similar issues, I thought I might try to start a group to work with others."
-Lila?Smiling "Usually I try to stray away from adding more work on my plate outside of my job so I can focus on my personal hobbies, but this is important to me."
+* She's going to love it! It sounds like you’ve got a lot on your plate. 
+-> QuestDescription
+* Sort out? Is everything okay?
+-> QuestDescription
 
-+ Wow, this sounds like a really good initiative. Would you be interested in having the kick off event at the block party? 
-    -> clinic
-+ It's always good to focus energy into causes that inspire you. 
-    Lila?Neutral "I wholeheartedly agree, this one hits close to home. I was honestly thinking about having the first event at the block party."
-    -> clinic
+== QuestDescription ==
 
-
-== clinic == 
-Lila?Smiling "I'm working a childcare booth during the day to help out Rashad, but I could probably host the event at night."
-Lila?Smiling "That might be a good way to get more kids to come too, since the daytime activities would be wrapped up!"
-
-+ Yeah! This initiative is wonderful. What do you need to do to make it happen this weekend?
-    Lila?Neutral "Well, "
-    -> needsdescription
-+ That's true, and if it's at night hopefully people will be off work as well.
-    Lila?Neutral "Exactly. In fact, "
-    -> needsdescription
-
-== needsdescription ==
-Lila?Neutral "right now I was just hoping to book this speaker, and start researching the equipment I need to rent."
-Lila?Neutral "I'm also a little worried about the first event being just a speaker,"
-Lila?Neutral "since I definitely want it to be a mentoring group that also hosts events for community exposure and learning opportunities."
-Lila?Neutral "I guess I'll also need to find people who are interested in joining the group. Hmmm. This is a lot of work."
-
-+ It does sound that way. What about the speaker you're looking at right now?
-    -> speakeravailable
-+ It is, but let me ask around, I'll see if I can find some solutions to these issues!
-    -> bye
-
-
-== speakeravailable ==
-Lila?Neutral "Well, she looks great, but I emailed her earlier and the first time she is available is a couple weeks from now. So she wouldn't be able to make the event this weekend."
-
-+ That's too bad. Is there any type of speaker you are looking for in particular?
-    -> speakerexplain
-+ Okay, I'll try to find another speaker who is available for this weekend for you.
-    Lila?Smiling "Amazing! "
-    -> engage
-
-
-== speakerexplain ==
-Lila?Neutral "Yeah! Aside from their topic being LGBTQ+ related, I definitely was hoping to kick off with an inspirational speaker,"
-Lila?Neutral "maybe someone who has an inspiring story or could really show people that their identity is valid and worth exploring and understanding."
-Lila?Neutral "You know, someone to get people excited about the group, and feeling welcome!"
-
-+ Oh, that's true! You said you wanted to focus on engagement for this first one. 
-    Lila?Neutral "Definitely. "
-    -> engage
-+ I think I have enough information to get started.
-    -> bye
-
-
-== engage == 
-Lila?Neutral "I do need to focus on engagement in multiple ways."
-Lila?Neutral "I want to both attract the right people – the people who need mentors – to the event as well as those who could benefit to learn more about what LGBTQ+ issues are,"
-Lila?Neutral "and how you can always learn and support as an ally."
-
-+ People should definitely be as involved as possible during the event. Do you think the speaker will bring their own equipment?
-    -> equipment
-+ Hmm, do you have any ideas you were already thinking about I might be able to pursue?
-    -> engagementexplain
-
-
-== engagementexplain ==
-Lila?Neutral "I was thinking about a group activity where people write about themselves and share anonymously."
-Lila?Neutral "That way, the audience can begin that process of engaging with the material and will be motivated to come to the next group session."
-Lila?Neutral "I should also write a short MC script for myself so I can introduce myself and the group..."
-
-+ You'd probably need a mic for that, actually, for the speaker as well anyway!
-    -> equipment
-+ Lots to do. Say, I'll get started on what we've talked about and we can check in later, okay?
-    -> bye
-
-
-== equipment ==
-Lila?Neutral "Maybe, but I actually don't know whether I would be able to discuss with the speaker in time to get the equipment they need for event."
-Lila?Neutral "Could you see if anyone has at least a projector available for slides?"
-
-+ Yes! No problem. I should probably go start searching.
-    -> bye
-+ I can do that. I'm pretty sure the library has some tech available I could snag. I'll get started on this now.
-    -> bye
-
-=== bye
-Lila?Smiling "Wow, thank you so much! I would love to have the event this weekend if it works out."
-Lila?Smiling "I'll be at the community center all day every day this week. I have a lot of work to do if we're going to pull this off. I'll see you soon!"
-
-+ See you soon, Lila! 
-    -> END
-+ No problem, I'll let you know as soon as I find what you need. 
-    -> END
+Lila?Neutral "So..."
+Lila?Smiling "I’m creating an LGBTQIA+ Mentorship Group for LGBTQ+ youth in our community."
+Lila?Neutral "Growing up, I always wanted something  where I could meet other people like me who had been through similar struggles."
+Lila?Neutral "I really wish I had known older LGBTQ+ people to help me work through things."
+Lila?Smiling "I wasn't alone, exactly. I had good friends, like Eddie, but I was thinking that maybe a community group with others might be a nice space for young LGBTQ+ people to have."
+Lila?Smiling "My mom did her best, but she's so straight. There's a lot she didn't understand."
+ 
+*LGBTQIA? That's quite a mouthful. I know what parts mean, but not all of it
+->ExtraDetail
+ 
+==ExtraDetail
+Lila?Smiling "Lesbian, Gay, Bisexual, Transgender, Questioning/Queer, Intersex, Assexual, and others. It's a big umbrella and the acronym gets longer as we build better language to support people in their experience."
+Lila?Smiling "When I was younger, it was just LGBT. We've gotten so much more inclusive and aware!"
+ 
+*Lila! This sounds like such a big undertaking! 
+ ->QuestOverview
+* That sounds like a great idea, Lila! 
+ -> QuestOverview
+ 
+== QuestOverview ==
+Lila?Neutral "Right now, I’m trying to keep my scope limited, so I don’t disappoint anyone."
+ 
+Lila?Neutral "I’m feeling a little nervous about the first event. What I know I definitely want is to foster mentorship and support between LGBTQ+ people."
+Lila?Neutral "So many of us face similar struggles, and if this project can support just one teenager, this will be worthwhile."
+ 
+* What is your vision for the first event?
+-> Interaction
+ 
+==Interaction==
+Lila?Neutral "I was thinking an ice-breaker event and a guest speaker to kick us off."
+Lila?Neutral "I’d like to do a stand-up group activity where people write down special things about themselves and we share anonymously to see similarities in the room."
+Lile?Neutral "Hopefully seeing that, participants will feel safe to engage with the material and begin to open up."
+ 
+* Hmm, you’d probably need some audio equipment.
+-> Equipment
+* Do you know what support you need?
+-> Equipment
+ 
+==Equipment==
+Lila?Neutral "I do! I feel like what I need most is help in two areas - general presentation tech, and securing a backup speaker." 
+ 
+Lila?Neutral "I’m so busy worrying about the activities for during the meeting that if you could help with those two things, I’d feel worlds better."
+* That would be a lot of fun! Did you have someone in mind for the speaker?
+-> Speaker
+ 
+* Sure! What else should I know before I start asking around?
+-> Speaker
+ 
+ 
+==Speaker==
+Lila?Neutral "I found someone who works with the local PFLAG chapter, who I like a lot, but they’re really busy for the next few weeks."
+Lila?Neutral "I won't know until next week if they can help. If they aren’t available, I’ll need a backup." 
+Lila?Neutral "I’m looking for someone who can talk about the current state of LGBTQ+ rights. I’d also like to discuss how to support us and what it looks like to be an ally - to treat ally as a verb, not an identity."
+Lila?Neutral "I want to emphasize how important it is to have a community around you who cares for you - we all need people we can rely on."
+Lila?Neutral "A lot of LGBTQ+ youth don’t have that, but I think this space could become that. I’d like to work with the speaker to make a great first event that will bring people in!"
+Lila?Neutral "Do you think you can help?"
+ 
+ 
+* Absolutely! I’ll start looking around immediately.
+-> Goodbye
+* Of course. It’s so important to create ways for us to connect. I’ll see what I can do.
+-> Goodbye
+ 
+ 
+==Goodbye==
+Lila?Smiling "Thanks again, {player_name}!"
+Lila?Smiling "If you need anything, I'll be at the community center most days this week working on some extra details for this so everything turns out perfect."
+* "Take care, Lila!"
+-> END
+* "See you later, Lila! I’m really excited for this, I’ll see what I can find out for you."
+-> END
+ 
