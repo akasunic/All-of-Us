@@ -1728,6 +1728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 400864718}
+    - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 400864718}
@@ -1739,12 +1744,17 @@ PrefabInstance:
     - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDialogClickedFlag
+      value: SetButtonClickedFlag
       objectReference: {fileID: 0}
     - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetButtonClickedFlag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1754231576797642182, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
@@ -1790,7 +1800,7 @@ PrefabInstance:
     - target: {fileID: 7395074698476989240, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8445580612507203525, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
@@ -4702,7 +4712,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535

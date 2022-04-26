@@ -1720,6 +1720,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8445580612507203525, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8778977202911845164, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_IsActive
@@ -10705,7 +10710,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
