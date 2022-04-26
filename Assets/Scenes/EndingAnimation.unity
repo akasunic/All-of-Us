@@ -590,7 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And you've made it even more special
+  m_Text: Look at the beautiful memories you've made
 --- !u!225 &140008646
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2146,9 +2146,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It''s about people
-
-'
+  m_Text: You have done so much as the community manager
 --- !u!225 &1459308404
 CanvasGroup:
   m_ObjectHideFlags: 0
