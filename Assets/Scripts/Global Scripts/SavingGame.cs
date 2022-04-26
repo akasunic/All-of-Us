@@ -17,6 +17,12 @@ public static class SavingGame : object {
         current.incDay();
 
         GlobalGameInfo.IncreaseDay();
+
+        // Invoke the calendar pop up in the map
+        GlobalGameInfo.gotalkFlag = true;
+        
+        // Clear the current quest title
+        GlobalGameInfo.SetCurrentTask("");
         
         // Save todolist
         current.setTodoItems(GlobalGameInfo.todoList);

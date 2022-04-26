@@ -1414,7 +1414,6 @@ GameObject:
   - component: {fileID: 1560670348}
   - component: {fileID: 1560670347}
   - component: {fileID: 1560670346}
-  - component: {fileID: 1560670345}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -1442,45 +1441,6 @@ RectTransform:
   m_AnchoredPosition: {x: 384, y: -324.04}
   m_SizeDelta: {x: 167.20837, y: 45.326385}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1560670345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560670343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eadb7394ed64d34880126c3cd13e81c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  continueButton: {fileID: 1560670343}
-  rashadProfile: {fileID: 0}
-  rashadPic1: {fileID: 0}
-  rashadPic2: {fileID: 0}
-  rashadPic3: {fileID: 0}
-  elisaProfile: {fileID: 0}
-  elisaPic1: {fileID: 0}
-  elisaPic2: {fileID: 0}
-  elisaPic3: {fileID: 0}
-  msleeProfile: {fileID: 0}
-  msleePic1: {fileID: 0}
-  msleePic2: {fileID: 0}
-  msleePic3: {fileID: 0}
-  calindasProfile: {fileID: 0}
-  calindasPic1: {fileID: 0}
-  calindasPic2: {fileID: 0}
-  calindasPic3: {fileID: 0}
-  lilaProfile: {fileID: 0}
-  lilaPic1: {fileID: 0}
-  lilaPic2: {fileID: 0}
-  lilaPic3: {fileID: 0}
-  pic1: {fileID: 0}
-  pic2: {fileID: 0}
-  pic3: {fileID: 0}
-  profilePic: {fileID: 0}
-  nametagText: {fileID: 0}
-  paragraphText: {fileID: 0}
 --- !u!114 &1560670346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1536,7 +1496,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1560670345}
+      - m_Target: {fileID: 1575667979}
         m_MethodName: onClickContinueButton
         m_Mode: 1
         m_Arguments:
@@ -1627,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eadb7394ed64d34880126c3cd13e81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 1560670343}
   rashadProfile: {fileID: 21300000, guid: ad7ad7556b2cd5649a02270873244867, type: 3}
   rashadPic1: {fileID: 21300000, guid: a4e280094e7d7d044b8d3cc4a3771bd6, type: 3}
   rashadPic2: {fileID: 21300000, guid: cc0de7d4c54a2d442b87c55dea36e5b7, type: 3}

@@ -67,6 +67,7 @@ public class Turnin : MonoBehaviour
         options = new TextMeshProUGUI[4] { option1, option2, option3, option4 };
         optionCharacters = new Image[4] { option1Character, option2Character, option3Character, option4Character };
         optionQuests = new Quest[4]; 
+        submitOptionText.text = GlobalGameInfo.GetCurrentTask();
         fillOptionDetails();
         fillGiverDetails();
     }
@@ -163,8 +164,6 @@ public class Turnin : MonoBehaviour
             continueArrow.color = arrowClickable;
         }
         selectedOption = option;
-        
-        submitOptionText.text = selectedQuest.description;
     }
 
     public void onClickContinueButton()
