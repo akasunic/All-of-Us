@@ -6,83 +6,87 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "Hey {player_name}! Good to see you."
+Lila?Smiling "{player_name} Good afternoon! How’s it going?"
 
-* {not TempGoodbye} Good to see you too, Lila! How was your day?
-    -> Chat1
-* {not TempGoodbye} Likewise! So I have some information about the event this weekend for you.
-    -> ReadyToSolve
-* {TempGoodbye} I'm back! 
-    -> ReadyToSolve
+* It’s going well! How was your day?
+-> Chat1
+* It’s going well! I found information that may be useful for your event!
+-> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "Not too bad. Been working late here, but Trisha always stops by with dinner when I'm stuck at my desk, which is nice."
-
-* That's sweet. What are you working on?
-    -> Chat2
-* That's really nice of her. I'm glad I caught you before you left, I have info about the event on Saturday.
-    Lila?Neutral "Oh, thank you!"
-    -> ReadyToSolve
+Lila?Smiling "Not too bad. Trisha stopped by with lunch for me which was really sweet. It brightened up my day and I’ll never say no to a home cooked meal."
+* That’s so thoughtful! Hey, I got some information that may be useful.
+-> ReadyToSolve
+* I know that must’ve been lovely. How’s Trisha been?
+-> Chat2 
 
 ==Chat2==
-Lila?Neutral "Lesson plans for next week. I have an assistant who usually helps me with them, but she only has ten paid hours a week, so she doesn't stay past that."
-Lila?Neutral "The rest falls on me! Regardless of my hours."
-
-* Let me know if I can help with that. Speaking of, I got some information on the speaker event Saturday.
-    Lila?Smiling "Oh cool! "
-     -> ReadyToSolve
-* Head Start can always use more funding. Let me know if you want me to look into that in the future. Oh, also, do you have a moment to hear about the info I found?
-    Lila?Neutral "Yeah! "
-    -> ReadyToSolve
+Lila?Smiling "She’s great! She and I just celebrated our anniversary and she just got a new promotion at work. It’s been really exciting."
+* Congratulations! Oh also, I found helpful ideas for your mentorship group.
+-> ReadyToSolve
 
 ==ReadyToSolve==
-Lila?Neutral "What did you find out?"
-
-* One second, I'll open my journal...
-    -> PuzzleInterface
-* Could I get back to you later on this?
-    -> TempGoodbye
-
-//info solve: Rashad can help set up the event, and can lend you equipment from the library.
-//info solve: Elisa can hang up flyers, and knows a gender studies professor who is a professional speaker on LGBTQ+ topics.
+Lila?Smiling "Oh that’s great! What’d you find out?"
+* Here’s what I have so far...
+-> PuzzleInterface
+* Wait. I'm not quite ready.
+-> TempGoodbye
 
 ==PuzzleInterface==
 # turnin
 
-* They picked a solution marked good.
-  -> GoodSolution
-* They picked a solution marked bad.
-  -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
-Lila?Smiling "That sounds great! I can definitely get the event together in time for the block party now."
+==Option1==
+Lila?Neutral "That feels very ambitious right now. I'm just trying to get the first event off the ground."
 
-* Amazing. I think that covers everything we talked about earlier, right? 
-    Lila?Neutral "Yep! "
-    -> SolvedGoodbye
+* Excellent point; let me look at my notes again.
+  ->TempGoodbye
 
+==Option2==
+# correct
 
-==BadSolution==
-Lila?Neutral "That would work, but I’m not sure it covers enough that it would give me enough time to set up the rest of the event before the block party."
+Lila?Smiling "I really appreciate how Bloomwood comes together."
 
-* Let me look again. I know I heard something else...
-    -> PuzzleInterface
-* Let me get back to you on that. I'll go check with Rashad again.
-    -> TempGoodbye
-    
+Lila?Smiling "Not just on the big things, but for little things too. Rashad's such a gem; I can't wait to return the favor."
+  
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
+==Option3==
+
+Lila?Neutral "That helps, but I don't think that solves my bigger worries."
+ 
+* Let me see what else I can find, Lila.
+  ->TempGoodbye
+  
+==Option4==
+# correct
+
+Lila?Smiling "Oh, that's such a help. I hope Elisa's professor is available to speak."
+
+Lila?Smiling "Actually, I hope they will join us and either become a mentor or help support the project more actively. What an amazing resource to have available to us as we grow."
+
+* If you need other support, please don’t hesitate to ask. 
+	-> SolvedGoodbye
+
 
 ==SolvedGoodbye==
-Lila?Smiling "Wow, thank you so much, {player_name}. Having the event this weekend would really boost attendance and awareness. Please stop by again soon if you get the chance!
+Lila?Smiling "I really appreciate your help. I feel like this might just come together!" 
 
-* No worries, Lila. That's what I'm here for. See you soon! 
-    -> END
-* No problem. I'll probably see you tomorrow!
-    -> END
+* My pleasure, Lila!
+  -> END
 
 ==TempGoodbye==
-Lila?Neutral "No problem, let me know!"
+Lila?Neutral "Okay! I'll be here when you're ready."
 
-* Be right back!
-    -> END
-* Will do!
-    -> END
+* OK, Lila. Hold tight!
+  -> PuzzleInterface

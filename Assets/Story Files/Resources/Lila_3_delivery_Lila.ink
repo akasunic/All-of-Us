@@ -3,94 +3,80 @@ VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
 
+
 -> intro
 
-===intro===
+==intro==
 ~ new_quest = "Lila3.txt"
 # new_quest
+~ new_contact = "Lila"
+# new_contact
 
-Lila?Smiling "Hey {player_name}!"
-
-* Hi Lila!
-    -> Chat1
-* What's up Lila?
-    -> Chat1
+Lila?Neutral "Hi, {player_name}! It's good to see you."
+* Hey Lila! How are you doing? 
+->Chat1
+*Hey! Good to see you! You okay?
+ ->Chat1
 
 ==Chat1==
-Lila?Smiling "I wanted to say thank you for helping me out with that health information the other day."
-Lila?Smiling "I read some of that website Mr. Calindas linked, and I was able to call the doctors office and set up some appointments."
+Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice fostering the sort of community I wish I had growing up, but I get a little misty-eyed every now and again."
 
-* That's great! How have you been feeling about it? 
-    -> Chat2
-* Wonderful. Glad I could help! 
-    -> QuestIntro
+Lila?Smiling "Trisha has also been a great help. We’ve begun to work together on a lot of aspects and it’s definitely brought us closer as a couple."
+Lila?Smiling "We are having conversations about topics that never came up until now. And I’ll never say no to more time with her!"
+* That’s awesome!
+-> Chat2
+* You two are so cute, talk about a power couple!
+-> Chat2
 
 ==Chat2==
-Lila?Smiling "Definitely more confident with my own knowledge. I'm ready to dive in."
+Lila?Smiling "Aw, thank you! I'm really loving this process. 
+Lila?Smiling "Last week, Trisha came up with this neat activity where the mentors guided their mentees in making art pieces about who they are and want to be."
+Lila?Smiling "It was so cool seeing everyone express their unique identities and personalities."
+Lila?Smiling "I love the connections that happen when people open up. It felt like I was watching something magical happen."
+Lila?Neutral "I feel really at home there, which is such a shift from how I’ve felt before"
 
-* I'm glad I could help.
-    -> QuestIntro
+* I’m really proud. Bloomwood is lucky to have you.
+-> QuestIntro
 
 ==QuestIntro==
-Lila?Neutral "Along similar lines, when I was on that website researching metabolic syndrome, I stumbled on this other syndrome called polycystic ovarian syndrome."
+Lila?Neutral "Aw, thank you." 
+Lila?Neutral "I’ve always felt a little bit lonely in Bloomwood, even though I have close friends here who care about me, like you, Mrs. Lee and Eddie. Trisha, of course."
+Lila?Neutral "The group has helped a lot with feeling connected in general, but I still feel a little isolated. There aren't a lot of queer people I can just grab a cup of coffee with. Ya know?"
+Lila?Neutral "Being around Trisha is wonderful, but I wish I had more of a community in that sense."
 
-* I haven't heard of it, but what about it? 
-    Lila?Neutral "So I think I might have it, but "
-    -> QuestDetails1
-* Is that a women's health issue? 
-    Lila?Neutral "Yes. "
-    -> QuestDetails2
+* I wouldn't have guessed, Lila! Tell me more?
+-> QuestDetails1
+* Hey, if you ever need someone, I’m there for you!
+-> QuestAcceptance
 
 ==QuestDetails1==
-Lila?Neutral "I'm a little uncomfortable talking to my doctor about it since he's a man, and it's a women's health issue. I would feel more comfortable talking to someone who could relate to me."
-
-* Tell me more. 
-    -> QuestDetails2
-* I feel the same, I definitely prefer to see a doctor who can relate to me.
-    -> OptionalQuestDetails1
-* Accept the quest. 
-    -> QuestAcceptance
-
-==OptionalQuestDetails1==
-Lila?Neutral "It's under the umbrella of already stigmatized issues, and I'm hoping a woman might be more open to my experiences."
-Lila?Neutral "I've had times in the past where my pain was written off as being not a big deal, and I don't want that to happen again."
-
-* That shouldn't be happening. 
-    -> QuestDetails2
-* I feel similarly. 
-    -> QuestDetails2
+Lila?Neutral "Well, it can be really hard to find and meet people as a whole, but especially people you relate to."
+Lila?Neutral "There isn’t always a lot of open discussion about one’s personal identity and in some places, it isn’t seen as appropriate conversation."
+Lila?Neutral "As a Black, queer woman, my experiences sometimes feel really lonely and specific." 
+Lila?Neutral "Finding other people who exist at the same intersection of identities that I do is hard."
+Lila?Neutral "I don’t want to go my whole life not meeting other people who understand me in that way."
+* We all deserve to feel understood.
+-> QuestDetails2
+* I’m sorry, Lila. Listen, if you want, I can collect some wisdom for you?
+-> QuestAcceptance
 
 ==QuestDetails2==
-Lila?Neutral "Women's health has always been a difficult topic for me to open up about."
-Lila?Neutral "My mom never talked about anything growing up aside from what was absolutely necessary for me to know, and it's led to a lot of awkwardness on my part."
-
-* That's understandable.
-    -> OptionalQuestDetails2
-* If it would help, I could look for some resources again.
-    -> QuestAcceptance
-
-==OptionalQuestDetails2==
-Lila?Neutral "I wish she had introduced me to more sooner. I learned a lot myself from TV shows and in college that I wish I had known going into adulthood."
-Lila?Neutral "I don't even know where to start figuring this out, do you have any ideas?"
-
-* I have some, but let me confirm them and get back to you.
-    -> QuestAcceptance
-* I don't right now, but I can look into it for you. 
-    -> QuestAcceptance
+Lila?Neutral "I know I shouldn’t be picky, but I wish I had a more diverse community and support group of people my age I could go to about these feelings, outside of Trisha."
+Lila?Neutral? "A lot of queer spaces I see are centered around younger folks so it is hard being older, yet still disconnected and trying to find a place I feel comfortable in."
+Lila?Neutral "Ultimately, I am happy, but it’s hard. I'm really hurting for a peer group."
+* We all deserve a safe place. I can ask around for advice for you if you’d like.
+-> QuestAcceptance
+* Thank you for trusting me with this. Do you want me to look around for you?
+-> QuestAcceptance
 
 ==QuestAcceptance==
-Lila?Smiling "That would be great. You've been so supportive recently I felt like I could come to you about this."
-Lila?Smiling "I'll work on feeling more comfortable in this area so I can start exploring it for myself soon." 
-
-* I'm glad I can be here for you. I'll get started on this now, I have some time. 
-    -> Goodbye
-* Of course! If you need anything, you can always ask.
-    -> Goodbye
+Lila?Smiling "I really appreciate the offer. Only if you have time, okay? I want to expand my social sphere, but putting myself out there is really hard, especially as an introvert."
+* You deserve to a social community you feel understood and good in.
+-> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Thanks, {player_name}. Text me if you have any questions!"
-
-* Bye, Lila!
-    ->END
-* See you later!
-    ->END
+Lila?Smiling "Thank you for the reminder. I definitely needed to hear that. I need to get back inside... We'll chat later? Thank you again."
+* I’ll spread these social butterfly wings and be right back.
+-> END
+* Of course, Lila. Anything for a friend.
+-> END

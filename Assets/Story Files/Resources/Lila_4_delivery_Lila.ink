@@ -3,89 +3,79 @@ VAR notification = ""
 VAR new_contact = ""
 VAR new_quest = ""
 
+
 -> intro
 
 ===intro===
 ~ new_quest = "Lila4.txt"
 # new_quest
+~ new_contact = "Lila"
+# new_contact
 
-Lila?Smiling "Hey {player_name}! How are you?"
+Lila?Smiling "Hi there {player_name}! Really quick, I wanted to thank you for helping me out with getting that health information for me the other day."
+Lila?Smiling "I got referred to a black doctor not too far away. We did a quick consultation to see how I like her and I already feel way more comfortable about going to the doctor."
+* I’m so glad to hear that! It sounds like it could be a good fit.
+-> Chat1
+* I’m happy you are on the path to a good relationship with a doctor!
+-> QuestIntro
 
-* Doing alright! Walking around, seeing what I can do to help before the party tomorrow.
-    -> Chat1
-* Good! Feeling good about the party tomorrow?
-    Lila "Yeah! "
-    -> QuestIntro
+== Chat1 ==
+Lila?Smiling "Me too. She’s super cool, I’m even thinking about referring my mom to her if she doesn't have a regular doctor she loves."
+Lila?Smiling "She could probably use a check-up too."
+* It’s good to see your doctor regularly!
+-> QuestIntro
+* How is your mom?
+-> Chat2
 
-==Chat1==
-Lila?Smiling "You've really given everyone so much this week. What are you planning on doing during the Block Party? You should just walk around and enjoy it!"
+== Chat2 ==
+Lila?Smiling "Oh, you know... she’s off traveling and seeing the world. She has always loved seeing the sights and exploring. I have souvenirs going all the way back to when I was a kid."
+Lila?Smiling "It’s been a while since she’s been in Bloomwood. Since she retired, we haven’t gotten to connect much, unfortunately, but we love each other a whole lot."
+Lila?Smiling "I’m a bit more of a homebody, but there’s no one quite as adventurous as mom!"
+* Hopefully she comes back sometime soon so y’all can catch up!
+-> QuestIntro
+* Traveling that much is so fun! I’d love to say hi when she stops in next.
+-> QuestIntro
 
-* I'm planning on it! I'll just take Saturday off and let everyone do their thing.
-    -> Chat2
-* I probably will, I've gotten closer to a lot of people this week and I want to catch up with them all.
-    -> QuestIntro
+== QuestIntro ==
+Lila?Neutral "Hey, along those lines, I was reading through some health pamphlets and started doing some research on some of my own symptoms. I learned about something called rheumatoid arthritis."
+* I know a bit, but can you tell me more?
+-> QuestOverview
 
-==Chat2==
-Lila?Smiling "Trisha's really excited to walk around and see everyone's stands. She's also going to sign up to be a mentor for my club!"
-Lila?Smiling "I convinced her to last night, so she can make some new connections."
-
-* I hope everyone feels more connected after this Block Party.
-    -> QuestIntro
-
-==QuestIntro==
-Lila?Neutral "I've felt more a part of Bloomwood than ever this week. Though, if I'm being honest, I am worried I'll be a little lonely tomorrow."
-
-* Really? You can share with me if you want.
-    -> QuestDetails1
-* I can stick around your booth if you'd like.
-    -> QuestDetails1
+== QuestOverview ==
+Lila?Neutral "Honestly, it’s a little sensitive to talk about so I don’t know a whole lot just yet, but RA is a chronic autoimmune disorder. It’s when your body’s immune system attacks your joints."
+Lila?Neutral "I don’t know if it’s genetic, but apparently it does appear commonly in certain families."
+Lila?Neutral "I’d really like to ask my mother about her health experiences and our family medical history, but I’m nervous to reach out to her in that way."
+Lila?Neutral "It’s just more difficult when it’s so close to home and advocating for myself in this manner is really new. I still have a lot to learn about myself and her."
+* Do you know if she’s had symptoms of autoimmune disorders before?
+-> QuestDetails1
+* It’s really important to know these things so you can inform yourself and doctors.
+-> QuestDetails1
 
 ==QuestDetails1==
-Lila?Neutral "Thanks. I know I have some really good friends here, like Trisha, Mrs. Lee, and you. Even Rashad and I have been connecting more this week."
-Lila?Neutral "I think I just wish I had more connections in general. I love my friends, but I need people around my age to hang out with aside from Trisha."
-Lila?Neutral "I think we spend so much time together we're starting to get on each other's nerves."
-
-* Have you talked to Trisha about it?
-    -> QuestDetails2
-*  That happens at a certain point in a relationship, when you're really close.
-    -> OptionalQuestDetails1
-
-==OptionalQuestDetails1==
-Lila?Neutral "I'm kind of worried what Trisha will think if I change our schedule around by going out with other people or spending time with new friends,"
-Lila?Neutral "but she'll always be invited, and she might enjoy the change too."
-
-* I think she'll appreciate you being honest with her.
-    -> QuestDetails2
+Lila?Neutral "I really don’t know! And I'm not entirely certain how to ask."
+Lila?Neutral "My mom is a very open person, but that doesn’t make it easier to have these conversations even as an adult. It’s neither of our faults, we just haven’t gotten there yet."
+Lila?Neutral "I really want to be better informed so I can make sure my doctor knows exactly what she needs to help me get the right care."
+* Do you have any family medical records?
+->  QuestDetails2
+* I can see what I can find out about how to start gathering medical records.
+-> QuestAcceptance
 
 ==QuestDetails2==
-Lila?Neutral "I have, but she thinks it might be more of a little sister-wish type of thing."
-Lila?Neutral "Teaching at the community center fills part of that for me, but she knows how much I wish I could have had someone to grow up with and take care of in the way only family can."
-
-* I didn't know that! Eddie is like a little brother though, right?
-    -> OptionalQuestDetails2
-* Accept the quest. 
-    -> QuestAcceptance
-
-==OptionalQuestDetails2==
-Lila?Neutral "He is. Something different about a little brother versus a little sister though!"
-
-* I agree. Let me ask around. I think I could find a few people to introduce you to.
-    -> QuestAcceptance
-* Makes sense. I have a few people in mind I think you would really connect with.
-    -> QuestAcceptance
+Lila?Neutral "Not really. My grandparents died when I was young, and like I said, mom and I haven't really talked about our shared medical history very much."
+Lila?Neutral "Overall, I just feel like I’m completely in the dark about really important things. Any help on approaching this would be so helpful"
+* I’ll do my best to find things that work for you. 
+-> QuestAcceptance
+* Completely, Lila. I don’t want you to feel lost.
+-> QuestAcceptance
 
 ==QuestAcceptance==
-Lila?Smiling "Really? Only if you have the time! I feel crazy that I'm relieved someone is offering to make friends for me. I'm too introverted to have the energy after a week at school."
-
-* Social connections are important! And relationships take time. You're not alone feeling this way.
-    -> Goodbye
-* It's no problem at all. 
-    -> Goodbye
+Lila?Smiling "Thank you so much."
+* Hopefully I can get you some information on health records!
+-> Goodbye
+* I’ll see what I can find out!
+-> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Let me know! I would love to meet some new people at the Block Party."
-
-* I will! See you soon.
-    ->END
-* There will definitely be plenty! I'll try to find who I can now though. Talk soon!
-    ->END
+Lila?Smiling "{player_name}, I really appreciate you continuing to help me like this. I feel a lot better even being able to confide this in you."
+* Of course, Lila! Anything for you. I’ll be right back.
+-> END

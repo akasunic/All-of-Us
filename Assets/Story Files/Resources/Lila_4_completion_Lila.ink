@@ -6,73 +6,92 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "Hi {player_name}! Good to see you."
-
-* {not TempGoodbye} Hey Lila! Ooo, what are you working on? It's beautiful!
-    -> Chat1
-* {not TempGoodbye} I talked to a few people who want to hang out this weekend! Are you too busy right now to talk?
-    -> ReadyToSolve
-* {TempGoodbye} Okay, I'm ready. Are you low on time?
-    -> ReadyToSolve
+Lila?Smiling "Hey{player_name}!"
+* Woah, Lila -- that’s a lot of books, do you need a hand?
+-> Chat1
+* Hey Lila, I found out some information that may be helpful for ya!
+-> ReadyToSolve
 
 ==Chat1==
-Lila?Neutral "Thank you! It's a tattoo, I've been designing them for a while now. I don't ink them all but I enjoy practicing the process."
-
-* You could definitely make a side hustle out of this.
-    -> Chat2
-* That's really cool. I do have a few updates about this weekend though, if you don't mind me interrupting your drawing.
-    -> ReadyToSolve
+Lila?Smiling "Aw, I’m okay. Thanks though! I’m just picking up some new books for the kids to read about farm animals and agriculture!"
+* That’s so fun! Hey, I think I have some info for you.
+-> ReadyToSolve
+* Do you have a favorite farm animal, Lila?
+-> Chat2 
 
 ==Chat2==
-Lila?Smiling "I always have too many things going on. At some point I'll make an art instagram page though, to guage interest. See if it's worth the time!"
-
-* I might know a few people who would support that idea! I hope you don't mind, I set up a few friend dates for you.
-    -> ReadyToSolve
+Lila?Smiling "It’s silly, but I really like cows! When my mom and I would go on road trips, I would always spot them and point out the window."
+Lila?Smiling "I may be lactose intolerant, but they’re still pretty cute to me!"
+* I’m sure the kids will find the books totally a-moo-sing"
+-> ReadyToSolve
+* It’s not as exciting as cows, but I think I found some solutions for you.
+-> ReadyToSolve
 
 ==ReadyToSolve==
-Lila?Neutral "Of course not!"
+Lila?Smiling "Oh?"
+* Let me show you!
+-> PuzzleInterface
+* Wait, let me make sure I’ve got everything I need.
+-> TempGoodbye
 
-* Alright, here's what I have.
-    -> PuzzleInterface
-* Let me make sure I found all the possibilities for you.
-    -> TempGoodbye
 
-// info solve: Mrs. Lee is attending a new yoga class on Sunday, and wants you to come with her.
-// info solve: Elisa said she would love to hang out if you're interested. She's going to find you at the Block Party tomorrow!
 ==PuzzleInterface==
 # turnin
 
-* good solution chosen
-    -> GoodSolution
-* bad solution chosen
-    -> BadSolution
+* They picked Option 1. 
+  -> Option1
+* They picked Option 2. 
+  -> Option2
+* They picked Option 3.
+  -> Option3
+* They picked Option 4. 
+  -> Option4
+  
 
-==GoodSolution==
-Lila?Smiling "I would love to!"
+==Option1==
+Lila?Neutral "While I feel like this is good advice, I was hoping for something more in-depth."
 
-* Glad I could find someone to help.
-    -> SolvedGoodbye
+* Hold on. Let me check my notes...
+  ->TempGoodbye
 
-==BadSolution==
-Lila?Neutral "I don't think so."
+==Option2==
+# correct
 
-* Mrs. Lee also suggested something else...
-    -> PuzzleInterface
-* I’ll go ask them again. See what else I can find for you to do.
-    -> TempGoodbye
+Lila?Smiling "I'm glad to know that there is research being done. Finding the right specialist is going to be a whole process, but if I found a doctor I can trust..."\
+Lila?Smiling "I don't suppose you know anyone?"
+  
+* I don't, but I'll keep my ears open!
+	-> SolvedGoodbye
+
+==Option3==
+Lila?Neutral "Thanks. I was hoping to get started before my next appointment; what else can you recommend?"
+
+* Oh! Let me check my notes. 
+ ->TempGoodbye
+	
+  
+==Option4==
+#correct
+
+Lila?Smiling "These are really helpful suggestions. I wouldn't have thought to include allergies, even though mom's soy allergy is a real pain."
+
+Lila?Smiling "I didn't know pregnancy loss was tied to family history, either! Thanks for letting me know."
+ 
+* If you need other support, please don’t hesitate to ask.
+-> SolvedGoodbye
+
+
 
 ==SolvedGoodbye==
-Lila?Smiling "I'm really looking forward to this weekend now. Thank you, {player_name}. I can always count on you! Stop by the community center next week and we can catch up. I'd better finish this work so I can go home and see Trisha. It's Friday night, grillin' night!"
+Lila?Smiling "Thank you, {player_name}. I think I'm ready to tackle this. I know Mom's open to talk about anything. I just need set up a call."
 
-* Always great to talk, Lila. I'll see you!
-    -> END
-* Until then! Have fun this weekend if I don't run into you!
-    -> END
+* I'm happy to help!
+  -> END
+
 
 ==TempGoodbye==
-Lila?Neutral "I'll be here!"
+Lila?Neutral "Take your time."
+* I’ll be back!
+-> END
 
-* Be right back!
-    -> END
-* See you soon.
-    -> END
+

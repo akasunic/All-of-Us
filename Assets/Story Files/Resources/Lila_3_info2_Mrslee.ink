@@ -5,84 +5,71 @@ VAR new_quest = ""
 
 -> intro
 
-==intro==
-Mrslee?Smiling "{player_name}! Wonderful see you."
+===intro===
 
-* It's lovely to see you too, Mrs. Lee!
-    -> Chat1
-* Happy you're here!
-    -> Chat1
+Mrslee?Smiling "{player_name}! Wonderful see you."
+* Hi, Mrs.Lee! It’s lovely to see you too!
+-> Chat1
+* Happy you’re here!
+-> Chat1
 
 ==Chat1==
-Mrslee?Smiling "How is you? How is party?"
-
-* Party setup is going well! And I'm only good if the party is.
-    -> Chat2
-* All going well. Have you talked to Lila recently?
-    -> Explain1
+Mrslee?Smiling "
+* How’s your exercise class been?
+-> Chat2
+* Mrs.Lee, can I ask a question?
+-> Explain1
 
 ==Chat2==
-Mrslee?Smiling "Not good. Take care of yourself first."
-
-* I promise I am. Taking care of my community is taking care of myself, too!
-    -> Chat3
-* I will tonight. A long bath sounds nice.
-    -> Explain1
+Mrslee?Smiling "Good! I love water fitness class! My friends meet there every week."
+Mrslee?Smiling "Afterwards, we get lunch together and talk about our families, about our gardens. about getting older."
+* That sounds like so much fun! 
+-> Chat3
+* I love that! Hey, do you have a minute for a question?
+-> Explain1
 
 ==Chat3==
-Mrslee?Smiling "But community is not you. Sit down for a minute! Relax."
+Mrslee?Smiling "It is. Between class, my friends, and helping Lila, I don't worry for Eddie too much."
 
-* I would love to, but I have to help out Lila today. Have you talked recently?
-    -> Explain1
-* There, I'm sitting. Don't worry about me. Have you talked to Lila today?
-    -> Explain1
+Mrs.Lee?Smiling "How about you? What are you up to?"
+* You’re a wonderful grandmother, Mrs.Lee. Hey, can I ask you something?
+-> Explain1
+* I was wondering if you knew how Eddie has made new friends?
+-> Explain1
 
 ==Explain1==
-Mrslee?Neutral "Yes, early today we talked. She is okay?"
-
-* Yes! Lila's fine. I was wondering if you could possibly give her some support on something she's going through. You are so close.
-    -> Explain2
-* Lila's doing well. She's just struggling with some hard things, and I was wondering if you could help.
-    -> Explain2
-
-==Explain2==
-Mrslee?Neutral "Lila has problem? She did not tell me?"
-
-* Well, yes. She has a hard time opening up about it. I know you are exploring your own health care journey right now since Mr. Lee passed away, but Lila is struggling with issues only women experience.
-    -> Suggestion1
-* It's a sensitive topic. Lila hasn't ever been to a gynycologist yet, and she's looking for advice on what to expect.
-    -> Suggestion2
+Mrslee?Neutral "I always try my best to answer, {player_name}.
+* A close friend is trying to meet some new people. Do you have any advice?
+-> Suggestion1
+* Hey, I’m trying to help a friend make some new connections. Any thoughts?
+-> Suggestion1
 
 ==Suggestion1==
+~ notification = "Mrslee_Day 3_Connecting with community can include deepening existing relationships_Lila3-3"
+# notification Mrslee_Day 3_Connecting with community can include deepening existing relationships_Lila3-3 
 
-~ notification = "Mrslee_Day 3_Mrs. Lee volunteers to talk to Lila about her women’s healthcare questions, and says she will attend the doctors appointment with her"
-# notification Mrslee_Day 3_Mrs. Lee volunteers to talk to Lila about her women’s healthcare questions, and says she will attend the doctors appointment with her
-
-Mrslee?Smiling "I love helping Lila! She is come to me today, we can talk then."
-Mrslee?Smiling "Lila is strong girl, but when she is not confident, someone has to push – off the cliff, you know? I go with her to appointment."
-
-* I don't know if she needs a push right now, more someone to confide in.
-    -> Suggestion2
-* That would be great. Thanks Mrs. Lee! I'll see you!
-    -> Goodbye
+Mrslee?Neutral "Sometime I have weekly video calls with old friends and few ladies from fitness class. I feel really supported."
+Mrslee?Neutral "Making new friends older hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
+Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now."
+* Ah, I see. Do you know how Eddie has made new friends?
+-> Suggestion2
+* That’s really helpful, thank you Mrs.Lee!
+-> Goodbye
 
 ==Suggestion2==
+~ notification = "Mrslee_Day 3_When entering a new space, bring someone you trust with you for support_Lila3-4"
+# notification Mrslee_Day 3_When entering a new space, bring someone you trust with you for support_Lila3-4 
 
-~ notification = "Mrslee_Day 3_Mrs. Lee says she can talk to Lila to support her, and answer her questions about women’s healthcare_Lila3"
-# notification Mrslee_Day 3_Mrs. Lee says she can talk to Lila to support her, and answer her questions about women’s healthcare_Lila3
-
-Mrslee?Smiling "I can do this. Mr. Lee took care of general health, but he had nothing to do with womanhood. I've been taking care of that whole life. If Lila need help, I support her."
-
-* Are you sure?
-    Mrslee?Neutral "Yes, "
-    -> Suggestion1
-* Thank you, Mrs. Lee! I know she will be happy to have someone with experience that she trusts. I have to go, but I will let her know!
-    -> Goodbye
+Mrslee?Smiling "Very valuable for Eddie have people who connect him to heritage. He reach out to groups and ask friends to bring him to events. Going with someone make him feel more comfortable in new place."
+Mrslee?Smiling "In a new place, having buddy can be very special. It make him feel okay to go alone after some time."
+* Thank you so much, Mrs.Lee! That’s really helpful!!
+-> Goodbye
+* That makes a lot of sense, thank you!
+-> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling "Happy I help. Lila is important for me. Bye bye!"
-
-* Thanks again, bye! 
-    ->END
-* Bye!
-    ->END
+Mrslee?Smiling ""I so happy I help, {player_name}. I go now, but stop by and say hello soon. See you!"
+* Goodbye, Mrs.Lee!
+-> END
+* Thanks so much for your help, Mrs. Lee. Have the best time dancing. See you!
+-> END

@@ -5,81 +5,78 @@ VAR new_quest = ""
 
 -> intro
 
-== intro ==
-Mrslee?Smiling "{player_name}! Hello!"
+===intro===
 
-* Hi Mrs. Lee! How are you?
-    -> Chat1
-* Hello! Where are you headed with that swimsuit? 
-    -> Chat1
+Mrslee?Smiling "Hi {player_name}. How are you today?
+
+* I’m doing well, Mrs.Lee! What are you eating?
+-> Chat1
+* Doing great! I just had lunch and it's a beautiful day. How about you?
+-> Chat1
 
 ==Chat1==
-Mrslee?Smiling "Water fitness! Me and Korean ladies meet there every week."
-
-* That sounds like fun!
-    -> Chat2
-* Do you do any other fitness classes here in the community center?
-    -> Explain1
+Mrslee?Smiling "I am eating some lentil soup that Mr.Calindras made especially for me. It is so good! Perfect for a nice day out like today."
+* That sounds delicious! I’ll have to ask him for the recipe!
+-> Chat2
+* What a good lunch! I was wondering if I could ask you for some help?
+-> Explain1
 
 ==Chat2==
-Mrslee?Smiling "It is. Been good to fill time so I don't worry for Eddie too much."
+Mrslee?Smiling "Next time, I can bring enough to share! I will bring your favorite citrus candies too." 
+Mrslee?Smiling " We can eat in the park, maybe. I love watching the birds. Eddie says not to feed the ducks, though."
 
-* He's doing so well, you are a great grandmother Mrs. Lee.
-    -> Chat3
-* Any other fitness classes you are using to fill your time too?
-    -> Explain1
+*Don't feed the ducks? Why? 
+->Chat3
+* You’re the best! By the way, I have some questions you may be able to help with.
+-> Explain1
 
 ==Chat3==
-Mrslee?Smiling "Aw thank you. He and Lila are my babies."
+Mrslee?Neutral "Eddie says human foods aren't healthy for them. Makes them full, but doesn't contain the right nutrients." 
+Mrslee?Neutral "I feel sad when they quack for snacks, but I don't want to make them sick. So, I don't share." 
 
-* I was actually wondering, do you do any other fitness activities here?
-    -> Explain1
+*I didn't know that! Hey, can I ask a question about health? 
+->Explain1
+Smarts run in the family! Can I borrow your smarts? 
+->Explain1
 
 ==Explain1==
-Mrslee?Neutral "Yes, I think yesterday about trying yoga after Block Party on Sunday."
-
-* Do you think Lila might be interested in doing it with you?
-    -> Explain2
-* Yoga sounds relaxing. Would you be willing to invite Lila?
-    -> Explain2
-
-==Explain2==
-Mrslee?Neutral "Lila? She want to do yoga?"
-
-* If you invite her I think she would!
-    -> Suggestion1
-* She might! I was thinking she might be more starting a new activity and meeting new people with you.
-    -> Suggestion2
+Mrslee?Neutral "Tell me what I do to help."
+* Amazing! A friend is worried about a potential chronic illness diagnosis.
+-> Suggestion1
 
 ==Suggestion1==
+~ notification = "Mrslee_Day 4_Learn to listen to your body, and give yourself permission to rest when needed_Lila4-1"
+# notification Mrslee_Day 4_Learn to listen to your body, and give yourself permission to rest when needed_Lila4-1
 
-~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to water fitness to spend time with Mrs. Lee and her friends"
-# notification Mrslee_Day 4_Mrs. Lee invites Lila to come to water fitness to spend time with Mrs. Lee and her friends
+Mrslee?Neutral "Chronic illnesses are not easy. Tell your friend that many people have very, very good lives with chronic illness."
+Mrslee?Neutral "I have many friends who manage ongoing health challenges. It can be hard to stay on top of everything."
+Mrslee?Neutral "It is common to feel nervous. It is very important to take care of yourself and rest when your body says to rest."
+Mrslee?Neutral "Many struggle with life changes after diagnosis. There are specific symptoms depending on the illness, but fatigue and sleep problems are very common."
+Mrslee?Neutral "if you are tired or need to rest, it is always better to lie down than to push through."
+Mrslee?Smiilng "It can be hard. We all want to do everything, all the time. But that is not always possible."
 
-Mrslee?Smiling "She can come to water fitness with me!"
-
-* She might like that, but I think she might be more interested in something she can meet new people at. She knows all your friends!
-    -> Suggestion2
-* Good idea! I'll tell her the time and to meet you there.
-    -> Goodbye
+* That's useful insight. What else should I tell her? 
+->Suggestion2
+* How can she find the right type of care?
+-> Suggestion2
 
 ==Suggestion2==
+~ notification = "Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest development_Lila4-2"
+# notification Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest development_Lila4-2 
 
-~ notification = "Mrslee_Day 4_Mrs. Lee invites Lila to come to yoga with her, where both of them will be new students_Lila4"
-# notification Mrslee_Day 4_Mrs. Lee invites Lila to come to yoga with her, where both of them will be new students_Lila4
+Mrslee?Smiling "Learn as much as possible. There's no such thing as too much reading. or asking too many questions." 
+Mrslee?Smiling "Scientists and doctors learn more every year. Medicine and technology change so fast! There are advancements everyday that help people be healthy."
+Mrslee?Neutral "Your primary care doctor will help know what type of specialist to find. Chronic illness often requires a team."
 
-Mrslee?Smiling "Oh, Lila do need to move more than now. I invite her to Sunday class!"
 
-* She could be interested in something else too.
-    -> Suggestion1
-* Sunday would be great. Right after the Block Party. Maybe she'll have met some of the yoga attendees there!
-    -> Goodbye
+* Thank you, Mrs.Lee!
+-> Goodbye
+* That sounds 
+-> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling "Always excited to do things with Lila! I have to go. Class start now!"
-
-* Thanks Mrs. Lee, see you around! 
-    ->END
-* We all love Lila! Bye now!
-    ->END
-
+Mrslee?Smiling "Happy to share. Hope it helps."
+* I’ll never say no to more time with you, or soup!
+-> END
+* See ya!
+-> END
