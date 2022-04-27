@@ -9,9 +9,9 @@ VAR new_quest = ""
 ~ new_quest = "Mrcalindas4.txt"
 # new_quest
 
-Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. My granddaughter Brooklyn is coming to visit and she drew a picture of all the things she wants to do in Bloomwood." 
+Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. My granddaughter Brooklyn is coming to visit. She drew a picture of all the things she wants to do in Bloomwood." 
 
-* Hello Mr. Calindas, this looks so sweet. Wait. Is that a unicorn?
+* Hello Mr. Calindas, this is so sweet. Wait. Is that a unicorn?
   -> Chat1
 
 
@@ -19,7 +19,7 @@ Mrcalindas?Smiling "Oh! {player_name}, come here. I want to show you something. 
 
 Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't exist. She loves animals and knows many little facts about them. This is Jessica's oldest, you know." 
 
-* Oh, yes! She's gotten so big. I'm really excited to see her. I sadly don't have a unicorn up my sleeve, though. Hah.
+* I'm really excited to see her. I sadly don't have a unicorn up my sleeve.
   -> Chat2
   
   * Hey Mr. Calindas! This is so cute, how old is Brooklyn now?
@@ -30,13 +30,15 @@ Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't e
 
 Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her visit. It's exciting, but she's autistic, and changes to her routine can be hard." 
 
-* Oh, really? How old is Brooklyn now? -> QuestIntro
+* Oh, really? How old is Brooklyn now? 
+-> QuestIntro
 
-* My cousin is autistic, and he really thrives with routine and predictability. -> QuestIntro
+* My cousin is autistic. He really thrives with routine and predictability. 
+-> QuestIntro
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Brooklyn is 9, now. She's such a determined little girl; now that we know that autism is why she struggles with some things, we have better tools for her."
+Mrcalindas?Neutral "Brooklyn is 9. She's such a determined little girl; now that we know that autism is why she struggles with some things, we have better tools for her."
 
 Mrcalindas?Neutral "Jessica is nervous about her staying with us for a whole week, but she has a work commitment, and I think we are a better childcare option than hiring someone."
 
@@ -51,21 +53,24 @@ Mrcalindas?Neutral "I would love to know what resources exist in Bloomwood to he
 
 ==QuestDetails1==
 
-Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that Brooklyn needs understanding adults who know how to respond to her sensory needs. She knows she's different; what I want is to make sure she doesn't feel badly for that."
+Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that Brooklyn needs understanding adults who know how to respond to her sensory needs." 
+
+Mrcalindas?Neutral "She knows she's different; what I want is to make sure she doesn't feel badly for that."
 
 Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be accessible to people with different disabilities."
 
 
-* I would love to help with that. Can you be specific about some of the needs Brooklyn has?
+* Can you be specific about some of the needs Brooklyn has?
   -> QuestDetails2
 * Okay, I think I can try and find some tips!
   -> QuestAcceptance
 
 ==QuestDetails2==
 Mrcalindas?Neutral "Oh yes. Sometimes the sounds of everything can make her ears hurt. Also, if there's a lot going on and no way to step back, sometimes she can feel very overstimulated."
+
 Mrcalindas?Neutral "Knowing more about the possible activities can help us prepare." 
 
-* Brooklyn is such a great kid. I really want her to feel at home in Bloomwood, so I'll see what I can find out!
+* Brooklyn is such a great kid. I'll see what I can find out!
   -> QuestAcceptance
 
 
@@ -73,7 +78,7 @@ Mrcalindas?Neutral "Knowing more about the possible activities can help us prepa
 Mrcalindas?Smiling "Thank you so much {player_name}. I appreciate you helping me plan ahead."
 Mrcalindas?Smiling "Don't worry, I don't expect unicorns." 
 
-* Well, I can't promise a real unicorn, but I can promise that I'll do what I can.
+* Well, I can't promise a unicorn, but I promise that I'll do what I can.
   -> Goodbye
 
 

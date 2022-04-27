@@ -75,7 +75,7 @@ Rashad?Smiling "I really do think a little knowledge is the most powerful tool w
 
 Rashad?Smiling "Let's see. We covered classes. The other two things the library can provide are access to online portals and books..."
 
-Rashad?Smiling? "...both about the science around diabetes, and about how to meal plan and cook for someone with diabetes."
+Rashad?Smiling "...both about the science around diabetes, and about how to meal plan and cook for someone with diabetes."
 
 Rashad?Smiling "We can help them use the internet to find safe and secure resources with reliable information - either in technology class or one-on-one."
 

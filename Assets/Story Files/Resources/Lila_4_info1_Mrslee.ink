@@ -15,7 +15,7 @@ Mrslee?Smiling "Hi {player_name}. How are you today?
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "I am eating some lentil soup that Mr.Calindras made especially for me. It is so good! Perfect for a nice day out like today."
+Mrslee?Smiling "I am eating lentil soup that Giancarlo made especially for me. It is very good! Perfect for a nice day out like today."
 * That sounds delicious! I’ll have to ask him for the recipe!
 -> Chat2
 * What a good lunch! I was wondering if I could ask you for some help?
@@ -27,12 +27,12 @@ Mrslee?Smiling " We can eat in the park, maybe. I love watching the birds. Eddie
 
 *Don't feed the ducks? Why? 
 ->Chat3
-* You’re the best! By the way, I have some questions you may be able to help with.
+* You’re the best! By the way, do you have time for a question?
 -> Explain1
 
 ==Chat3==
 Mrslee?Neutral "Eddie says human foods aren't healthy for them. Makes them full, but doesn't contain the right nutrients." 
-Mrslee?Neutral "I feel sad when they quack for snacks, but I don't want to make them sick. So, I don't share." 
+Mrslee?Neutral "I feel sad when they beg for snacks, but I don't want to make them sick. So, I don't share." 
 
 *I didn't know that! Hey, can I ask a question about health? 
 ->Explain1
@@ -40,7 +40,7 @@ Smarts run in the family! Can I borrow your smarts?
 ->Explain1
 
 ==Explain1==
-Mrslee?Neutral "Tell me what I do to help."
+Mrslee?Neutral "Ask me anything!"
 * Amazing! A friend is worried about a potential chronic illness diagnosis.
 -> Suggestion1
 
@@ -61,12 +61,14 @@ Mrslee?Smiilng "It can be hard. We all want to do everything, all the time. But 
 -> Suggestion2
 
 ==Suggestion2==
-~ notification = "Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest development_Lila4-2"
-# notification Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest development_Lila4-2 
+~ notification = "Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest developments_Lila4-2"
+# notification Mrslee_Day 4_Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest developments_Lila4-2 
 
 Mrslee?Smiling "Learn as much as possible. There's no such thing as too much reading. or asking too many questions." 
 Mrslee?Smiling "Scientists and doctors learn more every year. Medicine and technology change so fast! There are advancements everyday that help people be healthy."
 Mrslee?Neutral "Your primary care doctor will help know what type of specialist to find. Chronic illness often requires a team."
+
+
 
 
 * Thank you, Mrs.Lee!

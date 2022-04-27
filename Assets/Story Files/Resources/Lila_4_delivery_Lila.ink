@@ -9,15 +9,13 @@ VAR new_quest = ""
 ===intro===
 ~ new_quest = "Lila4.txt"
 # new_quest
-~ new_contact = "Lila"
-# new_contact
 
 Lila?Smiling "Hi there {player_name}! Really quick, I wanted to thank you for helping me out with getting that health information for me the other day."
-Lila?Smiling "I got referred to a black doctor not too far away. We did a quick consultation to see how I like her and I already feel way more comfortable about going to the doctor."
+Lila?Smiling "I got referred to a Black doctor not too far away. We did a quick consultation to see how I like her and I already feel way more comfortable about going to the doctor."
 * I’m so glad to hear that! It sounds like it could be a good fit.
 -> Chat1
 * I’m happy you are on the path to a good relationship with a doctor!
--> QuestIntro
+-> Chat1
 
 == Chat1 ==
 Lila?Smiling "Me too. She’s super cool, I’m even thinking about referring my mom to her if she doesn't have a regular doctor she loves."
@@ -33,12 +31,13 @@ Lila?Smiling "It’s been a while since she’s been in Bloomwood. Since she ret
 Lila?Smiling "I’m a bit more of a homebody, but there’s no one quite as adventurous as mom!"
 * Hopefully she comes back sometime soon so y’all can catch up!
 -> QuestIntro
-* Traveling that much is so fun! I’d love to say hi when she stops in next.
+* I’d love to say hi when she stops in next.
 -> QuestIntro
 
 == QuestIntro ==
-Lila?Neutral "Hey, along those lines, I was reading through some health pamphlets and started doing some research on some of my own symptoms. I learned about something called rheumatoid arthritis."
-* I know a bit, but can you tell me more?
+Lila?Neutral "Hey, along those lines, I started doing some research on some of my own symptoms. I learned about something called rheumatoid arthritis."
+Lila?Neutral "Can I talk this out with you a little bit? I'm only just learning about autoimmune diseases."
+* I know some, but can you tell me more?
 -> QuestOverview
 
 == QuestOverview ==

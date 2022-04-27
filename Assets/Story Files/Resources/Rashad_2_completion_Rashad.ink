@@ -16,11 +16,11 @@ Rashad?Smiling "Hey hey, {player_name} it's nice to see you again. How's it goin
  
  
 ==Chat1==
-Rashad?Neutral "Okay, I won’t ask about the glitter. All that I ask is please don’t get it in the books. That stuff <i>travels</i>, but I’m sure you know that, clearly. Okay, I’ll stop talking now."
+Rashad?Neutral "Okay, I won’t ask about the glitter. All that I ask is please don’t get it in the books. That stuff travels, as you clearly know.... Okay, I’ll stop talking now."
  
-* Trust me, I know. In Lila’s defense, she did warn me.
+* Trust me. I know. In Lila’s defense, she did warn me.
   -> Chat2
-* True! Also, I asked Lila and Mr. Calindas for advice, here’s what I have…
+* True! Also, I asked Lila and Mr. Calindas for advice, here’s what I have...
   -> ReadyToSolve
  
  
@@ -35,7 +35,7 @@ Rashad?Neutral "That's great to hear, {player_name}. I've really been going thro
  
 * Excellent! Let's talk about it.
   -> PuzzleInterface
-* On second thought, I think I might need some more time.
+* On second thought, I might need some more time.
   -> TempGoodbye
  
 ==PuzzleInterface==

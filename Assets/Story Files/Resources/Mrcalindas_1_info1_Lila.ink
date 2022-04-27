@@ -18,7 +18,7 @@ Lila?Smiling "Hey {player_name}! How are you feeling today?"
 
 ==Chat1==
 
-Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try and get outside pretty frequently." 
+Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fresh air is really great for clearing the brain, you know? I try to get outside often." 
  
 * I'm glad naptime is built in so you get a minute to relax.
   -> Chat2
@@ -27,11 +27,11 @@ Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fre
 
 ==Chat2==
 
-Lila?Smiling "Breaks are important. Teaching young children is awesome, but they give me a run for my money. I definitely need to take a break now and then to be my best self." 
+Lila?Smiling "Breaks are important. Teaching young children is awesome, but they give me a run for my money. I definitely need a break now and then to be my best self." 
 
 * I heart <i>that</i>. I know you're taking a break, but could I ask you a question?
   -> Explain1
-* Well, I don't want to interrupt you channeling your best self, but could I ask your opinion on something?
+* I don't want to interrupt your best self, but could I get an opinion?
   -> Explain1
 
 
@@ -40,7 +40,7 @@ Lila?Smiling "Oh, no problem, {player_name}. What can I help you with?"
 
 * Mr Calindas is working on some long-term planning and applying, and he wants community input.
   -> Explain2
-* I was hoping to talk to you about what you want for Bloomwood. Not, like, today, but going forward.
+* I was hoping to talk to you about what you want for Bloomwood going forward.
   -> Explain2
 
 ==Explain2==
@@ -74,15 +74,16 @@ Lila?Smiling "Oh, and it can be hard to get to the health center for people who 
 # notification Lila_Day 1_Education can reduce the stigma faced by LGBTQIA+ community members_Mrcalindas1-2 
 
 
-Lila?Smiling "Well, it's important for communities of color and LGBTQIA folks get the help they need with no judgements."
-Lila?Smiling "We have historically faced a lot of stigma, and that harms access to care. Studies show that even one supportive adult can prevent a transgender kid from committing suicide. We should be talking about that."
+Lila?Smiling "Well, it's important for communities of color and LGBTQIA+ folks get the help they need with no judgements."
+Lila?Smiling "We have historically faced a lot of stigma, and that harms access to care."
+Lila?Smilng "Studies show that even one supportive adult can prevent a transgender kid from committing suicide. We should be talking about that."
 Lila?Smiling "Oh, and this might seem really obvious, but mental health resources are useful for everyone. We all get stressed or have hard times." 
 
-* Wow, Lila. I didn't know how valuable a single supportive adult can be! I'll bring all this up with Mr. Calindas.
+* Wow, Lila! I'll bring all this up with Mr. Calindas.
   -> Goodbye
 
 ==Goodbye==
-Lila?Smiling "I'm so happy I could help like this. Let me know if you need any other ideas, okay? I'm going to go grab some tea. I'll see you around okay? Don't forget to take a break!" 
+Lila?Smiling "I'm so happy I could help. Let me know if you need any other ideas, okay? I'm going to go grab some tea. Don't forget to take a break!" 
 
 * I won't! Thanks for your help, Lila. Enjoy the tea!
  -> END

@@ -9,8 +9,6 @@ VAR new_quest = ""
 ==intro==
 ~ new_quest = "Lila3.txt"
 # new_quest
-~ new_contact = "Lila"
-# new_contact
 
 Lila?Neutral "Hi, {player_name}! It's good to see you."
 * Hey Lila! How are you doing? 
@@ -41,7 +39,7 @@ Lila?Neutral "I feel really at home there, which is such a shift from how I’ve
 ==QuestIntro==
 Lila?Neutral "Aw, thank you." 
 Lila?Neutral "I’ve always felt a little bit lonely in Bloomwood, even though I have close friends here who care about me, like you, Mrs. Lee and Eddie. Trisha, of course."
-Lila?Neutral "The group has helped a lot with feeling connected in general, but I still feel a little isolated. There aren't a lot of queer people I can just grab a cup of coffee with. Ya know?"
+Lila?Neutral "The group has helped with feeling connected in general, but I still feel a little isolated. There aren't a lot of queer people I can just grab a cup of coffee with. Ya know?"
 Lila?Neutral "Being around Trisha is wonderful, but I wish I had more of a community in that sense."
 
 * I wouldn't have guessed, Lila! Tell me more?
@@ -50,7 +48,7 @@ Lila?Neutral "Being around Trisha is wonderful, but I wish I had more of a commu
 -> QuestAcceptance
 
 ==QuestDetails1==
-Lila?Neutral "Well, it can be really hard to find and meet people as a whole, but especially people you relate to."
+Lila?Neutral "Well, it can be really hard to find and meet people as a whole, but especially people I relate to."
 Lila?Neutral "There isn’t always a lot of open discussion about one’s personal identity and in some places, it isn’t seen as appropriate conversation."
 Lila?Neutral "As a Black, queer woman, my experiences sometimes feel really lonely and specific." 
 Lila?Neutral "Finding other people who exist at the same intersection of identities that I do is hard."

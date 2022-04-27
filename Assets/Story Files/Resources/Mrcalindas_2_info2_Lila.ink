@@ -7,25 +7,25 @@ VAR new_quest = ""
 
 ===intro===
 
-Lila?Smiling "Hey {player_name}! It's great to run into you." 
+Lila?Smiling "Hey {player_name}! It's good to see you" 
 
-* Lila! Great timing! I stopped in on my way to find you; I need to return these books before Rashad gets after me!
+* Lila! Great timing! Are you going over to the library?
   -> Chat1
-* Hey Lila! It's good to see you. Looks like you've got quite a stack of books there.
+* Hey Lila! Want me to take those books to the library for you?
   -> Chat1
 
 ==Chat1==
-Lila?Smiling "Ooo. Are you bringing back? I just checked out some new picture books for my class. I'm really excited to share them with the kids." 
+Lila?Smiling "Ooo. Nah - I just checked out these new picture books for my class. I'm really excited to share them with the kids." 
 
-* That sounds sweet. I'm just returning some cookbooks I took out. I managed to make some great chili yesterday.
+* Sweet! I need to return some cookbooks. I made some great chili yesterday.
   -> Chat2
-* I bet the kids really appreciate that! I just got cookbooks. Hey, can I ask you a quick question?
+* I bet the kids really appreciate that! Hey, can I ask you a quick question?
   -> Explain1
 
 ==Chat2==
 Lila?Smiling "Chili, eh? I have a great recipe for vegan chili if you ever want to try it. It's so easy, the kids in my class make it with me."
 
-* Ooo. I may have to take you up on that. Oh, hey, can I ask you a question?
+* I may have to take you up on that. Hey, can I ask a question?
   -> Explain1
 
 
@@ -38,11 +38,11 @@ Lila?Neutral "Sure, {player_name}. What's going on?"
   -> Explain2
 
 ==Explain2==
-Lila?Neutral "I did help get Mrs. Lee a volunteer position. She's really wonderful with the children, and they love her." 
+Lila?Neutral "I advocated for Mrs. Lee to build a volunteer position. She's really wonderful with the children, and they love her." 
 
-Lila?Smiling "I don't know if which one of us is getting the most benefit; I love having her help!"
+Lila?Smiling "I don't know which one of us is getting the most benefit; I love having her help!"
 
-* That's so good to hear. I was wondering if you could tell me more about the benefits of seniors volunteering?
+* Could you tell me more about the benefits of seniors volunteering?
   -> Suggestion1
 
 
@@ -70,7 +70,7 @@ Lila?Smiling "Not just that, but volunteering can also increase mental cognition
 
 Lila?Smiling "Well, I mentioned depression; isolation and loneliness are real issues for seniors, especially after losing a spouse. That's one thing volunteering can help with."
 
-Lila?Smiling "One of the things that keeps Mrs. Lee sharp is that she has things to look forward to, and people to do them with. Volunteering is part of that!
+Lila?Smiling "One of the things that keeps Mrs. Lee sharp is that she has things to look forward to, and people to do them with. Volunteering is part of that!"
 
 Lila?Smiling "There's so many different volunteering activities available. It just depends on what a person likes, and what makes them feel good." 
 
@@ -79,8 +79,8 @@ Lila?Smiling "There's so many different volunteering activities available. It ju
   -> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Well, you know I'm happy to help. If you know any seniors looking for an opportunity, the library and the community center are great places to start."
-Lila?Smiling "Don't be afraid to spread the word. I'm going to check these books out and get back. Catch you soon, {player_name}!"
+Lila?Smiling "Well, you know I'm happy to help. If you know any seniors looking for an opportunity, the library and the Community Center are great places to start."
+Lila?Smiling "Don't be afraid to spread the word! Catch you soon, {player_name}!"
 
 * Thanks Lila, have an awesome day!
   ->END

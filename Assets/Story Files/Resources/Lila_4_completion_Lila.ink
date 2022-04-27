@@ -13,7 +13,7 @@ Lila?Smiling "Hey{player_name}!"
 -> ReadyToSolve
 
 ==Chat1==
-Lila?Smiling "Aw, I’m okay. Thanks though! I’m just picking up some new books for the kids to read about farm animals and agriculture!"
+Lila?Smiling "Aw, I’m okay. Thanks though! I just checked out some new books for the kids to read about farm animals and agriculture!"
 * That’s so fun! Hey, I think I have some info for you.
 -> ReadyToSolve
 * Do you have a favorite farm animal, Lila?
@@ -57,7 +57,7 @@ Lila?Neutral "While I feel like this is good advice, I was hoping for something 
 ==Option2==
 # correct
 
-Lila?Smiling "I'm glad to know that there is research being done. Finding the right specialist is going to be a whole process, but if I found a doctor I can trust..."\
+Lila?Smiling "I'm glad to know that there is research being done. Finding the right specialist is going to be a whole process, but if I found a doctor I can trust..."
 Lila?Smiling "I don't suppose you know anyone?"
   
 * I don't, but I'll keep my ears open!

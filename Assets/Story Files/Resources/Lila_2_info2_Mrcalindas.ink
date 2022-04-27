@@ -63,8 +63,9 @@ Mrcalindas?Neutral "Not every doctor is a good fit for every patient; it is okay
 Mrcalindas?Smiling "Let your friend know that we are here to support her. If she is comfortable with the idea, she can come see me directly and I will help narrow her choices." 
 Mrcalindas?Smiling "Each of our doctors lists useful information on their provider page on the website, including what languages they speak and maybe what their religious background is."
 Mrcalindas?Smiling "Also, there are online directories one can use to search for doctors of color or LGBTQIA+ doctors."
-Mrcalindas?Smiling "The same is true for therapists and other types of health providers. Marginalized communities really come together and put this information together as a way of looking out for another."
-Mrcalindas?Smiling "Different types of care come from a lot of places -- you can find it in your local community and at the doctor’s office!"
+Mrcalindas?Smiling "The same is true for therapists and other types of health providers." 
+Mrcalindas?Smiling "Marginalized communities really come together and put this information together as a way of looking out for another."
+Mrcalindas?Smiling "Different types of care come from different places -- you can find it in your local community and at the doctor’s office!"
 
 
 * Oh good! What about if she freezes up when she goes to the doctor?

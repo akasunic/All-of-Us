@@ -14,19 +14,19 @@ Rashad?Smiling "Hi {player_name}!"
 -> Chat1
 
 ==Chat1==
-Rashad?Smiling "I’ve been rereading some of my favorite books from when I was younger. No surprise, this one is science fiction, but I love a good action packed book about space. What can I say?"
+Rashad?Smiling "I’ve been rereading some of my favorite books. No surprise, this one is science fiction. I love a good action packed book about space."
 Rashad?Smiling "I wanna get the kids into them someday too."
-* I’m sure your kids are gonna love sci-fi just as much as you do.
+* I’m sure your kids are gonna love sci-fi!
 -> Chat2
 * Hey ... Can I ask a question?
 -> Explain1
 
 ==Chat2==
 Rashad?Smiling "I hope they do! Octavia and Charles have been asking us to read from chapter books, which is a nice change!"
-Rashad?Smiling "I started as the youth librarian in Bloomwood, so you know the YA and kids section here is solid."
+Rashad?Smiling "I started as the youth librarian in Bloomwood, so you know the young adult and kids section here is solid."
 Rashad?Smilng "We stop by after school when we can, and let them pick out their own books."
 Rashad?Smiling "When my mom is around, they like listening to her read because she’s so expressive. They say my voices are just as good, but I doubt it."
-* It must be really nice bonding with your kids over something you love.
+* It must be nice bonding with your kids over something you love.
 -> Chat3
 * That’s so sweet! Hmm.. I have a question.
 -> Explain1
@@ -42,8 +42,7 @@ Rashad?Smiling "It is! I feel really cool showing them around the library and le
 Rashad?Neutral "Absolutely. Is everything okay? Can I do something to help?"
 * Do you have any advice for a Black woman with doctor anxiety?
 -> Explain2
-* Maybe. How has your mom handled her health in the past?
--> Suggestion1
+
 
 ==Explain2==
 Rashad?Neutral "Tell your friend it’s okay to be nervous, but it’s really important to take care of yourself."
@@ -73,8 +72,8 @@ Rashad?Smiling "Sometimes it’s hard to make an appointment if you are still ho
 # notification Rashad_Day 2_Connecting with other Black women might give Lila the support she's looking for_Lila2-2
 
 Rashad?Smiling "Outside of going to the doctor, I really recommend that she connect with other Black women."
-Rashad?Smiling "Both my mom and Cheryl's have benefited from support groups. General resources were really helpful."
-Rashad?Smiling "But meeting other Black women who were dealing with the same health concern was a game changer."
+Rashad?Smiling "Both my mom and Cheryl's have benefited from support groups."
+Rashad?Smiling " General resources were really helpful. But meeting other Black women who were dealing with the same health concern was a game changer."
 Rashad?Smiling "They also connect each other to resources. The specialist referrals alone saved Mom so much heartache."
 Rashad?Smiling "When one of them needs help, they advocate for one another. I know that type support has been invaluable. I can send you the information."
 

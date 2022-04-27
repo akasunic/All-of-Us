@@ -8,13 +8,13 @@ VAR new_quest = ""
 ===intro===
 Rashad?Smiling "Hey there {player_name}. How are you?"
 * Oh you know! Enjoying the day, how about yourself?
-  -> Chat1
+ -> Chat1
 * Pretty good, what are you up to?
 -> Chat1
 
 
 ==Chat1==
-Rashad?Neutral "Not much. I’m revising a couple of job listings, but otherwise it’s a pretty calm day around here. I think I’m going to bring some books home for the kids."
+Rashad?Neutral "Not much. I’m revising a grant proposal, but otherwise it’s a pretty calm day around here. I think I’m going to bring some books home for the kids."
 
 * Oh, cool. Good luck hiring! Hey, do you have a minute?
 -> Explain1
@@ -38,22 +38,22 @@ Rashad?Smiling "Plus all our classes and workshops - sewing, technology, gardeni
 
 ==Explain1==
 Rashad?Neutral "What’s going on?"
-* I’m helping Lila with a project. Do you know what equipment is needed for a speaker event?"
+* I’m helping Lila. Do you know what equipment is needed for a speaker event?"
   -> Explain2
 * Lila needs some help. Do you have any experience with event hosting?
   -> Explain2
 
 ==Explain2==
-Rashad?Neutral "It depends what they want, but usually I would suggest a sound system suited to their space, a couple of microphones, a projector and screen to display a slideshow, and a podium if wanted."
+Rashad?Neutral "It depends, but usually I suggest a sound system suited to the space, a microphone, and a projector and screen to display any slideshow."
 Rashad?Neutral "Venues sometimes have equipment already setup. Where is Lila hosting her event?"
 * At the Community Center. Have you hosted events like this before?
   -> Explain3
 
 ==Explain3==
 Rashad?Smiling "Yeah! The library hosts events here, the park and other places in the community. It’s a lot of fun!"
-* That’s so awesome! Lila is looking for someone to help her set up the equipment.
+* That’s awesome! Lila is looking for someone to help set up the equipment.
 -> Suggestion1
-* That’s so cool! Lila is looking for people to help set up some activities.
+* That’s cool! Lila is looking for people to help set up some activities.
 -> Suggestion1
 
 
@@ -77,11 +77,11 @@ Rashad?Smiling "There might be some community grants available to help finance a
 
 Rashad?Smiling "It can take some time to get the paperwork moving for funding, so she might need to borrow equipment for the first event."
 Rashad?Smiling "I think a community is stronger when the various institutions work together; I can pull our extra equipment out of storage and set everything up for her." 
-Rashad?Smiling "You did the right thing by heading over here - Mr. Rogers says to look for the helpers, and I'm ready to be a helper. Building community support starts with looking for the support structures that already exist."
+Rashad?Smiling "You did the right thing by heading over here -  Building community support starts with looking for the support structures that already exist."
 Rashad?Smiling "It's been a while since I worked a show, but she has the library's backing. I'll get her setup and run a/v for her while she gets this thing started." 
 Rashad?Smiling "Then, if she wants the help, I can pitch in for future events until someone in the group is ready to take over." 
 
-* Thank you so much, Rashas. This will really mean a lot to Lila!
+* Thank you so much, Rashad. This will really mean a lot to Lila!
   -> Goodbye
 
 
