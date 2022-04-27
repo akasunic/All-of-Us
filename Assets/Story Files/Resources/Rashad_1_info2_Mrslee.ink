@@ -19,17 +19,13 @@ Mrslee?Smiling "I feel okay! I’m looking for some meditation classes, maybe th
 
 * Oh, no are you okay Mrs. Lee? 
 -> Chat2
-
 * Oh, cool! Meditation sounds fun. Are you up for a question?
 -> Explain1
 
 ==Chat2==
 Mrslee?Smiling "I will be okay, don’t worry. Sometimes, it is hard to sleep."
-
 Mrslee?Smiling "Eddie suggested physical activity; I already take fitness class and help with Lila's class."
-
-Mrslee?Smilng "Then he suggest I ask Lila. She show me this list of classes that teach meditation and mindfulness exercises."
-
+Mrslee?Smiling "Then he suggest I ask Lila. She show me this list of classes that teach meditation and mindfulness exercises."
 Mrslee?Smiling "Eddie say maybe I need to make my brain tired too!"
 
 * Eddie sounds like he knows what he's talking about.
@@ -39,7 +35,6 @@ Mrslee?Smiling "Eddie say maybe I need to make my brain tired too!"
 
 ==Chat3==
 Mrslee?Smiling "I know sometime people take medicine to help sleep but I want to find another way."
-
 Mrslee?Smiling "Sometime I just get up and watch television. Did you know I can watch Korean TV shows now on internet? Dr. Lee would have been so happy."
 
 * That sounds like a good way to cope! Can I ask you something?
@@ -76,11 +71,8 @@ Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We
 
 ==Suggestion2==
 Mrslee?Smiling "Anything to help out Rashad. When Eddie needed a summer job, Rashad helped him. Showed him how to use the internet to apply. Lots of jobs get posted online now."
-
 Mrslee?Smiling " Maybe we also ask Lila to email people who attend fitness class. And her daycare parents! She know everyone!" 
-
 Mrslee?Smiling "I can post in local groups online; I belong to garden forums and talk about flowers. Maybe someone there likes books."
-
 
 * Perfect! You can include a link to library's website where people can apply. 
 -> Goodbye

@@ -6,20 +6,22 @@ VAR new_quest = ""
 -> intro
 
 ===intro===
+
 Rashad?Smiling "Hey there {player_name}. How are you?"
+
 * Oh you know! Enjoying the day, how about yourself?
  -> Chat1
 * Pretty good, what are you up to?
--> Chat1
-
+ -> Chat1
 
 ==Chat1==
+
 Rashad?Neutral "Not much. I’m revising a grant proposal, but otherwise it’s a pretty calm day around here. I think I’m going to bring some books home for the kids."
 
-* Oh, cool. Good luck hiring! Hey, do you have a minute?
--> Explain1
+* Oh, cool. Good luck on grants! Hey, do you have a minute?
+ -> Explain1
 * How is your family doing?
- -> Chat2
+  -> Chat2
 
 ==Chat2==
 Rashad?Smiling "They’re great! My kids are the best. For that matter, so is Cheryl! Our work schedules have been slightly more flexible so we’ve been spending a lot more time with the kids."
@@ -33,12 +35,14 @@ Rashad?Smiling "I’m so glad to spend time with them. Sometimes we even bring t
 ==Chat3==
 Rashad?Smiling "There are a lot of things we do! We host some storytime events where one of the librarians reads to them. Arts and crafts have been a huge hit lately!"
 Rashad?Smiling "Plus all our classes and workshops - sewing, technology, gardening. We have book clubs too!"
-* Hey speaking of events, that reminds me of something. Do you have a minute?"
+
+* Hey speaking of events, that reminds me of something. Do you have a minute?
   -> Explain1
 
 ==Explain1==
 Rashad?Neutral "What’s going on?"
-* I’m helping Lila. Do you know what equipment is needed for a speaker event?"
+
+* I’m helping Lila. Do you know what equipment is needed for a speaker event?
   -> Explain2
 * Lila needs some help. Do you have any experience with event hosting?
   -> Explain2
@@ -46,27 +50,27 @@ Rashad?Neutral "What’s going on?"
 ==Explain2==
 Rashad?Neutral "It depends, but usually I suggest a sound system suited to the space, a microphone, and a projector and screen to display any slideshow."
 Rashad?Neutral "Venues sometimes have equipment already setup. Where is Lila hosting her event?"
+
 * At the Community Center. Have you hosted events like this before?
   -> Explain3
 
 ==Explain3==
 Rashad?Smiling "Yeah! The library hosts events here, the park and other places in the community. It’s a lot of fun!"
+
 * That’s awesome! Lila is looking for someone to help set up the equipment.
 -> Suggestion1
 * That’s cool! Lila is looking for people to help set up some activities.
 -> Suggestion1
 
-
 ==Suggestion1==
 ~ notification = "Rashad_Day 1_Lila should look into grants that might help fund the purchase of equipment for the support group_Lila1-1"
 # notification Rashad_Day 1_Lila should look into grants that might help fund the purchase of equipment for the support group_Lila1-1 
-
 
 Rashad?Smiling "If this is going to be a regular thing, the Community Center might invest in equipment so they don't have to borrow or rent every time." 
 Rashad?Smiling "It would also mean they can set up the equipment in the space where it's most likely to be used and leave it alone between events." 
 Rashad?Smiling "There might be some community grants available to help finance a purchase. I'm happy to use some of my librarian magic to help Lila look into funding sources." 
 
-*I hadn't thought of that, Rashad! What a great idea.
+* I hadn't thought of that, Rashad! What a great idea.
   -> Suggestion2
 * I'm sure Lila would appreciate the help!
   -> Suggestion2
@@ -84,9 +88,9 @@ Rashad?Smiling "Then, if she wants the help, I can pitch in for future events un
 * Thank you so much, Rashad. This will really mean a lot to Lila!
   -> Goodbye
 
-
 ==Goodbye==
 Rashad?Smiling "I’m happy to help! Helping a neighbor out is always a joy. Good luck, Adventurer!"
+
 * You’re the best. Later, Rashad!
 -> END
 * Thanks again, Rashad!

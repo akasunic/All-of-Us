@@ -43,7 +43,6 @@ Rashad?Smiling "Well, now that you mention it. The library has been super slamme
 
 ==QuestDetails1==
 Rashad?Neutral "Sure! It's perfect for someone who knows 'young adult literature" and children's books. Ideally, someone with great people skills who doesn't mind multi-tasking."
-
 Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a tall order!"
 
 * It doesn't sound that bad! Can you tell me more about the position? 
@@ -53,19 +52,16 @@ Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a tall order!"
 
 ==OptionalQuestDetails1==
 Rashad?Neutral "It's probably a shot in the dark but if I can set up interviews by next week, that would be amazing."
-
 Rashad?Neutral "If I wasn't swimming in admin work, I'd probably have a chance to properly look for a good candidate."
 
-* I may have someone for you.  Is there anything else I should know? 
+* I may have someone for you. Is there anything else I should know? 
 -> QuestDetails2
 * I think I can make that happen!
 -> QuestAcceptance
 
 ==QuestDetails2==
 Rashad?Neutral "This role would be part-time, maybe two or three shifts a week. I can be flexible about which shifts, honestly."
-
 Rashad?Neutral "They will need to learn the young adult section, so they can help reshelve books and run the help desk."
-
 Rashad?Neutral "I'd love someone who could take over storytime on Saturdays. We have a session in the morning and one in the afternoon to support as many families as possible." 
 
 * Sounds good.  Is there anything else I should keep in mind? 
@@ -88,20 +84,14 @@ Rashad?Smiling "I really appreciate your help, {player_name}!"
 * Of course, Rashad! You can always count on me.
 -> Goodbye
 
-
 ==Goodbye==
 Rashad?Smiling "If we can get even a single application, it would mean the world." 
-
 Rashad?Smilng "Cheryl and I are hoping to take the kids on a roadtrip during the next school break. Having someone trained would make that less stressful." 
-
 Rashad?Smiling "I've have to head out but I'll catch you later?"
 
-* Sounds good. Bye Rashad! ->END
+* Sounds good. Bye Rashad!
+   ->END
 
-
-==== END ====
-END
-   -> END
 
 
 
