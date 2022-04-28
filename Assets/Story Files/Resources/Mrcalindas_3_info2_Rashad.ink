@@ -9,9 +9,9 @@ VAR new_quest = ""
 
 Rashad?Smiling "What's up, {player_name}? I'm glad I ran into you. Octavia heard a rumor through the grapevine that you're making ensaymadas. She would like to reserve two, please." 
 
-* Hey Rashad! Word travels fast! But I still depend on Mrs. Calindas to be my pastry hookup; once I learn, I'll share! 
+* Word travels fast! I still depend on my pastry hookup though! 
   -> Chat1
-* Hey Rashad! Once I've actually learned the secrets of ensaymadas, I'll gladly let Octavia be my sous chef! 
+* Once I've actually learned the secrets of ensaymadas, I'll gladly share! 
   -> Chat1
 
 ==Chat1==
@@ -22,7 +22,7 @@ Rashad?Smiling "I bet it was wishful thinking - Cheryl grounded her from solo ba
 
 Rashad?Smiling "She's not quite ready for unsupervised pastry-making."
 
-* I remember. Cheryl wasn't sure if she wanted to laugh or cry when she told me about it . At least it wasn't honey, right?
+* I remember. At least it wasn't honey, right?
   -> Chat2
 * Well, that's a mood. Oh, you know what. I have a question for you.
   -> Explain1
@@ -31,18 +31,16 @@ Rashad?Smiling "She's not quite ready for unsupervised pastry-making."
 
 Rashad?Smiling "Ohhh I forgot about your jar of honey incident. Poor Mr. Calindas almost took back his offer to let  you into his kitchen!" 
 
-* Who could blame him? Half a pound of honey is ... a lot. Changing the subject... I could use your help.
+* ...Changing the subject... I could use your help.
   -> Explain1
-* He nearly did! Oh, you know what. Speaking of Mr. Calindas, I have a question for you.
+* He nearly did! Speaking of Mr. Calindas, I have a question for you.
   -> Explain1
 
 ==Explain1==
 
 Rashad?Neutral "I'm not matching off against him at trivia again; one humiliation was enough." 
 
-* No. No. I was wondering if the library offers bilingual classes? Or classes for seniors in tech?
-  -> Explain2
-* You know I'm not talking about that. I was wondering if the library has any classes for seniors about tech?
+* No, no. Does the library offers bilingual classes? Or senior tech classes?
   -> Explain2
 
 ==Explain2==
@@ -53,7 +51,7 @@ Rashad?Smiling "Or bilingual tech cloasses for bilingual seniors?"
 
 * I'm looking for a tech class for seniors taught in Tagalog or Spanish.
   -> Suggestion1
-* Any of those, really. Maybe some information about helping seniors learn to use a tablet?
+* Maybe information about helping bilingual seniors learn to use a tablet?
   -> Suggestion1
 
 ==Suggestion1==
@@ -63,12 +61,13 @@ Rashad?Smiling "Or bilingual tech cloasses for bilingual seniors?"
 
 Rashad?Smiling "Well, we actually have free tech classes in Spanish and Tagalog. You can sign up at the front desk. They aren't specifically for seniors, though." 
 
-Rashad?Neutral "It's really important for people to get to practice workshop skills, so the classes are small and hands-on. I really want everyone to leave one of our classes feeling like they can do something new."
+Rashad?Neutral "It's really important for people to get to practice workshop skills, so the classes are small and hands-on."
+
+Rashad?Smiling "I really want everyone to leave one of our classes feeling like they can do something new."
 
 Rashad?Neutral "As more government agencies and businesses move towards doing business over the internet, being afraid or ignorant of technology becomes a bigger barrier."
 
 Rashad?Neutral "Seniors, especially, can struggle with filing taxes, filling out forms. Ya know...the stuff nobody likes doing."
-
 
 * That's great to know! Is there anything else I should think of?
   -> Suggestion2
@@ -84,8 +83,9 @@ Rashad?Smiling "The internet can be really overwhelming. I think it's important 
 
 Rashad?Smiling "The internet gives us opportunities to stay connected that never existed before. For example, my kids video chat with their grandparents or my siblings."
 
-Rashad?Smling "Not going to lie - it feels like something from one of my movies when I realize my kid is getting math help from three states away. I don't mind not being the long division tutor, really."
+Rashad?Smling "Not going to lie - it feels like something from one of my movies when I realize my kid is getting math help from three states away."
 
+Rashad?Smiling "I don't mind not being the long division tutor, really."
 
 * This is great information to keep in mind. Thanks, Rashad.
   -> Goodbye

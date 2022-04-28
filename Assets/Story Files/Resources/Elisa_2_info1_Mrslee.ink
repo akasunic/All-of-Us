@@ -33,7 +33,7 @@ Mrslee?Smiling "Every week, something new. I feel happy too. So many smart, crea
 
 ==Chat3==
 
-Mrslee?Smiling "Rashad tell me glitter is an infestation. That it spread and multiple like something from his movies. I say he need to make more art. Become one with the sparkle, like Lila say."
+Mrslee?Smiling "Rashad tell me glitter is an infestation. That it spread and multiply like something from his movies. I say he need to make more art. Become one with the sparkle, like Lila say."
 
 Mrslee?Smiling "I like art days, and I like the days I help in the office. I like it all." 
 
@@ -44,7 +44,7 @@ Mrslee?Smiling "I like art days, and I like the days I help in the office. I lik
 
 Mrslee?Neutral "Tell me how I help." 
 
-* Excellent! I'm helping a friend figure out how to find her immunization records for school.
+* I'm helping a friend replace her immunization records for school.
   -> Suggestion1
 
 ==Suggestion1==
@@ -53,7 +53,7 @@ Mrslee?Neutral "Tell me how I help."
 # notification Mrslee_Day 2_Keep your vaccine records with important paperwork like your passport_Elisa2-1 
 
 
-Mrslee?Neutral "Immunization records are very important. Vaccines keep us safe. Keep your vaccine records safe like your green card or your passport."
+Mrslee?Neutral "Immunization records are very important; I make copy for new students to keep in records here. Vaccines keep us safe."
 
 Mrslee?Neutral "When we move to America, Dr. Lee and I both need more vaccines. When Eddie travel, some countries require new shots." 
 
@@ -75,7 +75,7 @@ Mrslee?Neutral "Sometimes, parents ask the pediatrician. The doctor office keep 
 Mrslee?Neutral "The last school somebody attend might be able to help. If everybody submit records, the school has records. It might take a phone call or email. And sometimes they even fax them to me here!" 
 
 Mrslee?Neutral "The CDC has resources, too. Look it up on the internet. Students moving in from different places might need to do different steps to get their records." 
-Mrslee?Smiling "Different states and different countries use different systems, but we always find answers online."
+Mrslee?Smiling "Different states and different countries use different systems, but we often find help online."
 
 
 * Mrs. Lee, this is super helpful! Thank you.

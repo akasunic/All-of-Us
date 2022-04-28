@@ -72,7 +72,9 @@ Mrcalindas?Smiling "I am happy to pay Elisa a fair rate for her help and to ply 
 ==Option3==
 # correct
 
-Mrcalindas?Smiling "These are the things I am most worried about – my mother wants to be able to do her own banking, but so much happens online. She wants to manage her own health care, which requires access to the online portal." 
+Mrcalindas?Smiling "These are the things I am most worried about – my mother wants to be able to do her own banking, but so much happens online."
+
+Mrcalindas?Smiling "She wants to manage her own health care, which requires access to the online portal." 
 
 Mrcalindas?Smiling "I am glad to know that the library has resources to make this possible for her. Maybe we can even entice her with the promise of recipe websites." 
 

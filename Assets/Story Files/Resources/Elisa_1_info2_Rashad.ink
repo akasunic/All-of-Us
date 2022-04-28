@@ -15,7 +15,7 @@ Rashad?Smiling "Hey there, adventurer! What's new with you?"
 
 ==Chat1==
 
-Rashad?Smiling "Yeah, that sounds about right. I just dropped a whole new batch of audiobooks into the system, by the way. We added a bunch of fantasy titles."
+Rashad?Smiling "Yeah, that sounds about right. I just dropped a whole new batch of audiobooks into the system, by the way. We added some fresh fantasy titles."
 
 * Ah! Dragons and sorcerors as walking companions! You speak my language, Rashad!
   -> Chat2
@@ -45,7 +45,9 @@ Rashad?Neutral "But you didn't come in to hear about my restocking habits, thoug
 
 ==Explain1==
 
-Rashad?Neutral "Well, I only know a little. My cousin actually has type 2 diabetes. And we have some books and cookbooks."
+Rashad?Smiling "Ah! I know a little bit because my cousin has type 2 diabetes. I have helped him do some research along the way."
+
+Rashad?Smiling "And the library has some books and cookbooks that might be helpful."
 
 Rashad?Neutral "What do you wanna know?"
 
@@ -71,13 +73,17 @@ Rashad?Smiling "I really do think a little knowledge is the most powerful tool w
 # notification Rashad_Day 1_You can learn more about managing diabetes by accessing library resources, such as health workshops and cookbooks_Elisa1-3 
 
 
-Rashad?Smiling "Let's see. We covered classes. The other two things the library can provide are access to online portals and books - both about the science around diabetes, and about how to meal plan and cook for someone with diabetes."
+Rashad?Smiling "Let's see. We covered classes. The other two things the library can provide are access to online portals and books..."
 
-Rashad?Smiling "We can help them use the internet to find safe and secure resources with reliable information - either in technology class or one-on-one. They can look up diabetes or research drugs before they start taking them."
+Rashad?Smiling "...both about the science around diabetes, and about how to meal plan and cook for someone with diabetes."
+
+Rashad?Smiling "We can help them use the internet to find safe and secure resources with reliable information - either in technology class or one-on-one."
+
+Rashad?Smiling "They can look up diabetes or research drugs before they start taking them."
 
 Rashad?Smiling "Our cookbook section is very diverse, and we have several titles about diabetic cooking for different cuisines. Cheryl has checked a few of them out just to see what they had to say."
 
-Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lot of diabetic cookbooks try to keep the recipes approachable. No 30 ingredient, 20 step Julia Child fancy weekend cooking, if you follow." 
+Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lot of diabetic cookbooks try to keep the recipes approachable. No 30 ingredient, 20 step Julia Child fancy weekend cooking." 
 
 * What is diabetes, anyway? I still don't really understand.
   -> Suggestion2
@@ -90,9 +96,11 @@ Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lo
 ~ notification = "Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4"
 # notification Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4
 
-Rashad?Smiling "It has to do with the pancreas, I think. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
+Rashad?Smiling "It has to do with the pancreas. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
 
 Rashad?Smiling "If your blood sugar levels are too high, they know your insulin levels are out of balance. So your pancreas needs a support team."
+
+Rashad?Neutral "Uncontrolled blood sugar has all sorts of implications - it affects every system of the body. Skin, eyes, blood vessels. It can be serious."
 
 Rashad?Smiling "All the treatment stuff - exercise, healthy eating, medication- is to try to get those levels back to normal. You team up with your pancreas to keep your body as healthy as possible."
 

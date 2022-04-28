@@ -15,7 +15,7 @@ Mrslee?Smiling "{player_name}! Wonderful see you."
 
 ==Chat1==
 Mrslee?Smiling "
-* How’s your exercise class been?
+* How’s was fitness class?
 -> Chat2
 * Mrs.Lee, can I ask a question?
 -> Explain1
@@ -38,7 +38,7 @@ Mrs.Lee?Smiling "How about you? What are you up to?"
 -> Explain1
 
 ==Explain1==
-Mrslee?Neutral "I always try my best to answer, {player_name}.
+Mrslee?Neutral "I always try my best to answer, {player_name}."
 * A close friend is trying to meet some new people. Do you have any advice?
 -> Suggestion1
 * Hey, I’m trying to help a friend make some new connections. Any thoughts?
@@ -49,18 +49,19 @@ Mrslee?Neutral "I always try my best to answer, {player_name}.
 # notification Mrslee_Day 3_Connecting with community can include deepening existing relationships_Lila3-3 
 
 Mrslee?Neutral "Sometime I have weekly video calls with old friends and few ladies from fitness class. I feel really supported."
-Mrslee?Neutral "Making new friends older hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
-Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now."
+Mrslee?Neutral "Making new friends used to feel hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
+Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now. Friends are all over, but we need to look."
+Mrslee?Smiling "It can be easy to forget the people right nearby."
 * Ah, I see. Do you know how Eddie has made new friends?
 -> Suggestion2
-* That’s really helpful, thank you Mrs.Lee!
--> Goodbye
+
 
 ==Suggestion2==
 ~ notification = "Mrslee_Day 3_When entering a new space, bring someone you trust with you for support_Lila3-4"
 # notification Mrslee_Day 3_When entering a new space, bring someone you trust with you for support_Lila3-4 
 
-Mrslee?Smiling "Very valuable for Eddie have people who connect him to heritage. He reach out to groups and ask friends to bring him to events. Going with someone make him feel more comfortable in new place."
+Mrslee?Smiling "Eddie always ask friends to go with him to new places. He say "You come with me, I go with you." So, new places always feel safe." 
+Mrslee?Smiling "That help me because every new class has one friend, it seems. So every new class is safe."
 Mrslee?Smiling "In a new place, having buddy can be very special. It make him feel okay to go alone after some time."
 * Thank you so much, Mrs.Lee! That’s really helpful!!
 -> Goodbye

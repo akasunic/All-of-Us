@@ -21,18 +21,18 @@ Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I 
 
 * Wow, Rashad. How can I support you? 
 -> Chat2
-* I’m proud of you, Rashad. I’m sorry you have to deal with this. 
+* I’m proud of you, Rashad. I’m sorry you are dealing with this. 
 -> Chat2
 
 ==Chat2==
-Rashad?Smiling "It’s all good. I plan on asking one of my allies on the board to support me. If this behavior continues, I'm ready to take this to HR."
-Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to talk to you about. You’re always making sure everyone in Bloomwood has the right support and connections." 
+Rashad?Smiling "It’s all good. I plan on asking one of my allies on the board to support me. If the behavior continues, I'm ready to call it out."
+Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to talk to you about. You’re always making sure everyone has the right support and connections." 
 
 * Absolutely. That's what I'm here for!
 -> QuestIntro
 
 ==QuestIntro==
-Rashad?Neutral "When I pitched the initiative to the board, I highlighted the shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue. "
+Rashad?Neutral "When I pitched this initiative, I highlighted our shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue."
 Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together."
 
 * An intergenerational dialogue? How would that work? 
@@ -41,10 +41,12 @@ Rashad?Neutral "The library is like a second home to our seniors and young peopl
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "Hear me out…Remember how we used to help out when Bloomwood Mutual Aid was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
+Rashad?Neutral "Remember how we used to help out when Bloomwood Mutual Aid was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
 Rashad?Neutral "Making sure their lawn got mowed, and just checking in? I pitched a program that's just like that."
 
-Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments. I was thinking we could pair teens and seniors to overcome some of those tech roadblocks"
+Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments."
+
+Rashad?Neutral "I was thinking we could pair teens and seniors to overcome some of those tech roadblocks."
 
 * Wow, I bet the teens get to pick up some pretty cool skills. 
 -> OptionalQuestDetails1
@@ -52,7 +54,9 @@ Rashad?Neutral "Here's a real specific example - many seniors struggle to use ap
 -> QuestAcceptance
 
 ==OptionalQuestDetails1==
-Rashad?Neutral "We can send out a survey to match them up based on their interests and what they’re looking to learn."
+Rashad?Neutral "We can use a survey to match them up based on their interests and what they’re looking to learn."
+
+Rashad?Neutral "Obviously, we want to start small and build up, a couple of people at a time." 
 
 * That sounds fantastic! 
 -> QuestDetails2
@@ -63,7 +67,7 @@ Rashad?Neutral "We can send out a survey to match them up based on their interes
 Rashad?Neutral "There's a lot they can learn from each other, and we can offer this as a volunteer opportunity. 
 Rashad?Neutral "It looks good on a college application, and it allows seniors to socialize with 'the youth.'"
 
-* It looks good on a resume but even better on the community. Everyone wins!
+* It looks good on a resume but even better on the community!
 -> OptionalQuestDetails2
 * Sounds like a win-win situation! How can I help? 
 -> QuestAcceptance
@@ -79,7 +83,7 @@ Rashad?Neutral "Teens could help seniors decipher their health needs, and senior
 
 ==QuestAcceptance==
 Rashad?Smiling "Now that I think about it, I do have something you can do."
-Rashad?Smiling "Before I create a survey, I need to know a bit more about what teens and seniors could learn from each other. I definitely want to get some input before we roll out the program."
+Rashad?Smiling "Before I create a survey, I need to know a bit more about what teens and seniors could learn from each other. I definitely want to get some input before we start."
 Rashad?Smiling "Maybe find out more about what our elders might benefit from and what teens feel like they need or want to learn?"
 
 

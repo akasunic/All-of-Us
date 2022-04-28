@@ -40,7 +40,9 @@ Elisa?Smiling "I swear, I wasn't at all prepared for this."
 
 Elisa?Neutral "Turns out someone sent Mama a tumblr post or something about "Ten Things I Wish I'd Known About Reproductive Health" or something. And it's in her head.
 
-Elisa?Neutral "So, she suddenly says "I called the clinic and made an appointment for you for next week to talk about birth control. You don't have to keep it, but I think you should. I should have done this with you before now."" 
+Elisa?Neutral "She suddenly busts out with "I called the clinic and made an appointment for you to talk about birth control." I nearly fell out!"
+
+Elisa?Neutral "She said, "You don't have to keep the appointment, but I think you should. I should have done this with you before now." Just like that." 
 
 * Just like that? 
 -> QuestDetails1

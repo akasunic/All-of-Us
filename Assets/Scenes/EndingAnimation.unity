@@ -590,9 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Look at all the beautiful memories you have collected
-
-'
+  m_Text: Look at the beautiful memories you've made
 --- !u!225 &140008646
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -757,9 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'There''s always so much to love about Bloomwood!
-
-'
+  m_Text: Great job!
 --- !u!225 &329072241
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2150,9 +2146,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It''s about people
-
-'
+  m_Text: You have done so much as the community manager
 --- !u!225 &1459308404
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2330,9 +2324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have done so much as the community manager
-
-'
+  m_Text: Bloomwood is a special place
 --- !u!225 &1736341717
 CanvasGroup:
   m_ObjectHideFlags: 0

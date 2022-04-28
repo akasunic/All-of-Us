@@ -32,13 +32,15 @@ Elisa?Neutral "Gosh, that sounds worse than it is. My mom got bloodwork yesterda
 ==Chat2==
 Elisa?Neutral "I don't know. I'm starting by doing my research, and figuring out how much to worry. I think it's worse right now because I'm getting ready to move away for part of the year."
 
-* Worrying about your folks is natural. Do you think I might be able to help?
+* Worrying is natural. Do you think I might be able to help?
 -> QuestIntro
 
 ==QuestIntro==
 Elisa?Smiling "Well, since you asked, how much do you know about diabetes? I want to know as much as I can, so I can support my mom with her diagnosis."
 
-Elisa?Neutral "I've been reading medical websites - like the CDC, Mayo Clinc, and <web portal>, and watching YouTube shows about diabetic cooking. Just... everything I could find about being diagnosed and the lifestyle changes that come with."
+Elisa?Neutral "I've been reading medical websites - like the CDC and the Mayo Clinc and watching YouTube shows about diabetic cooking."
+
+Elisa?Neutral "Just... everything I could find about being diagnosed and the lifestyle changes that come with."
 
 * Hmmm, I may be able to help. Can you tell me more?
 -> QuestDetails1
@@ -56,9 +58,9 @@ Elisa?Neutral "Her A1C is high. Evidently that's a long-term measure of your blo
 -> QuestAcceptance
 
 ==QuestDetails2==
-Elisa?Neutral "Evidently her test results have been "borderline" for some time, but not enough to cause anyone to worry. Now she's in the range that could cause other health concerns."
+Elisa?Neutral "I guess her test results have been "borderline" for some time, but not enough to cause anyone to worry. Now she's in the range that could cause other health concerns."
 
-Elisa?Neutral "I guess I didn't know it was something to worry about until now." 
+Elisa?Neutral "I didn't know it was something to worry about until now." 
 
 
 * Got it! I think I can find someone with more knowledge.  

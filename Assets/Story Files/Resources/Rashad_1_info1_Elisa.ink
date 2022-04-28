@@ -16,7 +16,6 @@ Elisa?Smiling "Hi {player_name}, it's so nice to see you! How's your day going?"
 
 ==Chat1==
 Elisa?Smiling "I'm well! I have a lot going on. So many of moving pieces to get in order before the next school year, you know?"
-
 Elisa?Smiling "The transition from Bloomwood Community College to a state school is exciting, but stressful too! What's new with you?"
 
 * It sounds like you have a lot on your plate. 
@@ -28,7 +27,7 @@ Elisa?Smiling "The transition from Bloomwood Community College to a state school
 Elisa?Smiling "I need to figure out a way to pay for these textbooks. School can be so expensive! Maybe I can get a part-time job, but I'm not sure where."
 Elisa?Smiling "Ugh. I'll figure it out."
 
-* I'm sorry to hear that, Elisa. School is already stressful enough.
+* I'm sorry to hear that. School is already stressful enough.
 -> Chat3
 * I may have a solution to that if you're interested?  
 -> Explain1
@@ -43,34 +42,37 @@ Elisa?Smiling "I'm nothing if not resourceful. Some combination of patience and 
 ==Explain1==
 Elisa?Neutral "What's up? I'm all ears."
 
-* There's a part-time job opening at the library. I think you'd be a perfect fit!  -> Explain2
-The library is looking for an extra set of hands in the YA section. Interested?  -> Explain2
+* There's a part-time opening at the library. I think you're a perfect fit!  
+  -> Explain2
+* The library is looking for an extra set of hands in the YA section. Interested
+ -> Explain2
 
 ==Explain2==
-~ notification = "Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1"
-# notification Elisa_Day 1_Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1
-
-Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables, or worse... I spent a summer as an assistant for a dog groomer. It was pretty filthy, but maybe I'm biased since I'm a cat person. I was starting to think I'd have to go back to that."
+Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables, or worse... I spent a summer as an assistant for a dog groomer."
+Elisa?Smiling "It was pretty filthy, but maybe I'm biased since I'm a cat person. I was starting to think I'd have to go back to that."
 Elisa?Smiling "I love the library, and I really like Rashad. I'd love to learn more."
 
-* I'm pretty sure Rashad posted a job listing; you can look it up on the library's website!
--> Suggestion1
+* Rashad posted a job listing on the library's website!
+  -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2"
-# notification Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2
+
+~ notification = "Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1"
+# notification Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1
 
 Elisa?Smiling "Do they hire students? My school schedule is pretty hectic, but I'll definitely apply. Plus, I love YA fiction." 
-Elisa?Smiling "I might need some help polishing my resume before I apply. Is that something the library offers a workshop in?"
+Elisa?Smiling "I will polish up my resume and apply as soon as possible! Is resume writing something the library offers a workshop in?"
 
 * I think a student is exactly what Rashad is looking for.
 -> Suggestion2
 * I'm happy to look over your resume before you apply!
  ->Suggestion2
 
-
 ==Suggestion2==
-Elisa?Smiling "That sounds perfect. This sounds like a great way to build up experience, too. All my college admissions paperwork is done, but I feel like this serves two purposes. It will help me pay for text books, <i>and</i> it'll look great on my resume!" 
+~ notification = "Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2"
+# notification Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2
+
+Elisa?Smiling "This sounds like a great way to build up experience, too. I feel like this serves two purposes. It will help me pay for text books, and it'll look great on my resume!" 
 Elisa?Smiling "I'm usually free Monday afternoon and on weekends; I hope that's enough to be helpful. How do I apply for the position?" 
 
 * That's great to hear! You can apply through the library's website. 

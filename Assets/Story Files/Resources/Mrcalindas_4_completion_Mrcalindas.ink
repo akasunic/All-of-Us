@@ -7,17 +7,19 @@ VAR new_quest = ""
 
 == intro== 
 
-Mrcalindas?Smiling "Hello {player_name}! I bet you didn't expect to see me here."
+Mrcalindas?Smiling "Hello {player_name}! Great news!"
 
-* Hi. Mr. Calindas, I actually love seeing you out and about. How are you?
+Mrcalindas?Smiling "My mother should be done with her first water fitness class with Mrs. Lee any minute now."
+
+* Mr. Calindas! That's excellent to hear!
   -> Chat1
-* Hi. Mr. Calindas. I didn't think you existed outside of the clinic! Since you're here, I think I may have some ideas for you.
+* Oh, I'm so excited for her. Mrs. Lee will help her get settled.
   -> Chat1
 
 
 ==Chat1==
 
-Mrcalindas?Smiling "I'm actually waiting for my mother to finish her first aerobics class with Mrs. Lee. So, I'm feeling pretty good."
+Mrcalindas?Smiling "I'm feeling pretty good about things, honestly."
 
 Mrcalindas?Smiling "It's really feeling like Bloomwood is a great place for my whole family. Did you have ideas for Brooklyn? 
 
@@ -28,9 +30,9 @@ Mrcalindas?Smiling "It's really feeling like Bloomwood is a great place for my w
 
 ==Chat2==
 
-Mrcalindas?Neutral "Really? Jessica and I were on the phone last night, trying to make a plan for Brooklyn's time here. I'm looking forward to settling some of her anxiety."
+Mrcalindas?Neutral "Really? Paz and I were on the phone with Jessica last night, trying to make a plan for Brooklyn's time here. I'm looking forward to settling some of her anxiety."
 
-* Both the library and the community center have activities, and they taught me a lot about what to look for when choosing an activity. 
+* The Library and the Community Center have activities. They taught me a lot! 
   -> ReadyToSolve
 
 
@@ -63,7 +65,7 @@ Mrcalindas?Smiling "This makes a lot of sense. An over-tired child is never goin
 
 Mrcalindas?Smiling "It seems like the things you take into account for autistic children are similar to the things you keep in mind with other children, if you’re savvy to their ways."
 
-* Maybe, but a little more thoughtfully and with more attention to planning for an exit strategy if things go wrong.
+* Maybe, but with a little planning for an exit strategy if things go wrong.
 	-> SolvedGoodbye
 
 
@@ -87,15 +89,15 @@ Let me see what else I can find, Mr. Calindas.
 
 Mrcalindas?Smiling "I am comforted to know that there are places in Bloomwood that are prepared to support Brooklyn." 
 
-Mrcalindas?Smiling "Maybe she and my mother will both come out with me to playtime at the Community Center, or possibly to story time at the Library. I think they would both enjoy either." 
+Mrcalindas?Smiling "Maybe my mother and I can take her to playtime at the Community Center or possibly to story time at the Library." 
 
-  
-* I think Brooklyn is going to have an excellent week, Mr. Calindas! 
+
+* I think Brooklyn is going to have an excellent week! 
 	-> SolvedGoodbye
 
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "Thank you, {player_name}. I appreciate all of your help. I know Jessica will too." 
+Mrcalindas?Smiling "Thank you, {player_name}. I appreciate all of your help. I know Jessica and Paz will too." 
 
 I learned a lot today, Mr. Calindas. Thank you! 
   -> END

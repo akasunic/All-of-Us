@@ -11,39 +11,38 @@ VAR new_quest = ""
 ~ new_contact = "Mrcalindas"
 # new_contact
 
-Mrcalindas?Smiling  "{player_name}! Come here, I have something for you from Lucy. She worries that maybe you don't eat breakfast and sent me with extra ensaymada for you. I knew you'd come in eventually!" 
+Mrcalindas?Smiling  "{player_name}! I have something for you from Paz. She worries that maybe you don't eat breakfast and sent you ensaymada. I knew you'd come in eventually!" 
 
 * What? Really? Mrs. Calindas always knows the way to my heart: food.
   -> Chat1
-* Ensaymada? For me? Thank you so much, I was just stopping by to ask you a question, actually.
+* Ensaymada? Thank you so much! I was just stopping by to ask question.
   -> QuestIntro
 
 ==Chat1==
-Mrcalindas?Smiling "Well, you know since we started teaching you to cook, she's become concerned that you aren't eating outside of the lessons."
-Mrcalindas?Smiling "I know you eat, but still- they're good with your coffee." 
+Mrcalindas?Smiling "She is convinced that you don't eat outside of the lessons. I know you eat, but still- they're good with your coffee." 
 
-* Thank you so much for bringing me these. They are my absolute favorite.
+* Thank you so much for these. They are my absolute favorite.
   -> Chat2
-* I'm feeling the love! I think you just made my week, but I was actually stopping by to ask you a question.
+* I'm feeling the love! but I was actually stopping by to ask you a question.
   -> QuestIntro
 
 ==Chat2==
 Mrcalindas?Smiling "Well, you can tell her the next time to you see her. If you're extra nice, she might even teach you how to make them for yourself."
 Mrcalindas?Smiling "It means so much to us that you're here to help Bloomwood." 
 
-* Speaking of which, I was coming to ask you - what do you need? How can I be helpful?
+* Speaking of which, I was coming to ask you - How can I be helpful?
   -> QuestIntro
 
 ==QuestIntro==
 
 Mrcalindas?Neutral "Oh? This is a reversal! Let me think for a moment."
-Mrcalindas?Neutral "We are working on adding some initatives to provide better support for the community; budget time is coming up, and I want to make sure we're thinking about the right things." 
+Mrcalindas?Neutral "We are working on initatives to provide better support for the community; budget time is coming up. I want to make sure we're thinking about the right things." 
 Mrcalindas?Smiling "Maybe you could put your ear to the ground and tell me what people think?" 
 
-* Oh that's great! How can I help you?
+* Oh that's great! What questions should I ask?
   -> QuestDetails1
 * If you think I can be helpful, I'm in. Tell me more! 
-  -> OptionalQuestDetails1
+  -> QuestDetails1
 
 ==QuestDetails1==
 Mrcalindas?Neutral "I don't have a lot of extra time to pull together community feedback, but I really want to make sure we are giving the community what it needs."
@@ -51,7 +50,7 @@ Mrcalindas?Neutral "I want to know what the community is actually concerned abou
 Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know what the community values. I want people to trust the Bloomwood Clinic."
 
 * That's really thoughtful, Mr. Calindas. Building and maintain community trust is so important.
-  -> QuestDetails2
+  -> OptionalQuestDetails1
 
 * Great! I can help you with whatever you need.
   -> QuestAcceptance

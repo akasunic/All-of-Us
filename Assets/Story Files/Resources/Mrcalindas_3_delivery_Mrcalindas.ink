@@ -9,7 +9,7 @@ VAR new_quest = ""
 ~ new_quest = "Mrcalindas3.txt"
 # new_quest
 
-Mrcalindas?Smiling "Come here, {player_name}! I want to thank you. Lucy and I really appreciate your help with my Mother." 
+Mrcalindas?Smiling "Come here, {player_name}! I want to thank you. Paz and I really appreciate your help with my Mother." 
 
 * Oh, it's my pleasure. Is she settling in?
   -> Chat1
@@ -19,19 +19,19 @@ Mrcalindas?Smiling "Come here, {player_name}! I want to thank you. Lucy and I re
 ==Chat1==
 Mrcalindas?Smiling "I think she and Mrs. Lee may take over the community center!"
 
-Mrcalindas?Smiling "When I suggested aerobics, she was very excited, and I helped her sign up for a senior weightlifting class too." 
+Mrcalindas?Smiling "When I suggested aerobics, she was very excited. I helped her sign up for a senior weightlifting class too." 
 
 * Weightlifting?! I didn't know we even had weightlifting classes
   -> Chat2
-* Grandmas need to make gains too, I guess. Is there anything else I can do to help?
+* Grandmas need to make gains too! Is there anything else I can do to help?
   -> QuestIntro
 
 ==Chat2==
 Mrcalindas?Smiling "Well, let me tell you. There's yoga, there's weightlifting, there's aerobics..."
 
-Mrcalindas?Smiling "There's a lot to keep you active now. Which is good, because my mother has hypertension. The exercise is good for her." 
+Mrcalindas?Smiling "There's a lot to keep you active now. Which is good, because my mother has hypertension. The exercise might help her manage that." 
 
-* Well, keeping fit sounds like a family motto here. Is there anything else she may need?
+* Keeping fit sounds like a family motto! Is there anything else she needs?
   -> QuestIntro
 
 ==QuestIntro==

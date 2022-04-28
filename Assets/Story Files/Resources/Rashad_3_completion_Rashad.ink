@@ -6,17 +6,19 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I was able to arrange for a bookmobile to visit the Community Center so we’ll be able to give away free books. I am always excited about free books!"
+Rashad?Smiling "Hey {player_name}! Good news, I finished up the details for the bookmobile visit the Community Center." 
+Rashad?Smiling "We’ll be able to give away free books. I am always excited about free books!"
 
 * That's amazing, Rashad! I love this energy.
   -> Chat1
-* That's so cool, Rashad! Hey, I think I have some helpful information for you.
+* That's cool! Hey, I think I have some helpful information for you.
   -> ReadyToSolve
 
 ==Chat1==
-Rashad?Neutral "I am really happy about it. It’s the little things that keep me going! " 
+Rashad?Neutral "I am really happy about it. It’s the little things that keep me going!"
+Rashad?Smiling "And, we wouldn't have gotten it approved without your help. So thank you!"
 
-* You’re so humble. There’s nothing <i>little</i> about that. You’re amazing!
+* You’re so humble. There’s nothing little about that. You’re amazing!
   -> Chat2
 * Speaking of, I have some information for you!
   -> ReadyToSolve
@@ -28,7 +30,7 @@ Rashad?Neutral "Hah, you’re too kind!. Speaking of which, did you ever find ou
   -> ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Neutral "Oh, I didn't know you would find out what I needed this quickly. You work really fast, {player_name}. I should’ve reached out to you sooner! Thanks for your help! What did you find?
+Rashad?Neutral "You work really fast, {player_name}. I should’ve reached out to you sooner! Thanks for your help! What did you find?"
 
 * Here’s what I have…
   -> PuzzleInterface
@@ -59,14 +61,16 @@ Hold tight! I’ll be right back.
 
 Rashad?Smiling "These online tools seem like a real time-saver. All of the information out there can be a little overwhelming so being able to comb through it quickly is super valuable."
 
-Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a dentist who could handle kids who bite, but I never thought to look for Black therapists. That’s a real game changer."
+Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a dentist who could handle kids who bite, but I never thought to look for Black therapists."
+
+Rashad?Smiling "It could really make a difference to see someone who gets it... That’s a real game changer."
   
 * It’s a great way to zoom in on exactly what you need! 
 -> Followup31
 
 == Followup31==
 
-Rashad?Smiling "Lila really is a jack of all trades. Is there anything she doesn’t know? I probably would’ve gotten into therapy a lot sooner if I knew these online tools make it <i>this</i> easy.."
+Rashad?Smiling "Lila really is a jack of all trades. Is there anything she doesn’t know? I probably would’ve gotten into therapy a lot sooner if I knew these online tools make it this easy.."
 
 * Better late than never!
 -> SolvedGoodbye
@@ -83,7 +87,9 @@ Hold on! I’ll be right back.
 ==Option4==
 # correct
 
-Rashad?Smiling "Okay. I’m following. I didn’t know there were so many different types of therapy – I thought it all involved a doctor in a sweater vest next to a patient sitting on a couch. Or someone with a pocket watch … I guess I watched too much television."
+Rashad?Smiling "Okay. I’m following. I didn’t know there were so many different types of therapy." 
+
+Rashad?Smiling "I thought it all involved a doctor in a sweater vest next to a patient sitting on a couch. Or someone with a pocket watch … I guess I watched too much television."
 
   
 * It’s a lot to digest, but you got this!
@@ -91,7 +97,7 @@ Rashad?Smiling "Okay. I’m following. I didn’t know there were so many differ
 
 ==Followup32==
 
-Rashad?Smiling "I find it difficult to be vulnerable since so many people in the community rely on me, but sometimes I need a shoulder to cry on, too."
+Rashad?Smiling "I find it difficult to be vulnerable since so many people in the community rely on me, but maybe I need a shoulder to cry on, too."
 
 Rashad?Smiling "It’s comforting to know that what I say in therapy doesn’t leave the room. I want people to continue to feel like they can count on me."
 

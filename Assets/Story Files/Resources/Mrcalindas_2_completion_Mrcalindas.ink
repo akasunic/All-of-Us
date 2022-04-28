@@ -10,21 +10,21 @@ VAR new_quest = ""
 
 Mrcalindas?Neutral "{player_name}! I'm glad you popped in. I have been worried that maybe I imposed. I asked for a lot from you." 
 
-* What! You help me all the time Mr. Calindas. Plus, I am really excited to meet your Mom.
+* What!? I am really excited to meet your Mom.
   -> Chat1
-* Please don't apologize. I can't wait to welcome your Mom. I got some information for you!
+* Please don't apologize. I got some information for you!
   -> ReadyToSolve
 
 ==Chat1==
 Mrcalindas?Neutral "I have been fretting about how she will adapt to living here, {player_name}. I just want to make sure that she's happy." 
 
-* I hear that. You worry about all of us, Mr. Calindas. This is really the least I can do.
+* I hear that. This is really the least I can do.
   -> Chat2
-* Mmm. Yes. I think she'll love it here, though. In fact, I have some information for you!
+* I think she'll love it here. In fact, I have some information!
   -> ReadyToSolve
 
 ==Chat2==
-Mrcalindas?Neutral "Well, it is my job to care about the health of our community. My Mother is very active, and always wanted us to care about the community too. I want her to feel good about Bloomwood."
+Mrcalindas?Neutral "Well, it is my job to care. My Mother is very active, and always wanted us to care about the community too. I want her to feel good about Bloomwood."
 
 * Well, Bloomwood is ready to welcome her home.
   -> ReadyToSolve
@@ -37,7 +37,7 @@ Mrcalindas?Smiling "That's so sweet of you, {player_name}. Can you tell me what 
 
 * Here’s what I have…
   -> PuzzleInterface
-* Actually, I want to give you the best info. I'm going to just check my notes again. Be right back! 
+* Actually, I'm going to check my notes again. Be right back! 
   -> TempGoodbye
 
 
@@ -71,14 +71,18 @@ Mrcalindas?Smiling "I worry about her having an active social life and feeling p
 	-> SolvedGoodbye
 
 ==Option3==
-Mrcalindas?Neutral "I cannot imagine my mother agreeing to a cat or a dog so soon after moving. While I wish Lucy would agree to a cat, now isn’t the time to add a new complication -and a new housemate!"
+Mrcalindas?Neutral "I cannot imagine my mother agreeing to a cat or a dog so soon after moving."
+
+Mrcalindas?Neutral "While I wish Paz would agree to a cat, now isn’t the time to add a new complication - and a new housemate!"
  
 * Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
 
 ==Option4==
 # correct
-Mrcalindas?Smiling "I see how very important her role is to Mrs. Lee. I think my mother would find volunteering very satisfying, especially if we found something where her strengths of cooking, sewing, and organizing people came into play."
+Mrcalindas?Smiling "I see how very important her role is to Mrs. Lee." 
+
+Mrcalindas?Smilng "I think my mother would find volunteering very satisfying, especially if we found something that suited her strengths."
 
   
 * If you need other support, please don’t hesitate to ask. 
@@ -86,7 +90,9 @@ Mrcalindas?Smiling "I see how very important her role is to Mrs. Lee. I think my
 
 
 ==SolvedGoodbye==
-Mrcalindas?Smiling "{player_name}, this really helps. I know she’s tough, and we will make the most of this change, but knowing that there are opportunities in Bloomwood for her to feel engaged takes some pressure off.." 
+Mrcalindas?Smiling "{player_name}, this really helps. I know she’s tough, and we will make the most of this change."
+
+Mrcalindas?Smiling "Knowing that there are opportunities in Bloomwood for her to feel engaged takes some pressure off.." 
 
 * My pleasure, Mr. Calindas!
   -> END

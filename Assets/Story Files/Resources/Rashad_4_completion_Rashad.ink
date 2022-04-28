@@ -66,7 +66,9 @@ Let me check my notes; I’ll be right back.
  
 Rashad?Smiling "I’m glad to hear that Elisa’s experience agrees with my gut instinct. I’ve been reading about the benefits of intergenerational support, and it seems like a win all around."
  
-Rashad?Smiling "My grandma could tell you stories about teaching me to sew squares of fabric together. It’s such a fun and useful skill and probably one of the greatest gifts my grandma could ever give me. Thankfully she got to me before I met Cheryl. I might still be single if it wasn’t for her! Hah!"
+Rashad?Smiling "My grandma could tell you stories about teaching me to sew. It’s such a fun and useful skill and probably one of the greatest gifts my grandma could ever give me."
+
+Rashad?Smilng "Thankfully she got to me before I met Cheryl. I might still be single if it wasn’t for her! Hah!"
  
 * I’m happy to help further; just tell me how!
         	-> Followup41

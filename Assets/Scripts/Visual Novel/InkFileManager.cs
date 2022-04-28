@@ -457,17 +457,17 @@ public class InkFileManager : MonoBehaviour {
         leeQuest2Files, leeQuest3Files, leeQuest4Files};
 
     private static readonly string[] lilaQuest1Files = {
-        "Lila_1_delivery_Lila.ink", "Lila_1_info1_Elisa.ink",
-        "Lila_1_info2_Rashad.ink", "Lila_1_completion_Lila.ink" };
+        "Lila_1_delivery_Lila.ink", "Lila_1_info1_Rashad.ink",
+        "Lila_1_info2_Elisa.ink", "Lila_1_completion_Lila.ink" };
     private static readonly string[] lilaQuest2Files = {
         "Lila_2_delivery_Lila.ink", "Lila_2_info1_Rashad.ink",
         "Lila_2_info2_Mrcalindas.ink", "Lila_2_completion_Lila.ink" };
     private static readonly string[] lilaQuest3Files = {
-        "Lila_3_delivery_Lila.ink", "Lila_3_info1_Mrcalindas.ink",
+        "Lila_3_delivery_Lila.ink", "Lila_3_info1_Elisa.ink",
         "Lila_3_info2_Mrslee.ink", "Lila_3_completion_Lila.ink" };
     private static readonly string[] lilaQuest4Files = {
         "Lila_4_delivery_Lila.ink", "Lila_4_info1_Mrslee.ink",
-        "Lila_4_info2_Elisa.ink", "Lila_4_completion_Lila.ink" };
+        "Lila_4_info2_Mrcalindas.ink", "Lila_4_completion_Lila.ink" };
     private static readonly string[][] lilaQuests = { lilaQuest1Files,
         lilaQuest2Files, lilaQuest3Files, lilaQuest4Files};
 }

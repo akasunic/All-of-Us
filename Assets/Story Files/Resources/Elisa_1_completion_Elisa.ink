@@ -9,7 +9,8 @@ VAR new_quest = ""
 
 Elisa?Smiling "Hey, {player_name}!"
 
-* Hey! Whatcha up to? -> Chat1
+* Hey! Whatcha up to?
+  -> Chat1
 * Hi! I found out some info on the diabetes stuff you were talking about.
   -> ReadyToSolve
 
@@ -66,11 +67,12 @@ Elisa?Neutral "I was hoping for something more in-depth."
 ==Option2==
 # correct
 
+Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this out for my folks before the appointment." 
+
 Elisa?Smiling "Thank you, {player_name}. It sounds like a lot, but I feel like this gives me a starting point for all the topics to ask about."
 
-Elisa?Smiling "Monitoring, Medication, Exercise, Diet. I think I can lay this out for my folks before the appointment." 
-  
-* I feel like you’ve got this under control!
+
+* I'm glad this feels more manageable!
 	-> SolvedGoodbye
 
   
@@ -81,7 +83,7 @@ Elisa?Smiling "The library is such a useful resource; my abuela loved the cookbo
 
 Elisa?Smiling "I will look at the calendar to see if there are workshops coming up that might help my mom feel like she’s in this with other people."
   
-* I feel like you’ve got this under control!
+* That sounds like a great idea, Elisa!
 	-> SolvedGoodbye
 
 ==Option4==

@@ -17,12 +17,12 @@ Lila?Smiling "Hey, I love to hear that you’re taking it easy."
 Lila?Smiling "Speaking of roses, I recently started to garden a little bit in my freetime and it is sooo relaxing."
 * That’s awesome, Lila! Hey, I have some things to tell you!
 -> ReadyToSolve
-* Woah! That’s so cool- Flowers? Veggies? Any home-made salads I can taste test?
+* Woah! That’s so cool- Flowers? Veggies? Any homegrown salads I can taste test?
 -> Chat2 
 
 ==Chat2==
 Lila?Smiling "Haha! Not just yet, everything is still just budding and a little new, but I’m loving getting to cultivate a little space in the backyard."
-Lila?Smiling "Charlie still isn’t on his best doggy behavior so he sometimes just jumps around in the mud so we have to give him a bubble bath or two, but hey that’s puppies for ya."
+Lila?Smiling "Charlie still isn’t on his best doggy behavior so he sometimes just jumps around in the mud so we have had to give him a bath or two, but hey that’s puppies for ya."
 Lila?Smiling "It’s still worth it."
 * By the way, I think I found some intel for you that may be useful.
 -> ReadyToSolve
