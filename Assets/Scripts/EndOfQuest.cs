@@ -85,10 +85,12 @@ public class EndOfQuest : MonoBehaviour
         TalkBubble.SetActive(true);
         TalkBubbleText.enabled = true;
 
-        sticker1.enabled = true;
-        sticker2.enabled = true;
+        // sticker1.enabled = true;
+        // sticker2.enabled = true;
         polaroid1.enabled = false;
         polaroid2.enabled = false;
+        pin.enabled = false;
+        tapes.enabled = false;
 
         Week.text = GameStrings.getString("week_all_caps");
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
@@ -290,6 +292,31 @@ public class EndOfQuest : MonoBehaviour
             polaroid2.enabled = true;
             pin.enabled = true;
             tapes.enabled = true;
+
+            // switch (GlobalGameInfo.GetCurrentNPC()) {
+            //     case CharacterResources.CHARACTERS.RASHAD:
+            //         polaroid1.sprite = NPCPolaroidsRashad1[GlobalGameInfo.GetCurrentDay()];
+            //         polaroid2.sprite = NPCPolaroidsRashad2[GlobalGameInfo.GetCurrentDay()];
+            //         break;
+            //     case CharacterResources.CHARACTERS.LILA:
+            //         polaroid1.sprite = NPCPolaroidsLila1[GlobalGameInfo.GetCurrentDay()];
+            //         polaroid2.sprite = NPCPolaroidsLila2[GlobalGameInfo.GetCurrentDay()];
+            //         break;
+            //     case CharacterResources.CHARACTERS.CALINDAS:
+            //         polaroid1.sprite = NPCPolaroidsCalindas1[GlobalGameInfo.GetCurrentDay()];
+            //         polaroid2.sprite = NPCPolaroidsCalindas2[GlobalGameInfo.GetCurrentDay()];
+            //         break;
+            //     case CharacterResources.CHARACTERS.LEE:
+            //         polaroid1.sprite = NPCPolaroidsLee1[GlobalGameInfo.GetCurrentDay()];
+            //         polaroid2.sprite = NPCPolaroidsLee2[GlobalGameInfo.GetCurrentDay()];
+            //         break;
+            //     case CharacterResources.CHARACTERS.ELISA:
+            //         polaroid1.sprite = NPCPolaroidsElisa1[GlobalGameInfo.GetCurrentDay()];
+            //         polaroid2.sprite = NPCPolaroidsElisa2[GlobalGameInfo.GetCurrentDay()];
+            //         break;
+            //     default:
+            //         throw new System.Exception("Cannot find Character. Check EndOfQuest.cs");
+            // }
 
             ButtonText.text = GameStrings.getString("finish_day");
         } else {
