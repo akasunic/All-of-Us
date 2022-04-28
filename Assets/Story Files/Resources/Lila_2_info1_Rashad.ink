@@ -45,9 +45,9 @@ Rashad?Neutral "Absolutely. Is everything okay? Can I do something to help?"
 
 
 ==Explain2==
-Rashad?Neutral "Tell your friend it’s okay to be nervous, but it’s really important to take care of yourself."
-Rashad?Neutral "It’s hard enough to take care of yourself and we all deserve to feel safe going to the doctor,"
-Rashad?Neutral "Especially because talking about your medical worries can be very sensitive and anxiety inducing."
+Rashad?Neutral "Tell your friend it’s okay to be nervous, but it’s really important to take care of yourself. Reaching out for help is such an important step."
+Rashad?Neutral "We all deserve to feel safe going to the doctor, and it is okay to shop around until you find a doctor that 'fits'."
+Rashad?Neutral "Especially because talking about your medical worries can be very sensitive and anxiety inducing. There's no need to tolerate a doctor that makes you feel badly."
 * Exactly! My friend is really anixious. Do you have any ideas for her?
 -> Suggestion1
 * Definitely. Do you know of any resources that may be helpful for her?

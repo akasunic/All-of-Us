@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "Hey{player_name}!"
+Lila?Smiling "Hey, {player_name}!"
 * Hi there Lila! What’s up?
 -> Chat1
 * Hey, I asked for some health advice and I think I learned some helpful stuff for you!

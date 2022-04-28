@@ -59,7 +59,7 @@ Elisa?Smiling "She mentioned this last time we chatted. She was looking for a sp
 # notification Elisa_Day 1_Elisa can design and hang fliers for Lila around campus_Lila1-3 
 
 Elisa?Smiling "Does she have fliers yet?"
-Elisa?Smiling "I can put them up around campus on bulletin boards and share with our GSA - the gay-straight alliance - and other student organizations."
+Elisa?Smiling "I can put them up around campus on bulletin boards and share with our <a>GSA</a> - the gay-straight alliance - and other student organizations."
 Elisa?Smiling "A lot of groups on campus partner with community initiatives to emphasize how important it is to reach out and participate in your community."
 Elisa?Smiling "I’d be glad to help out with Lila’s fliers."
 Elisa?Smiling "I can even design them for her!"
@@ -74,8 +74,8 @@ Elisa?Smiling "I can even design them for her!"
 # notification Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4 
 
 Elisa?Smiling "As for Lila’s speaker, I took a class on the Western history of the LGBTQ+ community. I really enjoyed it."
-Elisa?Smiling "Our professor was really open to talking with us about any of our own questions! They shared their experience as a nonbinary person, which was all new to me."
-Elisa?Smiling "They were also connected to the school GSA and helped out a lot advocating for trans, nonbinary, and genderqueer student rights on campus."
+Elisa?Smiling "Our professor was really open to talking with us about any of our own questions! They shared their experience as a <a>nonbinary</a> person, which was all new to me."
+Elisa?Smiling "They were also connected to the school GSA and helped out a lot advocating for <a>trans</a>, <a>nonbinary</a>, and <a>genderqueer</a> student rights on campus."
 Elisa?Smiling "They really cared about the campus community and generally making sure all students felt safe and protected."
 Elisa?Smiling "I think they would be a great speaker for Lila. Have her email me and I'll make introductions."
 

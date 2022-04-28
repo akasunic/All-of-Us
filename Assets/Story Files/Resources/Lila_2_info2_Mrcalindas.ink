@@ -36,11 +36,11 @@ Mrcalindas?Smiling "Another item for our cooking lessons when we get a chance."
 ==Chat3==
 Mrcalindas?Smiling "Haha, me neither! It’s important to eat your fruits and vegetables, but sweet things in moderation never hurt."
 Mrcalindas?Smiling "Exciting as cake is, there’s probably something else you wanted to bring up, yeah?"
-* A friend has been anxious about going to the doctor as a Black woman."
+* A friend has been anxious about going to the doctor as a Black woman.
 -> Explain1
 
 ==Explain1==
-"Always, my friend. What can I do for you?" 
+Mrcalindas?Smiling "Always, my friend. What can I do for you?" 
 
 *How do you recommend a woman of color pick a doctor?
 ->Suggestion1
@@ -75,7 +75,7 @@ Mrcalindas?Smiling "Different types of care come from different places -- you ca
 
 ==Suggestion2==
 Mrcalindas?Neutral "To prepare for doctor’s appointments, your friend can write things down in a small notebook dedicated to her health."
-Mrcalindas?Neutral "Include vitamins she’s taking, allergies, symptoms and when they started, and notes about her mental health, or general concerns."
+Mrcalindas?Neutral "Include <a>vitamins</a> and <a>supplements</a> she’s taking, <a>allergies</a>, symptoms and when they started, and notes about her mental health, or general concerns."
 Mrcalindas?Neutral "This way, she can make sure she remembers everything she wants to bring up."
 * Are there any other resources I could suggest to her?
 -> Suggestion3
@@ -96,7 +96,7 @@ Mrcalindas?Smiling "We want people to feel empowered taking control of their hea
 -> Goodbye
 
 ==Goodbye==
-Mrcalindas?Smiling "Tell your friend good luck! And let me know when you’re free for a cooking lesson.''
+Mrcalindas?Smiling "Tell your friend good luck! And let me know when you’re free for a cooking lesson."
 * Thank you Mr.Calindas, and you got it!
 -> END
 * See you around, Mr.Calindas! Good luck with Brooklyn’s birthday party!"
