@@ -17,7 +17,7 @@ Lila?Neutral "Hi, {player_name}! It's good to see you."
  ->Chat1
 
 ==Chat1==
-Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice fostering the sort of community I wish I had growing up, but I get a little misty-eyed every now and again."
+Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice <a>fostering</a> the sort of community I wish I had growing up, but I get a little <a>misty-eyed</a> every now and again."
 
 Lila?Smiling "Trisha has also been a great help. We’ve begun to work together on a lot of aspects and it’s definitely brought us closer as a couple."
 Lila?Smiling "We are having conversations about topics that never came up until now. And I’ll never say no to more time with her!"
@@ -29,7 +29,7 @@ Lila?Smiling "We are having conversations about topics that never came up until 
 ==Chat2==
 Lila?Smiling "Aw, thank you! I'm really loving this process. 
 Lila?Smiling "Last week, Trisha came up with this neat activity where the mentors guided their mentees in making art pieces about who they are and want to be."
-Lila?Smiling "It was so cool seeing everyone express their unique identities and personalities."
+Lila?Smiling "It was so cool seeing everyone express their unique <a>identities</a> and personalities."
 Lila?Smiling "I love the connections that happen when people open up. It felt like I was watching something magical happen."
 Lila?Neutral "I feel really at home there, which is such a shift from how I’ve felt before"
 
@@ -39,7 +39,7 @@ Lila?Neutral "I feel really at home there, which is such a shift from how I’ve
 ==QuestIntro==
 Lila?Neutral "Aw, thank you." 
 Lila?Neutral "I’ve always felt a little bit lonely in Bloomwood, even though I have close friends here who care about me, like you, Mrs. Lee and Eddie. Trisha, of course."
-Lila?Neutral "The group has helped with feeling connected in general, but I still feel a little isolated. There aren't a lot of queer people I can just grab a cup of coffee with. Ya know?"
+Lila?Neutral "The group has helped with feeling connected in general, but I still feel a little isolated. There aren't a lot of <a>queer</a> people I can just grab a cup of coffee with. Ya know?"
 Lila?Neutral "Being around Trisha is wonderful, but I wish I had more of a community in that sense."
 
 * I wouldn't have guessed, Lila! Tell me more?
@@ -60,7 +60,7 @@ Lila?Neutral "I don’t want to go my whole life not meeting other people who un
 
 ==QuestDetails2==
 Lila?Neutral "I know I shouldn’t be picky, but I wish I had a more diverse community and support group of people my age I could go to about these feelings, outside of Trisha."
-Lila?Neutral? "A lot of queer spaces I see are centered around younger folks so it is hard being older, yet still disconnected and trying to find a place I feel comfortable in."
+Lila?Neutral "A lot of queer spaces I see are centered around younger folks so it is hard being older, yet still disconnected and trying to find a place I feel comfortable in."
 Lila?Neutral "Ultimately, I am happy, but it’s hard. I'm really hurting for a peer group."
 * We all deserve a safe place. I can ask around for advice for you if you’d like.
 -> QuestAcceptance
@@ -74,7 +74,7 @@ Lila?Smiling "I really appreciate the offer. Only if you have time, okay? I want
 
 ==Goodbye==
 Lila?Smiling "Thank you for the reminder. I definitely needed to hear that. I need to get back inside... We'll chat later? Thank you again."
-* I’ll spread these social butterfly wings and be right back.
+* I’ll spread these <a>social butterfly wings<a> and be right back.
 -> END
 * Of course, Lila. Anything for a friend.
 -> END

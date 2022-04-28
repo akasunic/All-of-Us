@@ -27,7 +27,7 @@ Rashad?Neutral "Not much. I’m revising a grant proposal, but otherwise it’s 
 Rashad?Smiling "They’re great! My kids are the best. For that matter, so is Cheryl! Our work schedules have been slightly more flexible so we’ve been spending a lot more time with the kids."
 Rashad?Smiling "I’m so glad to spend time with them. Sometimes we even bring them here to some of our youth events."
 
-* What sort of events does the library host?
+* What sort of events does the Library host?
   -> Chat3
 * Hey, I’m working on an initiative with Lila and I think she could use your help.
   -> Explain1
@@ -55,7 +55,7 @@ Rashad?Neutral "Venues sometimes have equipment already setup. Where is Lila hos
   -> Explain3
 
 ==Explain3==
-Rashad?Smiling "Yeah! The library hosts events here, the park and other places in the community. It’s a lot of fun!"
+Rashad?Smiling "Yeah! The Library hosts events here, the park and other places in the community. It’s a lot of fun!"
 
 * That’s awesome! Lila is looking for someone to help set up the equipment.
 -> Suggestion1
@@ -68,7 +68,7 @@ Rashad?Smiling "Yeah! The library hosts events here, the park and other places i
 
 Rashad?Smiling "If this is going to be a regular thing, the Community Center might invest in equipment so they don't have to borrow or rent every time." 
 Rashad?Smiling "It would also mean they can set up the equipment in the space where it's most likely to be used and leave it alone between events." 
-Rashad?Smiling "There might be some community grants available to help finance a purchase. I'm happy to use some of my librarian magic to help Lila look into funding sources." 
+Rashad?Smiling "There might be some <a>community grants</a> available to help finance a purchase. I'm happy to use some of my librarian magic to help Lila look into funding sources." 
 
 * I hadn't thought of that, Rashad! What a great idea.
   -> Suggestion2
@@ -82,7 +82,7 @@ Rashad?Smiling "There might be some community grants available to help finance a
 Rashad?Smiling "It can take some time to get the paperwork moving for funding, so she might need to borrow equipment for the first event."
 Rashad?Smiling "I think a community is stronger when the various institutions work together; I can pull our extra equipment out of storage and set everything up for her." 
 Rashad?Smiling "You did the right thing by heading over here -  Building community support starts with looking for the support structures that already exist."
-Rashad?Smiling "It's been a while since I worked a show, but she has the library's backing. I'll get her setup and run a/v for her while she gets this thing started." 
+Rashad?Smiling "It's been a while since I worked a show, but she has the Library's backing. I'll get her setup and run the equipment for her while she gets this thing started." 
 Rashad?Smiling "Then, if she wants the help, I can pitch in for future events until someone in the group is ready to take over." 
 
 * Thank you so much, Rashad. This will really mean a lot to Lila!

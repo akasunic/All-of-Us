@@ -7,21 +7,21 @@ VAR new_quest = ""
 
 ===intro===
 
-Mrslee?Smiling "{player_name}! Wonderful see you."
+Mrslee?Smiling "{player_name}! Wonderful to see you."
 * Hi, Mrs.Lee! It’s lovely to see you too!
 -> Chat1
 * Happy you’re here!
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "
-* How’s was fitness class?
+Mrslee?Smiling "Did you hear that people from mentorship group have joined water fitness? We just had class! I feel so happy for Lila!"
+* That's great! How’s was class?
 -> Chat2
 * Mrs.Lee, can I ask a question?
 -> Explain1
 
 ==Chat2==
-Mrslee?Smiling "Good! I love water fitness class! My friends meet there every week."
+Mrslee?Smiling "Good! I love water fitness class! My friends meet there every week. And now, maybe, I have new friends in class."
 Mrslee?Smiling "Afterwards, we get lunch together and talk about our families, about our gardens. about getting older."
 * That sounds like so much fun! 
 -> Chat3
@@ -31,7 +31,7 @@ Mrslee?Smiling "Afterwards, we get lunch together and talk about our families, a
 ==Chat3==
 Mrslee?Smiling "It is. Between class, my friends, and helping Lila, I don't worry for Eddie too much."
 
-Mrs.Lee?Smiling "How about you? What are you up to?"
+Mrslee?Smiling "How about you? What are you up to?"
 * You’re a wonderful grandmother, Mrs.Lee. Hey, can I ask you something?
 -> Explain1
 * I was wondering if you knew how Eddie has made new friends?
@@ -48,7 +48,7 @@ Mrslee?Neutral "I always try my best to answer, {player_name}."
 ~ notification = "Mrslee_Day 3_Connecting with community can include deepening existing relationships_Lila3-3"
 # notification Mrslee_Day 3_Connecting with community can include deepening existing relationships_Lila3-3 
 
-Mrslee?Neutral "Sometime I have weekly video calls with old friends and few ladies from fitness class. I feel really supported."
+Mrslee?Neutral "I have weekly video calls with old friends. We invite new friends sometimes, like I include a few ladies from fitness class. I feel really supported."
 Mrslee?Neutral "Making new friends used to feel hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
 Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now. Friends are all over, but we need to look."
 Mrslee?Smiling "It can be easy to forget the people right nearby."
@@ -69,7 +69,7 @@ Mrslee?Smiling "In a new place, having buddy can be very special. It make him fe
 -> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling ""I so happy I help, {player_name}. I go now, but stop by and say hello soon. See you!"
+Mrslee?Smiling ""I am happy to help, {player_name}. I go now, but stop by and say hello soon. See you!"
 * Goodbye, Mrs.Lee!
 -> END
 * Thanks so much for your help, Mrs. Lee. Have the best time dancing. See you!

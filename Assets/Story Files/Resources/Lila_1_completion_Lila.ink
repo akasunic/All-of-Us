@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Lila?Smiling "{player_name} Good afternoon! How’s it going?"
+Lila?Smiling "{player_name}, Good afternoon! How’s it going?"
 
 * It’s going well! How was your day?
 -> Chat1

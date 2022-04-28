@@ -11,7 +11,7 @@ VAR new_quest = ""
 # new_quest
 
 Lila?Smiling "Hi there {player_name}! Really quick, I wanted to thank you for helping me out with getting that health information for me the other day."
-Lila?Smiling "I got referred to a Black doctor not too far away. We did a quick consultation to see how I like her and I already feel way more comfortable about going to the doctor."
+Lila?Smiling "I got referred to a Black doctor not too far away. We did a quick <a>consultation</a> to see how I like her and I already feel way more comfortable about going to the doctor."
 * I’m so glad to hear that! It sounds like it could be a good fit.
 -> Chat1
 * I’m happy you are on the path to a good relationship with a doctor!
@@ -35,16 +35,16 @@ Lila?Smiling "I’m a bit more of a homebody, but there’s no one quite as adve
 -> QuestIntro
 
 == QuestIntro ==
-Lila?Neutral "Hey, along those lines, I started doing some research on some of my own symptoms. I learned about something called rheumatoid arthritis."
+Lila?Neutral "Hey, along those lines, I started doing some research on some of my own symptoms. I learned about something called <a>rheumatoid arthritis</a>."
 Lila?Neutral "Can I talk this out with you a little bit? I'm only just learning about autoimmune diseases."
 * I know some, but can you tell me more?
 -> QuestOverview
 
 == QuestOverview ==
 Lila?Neutral "Honestly, it’s a little sensitive to talk about so I don’t know a whole lot just yet, but RA is a chronic autoimmune disorder. It’s when your body’s immune system attacks your joints."
-Lila?Neutral "I don’t know if it’s genetic, but apparently it does appear commonly in certain families."
+Lila?Neutral "I don’t know if it’s <a>genetic</a>, but apparently it does appear commonly in certain families."
 Lila?Neutral "I’d really like to ask my mother about her health experiences and our family medical history, but I’m nervous to reach out to her in that way."
-Lila?Neutral "It’s just more difficult when it’s so close to home and advocating for myself in this manner is really new. I still have a lot to learn about myself and her."
+Lila?Neutral "It’s just more difficult when it’s so close to home and <a>advocating</a> for myself in this manner is really new. I still have a lot to learn about myself and her."
 * Do you know if she’s had symptoms of autoimmune disorders before?
 -> QuestDetails1
 * It’s really important to know these things so you can inform yourself and doctors.

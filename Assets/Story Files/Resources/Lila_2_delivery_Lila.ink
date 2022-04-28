@@ -19,8 +19,8 @@ Lila?Smiling "Oh, hey {player_name}!"
 == Chat1 ==
 
 Lila?Smiling "It went really well! I was nervous, but thanks to Elisa’s fliers and Rashad’s help, we had a really nice turnout,"
-Lila?Smiling "We got a lot of sign-ups for the mentorship group. I’m hoping to host a potluck picnic for everyone while the weather is nice."
-* I’m so glad to hear that- I knew you could do it!
+Lila?Smiling "We got a lot of sign-ups for the mentorship group. I’m hoping to host a <a>potluck<a> picnic for everyone while the weather is nice."
+* I knew you could do it! How are you now?
 -> QuestIntro
 * That’s awesome! How is Trisha?
 -> Chat2
@@ -34,8 +34,8 @@ Lila?Smiling "Trisha is doing well. Right now, she’s at the park with our dog,
 
 == QuestIntro ==
 Lila?Neutral "Well…"
-Lila?Neutral "I’ve been having a lot of stiffness in my joints lately so it’s been hard being active."
-Lila?Neutral "I went with them to the park the other day, but I was really out of breath."
+Lila?Neutral "I’ve been having a lot of stiffness in my joints lately so it’s been hard being active. I get home from work, and I'm just ... done."
+Lila?Neutral "I went with Trisha and Charlie to the park the other day, but I was really out of breath. So now I'm worried about that."
 Lila?Neutral "When I went to the clinic to get a check up, they were concerned because it hasn't gone away."
 Lila?Neutral "They recommended I get a few blood tests done, but I’m feeling a little nervous about going back."
 * My doctor has recommended the same for me. It’s definitely worth it.
@@ -44,10 +44,10 @@ Lila?Neutral "They recommended I get a few blood tests done, but I’m feeling a
 -> QuestOverview
 
 == QuestOverview ==
-Lila?Neutral "I agree. At least, in theory, I agree. One of my friends in college found out she had breast cancer when she found a lump one day, and she went right in for testing." 
-Lila?Neutral "Apparently Black women have a higher chance of developing breast cancer and some autoimmune diseases."
+Lila?Neutral "I agree. At least, in theory, I agree. One of my friends in college found out she had breast cancer when she found a <a>lump</a> one day, and she went right in for testing." 
+Lila?Neutral "Apparently Black women have a higher chance of developing breast cancer and some <a>autoimmune diseases</a>."
 Lila?Neutral "While a blood test won’t tell me everything, I know there are a lot of things it can rule out." 
-Lila?Neutral. "I’m really worried about other health conditions I may be at risk for, especially as a Black woman."
+Lila?Neutral "I’m really worried about other health conditions I may be at risk for, especially as a Black woman."
 * I understand, that’s a really difficult spot to be in.
 -> QuestDetails1
 * Have you spoken to anyone about this?"
@@ -55,7 +55,7 @@ Lila?Neutral. "I’m really worried about other health conditions I may be at ri
 
 ==QuestDetails1==
 Lila?Neutral "I want to know, but I’m scared. Going to the doctor is a little nerve wracking because of how the health system treats people of color."
-Lila?Neutral "Trisha is a great support for me especially because we face a lot of the same systemic issues."
+Lila?Neutral "Trisha is a great support for me especially because we face a lot of the same <a>systemic issues</a>."
 Lila?Neutral "Since she’s South-Asian, we still have different experiences. She doesn’t know a lot about Black women’s specific health issues."
 Lila?Neutral "It all makes going to the doctor sort of scary for me and I tend to freeze up."
 
@@ -79,7 +79,7 @@ Lila?Neutral "When I was younger, I would go with my mom to her doctor’s appoi
 Lila?Neutral "I remember those long sign-in sheets with lots of questions about your family history."
 Lila?Neutral "My mom was open about everything and would have answered any question I had. I guess since she retired, I've just been avoiding the whole thing."
 Lila?Neutral "Having that conversation is pretty daunting for me now."
-* I can do some legwork and ask others about this if you’d like."
+* I can do some <a>legwork</a> and ask others about this if you’d like."
 -> QuestAcceptance
 *  Do you want me to try and look into some of this for you? 
 -> QuestAcceptance
@@ -94,7 +94,7 @@ Lila?Smiling "I know my health should be a priority. It's just that I've been av
 -> Goodbye
 
 ==Goodbye==
-Lila?Smiling "Thank you {player_name}!"
+Lila?Smiling "Thank you, {player_name}!"
 * No problem!
 -> END
 * I’m happy to help!
