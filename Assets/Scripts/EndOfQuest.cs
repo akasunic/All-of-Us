@@ -25,19 +25,33 @@ public class EndOfQuest : MonoBehaviour
     public Sprite healthCenterBackground;
 
     // Stickers
-    public GameObject[] NPCStickersLee1;
-    public GameObject[] NPCStickersLee2;
-    public GameObject[] NPCStickersCalindas1;
-    public GameObject[] NPCStickersCalindas2;
-    public GameObject[] NPCStickersLila1;
-    public GameObject[] NPCStickersLila2;
-    public GameObject[] NPCStickersElisa1;
-    public GameObject[] NPCStickersElisa2;
-    public GameObject[] NPCStickersRashad1;
-    public GameObject[] NPCStickersRashad2;
+    public Image sticker1;
+    public Image sticker2;
+    public Sprite[] NPCStickersLee1;
+    public Sprite[] NPCStickersLee2;
+    public Sprite[] NPCStickersCalindas1;
+    public Sprite[] NPCStickersCalindas2;
+    public Sprite[] NPCStickersLila1;
+    public Sprite[] NPCStickersLila2;
+    public Sprite[] NPCStickersElisa1;
+    public Sprite[] NPCStickersElisa2;
+    public Sprite[] NPCStickersRashad1;
+    public Sprite[] NPCStickersRashad2;
     // Polaroids
-    public GameObject[] NPCPolaroids1;
-    public GameObject[] NPCPolaroids2;
+    public Image polaroid1;
+    public Image polaroid2;
+    public Image pin;
+    public Image tapes;
+    public Sprite[] NPCPolaroidsLee1;
+    public Sprite[] NPCPolaroidsLee2;
+    public Sprite[] NPCPolaroidsCalindas1;
+    public Sprite[] NPCPolaroidsCalindas2;
+    public Sprite[] NPCPolaroidsLila1;
+    public Sprite[] NPCPolaroidsLila2;
+    public Sprite[] NPCPolaroidsElisa1;
+    public Sprite[] NPCPolaroidsElisa2;
+    public Sprite[] NPCPolaroidsRashad1;
+    public Sprite[] NPCPolaroidsRashad2;
     // Other elements
     public TextMeshProUGUI DaySummary;
     public TextMeshProUGUI Mon;
@@ -71,6 +85,11 @@ public class EndOfQuest : MonoBehaviour
         TalkBubble.SetActive(true);
         TalkBubbleText.enabled = true;
 
+        sticker1.enabled = true;
+        sticker2.enabled = true;
+        polaroid1.enabled = false;
+        polaroid2.enabled = false;
+
         Week.text = GameStrings.getString("week_all_caps");
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
         DaysLeftText.text = GameStrings.getString("days_left");
@@ -86,8 +105,12 @@ public class EndOfQuest : MonoBehaviour
                 NPC.sprite = NPCImages[0];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_rashad_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_rashad_2");
-                NPCStickersRashad1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                NPCStickersRashad2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+
+                sticker1.sprite = NPCStickersRashad1[GlobalGameInfo.GetCurrentDay()];
+                sticker2.sprite = NPCStickersRashad2[GlobalGameInfo.GetCurrentDay()];
+                polaroid1.sprite = NPCPolaroidsRashad1[GlobalGameInfo.GetCurrentDay()];
+                polaroid2.sprite = NPCPolaroidsRashad2[GlobalGameInfo.GetCurrentDay()];
+
                 Background.sprite = libraryBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
@@ -114,8 +137,12 @@ public class EndOfQuest : MonoBehaviour
                 NPC.sprite = NPCImages[1];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_lila_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_lila_2");
-                NPCStickersLila1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                NPCStickersLila2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+
+                sticker1.sprite = NPCStickersLila1[GlobalGameInfo.GetCurrentDay()];
+                sticker2.sprite = NPCStickersLila2[GlobalGameInfo.GetCurrentDay()];
+                polaroid1.sprite = NPCPolaroidsLila1[GlobalGameInfo.GetCurrentDay()];
+                polaroid2.sprite = NPCPolaroidsLila2[GlobalGameInfo.GetCurrentDay()];
+
                 Background.sprite = communityCenterBackground;
                 
                 switch (GlobalGameInfo.GetCurrentDay()) {
@@ -142,8 +169,12 @@ public class EndOfQuest : MonoBehaviour
                 NPC.sprite = NPCImages[2];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_calindas_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_calindas_2");
-                NPCStickersCalindas1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                NPCStickersCalindas2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+
+                sticker1.sprite = NPCStickersCalindas1[GlobalGameInfo.GetCurrentDay()];
+                sticker2.sprite = NPCStickersCalindas2[GlobalGameInfo.GetCurrentDay()];
+                polaroid1.sprite = NPCPolaroidsCalindas1[GlobalGameInfo.GetCurrentDay()];
+                polaroid2.sprite = NPCPolaroidsCalindas2[GlobalGameInfo.GetCurrentDay()];
+
                 Background.sprite = healthCenterBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
@@ -170,8 +201,12 @@ public class EndOfQuest : MonoBehaviour
                 NPC.sprite = NPCImages[3];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_lee_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_lee_2");
-                NPCStickersLee1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                NPCStickersLee2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+                
+                sticker1.sprite = NPCStickersLee1[GlobalGameInfo.GetCurrentDay()];
+                sticker2.sprite = NPCStickersLee2[GlobalGameInfo.GetCurrentDay()];
+                polaroid1.sprite = NPCPolaroidsLee1[GlobalGameInfo.GetCurrentDay()];
+                polaroid2.sprite = NPCPolaroidsLee2[GlobalGameInfo.GetCurrentDay()];
+
                 Background.sprite = communityCenterBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
@@ -198,8 +233,12 @@ public class EndOfQuest : MonoBehaviour
                 NPC.sprite = NPCImages[4];
                 TalkBubbleText.text = GameStrings.getString("talk_bubble_elisa_1");
                 TalkBubble2Text.text = GameStrings.getString("talk_bubble_elisa_2");
-                NPCStickersElisa1[GlobalGameInfo.GetCurrentDay()].SetActive(true);
-                NPCStickersElisa2[GlobalGameInfo.GetCurrentDay()].SetActive(true);
+
+                sticker1.sprite = NPCStickersElisa1[GlobalGameInfo.GetCurrentDay()];
+                sticker2.sprite = NPCStickersElisa2[GlobalGameInfo.GetCurrentDay()];
+                polaroid1.sprite = NPCPolaroidsElisa1[GlobalGameInfo.GetCurrentDay()];
+                polaroid2.sprite = NPCPolaroidsElisa2[GlobalGameInfo.GetCurrentDay()];
+
                 Background.sprite = libraryBackground;
 
                 switch (GlobalGameInfo.GetCurrentDay()) {
@@ -234,14 +273,23 @@ public class EndOfQuest : MonoBehaviour
     public void ButtonClick()
     {
         if (ButtonText.text != GameStrings.getString("finish_day")) {
+            // Replace talk bubbles
             TalkBubble.SetActive(false);
             TalkBubbleText.enabled = false;
-
             TalkBubble2.SetActive(true);
             TalkBubble2Text.enabled = true;
 
+            // Disable stickers
+            sticker1.enabled = false;
+            sticker2.enabled = false;
             Sticker1Text.enabled = false;
             Sticker2Text.enabled = false;
+
+            // Enable polaroids
+            polaroid1.enabled = true;
+            polaroid2.enabled = true;
+            pin.enabled = true;
+            tapes.enabled = true;
 
             ButtonText.text = GameStrings.getString("finish_day");
         } else {
