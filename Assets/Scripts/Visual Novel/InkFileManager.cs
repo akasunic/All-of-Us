@@ -101,18 +101,15 @@ public class InkFileManager : MonoBehaviour {
     }
 
     private void OnSceneChanged(Scene prev, Scene next) {
-        EndOfQuest eoq = null;
-        if ((eoq = FindObjectOfType<EndOfQuest>()) &&
-            completedQuestString != null && completedQuestString != "") {
-            eoq.EndQuest(completedQuestString);
+        if (completedQuestString != null && completedQuestString != "") {
             completedQuestString = null;
+            SceneManager.LoadScene("EndOfQuest");
         }
         if (!GetVisualNovelComponents())
             return;
 
         _fc.SetStringVariable("player_name", GlobalGameInfo.name);
         _fc.ExecuteBlock("On Variables Loaded");
-
     }
 
     public static void OnQuestCompleted(CharacterResources.CHARACTERS questGiver) {
@@ -266,9 +263,7 @@ public class InkFileManager : MonoBehaviour {
 
 
     public void TryGoHome() {
-        // if (CanAdvanceDay()) {
-            SceneManager.LoadScene("Home");
-        // }
+        SceneManager.LoadScene("Home");
     }
 
     public void TryLoadVNScene(string person) {
