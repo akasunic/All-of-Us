@@ -8,8 +8,6 @@ VAR new_quest = ""
 ===intro===
 ~ new_quest = "Mrslee1.txt"
 # new_quest
-~ new_contact = "Mrslee"
-# new_contact
 
 Mrslee?Neutral "Good morning, {player_name}!"
 

@@ -8,8 +8,6 @@ VAR new_quest = ""
 ===intro===
 ~ new_quest = "Mrcalindas1.txt"
 # new_quest
-~ new_contact = "Mrcalindas"
-# new_contact
 
 Mrcalindas?Smiling  "{player_name}! I have something for you from Paz. She worries that maybe you don't eat breakfast and sent you <a>ensaymada</a>. I knew you'd come in eventually!" 
 

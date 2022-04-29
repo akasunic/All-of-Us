@@ -6,9 +6,6 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-~ new_contact = "Mrcalindas"
-# new_contact
-
 Mrcalindas?Smiling "{player_name}, what's goin' on?"
 
 + Hey, not too much. How 'bout you?
