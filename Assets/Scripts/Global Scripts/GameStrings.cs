@@ -190,7 +190,7 @@ public static class GameStrings {
                 {"end_of_quest_lila_3_sticker1", "Community institutions like libraries host affinity groups and free community events."},
                 {"end_of_quest_lila_3_sticker2", "Connecting with community can include deepening existing relationships."},
                 {"end_of_quest_lila_4_sticker1", "Learn to listen to your body, and give yourself permission to rest when needed Medical innovations come along all the time -- find a specialist you trust and stay up to date on the latest development."},
-                {"end_of_quest_lila_4_sticker2", "When recording your family medical history, always document the diseases, allergies, ethnicity and death information for relatives if known. Doctors offices can offer templates to help people get started in tracking their family medical history."},
+                {"end_of_quest_lila_4_sticker2", "When recording your family medical history, always document the diseases, allergies, ethnicity and death information for relatives if known."},
 
                 {"end_of_quest_elisa_1_sticker1", "Work with your doctor to create a plan that combines diet, exercise, monitoring, and medicine to control your blood sugar and manage your diabetes."},
                 {"end_of_quest_elisa_1_sticker2", "You can learn more about managing diabetes by accessing library resources, such as health workshops and cookbooks."},
