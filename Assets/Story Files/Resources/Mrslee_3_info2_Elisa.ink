@@ -23,7 +23,7 @@ Elisa?Smiling "She's starting to get this whole internet humor thing! I wasn't p
   -> Explain1
 
 ==Chat2==
-Elisa?Smiling "Now all my siblings are hopping on it... ugh this is so distracting actually. I should be studying..."
+Elisa?Smiling "Now all my siblings are hopping on it... ugh this is so distracting. I should be studying..."
 
 * Speaking of elders... Can I ask a question?
   -> Explain1
@@ -31,14 +31,14 @@ Elisa?Smiling "Now all my siblings are hopping on it... ugh this is so distracti
 ==Explain1==
 Elisa?Neutral "Yeah, sure! I'm happy to help if I can. If it crosses a boundary, I can always say so."
 
-* I'm helping Mrs. Lee prepare for a doctor's appointment. 
+* I'm helping a friend prepare for a doctor's appointment. 
   -> Explain2
 
 ==Explain2==
 Elisa?Smiling "Oh! I was worried for a moment. 'Parent question' sounds so serious!"
 Elisa?Smiling "I used to help with all my folks' appointments, until their English got better. How can I help?"
 
-* I was hoping you might have some suggestions to help her feel more comfortable.
+* I was hoping you might have ideas to help my friend feel more comfortable.
   -> Suggestion1
 * I knew you'd have helpful perspective! 
   -> Suggestion1

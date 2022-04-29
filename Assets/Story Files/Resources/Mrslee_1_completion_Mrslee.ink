@@ -6,22 +6,22 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-Mrslee?Neutral "I am so frustrate--I feel so frustrate!"
+Mrslee?Neutral "I feel so frustrated!"
 
-+ {not TempGoodbye}  Talk to me, Mrs. Lee. I'm listening!
++ Talk to me, Mrs. Lee. I'm listening!
   -> Chat1
-+ {not TempGoodbye} I think I might be able to help you.
++  I think I might be able to help you.
   -> ReadyToSolve
-+ {TempGoodbye} I think I'm ready now! 
-  -> ReadyToSolve
+
 
 
 ==Chat1==
-Mrslee?Neutral "I'm so concerning about Eddie. He has high blood pressure and I worry bad things gonna happen if he don't take."
+Mrslee?Neutral "I worry about Eddie. I feel like he trust me to get his medicine, and I feel stress."
+Mrslee?Neutral "The doctor at the clinic explain that he needs to take his pill every day." 
 
 + When does he need the medication?
   -> Chat2
-+ I can help you.
++ I have suggestions for you.
   -> ReadyToSolve
 
 ==Chat2==
@@ -54,17 +54,17 @@ Mrslee?Neutral "What do you think?"
 
 ==Option2==
 # correct
-Mrslee?Smiling "Thank you, {player_name}. I do trust Lila. I have a bad feeling the medicine might be wrong. Lila can help me ask the pharmacist to confirm."
-Mrslee?Smiling "Eddie says some drugs have different names, and it is okay, but anyway I am scare for Eddie."
-Mrslee?Neutral "Lila can help if I feel embarrass about my English."
+Mrslee?Smiling "Thank you, {player_name}. I do trust Lila. Lila can help me ask the pharmacist to confirm."
+Mrslee?Smiling "Eddie says some drugs have different names, and it is okay, but anyway I feel scared for Eddie."
+Mrslee?Neutral "Lila can help if I feel bad about my English."
 
-+ That’s a good idea, Mrs. Lee. Sometimes it’s hard to speak up and ask questions.
++ That’s a good idea, Mrs. Lee.
 -> Followup1 
-+ I feel like you’re really onto something! Drug names are confusing.
++ You're right! Drug names are confusing.
 -> Followup1
 
 ==Followup1==
-Mrslee?Neutral "I want to be brave and ask good questions. Lila can help me practice, then next time, I know enough."
+Mrslee?Neutral "I want to be ask the pharmacist questions. Lila can help me practice, then next time, I know enough."
 Mrslee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
 
 + I'm here to support you!
@@ -72,7 +72,7 @@ Mrslee?Smiling "Also, next time, the pharmacist won’t be a stranger!"
 
 ==Option1==
 Mrslee?Neutral "No thank you, {player_name}. I want to solve the problem myself."
-Mrslee?Neutral "Lila very nice. She do me favor. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
+Mrslee?Neutral "Lila is very kind to offer. But next time, what if Lila busy with work? Or Eddie need new medication? I need to know how to ask questions."
 
 + Let me try again
   -> PuzzleInterface
@@ -85,7 +85,7 @@ Mrslee?Neutral "I feel stress, {player_name}. I learn in library workshop that s
   
 ==Option3==
 # correct
-Mrslee?Smiling "I know that the drug can be named lisinopril. If I look it up in the drug portal, they give other names too?"
+Mrslee?Smiling "I know that the drug can be named <a>lisinopril</a>. If I look it up in the drug portal, they give other names too?"
 
 + Exactly! You can print out the information sheet and take it with you.
 -> Followup2 

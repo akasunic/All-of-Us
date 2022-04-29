@@ -18,7 +18,7 @@ Mrslee?Smiling "Hello, {player_name}! I got Eddie's medicine. I ask the pharmaci
 
 
 ==Chat1==
-Mrslee?Neutral "I'm overwhelmed! Everything is harder alone and I just can't get rid of this headache."
+Mrslee?Neutral "I'm overwhelmed! Everything is harder alone and I just can't get rid of this <a>headache</a>."
 
 * You've been having headaches?
   -> QuestIntro
@@ -33,7 +33,7 @@ Mrslee?Neutral "Eddie say I worry too much. He say I give myself headache from s
   -> QuestIntro
 
 ==QuestIntro==
-Mrslee?Neutral "Headache, headache. I get like this all the time. No big deal. Everybody get headache."
+Mrslee?Neutral "Headache, headache. I get like this all the time. No big deal. Everybody get headache, right?"
 
 * How often do you get headaches like this?
   -> QuestDetails1
@@ -41,23 +41,25 @@ Mrslee?Neutral "Headache, headache. I get like this all the time. No big deal. E
   -> QuestDetails2
 
 ==QuestDetails1==
-Mrslee?Neutral "My husband said it was fine. Only stress."
+Mrslee?Neutral "I talk to my sister on a video call. She said it was fine. Only stress."
+Mrslee?Neutral "She said sometimes her head aches when she worry too much. Or when her sleep is bad. Doctors don't fix worry. They make worry."
 
-* Have you gotten it checked out at the doctor's office?
+* Have you gotten it checked out at the <a>doctor</a>'s office?
   -> QuestDetails2
 * I'd like to help if you'd let me.
   -> QuestAcceptance
 
 ==OptionalQuestDetails1==
-Mrslee?Neutral "Thinking about the doctor only make my headache worse."
+Mrslee?Neutral "Thinking about doctors only make my headache worse."
 
-* I'm so sorry. Headaches make everything harder. Maybe a doctor could help?
+* I'm so sorry. Headaches make everything harder.
   -> QuestDetails2
 * I'd really like to help you out; would you let me research options?
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrslee?Neutral "I am really fine. It's been like this for years and years. My mother had same problem. I don't go to doctors."
+Mrslee?Neutral "I am really fine. It's been like this for years and years. My mother had same problem. She didn't go to doctors."
+Mrslee?Neutral "Eddie say I should worry less. Wait until he has grandkids!"
 
 * How often do you get headaches like this?
   -> OptionalQuestDetails2
@@ -67,11 +69,11 @@ Mrslee?Neutral "I am not sure. They come. They go. I am fine."
 
 * I'm worried about you. Have you talked to Eddie about the headaches?
   -> QuestAcceptance
-* If you tell me what stresses you out about doctors, maybe I can find solutions.
+* Tell me what stresses you out about doctors; maybe I can find solutions.
   -> QuestAcceptance
 
 ==QuestAcceptance==
-Mrslee?Smiling "I suppose Eddie would like if I ask a doctor. I feel nervous about the appointment and scheduling... that makes me, well, it makes me headache thinking about it.
+Mrslee?Smiling "I suppose Eddie would like if I ask a doctor. I feel nervous about the appointment and <a>scheduling</a>... that makes me, well, it makes me headache thinking about it."
 
 * I can definitely help you.
   -> Goodbye

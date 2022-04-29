@@ -24,9 +24,9 @@ Mrcalindas?Smiling "They cover all different types of health conditions and are 
   -> Explain1
 
 ==Chat2==
-Mrcalindas?Smiling "Yup, our doors are open around the clock, 7 days a week. We provide urgent care support, so people can avoid the emergency department."
+Mrcalindas?Smiling "Yup, our doors are open around the clock, 7 days a week. We provide <a>urgent care</a> support, so people can avoid the <a>emergency department</a>."
 
-* I like that the clinic offers an option other than going straight to the emergency room.
+* So the clinic offers options other than going to the emergency room?
   -> Explain2
 * I love walking through those doors. I always feel welcome and supported.
   -> Explain1

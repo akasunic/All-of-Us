@@ -18,17 +18,17 @@ Lila?Smiling "Hey, {player_name}!! How are you?"
 
 ==Chat1==
 Lila?Smiling "Well you always know where to find me; five days a week. Four seasons a year!"
-Lila?Smiling "Oh! I even helped Mrs Lee get a volunteering position here."
+Lila?Smiling "Did you hear that Mrs. Lee is going to be helping with my class?"
 
-* That's great for both of you! You must really enjoy it here if you're bringing other people in! 
+* That's great news for both of you! 
   -> Chat2
-* That's awesome. I ran into Mrs. Lee earlier too; I know the two of you are friends.
+* That's awesome. I ran into Mrs. Lee earlier; I know you're friends.
   -> Explain1
 
 ==Chat2==
-Lila?Smiling "I really do. I enjoy the people and I believe in the work." 
+Lila?Smiling "I am excited to work with her. I'm glad she asked about volunteer opportunities!" 
 
-* That is very sweet. You were close with Eddie, right?
+* That is very sweet. You are close with Eddie, right?
   -> Chat3
 * Nice! Speaking of Mrs. Lee... I could use your help.
   -> Explain1
@@ -36,33 +36,36 @@ Lila?Smiling "I really do. I enjoy the people and I believe in the work."
 ==Chat3==
 Lila?Smiling "Yeah! We were neighbors growing up. We did the whole "walking to school together" thing as kids."
 
-* Awww. Do you think it would be okay, then,  if I asked you to help Mrs. Lee?
+* Awww. Would be okay, then,  if I asked you to help Mrs. Lee?
   -> Explain1
-* That's so sweet! Can I ask you for something regarding Eddie and Mrs Lee?
+* Can I ask you for advice regarding Eddie and Mrs Lee?
   -> Explain1
 
 ==Explain1==
 Lila?Smiling "Ohh yes! I haven't seen her yet this morning, I've been so busy running around. I usually see her before her aerobics class."
-Lila?Smiling "She's really been coming out of her shell recently... being around other people definitely helps. She's okay, right?"
+Lila?Smiling "It's so good to see her involved in so many things here at the Community Center. Yesterday she asked me how I felt about native plants in the front garden bed!"
+Lila?Neutral "She's okay, right?"
 
-* She needs some encouragement speaking up for herself at the pharmacy. 
+* She's nervous about visiting the pharmacy, and I'm trying to help. 
   -> Explain2
 
 ==Explain2==
-Lila?Neutral "I see, yeah. Oh, Mrs Lee. She needs encouragement stepping into her power. She can do hard things, but I understand that she doesn't really feel it though."
+Lila?Neutral "Oh! Eddie mentioned that she offered to pick up a prescription for him. Is this related?"
+Lila?Neutral "He mentioned that he has an appointment next month with a new doctor closer to school, but he needs one more <a>refill</a>."
 
-* It's so nice to hear you pump her up like this.
+* It is! She's nervous about getting it right.
   -> Suggestion1
   
 ==Suggestion1==
 ~ notification = "Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1"
 # notification Lila_Day 1_Mrs. Lee could ask Lila to pick up the prescription for her_Mrslee1-1
 
-Lila?Neutral "I know this is her medical anxiety acting up."
-Lila?Smiling "I need to pick up a prescription for Trisha tonight; can I pick up Eddie's prescription up for Mrs. Lee? 
+Lila?Neutral "I feel her pain; the first time I picked up a prescription for Trisha, I must have double checked it 20 times."
+Lila?Neutral "It's hard when doctors use a <a>brand-name</a> for a drug and the pharmacy fills with a <a>generic</a>. How is anyone supposed to just KNOW that?" 
+Lila?Smiling "Tell you what - I need to pick up a prescription for Trisha tonight; can I pick up Eddie's prescription up for Mrs. Lee? 
 Lila?Smiling "Have her stop by and give me the information, if that would help. "
 
-* I'm not sure she would be comfortable with that... maybe a pep talk instead?
+* I'm doubt she would be comfortable with that... maybe a pep talk instead?
   -> Suggestion2
 * That would help her feel better about today, but what about next time? 
   -> Suggestion2
@@ -71,7 +74,7 @@ Lila?Smiling "Have her stop by and give me the information, if that would help. 
 ~ notification = "Lila_Day 1_Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions_Mrslee1-2"
 # notification Lila_Day 1_Mrs. Lee could ask Lila to come to the pharmacy with her so she has support asking clarifying questions_Mrslee1-2
 
-Lila?Smiling "Maybe she needs some in-person support; in that case, I'm happy to go with her. She can do this, but I can be her cheerleader!"
+Lila?Smiling "Maybe she needs some in-person support; in that case, I'm happy to go with her. She can do this, but I can be her back-up!"
 
 * I think having you with her would make Mrs. Lee feel more confident.
   -> Goodbye
