@@ -20,7 +20,6 @@ public class MapScript : MonoBehaviour
     public TextMeshProUGUI CurrentTaskTitle;
     public TextMeshProUGUI CurrentTask;
     public TextMeshProUGUI CurrentNPC;
-    public TextMeshProUGUI BackButtonText;
     public TextMeshProUGUI ExitButtonText;
     public TextMeshProUGUI NumDaysLeft;
     public TextMeshProUGUI DaysLeftText;
@@ -95,7 +94,6 @@ public class MapScript : MonoBehaviour
         CurrentTask.text = GlobalGameInfo.GetCurrentTask();
         CurrentNPC.text = CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
 
-        BackButtonText.text = GameStrings.getString("back");
         ExitButtonText.text = GameStrings.getString("exit_game");
         NumDaysLeft.text = (4 - GlobalGameInfo.GetCurrentDay()).ToString();
         DaysLeftText.text = GameStrings.getString("days_left");
@@ -232,24 +230,6 @@ public class MapScript : MonoBehaviour
         // Remove calendar icon
         CalendarIcon.SetActive(!calendarIconPressed);
 
-        // Move object of NPC and task
-        if (calendarIconPressed) {
-            NPCAndTask.transform.position = new Vector3(1324, 768, 0f);
-            if (blackOverlay != null)
-            {
-                blackOverlay.SetActive(true);
-            }
-        } else {
-            NPCAndTask.transform.position = new Vector3(1024, 768, 0f);
-            if (blackOverlay != null)
-            {
-                blackOverlay.SetActive(false);
-            }
-        }
-
-        // Show back button
-        BackButton.SetActive(calendarIconPressed);
-        
         // Show calendar message
         CalendarMessage.SetActive(calendarIconPressed);
     }
