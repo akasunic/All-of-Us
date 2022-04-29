@@ -37,8 +37,6 @@ Rashad?Neutral "Really? What makes you say that?"
 
 Rashad?Smiling "I'm actually really happy you're thinking about this. A lot of children can have a rough time without proper support. We see it at the library all the time."
 
-Rashad?Neutral "Some families can feel embarrassed about their children's behavior, which is tough on everyone."
-
 Rashad?Neutral "Libraries expect kids to make noise and mess, and sometimes to have a hard time with things. We're prepared."
 
 Rashad?Neutral "Children with sensory issues can have a great time doing regular social activities if we set them up for success." 

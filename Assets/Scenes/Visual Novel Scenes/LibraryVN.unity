@@ -10795,7 +10795,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 28, y: -60}
-  m_SizeDelta: {x: 2325, y: 1354}
+  m_SizeDelta: {x: 639, y: 373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2072782509
 AudioSource:
