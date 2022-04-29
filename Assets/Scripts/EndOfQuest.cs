@@ -71,6 +71,8 @@ public class EndOfQuest : MonoBehaviour
     void Start()
     {
 
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+
         // set texts
         DaySummary.text = GameStrings.getString("day_summary");
         Mon.text = GameStrings.getString("monday_short");

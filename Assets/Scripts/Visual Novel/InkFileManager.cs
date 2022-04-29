@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using InkFungus;
 using Fungus;
 using UnityEngine.SceneManagement;
@@ -15,6 +17,15 @@ public class InkFileManager : MonoBehaviour {
     private static (int, int) activeFileIdx;
     private static CharacterResources.CHARACTERS alreadySpokenTo = CharacterResources.CHARACTERS.NONE;
     private static int speakingToFileIndex = 0;
+    public GameObject CantTalkDialog;
+    public TextMeshProUGUI CantTalkText;
+    public TextMeshProUGUI CantTalkNPCName;
+    public Image CantTalkNPCImage;
+    public Sprite CantTalkCalindas;
+    public Sprite CantTalkLee;
+    public Sprite CantTalkElisa;
+    public Sprite CantTalkRashad;
+    public Sprite CantTalkLila;
     private static string[][] ActivePersonQuestList { get {
             switch (activeQuestGiver) {
                 case CharacterResources.CHARACTERS.RASHAD:
@@ -341,8 +352,46 @@ public class InkFileManager : MonoBehaviour {
                         SceneManager.LoadScene("CommunityVN");
                         break;
                 }
+            } else {
+                // Activate "Can't Talk Dialog"
+                CantTalkText.text = GameStrings.getString("cant_talk_dialog_sorry") + " " + GlobalGameInfo.name;
+
+                switch (character) {
+                    case CharacterResources.CHARACTERS.RASHAD:
+                        CantTalkText.text += GameStrings.getString("cant_talk_dialog_rashad");
+                        CantTalkNPCName.text = GameStrings.getString("rashad_first_name");
+                        CantTalkNPCImage.sprite = CantTalkRashad;
+                        break;
+                    case CharacterResources.CHARACTERS.ELISA: //difference 30
+                        CantTalkText.text += GameStrings.getString("cant_talk_dialog_elisa");
+                        CantTalkNPCName.text = GameStrings.getString("elisa_first_name");
+                        CantTalkNPCImage.sprite = CantTalkElisa;
+                        break;
+                    case CharacterResources.CHARACTERS.CALINDAS:
+                        CantTalkText.text += GameStrings.getString("cant_talk_dialog_calindas");
+                        CantTalkNPCName.text = GameStrings.getString("mrcalindas_first_name");
+                        CantTalkNPCImage.sprite = CantTalkCalindas;
+                        break;
+                    case CharacterResources.CHARACTERS.LILA:
+                        CantTalkText.text += GameStrings.getString("cant_talk_dialog_lila");
+                        CantTalkNPCName.text = GameStrings.getString("lila_first_name");
+                        CantTalkNPCImage.sprite = CantTalkLila;
+                        break;
+                    case CharacterResources.CHARACTERS.LEE:
+                        CantTalkText.text += GameStrings.getString("cant_talk_dialog_lee");
+                        CantTalkNPCName.text = GameStrings.getString("mrslee_first_name");
+                        CantTalkNPCImage.sprite = CantTalkLee;
+                        break;
+                }
+                // Set the cantTalkDialog objet as active
+                CantTalkDialog.SetActive(true);
             }
         }
+    }
+
+    public void CloseCantTalkDialog()
+    {
+        CantTalkDialog.SetActive(false);
     }
 
     private string InkToJson(string inkFilename) {
