@@ -4651,6 +4651,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd74d6f06bb141a0962a7411dcd8398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CantTalkDialog: {fileID: 0}
+  CantTalkText: {fileID: 0}
+  CantTalkNPCName: {fileID: 0}
+  CantTalkNPCImage: {fileID: 0}
+  CantTalkCalindas: {fileID: 0}
+  CantTalkLee: {fileID: 0}
+  CantTalkElisa: {fileID: 0}
+  CantTalkRashad: {fileID: 0}
+  CantTalkLila: {fileID: 0}
 --- !u!114 &1146814502
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10303,6 +10312,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd74d6f06bb141a0962a7411dcd8398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CantTalkDialog: {fileID: 0}
+  CantTalkText: {fileID: 0}
+  CantTalkNPCName: {fileID: 0}
+  CantTalkNPCImage: {fileID: 0}
+  CantTalkCalindas: {fileID: 0}
+  CantTalkLee: {fileID: 0}
+  CantTalkElisa: {fileID: 0}
+  CantTalkRashad: {fileID: 0}
+  CantTalkLila: {fileID: 0}
 --- !u!114 &1826744243
 MonoBehaviour:
   m_ObjectHideFlags: 0
