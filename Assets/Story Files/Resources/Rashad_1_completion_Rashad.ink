@@ -21,7 +21,7 @@ Rashad?Neutral "Time? For this, I’ll make time! I can't remember the last time
 ==ReadyToSolve==
 Rashad?Neutral "Wow, that amazing news. Elisa’s knowledge of young adult literature would be invaluable and Mrs. Lee is pretty well-connected so she’s been a huge help on many different occasions. I’m listening?"
 
-* Here you go... 
+* Here you go...
 -> PuzzleInterface
 * Actually, let me check my notes again.  
 -> TempGoodbye

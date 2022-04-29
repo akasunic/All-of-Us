@@ -6,9 +6,6 @@ VAR new_quest = ""
 -> intro
 
 ===intro===
-~ new_contact = "Rashad"
-# new_contact
-
 Rashad?Smiling "Hey, hey {player_name}! Glad to see you. The next book in that N.K Jemisen series is ready for you. We just got new copies in." 
 
 * Hey Rashad! That's great, I was waiting on it.

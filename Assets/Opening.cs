@@ -13,8 +13,6 @@ public class Opening : MonoBehaviour
 
     void Start()
     {
-
-        Debug.Log(Application.persistentDataPath);
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
         
         ContinueButtonText.text = GameStrings.getString("continue");

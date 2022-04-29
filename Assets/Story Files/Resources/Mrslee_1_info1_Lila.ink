@@ -6,9 +6,6 @@ VAR new_quest = ""
 -> intro
 
 ==intro==
-~ new_contact = "Lila"
-# new_contact
-
 Lila?Smiling "Hey, {player_name}!! How are you?"
 
 * Hi! It's awesome running into you.
