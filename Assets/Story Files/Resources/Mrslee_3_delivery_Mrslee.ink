@@ -9,9 +9,9 @@ VAR new_quest = ""
 ~ new_quest = "Mrslee3.txt"
 # new_quest
 
-Mrslee?Neutral "Hey. {player_name}. "
+Mrslee?Neutral "Hey. {player_name}! Today is a good day!"
 
-* Hi, Mrs. Lee! How are you today?
+* Hi, Mrs. Lee! I'm happy to hear it!
   -> Chat1
 * How are you, Mrs. Lee?
   -> QuestIntro
@@ -25,23 +25,24 @@ Mrslee?Smiling "Today I feel happy. Today, I volunteer with the kids."
   -> QuestIntro
 
 ==Chat2==
-Mrslee?Smiling "Yah. It's hard to feel stress when kids ask you to color or sing little songs."
+Mrslee?Smiling "Yah. It's hard to feel stress when kids ask you to color or sing little songs. They work hard to teach me all the words."
+Mrslee?Smiling "Then, Lila tell me we got them all wrong! Sometime it seems like the kids get them wrong for fun."
 
-* Well, less stress is good. Especially if less stress means less headaches.
+* Less stress is good. Especially if less stress means less headaches.
   -> QuestIntro
 * No headaches?
   -> QuestIntro
 
 ==QuestIntro==
-Mrslee?Smiling "Oh. That. I made appointment at doctor office. Eddie said he was relief."
+Mrslee?Smiling "Oh. That. I made appointment at doctor office. Eddie said he was glad."
 
 * That's awesome, Mrs. Lee! But how are you feeling about it?
   -> QuestDetails1
-* I'm here if you need help preparing. Mentally, emotionally, logistically..
+* I'm here if you need help preparing...
   -> QuestAcceptance
 
 ==QuestDetails1==
-Mrslee?Neutral "Me? I am concern. Nervous!"
+Mrslee?Neutral "Me? I am very nervous!"
 Mrslee?Neutral "Doctor always speak so fast. Not so much want to listen."
 
 * I understand! That sounds super stressful, Mrs. Lee.
@@ -50,16 +51,16 @@ Mrslee?Neutral "Doctor always speak so fast. Not so much want to listen."
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrslee?Neutral "I forget everything! My feeling.. my words. "
-Mrslee?Neutral "Why I'm gonna go if nobody listen to me?"
+Mrslee?Neutral "I forget everything! My feeling.. my words. Why I make the appointment to begin with!"
+Mrslee?Neutral "I know you and Eddie want me to get a checkup, but why? Why am I going if nobody will listen to me?"
 
 * We can work on ways to make sure the doctor listens to you.
   -> QuestAcceptance
-* Let's think about this together
+* Let's think about this together.
   -> QuestAcceptance
 
 ==QuestAcceptance==
-Mrslee?Neutral "Thank you. What you think I should do? I feel nervous to go to doctor's appointment. How to prepare?"
+Mrslee?Neutral "Thank you. What do you think I should do? I feel nervous to go to doctor's appointment. How can I prepare?"
 
 * I'm gonna think about it!
   -> Goodbye

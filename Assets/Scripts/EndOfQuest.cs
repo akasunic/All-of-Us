@@ -96,6 +96,9 @@ public class EndOfQuest : MonoBehaviour
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
         DaysLeftText.text = GameStrings.getString("days_left");
 
+        TalkBubbleText.text = GameStrings.getString("talk_bubble_1");
+        TalkBubble2Text.text = GameStrings.getString("talk_bubble_2");
+
         if (GlobalGameInfo.GetRemainDays() <= 1)
         {
             DaysLeftText.text = GameStrings.getString("day_left");
@@ -105,8 +108,6 @@ public class EndOfQuest : MonoBehaviour
             case CharacterResources.CHARACTERS.RASHAD:
                 
                 NPC.sprite = NPCImages[0];
-                TalkBubbleText.text = GameStrings.getString("talk_bubble_rashad_1");
-                TalkBubble2Text.text = GameStrings.getString("talk_bubble_rashad_2");
 
                 sticker1.sprite = NPCStickersRashad1[GlobalGameInfo.GetCurrentDay()];
                 sticker2.sprite = NPCStickersRashad2[GlobalGameInfo.GetCurrentDay()];
@@ -137,8 +138,6 @@ public class EndOfQuest : MonoBehaviour
             case CharacterResources.CHARACTERS.LILA:
 
                 NPC.sprite = NPCImages[1];
-                TalkBubbleText.text = GameStrings.getString("talk_bubble_lila_1");
-                TalkBubble2Text.text = GameStrings.getString("talk_bubble_lila_2");
 
                 sticker1.sprite = NPCStickersLila1[GlobalGameInfo.GetCurrentDay()];
                 sticker2.sprite = NPCStickersLila2[GlobalGameInfo.GetCurrentDay()];
@@ -169,8 +168,6 @@ public class EndOfQuest : MonoBehaviour
             case CharacterResources.CHARACTERS.CALINDAS:
 
                 NPC.sprite = NPCImages[2];
-                TalkBubbleText.text = GameStrings.getString("talk_bubble_calindas_1");
-                TalkBubble2Text.text = GameStrings.getString("talk_bubble_calindas_2");
 
                 sticker1.sprite = NPCStickersCalindas1[GlobalGameInfo.GetCurrentDay()];
                 sticker2.sprite = NPCStickersCalindas2[GlobalGameInfo.GetCurrentDay()];
@@ -201,8 +198,6 @@ public class EndOfQuest : MonoBehaviour
             case CharacterResources.CHARACTERS.LEE:
 
                 NPC.sprite = NPCImages[3];
-                TalkBubbleText.text = GameStrings.getString("talk_bubble_lee_1");
-                TalkBubble2Text.text = GameStrings.getString("talk_bubble_lee_2");
                 
                 sticker1.sprite = NPCStickersLee1[GlobalGameInfo.GetCurrentDay()];
                 sticker2.sprite = NPCStickersLee2[GlobalGameInfo.GetCurrentDay()];
@@ -233,8 +228,6 @@ public class EndOfQuest : MonoBehaviour
             case CharacterResources.CHARACTERS.ELISA:
             
                 NPC.sprite = NPCImages[4];
-                TalkBubbleText.text = GameStrings.getString("talk_bubble_elisa_1");
-                TalkBubble2Text.text = GameStrings.getString("talk_bubble_elisa_2");
 
                 sticker1.sprite = NPCStickersElisa1[GlobalGameInfo.GetCurrentDay()];
                 sticker2.sprite = NPCStickersElisa2[GlobalGameInfo.GetCurrentDay()];

@@ -13,21 +13,21 @@ VAR new_quest = ""
 Lila?Neutral "Hi, {player_name}! It's good to see you."
 * Hey Lila! How are you doing? 
 ->Chat1
-*Hey! Good to see you! You okay?
+* Hey! Good to see you! You okay?
  ->Chat1
 
 ==Chat1==
 Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice <a>fostering</a> the sort of community I wish I had growing up, but I get a little <a>misty-eyed</a> every now and again."
-
 Lila?Smiling "Trisha has also been a great help. We’ve begun to work together on a lot of aspects and it’s definitely brought us closer as a couple."
 Lila?Smiling "We are having conversations about topics that never came up until now. And I’ll never say no to more time with her!"
+
 * That’s awesome!
 -> Chat2
 * You two are so cute, talk about a power couple!
 -> Chat2
 
 ==Chat2==
-Lila?Smiling "Aw, thank you! I'm really loving this process. 
+Lila?Smiling "Aw, thank you! I'm really loving this process."
 Lila?Smiling "Last week, Trisha came up with this neat activity where the mentors guided their mentees in making art pieces about who they are and want to be."
 Lila?Smiling "It was so cool seeing everyone express their unique <a>identities</a> and personalities."
 Lila?Smiling "I love the connections that happen when people open up. It felt like I was watching something magical happen."
@@ -53,27 +53,31 @@ Lila?Neutral "There isn’t always a lot of open discussion about one’s person
 Lila?Neutral "As a Black, queer woman, my experiences sometimes feel really lonely and specific." 
 Lila?Neutral "Finding other people who exist at the same intersection of identities that I do is hard."
 Lila?Neutral "I don’t want to go my whole life not meeting other people who understand me in that way."
+
 * We all deserve to feel understood.
--> QuestDetails2
+    -> QuestDetails2
 * I’m sorry, Lila. Listen, if you want, I can collect some wisdom for you?
--> QuestAcceptance
+    -> QuestAcceptance
 
 ==QuestDetails2==
 Lila?Neutral "I know I shouldn’t be picky, but I wish I had a more diverse community and support group of people my age I could go to about these feelings, outside of Trisha."
 Lila?Neutral "A lot of queer spaces I see are centered around younger folks so it is hard being older, yet still disconnected and trying to find a place I feel comfortable in."
 Lila?Neutral "Ultimately, I am happy, but it’s hard. I'm really hurting for a peer group."
+
 * We all deserve a safe place. I can ask around for advice for you if you’d like.
--> QuestAcceptance
+    -> QuestAcceptance
 * Thank you for trusting me with this. Do you want me to look around for you?
--> QuestAcceptance
+    -> QuestAcceptance
 
 ==QuestAcceptance==
 Lila?Smiling "I really appreciate the offer. Only if you have time, okay? I want to expand my social sphere, but putting myself out there is really hard, especially as an introvert."
+
 * You deserve to a social community you feel understood and good in.
 -> Goodbye
 
 ==Goodbye==
 Lila?Smiling "Thank you for the reminder. I definitely needed to hear that. I need to get back inside... We'll chat later? Thank you again."
+
 * I’ll spread these <a>social butterfly wings<a> and be right back.
 -> END
 * Of course, Lila. Anything for a friend.

@@ -8,14 +8,14 @@ VAR new_quest = ""
 ==intro==
 Elisa?Smiling "Hey, friend! How are you, {player_name}?"
 
-* Hey Elisa! I'm feeling good today - how about you? 
+* Hey Elisa! I'm feeling good today. Do you have a moment? 
   -> Chat1
 * Got a minute? I wanna pick your brain.
   -> Chat1
 
 ==Chat1==
 Elisa?Smiling "For you? always!"
-Elisa?Smiling "I have a dental cleaning at 4 today, though. So I need to bounce in time to get over there."
+Elisa?Smiling "I have a dental cleaning at 4 today, though. So I need to leave in time to get over there."
 
 * Ahhh! How do you keep track of your appointments?
   -> Chat2
@@ -27,7 +27,7 @@ Elisa?Smiling "I have a dental cleaning at 4 today, though. So I need to bounce 
 # notification Elisa_Day 4_Mrs. Lee can develop the habit of scheduling the next checkup while she's in the office_Mrslee4-4
 
 Elisa?Smiling "Oh! I always schedule the next appointment when I'm in the office. And I put it right into the calendar on my phone."
-Elisa?Smiling "Being able to look a head and see what appointments are coming up helps me manage my time better. "
+Elisa?Smiling "Being able to look ahead and see what appointments are coming up helps me manage my time better. It keeps me from double-booking myself."
 Elisa?Smiling "You can't forget to schedule an appointment if you don't leave without the next one planned!"
 
 * That's super smart. I'm so going to steal that.
@@ -36,7 +36,8 @@ Elisa?Smiling "You can't forget to schedule an appointment if you don't leave wi
   -> Explain1
 
 ==Chat3==
-Elisa?Smiling "Hah! Feel free. You were on a mission, though - don't let me distract you!"
+Elisa?Smiling "Hah! Feel free. I read the suggestion in a life hack article about taking control of your time. It was a little dorky, but that tip stuck with me."  
+Elisa?Smiling "You were on a mission, though - don't let me distract you!"
 
 * It seems like you use your calendar a lot.
   -> Explain1
@@ -54,8 +55,8 @@ Elisa?Smiling "Honestly, some days, it's the only thing that keeps me focused. I
 
 ==Explain2==
 Elisa?Smiling "Always! Mama is always encouraging me to find new tools. She's a little afraid of change, but wants her kids to be at the front of the pack."
-Elisa?Smiling "I worry a little about what will happen when I go away for school in the fall."
-Elisa?Smiling "I mean, my siblings pitch in. Over time, they've gotten more confident, and need less help. My mom can be a little prideful and I know it hurt her to have to lean so hard on her kids."
+Elisa?Smiling "I worry a little about what will happen when I go away for school in the fall. My folks have always relied on me to help out."
+Elisa?Smiling "I mean, my siblings pitch in. And, over time, our folks gotten more confident, and need less help. My mom can be a little prideful and I know it hurt her to have to lean so hard on her kids."
 
 * Are there resources you wish you had access to?
   -> Suggestion2

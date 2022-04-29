@@ -68,7 +68,6 @@ public class AddToList : MonoBehaviour
                 fillTodoList(GlobalGameInfo.todoList);
                 break;
             case "Contacts":
-                fillContactList(GlobalGameInfo.contactsList);
                 break;
             case "Settings":
                 fillSettingsList();
@@ -300,23 +299,5 @@ public class AddToList : MonoBehaviour
             
         }
         
-    }
-
-    private void fillContactList(Dictionary<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> list){
-        if(list.Count == 0){return;}
-        
-        Destroy(this.gameObject.transform.Find("Scroll View/Viewport/Content/No Info Yet").gameObject);
-        Transform go = this.gameObject.transform.Find("Scroll View/Viewport/Content");
-        bool firstitem = true;
-        
-        foreach(KeyValuePair<CharacterResources.CHARACTERS, GlobalGameInfo.CharacterItem> entry in list)
-        {
-            Transform newItem = Instantiate(listItemPrefab, go);
-            newItem.GetComponent<CharacterSheetManager>().setDetails(entry.Value);
-            if(firstitem){
-                newItem.GetComponent<CharacterSheetManager>().openDetailPage();
-                firstitem = false;
-            }
-        }
     }
 }

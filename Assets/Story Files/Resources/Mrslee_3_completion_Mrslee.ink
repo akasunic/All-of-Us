@@ -10,10 +10,9 @@ Mrslee?Smiling "Great day, {player_name}!"
 
 * {not TempGoodbye} Great to see you too!
   -> Chat1
-* {not TempGoodbye} I thought about how to prepare!
+* I thought about how to prepare!
   -> ReadyToSolve
-* {TempGoodbye} I really though about it this time.
-  -> ReadyToSolve
+
 
 ==Chat1==
 Mrslee?Smiling "Hey. Can you believe it, still no headache."
@@ -26,7 +25,7 @@ Mrslee?Smiling "Hey. Can you believe it, still no headache."
 ==Chat2==
 Mrslee?Neutral "Oh my goodness! I just remember what I worry about. The appointment!"
 
-* I can help you.
+* I think I can help!
   -> ReadyToSolve
 * It's okay, Mrs. Lee
   -> ReadyToSolve
@@ -55,6 +54,7 @@ Mrslee?Neutral "OK. What should I do?"
 
 ==Option1==
 # correct
+
 Mrslee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he asked me to talk sometimes. I know he worry, so this is a good idea.."
 
 * Sharing your health information might be helpful for him, too! 
@@ -62,17 +62,19 @@ Mrslee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he a
 
 ==Followup31==
 Mrslee?Smiling "He ask good questions, and if I write down answers, I feel less stress about forgetting when I talk to doctor. I feel proud of how smart and helpful Eddie is."
+Mrslee?Smiling "Lila give me special notebook with pretty pink paper for taking notes."
 
 ->END
 
 ==Option2==
 Mrslee?Neutral "Lila is very helpful, but her life very busy. If she go to this appointment, what about next appointment. Dr. Lee always take care of everything, and now look! So stress!"
 
-* I think you can do it, Mrs. Lee. I’ll be back with a better suggestion!
+* I’ll be back with a better suggestion!
 -> PuzzleInterface
 
 ==Option3==
 # correct
+
 Mrslee?Smiling "Write down when I feel headache. Write down how bad? I can do that. Thinking about headache make me feel headache, but you say doctor might help."
 Mrslee?Smiling "Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it feel less stress."
 
