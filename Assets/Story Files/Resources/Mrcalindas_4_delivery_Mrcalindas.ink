@@ -28,7 +28,7 @@ Mrcalindas?Smiling "It is! She says she loves unicorns, even though they don't e
 
 ==Chat2==
 
-Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her visit. It's exciting, but she's autistic, and changes to her routine can be hard." 
+Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worried about her visit. It's exciting, but she's <a>autistic</a>, and changes to her routine can be hard." 
 
 * Oh, really? How old is Brooklyn now? 
 -> QuestIntro
@@ -38,9 +38,9 @@ Mrcalindas?Smiling "If you did, she'd love you forever. I'm actually a bit worri
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Brooklyn is 9. She's such a determined little girl; now that we know that autism is why she struggles with some things, we have better tools for her."
+Mrcalindas?Neutral "Brooklyn is 9. She's such a determined little girl; now that we know that autism is why she faces challenges with some things, we have better tools for her."
 
-Mrcalindas?Neutral "Jessica is nervous about her staying with us for a whole week, but she has a work commitment, and I think we are a better childcare option than hiring someone."
+Mrcalindas?Neutral "Jessica is nervous about her staying with us for a whole week, but she has a work commitment, and I think we are a better <a>childcare</a> option than hiring someone."
 
 Mrcalindas?Smiling  "Brooklyn and my mother are best buddies. I think it will be good for both of them. Maybe not for my nerves - who knows what trouble they're going to cause!"
 
@@ -53,11 +53,9 @@ Mrcalindas?Neutral "I would love to know what resources exist in Bloomwood to he
 
 ==QuestDetails1==
 
-Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that Brooklyn needs understanding adults who know how to respond to her sensory needs." 
+Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that Brooklyn needs understanding adults who know how to respond to her <a>sensory needs</a>." 
 
-Mrcalindas?Neutral "She knows she's different; what I want is to make sure she doesn't feel badly for that."
-
-Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be accessible to people with different disabilities."
+Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be accessible to people with different <a>disabilities</a>."
 
 
 * Can you be specific about some of the needs Brooklyn has?
@@ -66,7 +64,7 @@ Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events co
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrcalindas?Neutral "Oh yes. Sometimes the sounds of everything can make her ears hurt. Also, if there's a lot going on and no way to step back, sometimes she can feel very overstimulated."
+Mrcalindas?Neutral "Oh yes. Sometimes the sounds of everything can make her ears hurt. Also, if there's a lot going on and no way to step back, sometimes she can feel very <a>overstimulated</a>."
 
 Mrcalindas?Neutral "Knowing more about the possible activities can help us prepare." 
 

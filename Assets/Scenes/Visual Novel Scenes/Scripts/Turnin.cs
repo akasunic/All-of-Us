@@ -64,6 +64,8 @@ public class Turnin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+
         options = new TextMeshProUGUI[4] { option1, option2, option3, option4 };
         optionCharacters = new Image[4] { option1Character, option2Character, option3Character, option4Character };
         optionQuests = new Quest[4]; 

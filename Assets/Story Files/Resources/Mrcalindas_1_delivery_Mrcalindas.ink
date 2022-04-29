@@ -11,7 +11,7 @@ VAR new_quest = ""
 ~ new_contact = "Mrcalindas"
 # new_contact
 
-Mrcalindas?Smiling  "{player_name}! I have something for you from Paz. She worries that maybe you don't eat breakfast and sent you ensaymada. I knew you'd come in eventually!" 
+Mrcalindas?Smiling  "{player_name}! I have something for you from Paz. She worries that maybe you don't eat breakfast and sent you <a>ensaymada</a>. I knew you'd come in eventually!" 
 
 * What? Really? Mrs. Calindas always knows the way to my heart: food.
   -> Chat1
@@ -37,7 +37,7 @@ Mrcalindas?Smiling "It means so much to us that you're here to help Bloomwood."
 
 Mrcalindas?Neutral "Oh? This is a reversal! Let me think for a moment."
 Mrcalindas?Neutral "We are working on initatives to provide better support for the community; budget time is coming up. I want to make sure we're thinking about the right things." 
-Mrcalindas?Smiling "Maybe you could put your ear to the ground and tell me what people think?" 
+Mrcalindas?Smiling "Maybe you could ask around and tell me what people think?" 
 
 * Oh that's great! What questions should I ask?
   -> QuestDetails1
@@ -49,7 +49,7 @@ Mrcalindas?Neutral "I don't have a lot of extra time to pull together community 
 Mrcalindas?Neutral "I want to know what the community is actually concerned about health-wise."
 Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know what the community values. I want people to trust the Bloomwood Clinic."
 
-* That's really thoughtful, Mr. Calindas. Building and maintain community trust is so important.
+* That's really thoughtful, Mr. Calindas. Building and maintaining community trust is so important.
   -> OptionalQuestDetails1
 
 * Great! I can help you with whatever you need.
@@ -59,7 +59,7 @@ Mrcalindas?Neutral "We have so many programs, but sometimes it's hard to know wh
 Mrcalindas?Neutral "It is important. We care about our patients. During Covid, the community rallied behind us and we worked together."
 Mrcalindas?Neutral "It's important to keep that spirit alive by listening to what they want so we keep their trust."  
 
-* I never thought of it that way. People should be able to trust their healthcare professionals.
+* I never thought of it that way. People should be able to trust their <a>healthcare professionals</a>.
   -> QuestDetails2
 * You're absolutely right. I can help you with whatever you need.
   -> QuestAcceptance
@@ -78,7 +78,7 @@ Mrcalindas?Smiling "And can you ask Rashad what older people and students may ne
 
 * Great. I can do that!
   -> Goodbye
-* Talk to Rashad and Lila about the community? Well, that's right up my alley!
+* Talk to Rashad and Lila about the community? Well, that's <a>right up my alley</a>!
   -> Goodbye
 
 ==Goodbye==

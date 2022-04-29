@@ -18,9 +18,10 @@ Rashad?Smiling "What's up, {player_name}? I'm glad I ran into you. Octavia heard
 
 Rashad?Smiling "Oh,  man. The grapevine got ahead of itself, or my kid heard what she wanted to..."
 
-Rashad?Smiling "I bet it was wishful thinking - Cheryl grounded her from solo baking projects after we spent a week vacuuming... and wiping ... and dusting... up flour."
+Rashad?Smiling "I bet it was wishful thinking - Cheryl got her to swear off solo baking projects after we spent a week vacuuming... and wiping ... and dusting... up flour."
 
-Rashad?Smiling "She's not quite ready for unsupervised pastry-making."
+Rashad?Smiling "All baking requires a buddy, and I bet Olivia would be thrilled to be your buddy."
+
 
 * I remember. At least it wasn't honey, right?
   -> Chat2
@@ -47,7 +48,7 @@ Rashad?Neutral "I'm not matching off against him at trivia again; one humiliatio
 
 Rashad?Neutral "Hmm. Tech classes, or classes for seniors, or bilingual tech classes?" 
 
-Rashad?Smiling "Or bilingual tech cloasses for bilingual seniors?"
+Rashad?Smiling "Or bilingual tech classes for bilingual seniors?"
 
 * I'm looking for a tech class for seniors taught in Tagalog or Spanish.
   -> Suggestion1

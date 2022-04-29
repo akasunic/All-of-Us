@@ -129,7 +129,7 @@ public class PCSetUp : MonoBehaviour
             
             // Coming from PCsetup scene
             GlobalGameInfo.goToSelectProfileFlag = true;
-            SceneManager.LoadScene("StartWeek");
+            SceneManager.LoadScene("BackstoriesAnimation");
         } else {
             Dictionary<string, SavedGame> currentData = GlobalGameInfo.gameData;
             SavedGame current = GlobalGameInfo.savedGame;

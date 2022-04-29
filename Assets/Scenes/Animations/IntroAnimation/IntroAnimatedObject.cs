@@ -8,6 +8,6 @@ public class IntroAnimatedObject : MonoBehaviour
 {
     public void MoveToNextScene ()
     {
-        SceneManager.LoadScene("PCSetUp");
+        SceneManager.LoadScene("StartWeek");
     }
 }

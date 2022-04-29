@@ -49,7 +49,7 @@ Mrcalindas?Neutral "So what programs should we focus on at the health tent to ge
 
 ==Option1==
 
-Mrcalindas?Neutral "Hmm. I feel like that’s just one facet of what the community needs. Did you get any other insight?"
+Mrcalindas?Neutral "Hmm. I feel like that’s just one aspect of what the community needs. Did you get any other insight?"
  
 * Let me see what else I can find, Mr. Calindas.
   ->TempGoodbye
@@ -67,7 +67,7 @@ Mrcalindas?Smiling "That’s a good catch, {player_name}."
 
 ==Option3==
 #correct
-Mrcalindas?Smiling "It is very important to me that we destigmatize mental health care. Taking care of your mind is as important as taking care of your body."
+Mrcalindas?Smiling "It is very important to me that we make mental health care accessible and normal. Taking care of your mind is as important as taking care of your body."
 
 Mrcalindas?Smiling "I appreciate this feedback from Rashad. I’ll think about how we can expand our offerings."
   

@@ -41,7 +41,7 @@ Mrslee?Smiling "I really enjoy these classes. What your question?"
   -> Explain2
 
 ==Explain2==
-Mrslee?Smiling "She move here? Live with Giancarlo? That is nice. Aerobic activity very good for mind and body." 
+Mrslee?Smiling "She is moving here? To live with Giancarlo? That is nice. She might join a class with me! Aerobic activity very good for mind and body." 
 
 Mrslee?Smiling "I read that exercise fights depression. And dementia. Getting older is hard. Exercise help."
 
@@ -76,7 +76,7 @@ Mrslee?Smiling "When I lose Dr. Lee, Eddie feel stress. Worry that I would be al
 
 Mrslee?Smiling "Exercise class give me many good things. So many friends. So many people to care. I see happy faces every day."
 
-Mrslee?Smiling "I stay fit, I have strength. It give me so much feeling of independence! It help me feel strong and my balance good. I love it!"
+Mrslee?Smiling "I stay healthy, I have strength. It give me so much feeling of independence! It help me feel strong and my balance good. I love it!"
 
 
 * This is perfect information, Mrs. Lee!

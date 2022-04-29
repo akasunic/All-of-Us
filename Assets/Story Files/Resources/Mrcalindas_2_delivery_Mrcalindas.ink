@@ -33,7 +33,7 @@ Mrcalindas?Smiling "Well, that's good. The neighborhood is benefitting from your
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to postpone our next cooking lesson. My mother is moving in with us, and I want her to feel settled."
+Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to <a>postpone<a/> our next cooking lesson. My mother is moving in with us, and I want her to feel settled."
 
 Mrcalindas?Neutral "It might be a while before our next lesson. I need to figure out how to make this transition as comfortable as possible for her." 
 
@@ -54,7 +54,7 @@ Mrcalindas?Neutral "Well, she is a very opinionated, active lady. Since my fathe
 ==QuestDetails2==
 
 Mrcalindas?Neutral "My mother is leaving behind many of her friends so it would be nice to find her good people her own age to talk to."
-Mrcalindas?Neutral "Since she's been a bit depressed, I'm worried. I don't know the first place to look for any of that, and I don't have a lot of time to prepare." 
+Mrcalindas?Neutral "Since she's been a bit <a>depressed</a>, I'm worried. I don't know the first place to look for any of that, and I don't have a lot of time to prepare." 
 
 * Hmm. I think I can help with that. Do you want me to look for you?
   -> QuestAcceptance

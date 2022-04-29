@@ -1715,6 +1715,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395074698476989240, guid: 8fabe75eb30eba946af749d41214c5a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7778418165282756481, guid: 8fabe75eb30eba946af749d41214c5a3,
         type: 3}
       propertyPath: m_IsActive
@@ -10795,7 +10800,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 28, y: -60}
-  m_SizeDelta: {x: 2325, y: 1354}
+  m_SizeDelta: {x: 639, y: 373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2072782509
 AudioSource:
@@ -10912,7 +10917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f5561adc09d94d23a44fc382d1eca0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af8b11a5cb050453abe895db42e06a29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

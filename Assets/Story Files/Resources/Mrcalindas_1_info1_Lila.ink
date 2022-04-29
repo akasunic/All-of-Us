@@ -74,9 +74,9 @@ Lila?Smiling "Oh, and it can be hard to get to the health center for people who 
 # notification Lila_Day 1_Education can reduce the stigma faced by LGBTQIA+ community members_Mrcalindas1-2 
 
 
-Lila?Smiling "Well, it's important for communities of color and LGBTQIA+ folks get the help they need with no judgements."
+Lila?Smiling "Well, it's important for communities of color and LGBTQIA+ folks to get the help they need with no judgements."
 Lila?Smiling "We have historically faced a lot of stigma, and that harms access to care."
-Lila?Smilng "Studies show that even one supportive adult can prevent a transgender kid from committing suicide. We should be talking about that."
+Lila?Smilng "I read an article that said that even one supportive adult can prevent a transgender kid from committing suicide. We should be talking about that."
 Lila?Smiling "Oh, and this might seem really obvious, but mental health resources are useful for everyone. We all get stressed or have hard times." 
 
 * Wow, Lila! I'll bring all this up with Mr. Calindas.

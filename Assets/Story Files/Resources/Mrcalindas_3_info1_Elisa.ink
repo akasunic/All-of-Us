@@ -37,13 +37,14 @@ Elisa?Smiling "I even got to hang out with my folks over coffee this morning. So
 
 ==Chat3==
 
-Elisa?Smiling "I'm the eldest; I think I'm spiritually obligated to coffee and pastry with my mom as often as SHE is willing to slow down and sit a few..." 
+Elisa?Smiling "I think I'm spiritually obligated to coffee and pastry with my mom as often as SHE is willing to slow down and sit a few..." 
 
 * So you get it from somewhere... I have a parent question for you.
   -> Explain1
 
 ==Explain1==
-Elisa?Smiling "Is it about how to get your parents to slow down and take it easy, instead of rebuilding the shed or planting ten different vegetables? or something else?"
+Elisa?Smiling "Is it about how to get your parents to slow down and take it easy? My folks had two days off and we tried to get them to rest."
+Elisa?Smiling "Instead, they ended up rebuilding the shed or planting ten different vegetables. or is this about something else?"
 
 * I am looking for some tech help.
   -> Explain2

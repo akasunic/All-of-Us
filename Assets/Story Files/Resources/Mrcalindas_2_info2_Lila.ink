@@ -51,7 +51,7 @@ Lila?Smiling "I don't know which one of us is getting the most benefit; I love h
 ~ notification = "Lila_Day 2_Some seniors benefit from caring for a pet_Mrcalindas2-3"
 # notification Lila_Day 2_Some seniors benefit from caring for a pet_Mrcalindas2-3
 
-Lila?Smiling "Oh there's lots of benefits. You know, seniors can suffer from depression like all of us. Volunteering decreases depression."
+Lila?Smiling "Oh there's lots of benefits. You know, seniors can suffer from depression like all of us. Volunteering can help decrease depression for some people."
 
 Lila?Smiling "Some people do really well with a pet to care for. Other people prefer activities that get them out of the house."
 

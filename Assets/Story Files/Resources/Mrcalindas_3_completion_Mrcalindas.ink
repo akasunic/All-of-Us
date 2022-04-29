@@ -66,7 +66,7 @@ Mrcalindas?Smiling "I will email Elisa right away! You know there are studies ab
 
 Mrcalindas?Smiling "I am happy to pay Elisa a fair rate for her help and to ply her with an excessive number of sweets."
 
-* Hah! Is Elisa about to become my hookup for ensaymadas?
+* Hah! Is Elisa about to become my source for ensaymadas?
 	-> SolvedGoodbye
 
 ==Option3==

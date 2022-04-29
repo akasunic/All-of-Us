@@ -18,7 +18,7 @@ Rashad?Smiling "Hey, hey {player_name}! Glad to see you. The next book in that N
 
 ==Chat1==
 
-Rashad?Smiling "I got us a grant to add more Black and Latine authors to our shelves, so if you have recommendations, I'm here for them."
+Rashad?Smiling "I got us a grant to add more Black and Latinx authors to our shelves, so if you have recommendations, I'm here for them."
 
 * I do have some recommendations. Congrats on the grant, that's really exciting.
   -> Chat2
@@ -61,29 +61,24 @@ Rashad?Smiling "We get a lot of requests for materials in various languages. Thi
 
 Rashad?Smiling "Also, access to free health classes or mental health classes is really useful. The library hosts a few workshops - some general basics - you know, things that apply to everyone."
 
-Rashad?Smiling "When Cheryl's mom was diagnosed with lupus, an auto-immune disorder, she attended classes just for people with her diagnosis, and it really helped her feel more hopeful." 
+Rashad?Smiling "When Cheryl's mom, my mother-in-law, was diagnosed with lupus, an auto-immune disorder, she attended classes just for people with her diagnosis, and it really helped her feel more hopeful." 
 
 
 * Oh, those are really good points. What else? 
  ->Suggestion2
  
  * OK, I'm following. Do you have other suggestions? 
-  ->Suggestion3
+  ->Suggestion2
 
-  ==Suggestion2==
-  Rashad?Smiling "Well, Covid taught us that we need to teach people basic hygiene. At the library, we want people to wash their hands often."
-  
-  *Covid is an important thing for any new program to think about!
-   ->Suggestion3
  
-   ==Suggestion3==
+   ==Suggestion2==
    
 ~ notification = "Rashad_Day 1_Building trust is vital in providing healthcare support to communities_Mrcalindas1-4"
 # notification Rashad_Day 1_Building trust is vital in providing healthcare support to communities_Mrcalindas1-4 
 
   Rashad?Neutral "I feel like there aren't a lot of places people can go to ask questions if they're scared; forming ongoing relationships make it possible to provide that sort of support."
 
-Rashad?Neutral "Combating vaccine hesitancy starts with trustful healthcare dynamics."
+Rashad?Neutral "Combating vaccine hesitancy starts with building trust within the community."
  
  
 * I think Mr. Calindas will find this super helpful. Thanks, Rashad!
