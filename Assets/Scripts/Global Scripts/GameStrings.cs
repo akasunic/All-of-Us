@@ -157,7 +157,7 @@ public static class GameStrings {
                 {"end_of_quest_rashad_3_sticker2", "Different therapists provide different types of treatment; ask questions to make informed decisions."},
                 {"end_of_quest_rashad_4_sticker1", "Connections between teens and seniors provide vital support for both populations, including creating connections through common culture and skill-sharing."},
                 {"end_of_quest_rashad_4_sticker2", "Intergenerational connections provide benefits for the entire community."},
-s
+
                 {"end_of_quest_lee_1_sticker1", "Mrs. Lee can take Lila to the pharmacy with Mrs Lee to help her ask clarifying questions."},
                 {"end_of_quest_lee_1_sticker2", "Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource."},
                 {"end_of_quest_lee_2_sticker1", "Mrs. Lee can go to the health programming workshop at the library and ask for help."},
