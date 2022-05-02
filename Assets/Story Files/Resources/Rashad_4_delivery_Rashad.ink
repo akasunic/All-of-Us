@@ -16,8 +16,8 @@ Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank 
 
 
 ==Chat1==
-Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming intake interview."
-Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I needed. Also, I was thinking about talking to HR about how the board has been treating me."
+Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming <a>intake interview</a>."
+Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I needed. Also, I was thinking about talking to <a>HR</a> about how the board has been treating me."
 
 * Wow, Rashad. How can I support you? 
 -> Chat2
@@ -26,13 +26,13 @@ Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I 
 
 ==Chat2==
 Rashad?Smiling "It’s all good. I plan on asking one of my allies on the board to support me. If the behavior continues, I'm ready to call it out."
-Rashad?Smiling "On a lighter note, the board approved an initiative I wanted to talk to you about. You’re always making sure everyone has the right support and connections." 
+Rashad?Smiling "On a lighter note, the board approved an <a>initiative</a> I wanted to talk to you about. You’re always making sure everyone has the right support and connections." 
 
 * Absolutely. That's what I'm here for!
 -> QuestIntro
 
 ==QuestIntro==
-Rashad?Neutral "When I pitched this initiative, I highlighted our shifting demographics - in short, I want to hold space at the library for an intergenerational dialogue."
+Rashad?Neutral "When I pitched this initiative, I highlighted our shifting demographics - in short, I want to hold space at the library for an <a>intergenerational dialogue</a>."
 Rashad?Neutral "The library is like a second home to our seniors and young people, and I'd like to bring them together."
 
 * An intergenerational dialogue? How would that work? 
@@ -46,7 +46,7 @@ Rashad?Neutral "Making sure their lawn got mowed, and just checking in? I pitche
 
 Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments."
 
-Rashad?Neutral "I was thinking we could pair teens and seniors to overcome some of those tech roadblocks."
+Rashad?Neutral "I was thinking we could pair teens and seniors to overcome some of those tech <a>roadblocks</a>."
 
 * Wow, I bet the teens get to pick up some pretty cool skills. 
 -> OptionalQuestDetails1

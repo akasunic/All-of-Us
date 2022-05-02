@@ -41,14 +41,14 @@ Mrslee?Smiling "How bad can you be? Eddie start with bag rice noodle, now he mak
 -> Explain1
 
 ==Explain1==
-Mrslee?Neutral "Oh? How I can help." 
+Mrslee?Neutral "Oh? How I can help?" 
 
 * Rashad is working on a program to connect elders and young people
 -> Explain2
 
 
 ==Explain2==
-Mrslee?Smiling "That sound really nice, {player_name}. When Eddie spend time with me - I feel happy. There so many little activity children never learn. I am very helpful with this."
+Mrslee?Smiling "That sound really nice, {player_name}. When Eddie spend time with me - I feel happy. There so many little activity children can learn. I am very helpful with this."
 
 Mrslee?Neutral "They never tell me how lonely it feel to get older. Or maybe I never listen. Now, I have so much time on my hands."
 
@@ -67,7 +67,7 @@ Mrslee?Smiling "Seniors need someone to talk to. A purpose. And maybe someone to
 
 Mrslee?Smiling "It makes me feel so good to see how he grow. I can introduce you to my friends at the Community Center to learn more. "
 
-Mrslee?Neutral "Some of my fitness class friends ... borrow ... Eddie sometimes because they have no young people to help move this box or that trunk. He love to help."
+Mrslee?Neutral "Some of my fitness class friends ask Eddie sometimes because they have no young people to help move this box or that trunk. He love to help."
 
 Mrslee?Smiling "I feel so proud that he is helpful."
 

@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ==intro==
 
-Mrslee?Smiling "Hello {player_name}, nice see you again! How are you doing?"
+Mrslee?Smiling "Hello {player_name}, nice to see you again! How are you doing?"
 
 * I'm great, Mrs. Lee! How are you?
 -> Chat1
@@ -15,18 +15,18 @@ Mrslee?Smiling "Hello {player_name}, nice see you again! How are you doing?"
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "I feel okay! I’m looking for some meditation classes, maybe that would help."
+Mrslee?Smiling "I feel sleepy, but good! I’m looking for some meditation classes, maybe that would help me sleep better."
 
 * Oh, no are you okay Mrs. Lee? 
 -> Chat2
-* Oh, cool! Meditation sounds fun. Are you up for a question?
+* Meditation sounds like a good place to start. Are you up for a question?
 -> Explain1
 
 ==Chat2==
 Mrslee?Smiling "I will be okay, don’t worry. Sometimes, it is hard to sleep."
-Mrslee?Smiling "Eddie suggested physical activity; I already take fitness class and help with Lila's class."
-Mrslee?Smiling "Then he suggest I ask Lila. She show me this list of classes that teach meditation and mindfulness exercises."
-Mrslee?Smiling "Eddie say maybe I need to make my brain tired too!"
+Mrslee?Smiling "Eddie, my grandson, suggested physical activity; I already take fitness class and help with Lila's class."
+Mrslee?Smiling "Then he suggest I ask my friends. Lila showed me this list of classes that teach meditation and mindfulness exercises here at the Community Center!"
+Mrslee?Smiling "Eddie say maybe I need to make my brain tired too! If I cannot find an answer, I will ask for more help."
 
 * Eddie sounds like he knows what he's talking about.
 -> Chat3
@@ -60,8 +60,8 @@ Mrslee?Neutral "Wow, I have no idea Rashad need help like this. I know lot of fr
 -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Mrslee_Day 1_Asking friends of the library to share the job posting on social media might increase the number of candidates_Rashad1-4"
-# notification Mrslee_Day 1_Asking friends of the library to share the job posting on social media might increase the number of candidates_Rashad1-4
+~ notification = "Mrslee_Day 1_Rashad could reach out to those he has helped at the Library and ask them to spread the word about the open position_Rashad1-4"
+# notification Mrslee_Day 1_Rashad could reach out to those he has helped at the Library and ask them to spread the word about the open position_Rashad1-4
 
 Mrslee?Smiling "I met Rashad when he work as the young adult librarian! Now he hire a new person to help in that department."
 Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We could post flyer on bulletin board in the Community Center."
@@ -72,7 +72,7 @@ Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We
 ==Suggestion2==
 Mrslee?Smiling "Anything to help out Rashad. When Eddie needed a summer job, Rashad helped him. Showed him how to use the internet to apply. Lots of jobs get posted online now."
 Mrslee?Smiling " Maybe we also ask Lila to email people who attend fitness class. And her daycare parents! She know everyone!" 
-Mrslee?Smiling "I can post in local groups online; I belong to garden forums and talk about flowers. Maybe someone there likes books."
+Mrslee?Smiling "I can share in my garden group. Some of them use online forums to talk about flowers. If one of them shares, maybe someone there likes books."
 
 * Perfect! You can include a link to library's website where people can apply. 
 -> Goodbye

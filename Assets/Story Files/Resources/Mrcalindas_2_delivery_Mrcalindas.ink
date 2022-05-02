@@ -33,7 +33,7 @@ Mrcalindas?Smiling "Well, that's good. The neighborhood is benefitting from your
 
 ==QuestIntro==
 
-Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to <a>postpone<a/> our next cooking lesson. My mother is moving in with us, and I want her to feel settled."
+Mrcalindas?Neutral "Oh, yes. I'm sorry - I need to <a>postpone</a> our next cooking lesson. My mother is moving in with us, and I want her to feel settled."
 
 Mrcalindas?Neutral "It might be a while before our next lesson. I need to figure out how to make this transition as comfortable as possible for her." 
 

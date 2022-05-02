@@ -19,7 +19,8 @@ Lila?Smiling "Oh, hey {player_name}!"
 == Chat1 ==
 
 Lila?Smiling "It went really well! I was nervous, but thanks to Elisa’s fliers and Rashad’s help, we had a really nice turnout,"
-Lila?Smiling "We got a lot of sign-ups for the mentorship group. I’m hoping to host a <a>potluck<a> picnic for everyone while the weather is nice."
+Lila?Smiling "We got a lot of sign-ups for the mentorship group. I’m hoping to host a <a>potluck</a> picnic for everyone while the weather is nice."
+
 * I knew you could do it! How are you now?
 -> QuestIntro
 * That’s awesome! How is Trisha?

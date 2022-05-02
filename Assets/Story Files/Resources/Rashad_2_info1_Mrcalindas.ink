@@ -53,7 +53,7 @@ Mrcalindas?Neutral "You made the right call coming to me for advice. Can you tel
 Mrcalindas?Neutral "That’s not surprising. Stress can really impact sleep and that's not good at all. Your friend should take this up with his doctor as soon as possible."
 Mrcalindas?Neutral "If not handled properly, stress can strain your heart."
 Mrcalindas?Neutral "Your whole body gets in on the action when your sleep is poor. Insomnia affects white blood cell counts, cognition, and resting heart rate." 
-Mrcalindas?Neutral. Stress is inevitable, but we have to manage it, or it'll tear us up. This is why I run! It’s an amazing exercise for your cardiovascular health." 
+Mrcalindas?Neutral "Stress is inevitable, but we have to manage it, or it'll tear us up. This is why I run! It’s an amazing exercise for your cardiovascular health."
 
 * Wow, that sounds very intense.
   -> Suggestion1
@@ -62,9 +62,9 @@ Mrcalindas?Neutral. Stress is inevitable, but we have to manage it, or it'll tea
 ~ notification = "Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad2-1"
 # notification Mrcalindas_Day 2_A small dose of melatonin might help improve sleep quality_Rashad2-1
 
-Mrcalindas?Smiling "He should start with a small dose of melatonin. It helps you to sleep when taken before bed, but make sure your friend checks with a doctor first before taking it."
+Mrcalindas?Smiling "He should start with a small dose of <a>melatonin</a>. It helps you to sleep when taken before bed, but make sure your friend checks with a doctor first before taking it."
 Mrcalindas?Smiling "I mentioned running, but any exercise he finds pleasurable will do the trick. Dancing or bicycling, or even gardening will help. The secret is to be in motion." 
-Mrcalindas?Smiling "Combining mindfulness activities like meditation and a gentle practice like yoga or tai chi really help some people. Your friend can try that as well." 
+Mrcalindas?Smiling "Adding mindfulness activities like meditation and a gentle practice like yoga or tai chi really help some people. Your friend can try that as well." 
 
 *That all sounds great, but it all feels too simple.
   -> Suggestion2

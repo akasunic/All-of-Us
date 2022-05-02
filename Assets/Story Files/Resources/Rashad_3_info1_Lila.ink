@@ -27,7 +27,7 @@ Lila?Smiling "I asked about noise in the library and all he did was laugh."
 
 ==Chat2==
 Lila?Smiling "Right? I couldn’t help but laugh when I saw him creeping on me like I was up to no good with a glitter agenda. Sometimes I worry that Rashad is way too stressed, though."
-Lila?Smiling "He cracks jokes, and whatnot, but you can just tell that he’s burned out and I feel awful."
+Lila?Smiling "He cracks jokes and whatnot, but you can just tell that he’s burned out and I feel awful."
 
 * And with all of that stress, he still manages to put a smile on our faces.
   -> Chat3
@@ -56,7 +56,7 @@ Lila?Neutral "Okay, sure. I'm happy to help. Finding therapy resources can be a 
 
 Lila?Neutral "The same racism that keeps us out of other medical professions come into play for therapists too." 
 
-Lila?Neutral "When you add in the historic stigmas against mental healthcare in black communities, it creates a situation that perpetuates itself." 
+Lila?Neutral "When you add in the historic stigmas against mental healthcare in Black communities, it creates a situation that perpetuates itself." 
 
 Lila?Neutral "With patience, though, I've had luck in the past. I've even helped friends find therapists of their own." 
 
@@ -104,7 +104,7 @@ Lila?Neutral "I wrote down questions because I knew I'd be nervous, but a good t
 
 
 ==Goodbye==
-Lila?Smiling "Hey, mental health affects all of us, right? If you ever need anything else, {player_name} I'm happy to help. Now I'm off to pick up Charlie from his weekly doggie daycare!"
+Lila?Smiling "Hey, mental health affects all of us, right? If you ever need anything else, {player_name}, I'm happy to help. Now I'm off to pick up Charlie from his weekly doggie daycare!"
 
 
 * Aww! Text pics! See you soon!

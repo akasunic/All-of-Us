@@ -8,7 +8,7 @@ VAR new_quest = ""
  
 == intro ==
  
-Rashad?Smiling "Hey, {player_name}! How you been? Excited to hear what you've been up to."
+Rashad?Smiling "Hey, {player_name}! I'm excited to hear what you've been up to."
  
 * Just doing what I can to keep the community happy!
 -> Chat1
@@ -94,7 +94,7 @@ Hold tight! I’ll be right back.
 # correct
 
 Rashad?Smiling "One of the things that got me thinking about launching this program in the first place was Mrs. Lee and her role at the Community Center." 
-Rashad?Smiling "She just lights up whenever she talks about the community, which is super endearing.."
+Rashad?Smiling "She just lights up whenever she talks about the community, which is super endearing."
  
 Rashad?Smiling "If it’s good for her, it must be useful for other people too, right?"
  

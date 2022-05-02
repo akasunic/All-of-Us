@@ -33,7 +33,7 @@ Rashad?Smiling "Anyway, is there something I can do for you?"
 
 ==QuestIntro==
 Rashad?Neutral "I have been sleeping better, actually. I met with my doctor and he recommended that I get into running again."
-Rashad?Neutral "He also reiterated that seeing a Black therapist is the right move, but I'm still on the fence about it. Do you think you could help?" 
+Rashad?Neutral "He also reiterated that seeing a Black <a>therapist</a> is the right move, but I'm still <a>on the fence</a> about it. Do you think you could help?" 
 
 * Absolutely! People I trust say good things. What are your concerns?
 -> QuestDetails1
@@ -51,8 +51,8 @@ Rashad?Neutral "I don't know how to determine which therapist is right for me. C
 
 
 ==OptionalQuestDetails1==
-Rashad?Neutral "Yeah, of course. It's my first time asking for help so I kind of feel like a fish out of water. Plus, who knows if I even have the time for this."
-Rashad?Neutral "At the same time, I know I need to prioritize my mental health. It’s just hard to find someone who gets it, if you catch my drift."
+Rashad?Neutral "Yeah, of course. It's my first time asking for help so I kind of feel like a <a>fish out of water</a>. Plus, who knows if I even have the time for this."
+Rashad?Neutral "At the same time, I know I need to prioritize my <a>mental health</a>. It’s just hard to find someone who gets it, if you catch my drift."
 
 * I totally get it. What else do you need from me?
 -> QuestDetails2
@@ -69,9 +69,9 @@ Rashad?Neutral "I want to find someone who really understands. Can you help me w
 
 ==QuestAcceptance==
 Rashad?Smiling "No rush! I know this is a big ask, so no pressure. I'm nervous, and spinning in circles. I think I need to try this for my own sanity." 
-Rashad?Smiling "I guess I'm asking for help now, aren't I? I just want to know how to pick someone right for me." 
+Rashad?Smiling "I just want to know how to pick someone right for me." 
 
-* I'm really honored you're trusting me with this. I'll see what I can find out.
+* I'm really honored that you're trusting me with this. I'll see what I can find out.
 -> Goodbye
 
 ==Goodbye==

@@ -15,7 +15,7 @@ Elisa?Smiling "Hi {player_name}, it's so nice to see you! How's your day going?"
 -> Chat1
 
 ==Chat1==
-Elisa?Smiling "I'm well! I have a lot going on. So many of moving pieces to get in order before the next school year, you know?"
+Elisa?Smiling "I'm well! I have a lot going on. So many moving pieces to get in order before the next school year, you know?"
 Elisa?Smiling "The transition from Bloomwood Community College to a state school is exciting, but stressful too! What's new with you?"
 
 * It sounds like you have a lot on your plate. 
@@ -29,7 +29,7 @@ Elisa?Smiling "Ugh. I'll figure it out."
 
 * I'm sorry to hear that. School is already stressful enough.
 -> Chat3
-* I may have a solution to that if you're interested?  
+* I may have a solution if you're interested?  
 -> Explain1
 
 ==Chat3==
@@ -44,13 +44,13 @@ Elisa?Neutral "What's up? I'm all ears."
 
 * There's a part-time opening at the library. I think you're a perfect fit!  
   -> Explain2
-* The library is looking for an extra set of hands in the YA section. Interested
+* The library is looking for an extra set of hands in the YA section. Interested?
  -> Explain2
 
 ==Explain2==
-Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables, or worse... I spent a summer as an assistant for a dog groomer."
-Elisa?Smiling "It was pretty filthy, but maybe I'm biased since I'm a cat person. I was starting to think I'd have to go back to that."
-Elisa?Smiling "I love the library, and I really like Rashad. I'd love to learn more."
+Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables again... I'm so, so bad at waiting tables."
+Elisa?Smiling "I applied to the plant nursery, but they didn't have any openings; it's probably just as well. I don't need to be bringing home every nearly-dead succulent each week."
+Elisa?Smiling "I love the library, and I really like Rashad. It sounds like fun! I'd love to learn more."
 
 * Rashad posted a job listing on the library's website!
   -> Suggestion1
@@ -72,14 +72,14 @@ Elisa?Smiling "I will polish up my resume and apply as soon as possible! Is resu
 ~ notification = "Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2"
 # notification Elisa_Day 1_A part-time job in the library will look good on Elisa's resume_Rashad1-2
 
-Elisa?Smiling "This sounds like a great way to build up experience, too. I feel like this serves two purposes. It will help me pay for text books, and it'll look great on my resume!" 
+Elisa?Smiling "This sounds like a great way to build up experience, too. I feel like it would look great on my resume!" 
 Elisa?Smiling "I'm usually free Monday afternoon and on weekends; I hope that's enough to be helpful. How do I apply for the position?" 
 
 * That's great to hear! You can apply through the library's website. 
 -> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "That sounds awesome, {player_name}! I can definitely pull this off. Thanks so much, I really could use the extra cash," 
+Elisa?Smiling "That sounds awesome, {player_name}! I can definitely pull this off. Thanks so much, I really could use the extra cash..." 
 Elisa?Smiling "and the process doesn't seem like a hassle. I've got to head to a study session, but I'll see you later!"
 
 * You'll knock it out of the park! Send me that resume when you're ready! 

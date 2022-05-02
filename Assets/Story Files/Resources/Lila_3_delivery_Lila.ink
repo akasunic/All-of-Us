@@ -78,7 +78,7 @@ Lila?Smiling "I really appreciate the offer. Only if you have time, okay? I want
 ==Goodbye==
 Lila?Smiling "Thank you for the reminder. I definitely needed to hear that. I need to get back inside... We'll chat later? Thank you again."
 
-* I’ll spread these <a>social butterfly wings<a> and be right back.
+* I’ll spread these <a>social butterfly wings</a> and be right back.
 -> END
 * Of course, Lila. Anything for a friend.
 -> END
