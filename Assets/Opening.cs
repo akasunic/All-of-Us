@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Opening : MonoBehaviour
 {
     public TextMeshProUGUI ContinueButtonText;
+    public TextMeshProUGUI CreditsButton;
     public TextMeshProUGUI NewGameButton;
     public GameObject ContinueButton;
 
@@ -17,6 +18,7 @@ public class Opening : MonoBehaviour
         
         ContinueButtonText.text = GameStrings.getString("continue");
         NewGameButton.text = GameStrings.getString("new_game");
+        CreditsButton.text = GameStrings.getString("credits");
 
         // Loading game data
         GlobalGameInfo.gameData = SaveSerial.LoadGame();
@@ -42,5 +44,9 @@ public class Opening : MonoBehaviour
         SceneManager.LoadScene("StartWeek");
     }
     
+    public void onCreditsClick() {
+
+        SceneManager.LoadScene("StartWeek");
+    }
     
 }
