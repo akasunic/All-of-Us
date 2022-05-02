@@ -7,7 +7,7 @@ VAR new_quest = ""
 -> intro
  
 == intro ==
-Rashad?Smiling "Hey hey, {player_name} it's nice to see you again. How's it going?"
+Rashad?Smiling "Hey hey, {player_name}. It's nice to see you again. How's it going?"
  
 * I'm fine as long as you don’t ask about the glitter.
   -> Chat1
@@ -105,7 +105,7 @@ Rashad?Smiling "There are so many things to consider, but this is definitely the
 ==SolvedGoodbye==
 Rashad?Smiling "Hey, thanks, {player_name}. I appreciate you helping me out like this."
  
-My pleasure, Rashad!
+*My pleasure, Rashad!
   -> END
  
 ==TempGoodbye==

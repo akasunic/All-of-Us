@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 == intro ==
-Rashad?Smiling "Hey {player_name}! Good news, I finished up the details for the bookmobile visit the Community Center." 
+Rashad?Smiling "Hey {player_name}! Good news, I finished up the details for the bookmobile visit to the Community Center." 
 Rashad?Smiling "We’ll be able to give away free books. I am always excited about free books!"
 
 * That's amazing, Rashad! I love this energy.
@@ -24,7 +24,7 @@ Rashad?Smiling "And, we wouldn't have gotten it approved without your help. So t
   -> ReadyToSolve
 
 ==Chat2==
-Rashad?Neutral "Hah, you’re too kind!. Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
+Rashad?Neutral "Hah, you’re too kind! Speaking of which, did you ever find out about those therapy questions? Don't worry if you didn't have the time."
 
 *  I made the time because you matter! Here's what I have..
   -> ReadyToSolve
@@ -53,7 +53,7 @@ Rashad?Neutral "You work really fast, {player_name}. I should’ve reached out t
 
 Rashad?Neutral "It figures that insurance would be a pain, but that’s pretty self-explanatory. Did you come up with something a little more meaty?"
 
-Hold tight! I’ll be right back.
+* Hold tight! I’ll be right back.
   ->PuzzleInterface
 
 ==Option2==
@@ -65,7 +65,7 @@ Rashad?Smiling "I found a pediatrician who went to undergrad with Cheryl and a d
 
 Rashad?Smiling "It could really make a difference to see someone who gets it... That’s a real game changer."
   
-* It’s a great way to zoom in on exactly what you need! 
+* It’s a great way to narrow in on exactly what you need! 
 -> Followup31
 
 == Followup31==
@@ -81,7 +81,7 @@ Rashad?Neutral "Teletherapy, huh? I might explore that once I find someone. Righ
 
 Rashad?Neutral "Did you come up with any information on the process of narrowing down my options?"
  
-Hold on! I’ll be right back.
+* Hold on! I’ll be right back.
   ->PuzzleInterface
 
 ==Option4==
@@ -101,15 +101,15 @@ Rashad?Smiling "I find it difficult to be vulnerable since so many people in the
 
 Rashad?Smiling "It’s comforting to know that what I say in therapy doesn’t leave the room. I want people to continue to feel like they can count on me."
 
-You can’t take care of others if you don’t put yourself first.  
+* You can’t take care of others if you don’t put yourself first.  
 -> SolvedGoodbye
-It’s okay to not be okay. You’re still amazing!
+* It’s okay to not be okay. You’re still amazing!
 -> SolvedGoodbye
 
 ==SolvedGoodbye==
 Rashad?Smiling "Thank you, {player_name}. I feel like the search for a Black therapist feels a little more approachable now." 
 
-My pleasure, Rashad!
+* My pleasure, Rashad!
   -> END
 
 ==TempGoodbye==

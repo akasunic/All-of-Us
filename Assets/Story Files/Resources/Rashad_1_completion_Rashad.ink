@@ -19,9 +19,11 @@ Rashad?Neutral "Time? For this, I’ll make time! I can't remember the last time
   -> ReadyToSolve
 
 ==ReadyToSolve==
-Rashad?Neutral "Wow, that amazing news. Elisa’s knowledge of young adult literature would be invaluable and Mrs. Lee is pretty well-connected so she’s been a huge help on many different occasions. I’m listening?"
+Rashad?Neutral "Wow, that amazing news!"
+Rashad?Neutral "Elisa’s knowledge of young adult literature would be invaluable."
+Rashad?Neutral "...and Mrs. Lee is pretty well-connected so she’s been a huge help on many different occasions. I’m listening?"
 
-* Here you go...
+* Here you go... 
 -> PuzzleInterface
 * Actually, let me check my notes again.  
 -> TempGoodbye
@@ -71,7 +73,9 @@ Rashad?Neutral "Time is of the essence. Did you come up with anything else?"
 ==Option4==
 # correct
 
-Rashad?Smiling "You know, {player_name}, I‘m well aware of this, but I’m not sure I would have connected the dots. We host workshops where we teach people how to use the internet - so you would think we’d be better at using our own website to communicate with our patrons. Wrong."
+Rashad?Smiling "You know, {player_name}, I‘m well aware of this, but I’m not sure I would have connected the dots."
+
+Rashad?Smiling "We host workshops where we teach people how to use the internet - so you would think we’d be better at using our own website to communicate with our patrons. Wrong."
 Rashad?Smiling "I truly appreciate that our community members are always willing to help us up our game."
   
 * Well said, Rashad! 

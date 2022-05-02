@@ -1133,7 +1133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are uniquely equipped to help solicit advices, suggestions, and solutions
+  m_Text: You are uniquely equipped to help solicit advice, suggestions, and solutions
     from the neighborhood
 --- !u!225 &643182491
 CanvasGroup:

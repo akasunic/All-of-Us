@@ -22,7 +22,7 @@ Elisa?Smiling "Plus, when I transfer, I won't have the Nature Club to get me by,
 
 * Wow, that sounds super relaxing!
 -> Chat2
-*That sounds lovely. Wait, Elisa, there’s something I wanted to ask you
+*That sounds lovely. Wait, Elisa, there’s something I wanted to ask you.
 -> Explain1
 
 ==Chat2==
@@ -62,8 +62,8 @@ Elisa?Neutral "If Rashad is looking for input, I can share what teens are genera
 -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2"
-# notification Elisa_Day 4_Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing_Rashad4-2
+~ notification = "Elisa_Day 4_Connections between teens and seniors provide vital support for both populations, including creating connections through common culture and skill-sharing_Rashad4-2"
+# notification Elisa_Day 4_Connections between teens and seniors provide vital support for both populations, including creating connections through common culture and skill-sharing_Rashad4-2
 
 Elisa?Smiling "I learned a lot about my culture and heritage from my abuela, plus I think socializing with her was good for her mental health in a way."
 
@@ -88,9 +88,9 @@ Elisa?Smiling "My parents are out in the world making ends meet and holding the 
 
 Elisa?Smiling "My abuela admitted to me that she was afraid she was going to get left behind. I helped her combat that, and she made me feel like the smartest chica ever." 
 
-Elisa?Smiling "She really valued her independence, so helping her with technology really gave her a sense of agency. Plus, I could tell she was happy to spend time with me, and taught me so many random skills."
+Elisa?Smiling "She really valued her independence, so helping her with technology really gave her a sense of <a>agency</a>. Plus, I could tell she was happy to spend time with me, and taught me so many random skills."
 
-Elisa?Smiling "Need a picture hung? I can find a stud with the best; that picture is never falling down. Thanks, abuela."
+Elisa?Smiling "If you need a picture hung? I can hang it for you; that picture is never falling down. Thanks, abuela."
 
 * You’re pulling my heartstrings, Elisa. What a great way to build a bond.
 -> Goodbye

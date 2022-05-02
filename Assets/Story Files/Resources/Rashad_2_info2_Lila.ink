@@ -43,13 +43,13 @@ Lila?Neutral "Especially for people of color or other marginalized identities."
   
 
 ==Explain1==
-Lila?Neutral "Sure! Stress can be really difficult to handle. I manage from a lot of stress, and you'd be surprised how it can hurt your health."
+Lila?Neutral "Sure! Stress can be really difficult to handle. I manage a lot of stress, and you'd be surprised how it can hurt your health."
 
 Lila?Neutral "If I don't stay on top of things, I end up grinding my teeth at night. I have a mouth guard now, but only after I cracked a tooth. No fun!"
 
-* Actually, one of my friends is experiencing racial stress.
+* Actually, one of my friends is experiencing race-related stress.
   -> Explain2
-* I'm beginning to worry about a friend who is dealing with racial stress.
+* I'm beginning to worry about a friend who is dealing with race-related stress.
   -> Explain2
 
 ==Explain2==
@@ -90,7 +90,7 @@ Lila?Neutral "If I'm being honest, I think most people of color I know could ben
 Lila?Neutral "Sustained collective trauma and workplace microaggressions can lead to serious physical and mental harm, trust me. Then you factor in generational trauma..."
 Lila?Neutral "These types of encounters create a condition called race-based traumatic stress syndrome, or RBTS. I've attended therapy for it."
 Lila?Neutral "Some people really struggle with overcoming the stigma around mental health care." 
-Lila?Neutral "I get it, but also? That's why I think it's important to find someone who shares at least part of your background and experience."
+Lila?Neutral "I get it! That's why I think it's important to find someone who shares at least part of your background and experience."
 
 
 * That's wonderful advice, Lila. Thank you so much.

@@ -162,7 +162,7 @@ public static class GameStrings {
                 {"end_of_quest_rashad_2_sticker2", "Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life."},
                 {"end_of_quest_rashad_3_sticker1", "Online tools can help narrow down possible therapists with information about insurance plans, styles of therapy, availability, location, and affordability."},
                 {"end_of_quest_rashad_3_sticker2", "Different therapists provide different types of treatment; ask questions to make informed decisions."},
-                {"end_of_quest_rashad_4_sticker1", "Connections between teens and seniors provide vital support for both population, including creating connections through common culture and skill-sharing."},
+                {"end_of_quest_rashad_4_sticker1", "Connections between teens and seniors provide vital support for both populations, including creating connections through common culture and skill-sharing."},
                 {"end_of_quest_rashad_4_sticker2", "Intergenerational connections provide benefits for the entire community."},
 
                 {"end_of_quest_lee_1_sticker1", "Mrs. Lee can take Lila to the pharmacy with Mrs Lee to help her ask clarifying questions."},
@@ -231,7 +231,7 @@ public static class GameStrings {
 
                 {"task_map_yellowtitle", "What Next?"},
                 {"task_map_whitetitle", "Stay On Task!"},
-                {"task_map_whitetext", "It was a great conversation! Now you will go gather more information and help them out."},
+                {"task_map_whitetext", "That was a great conversation! Now you will go gather more information and help them out."},
                 {"task_map_buttontext", "NEXT"},
 
                 {"neighbors_map_yellowtitle", "What should I do?"},

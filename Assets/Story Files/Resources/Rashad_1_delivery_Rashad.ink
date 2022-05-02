@@ -14,11 +14,11 @@ Rashad?Smiling "Hey {player_name}! How's it going?"
 
 * Not too bad, Rashad! How are you?  
 -> Chat1
-* Hi Rashad! Doing well, how can I help you today?
+* Hi Rashad! Doing well, Is there anything on your mind that I can help with?
 -> QuestIntro
 
 ==Chat1==
-Rashad?Neutral "I've been trying to kickstart some new programs, but the paperwork never ends. It kinda feels like I'm stuck in quicksand."
+Rashad?Neutral "I've been trying to <a>kickstart</a> some new programs, but the paperwork never ends. It kinda feels like I'm stuck in quicksand."
 Rashad?Neutral "I don't mean to complain, but this week, it all feels pretty overwhelming."
 
 * Yikes. That sounds tough. 
@@ -34,7 +34,7 @@ Rashad?Neutral "On top of that, the library has been pretty hectic these days."
 -> QuestIntro
 
 ==QuestIntro==
-Rashad?Smiling "Well, now that you mention it. The library has been super slammed lately, and I'm looking to fill that open position in the Young Adult Literature section..."
+Rashad?Smiling "Well, now that you mention it. The library has been super <a>slammed</a> lately, and I'm looking to fill that open position in the <a>Young Adult</a> Literature section..."
 
 * Hmmm, I may be able to help. Can you tell me more?
 -> QuestDetails1
@@ -42,7 +42,7 @@ Rashad?Smiling "Well, now that you mention it. The library has been super slamme
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "Sure! It's perfect for someone who knows 'young adult literature" and children's books. Ideally, someone with great people skills who doesn't mind multi-tasking."
+Rashad?Neutral "Sure! It's perfect for someone who knows young adult literature and children's books. Ideally, someone with great people skills who doesn't mind <a>multi-tasking</a>."
 Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a tall order!"
 
 * It doesn't sound that bad! Can you tell me more about the position? 
@@ -51,8 +51,8 @@ Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a tall order!"
 -> OptionalQuestDetails1
 
 ==OptionalQuestDetails1==
-Rashad?Neutral "It's probably a shot in the dark but if I can set up interviews by next week, that would be amazing."
-Rashad?Neutral "If I wasn't swimming in admin work, I'd probably have a chance to properly look for a good candidate."
+Rashad?Neutral "It's probably a <a>shot in the dark</a> but if I can set up interviews by next week, that would be amazing."
+Rashad?Neutral "If I wasn't swimming in <a>admin</a> work, I'd probably have a chance to properly look for a good candidate."
 
 * I may have someone for you. Is there anything else I should know? 
 -> QuestDetails2
@@ -60,8 +60,8 @@ Rashad?Neutral "If I wasn't swimming in admin work, I'd probably have a chance t
 -> QuestAcceptance
 
 ==QuestDetails2==
-Rashad?Neutral "This role would be part-time, maybe two or three shifts a week. I can be flexible about which shifts, honestly."
-Rashad?Neutral "They will need to learn the young adult section, so they can help reshelve books and run the help desk."
+Rashad?Neutral "This role would be part-time, maybe two or three <a>shifts</a> a week. I can be flexible about which shifts, honestly."
+Rashad?Neutral "They will need to learn the young adult section, so they can help <a>reshelve</a> books and run the help desk."
 Rashad?Neutral "I'd love someone who could take over storytime on Saturdays. We have a session in the morning and one in the afternoon to support as many families as possible." 
 
 * Sounds good.  Is there anything else I should keep in mind? 
@@ -70,7 +70,7 @@ Rashad?Neutral "I'd love someone who could take over storytime on Saturdays. We 
 -> QuestAcceptance
 
 ==OptionalQuestDetails2==
-Rashad?Neutral "I mean, it'd be perfect for a student. They can study when they staff the help desk. Oh, they'll need a solid resume, too."
+Rashad?Neutral "I mean, it'd be perfect for a student. They can study when they staff the help desk. Oh, they'll need a solid <a>resume</a>, too."
 
 * That's reasonable. You can count on me, Rashad!
 -> QuestAcceptance
@@ -87,7 +87,7 @@ Rashad?Smiling "I really appreciate your help, {player_name}!"
 ==Goodbye==
 Rashad?Smiling "If we can get even a single application, it would mean the world." 
 Rashad?Smilng "Cheryl and I are hoping to take the kids on a roadtrip during the next school break. Having someone trained would make that less stressful." 
-Rashad?Smiling "I've have to head out but I'll catch you later?"
+Rashad?Smiling "I need to head out but I'll catch you later?"
 
 * Sounds good. Bye Rashad!
    ->END

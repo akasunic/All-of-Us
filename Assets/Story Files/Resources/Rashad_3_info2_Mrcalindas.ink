@@ -33,7 +33,7 @@ Mrcalindas?Neutral "Kidding aside, what's up? You have my undivided attention."
 
 Mrcalindas?Neutral "This is a good question." 
 
-Mrcalindas?Neutral "One of the things people don't understand when they start the process of finding a therapist is that there are many different TYPES of therapy. Different therapists use different approaches." 
+Mrcalindas?Neutral "One of the things people don't understand when they start the process of finding a therapist is that there are many different <i>types</> of therapy. Different therapists use different approaches." 
 Mrcalindas?Neutral "Most people think of psychotherapy when they imagine therapy. The "tell me about your childhood" portrayal we see on TV. That's one option, but there are many others." 
 Mrcalindas?Neutral "Cognitive Behavioral Therapy, or CBT, and Dialectical Behavioral Therapy, or DBT, are related schools of thought.
 Mrcalindas?Neutral "They both focus on giving you tool kits for engaging with your emotions and changing your reactions and patterns." 
@@ -77,7 +77,7 @@ Mrcalindas?Neutral "Also, sometimes the distance provided by teletherapy can hel
 
 Mrcalindas?Neutral "Obviously, some people prefer being in-person, and that's okay." 
 
-Mrcalindas?Neutral "Since covid, we've seen a lot of advances around telehealth in general, not just for therapy." 
+Mrcalindas?Neutral "Since Covid, we've seen a lot of advances around telehealth in general, not just for therapy." 
 
 Mrcalindas?Neutral "Did you know you can do telehealth appointments for your cat? I learned that this week!"
 
@@ -90,7 +90,7 @@ Mrcalindas?Smiling "Tell them teletherapy is a great place to start if you are u
 
 Mrcalindas?Smiling "Try to be careful about your surroundings and make sure you have a place to attend the session where no one can hear you, so you can speak freely."
 
-Mrcalindas?Smiling "I switched over to teletherapy at the beginning of covid, I treated myself to a really nice pair of headphones with a microphone."
+Mrcalindas?Smiling "When I switched over to teletherapy at the beginning of Covid, I treated myself to a really nice pair of headphones with a microphone."
 
 Mrcalindas?Smiling "It was a splurge, but I felt like it made the whole teletherapy experience about taking good care of myself."
 
