@@ -46,7 +46,7 @@ public class Opening : MonoBehaviour
     
     public void onCreditsClick() {
 
-        SceneManager.LoadScene("StartWeek");
+        SceneManager.LoadScene("Credits");
     }
     
 }

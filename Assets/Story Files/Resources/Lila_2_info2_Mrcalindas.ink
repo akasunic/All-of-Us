@@ -57,8 +57,8 @@ Mrcalindas?Neutral "Not every doctor is a good fit for every patient; it is okay
 -> Suggestion1
 
 ==Suggestion1==
-~ notification = "Mrcalindas_Day 2_Utilize online resources, including provider biographies and community directories of care providers Complete_Lila2-3"
-# notification Mrcalindas_Day 2_Utilize online resources, including provider biographies and community directories of care providers Complete_Lila2-3
+~ notification = "Mrcalindas_Day 2_Utilize online resources, including provider biographies and community directories of care providers_Lila2-3"
+# notification Mrcalindas_Day 2_Utilize online resources, including provider biographies and community directories of care providers_Lila2-3
 
 Mrcalindas?Smiling "Let your friend know that we are here to support her. If she is comfortable with the idea, she can come see me directly and I will help narrow her choices." 
 Mrcalindas?Smiling "Each of our doctors lists useful information on their provider page on the website, including what languages they speak and maybe what their religious background is."

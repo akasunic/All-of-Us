@@ -38,7 +38,7 @@ Mrcalindas?Smiling "I reassured him that it's normal for kids to have different 
 
 ==Chat3==
 
-Mrcalindas?Smiling "Next time I make roasted winter squash, you can come to the store with me and I'll even show you what the different types looks like. You know, they're all delicious roasted."
+Mrcalindas?Smiling "Next time I make roasted winter squash, you can come to the store with me and I'll even show you what the different types look like. You know, they're all delicious roasted."
 
 Mrcalindas?Smiling "I suspect that isn't why you're here, though."
 

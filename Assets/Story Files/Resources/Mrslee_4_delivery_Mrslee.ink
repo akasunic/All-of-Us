@@ -36,7 +36,7 @@ Mrslee?Smiling "You know. Eddie's very important to me and I talk about him a lo
 
 * I think you're both lucky to have such a deep connection.
   -> QuestDetails1
-* You hope you talked about yourself, too!
+* I hope you talked about yourself, too!
   -> QuestAcceptance
 
 ==QuestDetails1==
@@ -64,7 +64,7 @@ Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. 
 
 * It's great to have some answers!
   -> QuestAcceptance
-* I hope you feel very accomplished, Mrs. Lee!
+* I'm so impressed, Mrs. Lee!
   -> QuestAcceptance
 
 ==QuestAcceptance==

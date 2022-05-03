@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfQuest.unity
     guid: 8f480023c905e4f368e0c51a30cabf93
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9dd41d2f9a4cb3c4cbd99f0bc28599ba
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8b06978d4fc5da74b9713990bc515b59,
       type: 2}

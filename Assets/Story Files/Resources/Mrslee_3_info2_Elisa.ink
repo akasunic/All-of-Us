@@ -19,7 +19,7 @@ Elisa?Smiling "She's starting to get this whole internet humor thing! I wasn't p
 
 * I'm always shocked when parents are good at the internet!
   -> Chat2
-* Can I ask a parent question? I could use your experience.
+* Can I ask a question? I could use your experience.
   -> Explain1
 
 ==Chat2==
@@ -29,24 +29,15 @@ Elisa?Smiling "Now all my siblings are hopping on it... ugh this is so distracti
   -> Explain1
 
 ==Explain1==
-Elisa?Neutral "Yeah, sure! I'm happy to help if I can. If it crosses a boundary, I can always say so."
+Elisa?Neutral "Yeah, sure! I'm happy to help if I can."
 
 * I'm helping a friend prepare for a doctor's appointment. 
-  -> Explain2
-
-==Explain2==
-Elisa?Smiling "Oh! I was worried for a moment. 'Parent question' sounds so serious!"
-Elisa?Smiling "I used to help with all my folks' appointments, until their English got better. How can I help?"
-
-* I was hoping you might have ideas to help my friend feel more comfortable.
-  -> Suggestion1
-* I knew you'd have helpful perspective! 
   -> Suggestion1
   
 ==Suggestion1==
 ~ notification = "Elisa_Day 3_Mrs. Lee could ask someone to be on the phone with her during the appointment_Mrslee3-4"
 # notification Elisa_Day 3_Mrs. Lee could ask someone to be on the phone with her during the appointment_Mrslee3-4
-
+Elisa?Smiling "I used to help with all my folks' appointments, until their English got better."
 Elisa?Smiling "When my mom is worried about an appointment these days, and I can't be there in person, she'll get one of us on speakerphone."
 Elisa?Smiling "Honestly, she doesn't need it much anymore, but having one of us available to ask questions makes it less stressful for her."
 
@@ -70,7 +61,7 @@ Elisa?Smiling "Having it in writing makes it feel more real, too, when the docto
   -> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "Good luck to Mrs. Lee! I need to head to class soon. Anything else?"
+Elisa?Smiling "Good luck to your friend! I need to head to class soon. Anything else?"
 
 * No. You've been super helpful! 
   ->END

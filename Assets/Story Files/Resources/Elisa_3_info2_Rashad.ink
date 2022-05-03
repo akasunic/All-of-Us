@@ -29,7 +29,7 @@ Rashad?Smiling "The day before, I got bugs on a log – you know, peanut butter 
 
 Rashad?Smiling "Literally sweet, in this case! Today, we all got jello cups. I asked what flavor mine was, and she said "red!" So, I raise my red jello in your honor, friend."
 
-Rashad?Smiling "I’m having so much fun watching the kids learn things; sure, packing lunches takes three times longer, but she’s so proud of herself. You know?." 
+Rashad?Smiling "I’m having so much fun watching the kids learn things; sure, packing lunches takes three times longer, but she’s so proud of herself. You know?" 
 
 
 * Rashad, this is all so wholesome! 
@@ -103,7 +103,8 @@ Rashad?Smiling "My personal path is less important than the broad brushstrokes t
 
 Rashad?Smiling "There are two different categories of medication used to treat ADHD. This is going to sound super basic, but they fall into "stimulant" and "non-stimulant" as the categories."
 
-Rashad?Smiling "I told you it was going to sound basic. Non-stimulant drugs focus on helping improve cognition and impulse control. Generally, these drugs are taken once a day, and might take a while to build up in the bloodstream enough to be helpful."
+Rashad?Smiling "I told you it was going to sound basic. Non-stimulant drugs focus on helping improve cognition and impulse control." 
+Rashad?Smiling "Generally, these drugs are taken once a day, and might take a while to build up in the bloodstream enough to be helpful."
 
 Rashad?Neutral "Stimulants are a little different. A brain with ADHD doesn’t react to "uppers" the way a brain without ADHD does. We don’t get buzzed or hyper; in many cases, we get calmer and clearer."
 

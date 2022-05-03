@@ -66,7 +66,7 @@ Mrcalindas?Neutral "Some people just start with a visit to Google. They enter th
 Mrcalindas?Smiling "Great question. Lucky for us, there are several secure online resources that have been created just for this purpose."
 Mrcalindas?Smiling "Look at this one - it's a drug information portal, where you can look up medications. They work with doctors to make sure the information is useful and accurate."
 Mrcalindas?Smiling "And this one is a site for reading up on different health conditions - like high blood pressure. You can access them from here, or your home computer."
-Mrcalindas?Smiling "Rashad regularly helps patients from the clinic access these resources at the library."
+Mrcalindas?Smiling "Rashad regularly helps patients from the Clinic access these resources at the library."
 
 + Thank you so much for this information!
   -> Goodbye

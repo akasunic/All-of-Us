@@ -73,8 +73,8 @@ Mrcalindas?Neutral "If there isn't enough insulin, or your body doesn't know wha
 
 ==Suggestion1==
 
-~ notification = "Mrcalindas_Day 1_Healthy Diet and Exercise can help manage diabete_Elisa1-1"
-# notification Mrcalindas_Day 1_Healthy Diet and Exercise can help manage diabete_Elisa1-1 
+~ notification = "Mrcalindas_Day 1_Healthy Diet and Exercise can help manage diabetes_Elisa1-1"
+# notification Mrcalindas_Day 1_Healthy Diet and Exercise can help manage diabetes_Elisa1-1 
 
 
 Mrcalindas?Smiling "The biggest things to focus on are a diverse, nutrient-rich diet and regular exercise."

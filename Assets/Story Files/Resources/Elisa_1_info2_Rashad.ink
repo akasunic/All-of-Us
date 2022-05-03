@@ -110,7 +110,7 @@ Rashad?Smiling "All the treatment stuff - exercise, healthy eating, medication- 
 
 ==Goodbye==
 
-Rashad?Smiling "Yeah, no worries! If you think of anything other questions, just let me know. Farewell, adventurer!"
+Rashad?Smiling "Yeah, no worries! If you think of any other questions, just let me know. Farewell, adventurer!"
 
 * Farewell to you too!
   ->END

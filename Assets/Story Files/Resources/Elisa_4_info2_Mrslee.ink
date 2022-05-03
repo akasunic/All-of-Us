@@ -59,7 +59,7 @@ How did you foster such a supportive relationship with Eddie?
 
 Mrslee?Neutral "I love Eddie very much, but it not always easy to talk. We got very close after Dr. Lee died. He loved his grandfather, but I think he also feel a little afraid." 
 
-Mrslee?Neutral "One night, I say to Eddie "Anything you need to say, I listen." And he talk. He talk about girls. And school. And his parents. He feel sad a lot. And alone sometimes." 
+Mrslee?Neutral "One night, I say to Eddie "Anything you need to say, I listen." And he talk. He talk about relationships. And school. And his parents. He feel sad a lot. And alone sometimes." 
 
 Mrslee?Neutral "I try hard to listen, no judgment. And when it feel hard, I say so. Then, he ask me questions, and those feel hard too!"
 
@@ -74,7 +74,7 @@ Mrslee?Neutral "Eddie and I work as a team to learn together, I guess. It take p
 
 Mrslee?Smiling "It feel good now. When he has low week, we video chat and he ask advice. Or teach me things I never knew, like how to book train tickets online."
 
-Mrslee?Smiling "I still feel nervous when he bring up girls. But he ask me about big feelings, and I try to be modern." 
+Mrslee?Smiling "I still feel nervous when he bring up relationships. But he ask me about big feelings, and I try to be modern." 
 
 * Can you tell me how you learned skills together? 
   -> Suggestion1

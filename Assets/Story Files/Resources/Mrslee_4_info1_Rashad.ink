@@ -68,7 +68,7 @@ Rashad?Smiling "Oh! I like having this stuff on paper, where I can touch it. Som
 Rashad?Smiling "It's much easier to collaborate in a shared document. You just have to get everyone on board, and figure out how to scan things in."
 Rashad?Smiling "That's something we can help with at either the health workshop or one of the technology workshops!"
 
-* Oh! This might work for Mrs. Lee and Eddie!
+* Oh! This is an excellent suggestion. I think it might work!
   -> Goodbye
 * Rashad, you're the best. These are great suggestions! 
   -> Goodbye

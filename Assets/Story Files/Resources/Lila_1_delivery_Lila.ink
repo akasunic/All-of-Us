@@ -60,7 +60,7 @@ Lila?Smiling "When I was younger, it was just LGBT. We've gotten so much more in
 
 == QuestOverview ==
 Lila?Neutral "Right now, I’m trying to keep my scope limited, so I don’t disappoint anyone."
-Lila?Neutral "I’m feeling a little nervous about the first event. What I know I definitely want is to foster mentorship and support between LGBTQIA+ people."
+Lila?Neutral "I’m feeling a little nervous about the first event. My overall goal is to encourage mentorship and build support systems within the local LGBTQIA+ community."
 Lila?Neutral "So many of us face similar struggles, and if this project can support just one teenager, this will be worthwhile."
 
 * What is your vision for the first event?
@@ -68,7 +68,7 @@ Lila?Neutral "So many of us face similar struggles, and if this project can supp
 
 ==Interaction==
 Lila?Neutral "I was thinking an ice-breaker event and a guest speaker to kick us off."
-Lila?Neutral "I’d like to do a stand-up group activity where people write down special things about themselves and we share anonymously to see similarities in the room."
+Lila?Neutral "I’d like to do a group activity where people write down special things about themselves and we share anonymously to see that we aren't alone."
 Lila?Neutral "Hopefully seeing that, participants will feel safe to engage with the material and begin to open up."
 
 * Hmm, you’ll probably need presentation equipment. Can I help in any way?
@@ -100,7 +100,7 @@ Lila?Neutral "Do you think you can help?"
 
 ==Goodbye==
 Lila?Smiling "Thanks again, {player_name}!"
-Lila?Smiling "If you need anything, I'll be at the community center most days this week working on some extra details for this so everything turns out perfect."
+Lila?Smiling "If you need anything, I'll be at the Community Center most days this week working on some extra details for this so everything turns out perfect."
 
 * Take care, Lila!
 -> END

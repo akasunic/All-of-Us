@@ -35,7 +35,7 @@ Mrslee?Neutral "Eddie say I worry too much. He say I give myself headache from s
 ==QuestIntro==
 Mrslee?Neutral "Headache, headache. I get like this all the time. No big deal. Everybody get headache, right?"
 
-* How often do you get headaches like this?
+* Is this something that happens regularly?
   -> QuestDetails1
 * I'd like to help you! Headaches can be symptoms of other health concerns.
   -> QuestDetails2

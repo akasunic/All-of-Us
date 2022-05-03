@@ -6,7 +6,7 @@ VAR new_quest = ""
 -> intro
 
 ===intro===
-Lila?Smiling "{player_name}! Can I tell you how happy the children were to see their planets safely hung from the celing?"
+Lila?Smiling "{player_name}! Can I tell you how happy the children were to see their planets safely hung from the ceiling?"
 
 * Oh, I’m so glad. How are you?
   -> Chat1
@@ -49,7 +49,7 @@ Lila?Smiling "I bet you came in on a mission, though. You always have great ques
 
 ==Explain1==
 
-Lila?Neutral "Alright. What’s today’s mission, friend?." 
+Lila?Neutral "Alright. What’s today’s mission, friend?" 
 
 * I’m helping a friend who has an appointment at the clinic to discuss birth control.
   -> Suggestion1
