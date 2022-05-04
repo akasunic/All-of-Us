@@ -150,7 +150,7 @@ public static class GameStrings {
                 {"talk_bubble_2", "These are some of the memories I cherish the most!"},
 
                 {"end_of_quest_rashad_1_sticker1", "Elisa will polish up her resume and apply through the library website."},
-                {"end_of_quest_rashad_1_sticker2", "Asking friends of the library to share on social media might increase the number of candidates."},
+                {"end_of_quest_rashad_1_sticker2", "Rashad could reach out to those he has helped at the Library and ask them to spread the word about the open position."},
                 {"end_of_quest_rashad_2_sticker1", "A multi-focus approach might be necessary for managing stress and reducing its impact on quality of life."},
                 {"end_of_quest_rashad_2_sticker2", "Rashad should find a therapist who shares his cultural background so he can safely engage with the impact of racial stress in his daily life."},
                 {"end_of_quest_rashad_3_sticker1", "Online tools can help narrow down possible therapists with information about insurance plans, styles of therapy, availability, location, and affordability."},

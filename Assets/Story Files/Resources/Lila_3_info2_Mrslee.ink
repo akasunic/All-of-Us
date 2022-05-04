@@ -54,7 +54,7 @@ Mrslee?Neutral "I always try my best to answer, {player_name}."
 
 Mrslee?Neutral "I have weekly video calls with old friends. We invite new friends sometimes, like I include a few ladies from fitness class. I feel really supported."
 Mrslee?Neutral "Making new friends used to feel hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
-Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now. Friends are all over, but we need to look."
+Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now. I find friends in many places."
 Mrslee?Smiling "It can be easy to forget the people right nearby."
 
 * Ah, I see. Do you know how Eddie has made new friends?

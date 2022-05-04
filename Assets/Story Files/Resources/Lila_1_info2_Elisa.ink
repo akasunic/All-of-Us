@@ -27,9 +27,9 @@ Elisa?Smiling "That does sound like a lot of fun! It’s nice getting to see peo
 Elisa?Smiling "I’ve really been enjoying spending time with my friends at the Nature Club now that the weather is getting better. Blow off some steam by being outside."
 
 * It’s been super nice lately! Is Nature Club going well?
--> Explain1
-* You work really hard! Can I ask something?
 -> Chat3
+* You work really hard! Can I ask something?
+-> Explain1
 
 ==Chat3==
 Elisa?Smiling "It’s been great! We did some nature walks and we're planning a picnic. It really makes my day when we have abuelos and little kids at the same gathering!"
@@ -47,18 +47,17 @@ Elisa?Neutral "Absolutely. What's up?"
 -> Explain2
 
 ==Explain2==
-Elisa?Smiling "She mentioned this last time we chatted. She was looking for a speaker, and I’ve been thinking about that ever since. Does she still need help?"
+Elisa?Smiling "She mentioned this last time we chatted. She was looking for a speaker, and I’ve been thinking about that ever since. Does she still need fliers?"
 
-* She does! I'm helping, but I was hoping you had thoughts.
+* She didn't mention fliers; that's a great idea!
 -> Suggestion1
-* Yes! Do you have any suggestions for her?
+* I don't know, but I think that's a great suggestion.
 -> Suggestion1
 
 ==Suggestion1==
 ~ notification = "Elisa_Day 1_Elisa can design and hang fliers for Lila around campus_Lila1-3"
 # notification Elisa_Day 1_Elisa can design and hang fliers for Lila around campus_Lila1-3 
 
-Elisa?Smiling "Does she have fliers yet?"
 Elisa?Smiling "I can put them up around campus on bulletin boards and share with our <a>GSA</a> - the gay-straight alliance - and other student organizations."
 Elisa?Smiling "A lot of groups on campus partner with community initiatives to emphasize how important it is to reach out and participate in your community."
 Elisa?Smiling "I’d be glad to help out with Lila’s fliers."
@@ -66,14 +65,14 @@ Elisa?Smiling "I can even design them for her!"
 
 * A flier is a great idea- what a huge help!
 -> Suggestion2
-* Do you have any other suggestions?
+* I'll let her know! She's worrying about a speaker right now.
 -> Suggestion2
 
 ==Suggestion2== 
 ~ notification = "Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4"
 # notification Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4 
 
-Elisa?Smiling "As for Lila’s speaker, I took a class on the Western history of the LGBTQ+ community. I really enjoyed it."
+Elisa?Smiling "I might have a suggestion for a speaker, if she's still looking. I took a class on the Western history of the LGBTQIA+ community. I really enjoyed it."
 Elisa?Smiling "Our professor was really open to talking with us about any of our own questions! They shared their experience as a <a>nonbinary</a> person, which was all new to me."
 Elisa?Smiling "They were also connected to the school GSA and helped out a lot advocating for <a>trans</a>, <a>nonbinary</a>, and <a>genderqueer</a> student rights on campus."
 Elisa?Smiling "They really cared about the campus community and generally making sure all students felt safe and protected."

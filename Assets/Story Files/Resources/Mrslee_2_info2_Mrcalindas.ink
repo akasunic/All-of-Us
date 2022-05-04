@@ -18,7 +18,7 @@ Mrcalindas?Smiling "No, no.  You know you can stop by here anytime. Emergency or
 Mrcalindas?Smiling "Before you leave, check out our wall of pamphlets. You might find something useful for yourself or someone else!."
 Mrcalindas?Smiling "They cover all different types of health conditions and are written to answer basic questions."
 
-* Thanks! I like knowing that's an option. The clinic is 24 hours, right?
+* Thanks! I like knowing that's an option. The Health Clinic is 24 hours, right?
   -> Chat2
 * You're such a helper, Mr. Calindas. I like that about you! 
   -> Explain1
@@ -26,16 +26,16 @@ Mrcalindas?Smiling "They cover all different types of health conditions and are 
 ==Chat2==
 Mrcalindas?Smiling "Yup, our doors are open around the clock, 7 days a week. We provide <a>urgent care</a> support, so people can avoid the <a>emergency department</a>."
 
-* So the clinic offers options other than going to the emergency room?
+* So the Health Clinic offers options other than going to the emergency room?
   -> Explain2
 * I love walking through those doors. I always feel welcome and supported.
   -> Explain1
 
 ==Explain1==
-Mrcalindas?Smiling "I'm glad! The more comfortable people feel at the clinic, the sooner they come to us when something goes wrong."
-Mrcalindas?Smiling "A lot of people are afraid of going to the doctor, so I try to make the clinic as friendly and helpful as possible."
+Mrcalindas?Smiling "I'm glad! The more comfortable people feel at the Health Clinic, the sooner they come to us when something goes wrong."
+Mrcalindas?Smiling "A lot of people are afraid of going to the doctor, so I try to make the Health Clinic as friendly and helpful as possible."
 
-* Tell me more about making the clinic more friendly?
+* Tell me more about making the Health Clinic more friendly?
   -> Explain2
 * I feel like being afraid of the doctor would make your job harder!
   -> Explain2
@@ -73,7 +73,7 @@ Mrcalindas?Neutral "We have several caring doctors. I bet your friend can find s
 ~ notification = "Mrcalindas_Day 2_Mrs. Lee could go to Urgent Care to see someone about her headaches_Mrslee2-4"
 # notification Mrcalindas_Day 2_Mrs. Lee could go to Urgent Care to see someone about her headaches_Mrslee2-4
 
-Mrcalindas?Neutral "Sometimes, people end up in the Emergency Room, or coming into Urgent Care at the clinic because their symptoms get so bad they can't be managed at home."
+Mrcalindas?Neutral "Sometimes, people end up in the Emergency Room, or coming into Urgent Care at the Health Clinic because their symptoms get so bad they can't be managed at home."
 Mrcalindas?Neutral "I think it ends up being more stressful. The patient doesn't get a chance to build a relationship with the doctor quite the same way." 
 Mrcalindas?Neutral "I really recommend encouraging your friend to make an appointment before it gets to that point."
 

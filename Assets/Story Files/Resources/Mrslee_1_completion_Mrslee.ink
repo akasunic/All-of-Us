@@ -17,7 +17,7 @@ Mrslee?Neutral "I feel so frustrated!"
 
 ==Chat1==
 Mrslee?Neutral "I worry about Eddie. I feel like he trust me to get his medicine, and I feel stress."
-Mrslee?Neutral "The doctor at the clinic explain that he needs to take his pill every day." 
+Mrslee?Neutral "The doctor at the Health Clinic explain that he needs to take his pill every day." 
 
 + When does he need the medication?
   -> Chat2
