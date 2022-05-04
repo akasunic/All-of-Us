@@ -206,8 +206,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.25
-  m_Text: "Meo Tianyi Zhang\nAdela Kapu\u015Bci\u0144ska\nJaclyn Saik\nVera Wei\nYang
-    Lei\nKathryn-Mae Eiland"
+  m_Text: "Adela Kapu\u015Bci\u0144ska\nMorgan Evans\nAvonelle Wing\nJonaya Kemper"
 --- !u!225 &21473282
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -284,7 +283,7 @@ GameObject:
   - component: {fileID: 88784385}
   - component: {fileID: 88784384}
   m_Layer: 5
-  m_Name: Research
+  m_Name: Research | Curriculum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,7 +510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Narrative | Content
+  m_Text: Art | UX Design
 --- !u!225 &191139176
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -904,7 +903,7 @@ GameObject:
   - component: {fileID: 575313359}
   - component: {fileID: 575313358}
   m_Layer: 5
-  m_Name: Special thanks to
+  m_Name: Production
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1127,7 +1126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Producer
+  m_Text: Narrative | Content
 --- !u!225 &576312218
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1328,20 +1327,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.25
-  m_Text: 'Avonelle Wing
-
-    Maya Greenholt
-
-    Jonaya Kemper
-
-    Katherine Sabel
-
-    Gabrielle
-    Augustin
-
-    Anisa Jibrell
-
-    Shailaja Bhardwaj'
+  m_Text: "Meo Tianyi Zhang\nAdela Kapu\u015Bci\u0144ska\nJaclyn Saik\nVera Wei\nYang
+    Lei\nKathryn-Mae Eiland\nHazel Hanxiao Zhang\nAnisa Jibrell"
 --- !u!225 &872399078
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1447,7 +1434,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.25
-  m_Text: Hazel Zhang
+  m_Text: 'Avonelle Wing
+
+    Maya Greenholt
+
+    Jonaya Kemper
+
+    Katherine Sabel
+
+    Gabrielle
+    Augustin
+
+    Anisa Jibrell
+
+    Shailaja Bhardwaj
+
+    Morgan Evans'
 --- !u!225 &908270658
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1793,7 +1795,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.25
-  m_Text: 
+  m_Text: "Hazel Hanxiao Zhang\nAdela Kapu\u015Bci\u0144ska\nMorgan Evans"
 --- !u!225 &1285707086
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2105,7 +2107,7 @@ GameObject:
   - component: {fileID: 1360101873}
   - component: {fileID: 1360101872}
   m_Layer: 5
-  m_Name: Design
+  m_Name: Game | Experience Design
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2181,6 +2183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396719332}
   - component: {fileID: 1396719333}
+  - component: {fileID: 1396719334}
   m_Layer: 5
   m_Name: AnimationParent
   m_TagString: Untagged
@@ -2228,6 +2231,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1396719334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396719331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9315d90397d5f40bbac786383c28be13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415672864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,7 +2255,7 @@ GameObject:
   - component: {fileID: 1415672867}
   - component: {fileID: 1415672866}
   m_Layer: 5
-  m_Name: Producer
+  m_Name: Narrative | Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2384,7 +2399,7 @@ GameObject:
   - component: {fileID: 1549503061}
   - component: {fileID: 1549503060}
   m_Layer: 5
-  m_Name: Narrative
+  m_Name: 'Art | UX Design '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,7 +2535,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Special thanks to
+  m_Text: Production
 --- !u!225 &1616092385
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2685,7 +2700,9 @@ MonoBehaviour:
 
     David Lin
 
-    Lily Shellhammer'
+    Lily Shellhammer
+
+    Maya Greenholt'
 --- !u!225 &1775541539
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2945,7 +2962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UX / Visual Design
+  m_Text: Game | Experience Design
 --- !u!225 &2053815718
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3053,14 +3070,14 @@ MonoBehaviour:
     m_LineSpacing: 1.25
   m_Text: 'Gal Fleissig
 
-    Patrick Huang
-
     Connie Ye
 
     Jeesub Lee
 
-    Dakota
-    Hernandez
+    Dakota Hernandez
+
+    Patrick
+    Huang
 
     Adam Bournes'
 --- !u!225 &2145488920
