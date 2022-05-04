@@ -76,7 +76,7 @@ public class MapScript : MonoBehaviour
         Destroy (GameObject.FindGameObjectWithTag("Music"));
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
 
-        MeetNPCText.text = GameStrings.getString("meet") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
+        MeetNPCText.text = GameStrings.getString("visit") + " " + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC());
 
         GoodMorningText.text = GameStrings.getString("good_morning_message");
         

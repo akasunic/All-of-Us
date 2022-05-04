@@ -42,7 +42,6 @@ public static class GameStrings {
                 {"party", "PARTY!"},
 
                 // Menus, Buttons, and Map
-                {"comm_manager", "Community Manager"},
                 {"day_summary", "Day Summary"},
                 {"continue", "CONTINUE"},
                 {"new_game", "NEW GAME"},
@@ -54,7 +53,7 @@ public static class GameStrings {
                 {"save", "SAVE"},
                 {"go_to_sleep", "GO TO SLEEP"},
                 {"current_task", "Current Task"},
-                {"meet", "Meet"},
+                {"visit", "Visit"},
                 {"good_morning_message", "Good morning! Another beautiful day in Bloomwood."},
                 {"search_term", "Search a term..."},
                 
@@ -122,7 +121,7 @@ public static class GameStrings {
                 {"first_name", "First Name"},
                 {"choose_one", "Choose One"},
                 {"welcome_title", "Welcome to Bloomwood"},
-                {"welcome_text", "Congratulations! Before you start your new role as our Community Manager, tell us a little bit about yourself"},
+                {"welcome_text", "Congratulations! Before you start your new role as our Community Advocate, tell us a little bit about yourself"},
                 {"name_taken", "Name is taken"},
                 
                 // Languages
@@ -206,7 +205,7 @@ public static class GameStrings {
                 {"tutorial_startweek_yellowtitle", "What should I do?"},
                 {"tutorial_startweek_whitetitle", "Who should I chat with first?"},
                 {"tutorial_startweek_whitetext_1", "Welcome, "},
-                {"tutorial_startweek_whitetext_2", ", New Community Manager! \n Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems."},
+                {"tutorial_startweek_whitetext_2", ", New Community Advocate! \n Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems."},
                 {"tutorial_startweek_buttontext", "GOT IT"},
 
                 {"dictionary_vn_yellowtitle", "Tools and Resources"},
@@ -228,7 +227,7 @@ public static class GameStrings {
 
                 {"neighbors_map_yellowtitle", "What should I do?"},
                 {"neighbors_map_whitetitle", "Talk to your Neighbors"},
-                {"neighbors_map_whitetext", "The map shows you all the important places around town. Hover over a location to see who is there right now. \n Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas."},
+                {"neighbors_map_whitetext", "The map shows you all the important places around town. Hover over a location to see who is there right now.\n\nClick on a neighbor to start a conversation.\n\nEach neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas."},
                 {"neighbors_map_buttontext", "NEXT"},
 
                 {"phone_map_yellowtitle", "What should I do?"},
