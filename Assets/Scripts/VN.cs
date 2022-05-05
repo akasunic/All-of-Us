@@ -24,6 +24,7 @@ public class VN : MonoBehaviour
     public TextMeshProUGUI YellowTitleSpeed;
     public TextMeshProUGUI WhiteTitleSpeed;
     public TextMeshProUGUI WhiteTextSpeed;
+    public TextMeshProUGUI WhiteSubTextSpeed;
     public TextMeshProUGUI ButtonTextSpeed;
     public GameObject SpeedImage;
     public GameObject SpeedGlow;
@@ -64,6 +65,7 @@ public class VN : MonoBehaviour
             YellowTitleSpeed.text = GameStrings.getString("speed_vn_yellowtitle");
             WhiteTitleSpeed.text = GameStrings.getString("speed_vn_whitetitle");
             WhiteTextSpeed.text = GameStrings.getString("speed_vn_whitetext_1") + CharacterResources.GetName(GlobalGameInfo.GetCurrentNPC()) + GameStrings.getString("speed_vn_whitetext_2");
+            WhiteSubTextSpeed.text = GameStrings.getString("speed_vn_whitetext_3");
             ButtonTextSpeed.text = GameStrings.getString("speed_vn_buttontext");
         }
     }

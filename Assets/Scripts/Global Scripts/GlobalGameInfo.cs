@@ -579,6 +579,7 @@ public static class GlobalGameInfo
             // If week has ended
             if (currentWeek > 4) {
                 gameEndedFlag = true;
+                currentWeek = 4;
             }
 
         }
