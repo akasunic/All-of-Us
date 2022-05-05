@@ -354,7 +354,7 @@ public class InkFileManager : MonoBehaviour {
                 }
             } else {
                 // Activate "Can't Talk Dialog"
-                CantTalkText.text = GameStrings.getString("cant_talk_dialog_sorry") + " " + GlobalGameInfo.name;
+                CantTalkText.text = GameStrings.getString("cant_talk_dialog_sorry") + GlobalGameInfo.name;
 
                 switch (character) {
                     case CharacterResources.CHARACTERS.RASHAD:

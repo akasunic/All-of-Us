@@ -194,7 +194,7 @@ public static class GameStrings {
                 {"end_of_quest_elisa_4_sticker2", "Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem."},
 
                 // Can't Talk Dialog
-                {"cant_talk_dialog_sorry", "Sorry"},
+                {"cant_talk_dialog_sorry", "Sorry "},
                 {"cant_talk_dialog_rashad", ", I’m busy at the moment, let’s catch up later?"},
                 {"cant_talk_dialog_elisa", ", I’m busy at the moment, let’s catch up later?"},
                 {"cant_talk_dialog_calindas", ", I’m busy at the moment, let’s catch up later?"},

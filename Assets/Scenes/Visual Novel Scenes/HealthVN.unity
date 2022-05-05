@@ -1060,6 +1060,12 @@ MonoBehaviour:
   lightBlueHighlightButton: {fileID: 21300000, guid: 4d439fa4727fb43579e4a3750e86c33a,
     type: 3}
   journalIcon: {fileID: 1833072485}
+--- !u!1 &237699680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 883614279723489344, guid: f80d7411ca085bc49ba42c52cee58723,
+    type: 3}
+  m_PrefabInstance: {fileID: 237699668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &361846814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1694,6 +1700,7 @@ MonoBehaviour:
   toggleComponents:
   - {fileID: 400864720}
   - {fileID: 400864719}
+  - {fileID: 237699680}
 --- !u!1001 &586195317
 PrefabInstance:
   m_ObjectHideFlags: 0
