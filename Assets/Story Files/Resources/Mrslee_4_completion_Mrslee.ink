@@ -34,7 +34,7 @@ Mrslee?Neutral "When he visit, we always cook together. So I wait for dinner. I 
 ==ReadyToSolve==
 Mrslee?Smiling "What do I do about my health and good future health?" 
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait, lemme come back!
   -> TempGoodbye

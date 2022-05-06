@@ -33,7 +33,7 @@ Lila?Smiling "It’s still worth it."
 ==ReadyToSolve==
 Lila?Smiling "Oh my goodness! Thank you, what did you find out?"
 
-* Here’s what I have…
+* Here are my suggestions...
 -> PuzzleInterface
 * Hold on.. Let me go think a bit more.
 -> TempGoodbye

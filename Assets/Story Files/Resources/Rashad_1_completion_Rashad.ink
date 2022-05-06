@@ -23,7 +23,7 @@ Rashad?Neutral "Wow, that amazing news!"
 Rashad?Neutral "Elisa’s knowledge of young adult literature would be invaluable."
 Rashad?Neutral "...and Mrs. Lee is pretty well-connected so she’s been a huge help on many different occasions. I’m listening?"
 
-* Here you go... 
+* Here are my suggestions...
 -> PuzzleInterface
 * Actually, let me check my notes again.  
 -> TempGoodbye

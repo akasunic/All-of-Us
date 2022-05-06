@@ -38,7 +38,7 @@ Elisa?Smiling "Great. I’m ready to hear them."
 
 Elisa?Smiling "Also, {player_name}, thank you." 
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye

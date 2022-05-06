@@ -26,7 +26,7 @@ Lila?Smiling "I think I’m gonna ask him out to dinner with Trisha and I."
 
 ==ReadyToSolve==
 Lila?Smiling "Oh that’s great! What’d you find out?"
-* Here’s what I have…
+* Here are my suggestions...
 -> PuzzleInterface
 * Wait, let me see if I can ask around a bit more.
 -> TempGoodbye

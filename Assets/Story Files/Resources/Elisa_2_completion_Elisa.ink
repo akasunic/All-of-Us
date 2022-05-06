@@ -36,7 +36,7 @@ Elisa?Neutral "I’ve moved on from the roommate form to my emergency contact fo
 
 Elisa?Neutral "Oh, that's great! What'd you find out?"
 
-* Here’s what I have...
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye

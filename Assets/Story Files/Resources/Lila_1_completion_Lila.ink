@@ -27,7 +27,8 @@ Lila?Smiling "She’s great! She and I just celebrated our anniversary and she j
 
 ==ReadyToSolve==
 Lila?Smiling "Oh that’s great! What’d you find out?"
-* Here’s what I have…
+
+* Here are my suggestions...
 -> PuzzleInterface
 * Wait. I'm not quite ready.
 -> TempGoodbye

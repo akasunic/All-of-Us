@@ -33,7 +33,7 @@ Rashad?Neutral "Well, you'd help me sleep better if you made sure to wash your h
 ==ReadyToSolve==
 Rashad?Neutral "That's great to hear, {player_name}. I've really been going through it, but I knew I could count on you to come through with some great ideas."
  
-* Here’s what I have...
+* Here are my suggestions...
   -> PuzzleInterface
 * On second thought, I might need some more time.
   -> TempGoodbye

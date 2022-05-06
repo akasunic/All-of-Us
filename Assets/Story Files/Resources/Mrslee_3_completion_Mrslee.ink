@@ -33,7 +33,7 @@ Mrslee?Neutral "Oh my goodness! I just remember what I worry about. The appointm
 ==ReadyToSolve==
 Mrslee?Neutral "OK. What should I do?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I'm not ready.
   -> TempGoodbye

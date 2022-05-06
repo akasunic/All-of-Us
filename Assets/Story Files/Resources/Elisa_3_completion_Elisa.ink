@@ -36,7 +36,7 @@ Elisa?Neutral "Some days are better than others. Today, I’m really struggling 
 
 Elisa?Neutral "A distraction – even a serious one – sounds great. What have you got?"
 
-* Here’s what I have...
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye

@@ -29,7 +29,8 @@ Lila?Smiling "I may be <a>lactose intolerant</a>, but they’re still pretty cut
 
 ==ReadyToSolve==
 Lila?Smiling "Oh?"
-* Here’s what I have…
+
+* Here are my suggestions...
 -> PuzzleInterface
 * Wait, let me make sure I’ve got everything I need.
 -> TempGoodbye

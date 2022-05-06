@@ -8,7 +8,7 @@ VAR new_quest = ""
 ===intro===
 Mrslee?Smiling "{player_name}. Hi. Listen. I was looking for you. My headache went away! I am OK. No problem!"
 
-* {not TempGoodbye} That's great, Mrs. Lee.
+* That's great, Mrs. Lee.
   -> Chat1
 * Oh, good! Let's try to make you an appointment before it comes back.
   -> ReadyToSolve
@@ -31,7 +31,7 @@ Mrslee?Neutral "I'm feeling good now because no headache, but when I think about
 ==ReadyToSolve==
 Mrslee?Neutral "What should I do?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I'm not ready.
   -> TempGoodbye

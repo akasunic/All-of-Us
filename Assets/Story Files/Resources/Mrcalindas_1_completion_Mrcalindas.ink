@@ -29,7 +29,7 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more. I want to waste as little time as possible creating a useful experience for the community."
 Mrcalindas?Neutral "So what programs should we focus on at the health tent to get the community onboard?"  
 
-*  Here’s what I have…
+*  Here are my suggestions...
     -> PuzzleInterface
 * Actually, I think I need to take a look at my notes. I'll be right back.
     -> TempGoodbye

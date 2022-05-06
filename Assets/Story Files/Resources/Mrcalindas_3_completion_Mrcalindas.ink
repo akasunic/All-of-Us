@@ -35,7 +35,7 @@ Mrcalindas?Neutral "I am not surprised. I'll have Brooklyn and Lucy bring some o
 
 Mrcalindas?Neutral "Oh, that is good to hear. My mother wants to be able to call the grandkids more easily, and she gets so frustrated. I would hate for her to give up."
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I though I was ready... Let me double check my notes?
   -> TempGoodbye

@@ -32,7 +32,7 @@ Rashad?Neutral "Hah, you’re too kind! Speaking of which, did you ever find out
 ==ReadyToSolve==
 Rashad?Neutral "You work really fast, {player_name}. I should’ve reached out to you sooner! Thanks for your help! What did you find?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Give me a second. I want to make sure my information is correct.
   -> TempGoodbye

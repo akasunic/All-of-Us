@@ -36,7 +36,7 @@ Rashad?Neutral "You have information for the initiative? Spill it!"
 Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful."
 Rashad?Neutral "Mrs. Lee has a close relationship with both Eddie and Lila. She has helped me out many times. I’m listening?"
  
-* Here's what I have...
+* Here are my suggestions...
 -> PuzzleInterface
 * Hold on. I want to make sure I get this right.
 -> TempGoodbye

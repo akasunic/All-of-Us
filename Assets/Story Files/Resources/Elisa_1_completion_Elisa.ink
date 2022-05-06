@@ -37,7 +37,7 @@ Elisa?Neutral "Right now I'm working on a report for my Financial Analysis class
 
 Elisa?Neutral "Oh, that's great! What'd you find out?"
 
-* Here’s what I have...
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye
