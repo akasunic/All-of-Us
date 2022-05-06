@@ -4,7 +4,7 @@ Elisa
 0
 0
 +1
-Talk to Elisa about the quest
-Talk to Lila or Mr. Calindas
-Check your journal
-Go back to the Library and talk to Elisa
+Learn what Elisa needs
+Talk to Lila
+Talk to Rashad
+Share what you've learned with Elisa
