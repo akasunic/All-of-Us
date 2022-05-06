@@ -14,7 +14,7 @@ Lila?Smiling "Hey, {player_name}. I'll be right there... I want to talk to you!
   -> Chat1
 
 ==Chat1==
-Lila?Smiling "Things here have been getting busier every day! I'm glad Mrs. Lee is here- I've been running around all day. It's nice to have you as my excuse to sit for a second!"
+Lila?Smiling "Things here have been getting busier every day! I'm glad Mrs. Lee is here; I've been running around all day. It's nice to have you as my excuse to sit for a second!"
 
 * Oh, I'm always happy to be an excuse for a break!
   -> Chat2
@@ -23,7 +23,7 @@ Lila?Smiling "Things here have been getting busier every day! I'm glad Mrs. Lee 
 
 ==Chat2==
 Lila?Smiling "Thanks! I've been meaning to thank you for supporting Mrs. Lee. She told me you have two have been talking."
-Lila?Smiling "Eddie asked me if he should be worried about her, and I told him that she has friends and a solid support system here in Bloomwood." 
+Lila?Smiling "Eddie asked me if he should be worried about her, and I told him that she has friends and a solid <a>support system</a> here in Bloomwood." 
 
 * She's so great! I'm happy to help.
   -> Chat3
@@ -38,7 +38,7 @@ Lila?Smiling "She has told both me and Eddie how much she trusts you. So I wante
 
 ==Explain1==
 Lila?Neutral "Yeah, she scheduled it! I’m really proud of her for taking a proactive role in her health."
-Lila?Neutral "I have been trying to get her to address her headaches for a couple of months, and she just brushed me off."
+Lila?Neutral "I have been trying to get her to address her headaches for a couple of months, and she just <a>brushed me off</a>."
 Lila?Neutral "Do you remember her husband, Dr. Lee?"
 
 * Yeah, she has told me a little bit about him.
@@ -47,10 +47,10 @@ Lila?Neutral "Do you remember her husband, Dr. Lee?"
   -> Explain2
 
 ==Explain2==
-Lila?Neutral "She’s been kind of shocked since he passed. It felt like she was sleepwalking for a while - probably until the last few months with Eddie away at school."
+Lila?Neutral "She’s been kind of <a<shocked</a> since he passed. It felt like she was sleepwalking for a while - probably until the last few months with Eddie away at school."
 Lila?Neutral "When he went away, something shifted. She started attending fitness classes, showing up at Library workshops. Asking about volunteer roles here."
 Lila?Neutral "I think part of her really wants to make sure Eddie focuses on school instead of worrying about her, which is really sweet. I love their dynamic so much."
-Lila?Neutral "So, my point is - I've been trying to brainstorm ways we can make Mrs. Lee more comfortable with her appointment."
+Lila?Neutral "So, my point is - I've been trying to <a>brainstorm</a> ways we can make Mrs. Lee more comfortable with her appointment."
 
 * Great idea! What were you thinking?
   -> Suggestion1
@@ -80,7 +80,7 @@ Lila?Neutral "I don't want her to think she's only capable if she has someone al
 # notification Lila_Day 3_Mrs. Lee could call Eddie and practice her questions with him_Mrslee3-1
 
 Lila?Neutral "When Eddie was home, he mentioned that he'd like to be more involved. You know how she has regular video chats with her Korean friends? I think he's a little jealous."
-Lila?Smiling "After I was done teasing him, I realized that he'd be a great resource for helping Mrs. Lee feel more confident. They looked over drug information portal and read up on high blood pressure together."
+Lila?Smiling "After I was done teasing him, I realized that he'd be a great resource for helping Mrs. Lee feel more confident. They looked over the drug information portal and read up on <a>high blood pressure</a> together."
 Lila?Smiling "He knows how to use the tools, and could help her feel more in control. Plus, it would give him a deeper insight into his family medical history." 
 
 * Huh..We should ask her what she thinks!

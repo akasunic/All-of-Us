@@ -41,10 +41,10 @@ Mrcalindas?Smiling "Was there something you wanted to talk about?"
 ==Explain1==
 
 Mrcalindas?Neutral "Family health histories are a complete record of health information about someone and their relatives."
-Mrcalindas?Neutral "It often includes information for a few generations and has information about both your immediate and extended family."
+Mrcalindas?Neutral "It often includes information for a few <a>generations</a> and has information about both your immediate and extended family."
 Mrcalindas?Neutral "Doctors find them really helpful."
 Mrcalindas?Neutral "Since a family health history is a document of health, doctors are able to use it to see how patterns show up in families."
-Mrcalindas?Neutral "Some health conditions are strongly affected by genetics. Some things run in families, and knowing more about your history can help you make informed choices."
+Mrcalindas?Neutral "Some health conditions are strongly affected by <a>genetics</a>. Some things run in families, and knowing more about your history can help you make informed choices."
 * So.. how do you get started?
 -> Suggestion1
 * What are they used for beyond that?
@@ -54,7 +54,7 @@ Mrcalindas?Neutral "Some health conditions are strongly affected by genetics. So
 ~ notification = "Mrcalindas_Day 4_Doctors offices can offer templates to help people get started in tracking their family medical history_Lila4-3"
 # notification Mrcalindas_Day 4_Doctors offices can offer templates to help people get started in tracking their family medical history_Lila4-3
 
-Mrcalindas?Neutral "Having a family health history can help doctors identify people at a greater risk for certain infections or diseases."
+Mrcalindas?Neutral "Having a family health history can help doctors identify people at a greater risk for certain <a>infections</a> or <a>diseases</a>."
 Mrcalindas?Neutral "Some doctor’s offices have templates you can ask for to get started with the process and you can always reach out to them with questions if you have them."
 Mrcalindas?Neutral "Studying your family health history can provide a lot of insight and can be used to plan ahead." 
 Mrcalindas?Neutral "Your history might suggest that you test for certain diseases or make lifestyle changes to reduce the risk of developing conditions that run in one’s family."

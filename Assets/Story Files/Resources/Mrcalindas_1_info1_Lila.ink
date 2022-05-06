@@ -26,7 +26,7 @@ Lila?Smiling "It's naptime for the kids, so I'm trying to soak up some rays. Fre
 
 Lila?Smiling "Breaks are important. Teaching young children is awesome, but they give me a run for my money. I definitely need a break now and then to be my best self." 
 
-* I heart <i>that</i>. I know you're taking a break, but could I ask you a question?
+* I hear that! I know you're taking a break, but could I ask you a question?
   -> Explain1
 * I don't want to interrupt your best self, but could I get an opinion?
   -> Explain1
@@ -72,8 +72,8 @@ Lila?Smiling "Oh, and it can be hard to get to the health center for people who 
 
 
 Lila?Smiling "Well, it's important for communities of color and LGBTQIA+ folks to get the help they need with no judgements."
-Lila?Smiling "We have historically faced a lot of stigma, and that harms access to care."
-Lila?Smilng "I read an article that said that even one supportive adult can prevent a transgender kid from committing suicide. We should be talking about that."
+Lila?Smiling "We have historically faced a lot of <a>stigma</a>, and that harms access to care."
+Lila?Smilng "I read an article that said that even one supportive adult can prevent a <a>transgender</a> kid from committing suicide. We should be talking about that."
 Lila?Smiling "Oh, and this might seem really obvious, but mental health resources are useful for everyone. We all get stressed or have hard times." 
 
 * Wow, Lila! I'll bring all this up with Mr. Calindas.

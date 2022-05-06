@@ -20,7 +20,7 @@ Elisa?Neutral "Ugh. I feel like I’m being pulled in 10 different directions, a
 
 * Oh? That doesn’t sound like you!
   -> Chat2
-* Would it help to take a breat and talk about the ADHD info I found?
+* Would it help to take a break and talk about the ADHD info I found?
   -> ReadyToSolve
 
 ==Chat2==
@@ -36,7 +36,7 @@ Elisa?Neutral "Some days are better than others. Today, I’m really struggling 
 
 Elisa?Neutral "A distraction – even a serious one – sounds great. What have you got?"
 
-* Here’s what I have…
+* Here’s what I have...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye

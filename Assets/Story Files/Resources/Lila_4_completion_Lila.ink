@@ -13,7 +13,7 @@ Lila?Smiling "Hey{player_name}!"
 -> ReadyToSolve
 
 ==Chat1==
-Lila?Smiling "Aw, I’m okay. Thanks though! I just checked out some new books for the kids to read about farm animals and agriculture!"
+Lila?Smiling "Aw, I’m okay. Thanks though! I just checked out some new books for the kids to read about farm animals and <a>agriculture</a>!"
 * That’s so fun! Hey, I think I have some info for you.
 -> ReadyToSolve
 * Do you have a favorite farm animal, Lila?
@@ -21,7 +21,7 @@ Lila?Smiling "Aw, I’m okay. Thanks though! I just checked out some new books f
 
 ==Chat2==
 Lila?Smiling "It’s silly, but I really like cows! When my mom and I would go on road trips, I would always spot them and point out the window."
-Lila?Smiling "I may be lactose intolerant, but they’re still pretty cute to me!"
+Lila?Smiling "I may be <a>lactose intolerant</a>, but they’re still pretty cute to me!"
 * I’m sure the kids will find the books totally a-moo-sing"
 -> ReadyToSolve
 * It’s not as exciting as cows, but I think I found some solutions for you.
@@ -29,7 +29,7 @@ Lila?Smiling "I may be lactose intolerant, but they’re still pretty cute to me
 
 ==ReadyToSolve==
 Lila?Smiling "Oh?"
-* Let me show you!
+* Here’s what I have…
 -> PuzzleInterface
 * Wait, let me make sure I’ve got everything I need.
 -> TempGoodbye
@@ -75,7 +75,7 @@ Lila?Neutral "Thanks. I was hoping to get started before my next appointment; wh
 
 Lila?Smiling "These are really helpful suggestions. I wouldn't have thought to include allergies, even though mom's soy allergy is a real pain."
 
-Lila?Smiling "I didn't know pregnancy loss was tied to family history, either! Thanks for letting me know."
+Lila?Smiling "I didn't know <a>pregnancy loss</a> was tied to family history, either! Thanks for letting me know."
  
 * If you need other support, please don’t hesitate to ask.
 -> SolvedGoodbye
@@ -83,7 +83,7 @@ Lila?Smiling "I didn't know pregnancy loss was tied to family history, either! T
 
 
 ==SolvedGoodbye==
-Lila?Smiling "Thank you, {player_name}. I think I'm ready to tackle this. I know Mom's open to talk about anything. I just need set up a call."
+Lila?Smiling "Thank you, {player_name}. I think I'm ready to tackle this. I know Mom's open to talk about anything for my sake. I just need set up a call."
 
 * I'm happy to help!
   -> END
@@ -91,7 +91,8 @@ Lila?Smiling "Thank you, {player_name}. I think I'm ready to tackle this. I know
 
 ==TempGoodbye==
 Lila?Neutral "Take your time."
-* I’ll be back!
--> END
+
+* OK, Lila. Hold tight!
+  -> PuzzleInterface
 
 

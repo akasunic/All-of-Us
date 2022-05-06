@@ -19,7 +19,7 @@ Rashad?Smiling "Hey {player_name}! How’s it going? I was hoping I’d run into
 
 
 ==Chat1==
-Rashad?Smiling "The Library abolished fines, so you can forget about that 'How to Draw' book you took out in 2000..."
+Rashad?Smiling "The Library <a>abolished</a> fines, so you can forget about that 'How to Draw' book you took out in 2000..."
 
 Rashad?Smiling "Nah. I wanted to thank you. I finally got a good night’s rest. I haven’t had one of those in a while."
 

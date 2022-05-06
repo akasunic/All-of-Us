@@ -9,14 +9,14 @@ VAR new_quest = ""
 ~ new_quest = "Rashad4.txt"
 # new_quest
 
-Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank you for your help this week. You’re a real one."
+Rashad?Smiling "Hey, {player_name}! There you are! I’ve been meaning to thank you for your help. You’re a real one."
 
 * That’s what friends are for! How'd it go, if you don’t mind me asking? 
 -> Chat1
 
 
 ==Chat1==
-Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming <a>intake interview</a>."
+Rashad?Smiling "I appreciate you. At first, I was uneasy about the idea of therapy, but I’m feeling good about my upcoming <a>intake appointment</a>."
 Rashad?Smiling "Your help, combined with my doctor's advice, gave me the push I needed. Also, I was thinking about talking to <a>HR</a> about how the board has been treating me."
 
 * Wow, Rashad. How can I support you? 
@@ -41,10 +41,10 @@ Rashad?Neutral "The library is like a second home to our seniors and young peopl
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "Remember how we used to help out when Bloomwood Mutual Aid was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
+Rashad?Neutral "Remember how we used to help out when Bloomwood <a>Mutual Aid</a> was a thing? Back when Lila's uncle coordinated things to take care of the elders in the community?"
 Rashad?Neutral "Making sure their lawn got mowed, and just checking in? I pitched a program that's just like that."
 
-Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for medical care and appointments."
+Rashad?Neutral "Here's a real specific example - many seniors struggle to use apps for managing their medical care and making appointments."
 
 Rashad?Neutral "I was thinking we could pair teens and seniors to overcome some of those tech <a>roadblocks</a>."
 

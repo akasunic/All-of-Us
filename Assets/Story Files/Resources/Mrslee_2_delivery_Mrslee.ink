@@ -41,7 +41,7 @@ Mrslee?Neutral "Headache, headache. I get like this all the time. No big deal. E
   -> QuestDetails2
 
 ==QuestDetails1==
-Mrslee?Neutral "I talk to my sister on a video call. She said it was fine. Only stress."
+Mrslee?Neutral "I talk to my sister on a <a>video chat</a>. She said it was fine. Only stress."
 Mrslee?Neutral "She said sometimes her head aches when she worry too much. Or when her sleep is bad. Doctors don't fix worry. They make worry."
 
 * Have you gotten it checked out at the <a>doctor</a>'s office?

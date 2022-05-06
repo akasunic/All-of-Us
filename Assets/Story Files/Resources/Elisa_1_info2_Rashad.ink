@@ -10,21 +10,21 @@ Rashad?Smiling "Hey there, adventurer! What's new with you?"
 
 * Oh, you know, on a quest for knowledge and wisdom!
   -> Chat1
-* Not much, how bout you?
+* Not much, how 'bout you?
   -> Chat1
 
 ==Chat1==
 
 Rashad?Smiling "Yeah, that sounds about right. I just dropped a whole new batch of audiobooks into the system, by the way. We added some fresh fantasy titles."
 
-* Ah! Dragons and sorcerors as walking companions! You speak my language, Rashad!
+* Ah! Dragons and sorcerers as walking companions! You speak my language, Rashad!
   -> Chat2
 * Yeah, all good. Hey, can I actually ask you a health question?
   -> Explain1
 
 ==Chat2==
 
-Rashad?Smiling "I still don't understand why you like dragons better than starships, but I will always support your book habit. 
+Rashad?Smiling "I still don't understand why you like dragons better than starships, but I will always support your reading choices. 
 
 Rashad?Smiling "I also added some print books about planning native and drought-resistant gardens for both Elisa and Mrs. Lee. I can't wait to show them!"
 
@@ -35,7 +35,7 @@ Rashad?Smiling "I also added some print books about planning native and drought-
 
 ==Chat3==
 
-Rashad?Smiling "Some days it's the big things, some days it's the little things. Man, there are so many hard parts to this job. Making people smile? That's the catnip I need sometimes."
+Rashad?Smiling "Some days it's the big things, some days it's the little things. There are so many hard parts to this job. Making people smile? That's the sunshine I need sometimes."
 
 Rashad?Neutral "But you didn't come in to hear about my restocking habits, though. What can I help with?"
 
@@ -83,7 +83,7 @@ Rashad?Smiling "They can look up diabetes or research drugs before they start ta
 
 Rashad?Smiling "Our cookbook section is very diverse, and we have several titles about diabetic cooking for different cuisines. Cheryl has checked a few of them out just to see what they had to say."
 
-Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lot of diabetic cookbooks try to keep the recipes approachable. No 30 ingredient, 20 step Julia Child fancy weekend cooking." 
+Rashad?Smiling "She got the recipe for a mean <a>saag paneer</a> from one of them. A lot of diabetic cookbooks try to keep the recipes approachable. No 30 ingredient, 20 step, special tools cooking." 
 
 * What is diabetes, anyway? I still don't really understand.
   -> Suggestion2
@@ -96,9 +96,9 @@ Rashad?Smiling "She got the recipe for a mean saag paneer from one of them. A lo
 ~ notification = "Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4"
 # notification Rashad_Day 1_Treating diabetes has to do with regulating blood sugar levels_Elisa1-4
 
-Rashad?Smiling "It has to do with the pancreas. Insulin is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
+Rashad?Smiling "It has to do with the <a>pancreas</a>. <a>Insulin</a> is stuff in your bloodstream that regulates blood sugar levels- that's how they're actually able to diagnose diabetes."
 
-Rashad?Smiling "If your blood sugar levels are too high, they know your insulin levels are out of balance. So your pancreas needs a support team."
+Rashad?Smiling "If your <a>blood sugar</a> levels are too high, they know your insulin levels are out of balance. So your pancreas needs a support team."
 
 Rashad?Neutral "Uncontrolled blood sugar has all sorts of implications - it affects every system of the body. Skin, eyes, blood vessels. It can be serious."
 

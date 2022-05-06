@@ -25,7 +25,7 @@ Rashad?Smiling "I'm so tired today. Do you want to grab a coffee with me? "
 Rashad?Smiling "Yeah. The kids were up and down all night, and Cheryl has a big meeting at work this week so I was up with them."
 Rashad?Smiling "No one warned us that kids run on 15 minutes of sleep and three cheese sticks a day!"
 Rashad?Smiling "If they're asleep, I'm worrying about getting them to try new vegetables. If I'm asleep, they wake up."
-Rashad?Smiling "At their last pediatrician appointment, the doctor gave me the new FDA food pyramid. If I don't want them living on coffee and fumes like me, I feel like I need to start good habits now."
+Rashad?Smiling "At their last <a>pediatrician</a> appointment, the doctor gave me the new <a>MyPlate nutritional guidelines</a> for kids. If I don't want them living on coffee and fumes like me, I feel like I need to start good habits now."
 
 * That's rough! On that topic, can I ask you a question?
   -> Explain1
@@ -34,7 +34,7 @@ Rashad?Smiling "At their last pediatrician appointment, the doctor gave me the n
 
 
 ==Explain1==
-Rashad?Smiling "Only if it's related to my kids or comics. I'm in low-power mode, so I can't think about much of anything else, haha."
+Rashad?Smiling "Only if it's related to my kids or comics. I'm in <a>low-power mode</a>, so I can't think about much of anything else, haha."
 
 * It's kinda about your kids
   -> Explain2
@@ -65,7 +65,7 @@ Rashad?Smiling "I keep track of my whole families' health information in one fol
 # notification Rashad_Day 4_Mrs. Lee can work with Eddie to setup a system for sharing health information online_Mrslee4-1
 
 Rashad?Smiling "Oh! I like having this stuff on paper, where I can touch it. Some people set up a shared online folder. I can show you some examples."
-Rashad?Smiling "It's much easier to collaborate in a shared document. You just have to get everyone on board, and figure out how to scan things in."
+Rashad?Smiling "It's much easier to collaborate in a <a>shared document</a>. You just have to get everyone on board, and figure out how to scan things in."
 Rashad?Smiling "That's something we can help with at either the health workshop or one of the technology workshops!"
 
 * Oh! This is an excellent suggestion. I think it might work!

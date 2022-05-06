@@ -14,16 +14,16 @@ Mrcalindas?Smiling "{player_name}, what's goin' on?"
   -> Chat1
 
 ==Chat1==
-Mrcalindas?Neutral "This weather is BEAUTIFUL. I think I just decided to take a little walk on my break. Dr. Lee and I would do lunch on days like this!"
+Mrcalindas?Neutral "This weather is beautiful. I think I just decided to take a little walk on my break. Dr. Lee and I would do lunch on days like this!"
 
 + I love it! a nice-weather lunch buddy!  
   -> Chat2
-+ That sounds nice! Hey, do you have time for some advice on high blood pressure?
++ That's nice! Hey, do you have time for advice on high blood pressure?
   -> Explain1
 
 ==Chat2==
 Mrcalindas?Smiling "I miss him most on days like this! He used to love good weather."
-Mrcalindas?Smiling "We would get lunch together on nice days. Sunshine brought out the best in both of us!"
+Mrcalindas?Smiling "We would get lunch together on bright days. Sunshine brought out the best in both of us!"
 
 + Neat! I didn't know you were close with Dr. Lee.
   -> Chat3
@@ -39,8 +39,8 @@ Mrcalindas?Neutral "Yes it's just so tragic that he passed. Heart attacks are no
   -> Explain1
 
 ==Explain1==
-Mrcalindas?Neutral "Yeah, high blood pressure, y'know. It can contribute to a fatal heart attack if you don't keep it in check."
-Mrcalindas?Neutral "With the right medications, lifestyle changes, and at-home monitoring machines, you really can improve your outcome."
+Mrcalindas?Neutral "Yeah, <a>high blood pressure</a>, y'know. It can contribute to a fatal <a>heart attack<a> if you don't keep it in check."
+Mrcalindas?Neutral "With the right medications, lifestyle changes, and <a>at-home monitoring machines</a>, you really can improve your outcome."
 
 
 + What resources exist for learning more? 
@@ -53,7 +53,7 @@ Mrcalindas?Neutral "With the right medications, lifestyle changes, and at-home m
 # notification Mrcalindas_Day 1_Mrs. Lee can use Google to find a reliable resource to provide information about Eddie’s medication_Mrslee1-4
 
 Mrcalindas?Smiling "Actually, I got a minute. Let me show you a couple of things."
-Mrcalindas?Neutral "Some people just start with a visit to Google. They enter the drug name, and find some information that way. That's a good start, but we have better options." 
+Mrcalindas?Neutral "Some people just start with a visit to <a>Google</a>. They enter the drug name, and find some information that way. That's a good start, but we have better options." 
 
 + How does someone know the site is accurate?
 -> Explain3
@@ -64,9 +64,9 @@ Mrcalindas?Neutral "Some people just start with a visit to Google. They enter th
 # notification Mrcalindas_Day 1_Mrs. Lee can learn to use a secure online portal to look up drug information from a safe resource_Mrslee1-3
 
 Mrcalindas?Smiling "Great question. Lucky for us, there are several secure online resources that have been created just for this purpose."
-Mrcalindas?Smiling "Look at this one - it's a drug information portal, where you can look up medications. They work with doctors to make sure the information is useful and accurate."
+Mrcalindas?Smiling "Look at this one - it's a <a>drug information portal</a>, where you can look up medications. They work with doctors to make sure the information is useful and accurate."
 Mrcalindas?Smiling "And this one is a site for reading up on different health conditions - like high blood pressure. You can access them from here, or your home computer."
-Mrcalindas?Smiling "Rashad regularly helps patients from the Clinic access these resources at the library."
+Mrcalindas?Smiling "Rashad regularly helps patients from the Clinic access these resources at the Library."
 
 + Thank you so much for this information!
   -> Goodbye

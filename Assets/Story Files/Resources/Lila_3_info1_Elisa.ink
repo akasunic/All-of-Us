@@ -22,7 +22,7 @@ Elisa?Smiling "I’m doing well! I was just texting my mom and procrastinating m
 -> Explain1
 
 ==Chat2==
-Elisa?Smiling "My college’s GSA is doing an ice cream social fundraiser for HIV/AIDS research funding."
+Elisa?Smiling "My college’s GSA is doing an ice cream social fundraiser for <a>HIV/AIDS</a> research funding."
 Elisa?Smiling "I was already planning on going out to support with my friends, but I know I’m not the biggest sweet tooth in the house so I thought I’d see if my siblings were interested!"
 Elisa?Smiling "Also, it’s a convenient, fun way to get my family and my friends in the same place. I really want those parts of my life to come together."
 
@@ -33,8 +33,8 @@ Elisa?Smiling "Also, it’s a convenient, fun way to get my family and my friend
 
 ==Explain1==
 Elisa?Neutral "Hmm.. Community building on your own is really hard, especially when you’re looking for personal, lasting connections."
-Elisa?Neutral "No one really explains how to start in explicit terms. One advantage of still being in school is that you are always surrounded by other people and it’s easy to take the convenience of that for granted."
-Elisa?Smiling "I feel really lucky to have so many clubs and events to check out."
+Elisa?Neutral "No one really explains how to start in explicit terms. One advantage of being in school is that I am surrounded by other people."
+Elisa?Neutral "I think it’s easy to take the convenience of that for granted. I feel really lucky to have so many clubs and events to check out."
 
 * That's so true. How else have you met new people?
 -> Explain2
@@ -48,7 +48,7 @@ Elisa?Smiling "It feels like I make the best connections by being open to opport
 
 * You are wise beyond your years, Elisa!
 -> Suggestion1
-* You don't seem like a social butterfly, but you definitely think like one!
+* You sound like a pro at networking!
 -> Suggestion1
 
 ==Suggestion1==

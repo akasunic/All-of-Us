@@ -69,6 +69,7 @@ Rashad?Smiling "Yeah! The Library hosts events here, the park and other places i
 Rashad?Smiling "If this is going to be a regular thing, the Community Center might invest in equipment so they don't have to borrow or rent every time." 
 Rashad?Smiling "It would also mean they can set up the equipment in the space where it's most likely to be used and leave it alone between events." 
 Rashad?Smiling "There might be some <a>community grants</a> available to help finance a purchase. I'm happy to use some of my librarian magic to help Lila look into funding sources." 
+Rashad?Neutral "You know... funding might also help cover some <a>accessibility</a> things, like an <a>ASL</a> translator for deaf community members."
 
 * I hadn't thought of that, Rashad! What a great idea.
   -> Suggestion2

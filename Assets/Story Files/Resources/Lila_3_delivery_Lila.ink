@@ -17,7 +17,7 @@ Lila?Neutral "Hi, {player_name}! It's good to see you."
  ->Chat1
 
 ==Chat1==
-Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice <a>fostering</a> the sort of community I wish I had growing up, but I get a little <a>misty-eyed</a> every now and again."
+Lila?Smiling "Honestly, it has been an emotional time for me. It’s so nice building the sort of community I wish I had growing up, but I get a little <a>misty-eyed</a> every now and again."
 Lila?Smiling "Trisha has also been a great help. We’ve begun to work together on a lot of aspects and it’s definitely brought us closer as a couple."
 Lila?Smiling "We are having conversations about topics that never came up until now. And I’ll never say no to more time with her!"
 
@@ -39,7 +39,7 @@ Lila?Neutral "I feel really at home there, which is such a shift from how I’ve
 ==QuestIntro==
 Lila?Neutral "Aw, thank you." 
 Lila?Neutral "I’ve always felt a little bit lonely in Bloomwood, even though I have close friends here who care about me, like you, Mrs. Lee and Eddie. Trisha, of course."
-Lila?Neutral "The group has helped with feeling connected in general, but I still feel a little isolated. There aren't a lot of <a>queer</a> people I can just grab a cup of coffee with. Ya know?"
+Lila?Neutral "The group has helped with feeling connected in general, but I still feel a little <a>isolated</a>. There aren't a lot of <a>queer</a> people I can just grab a cup of coffee with. Ya know?"
 Lila?Neutral "Being around Trisha is wonderful, but I wish I had more of a community in that sense."
 
 * I wouldn't have guessed, Lila! Tell me more?
@@ -78,7 +78,7 @@ Lila?Smiling "I really appreciate the offer. Only if you have time, okay? I want
 ==Goodbye==
 Lila?Smiling "Thank you for the reminder. I definitely needed to hear that. I need to get back inside... We'll chat later? Thank you again."
 
-* I’ll spread these <a>social butterfly wings</a> and be right back.
+* I’ll go collect some information and be right back.
 -> END
 * Of course, Lila. Anything for a friend.
 -> END

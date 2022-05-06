@@ -15,7 +15,7 @@ Mrslee?Smiling "Hello {player_name}, nice to see you again! How are you doing?"
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "I feel sleepy, but good! I’m looking for some meditation classes, maybe that would help me sleep better."
+Mrslee?Smiling "I feel sleepy, but good! I’m looking for some <a>meditation</a> classes, maybe that would help me sleep better."
 
 * Oh, no are you okay Mrs. Lee? 
 -> Chat2
@@ -24,8 +24,8 @@ Mrslee?Smiling "I feel sleepy, but good! I’m looking for some meditation class
 
 ==Chat2==
 Mrslee?Smiling "I will be okay, don’t worry. Sometimes, it is hard to sleep."
-Mrslee?Smiling "Eddie, my grandson, suggested physical activity; I already take fitness class and help with Lila's class."
-Mrslee?Smiling "Then he suggest I ask my friends. Lila showed me this list of classes that teach meditation and mindfulness exercises here at the Community Center!"
+Mrslee?Smiling "Eddie, my grandson, suggested physical activity; I already take fitness classed and help with Lila's class."
+Mrslee?Smiling "Then he suggest I ask my friends. Lila showed me this list of classes that teach meditation and <a>mindfulness exercises</a> here at the Community Center!"
 Mrslee?Smiling "Eddie say maybe I need to make my brain tired too! If I cannot find an answer, I will ask for more help."
 
 * Eddie sounds like he knows what he's talking about.
@@ -43,7 +43,7 @@ Mrslee?Smiling "Sometime I just get up and watch television. Did you know I can 
 ==Explain1==
 Mrslee?Neutral "Sure, what is it?"
 
-* The library is super busy and Rashad is looking for extra help. 
+* The Library is super busy and Rashad is looking for extra help. 
 -> Explain2
 * Do you know anyone looking for a job? Rashad needs someone who loves books.
 -> Explain2
@@ -70,11 +70,11 @@ Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We
 -> Suggestion2
 
 ==Suggestion2==
-Mrslee?Smiling "Anything to help out Rashad. When Eddie needed a summer job, Rashad helped him. Showed him how to use the internet to apply. Lots of jobs get posted online now."
+Mrslee?Smiling "Anything to help Rashad. When Eddie needed a summer job, Rashad helped him. Showed him how to use the internet to apply. Lots of jobs get posted online now."
 Mrslee?Smiling " Maybe we also ask Lila to email people who attend fitness class. And her daycare parents! She know everyone!" 
 Mrslee?Smiling "I can share in my garden group. Some of them use online forums to talk about flowers. If one of them shares, maybe someone there likes books."
 
-* Perfect! You can include a link to library's website where people can apply. 
+* Perfect! You can include a link to Library's website where people can apply. 
 -> Goodbye
 
 ==Goodbye==

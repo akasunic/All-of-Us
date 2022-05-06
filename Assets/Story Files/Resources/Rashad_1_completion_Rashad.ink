@@ -98,7 +98,7 @@ Rashad?Smiling "{player_name}, you really made my day. I might get that vacation
 Rashad?Neutral "Okay,  I’ll be here!
 
 * I know you will! Sit tight!
-  -> END
+  -> PuzzleInterface
 
 
 

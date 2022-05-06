@@ -11364,6 +11364,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7019804122642919445, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019804122642919445, guid: fb91dd1a42dfded4891afaae94301714,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 7236676737676247279, guid: fb91dd1a42dfded4891afaae94301714,
         type: 3}
       propertyPath: m_Type

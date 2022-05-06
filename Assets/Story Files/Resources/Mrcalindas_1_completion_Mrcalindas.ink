@@ -58,7 +58,7 @@ Mrcalindas?Neutral "Hmm. I feel like that’s just one aspect of what the commun
 # correct
 Mrcalindas?Smiling "We have been trying to increase the amount of support we provide to LGBTQAI+ community members. I think this is a great suggestion."
 
-Mrcalindas?Smiling "We could do a better job of communicating the ways we support those neighbors from reproductive health to gender-affirming health care and support groups." 
+Mrcalindas?Smiling "We could do a better job of communicating the ways we support those neighbors from <a>reproductive health</a> to <a>gender-affirming</a> health care and support groups." 
 
 Mrcalindas?Smiling "That’s a good catch, {player_name}."
 

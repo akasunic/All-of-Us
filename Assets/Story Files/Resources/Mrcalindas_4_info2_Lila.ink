@@ -62,9 +62,9 @@ Lila?Smiling "With a little planning, though, you can totally include them in th
 
 Lila?Smiling "Well, the Community Center hosts quiet play hours - caretakers can bring children over to play with legos, or participate in low-key guided activities." 
 
-Lila?Smiling "One thing we do is have a smaller sensory activity like making slime in bags."
+Lila?Smiling "One thing we do is have a smaller <a>sensory activity</a> like making slime in bags."
 
-Lila?Smiling "Then the child can take it home and use the sensory engagement of feeling it squish to help regulate their emotions."
+Lila?Smiling "Then the child can take it home and use the <a>sensory engagement</a> of feeling it squish to help regulate their emotions."
 
 Lila?Smiling "I like that it gives me a chance to teach caretakers tricks about how to support the little people in their lives without it feeling like work. Ya know?"
 
@@ -80,11 +80,11 @@ Lila?Smiling "I like that it gives me a chance to teach caretakers tricks about 
 
 Lila?Smiling "Well, one thing we do have is a quiet book corner in the children's area. Kids can draw or color and relax in beanbags." 
 
-Lila?Smiling "Also, we can all work to avoid making children feel bad about themselves for feeling overstimulated."
+Lila?Smiling "Also, we can all work to avoid making children feel bad about themselves for feeling overstimulated. Some kids are really sensitive to adults reacting poorly."
 
-Lila?Smiling "It's not their fault, and they aren't misbehaving. We each process things differently."
+Lila?Smiling "It's not their fault, and they aren't misbehaving. We each <a>process</a> things differently."
 
-Lila?Smiling "Kids are going to be kids. We prepare for the noise and the mess, and make space for them to engage in ways that feel good for them." 
+Lila?Smiling "Kids are going to be kids. We expect noise and mess, and make space for them to engage in ways that feel good for them." 
 
 Lila?Smiling "I always have that one kid who would rather rearrange the play food than join the group, and that's okay." 
 
@@ -95,7 +95,7 @@ Lila?Smiling "If they are content and safe, I assume they're listening and getti
 
 ==Goodbye==
 
-Lila?Smiling "This is really my jam {player_name}. Helping all families feel welcome and wanted in Bloomwood is the least we can do, right?"
+Lila?Smiling "This is really <a>my jam</a> {player_name}. Helping all families feel welcome and wanted in Bloomwood is the least we can do, right?"
 Lila?Smiling "I love working together to make it happen. I think I'm going to see if I can pick up some new materials for our sensory bags. See you soon, okay?" 
 
 * Thanks so much for always giving me such great ideas.

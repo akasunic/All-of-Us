@@ -47,7 +47,7 @@ Mrcalindas?Smiling "Always, my friend. What can I do for you?"
 *What does a good dynamic between doctor and patient look like?
  ->Suggestion1
 
-Mrcalindas?Neutral "A good doctor always listens to their patient’s concerns and should work to earn their trust through consistent, quality care. This can be especially important for minority groups and women."
+Mrcalindas?Neutral "A good doctor always listens to their patient’s concerns and should work to earn their trust through consistent, quality care. This can be especially important for <a>minority groups</a> and women."
 Mrcalindas?Neutral "Doctors are under a lot of pressure to see many patients in a day, but good ones take the time to build that relationship." 
 Mrcalindas?Neutral "Not every doctor is a good fit for every patient; it is okay to shop around. Ask for recommendations from friends."
 

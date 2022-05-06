@@ -21,7 +21,7 @@ Elisa?Neutral "Oh, just getting some homework done for class tomorrow."
 
 * Ooh what class? Anything exciting?
   -> Chat2
-* Gotcha. By the way, I found some info for your mom if you've got a minute.
+* Gotcha. By the way, I found some info for your mom, if you've got a minute.
   -> ReadyToSolve
 
 ==Chat2==
@@ -56,7 +56,7 @@ Elisa?Neutral "Oh, that's great! What'd you find out?"
   
 
 ==Option1==
-Elisa?Neutral "I feel like the answer to everything is diet and exercise. That might be true, but it doesn’t feel very actionable. You know?"
+Elisa?Neutral "I feel like the answer to everything is "diet and exercise." I was hoping for something more in-depth. You know?"
  
 Elisa?Neutral "I was hoping for something more in-depth."
  

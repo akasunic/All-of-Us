@@ -10,12 +10,12 @@ Elisa?Smiling "Hey, friend! How are you, {player_name}?"
 
 * Hey Elisa! I'm feeling good today. Do you have a moment? 
   -> Chat1
-* Got a minute? I wanna pick your brain.
+* Got a minute? I need your wisdom.
   -> Chat1
 
 ==Chat1==
 Elisa?Smiling "For you? always!"
-Elisa?Smiling "I have a dental cleaning at 4 today, though. So I need to leave in time to get over there."
+Elisa?Smiling "I have a <a>dental cleaning</a> at 4 today, though. So I need to leave in time to get over there."
 
 * Ahhh! How do you keep track of your appointments?
   -> Chat2
@@ -36,7 +36,7 @@ Elisa?Smiling "You can't forget to schedule an appointment if you don't leave wi
   -> Explain1
 
 ==Chat3==
-Elisa?Smiling "Hah! Feel free. I read the suggestion in a life hack article about taking control of your time. It was a little dorky, but that tip stuck with me."  
+Elisa?Smiling "Hah! Feel free. I read the suggestion in a <a>life hack</a> article about taking control of your time. It was a little dorky, but that tip stuck with me."  
 Elisa?Smiling "You were on a mission, though - don't let me distract you!"
 
 * It seems like you use your calendar a lot.

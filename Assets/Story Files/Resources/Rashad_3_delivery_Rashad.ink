@@ -9,7 +9,7 @@ VAR new_quest = ""
 ~ new_quest = "Rashad3.txt"
 # new_quest
 
-Rashad?Smiling "Well if it isn't my favorite glitter-wielding community organizer. What's up??
+Rashad?Smiling "Well if it isn't my favorite glitter-wielding community advocate. What's up??"
 
 * Just when I think I’ve gotten rid of it all, I find a speck... 
 -> Chat1
@@ -17,7 +17,7 @@ Rashad?Smiling "Well if it isn't my favorite glitter-wielding community organize
 -> QuestIntro
 
 ==Chat1==
-Rashad?Smiling "Hah! Lila wasn’t kidding when she told you that stuff travels. Now you’ve been cursed by the glitter gods."
+Rashad?Smiling "Hah! Lila wasn’t kidding when she told you that stuff travels. Now you’ve been cursed by the glitter."
 
 * I think I need to join a glitter support group at this point. 
 -> Chat2
@@ -65,7 +65,6 @@ Rashad?Neutral "I want to find someone who really understands. Can you help me w
 
 *  Alright, I think I got it. I'll get right on it.
 -> QuestAcceptance
-
 
 ==QuestAcceptance==
 Rashad?Smiling "No rush! I know this is a big ask, so no pressure. I'm nervous, and spinning in circles. I think I need to try this for my own sanity." 

@@ -47,8 +47,7 @@ Mrslee?Neutral "What should I do?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+
   
 ==Option1==
 # correct
@@ -94,11 +93,5 @@ Mrslee?Smiling "{player_name}. Thank you for encouraging. I will do."
 ==TempGoodbye==
 Mrslee?Neutral "{player_name}, OK!"
 
-* I'll come back.
-  -> END
-
-==BadSolution==
-Mrslee?Neutral "Thank you, {player_name}."
-
-+ No problem!
-  -> END
+* I'll be right back, Mrs. Lee!
+  -> PuzzleInterface

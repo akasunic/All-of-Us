@@ -102,11 +102,6 @@ Mrslee?Smiling "I feel less stress knowing I can take a printout to show the pha
 ==TempGoodbye==
 Mrslee?Neutral "Okay, come back soon!"
 
-+ No worries, Mrs. Lee. I will.
-  -> END
+* OK, Mrs. Lee. I'll be right back!
+  -> PuzzleInterface
 
-==BadSolution==
-Mrslee?Neutral "Thank you, {player_name}."
-
-+ No problem!
-  -> END
