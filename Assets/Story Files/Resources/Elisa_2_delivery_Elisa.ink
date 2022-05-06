@@ -18,7 +18,7 @@ Elisa?Smiling "Hey, friend! How are you doing?"
 -> Chat2
 
 ==Chat1==
-Elisa?Smiling "You know ... I'm discovering that the paperwork and administration that goes along with my <a>transfer<a/> to the state school to finish my degree is almost more stress than finals." 
+Elisa?Smiling "You know ... I'm discovering that the paperwork and administration that goes along with my <a>transfer</a> to the state school to finish my degree is almost more stress than finals." 
 
 Elisa?Neutral "But I have a list and I'm working my way through it. One ridiculous document at a time."
 

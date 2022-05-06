@@ -10,8 +10,6 @@ using UnityEngine.UI;
 
 public class DisplayDictionaryDefinition : MonoBehaviour {
 
-    private string xml_path = Directory.GetCurrentDirectory() + "/Assets/Scenes/InfoBank/DictionaryTerms.xml";
-
     public static string updateWord = "";
 
     public enum DisplayStatus { DEFAULT, MISSING, DEFINITION };
@@ -35,25 +33,13 @@ public class DisplayDictionaryDefinition : MonoBehaviour {
 
     void initWords()
     {
-        var path = xml_path;
-        var xml = new XmlDocument();
-        xml.Load(path);
         Words = new Hashtable();
         orderedWords = new List<string>();
-        var element = xml.DocumentElement;
-        if (element != null)
-        {
-            var elemEnum = element.GetEnumerator();
-            while (elemEnum.MoveNext())
-            {
-                var xmlItem = (XmlElement)elemEnum.Current;
-                Words.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
-                orderedWords.Add(xmlItem.GetAttribute("name"));
-            }
-        }
-        else
-        {
-            Debug.LogError("Dictionary Term loading failed");
+        Dictionary<string, string> dictionary = DictionaryTerms.getDictionary();
+
+        foreach (KeyValuePair<string, string> term in dictionary) {
+            Words.Add(term.Key, term.Value);
+            orderedWords.Add(term.Key);
         }
         ClearDescription();
     }
