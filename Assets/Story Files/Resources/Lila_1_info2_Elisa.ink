@@ -68,8 +68,8 @@ Elisa?Smiling "I’d be glad to help out with Lila’s fliers. I can even design
 -> Suggestion2
 
 ==Suggestion2== 
-~ notification = "Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4"
-# notification Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4 
+~ notification = "Elisa_Day 1_By being vulnerable herself, Lila is making it possible for other people to connect with vital resources_Lila1-4"
+# notification Elisa_Day 1_By being vulnerable herself, Lila is making it possible for other people to connect with vital resources_Lila1-4 
 
 Elisa?Smiling "I might have a suggestion for a speaker, if she's still looking. I took a class on the Western history of the LGBTQIA+ community. I really enjoyed it."
 Elisa?Smiling "Our professor was really open to talking with us about any of our own questions! They shared their experience as a <a>nonbinary</a> person, which was all new to me."

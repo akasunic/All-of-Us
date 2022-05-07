@@ -77,8 +77,8 @@ Rashad?Neutral "You know... funding might also help cover some <a>accessibility<
   -> Suggestion2
 
 ==Suggestion2==
-~ notification = "Rashad_Day 1_Look within your community for resources to support your project; what you need might already be available at low or no cost_Lila1-2"
-# notification Rashad_Day 1_Look within your community for resources to support your project; what you need might already be available at low or no cost_Lila1-2 
+~ notification = "Rashad_Day 1_Lila might find low or no cost solutions for launching the mentorship group within the community_Lila1-2"
+# notification Rashad_Day 1_Lila might find low or no cost solutions for launching the mentorship group within the community_Lila1-2 
 
 Rashad?Smiling "It can take some time to get the paperwork moving for funding, so she might need to borrow equipment for the first event."
 Rashad?Smiling "I think a community is stronger when the various institutions work together; I can pull our extra equipment out of storage and set everything up for her." 

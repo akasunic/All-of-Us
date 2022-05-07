@@ -175,8 +175,8 @@ public static class GameStrings {
                 {"end_of_quest_calindas_4_sticker1", "Inclusive activities account for mealtimes, nap times, and other kid-centric concerns."},
                 {"end_of_quest_calindas_4_sticker2", "It's important to understand that different processing styles aren't 'misbehaving'. Including children means including noise and sometimes mess."},
 
-                {"end_of_quest_lila_1_sticker1", "Look within your community for resources to support your project; what you need might already be available at low or no cost."},
-                {"end_of_quest_lila_1_sticker2", "Open communication about LGBTQ+ related topics enables vulnerable community members to connect with resources that would remain concealed from them otherwise."},
+                {"end_of_quest_lila_1_sticker1", "Lila might find low or no cost solutions for launching the mentorship group within the community."},
+                {"end_of_quest_lila_1_sticker2", "By being vulnerable herself, Lila is making it possible for other people to connect with vital resources."},
                 {"end_of_quest_lila_2_sticker1", "Connecting with other Black women might give Lila the support she's looking for."},
                 {"end_of_quest_lila_2_sticker2", "Utilize online resources, including provider biographies and community directories of care providers."},
                 {"end_of_quest_lila_3_sticker1", "Community institutions like libraries host affinity groups and free community events."},
