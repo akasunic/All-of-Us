@@ -123,6 +123,7 @@ public static class GameStrings {
                 {"welcome_title", "Welcome to Bloomwood"},
                 {"welcome_text", "Congratulations! Before you start your new role as our Community Advocate, tell us a little bit about yourself"},
                 {"name_taken", "Name is taken"},
+                {"name_invalid", "Name is invalid"},
                 
                 // Languages
                 {"english", "English"},
