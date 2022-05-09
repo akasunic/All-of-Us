@@ -190,7 +190,7 @@ public static class DictionaryTerms {
         {"nonbinary", "Someone who does not subscribe to conventional gender distinctions, but identifies with both, neither, or a combination of the traits commonly assigned to men or women. "},
 
         // O
-        {"off-brand", "off-brand"},
+        {"off-brand", "In this context, 'off-brand' means that it doesn't align with the board's vision for the Library. "},
         {"off-campus housing", "Off-campus housing is a term for the houses students lease if they don't stay in a dorm at school, so not being on campus."},
         {"on the fence", "To be undecided."},
         {"out-of-pocket", "Out-of-Pocket refers to costs for medical care that are not paid for by your insurance plan. To avoid unexpected medical costs, it is important to understand what costs your insurance covers, and what it expects you to cover out-of-pocket. "},

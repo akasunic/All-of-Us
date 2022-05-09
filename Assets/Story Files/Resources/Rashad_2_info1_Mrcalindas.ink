@@ -77,7 +77,8 @@ Mrcalindas?Smiling "Adding <a>mindfulness</a> activities like <a>meditation</a> 
 
 Mrcalindas?Neutral "Stress can really have a negative effect on overall quality of life. I cannot recommend <a>therapy</a> strongly enough."
 
-Mrcalindas?Neutral "I understand the stigmas around mental healthcare, but there are compassionate, expert <a>practitioners</a> right here in Bloomwood. Your friend should consider giving one of them a chance."
+Mrcalindas?Neutral "I understand the stigmas around mental healthcare, but there are compassionate, expert <a>practitioners</a> right here in Bloomwood."
+Mrcalindas?Neutral "Your friend should consider giving one of them a chance."
 Mrcalindas?Smiling "Seeing a therapist really made a positive difference for me. If your friend wants a recommendation, I'm happy to suggest some people."
 Mrcalindas?Smiling "It's hard to remember when we're <a>in the thick of it</a>, but each of us is a complete picture."
 Mrcalindas?Smiling "Taking care of our mental health enables us to support and take care of our physical health. And the other way around."
