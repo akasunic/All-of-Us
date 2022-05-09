@@ -254,7 +254,7 @@ public static class GameStrings {
         },
         {"Spanish", new Dictionary<string, string>
             {
-                {"new_game", "New Game"},
+                {"new_game", "new_game"},
             }
         }
     };
