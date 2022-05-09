@@ -14,7 +14,7 @@ Lila?Smiling "{player_name}, Good afternoon! How’s it going?"
 -> ReadyToSolve
 
 ==Chat1==
-Lila?Smiling "Not too bad. Trisha stopped by with lunch for me which was really sweet. It brightened up my day and I’ll never say no to a home cooked meal."
+Lila?Smiling "Not too bad. Trisha stopped by with lunch for me which was really sweet. It made my day and I’ll never say no to a home cooked meal."
 * That’s so thoughtful! Hey, I got some information that may be useful.
 -> ReadyToSolve
 * I know that must’ve been lovely. How’s Trisha been?
@@ -27,7 +27,8 @@ Lila?Smiling "She’s great! She and I just celebrated our anniversary and she j
 
 ==ReadyToSolve==
 Lila?Smiling "Oh that’s great! What’d you find out?"
-* Here’s what I have so far...
+
+* Here are my suggestions...
 -> PuzzleInterface
 * Wait. I'm not quite ready.
 -> TempGoodbye

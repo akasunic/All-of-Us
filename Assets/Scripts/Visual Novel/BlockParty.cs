@@ -95,9 +95,17 @@ public class BlockParty : MonoBehaviour
     }
 
     public void onClickContinueButton() {
-        // Making sure to go directly to "Select profile" view without having to click on the saved game again
-        GlobalGameInfo.goToSelectProfileFlag = true;
-        
-        SceneManager.LoadScene("StartWeek");
+
+        if (GlobalGameInfo.gameEndedFlag == true) {
+            GlobalGameInfo.gameEndedFlag = false;
+            SceneManager.LoadScene("EndingAnimation");
+        } else {
+            // Going back to the Start week scene to start a new week with a different character
+            // Making sure to go directly to "Select profile" view without having to click on the saved game again
+            GlobalGameInfo.goToSelectProfileFlag = true;
+            
+            SceneManager.LoadScene("StartWeek");
+        }
+
     }
 }

@@ -35,7 +35,7 @@ Mrcalindas?Neutral "Well, it is my job to care. My Mother is very active, and al
 
 Mrcalindas?Smiling "That's so sweet of you, {player_name}. Can you tell me what you found out?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I'm going to check my notes again. Be right back! 
   -> TempGoodbye

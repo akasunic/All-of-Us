@@ -52,7 +52,7 @@ Mrslee?Smiling "I like lentils much better than pepperoni."
 
 Mrslee?Neutral "I always try my best to answer, {player_name}."
 
-How did you foster such a supportive relationship with Eddie?
+*How did you develop such a supportive relationship with Eddie?
 ->Explain2
 
 ==Explain2==
@@ -85,11 +85,13 @@ Mrslee?Smiling "I still feel nervous when he bring up relationships. But he ask 
 ~ notification = "Mrslee_Day 4_Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem_Elisa4-3"
 # notification Mrslee_Day 4_Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem_Elisa4-3 
 
-Mrslee?Neutral "Eddie’s school recommended a grief counselor when Dr. Lee died. It was so sudden, and Eddie was so sad."
+Mrslee?Neutral "Eddie’s school recommended a grief counselor when Dr. Lee died. It was so sudden. And Eddie was so sad."
 
-Mrslee?Neutral "For a while, we went together. The counselor gave us a lot of tools to use." 
+Mrslee?Neutral "For a while, we went together. The counselor gave us many tools to use." 
 
-Mrslee?Neutral "I thought family counseling was for bad kids. Sometimes, family counseling is to learn new skills! I never knew." 
+Mrslee?Neutral "I thought family counseling was for bad kids; they explained to me. Sometimes, family counseling is to learn new skills! I never knew." 
+
+Mrslee?Smiling "Sometimes, family counseling is to help a family work together better!"
 
 * What is one thing you learned in family counseling? 
   -> Suggestion2
@@ -101,7 +103,7 @@ Mrslee?Neutral "I thought family counseling was for bad kids. Sometimes, family 
 # notification Mrslee_Day 4_Try communicating in writing if talking feels too hard_Elisa4-4 
 
 
-Mrslee?Smiling "One of the things I got from the counselor was that caretakers need community. All by myself, I am only me. But with friends, I am stronger for Eddie."
+Mrslee?Smiling "One of the things I got from the counselor was a caretaker need community. All by myself, I am only me. But with friends, I am stronger for Eddie."
 
 Mrslee?Smiling "I start small. At first, I call Nicole – Lila’s mom. And I say "Nicole. Kids are hard." 
 
@@ -121,7 +123,7 @@ Mrslee?Smiling "Sometimes talking is hard, but writing is easier. Now we use ema
 
 ==Goodbye==
 
-Mrslee?Smiling "Thank you! I feel proud thinking about how hard Eddie and I work together."
+Mrslee?Smiling "Thank you! I feel proud to think about how hard Eddie and I work together."
 
 * See you soon, Mrs. Lee!
   ->END

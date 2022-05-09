@@ -47,13 +47,7 @@ public class RotateSavingWheel : MonoBehaviour
 
         Destroy (GameObject.FindGameObjectWithTag("Music"));
         
-        // Navigate to the next scene
-        if (GlobalGameInfo.gameEndedFlag == true) {
-            GlobalGameInfo.gameEndedFlag = false;
-            SceneManager.LoadScene("EndingAnimation");
-        } else {
-            SceneManager.LoadScene("Map");
-        }
+        SceneManager.LoadScene("Map");
     }
 
     public IEnumerator FadeBlackOutSquare() {

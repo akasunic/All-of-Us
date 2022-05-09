@@ -15,7 +15,7 @@ Mrslee?Smiling "{player_name}! Wonderful to see you."
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "Did you hear that people from mentorship group have joined water fitness? We just had class! I feel so happy for Lila!"
+Mrslee?Smiling "Did you hear that people from mentorship group have joined <a>water fitness</a>? We just had class! I feel so happy for Lila!"
 
 * That's great! How’s was class?
 -> Chat2
@@ -55,7 +55,7 @@ Mrslee?Neutral "I always try my best to answer, {player_name}."
 Mrslee?Neutral "I have weekly video calls with old friends. We invite new friends sometimes, like I include a few ladies from fitness class. I feel really supported."
 Mrslee?Neutral "Making new friends used to feel hard, but going to class and library help me meet new friends and get to know acquaintances I didn’t know I had much in common with."
 Mrslee?Neutral "Woman from library also lost her husband. We bond and spend time together a lot now. I find friends in many places."
-Mrslee?Smiling "It can be easy to forget the people right nearby."
+Mrslee?Smiling "It can be easy to forget the people right nearby. Tell your friend to think about who they talk to this week. and follow up with them."
 
 * Ah, I see. Do you know how Eddie has made new friends?
 -> Suggestion2

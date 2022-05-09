@@ -17,13 +17,13 @@ Elisa?Smiling "{player_name}, what’s up?"
 ==Chat1==
 Elisa?Neutral "I waiting to pick up my brother from the Community Center so I’m studying. I have some time to chat! What’s keeping you busy today?"
 
-* I’m just taking care of errands and checking in with people. It’s pretty fun!
+* I’m just taking care of errands and checking in with people!
 -> Chat2
 * Speaking of the Community Center, can I ask a question?
 -> Explain1
 
 ==Chat2==
-Elisa?Smiling "That does sound like a lot of fun! It’s nice getting to see people and I know it brightens their day."
+Elisa?Smiling "That sounds like fun! It’s nice getting to see people and I know it brightens their day."
 Elisa?Smiling "I’ve really been enjoying spending time with my friends at the Nature Club now that the weather is getting better. Blow off some steam by being outside."
 
 * It’s been super nice lately! Is Nature Club going well?
@@ -43,7 +43,7 @@ Elisa?Smiling "We did leaf rubbings and plant identification last weekend, and o
 ==Explain1==
 Elisa?Neutral "Absolutely. What's up?"
 
-* I’m helping Lila organize an LGBTQ+ mentorship group for youth. 
+* I’m helping Lila organize an LGBTQIA+ mentorship group for youth. 
 -> Explain2
 
 ==Explain2==
@@ -60,8 +60,7 @@ Elisa?Smiling "She mentioned this last time we chatted. She was looking for a sp
 
 Elisa?Smiling "I can put them up around campus on bulletin boards and share with our <a>GSA</a> - the gay-straight alliance - and other student organizations."
 Elisa?Smiling "A lot of groups on campus partner with community initiatives to emphasize how important it is to reach out and participate in your community."
-Elisa?Smiling "I’d be glad to help out with Lila’s fliers."
-Elisa?Smiling "I can even design them for her!"
+Elisa?Smiling "I’d be glad to help out with Lila’s fliers. I can even design them for her and get credit in my Graphic Design class!"
 
 * A flier is a great idea- what a huge help!
 -> Suggestion2
@@ -69,8 +68,8 @@ Elisa?Smiling "I can even design them for her!"
 -> Suggestion2
 
 ==Suggestion2== 
-~ notification = "Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4"
-# notification Elisa_Day 1_Open communication about LGBTQ+ related topics enable vulnerable community members to connect with vital resources_Lila1-4 
+~ notification = "Elisa_Day 1_By being vulnerable herself, Lila is making it possible for other people to connect with vital resources_Lila1-4"
+# notification Elisa_Day 1_By being vulnerable herself, Lila is making it possible for other people to connect with vital resources_Lila1-4 
 
 Elisa?Smiling "I might have a suggestion for a speaker, if she's still looking. I took a class on the Western history of the LGBTQIA+ community. I really enjoyed it."
 Elisa?Smiling "Our professor was really open to talking with us about any of our own questions! They shared their experience as a <a>nonbinary</a> person, which was all new to me."

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -107,6 +108,12 @@ public class PCSetUp : MonoBehaviour
             return;
         }
 
+        if (isInvalid(firstName)) {
+            NameError.gameObject.SetActive(true);
+            NameErrorText.text = GameStrings.getString("name_invalid");
+            return;
+        }
+
         GlobalGameInfo.name = firstName;
         GlobalGameInfo.pronouns = GetPronouns(pronounsDropDown.value);
         GlobalGameInfo.language = GetLanguages(languageDropDown.value);
@@ -154,6 +161,14 @@ public class PCSetUp : MonoBehaviour
         if (data == null) return false;
         foreach(KeyValuePair<string, SavedGame> pair in data) {
             if (pair.Value.getName().Equals(name)) return true;
+        }
+        return false;
+    }
+
+    private bool isInvalid(string name) {
+        // Returns true if the name has special chars and false otherwise
+        foreach (char c in name) {
+            if (!Char.IsLetterOrDigit(c)) return true;
         }
         return false;
     }

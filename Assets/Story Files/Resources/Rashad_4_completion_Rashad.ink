@@ -29,15 +29,16 @@ Rashad?Neutral "You have information for the initiative? Spill it!"
  
 * Elisa and Mrs. Lee shared a lot of helpful tips. Here's what I learned.
 -> ReadyToSolve
-* I learned a lot from Mrs. Lee and Elisa. They are gold mines of information!
+* I learned a lot from Mrs. Lee and Elisa. They are <a>gold mines</a> of information!
 -> ReadyToSolve
  
 ==ReadyToSolve==
-Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful, and Mrs. Lee has a close relationship with both Eddie and Lila. She's helped me out many times. I’m listening?"
+Rashad?Neutral "I'm not surprised. Elisa is really smart and thoughtful."
+Rashad?Neutral "Mrs. Lee has a close relationship with both Eddie and Lila. She has helped me out many times. I’m listening?"
  
-* Here it is...
+* Here are my suggestions...
 -> PuzzleInterface
-* Hold on. I want to make sure what they said is captured correctly.
+* Hold on. I want to make sure I get this right.
 -> TempGoodbye
 
 ==PuzzleInterface==
@@ -94,7 +95,7 @@ Hold tight! I’ll be right back.
 # correct
 
 Rashad?Smiling "One of the things that got me thinking about launching this program in the first place was Mrs. Lee and her role at the Community Center." 
-Rashad?Smiling "She just lights up whenever she talks about the community, which is super endearing."
+Rashad?Smiling "She just lights up whenever she talks about the kids, which is super endearing."
  
 Rashad?Smiling "If it’s good for her, it must be useful for other people too, right?"
  
@@ -104,7 +105,7 @@ Rashad?Smiling "If it’s good for her, it must be useful for other people too, 
 
 == Followup42==
 
-Rashad?Smiling "Mrs. Lee is really good at reading between the lines." 
+Rashad?Smiling "Mrs. Lee is really good at <a>reading between the lines</a>." 
 
 Rashad?Smiling "It never even occurred to me that there could be the added benefit of making things easier for parents who work longer hours." 
 
@@ -121,7 +122,7 @@ My pleasure, Rashad!
 ==TempGoodbye==
 Rashad?Neutral "If I’m not at the circulation desk, I’ll be in my office."
  
-* I’ll find you!
-  -> END
+* I’ll be right back!
+  -> PuzzleInterface
 
 

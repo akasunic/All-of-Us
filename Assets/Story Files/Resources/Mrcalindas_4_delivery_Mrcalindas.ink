@@ -55,7 +55,7 @@ Mrcalindas?Neutral "I would love to know what resources exist in Bloomwood to he
 
 Mrcalindas?Neutral "Of course! This is an act of faith - in all of us - on Jessica's part. I know that Brooklyn needs understanding adults who know how to respond to her <a>sensory needs</a>." 
 
-Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be accessible to people with different <a>disabilities</a>."
+Mrcalindas?Neutral "I was also hoping there might be some kid-friendly events coming up that might be <a>accessible</a> to people with different <a>disabilities</a>."
 
 
 * Can you be specific about some of the needs Brooklyn has?

@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ===intro===
 
-Elisa?Smiling "Hey {player_name}! Hitting the books? Or are you tutoring someone?" 
+Elisa?Smiling "Hey {player_name}! <a>Hitting the books</a>? Or are you tutoring someone?" 
 
 * Hit a book? Rashad would never forgive me! hah!
   -> Chat1
@@ -27,7 +27,7 @@ Elisa?Smiling "Hah. You usually keep everything together, right? How are things 
 
 Elisa?Smiling "Today's an easy day. No tests to study for, all my homework is under control"
 
-Elisa?Smiling "I even got to hang out with my folks over coffee this morning. So, I have time. Lay it on me!" 
+Elisa?Smiling "I even got to hang out with my folks over coffee this morning. So, I have time. <a>Lay it on me</a>!" 
 
 * That's so sweet! I hope you never get too busy for coffee wit your folks.
   -> Chat3
@@ -37,14 +37,14 @@ Elisa?Smiling "I even got to hang out with my folks over coffee this morning. So
 
 ==Chat3==
 
-Elisa?Smiling "I think I'm spiritually obligated to coffee and pastry with my mom as often as SHE is willing to slow down and sit a few..." 
+Elisa?Smiling "With the move to state school coming up, I wil nstop what I'm doing and have coffee with my mom as often as SHE is willing to slow down and sit a few..." 
 
 * So you get it from somewhere... I have a parent question for you.
   -> Explain1
 
 ==Explain1==
 Elisa?Smiling "Is it about how to get your parents to slow down and take it easy? My folks had two days off and we tried to get them to rest."
-Elisa?Smiling "Instead, they ended up rebuilding the shed or planting ten different vegetables. or is this about something else?"
+Elisa?Smiling "Instead, they ended up rebuilding the shed and planting ten different vegetables. or is this about something else?"
 
 * I am looking for some tech help.
   -> Explain2
@@ -67,7 +67,7 @@ Elisa?Neutral "A tech question? And you didn't just look it up? Or watch a video
 
 Elisa?Smiling "Well, when I taught my abuela, we made sure to just turn on the largest font size so she could read everything clearly."
 
-Elisa?Smiling "You know what they say - add an accessibility feature, and everyone uses it, not just seniors or people with disabilities."
+Elisa?Smiling "You know what they say - add an <a>accessibility feature</a>, and everyone uses it, not just seniors or people with <a>disabilities</a>."
 
 Elisa?Smiling "Turns out I prefer the text on my phone as big as it'll go too, even if it makes easier for nosy siblings to read over my shoulder."
 

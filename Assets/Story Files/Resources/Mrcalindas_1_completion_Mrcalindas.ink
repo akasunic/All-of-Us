@@ -29,7 +29,7 @@ Mrcalindas?Smiling "Exercise is good for the heart {player_name} so, whether you
 Mrcalindas?Neutral "Okay. Their responses will really help me understand the community more. I want to waste as little time as possible creating a useful experience for the community."
 Mrcalindas?Neutral "So what programs should we focus on at the health tent to get the community onboard?"  
 
-*  Here’s what I have…
+*  Here are my suggestions...
     -> PuzzleInterface
 * Actually, I think I need to take a look at my notes. I'll be right back.
     -> TempGoodbye
@@ -58,7 +58,7 @@ Mrcalindas?Neutral "Hmm. I feel like that’s just one aspect of what the commun
 # correct
 Mrcalindas?Smiling "We have been trying to increase the amount of support we provide to LGBTQAI+ community members. I think this is a great suggestion."
 
-Mrcalindas?Smiling "We could do a better job of communicating the ways we support those neighbors from reproductive health to gender-affirming health care and support groups." 
+Mrcalindas?Smiling "We could do a better job of communicating the ways we support those neighbors from <a>reproductive health</a> to <a>gender-affirming</a> health care and support groups." 
 
 Mrcalindas?Smiling "That’s a good catch, {player_name}."
 

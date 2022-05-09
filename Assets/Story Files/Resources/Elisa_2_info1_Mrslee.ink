@@ -8,7 +8,7 @@ VAR new_quest = ""
 ===intro===
 Mrslee?Smiling "{player_name}! Happy to see you."
 
-* Mrs. Lee! You have been glittered! Are you okay?
+* Mrs. Lee! You have been <a>glittered</a>! Are you okay?
   -> Chat1
 * I'm happy to see you, too. Evidently the kids were too. 
   -> Chat1
@@ -24,7 +24,7 @@ Mrslee?Smiling "We make art today! I shower before I go home."
 
 ==Chat2==
 
-Mrslee?Smiling "Every week, something new. I feel happy too. So many smart, creative little people. They teach me to make art. Always shout "More glitter!" so, we always add more glitter!  
+Mrslee?Smiling "Every week, something new. I feel happy, too. So many smart, creative little people. They teach me to make art. Always shout "More glitter!" so, we always add more glitter!  
 
 * I think you're a very brave woman. 
   -> Chat3
@@ -44,7 +44,7 @@ Mrslee?Smiling "I like art days, and I like the days I help in the office. I lik
 
 Mrslee?Neutral "Tell me how I help." 
 
-* I'm helping a friend replace her immunization records for school.
+* I'm helping a friend replace her <a>immunization records</a> for school.
   -> Suggestion1
 
 ==Suggestion1==
@@ -55,9 +55,9 @@ Mrslee?Neutral "Tell me how I help."
 
 Mrslee?Neutral "Immunization records are very important; I make copy for new students to keep in records here. Vaccines keep us safe."
 
-Mrslee?Neutral "When we move to America, Dr. Lee and I both need more vaccines. When Eddie travel, some countries require new shots." 
+Mrslee?Neutral "When we move to America, Dr. Lee and I both need more vaccines. When Eddie travel, some countries require new ones." 
 
-Mrslee?Neutral "Did you know many records exist on internet now? When I was a girl, it was all paper. When Eddie was born, it was all paper. Now? I get some records, like my covid vaccine, on my phone!"
+Mrslee?Neutral "Did you know many records exist on internet now? When I was a girl, it was all paper. When Eddie was born, it was all paper. Now? I get some records, like my COVID vaccine, on my phone!"
 
 * What happens if a parent can't find their children's records? 
   -> Suggestion2
@@ -70,11 +70,11 @@ Mrslee?Neutral "Did you know many records exist on internet now? When I was a gi
 ~ notification = "Mrslee_Day 2_Your doctor or school should be able to provide you with at least partial records; contact them and ask what the process is for obtaining a copy_Elisa2-2"
 # notification Mrslee_Day 2_Your doctor or school should be able to provide you with at least partial records; contact them and ask what the process is for obtaining a copy_Elisa2-2 
 
-Mrslee?Neutral "Sometimes, parents ask the pediatrician. The doctor office keep many records. Fill out a form, get a copy."
+Mrslee?Neutral "Sometimes, parents ask the <a>pediatrician</a>. The doctor office keep many records. Fill out a form, get a copy."
 
-Mrslee?Neutral "The last school somebody attend might be able to help. If everybody submit records, the school has records. It might take a phone call or email. And sometimes they even fax them to me here!" 
+Mrslee?Neutral "The last school somebody attend might be able to help. If everybody submit records, the school has records. It might take a phone call or email. And sometimes they even <a>fax</a> them to me here!" 
 
-Mrslee?Neutral "The CDC has resources, too. Look it up on the internet. Students moving in from different places might need to do different steps to get their records." 
+Mrslee?Neutral "The <a>CDC</a> has resources, too. Look it up on the internet. Students moving in from different places might need to do different steps to get their records." 
 Mrslee?Smiling "Different states and different countries use different systems, but we often find help online."
 
 

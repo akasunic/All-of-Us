@@ -34,7 +34,7 @@ Mrslee?Neutral "When he visit, we always cook together. So I wait for dinner. I 
 ==ReadyToSolve==
 Mrslee?Smiling "What do I do about my health and good future health?" 
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait, lemme come back!
   -> TempGoodbye
@@ -50,8 +50,7 @@ Mrslee?Smiling "What do I do about my health and good future health?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+
   
 ==Option1==
 # correct
@@ -82,7 +81,7 @@ Mrslee?Smiling "I never want Eddie to feel stress about appointments. So scared,
 -> Followup42
 
 ==Followup42==
-Mrslee?Neutral "Dr. Lee did not share his information, and did not tell me about high blood pressure or heart disease. I feel sad and angry. I did not know."
+Mrslee?Neutral "Dr. Lee did not share his information, and did not tell me about <a>high blood pressure</a> or <a>heart disease</a>. I feel sad and angry. I did not know."
 Mrslee?Smiling "I want to know my health business!"
 
 * You are making great strides! 
@@ -102,13 +101,7 @@ Mrslee?Neutral "I understand... I will continue to think about my health. And I 
   -> END
 
 ==TempGoodbye==
-Mrslee?Neutral "I feel excite to hear your suggestion!"
+Mrslee?Neutral "I want to hear your suggestion!"
 
-* Give me a bit, Mrs Lee
-  -> END
-
-==BadSolution==
-Mrslee?Neutral "Thank you, {player_name}."
-
-+ No problem!
-  -> END
+* Give me a moment, Mrs Lee. I'll be right back.
+  -> PuzzleInterface

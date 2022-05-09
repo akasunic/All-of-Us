@@ -19,7 +19,7 @@ Mrcalindas?Smiling "Come here, {player_name}! I want to thank you. Paz and I rea
 ==Chat1==
 Mrcalindas?Smiling "I think she and Mrs. Lee may take over the community center!"
 
-Mrcalindas?Smiling "When I suggested <a>aerobics</a>, she was very excited. I helped her sign up for a senior weightlifting class too." 
+Mrcalindas?Smiling "When I suggested <a>aerobics</a>, she was very excited. I helped her sign up for a senior <a>weightlifting</a> class too." 
 
 * Weightlifting?! I didn't know we even had weightlifting classes
   -> Chat2

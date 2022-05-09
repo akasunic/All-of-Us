@@ -1152,10 +1152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9270c214e7280405e90e0f5f609c9a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TalkBubble: {fileID: 1999629998}
-  TalkBubbleText: {fileID: 358443649}
-  TalkBubble2: {fileID: 141395019}
-  TalkBubble2Text: {fileID: 434331374}
   Background: {fileID: 1027748044}
   TabBar: {fileID: 1270086360}
   NPC: {fileID: 1961083240}
@@ -1775,7 +1771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84c629f1d86ca490988c13ee7c8a0ebb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f0f5d9b87bab4e4eaa02ee5d746e06b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4009,7 +4005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1999629999
 RectTransform:
   m_ObjectHideFlags: 0

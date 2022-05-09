@@ -18,9 +18,9 @@ Elisa?Neutral "Hey, {player_name}! What's up?"
 -> QuestIntro
 
 ==Chat1==
-Elisa?Smiling "I was hoping I could run something past you." 
+Elisa?Smiling "I was hoping I could ask you something." 
 
-Elisa?Neutral "My little brother was just assessed for ADHD - Attenion Deficit Hyperactivity Disorder. Do you know anything about it?"
+Elisa?Neutral "My little brother was just assessed for <a>ADHD</a> - Attenion Deficit Hyperactivity Disorder. Do you know anything about it?"
 
 Elisa?Neutral "My folks have it in their head that this means the school thinks he's a troublemaker, and they're worried they've done something wrong."
 
@@ -32,7 +32,7 @@ Elisa?Neutral "My folks have it in their head that this means the school thinks 
 ==Chat2==
 Elisa?Neutral "I think they know that, but it's hard for them not to worry. They've made so many sacrifices, and lost so much for us to have the best chances in life."
 
-Elisa?Neutral "hashtag first generation concerns, right? Gotta live up to everything that got us here."
+Elisa?Neutral "<a>hashtag</a> <a>first generation</a> concerns, right? Gotta live up to everything that got us here."
 
 Elisa?Neutral "The paperwork the school sent home was very general; there's a meeting next week, and I want to help them understand." 
 
@@ -44,7 +44,7 @@ Let me go ask some questions and I'll come back with more insight!
 -> QuestIntro
 
 ==Chat3==
-Elisa?Smiling "I knew I could bring this up with you, and you wouldn't panic. Thank you, {player_name}."
+Elisa?Smiling "I knew I could bring this up with you, and you would take me seriously. Thank you, {player_name}."
 
 Elisa?Smiling "Just saying it out loud makes me feel better. I sort of wonder if I don't have ADHD too; the paperwork says it runs in families." 
 
@@ -53,7 +53,7 @@ Elisa?Smiling "Just saying it out loud makes me feel better. I sort of wonder if
 ==QuestIntro==
 Elisa?Smiling "I guess I have two questions, really."
 
-Elisa?Neutral "How do I support my brother as much as possible, but also, the whole thing makes me wonder if I should do an assessment."
+Elisa?Neutral "How do I support my brother as much as possible, but also, the whole thing makes me wonder if I should do an <a>assessment</a>."
 
 Elisa?Neutral "With it running in families, and some of the material hitting pretty close to home. I feel like knowing more about ADHD, in general, would help me make sense of everything."
 
@@ -65,7 +65,7 @@ Elisa?Neutral "With it running in families, and some of the material hitting pre
 
 ==QuestDetails1==
 
-Elisa?Neutral "Obviously, I don't want to say anything about possibly getting an assessment of my own to my folks until I have my head on straight. They're already worried about so much." 
+Elisa?Neutral "Obviously, I don't want to say anything about possibly getting an assessment of my own to my folks until I have my thoughts organized. They're already worried about my brother." 
 
 * I got it, Elisa! I'll be discrete.
 -> QuestAcceptance

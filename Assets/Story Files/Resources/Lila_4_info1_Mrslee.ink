@@ -15,7 +15,7 @@ Mrslee?Smiling "Hi {player_name}. How are you today?
 -> Chat1
 
 ==Chat1==
-Mrslee?Smiling "I am eating lentil soup that Giancarlo made especially for me. It is very good! Perfect for a nice day out like today."
+Mrslee?Smiling "I am eating lentil soup that Giancarlo made especially for me. It is very good! Perfect for a day like today."
 * That sounds delicious! I’ll have to ask him for the recipe!
 -> Chat2
 * What a good lunch! I was wondering if I could ask you for some help?

@@ -36,15 +36,15 @@ Lila?Smiling "I’m a bit more of a homebody, but there’s no one quite as adve
 
 == QuestIntro ==
 Lila?Neutral "Hey, along those lines, I started doing some research on some of my own symptoms. I learned about something called <a>rheumatoid arthritis</a>."
-Lila?Neutral "Can I talk this out with you a little bit? I'm only just learning about autoimmune diseases."
+Lila?Neutral "Can I talk this out with you a little bit? I'm only just learning about <a>autoimmune diseases</a>."
 * I know some, but can you tell me more?
 -> QuestOverview
 
 == QuestOverview ==
-Lila?Neutral "Honestly, it’s a little sensitive to talk about so I don’t know a whole lot just yet, but RA is a chronic autoimmune disorder. It’s when your body’s immune system attacks your joints."
+Lila?Neutral "I feel a little sensitive talking about it because I don’t know a whole lot yet, but RA is a chronic autoimmune disorder. It’s when your immune system attacks your joints."
 Lila?Neutral "I don’t know if it’s <a>genetic</a>, but apparently it does appear commonly in certain families."
-Lila?Neutral "I’d really like to ask my mother about her health experiences and our family medical history, but I’m nervous to reach out to her in that way."
-Lila?Neutral "It’s just more difficult when it’s so close to home and <a>advocating</a> for myself in this manner is really new. I still have a lot to learn about myself and her."
+Lila?Neutral "I’m nervous to reach out to her about something that might be wrong; I don't want to worry her over nothing."
+Lila?Neutral "It’s just more difficult when it’s so close to home and <a>advocating</a> for myself in this manner is really new. I still have a lot to learn."
 * Do you know if she’s had symptoms of autoimmune disorders before?
 -> QuestDetails1
 * It’s really important to know these things so you can inform yourself and doctors.
@@ -52,7 +52,8 @@ Lila?Neutral "It’s just more difficult when it’s so close to home and <a>adv
 
 ==QuestDetails1==
 Lila?Neutral "I really don’t know! And I'm not entirely certain how to ask."
-Lila?Neutral "My mom is a very open person, but that doesn’t make it easier to have these conversations even as an adult. It’s neither of our faults, we just haven’t gotten there yet."
+Lila?Neutral "My mom is very open about concepts. She will talk about the science all day long. But she's also very private and doesn't like talking about herself."
+Lila?Neutral "I guess I'm feeling silly for not asking more questions or paying more attention before now."
 Lila?Neutral "I really want to be better informed so I can make sure my doctor knows exactly what she needs to help me get the right care."
 * Do you have any family medical records?
 ->  QuestDetails2

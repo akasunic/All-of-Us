@@ -18,7 +18,7 @@ Rashad?Smiling "Hey {player_name}! How's it going?"
 -> QuestIntro
 
 ==Chat1==
-Rashad?Neutral "I've been trying to <a>kickstart</a> some new programs, but the paperwork never ends. It kinda feels like I'm stuck in quicksand."
+Rashad?Neutral "I've been trying to <a>kickstart</a> some new programs, but the paperwork never ends. It kinda feels like I'm <a>stuck in quicksand</a>."
 Rashad?Neutral "I don't mean to complain, but this week, it all feels pretty overwhelming."
 
 * Yikes. That sounds tough. 
@@ -28,13 +28,13 @@ Rashad?Neutral "I don't mean to complain, but this week, it all feels pretty ove
 
 ==Chat2==
 Rashad?Neutral "I know, right? Between us, the board isn't always emphathetic when it comes to what the community actually needs. There's a big disconnect, there."
-Rashad?Neutral "On top of that, the library has been pretty hectic these days."
+Rashad?Neutral "On top of that, the Library has been pretty hectic these days."
 
 * That's a lot to manage. Is there any way I can help? 
 -> QuestIntro
 
 ==QuestIntro==
-Rashad?Smiling "Well, now that you mention it. The library has been super <a>slammed</a> lately, and I'm looking to fill that open position in the <a>Young Adult</a> Literature section..."
+Rashad?Smiling "Well, now that you mention it. The Library has been super <a>slammed</a> lately, and I'm looking to fill that open position in the <a>Young Adult</a> Literature section..."
 
 * Hmmm, I may be able to help. Can you tell me more?
 -> QuestDetails1
@@ -42,8 +42,8 @@ Rashad?Smiling "Well, now that you mention it. The library has been super <a>sla
 -> QuestAcceptance
 
 ==QuestDetails1==
-Rashad?Neutral "Sure! It's perfect for someone who knows young adult literature and children's books. Ideally, someone with great people skills who doesn't mind <a>multi-tasking</a>."
-Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a tall order!"
+Rashad?Neutral "Sure! It's perfect for someone who knows <a>young adult literature</a> and children's books. Ideally, someone with great people skills who doesn't mind <a>multi-tasking</a>."
+Rashad?Neutral "Ugh. Just saying that out loud, it sounds like a big request!"
 
 * It doesn't sound that bad! Can you tell me more about the position? 
 -> QuestDetails2
@@ -70,7 +70,8 @@ Rashad?Neutral "I'd love someone who could take over storytime on Saturdays. We 
 -> QuestAcceptance
 
 ==OptionalQuestDetails2==
-Rashad?Neutral "I mean, it'd be perfect for a student. They can study when they staff the help desk. Oh, they'll need a solid <a>resume</a>, too."
+Rashad?Neutral "I mean, it would be perfect for a student. They can study between questions at the <a>help desk</a>, and I can work around their class schedule."
+Rashad?Neutral "They'll need a solid <a>resume</a> and at least one <a>personal reference</a>. A teacher or community leader would be fine."
 
 * That's reasonable. You can count on me, Rashad!
 -> QuestAcceptance
@@ -85,7 +86,7 @@ Rashad?Smiling "I really appreciate your help, {player_name}!"
 -> Goodbye
 
 ==Goodbye==
-Rashad?Smiling "If we can get even a single application, it would mean the world." 
+Rashad?Smiling "If we can get even a single application, it would mean a lot to me." 
 Rashad?Smilng "Cheryl and I are hoping to take the kids on a roadtrip during the next school break. Having someone trained would make that less stressful." 
 Rashad?Smiling "I need to head out but I'll catch you later?"
 

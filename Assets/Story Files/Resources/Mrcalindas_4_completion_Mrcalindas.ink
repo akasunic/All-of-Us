@@ -40,7 +40,7 @@ Mrcalindas?Neutral "Really? Paz and I were on the phone with Jessica last night,
 
 Mrcalindas?Neutral "Oh? Rashad and Lila are both very thoughtful. I would like to know what they think."
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, before I commit, let me check my journal again.
   -> TempGoodbye

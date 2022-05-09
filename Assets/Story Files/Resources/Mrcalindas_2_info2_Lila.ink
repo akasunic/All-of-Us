@@ -23,7 +23,7 @@ Lila?Smiling "Ooo. Nah - I just checked out these new picture books for my class
   -> Explain1
 
 ==Chat2==
-Lila?Smiling "Chili, eh? I have a great recipe for vegan chili if you ever want to try it. It's so easy, the kids in my class make it with me."
+Lila?Smiling "Chili, eh? I have a great recipe for <a>vegan</a> chili if you ever want to try it. It's so easy, the kids in my class make it with me."
 
 * I may have to take you up on that. Hey, can I ask a question?
   -> Explain1
@@ -38,7 +38,7 @@ Lila?Neutral "Sure, {player_name}. What's going on?"
   -> Explain2
 
 ==Explain2==
-Lila?Neutral "I advocated for Mrs. Lee to build a volunteer position. She's really wonderful with the children, and they love her." 
+Lila?Neutral "I recommended that we create a volunteer position just for Mrs. Lee. She's really wonderful with the children, and they love her." 
 
 Lila?Smiling "I don't know which one of us is getting the most benefit; I love having her help!"
 
@@ -55,7 +55,7 @@ Lila?Smiling "Oh there's lots of benefits. You know, seniors can suffer from dep
 
 Lila?Smiling "Some people do really well with a pet to care for. Other people prefer activities that get them out of the house."
 
-Lila?Smiling "Not just that, but volunteering can also increase mental cognition. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
+Lila?Smiling "Not just that, but volunteering can also increase <a>mental cognition</a>. Seniors can keep their minds active and sharp, just like Mrs. Lee!"
 
 * Wow. I think we all wish we were as sharp as Mrs. Lee!
   -> Suggestion2
@@ -68,7 +68,7 @@ Lila?Smiling "Not just that, but volunteering can also increase mental cognition
 # notification Lila_Day 2_Volunteering can combat isolation and loneliness_Mrcalindas2-4 
 
 
-Lila?Smiling "Well, I mentioned depression; isolation and loneliness are real issues for seniors, especially after losing a spouse. That's one thing volunteering can help with."
+Lila?Smiling "Well, I mentioned depression; <a>isolation</a> and loneliness are real issues for seniors, especially after losing a <a>spouse</a>. That's one thing volunteering can help with."
 
 Lila?Smiling "One of the things that keeps Mrs. Lee sharp is that she has things to look forward to, and people to do them with. Volunteering is part of that!"
 

@@ -8,7 +8,7 @@ VAR new_quest = ""
 
 ==intro==
 
-Elisa?Smiling "Hi {player_name}! How have you been? Are you curious to hear how my succulent plants are doing? If not, I'm going to tell you anyway."
+Elisa?Smiling "Hi {player_name}! How have you been? Are you curious to hear how my <a>succulent</a> plants are doing? If not, I'm going to tell you anyway."
 
 * Hey Elisa! I’m doing well. Tell me about the succulents. 
 -> Chat1
@@ -26,7 +26,7 @@ Elisa?Smiling "Plus, when I transfer, I won't have the Nature Club to get me by,
 -> Explain1
 
 ==Chat2==
-Elisa?Smiling "Caring for plants is a great stress buster. This year, we had a stress reliever fair during finals week and I spent hours making a terrarium - it was perfect."
+Elisa?Smiling "Caring for plants is great stress relief. This year, we had a stress reliever event during finals week and I spent hours making a <a>terrarium</a> - it was perfect."
 Elisa?Smiling "It’s a relaxing activity that makes me remember my abuela, and the fun times we shared. She loved making terrariums." 
 
 * Your joy is really great to see. Your grandma would be happy! 
@@ -36,7 +36,7 @@ Elisa?Smiling "It’s a relaxing activity that makes me remember my abuela, and 
 
 ==Chat3==
 Elisa?Smiling "I really miss my abuela, I learned so much from her. I remember when I taught her how to use her first iPhone." 
-Elisa?Smiling "Tech duty with the grandparents, you know how it is. Her first selfie was fire, honestly."
+Elisa?Smiling "Tech duty with the grandparents, you know how it is. Her first selfie <a>was fire</a>, honestly."
 
 * Speaking of selfies, Elisa, I think you might be the person I need. 
 -> Explain1
@@ -73,7 +73,7 @@ Elisa?Smiling "I learned a lot about how to cope from her; she was just so gentl
 
 Elisa?Smiling "It’s also nice to have someone besides your parents to lean on for support."
 
-Elisa?Smiling "Plus, we taught each other a lot of interesting skills. My pupusas would not be what they are today, without her."
+Elisa?Smiling "Plus, we taught each other a lot of interesting skills. My <a>pupusas</a> would not be what they are today, without her."
 
 * Oh, Elisa! I'm so glad you had that bond!
 -> Suggestion2
@@ -96,7 +96,7 @@ Elisa?Smiling "If you need a picture hung? I can hang it for you; that picture i
 -> Goodbye
 
 ==Goodbye==
-Elisa?Smiling "I know I'm pretty swamped, but tell Rashad that I could help with this at work if he wants."
+Elisa?Smiling "I know I'm pretty swamped, but tell Rashad that I could help with this a little bit if he wants."
 Elisa?Smiling "This program sounds super promising. I would love to be able to connect with another senior. I’m sure other students feel the same!"
 Elisa?Smiling "But, I need to get home and finish repotting my cacti before it gets dark. I'll see you soon?"
 

@@ -8,7 +8,7 @@ VAR new_quest = ""
 ==intro==
 Lila?Smiling "{player_name}! What’s the story, morning glory?"
 
-* Oh you the usual- enjoying the breeze, smelling the roses!
+* Oh just the usual- enjoying the breeze, smelling the roses!
 -> Chat1
 * Hey! I asked around a little bit for you!
 -> ReadyToSolve
@@ -17,9 +17,9 @@ Lila?Smiling "{player_name}! What’s the story, morning glory?"
 Lila?Smiling "Hey, I love to hear that you’re taking it easy."
 Lila?Smiling "Speaking of roses, I recently started to garden a little bit in my freetime and it is sooo relaxing."
 
-* That’s awesome, Lila! Hey, I have some things to tell you!
+* That’s awesome, Lila! Hey, I have some things to share!
 -> ReadyToSolve
-* Woah! That’s so cool- Flowers? Veggies? Any homegrown salads I can taste test?
+* Woah! That’s cool- Flowers? Veggies? Homegrown salads I can taste test?
 -> Chat2 
 
 ==Chat2==
@@ -33,7 +33,7 @@ Lila?Smiling "It’s still worth it."
 ==ReadyToSolve==
 Lila?Smiling "Oh my goodness! Thank you, what did you find out?"
 
-* Let me tell you all about it!
+* Here are my suggestions...
 -> PuzzleInterface
 * Hold on.. Let me go think a bit more.
 -> TempGoodbye
@@ -89,7 +89,5 @@ Lila?Smiling "Thank you, {player_name}. I feel like making friends has just gott
 ==TempGoodbye==
 Lila?Neutral "Take your time."
 
-* I’ll be back!
--> END
-* See ya!
--> END
+* OK, Lila. Hold tight!
+  -> PuzzleInterface

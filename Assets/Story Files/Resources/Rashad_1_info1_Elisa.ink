@@ -11,14 +11,14 @@ Elisa?Smiling "Hi {player_name}, it's so nice to see you! How's your day going?"
 
 * Pretty great! How are you, Elisa? 
  -> Chat1
-* It's nice to see you too! I've been pretty good. How about yourself? 
+* It's nice to see you too! I'm good. How about yourself? 
 -> Chat1
 
 ==Chat1==
 Elisa?Smiling "I'm well! I have a lot going on. So many moving pieces to get in order before the next school year, you know?"
 Elisa?Smiling "The transition from Bloomwood Community College to a state school is exciting, but stressful too! What's new with you?"
 
-* It sounds like you have a lot on your plate. 
+* It sounds like you have a lot happening! 
 -> Chat2
 * I totally get it. Hey, there's something I wanted to ask you.  
 -> Explain1
@@ -40,28 +40,28 @@ Elisa?Smiling "I'm nothing if not resourceful. Some combination of patience and 
 -> Explain1
 
 ==Explain1==
-Elisa?Neutral "What's up? I'm all ears."
+Elisa?Neutral "What's up? I'm <a>all ears</a>."
 
-* There's a part-time opening at the library. I think you're a perfect fit!  
+* There's a part-time opening at the Library. I think you're a perfect fit!  
   -> Explain2
-* The library is looking for an extra set of hands in the YA section. Interested?
+* The Library is looking for an extra set of hands in the YA section. Interested?
  -> Explain2
 
 ==Explain2==
-Elisa?Smiling "That's definitely up my alley! I was afraid I'd end up waiting tables again... I'm so, so bad at waiting tables."
+Elisa?Smiling "I'm definitely interested! I was afraid I'd end up waiting tables again... I'm so, so bad at waiting tables."
 Elisa?Smiling "I applied to the plant nursery, but they didn't have any openings; it's probably just as well. I don't need to be bringing home every nearly-dead succulent each week."
-Elisa?Smiling "I love the library, and I really like Rashad. It sounds like fun! I'd love to learn more."
+Elisa?Smiling "I love the Library, and I really like Rashad. It sounds like fun! I'd love to learn more."
 
-* Rashad posted a job listing on the library's website!
+* Rashad posted a job listing on the Library's website!
   -> Suggestion1
 
 ==Suggestion1==
 
-~ notification = "Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1"
-# notification Elisa_Day 1_Elisa will polish up her resume and apply through the library website_Rashad1-1
+~ notification = "Elisa_Day 1_Elisa will polish up her resume and apply through the Library website_Rashad1-1"
+# notification Elisa_Day 1_Elisa will polish up her resume and apply through the Library website_Rashad1-1
 
 Elisa?Smiling "Do they hire students? My school schedule is pretty hectic, but I'll definitely apply. Plus, I love YA fiction." 
-Elisa?Smiling "I will polish up my resume and apply as soon as possible! Is resume writing something the library offers a workshop in?"
+Elisa?Smiling "I will polish up my resume and apply as soon as possible! Is resume writing something the Library offers a workshop in?"
 
 * I think a student is exactly what Rashad is looking for.
 -> Suggestion2

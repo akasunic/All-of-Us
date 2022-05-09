@@ -23,7 +23,7 @@ Rashad?Neutral "Wow, that amazing news!"
 Rashad?Neutral "Elisa’s knowledge of young adult literature would be invaluable."
 Rashad?Neutral "...and Mrs. Lee is pretty well-connected so she’s been a huge help on many different occasions. I’m listening?"
 
-* Here you go... 
+* Here are my suggestions...
 -> PuzzleInterface
 * Actually, let me check my notes again.  
 -> TempGoodbye
@@ -98,7 +98,7 @@ Rashad?Smiling "{player_name}, you really made my day. I might get that vacation
 Rashad?Neutral "Okay,  I’ll be here!
 
 * I know you will! Sit tight!
-  -> END
+  -> PuzzleInterface
 
 
 

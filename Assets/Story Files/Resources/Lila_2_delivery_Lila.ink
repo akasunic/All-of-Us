@@ -80,7 +80,7 @@ Lila?Neutral "When I was younger, I would go with my mom to her doctor’s appoi
 Lila?Neutral "I remember those long sign-in sheets with lots of questions about your family history."
 Lila?Neutral "My mom was open about everything and would have answered any question I had. I guess since she retired, I've just been avoiding the whole thing."
 Lila?Neutral "Having that conversation is pretty daunting for me now."
-* I can do some <a>legwork</a> and ask others about this if you’d like."
+* I can do some research and ask others about this if you’d like."
 -> QuestAcceptance
 *  Do you want me to try and look into some of this for you? 
 -> QuestAcceptance

@@ -42,7 +42,6 @@ public static class GameStrings {
                 {"party", "PARTY!"},
 
                 // Menus, Buttons, and Map
-                {"comm_manager", "Community Manager"},
                 {"day_summary", "Day Summary"},
                 {"continue", "CONTINUE"},
                 {"new_game", "NEW GAME"},
@@ -54,7 +53,7 @@ public static class GameStrings {
                 {"save", "SAVE"},
                 {"go_to_sleep", "GO TO SLEEP"},
                 {"current_task", "Current Task"},
-                {"meet", "Meet"},
+                {"visit", "Visit"},
                 {"good_morning_message", "Good morning! Another beautiful day in Bloomwood."},
                 {"search_term", "Search a term..."},
                 
@@ -122,8 +121,9 @@ public static class GameStrings {
                 {"first_name", "First Name"},
                 {"choose_one", "Choose One"},
                 {"welcome_title", "Welcome to Bloomwood"},
-                {"welcome_text", "Congratulations! Before you start your new role as our Community Manager, tell us a little bit about yourself"},
+                {"welcome_text", "Congratulations! Before you start your new role as our Community Advocate, tell us a little bit about yourself"},
                 {"name_taken", "Name is taken"},
+                {"name_invalid", "Name is invalid"},
                 
                 // Languages
                 {"english", "English"},
@@ -176,8 +176,8 @@ public static class GameStrings {
                 {"end_of_quest_calindas_4_sticker1", "Inclusive activities account for mealtimes, nap times, and other kid-centric concerns."},
                 {"end_of_quest_calindas_4_sticker2", "It's important to understand that different processing styles aren't 'misbehaving'. Including children means including noise and sometimes mess."},
 
-                {"end_of_quest_lila_1_sticker1", "Look within your community for resources to support your project; what you need might already be available at low or no cost."},
-                {"end_of_quest_lila_1_sticker2", "Open communication about LGBTQ+ related topics enables vulnerable community members to connect with resources that would remain concealed from them otherwise."},
+                {"end_of_quest_lila_1_sticker1", "Lila might find low or no cost solutions for launching the mentorship group within the community."},
+                {"end_of_quest_lila_1_sticker2", "By being vulnerable herself, Lila is making it possible for other people to connect with vital resources."},
                 {"end_of_quest_lila_2_sticker1", "Connecting with other Black women might give Lila the support she's looking for."},
                 {"end_of_quest_lila_2_sticker2", "Utilize online resources, including provider biographies and community directories of care providers."},
                 {"end_of_quest_lila_3_sticker1", "Community institutions like libraries host affinity groups and free community events."},
@@ -195,7 +195,7 @@ public static class GameStrings {
                 {"end_of_quest_elisa_4_sticker2", "Family counseling can help families learn communication skills together; counseling doesn’t need to wait until there is a problem."},
 
                 // Can't Talk Dialog
-                {"cant_talk_dialog_sorry", "Sorry"},
+                {"cant_talk_dialog_sorry", "Sorry "},
                 {"cant_talk_dialog_rashad", ", I’m busy at the moment, let’s catch up later?"},
                 {"cant_talk_dialog_elisa", ", I’m busy at the moment, let’s catch up later?"},
                 {"cant_talk_dialog_calindas", ", I’m busy at the moment, let’s catch up later?"},
@@ -206,7 +206,7 @@ public static class GameStrings {
                 {"tutorial_startweek_yellowtitle", "What should I do?"},
                 {"tutorial_startweek_whitetitle", "Who should I chat with first?"},
                 {"tutorial_startweek_whitetext_1", "Welcome, "},
-                {"tutorial_startweek_whitetext_2", ", New Community Manager! \n Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems."},
+                {"tutorial_startweek_whitetext_2", ", New Community Advocate! \n Click on one of our Bloomwood Residents to learn more about them. You will spend the next week really digging into what they need, and figuring out how best to help them solve their problems."},
                 {"tutorial_startweek_buttontext", "GOT IT"},
 
                 {"dictionary_vn_yellowtitle", "Tools and Resources"},
@@ -219,6 +219,7 @@ public static class GameStrings {
                 {"speed_vn_whitetitle", "Wanna speed up?"},
                 {"speed_vn_whitetext_1", "You’re about to have your first conversation with "},
                 {"speed_vn_whitetext_2", ". To start chatting, click inside the white box. Select a response to keep the dialogue going!"},
+                {"speed_vn_whitetext_3", "Click the text box or hit your enter key"},
                 {"speed_vn_buttontext", "GOT IT"},
 
                 {"task_map_yellowtitle", "What Next?"},
@@ -228,7 +229,7 @@ public static class GameStrings {
 
                 {"neighbors_map_yellowtitle", "What should I do?"},
                 {"neighbors_map_whitetitle", "Talk to your Neighbors"},
-                {"neighbors_map_whitetext", "The map shows you all the important places around town. Hover over a location to see who is there right now. \n Click on a neighbor to start a conversation. Each neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas."},
+                {"neighbors_map_whitetext", "The map shows you all the important places around town. Hover over a location to see who is there right now.\n\nClick on a neighbor to start a conversation.\n\nEach neighbor has specific expertise, and will be able to help with specific questions. Talk to people around town for advice and ideas."},
                 {"neighbors_map_buttontext", "NEXT"},
 
                 {"phone_map_yellowtitle", "What should I do?"},
@@ -253,7 +254,7 @@ public static class GameStrings {
         },
         {"Spanish", new Dictionary<string, string>
             {
-                {"new_game", "New Game"},
+                {"new_game", "new_game"},
             }
         }
     };

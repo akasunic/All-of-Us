@@ -16,18 +16,18 @@ Mrcalindas?Smiling "Ah, {player_name}! I was just talking about you. How are you
 
 ==Chat1==
 
-Mrcalindas?Smiling "You see, a colleague was telling me how much he worries that his kids hate to cook. I was explaining to them that if you can learn, they can learn." 
+Mrcalindas?Smiling "You see, a coworker was telling me how much he worries that his kids hate to cook. I was explaining to them that if you can learn, they can learn." 
 
 * I... well, thanks? I think? 
   -> Chat2
-* I have the best teacher, Mr. Calindas. Say, can I ask for advice about medical records?
+* I have the best teacher! Can I ask for advice about medical records?
   -> Explain1
 
 ==Chat2==
 
-Mrcalindas?Smiling "Oh. I didn't mean that as a bad thing. Just you didn't know a cucumber from a zucchini. And you took to the kitchen with only a small crash."
+Mrcalindas?Smiling "Oh. I did not mean that as a bad thing. Just you did not know a cucumber from a zucchini. And you took to the kitchen with only a few small issues."
 
-Mrcalindas?Smiling "At least while they're at school and have access to the dining hall, his kids won't get scurvy. I hope."
+Mrcalindas?Smiling "At least while they're at school and have access to the dining hall, his kids won't end up <a>malnourished</a>. I hope."
 
 Mrcalindas?Smiling "I reassured him that it's normal for kids to have different interests, and I'm happy to help when someone decides to explore cooking or running."
 
@@ -48,9 +48,9 @@ Mrcalindas?Smiling "I suspect that isn't why you're here, though."
 
 ==Explain1==
 
-Mrcalindas?Neutral "If you are a patient at the clinic, all of your medical records - including immunizations - are kept in the patient portal. Visit the website to create an account."
+Mrcalindas?Neutral "If you are a patient at the Health Clinic, all of your medical records - including immunizations - are kept in the <a>patient portal</a>. Visit the website to create an account."
 
-Mrcalindas?Neutral "With your name, date of birth, and either a social security number, or a patient ID number, you can securely access everything we have on file about you." 
+Mrcalindas?Neutral "With your name, date of birth, and either a <a>social security number</a>, or a patient ID number, you can securely access everything we have on file about you." 
 
 Mrcalindas?Neutral "Is that helpful?"
 
@@ -63,7 +63,7 @@ Mrcalindas?Neutral "Is that helpful?"
 
 Mrcalindas?Neutral "Good catch. That would depend on her prior care provider, some offer their own portals."
 
-Mrcalindas?Smiling "If not, though, she could call her old physician and ask for a physical copy to be mailed. Her parents should know who her pediatrician was."
+Mrcalindas?Smiling "If not, though, she could call her old <a>physician</a> and ask for a physical copy to be mailed. Her parents should know who her pediatrician was."
 
 Mrcalindas?Neutral "Sometimes replacing lost records requires a little detective work.
 
@@ -95,13 +95,13 @@ Mrcalindas?Neutral "Vaccination records are important for a variety of reasons. 
 # notification Mrcalindas_Day 2_If your immunization records are lost, you might need to repeat vaccines. There are also blood tests that can confirm immunity to certain diseases_Elisa2-4 
 
 
-Mrcalindas?Smiling "Not at all. There are two options for recreating lost immuniation records - a blood test to check for immunity, or just getting the vaccine again." 
+Mrcalindas?Smiling "Not at all. There are two options for recreating lost immunization records - a blood test to check for immunity, or just getting the vaccine again." 
 
-Mrcalindas?Neutral "Depending on her insurance, it might be less expensive just to repeat the vaccine. There's very little risk involved - a few side effects, like feeling run down for a day or maybe a little fever." 
+Mrcalindas?Neutral "Depending on her <a>insurance</a>, it might be less expensive just to repeat the vaccine. There's very little risk involved - a few <a>side effects</a>, like feeling run down for a day or maybe a little fever." 
 
-Mrcalindas?Smiling "The clinic offers access to reduced price vaccines; once she knows which ones she needs, we can figure out what's covered by insurance."
+Mrcalindas?Smiling "The Health Clinic offers access to reduced price vaccines; once she knows which ones she needs, we can figure out what's covered by insurance."
 
-Mrcalindas?Smiling "She could also try a pharmacy for vaccines she needs to pay for out of pocket." 
+Mrcalindas?Smiling "She could also try a pharmacy for vaccines she needs to pay for <a>out of pocket</a>." 
 
 Mrcalindas?Smiling "I would recommend researching first, but in general, getting a vaccine from a pharmacist can be an affordable option."
 

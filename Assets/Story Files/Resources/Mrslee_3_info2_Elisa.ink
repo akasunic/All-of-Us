@@ -14,7 +14,7 @@ Elisa?Smiling "Hey {player_name}."
   -> Chat1
 
 ==Chat1==
-Elisa?Smiling "I am taking a moment to collect myself. My mom just sent a meme in the family group chat. I'm shocked. It was good!"
+Elisa?Smiling "I am taking a moment to collect myself. My mom just sent a <a>meme</a> in the family group chat. I'm shocked. It was good!"
 Elisa?Smiling "She's starting to get this whole internet humor thing! I wasn't prepared."
 
 * I'm always shocked when parents are good at the internet!

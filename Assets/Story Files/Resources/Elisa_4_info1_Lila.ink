@@ -27,9 +27,9 @@ Lila?Smiling "Next thing I knew, it was inside participating loudly in storytime
 ==Chat2==
 
 Lila?Smiling "I stopped story time. It took some careful questions, but I established that our guest came in from the yard, and I returned them to the yard." 
-Lila?Smiling "Then, we had a conversation about observing wildlife at a respectful, safe distance."  
+Lila?Smiling "We had a conversation about observing wildlife at a respectful, safe distance. We went back to story time, then we went outside to frog-watch."  
 
-Lila?Smiling "We went back to story time, then we went outside to frog-watch. If I know anything about kids, I know that if I’d just banned pocket-frogs, there would have been backpack frogs, or worse."
+Lila?Smiling "If I know anything about kids, I know that if I’d just banned pocket-frogs, there would have been backpack frogs, or worse."
 
 * Goodness, Lila! They really do test you, don’t they? 
   -> Chat3
@@ -51,7 +51,7 @@ Lila?Smiling "I bet you came in on a mission, though. You always have great ques
 
 Lila?Neutral "Alright. What’s today’s mission, friend?" 
 
-* I’m helping a friend who has an appointment at the clinic to discuss birth control.
+* I’m helping a friend who has an appointment to discuss birth control.
   -> Suggestion1
 
 ==Suggestion1==
@@ -59,15 +59,15 @@ Lila?Neutral "Alright. What’s today’s mission, friend?"
 # notification Lila_Day 4_Current guidelines recommend a pelvic exam and pap smear every 3 years unless there is reason for more frequent screenings_Elisa4-1 
 
 
-Lila?Neutral "Oh, that’s big! I feel like the clinic offering judgment free support for everybody's reproductive health is such a positive thing for the community!"
+Lila?Neutral "Oh, that’s big! I feel like the Health Clinc offering judgment free support for everybody's reproductive health is such a positive thing for the community!"
 
 Lila?Smiling "They offer reproductive and sexual health care for people of all genders, not just women."  
 
-Lila?Smiling "I’ve seen my gyn at the clinic for testing for Sexually Transmitted Infections – or STIs, for breast cancer screenings, for birth control." 
+Lila?Smiling "I’ve seen my <a>gynecologist</a> at the clinic for testing for <a>Sexually Transmitted Diseases</a> – or STDs, for <a>breast cancer screenings</a>, for birth control." 
 
-Lila?Smilng "I even went with a guy friend who had a vasectomy done and needed a ride home."
+Lila?Smilng "I even went with a guy friend who had a <a>vasectomy</a> done and needed a ride home."
 
-Lila?Neutral "My doctor recommends a pelvic exam and a pap smear every 3 years, unless there’s a reason for more frequent screening."
+Lila?Neutral "My doctor recommends a <a>pelvic exam</a> and a <a>pap smear</a> every 3 years, unless there’s a reason for more frequent screening."
 
 Lila?Neutral "Do they know what sort of birth control they are asking about?"
 
@@ -87,7 +87,7 @@ Lila?Neutral "We always had pamphlets around the house about different birth con
 
 Lila?Neutral "A frank conversation with their doctor will help your friend weigh the pros and cons of different types of birth control, including side effects.." 
 
-Lila?Neutral "I tried a low-dose pill first, because they helped my mom with migraines. Turns out I’m terrible at taking a pill at the same time every day, which defeats the purpose."
+Lila?Neutral "I tried a low-dose <a>pill</a> first, because they helped my mom with <a>migraines</a>. Turns out I’m terrible at taking a pill at the same time every day, which defeats the purpose."
 
 * This is all really helpful. What else should she know?
   ->  Suggestion3
@@ -104,8 +104,8 @@ Lila?Neutral "I recommend asking for a rundown of all the possible options. Then
 
 Lila?Neutral "Be prepared to try different options if the first one doesn’t work for whatever reason."
 
-Lila?Smiling "Birth control comes in all varieties – everything from barrier protection – condoms, for example, which only come out when it matters..."
-Lila?Smiling "...to long-term solutions like an IUD – an intra-uterine device, which is inserted once and lasts up to 7 years."
+Lila?Smiling "Birth control comes in all varieties – everything from <a>barrier protection</a> – <a>condoms</a>, for example, which only come out when it matters..."
+Lila?Smiling "...to long-term solutions like an IUD – an <a>intra-uterine device</a>, which is inserted once and lasts up to 7 years."
 
 Lila?Smiling "Taking control of your reproductive choices means being clear-headed about what you want."
 

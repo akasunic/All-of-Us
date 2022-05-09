@@ -41,7 +41,7 @@ Lila?Smiling "This seems like a good stopping place, though. I'm about halfway. 
 Lila?Neutral "So..."
 Lila?Smiling "I’m creating an LGBTQIA+ <a>Mentorship Group</a> for LGBTQIA+ youth in our community."
 Lila?Neutral "Growing up, I always wanted something  where I could meet other people like me who had been through similar struggles."
-Lila?Neutral "I really wish I had known older LGBTQIA+ people to help me work through things."
+Lila?Neutral "I really wish I had known older <a>LGBTQIA+</a> people to help me work through things."
 Lila?Smiling "I wasn't alone, exactly. I had good friends, like Eddie, but I was thinking that maybe a community group with others might be a nice space for young LGBTQ+ people to have."
 Lila?Smiling "My mom did her best, but she's so <a>straight</a>. There's a lot she didn't understand."
 
@@ -49,7 +49,7 @@ Lila?Smiling "My mom did her best, but she's so <a>straight</a>. There's a lot s
 ->ExtraDetail
 
 ==ExtraDetail
-Lila?Smiling "Lesbian, Gay, Bisexual, Transgender, Questioning/Queer, Intersex, Assexual, and others."
+Lila?Smiling "<a>Lesbian<a>, <a>Gay</a>, <a>Bisexual</a>, <a>Transgender</a>, Questioning/<a>Queer</a>, <a>Intersex</a>, <a>Assexual</a>, and others."
 Lila?Smiling "It's a big umbrella and the acronym gets longer as we build better language to support people in their experience."
 Lila?Smiling "When I was younger, it was just LGBT. We've gotten so much more inclusive and aware!"
 
@@ -59,25 +59,27 @@ Lila?Smiling "When I was younger, it was just LGBT. We've gotten so much more in
  -> QuestOverview
 
 == QuestOverview ==
-Lila?Neutral "Right now, I’m trying to keep my scope limited, so I don’t disappoint anyone."
+Lila?Neutral "Right now, I’m trying to keep my focus limited, so I don’t disappoint anyone."
 Lila?Neutral "I’m feeling a little nervous about the first event. My overall goal is to encourage mentorship and build support systems within the local LGBTQIA+ community."
 Lila?Neutral "So many of us face similar struggles, and if this project can support just one teenager, this will be worthwhile."
 
 * What is your vision for the first event?
 -> Interaction
+* Lila! I can't imagine you disappointing anyone!
+-> Interaction
 
 ==Interaction==
 Lila?Neutral "I was thinking an ice-breaker event and a guest speaker to kick us off."
-Lila?Neutral "I’d like to do a group activity where people write down special things about themselves and we share anonymously to see that we aren't alone."
+Lila?Neutral "I’d like to do a group activity where people write down special things about themselves and we share anonymously to make the point that we aren't alone."
 Lila?Neutral "Hopefully seeing that, participants will feel safe to engage with the material and begin to open up."
 
-* Hmm, you’ll probably need presentation equipment. Can I help in any way?
+* Can I help in any way?
 -> Equipment
 * Do you know what support you need?
 -> Equipment
 
 ==Equipment==
-Lila?Neutral "I do! I feel like what I need most is help in two areas - general presentation tech, and securing a backup speaker." 
+Lila?Neutral "I have a list! I feel like what I need most is help in two areas - general presentation tech, and securing a backup speaker." 
 Lila?Neutral "I’m so busy worrying about the activities for during the meeting that if you could help with those two things, I’d feel worlds better."
 
 * This sounds fun! Did you have someone in mind for the speaker?
@@ -87,8 +89,10 @@ Lila?Neutral "I’m so busy worrying about the activities for during the meeting
 
 ==Speaker==
 Lila?Neutral "I found someone who works with the local <a>PFLAG</a> chapter, who I like a lot, but they’re really busy for the next few weeks."
-Lila?Neutral "I won't know until next week if they can help. If they aren’t available, I’ll need a backup." 
-Lila?Neutral "I’m looking for someone who can talk about the current state of LGBTQ+ rights. I’d also like to discuss how to support us and what it looks like to be an <a>ally</a> - to treat ally as a verb, not an identity."
+Lila?Neutral "PFLAG is a national group that supports the LGBTQIA+ community - and their friends and families."
+Lila?Neutral "I won't know until next week if this person can help. If they aren’t available, I’ll need a backup." 
+Lila?Neutral "I’m looking for someone who can talk about the current state of LGBTQIA+ rights." 
+Lila?Neutral "I’d also like to discuss how our families can support us and what it looks like to be an <a>ally</a> - to treat ally as a verb, not an identity."
 Lila?Neutral "I want to emphasize how important it is to have a community around you who cares for you - we all need people we can rely on."
 Lila?Neutral "A lot of LGBTQ+ youth don’t have that, but I think this space could become that. I’d like to work with the speaker to make a great first event that will bring people in!"
 Lila?Neutral "Do you think you can help?"

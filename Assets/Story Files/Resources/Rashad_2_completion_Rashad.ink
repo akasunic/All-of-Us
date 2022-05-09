@@ -33,7 +33,7 @@ Rashad?Neutral "Well, you'd help me sleep better if you made sure to wash your h
 ==ReadyToSolve==
 Rashad?Neutral "That's great to hear, {player_name}. I've really been going through it, but I knew I could count on you to come through with some great ideas."
  
-* Excellent! Let's talk about it.
+* Here are my suggestions...
   -> PuzzleInterface
 * On second thought, I might need some more time.
   -> TempGoodbye
@@ -55,7 +55,7 @@ Rashad?Neutral "That's great to hear, {player_name}. I've really been going thro
  
 Rashad?Neutral "Melatonin, huh? I don’t know… that sounds too easy. Plus, I already take enough supplements as it is."
  
-OK. Let me go check my notes. Hold tight!
+*OK. Let me go check my notes. Hold tight!
   ->PuzzleInterface
  
  
@@ -82,7 +82,7 @@ Rashad?Smiling "I think I have a lot to chew on."
  
 Rashad?Neutral "It feels like self-care is a drop in the bucket compared to what I’m experiencing. Will that really make a difference?"
  
-Hold tight! I’ll be right back.
+ * Hold tight! I’ll be right back.
   ->PuzzleInterface
  
 ==Option4==
@@ -112,6 +112,6 @@ Rashad?Smiling "Hey, thanks, {player_name}. I appreciate you helping me out like
 Rashad?Neutral "You know I’ll be here when you get back."
  
 * I know you will! Sit tight!
-  -> END
+  -> PuzzleInterface
 
 

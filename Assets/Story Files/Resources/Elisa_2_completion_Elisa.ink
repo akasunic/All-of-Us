@@ -36,7 +36,7 @@ Elisa?Neutral "I’ve moved on from the roommate form to my emergency contact fo
 
 Elisa?Neutral "Oh, that's great! What'd you find out?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Wait... let me ask around a little more.
   -> TempGoodbye
@@ -59,7 +59,7 @@ Elisa?Neutral "Oh, that's great! What'd you find out?"
 Elisa?Neutral "I’ve checked all of those locations, and it didn’t show up. Is there anything else you can suggest?"
  
  
-Let me see what else I can find, Elisa.
+*Let me see what else I can find, Elisa.
   ->TempGoodbye
 
 
@@ -84,7 +84,7 @@ Elisa?Neutral "I haven’t applied for any jobs recently, so I know I didn’t l
 ==Option4==
 # correct
 
-Elisa?Smiling "Oh! So, bloodwork or a few extra shots, and this could be resolved? That’s a load off my mind, {player_name}." 
+Elisa?Smiling "Oh! So, bloodwork or a few extra vaccines, and this could be resolved? That’s a load off my mind, {player_name}." 
 
 Elisa?Smiling "I just need to check the school website for the complete list of required vaccines. Thank you so much!"
  

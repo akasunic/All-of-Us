@@ -8,7 +8,7 @@ VAR new_quest = ""
 ===intro===
 Mrslee?Smiling "{player_name}. Hi. Listen. I was looking for you. My headache went away! I am OK. No problem!"
 
-* {not TempGoodbye} That's great, Mrs. Lee.
+* That's great, Mrs. Lee.
   -> Chat1
 * Oh, good! Let's try to make you an appointment before it comes back.
   -> ReadyToSolve
@@ -31,7 +31,7 @@ Mrslee?Neutral "I'm feeling good now because no headache, but when I think about
 ==ReadyToSolve==
 Mrslee?Neutral "What should I do?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I'm not ready.
   -> TempGoodbye
@@ -47,8 +47,7 @@ Mrslee?Neutral "What should I do?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+
   
 ==Option1==
 # correct
@@ -94,11 +93,5 @@ Mrslee?Smiling "{player_name}. Thank you for encouraging. I will do."
 ==TempGoodbye==
 Mrslee?Neutral "{player_name}, OK!"
 
-* I'll come back.
-  -> END
-
-==BadSolution==
-Mrslee?Neutral "Thank you, {player_name}."
-
-+ No problem!
-  -> END
+* I'll be right back, Mrs. Lee!
+  -> PuzzleInterface

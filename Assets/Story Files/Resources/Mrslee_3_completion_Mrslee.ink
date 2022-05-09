@@ -8,7 +8,7 @@ VAR new_quest = ""
 ==intro==
 Mrslee?Smiling "Great day, {player_name}!"
 
-* {not TempGoodbye} Great to see you too!
+* Great to see you too!
   -> Chat1
 * I thought about how to prepare!
   -> ReadyToSolve
@@ -33,7 +33,7 @@ Mrslee?Neutral "Oh my goodness! I just remember what I worry about. The appointm
 ==ReadyToSolve==
 Mrslee?Neutral "OK. What should I do?"
 
-* Here’s what I have…
+* Here are my suggestions...
   -> PuzzleInterface
 * Actually, I'm not ready.
   -> TempGoodbye
@@ -49,8 +49,7 @@ Mrslee?Neutral "OK. What should I do?"
   -> Option3
 * They picked Option 4. 
   -> Option4
-* They picked a solution marked as bad.
-  -> BadSolution
+
 
 ==Option1==
 # correct
@@ -64,6 +63,7 @@ Mrslee?Smiling "Did you know Eddie like to Facetime? Last time he was home, he a
 Mrslee?Smiling "He ask good questions, and if I write down answers, I feel less stress about forgetting when I talk to doctor. I feel proud of how smart and helpful Eddie is."
 Mrslee?Smiling "Lila give me special notebook with pretty pink paper for taking notes."
 
+*This sounds great, Mrs. Lee!
 ->END
 
 ==Option2==
@@ -76,7 +76,7 @@ Mrslee?Neutral "Lila is very helpful, but her life very busy. If she go to this 
 # correct
 
 Mrslee?Smiling "Write down when I feel headache. Write down how bad? I can do that. Thinking about headache make me feel headache, but you say doctor might help."
-Mrslee?Smiling "Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it feel less stress."
+Mrslee?Smiling "Lila give me special notebook with pretty pink paper. She say if I feel good using my journal, maybe it will cause less stress."
 
 * Do you feel like you need more guidance on what to write down?
 -> Followup32
@@ -104,11 +104,5 @@ Mrslee?Smiling "{player_name}. Thank you. This way, no stress."
 ==TempGoodbye==
 Mrslee?Neutral "OK. I will wait."
 
-* No worries, Mrs. Lee. I'll be back.
-  -> END
-
-==BadSolution==
-Mrslee?Neutral "Thank you, {player_name}."
-
-+ No problem!
-  -> END
+* OK, Mrs. Lee. Hold tight!
+  -> PuzzleInterface

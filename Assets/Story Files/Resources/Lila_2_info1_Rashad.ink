@@ -48,7 +48,7 @@ Rashad?Neutral "Absolutely. Is everything okay? Can I do something to help?"
 Rashad?Neutral "Tell your friend it’s okay to be nervous, but it’s really important to take care of yourself. Reaching out for help is such an important step."
 Rashad?Neutral "We all deserve to feel safe going to the doctor, and it is okay to shop around until you find a doctor that 'fits'."
 Rashad?Neutral "Especially because talking about your medical worries can be very sensitive and anxiety inducing. There's no need to tolerate a doctor that makes you feel badly."
-* Exactly! My friend is really anixious. Do you have any ideas for her?
+* Exactly! My friend is really anxious. Do you have any ideas for her?
 -> Suggestion1
 * Definitely. Do you know of any resources that may be helpful for her?
 -> Suggestion1
@@ -57,9 +57,9 @@ Rashad?Neutral "Especially because talking about your medical worries can be ver
 ~ notification = "Rashad_Day 2_Some insurance companies offer telehealth nurse services_Lila2-1"
 # notification Rashad_Day 2_Some insurance companies offer telehealth nurse services_Lila2-1 
 
-Rashad?Smiling "Oh! If your friend is nervous about going to the doctor, some insurance companies have nurse hotlines you can call and ask questions."
+Rashad?Smiling "Oh! If your friend is nervous about going to the doctor, some insurance companies have nurse <a>hotlines</a> you can call and ask questions."
 Rashad?Neutral "One benefit is that she can figure out what is important to bring up in-person, and what questions to ask."
-Rashad?Neutral "When Olivia had an allergic reaction, the nurse asked us all the questions the doctor ended up asking, so we were prepared."
+Rashad?Neutral "When Olivia had an <a>allergic reaction</a>, the nurse asked us all the questions the doctor ended up asking, so we were prepared."
 Rashad?Smiling "Cheryl even brought the new laundry detergent with us, in case it mattered. Because the nurse asked about new cleaning products!"
 Rashad?Smiling "It’s a really flexible and low stress way to ask questions about little things - or to figure out if something IS little."
 Rashad?Smiling "Sometimes it’s hard to make an appointment if you are still hoping that something will just go away on its own. The nurse hotlines are great for that!" 
@@ -72,9 +72,9 @@ Rashad?Smiling "Sometimes it’s hard to make an appointment if you are still ho
 # notification Rashad_Day 2_Connecting with other Black women might give Lila the support she's looking for_Lila2-2
 
 Rashad?Smiling "Outside of going to the doctor, I really recommend that she connect with other Black women."
-Rashad?Smiling "Both my mom and Cheryl's have benefited from support groups."
+Rashad?Smiling "Both my mom and Cheryl's have benefited from <a>support groups</a>."
 Rashad?Smiling " General resources were really helpful. But meeting other Black women who were dealing with the same health concern was a game changer."
-Rashad?Smiling "They also connect each other to resources. The specialist referrals alone saved Mom so much heartache."
+Rashad?Smiling "They also connect each other to resources. The <a>specialist</a> <a>referals</a> alone saved Mom so much heartache."
 Rashad?Smiling "When one of them needs help, they advocate for one another. I know that type support has been invaluable. I can send you the information."
 
 * Thank you,I think that would be really meaningful for her.

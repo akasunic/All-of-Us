@@ -9,24 +9,24 @@ VAR new_quest = ""
 Lila?Smiling "Hey, {player_name}!"
 * Hi there Lila! What’s up?
 -> Chat1
-* Hey, I asked for some health advice and I think I learned some helpful stuff for you!
+* Hey, I asked for some advice and I learned some helpful stuff!
 -> ReadyToSolve
 
 ==Chat1==
 Lila?Smiling "Not much. I was just about to call Eddie. We’ve been trying to catch up more lately which has been really nice."
 * That's great! are you ready to hear what I found for you?
 -> ReadyToSolve
-* That does sound nice. Is he back in town!
+* That does sound nice!
 -> Chat2 
 
 ==Chat2==
-Lila?Smiling "He is! Just for the weekend. I think I’m gonna ask him out to dinner with Trisha and I."
+Lila?Smiling "I think I’m gonna ask him out to dinner with Trisha and I."
 * That’s super sweet!  I think I found some solutions for you.
 -> ReadyToSolve
 
 ==ReadyToSolve==
 Lila?Smiling "Oh that’s great! What’d you find out?"
-* Here’s what I have so far...
+* Here are my suggestions...
 -> PuzzleInterface
 * Wait, let me see if I can ask around a bit more.
 -> TempGoodbye
@@ -92,8 +92,6 @@ Lila?Smiling "I really appreciate you helping me work through it. "
 
 ==TempGoodbye==
 Lila?Neutral "Take your time!"
-* I’ll be back around!
--> END
 
-* See ya!
--> END
+* Thanks. Hold tight!
+  -> PuzzleInterface

@@ -4,6 +4,7 @@ Mrs. Lee
 0
 0
 +1
-Talk To Lila at Community Center. 
-Talk to Mr. Calindas at Health Clinic. 
-Return to Mrs. Lee to discuss options.
+Learn what Mrs. Lee needs
+Talk to Lila
+Talk to Mr. Calindas
+Share what you've learned with Mrs. Lee

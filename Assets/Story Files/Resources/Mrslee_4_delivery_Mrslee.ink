@@ -51,7 +51,7 @@ Mrslee?Smiling "I want to know everything, and I feel so much less stress talkin
 
 
 ==OptionalQuestDetails1==
-Mrslee?Smiling "Doctor said "Mrs. Lee. Your blood pressure is ... a VERY good number." She asked how I feel. Lots of questions about me."
+Mrslee?Smiling "Doctor said "Mrs. Lee. Your <a>blood pressure</a> is ... a VERY good number." She asked how I feel. Lots of questions about me."
 
 * Yes, the appointment was for you!
   -> QuestDetails2
@@ -71,7 +71,7 @@ Mrslee?Smiling "That's why I am getting aching like this. My eyes work so hard. 
 Mrslee?Smiling "I am thinking about this. My health is very important, too! Doctor suggest I should think about how to continue a good health practice for the future."
 Mrslee?Smiling "She understand. Knows just what to say. She says I take better care of Eddie by taking care of me."
 
-* I love that she understood! I'll be back after I <a>brainstorm</a> some.
+* I love that she understood! I'll be back after I think about this some.
   -> Goodbye
 * I want to ask some people for their ideas; be right back.
   -> Goodbye

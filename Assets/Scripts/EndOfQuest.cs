@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 public class EndOfQuest : MonoBehaviour
 {
     [SerializeField]
-    public GameObject TalkBubble;
-    public TextMeshProUGUI TalkBubbleText;
-    public GameObject TalkBubble2;
-    public TextMeshProUGUI TalkBubble2Text;
+    // public GameObject TalkBubble;
+    // public TextMeshProUGUI TalkBubbleText;
+    // public GameObject TalkBubble2;
+    // public TextMeshProUGUI TalkBubble2Text;
     public Image Background;
     public Image TabBar;
     public Image NPC;
@@ -84,8 +84,8 @@ public class EndOfQuest : MonoBehaviour
 
         TabBar.sprite = TabBarImages[GlobalGameInfo.GetCurrentDay()];
         
-        TalkBubble.SetActive(true);
-        TalkBubbleText.enabled = true;
+        // TalkBubble.SetActive(true);
+        // TalkBubbleText.enabled = true;
 
         // sticker1.enabled = true;
         // sticker2.enabled = true;
@@ -98,8 +98,8 @@ public class EndOfQuest : MonoBehaviour
         DayNumber.text = GlobalGameInfo.GetRemainDays().ToString();
         DaysLeftText.text = GameStrings.getString("days_left");
 
-        TalkBubbleText.text = GameStrings.getString("talk_bubble_1");
-        TalkBubble2Text.text = GameStrings.getString("talk_bubble_2");
+        // TalkBubbleText.text = GameStrings.getString("talk_bubble_1");
+        // TalkBubble2Text.text = GameStrings.getString("talk_bubble_2");
 
         if (GlobalGameInfo.GetRemainDays() <= 1)
         {
@@ -271,10 +271,10 @@ public class EndOfQuest : MonoBehaviour
     {
         if (ButtonText.text != GameStrings.getString("finish_day")) {
             // Replace talk bubbles
-            TalkBubble.SetActive(false);
-            TalkBubbleText.enabled = false;
-            TalkBubble2.SetActive(true);
-            TalkBubble2Text.enabled = true;
+            // TalkBubble.SetActive(false);
+            // TalkBubbleText.enabled = false;
+            // TalkBubble2.SetActive(true);
+            // TalkBubble2Text.enabled = true;
 
             // Disable stickers
             sticker1.enabled = false;
@@ -287,31 +287,6 @@ public class EndOfQuest : MonoBehaviour
             polaroid2.enabled = true;
             pin.enabled = true;
             tapes.enabled = true;
-
-            // switch (GlobalGameInfo.GetCurrentNPC()) {
-            //     case CharacterResources.CHARACTERS.RASHAD:
-            //         polaroid1.sprite = NPCPolaroidsRashad1[GlobalGameInfo.GetCurrentDay()];
-            //         polaroid2.sprite = NPCPolaroidsRashad2[GlobalGameInfo.GetCurrentDay()];
-            //         break;
-            //     case CharacterResources.CHARACTERS.LILA:
-            //         polaroid1.sprite = NPCPolaroidsLila1[GlobalGameInfo.GetCurrentDay()];
-            //         polaroid2.sprite = NPCPolaroidsLila2[GlobalGameInfo.GetCurrentDay()];
-            //         break;
-            //     case CharacterResources.CHARACTERS.CALINDAS:
-            //         polaroid1.sprite = NPCPolaroidsCalindas1[GlobalGameInfo.GetCurrentDay()];
-            //         polaroid2.sprite = NPCPolaroidsCalindas2[GlobalGameInfo.GetCurrentDay()];
-            //         break;
-            //     case CharacterResources.CHARACTERS.LEE:
-            //         polaroid1.sprite = NPCPolaroidsLee1[GlobalGameInfo.GetCurrentDay()];
-            //         polaroid2.sprite = NPCPolaroidsLee2[GlobalGameInfo.GetCurrentDay()];
-            //         break;
-            //     case CharacterResources.CHARACTERS.ELISA:
-            //         polaroid1.sprite = NPCPolaroidsElisa1[GlobalGameInfo.GetCurrentDay()];
-            //         polaroid2.sprite = NPCPolaroidsElisa2[GlobalGameInfo.GetCurrentDay()];
-            //         break;
-            //     default:
-            //         throw new System.Exception("Cannot find Character. Check EndOfQuest.cs");
-            // }
 
             ButtonText.text = GameStrings.getString("finish_day");
         } else {

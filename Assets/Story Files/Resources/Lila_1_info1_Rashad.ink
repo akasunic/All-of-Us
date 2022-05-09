@@ -69,6 +69,7 @@ Rashad?Smiling "Yeah! The Library hosts events here, the park and other places i
 Rashad?Smiling "If this is going to be a regular thing, the Community Center might invest in equipment so they don't have to borrow or rent every time." 
 Rashad?Smiling "It would also mean they can set up the equipment in the space where it's most likely to be used and leave it alone between events." 
 Rashad?Smiling "There might be some <a>community grants</a> available to help finance a purchase. I'm happy to use some of my librarian magic to help Lila look into funding sources." 
+Rashad?Neutral "You know... funding might also help cover some <a>accessibility</a> things, like an <a>ASL</a> translator for deaf community members."
 
 * I hadn't thought of that, Rashad! What a great idea.
   -> Suggestion2
@@ -76,8 +77,8 @@ Rashad?Smiling "There might be some <a>community grants</a> available to help fi
   -> Suggestion2
 
 ==Suggestion2==
-~ notification = "Rashad_Day 1_Look within your community for resources to support your project; what you need might already be available at low or no cost_Lila1-2"
-# notification Rashad_Day 1_Look within your community for resources to support your project; what you need might already be available at low or no cost_Lila1-2 
+~ notification = "Rashad_Day 1_Lila might find low or no cost solutions for launching the mentorship group within the community_Lila1-2"
+# notification Rashad_Day 1_Lila might find low or no cost solutions for launching the mentorship group within the community_Lila1-2 
 
 Rashad?Smiling "It can take some time to get the paperwork moving for funding, so she might need to borrow equipment for the first event."
 Rashad?Smiling "I think a community is stronger when the various institutions work together; I can pull our extra equipment out of storage and set everything up for her." 

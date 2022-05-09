@@ -23,9 +23,7 @@ public class CustomTurninOption : MonoBehaviour
     void Update()
     {
         bool on;
-        if (optionContainerText.text == "Here’s what I have…" ||
-            optionContainerText.text == "Here it is..." ||
-            optionContainerText.text == "Here you go...") {
+        if (optionContainerText.text == "Here are my suggestions...") {
             toggleCustomDesign(on = true);
         } else {
             if (journalIcon.active) {
