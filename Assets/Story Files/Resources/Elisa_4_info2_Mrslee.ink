@@ -7,7 +7,7 @@ VAR new_quest = ""
 
 ===intro===
 
-Mrslee?Smiling "{player_name}! Happy to see you!"
+Mrslee?Smiling "{player_name}! How are you? I am happy to see you!"
 
 * I’m great Mrs. Lee. How are you? 
   -> Chat1
@@ -16,22 +16,24 @@ Mrslee?Smiling "{player_name}! Happy to see you!"
 
 ==Chat1==
 
-Mrslee?Smiling "Giancarlo say he stop cooking lessons while his mother settle in. Do you want to join Eddie and I? He learn Ethiopian food from his roommate."
+Mrslee?Smiling "Giancarlo say he stopped cooking lessons while his mother settles in. Do you want to join Eddie and I? He is learning Ethiopian food from his roommate."
 
-Mrslee?Smiling "We make misir wat. Red lentil stew. He pick up injera on his way home – that is bread you use to eat wat. He invite Lila and Trisha too."
+Mrslee?Smiling "We are making misir wat. Red lentil stew. He picked up injera on his way home – that is bread you use to eat wat. He invited Lila and Trisha too."
 
 * Red lentils? I’ve never cooked with those!
   -> Chat2
-* I love that all of Bloomwood wants to feed me. I’m in. Can I ask a question?
+* All of Bloomwood wants to feed me! I’m in. Can I ask a question?
   -> Explain1
 
 ==Chat2==
 
-Mrslee?Smiling "Eddie decide to learn vegetarian cooking to help manage his high blood pressure. Giancarlo gave him hand out about lifestyle changes, and now even his jap chae recipe is vegetarian!"
+Mrslee?Smiling "Eddie decided to learn vegetarian cooking to help manage his high blood pressure. Giancarlo gave him hand outs about lifestyle changes, and now even his jap chae recipe is vegetarian!"
 
-Mrslee?Smiling "Red lentils have lot of fiber. And protein. Very healthy! Very inexpensive!"
+Mrslee?Smiling "Red lentils have lot of fiber. And protein. The are very healthy and very inexpensive!"
 
-Mrslee?Smiling "I never eat much meat, but Eddie is taking this very serious. He still eat some egg and some fish, sometimes."
+Mrslee?Smiling "I never eat much meat, but Eddie is taking this very seriously. He still eats some egg and some fish, sometimes."
+
+Mrslee?Smiling "No meat, though, except when someone else cooks it, or for special events."
 
 * Mrs. Lee, that’s awesome! Good for Eddie.
   -> Chat3
@@ -57,13 +59,13 @@ Mrslee?Neutral "I always try my best to answer, {player_name}."
 
 ==Explain2==
 
-Mrslee?Neutral "I love Eddie very much, but it not always easy to talk. We got very close after Dr. Lee died. He loved his grandfather, but I think he also feel a little afraid." 
+Mrslee?Neutral "I love Eddie very much, but it is not always easy to talk. We got very close after Dr. Lee died. He loved his grandfather, but I think he also felt a little afraid." 
 
-Mrslee?Neutral "One night, I say to Eddie "Anything you need to say, I listen." And he talk. He talk about relationships. And school. And his parents. He feel sad a lot. And alone sometimes." 
+Mrslee?Neutral "One night, I said to Eddie "Anything you need to say, I listen." And he talked. He talked about relationships. And school. And his parents. He feels sad a lot. And alone sometimes." 
 
-Mrslee?Neutral "I try hard to listen, no judgment. And when it feel hard, I say so. Then, he ask me questions, and those feel hard too!"
+Mrslee?Neutral "I try hard to listen, without judgment. And when it feels hard, I say so. Then, he asks me questions, and those feel hard too!"
 
-Mrslee?Neutral "Eddie and I work as a team to learn together, I guess. It take practice." 
+Mrslee?Neutral "Eddie and I worked as a team to learn together, I guess. It takes practice." 
 
 * Mrs. Lee! That’s so sweet. 
  -> Explain3
@@ -72,9 +74,9 @@ Mrslee?Neutral "Eddie and I work as a team to learn together, I guess. It take p
 
 ==Explain3==
 
-Mrslee?Smiling "It feel good now. When he has low week, we video chat and he ask advice. Or teach me things I never knew, like how to book train tickets online."
+Mrslee?Smiling "It feels good now. When he has low week, we video chat and he ask advice. Or teach me things I never knew, like how to book train tickets online."
 
-Mrslee?Smiling "I still feel nervous when he bring up relationships. But he ask me about big feelings, and I try to be modern." 
+Mrslee?Smiling "I still feel nervous when he bring up relationships. But he asks me about big feelings, and I try to be modern." 
 
 * Can you tell me how you learned skills together? 
   -> Suggestion1
@@ -103,17 +105,17 @@ Mrslee?Smiling "Sometimes, family counseling is to help a family work together b
 # notification Mrslee_Day 4_Try communicating in writing if talking feels too hard_Elisa4-4 
 
 
-Mrslee?Smiling "One of the things I got from the counselor was a caretaker need community. All by myself, I am only me. But with friends, I am stronger for Eddie."
+Mrslee?Smiling "One of the things I got from the counselor was "a caretaker need a community." All by myself, I am only me. But with friends, I am stronger for Eddie."
 
-Mrslee?Smiling "I start small. At first, I call Nicole – Lila’s mom. And I say "Nicole. Kids are hard." 
+Mrslee?Smiling "I start small. At first, I call Nicole – Lila’s mom. And I would say, "Nicole. Kids are hard." 
 
-Mrslee?Smiling "She laugh and laugh."  
+Mrslee?Smiling "She laughed and laughed."  
 
-Mrslee?Smiling "What was I saying that was new? When she stop laughing, we talk. She give me words for the hard things Eddie needed to know." 
+Mrslee?Smiling "What was I saying that was new? When she stopped laughing, we talked. She gave me words for the hard things Eddie needed to know." 
 
-Mrslee?Smiling "She also send me to the library to check out whole list of books." 
+Mrslee?Smiling "She also sent me to the library to check out whole list of books." 
 
-Mrslee?Smiling "Eddie used to write questions and leave them on post-it notes inside the cover. I would write answers, in both English and Korean."
+Mrslee?Smiling "Eddie used to write questions and leave them on note cards inside the cover. I would write answers, in both English and Korean."
 
 Mrslee?Smiling "Sometimes talking is hard, but writing is easier. Now we use email instead." 
 

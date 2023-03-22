@@ -15,7 +15,7 @@ Mrslee?Smiling "{player_name}. Hi. Listen. I was looking for you. My headache we
 
 
 ==Chat1==
-Mrslee?Smiling "Yes. That is very great. So you think I don't need the doctor anymore, maybe?"
+Mrslee?Smiling "Yes. That is very great. So do you think that maybe I don't need the doctor anymore?"
 
 * I think it's important to checked out.
   -> Chat2
@@ -23,7 +23,7 @@ Mrslee?Smiling "Yes. That is very great. So you think I don't need the doctor an
   -> ReadyToSolve
 
 ==Chat2==
-Mrslee?Neutral "I'm feeling good now because no headache, but when I think about doctors... I feel like headache."
+Mrslee?Neutral "I'm feeling good now because I have no headache, but when I think about doctors... I feel a headache start."
 
 * We can talk about it together; I'll help.
   -> ReadyToSolve
@@ -51,8 +51,8 @@ Mrslee?Neutral "What should I do?"
   
 ==Option1==
 # correct
-Mrslee?Smiling "Thank you, {player_name}. I feel good about going to the library program. They help me with email one time. I know Rashad will take good care of me."
-Mrslee?Smiling "He say I am very good with technology; maybe scheduling over the internet will be easier than trying to understand on the phone. I feel less stress.."
+Mrslee?Smiling "Thank you, {player_name}. I feel good about going to the library program. They help me with tax forms sometimes. I know Rashad will take good care of me."
+Mrslee?Smiling "He says I am very good with technology; maybe scheduling over the internet will be easier than trying to understand on the phone. I feel less stress.."
 
 * He's right. You're great with tech!
     -> END
@@ -66,7 +66,7 @@ Mrslee?Neutral "I need appointments in the future, and maybe Rashad is busy? Wha
   
 ==Option3==
 # correct
-Mrslee?Neutral "That feels so hard. Not just my headache, but talking about everything? I feel scared that maybe the doctor will talk more than he listen."
+Mrslee?Neutral "That feels so hard. Not just my headache, but talking about everything? I feel scared that maybe the doctor will talk more than they listen."
 
 * If you don’t like the first doctor, we can help you try someone else. 
 ->Followup22
@@ -78,7 +78,7 @@ Mrslee?Smiling "You help so much already. I will try this, but I might need more
 ->END
 
 ==Option4==
-Mrslee?Neutral "That is more stress! Eddie say Urgent Care is different doctor every time. Too much trouble."
+Mrslee?Neutral "That is more stress! Eddie say Urgent Care can be a different doctor every time. That feels like too much trouble."
 
 * I understand, Mrs. Lee. Let’s find you a less stressful solution.
   ->PuzzleInterface

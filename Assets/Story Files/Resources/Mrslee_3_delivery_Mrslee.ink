@@ -25,8 +25,8 @@ Mrslee?Smiling "Today I feel happy. Today, I volunteer with the kids."
   -> QuestIntro
 
 ==Chat2==
-Mrslee?Smiling "Yah. It's hard to feel stress when kids ask you to color or sing little songs. They work hard to teach me all the words."
-Mrslee?Smiling "Then, Lila tell me we got them all wrong! Sometime it seems like the kids get them wrong for fun."
+Mrslee?Smiling "It's hard to feel stress when kids ask you to color or sing little songs. They work so hard to teach me all the words."
+Mrslee?Smiling "Then, Lila tells me we got them all wrong! Sometimes, it seems like the kids get them wrong for fun."
 
 * Less stress is good. Especially if less stress means less headaches.
   -> QuestIntro
@@ -34,7 +34,9 @@ Mrslee?Smiling "Then, Lila tell me we got them all wrong! Sometime it seems like
   -> QuestIntro
 
 ==QuestIntro==
-Mrslee?Smiling "Oh. That. I made appointment at doctor office. Eddie said he was glad."
+Mrslee?Smiling "Oh. I decided you and Eddie were right. I made an appointment at doctor office. Eddie said he was glad."
+
+Mrslee?Smiling "Eddie asked me to do what I would want him to do. So, I will talk to a doctor."
 
 * That's awesome, Mrs. Lee! But how are you feeling about it?
   -> QuestDetails1
@@ -43,7 +45,7 @@ Mrslee?Smiling "Oh. That. I made appointment at doctor office. Eddie said he was
 
 ==QuestDetails1==
 Mrslee?Neutral "Me? I am very nervous!"
-Mrslee?Neutral "Doctor always speak so fast. Not so much want to listen."
+Mrslee?Neutral "Doctors always speak so fast. And then I feel ashamed because my English is not always good."
 
 * I understand! That sounds super stressful, Mrs. Lee.
   -> QuestDetails2
@@ -51,8 +53,9 @@ Mrslee?Neutral "Doctor always speak so fast. Not so much want to listen."
   -> QuestAcceptance
 
 ==QuestDetails2==
-Mrslee?Neutral "I forget everything! My feeling.. my words. Why I make the appointment to begin with!"
-Mrslee?Neutral "I know you and Eddie want me to get a checkup, but why? Why am I going if nobody will listen to me?"
+Mrslee?Neutral "I am afraid I will forget everything! My feelings.. my words. Why I made the appointment to begin with!"
+
+Mrslee?Neutral "I listen to you, and to Eddie, and to Lila, that seeing a doctor is important. But what happens if they do not listen?"
 
 * We can work on ways to make sure the doctor listens to you.
   -> QuestAcceptance
@@ -60,7 +63,8 @@ Mrslee?Neutral "I know you and Eddie want me to get a checkup, but why? Why am I
   -> QuestAcceptance
 
 ==QuestAcceptance==
-Mrslee?Neutral "Thank you. What do you think I should do? I feel nervous to go to doctor's appointment. How can I prepare?"
+Mrslee?Neutral "Thank you. What do you think I should do? I feel nervous to go to doctor's appointment."
+Mrslee?Neutral "How can I prepare?"
 
 * I'm gonna think about it!
   -> Goodbye

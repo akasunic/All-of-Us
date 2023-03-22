@@ -51,7 +51,7 @@ Mrslee?Neutral "Ask me anything!"
 Mrslee?Neutral "Chronic illnesses are not easy. Tell your friend that many people have very, very good lives with chronic illness."
 Mrslee?Neutral "I have many friends who manage ongoing health challenges. It can be hard to stay on top of everything."
 Mrslee?Neutral "It is common to feel nervous. It is very important to take care of yourself and rest when your body says to rest."
-Mrslee?Neutral "Many struggle with life changes after diagnosis. There are specific symptoms depending on the illness, but fatigue and sleep problems are very common."
+Mrslee?Neutral "Many struggle with lifestyle changes after diagnosis. There are specific symptoms depending on the illness, but fatigue and sleep problems are very common."
 Mrslee?Neutral "if you are tired or need to rest, it is always better to lie down than to push through."
 Mrslee?Smiilng "It can be hard. We all want to do everything, all the time. But that is not always possible."
 

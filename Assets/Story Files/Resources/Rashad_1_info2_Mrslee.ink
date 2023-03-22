@@ -24,9 +24,9 @@ Mrslee?Smiling "I feel sleepy, but good! I’m looking for some <a>meditation</a
 
 ==Chat2==
 Mrslee?Smiling "I will be okay, don’t worry. Sometimes, it is hard to sleep."
-Mrslee?Smiling "Eddie, my grandson, suggested physical activity; I already take fitness classed and help with Lila's class."
+Mrslee?Smiling "Eddie, my grandson, suggested physical activity; I already take fitness classes and help with Lila's class."
 Mrslee?Smiling "Then he suggest I ask my friends. Lila showed me this list of classes that teach meditation and <a>mindfulness exercises</a> here at the Community Center!"
-Mrslee?Smiling "Eddie say maybe I need to make my brain tired too! If I cannot find an answer, I will ask for more help."
+Mrslee?Smiling "Eddie says maybe I need to make my brain tired too! If I cannot find an answer, I will ask for more help."
 
 * Eddie sounds like he knows what he's talking about.
 -> Chat3
@@ -52,7 +52,7 @@ Mrslee?Neutral "Sure, what is it?"
 ~ notification = "Mrslee_Day 1_Mrs. Lee can ask her friends if their grandchildren want to apply_Rashad1-3"
 # notification Mrslee_Day 1_Mrs. Lee can ask her friends if their grandchildren want to apply_Rashad1-3
 
-Mrslee?Neutral "Wow, I have no idea Rashad need help like this. I know lot of friends with grandchildren looking for work. What is the job?"
+Mrslee?Neutral "Wow, I had no idea Rashad needs help like this. I know a lot of friends with grandchildren looking for work. What is the job?"
 
 * They're hiring a part-time worker in the young adult section.
 -> Suggestion1
@@ -63,7 +63,7 @@ Mrslee?Neutral "Wow, I have no idea Rashad need help like this. I know lot of fr
 ~ notification = "Mrslee_Day 1_Rashad could reach out to those he has helped at the Library and ask them to spread the word about the open position_Rashad1-4"
 # notification Mrslee_Day 1_Rashad could reach out to those he has helped at the Library and ask them to spread the word about the open position_Rashad1-4
 
-Mrslee?Smiling "I met Rashad when he work as the young adult librarian! Now he hire a new person to help in that department."
+Mrslee?Smiling "I met Rashad when he was the young adult librarian! Now he is hiring a new person to help in that department. I am so proud of him!"
 Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We could post flyer on bulletin board in the Community Center."
 
 * That would be great! Thank you so much. Did you have any other questions?
@@ -71,15 +71,15 @@ Mrslee?Smiling "I can spread the word to my friends at my next fitness class. We
 
 ==Suggestion2==
 Mrslee?Smiling "Anything to help Rashad. When Eddie needed a summer job, Rashad helped him. Showed him how to use the internet to apply. Lots of jobs get posted online now."
-Mrslee?Smiling " Maybe we also ask Lila to email people who attend fitness class. And her daycare parents! She know everyone!" 
+Mrslee?Smiling " Maybe we can also ask Lila to email people who attend fitness class. And her daycare parents! She knows everyone!" 
 Mrslee?Smiling "I can share in my garden group. Some of them use online forums to talk about flowers. If one of them shares, maybe someone there likes books."
 
 * Perfect! You can include a link to Library's website where people can apply. 
 -> Goodbye
 
 ==Goodbye==
-Mrslee?Smiling "Sounds great, {player_name}! I want to help Rashad because he do so much for the community."
-Mrslee?Smiling "I will pass along the message to friends. See you soon."
+Mrslee?Smiling "Sounds great, {player_name}! I want to help Rashad because he does so much for the community."
+Mrslee?Smiling "I will pass the message along. See you soon."
 
 * Thanks, Mrs. Lee! Take care. 
 ->END
